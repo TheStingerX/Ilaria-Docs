@@ -5,7 +5,7 @@ permalink: /ilaria-rvc/tgr/installation/
 ---
 # Instalar Okada TG Developed Fork
 
-TG Developed Fork (TGR) proviene de la rama Deiteris de la familia w-okada. El editor documenta esta bifurcación como solo RVC. Tiene sus propios archivos de versión, lanzadores y restricciones de dispositivo. Guárdelo en su propia carpeta para que una instalación funcional de VCClient o Deiteris permanezca disponible para comparar.
+TG Developed Fork (TGR) proviene de la rama Deiteris de la familia w-okada. El editor documenta esta fork como solo RVC. Tiene sus propios archivos de versión, lanzadores y restricciones de dispositivo. Guárdelo en su propia carpeta para que una instalación funcional de VCClient o Deiteris permanezca disponible para comparar.
 
 ## Descargue la versión que coincida con su computadora
 
@@ -17,7 +17,7 @@ Marque **Administrador de tareas → Rendimiento** en Windows o **Acerca de esta
 | Windows con AMD, gráficos Intel compatibles o funcionamiento solo con CPU | `voice-changer-windows-amd64-dml.zip`. Seleccione CPU en la aplicación cuando realice pruebas sin una GPU utilizable. |
 | Apple Silicon Mac | `voice-changer-macos-arm64-cpu.tar.gz` si está incluido. El editor marca la compatibilidad con macOS como experimental. |
 | Intel Mac | `voice-changer-macos-amd64-cpu.tar.gz` si está incluido. La aceleración depende de los gráficos instalados y de la compilación. |
-| Linux | Utilice los recursos de la versión explícitamente etiquetados para Linux cuando estén disponibles, o la configuración fuente de la bifurcación. |
+| Linux | Utilice los recursos de la versión explícitamente etiquetados para Linux cuando estén disponibles, o la configuración fuente de el fork. |
 
 ## Windows paso a paso
 
@@ -31,7 +31,7 @@ Marque **Administrador de tareas → Rendimiento** en Windows o **Acerca de esta
 
 En macOS, descomprima el archivo para su arquitectura de chip exacta y abra el ejecutable `MMVCServerSIO` incluido. Si macOS bloquea el inicio, confirme que el archivo proviene de la versión oficial y examine el bloque antes de realizar cambios en el sistema. Otorgue acceso al micrófono al navegador para la captura del navegador o a la aplicación local cuando abre el micrófono directamente.
 
-Para una instalación fuente de Linux, utilice el propio archivo fuente de la bifurcación y el entorno documentado Python 3.10. Abra una terminal en la carpeta `server` del repositorio. El instalador es `vc_install.sh`; elija el backend que coincida con su sistema cuando se le solicite. Utilice el script de inicio incluido en esa versión y abra la dirección local impresa en la terminal. Los nombres de los scripts difieren según las instantáneas. Para identificar los puntos de entrada proporcionados, enumere los archivos en la carpeta `server` antes de ejecutar uno. Para un binario de lanzamiento, descomprima el paquete para su arquitectura e inicie el ejecutable incluido. El archivo Windows DirectML es un tiempo de ejecución independiente.
+Para una instalación fuente de Linux, utilice el propio archivo fuente de el fork y el entorno documentado Python 3.10. Abra una terminal en la carpeta `server` del repositorio. El instalador es `vc_install.sh`; elija el backend que coincida con su sistema cuando se le solicite. Utilice el script de inicio incluido en esa versión y abra la dirección local impresa en la terminal. Los nombres de los scripts difieren según las instantáneas. Para identificar los puntos de entrada proporcionados, enumere los archivos en la carpeta `server` antes de ejecutar uno. Para un binario de lanzamiento, descomprima el paquete para su arquitectura e inicie el ejecutable incluido. El archivo Windows DirectML es un tiempo de ejecución independiente.
 
 ## Aislar errores de inicio
 

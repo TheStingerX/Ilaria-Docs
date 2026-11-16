@@ -11,7 +11,7 @@ L'addestramento apprende una voce di destinazione da una raccolta audio preparat
 
 Prepara l'audio con la [guida al dataset](dataset-preparation.md), quindi selezionala in **Allenamento**. Dai all'esperimento un nome univoco e scegli una breve registrazione al di fuori del set di formazione per i test di ascolto. Inizia con una tiratura modesta in grado di completare tutte le fasi e produrre un'esportazione utilizzabile. Questo fornisce una base di riferimento per le modifiche ai dati o alle impostazioni.
 
-Registra la versione dell'applicazione, la revisione del set di dati, il formato del modello e la frequenza di campionamento, l'incorporatore, il metodo di presentazione, la coppia preaddestrata, la dimensione del batch e l'intervallo di salvataggio pianificato. Aggiungi il nome della clip di prova trattenuta. Se un'esecuzione successiva sembra diversa, queste note ti aiutano a identificare cosa è cambiato.
+Registra la versione dell'applicazione, la revisione del set di dati, il formato del modello e la frequenza di campionamento, l’embedder, il metodo di presentazione, la coppia preaddestrata, la dimensione del batch e l'intervallo di salvataggio pianificato. Aggiungi il nome della clip di prova trattenuta. Se un'esecuzione successiva sembra diversa, queste note ti aiutano a identificare cosa è cambiato.
 
 ## Scegli impostazioni compatibili
 
@@ -34,7 +34,7 @@ Utilizza le scelte di pre-addestramento indicate come compatibili con la build i
 - **Normalizzazione:** In Applio si costruisce con questi controlli, Pre regola i livelli prima dell'affettamento e Post li regola dopo l'affettamento. Utilizzare Nessuno se i livelli originali sono già adatti. In Ilaria RVC, Process Data applica automaticamente la regolazione del livello a ciascuna fetta. L'implementazione pubblica non ha un interruttore Post separato.
 - **Filtro rumore:** Inizia con la riduzione opzionale del rumore disattivata per registrazioni pulite. Se il frontend espone anche un filtro passa-alto, usatelo per un rimbombo udibile a bassa frequenza e confrontate il risultato a orecchio. Il filtraggio passa-alto e la riduzione del rumore sono operazioni separate.
 - **Cache del set di dati GPU:** lascialo disattivato per una base di riferimento. Consuma VRAM extra. Misura il tempo per epoca prima di abilitarlo per un periodo più lungo.
-- **Pesi preaddestrati:** abbina la coppia G/D all'architettura, al vocoder, alla frequenza di campionamento e alla configurazione dell'intonazione e utilizza l'incorporatore specificato dall'autore del preaddestramento. Per i pretraining RVC standard creati con ContentVec, selezionare ContentVec per l'estrazione e l'inferenza delle funzionalità.
+- **Pesi preaddestrati:** abbina la coppia G/D all'architettura, al vocoder, alla frequenza di campionamento e alla configurazione dell'intonazione e utilizza l’embedder specificato dall'autore del preaddestramento. Per i pretraining RVC standard creati con ContentVec, selezionare ContentVec per l'estrazione e l'inferenza delle funzionalità.
 
 ### Scegli una tariffa utilizzando la larghezza di banda sorgente
 
@@ -77,7 +77,7 @@ Confronta queste quattro qualità nelle esportazioni.
 3. **Stabilità dell'intonazione.** Le note o le sillabe saltano, trillano o perdono l'inflessione prevista?
 4. **Artefatti.** L'output aggiunge ronzii, rumore ambientale incorporato, code dure o transizioni strane?
 
-Conserva l'esportazione dal suono migliore e i relativi risultati di test. Può valere la pena provare più epoche quando i risultati migliorano in diversi esempi. Se le esportazioni successive migliorano solo una clip o iniziano a riprodurre i difetti del set di dati, torna alla linea di base migliore e rivedi le registrazioni.
+Conserva l'esportazione dal suono migliore e i relativi risultati di test. Può valere la pena provare più epoche quando i risultati migliorano in diversi esempi. Se le esportazioni successive migliorano solo una clip o iniziano a riprodurre i difetti del set di dati, torna alla prova di riferimento migliore e rivedi le registrazioni.
 
 ## Esporta, riprendi o condividi
 

@@ -11,4 +11,4 @@ Utilizza **TTS** per visualizzare in anteprima lo script con una voce nella sua 
 
 ## Converti il ​​discorso generato
 
-Seleziona il modello di inferenza di destinazione e l'incorporatore corrispondente. Inizia dalla trasposizione zero e controlla l'output rispetto alla generazione TTS non convertita. Un errore di pronuncia presente in entrambi i file appartiene alla fase TTS. Un nuovo salto di tono o una consonante distorta appartengono alla fase di conversione.
+Seleziona il modello di inferenza di destinazione e l’embedder corrispondente. Inizia dalla trasposizione zero e controlla l'output rispetto alla generazione TTS non convertita. Un errore di pronuncia presente in entrambi i file appartiene alla fase TTS. Un nuovo salto di tono o una consonante distorta appartengono alla fase di conversione.

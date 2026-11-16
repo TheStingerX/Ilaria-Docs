@@ -20,7 +20,7 @@ Utilice un punto de control de inferencia RVC compatible y un micrófono que fun
 
 1. En **Audio**, elija el modo para los dispositivos que desea utilizar. En una prueba de navegador local, utilice **Cliente** y otorgue al sitio acceso a su micrófono. En **Servidor**, elija los dispositivos de entrada y salida visibles para el proceso que ejecuta TGR.
 2. Nombra los puntos finales antes de comenzar. **Entrada** es el micrófono físico, **Salida** son los auriculares para la primera prueba y **Monitor** es opcional si tu construcción lo ofrece.
-3. Elija la GPU o CPU que desee en el selector de dispositivos. Para obtener una línea base de DirectML, pruebe `rmvpe_onnx` si aparece en la lista. Los detectores de tono de DirectML compatibles documentados por la bifurcación también incluyen `fcpe_onnx`, `crepe_tiny_onnx` y `crepe_full_onnx`. La compilación CUDA puede exponer una lista diferente.
+3. Elija la GPU o CPU que desee en el selector de dispositivos. Para obtener una línea base de DirectML, pruebe `rmvpe_onnx` si aparece en la lista. Los detectores de tono de DirectML compatibles documentados por el fork también incluyen `fcpe_onnx`, `crepe_tiny_onnx` y `crepe_full_onnx`. La compilación CUDA puede exponer una lista diferente.
 4. Presione **Iniciar** en el tamaño de fragmento predeterminado. Dale tiempo al modelo para que se inicialice y luego di una frase en voz baja y otra más larga en voz alta. Pausa entre ambos. Comprueba que la salida cambia al seleccionar el modelo y que el audio se mantiene estable durante un minuto.
 5. Si también escucha una copia seca, desactive el efecto local del hardware o retire el otro bucle de micrófono en el sistema operativo. Mantenga los niveles de los auriculares moderados durante las pruebas.
 

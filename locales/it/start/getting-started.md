@@ -20,7 +20,7 @@ Per le procedure complete di installazione, configurazione e risoluzione dei pro
 
 1. Importa un modello compatibile da **Altro**. Mantieni il suo indice di corrispondenza opzionale con il checkpoint.
 2. Apri **Single Inference**, seleziona il tuo modello e aggiungi una registrazione vocale breve e asciutta.
-3. Inizia con l'estrattore di tonalità predefinito. Imposta lo spostamento del tono e il **Rapporto indice** su zero per una linea di base.
+3. Inizia con l'estrattore di tonalità predefinito. Imposta lo spostamento del tono e il **Rapporto indice** su zero per una prova di riferimento.
 4. Converti la clip e ascolta l'inizio, la frase più forte e le eventuali consonanti che suonano più deboli rispetto all'originale.
 5. Esporta un riferimento WAV. Segui [Conversione vocale](../conversion/voice-conversion.md) per confrontare impostazioni alternative sulla stessa sorgente.
 
@@ -61,7 +61,7 @@ Utilizza le registrazioni e i modelli vocali per i quali sei autorizzato a utili
 
 ## Applio
 
-1. Ottieni il programma di installazione o il pacchetto per la tua piattaforma da [Applio downloads](https://applio.org/). In Desktop, completa la configurazione del motore e conferma il dispositivo di elaborazione. Per una build Gradio in pacchetto, estrai l'archivio completo, avvia il programma di avvio e apri il suo indirizzo locale.
+1. Scarica il programma di installazione o il pacchetto per la tua piattaforma da [Applio downloads](https://applio.org/). In Desktop, completa la configurazione del motore e conferma il dispositivo di elaborazione. Per una build Gradio in pacchetto, estrai l'archivio completo, avvia il programma di avvio e apri il suo indirizzo locale.
 2. Aggiungi una voce alla libreria dei modelli e apri **Converti audio**. Nelle versioni precedenti di Gradio la scheda potrebbe essere chiamata **Inferenza**.
 3. Seleziona il modello, l'embedder corrispondente e l'indice opzionale, quindi converti un WAV breve e pulito con intonazione a zero. Continuare con il [flusso di lavoro di conversione di Applio](../conversion/voice-conversion.md#convert-a-recording-in-applio) per esempi di batch e impostazioni.
 
@@ -73,7 +73,7 @@ Utilizza le registrazioni e i modelli vocali per i quali sei autorizzato a utili
 
 ## Redpanda-vc
 
-1. Ottieni [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e avvia la WebUI con una build adatta al tuo sistema. Il progetto fornisce un'opzione contenitore CUDA per NVIDIA.
+1. Scarica [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e avvia la WebUI con una build adatta al tuo sistema. Il progetto fornisce un'opzione contenitore CUDA per NVIDIA.
 2. Seleziona il motore RVC e carica una voce RVC compatibile con il suo indice opzionale. Redpanda-vc offre anche altre famiglie di modelli, ciascuna con il proprio formato di modello.
 3. Per un test del microfono del browser, consenti l'accesso al microfono, scegli la GPU desiderata se le impostazioni dello streaming espongono la selezione del dispositivo e avvia lo streaming. Verificare il monitor delle cuffie sul buffer predefinito prima di ridurre la latenza.
 

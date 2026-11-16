@@ -21,7 +21,7 @@ Usa la GUI separata inclusa nelle versioni supportate di Mainline per convertire
 
 1. Abbassa il volume delle cuffie prima di iniziare. Se la GUI offre **Input voice monitor**, utilizzalo per confermare il microfono selezionato. Pronuncia una breve frase e fai una pausa. Controlla di sentire una voce diretta e silenzio durante la pausa.
 2. Passa a **Output converted voice** e avvia la conversione. Attendi l'inizializzazione. Ripeti la stessa frase a un livello parlato normale e ascolta le consonanti e le desinenze delle parole. Controlla il feedback prima di alzare il volume.
-3. Se lo streaming si avvia ma le parole vengono tagliate, controlla la selezione del dispositivo e il livello di ingresso. Se l'audio si interrompe a scatti, torna alla lunghezza del blocco di elaborazione predefinita. Una voce pulita e leggermente ritardata è una linea di base migliore rispetto a un segnale a bassa latenza che continua a interrompersi.
+3. Se lo streaming si avvia ma le parole vengono tagliate, controlla la selezione del dispositivo e il livello di ingresso. Se l'audio si interrompe a scatti, torna alla lunghezza del blocco di elaborazione predefinita. Una voce pulita e leggermente ritardata è una prova di riferimento migliore rispetto a un segnale a bassa latenza che continua a interrompersi.
 4. Interrompi lo streaming prima di cambiare dispositivi audio o caricare un checkpoint diverso. Riavvia e ripeti lo stesso test di ascolto.
 
 ## Invia l'audio di Mainline a una chiamata o a un registratore
@@ -46,7 +46,7 @@ Diminuisci la **Sample length** o il controllo del blocco equivalente un increme
 - **Fade length** fonde i blocchi sovrapposti. Una modifica può aiutare con i clic ai limiti dei blocchi.
 - **Extra inference time** fornisce al modello più contesto attorno al blocco corrente. Riducilo con cautela e ascolta l'instabilità.
 - Il metodo di estrazione del pitch incide sia sulla qualità dell'intonazione che sul carico di lavoro. Confronta un'alternativa supportata quando le note difficili oscillano o l'elaborazione impiega troppo tempo.
-- **Index Rate** e la riduzione del rumore aggiungono elaborazione. Prova una linea di base stabile con le funzionalità opzionali disattivate prima di ottimizzarle ciascuna.
+- **Index Rate** e la riduzione del rumore aggiungono elaborazione. Prova una prova di riferimento stabile con le funzionalità opzionali disattivate prima di ottimizzarle ciascuna.
 
 Utilizza lo stesso test con il carico di lavoro di chiamata, gioco o registrazione in esecuzione. Il ritardo di andata e ritorno che senti dipende anche dai driver audio, il cavo virtuale e l'app di destinazione. Una cifra temporale mostrata dal convertitore rappresenta solo una parte di quel percorso.
 

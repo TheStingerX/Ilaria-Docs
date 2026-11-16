@@ -17,7 +17,7 @@ Zu den verfügbaren Inferenz-Encodern gehören ContentVec, Spin, Spin-v2 und die
 
 Die Schulung stellt ContentVec und Spin-v2 vor. Das Ändern des Encoders erfordert neue Funktionen und einen separaten Experimentnamen. Passen Sie Ihr Generator- und Diskriminatorpaar an den Vocoder, die Trainingsabtastrate, die RVC-Generierung und die Tonhöhenkonfiguration an und befolgen Sie die Encoderanforderungen des Paarherausgebers. Ilaria RVC 2.1.0 unterstützt das RefineGAN-Training speziell bei 32 kHz mit RVC V2 und Pitch-Anleitung. Der Downloader kann andere Tarife zur Verwendung an anderer Stelle auflisten.
 
-## Holen Sie sich ein G/D-Paar
+## Ein G/D-Paar herunterladen
 
 Verwenden Sie unter **Andere → Vorab trainierte Modelle herunterladen** ein Repository oder ein vorab trainiertes Archiv oder geben Sie einen Link zum G-Checkpoint und dem zugehörigen D-Checkpoint ein, wenn die Erkennung Hilfe benötigt. Die Auswahl **Empfohlene vorab trainierte Objekte** zeigt verfügbare Katalogvarianten und deren Abtastraten an. Überprüfen Sie die gewählte Variante, bevor Sie beide Dateien installieren. Kehren Sie zu Training zurück, aktualisieren Sie die Liste und wählen Sie das installierte Paar aus. Wenn Sie absichtlich eine zufällige Initialisierung verwenden, wählen Sie „Keine“. Halten Sie Inferenzmodelle und Trainings-Pretrains getrennt.
 

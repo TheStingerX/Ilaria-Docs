@@ -22,7 +22,7 @@ Comienza con lo que quieres hacer. Un **cambiador de voz en vivo** procesa la tr
  | RVC GUI | Conversión simple de archivos locales en la interfaz de escritorio heredada | Archivado. El proyecto documenta Windows NVIDIA CUDA y una solución histórica de Apple Silicon. |
  | Applio | Conversión de archivos, capacitación y tiempo real en una sola aplicación | La documentación de escritorio enumera NVIDIA CUDA, configuraciones AMD compatibles y Apple MPS. La disponibilidad depende de la edición y el motor. |
  | Interfaz de usuario web RVC | Entrenamiento e inferencia ascendentes, con un iniciador en tiempo real independiente | NVIDIA CUDA en Windows y Ubuntu. La configuración de CPU ascendente cubre sistemas AMD e Intel, con posible uso de DirectML en Windows. |
- | Redpanda-vc | Una bifurcación de Applio para experimentar con múltiples motores de conversión de voz | El repositorio incluye un contenedor CUDA y documenta la selección de GPU para transmisiones WebUI. Verifique el motor seleccionado y constrúyalo para otros backends. |
+ | Redpanda-vc | Una fork de Applio para experimentar con múltiples motores de conversión de voz | El repositorio incluye un contenedor CUDA y documenta la selección de GPU para transmisiones WebUI. Verifique el motor seleccionado y constrúyalo para otros backends. |
 
 ## Vonovox (recomendado para uso en vivo de NVIDIA)
 
@@ -40,7 +40,7 @@ Consulta el formato del modelo así como el acelerador. Por ejemplo, las instruc
 
 ## Okada TG Developed Fork (TGR)
 
-El proyecto `tg-develop/voice-changer` es una bifurcación comunitaria de la familia w-okada a través de la bifurcación deiteris. Se centra en RVC en vivo y documenta compilaciones separadas de Windows para NVIDIA CUDA y DirectML en hardware AMD o Intel compatible. Su documentación también cubre el uso de CPU, Linux y versiones experimentales de macOS para Apple Silicon e Intel. [Configuración de TGR y requisitos del sistema](https://github.com/tg-develop/voice-changer) · [Versiones de TGR](https://github.com/tg-develop/voice-changer/releases)
+El proyecto `tg-develop/voice-changer` es un fork comunitaria de la familia w-okada a través de el fork deiteris. Se centra en RVC en vivo y documenta compilaciones separadas de Windows para NVIDIA CUDA y DirectML en hardware AMD o Intel compatible. Su documentación también cubre el uso de CPU, Linux y versiones experimentales de macOS para Apple Silicon e Intel. [Configuración de TGR y requisitos del sistema](https://github.com/tg-develop/voice-changer) · [Versiones de TGR](https://github.com/tg-develop/voice-changer/releases)
 
 En Windows, utilice las instrucciones de la compilación que descargó. La compilación DirectML expone una lista diferente de extractores de tono de la compilación NVIDIA, por lo que es posible que sea necesario ajustar los ajustes preestablecidos de la edición CUDA. Compare la estabilidad del audio con sus aplicaciones habituales antes de confiar en la configuración para una grabación o transmisión.
 
@@ -62,7 +62,7 @@ WebUI de conversión de voz basada en recuperación es el proyecto RVC ascendent
 
 ## Redpanda-vc
 
-Redpanda-vc es una bifurcación de Applio cuya interfaz en tiempo real admite RVC, Beatrice y Rectified Flow. Ofrece múltiples familias de modelos, así que seleccione el flujo de trabajo RVC para una voz RVC. En su modo de navegador en tiempo real, el proyecto documenta la asignación de transmisiones a GPU particulares y señala que Beatrice se ejecuta en la CPU. Esas opciones de recursos se aplican a Redpanda-vc y su motor seleccionado. [Repositorio Redpanda-vc y motores compatibles](https://github.com/redpanda343/Redpanda-vc)
+Redpanda-vc es un fork de Applio cuya interfaz en tiempo real admite RVC, Beatrice y Rectified Flow. Ofrece múltiples familias de modelos, así que seleccione el flujo de trabajo RVC para una voz RVC. En su modo de navegador en tiempo real, el proyecto documenta la asignación de transmisiones a GPU particulares y señala que Beatrice se ejecuta en la CPU. Esas opciones de recursos se aplican a Redpanda-vc y su motor seleccionado. [Repositorio Redpanda-vc y motores compatibles](https://github.com/redpanda343/Redpanda-vc)
 
 ## Compara aplicaciones con la misma voz
 

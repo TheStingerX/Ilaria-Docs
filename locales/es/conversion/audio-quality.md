@@ -41,7 +41,7 @@ La extracción de tono y la extracción de contenido son etapas separadas. Cambi
 
 Evite cambiar el incrustador para perseguir un sonido. Debe coincidir con la representación de características en la que se entrenó el modelo. **Relación de índice** combina características recuperadas de un índice de entrenamiento coincidente en la conversión. No proporciona un impulso de calidad genérico. Una combinación alta puede hacer que la pronunciación sea menos clara, especialmente en una fuente desconocida.
 
-En el motor de archivos de Applio, una configuración de **Envolvente de volumen** más cercana a cero sigue más de cerca la dinámica de la fuente. Para **Proteger consonantes sordas**, los valores inferiores a 0,5 refuerzan la protección y 0,5 la desactiva en ese motor. Consulte la información sobre herramientas y las notas de la versión de su aplicación antes de llevar esos números a otra bifurcación.
+En el motor de archivos de Applio, una configuración de **Envolvente de volumen** más cercana a cero sigue más de cerca la dinámica de la fuente. Para **Proteger consonantes sordas**, los valores inferiores a 0,5 refuerzan la protección y 0,5 la desactiva en ese motor. Consulte la información sobre herramientas y las notas de la versión de su aplicación antes de llevar esos números a otra fork.
 
 ## Diagnosticar de oído y con el analizador
 

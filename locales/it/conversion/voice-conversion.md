@@ -11,8 +11,8 @@ La conversione vocale inizia con una performance. L'output solitamente segue le 
 
 1. Apri Ilaria RVC e importa il modello di inferenza che desideri utilizzare. Un indice facoltativo appartiene al checkpoint per cui è stato creato. Se una voce importata è assente dal selettore, vedere [Modelli e file RVC](../start/models.md).
 2. Apri **Single Inference**, scegli la voce e trascina una breve registrazione che puoi riconoscere a orecchio. Una frase con una pausa, diverse consonanti e una vocale più lunga costituisce un utile riferimento.
-3. Imposta **Pitch** su zero e **Index Ratio** su zero. Abbina l'incorporatore di contenuti a quello utilizzato nell'addestramento quando l'autore del modello lo fornisce. Inizia con l'estrattore di tonalità predefinito dell'app e lascia disattivata l'elaborazione audio opzionale.
-4. Converti il ​​file e controlla l'output. Utilizza il lettore di forme d'onda per rivisitare la stessa frase, quindi salva una copia WAV o FLAC come linea di base.
+3. Imposta **Pitch** su zero e **Index Ratio** su zero. Abbina l’embedder di contenuti a quello utilizzato nell'addestramento quando l'autore del modello lo fornisce. Inizia con l'estrattore di tonalità predefinito dell'app e lascia disattivata l'elaborazione audio opzionale.
+4. Converti il ​​file e controlla l'output. Utilizza il lettore di forme d'onda per rivisitare la stessa frase, quindi salva una copia WAV o FLAC come prova di riferimento.
 5. Confronta la clip originale e quella convertita a livelli di riproduzione simili. Nota il primo problema udibile e usa [Intonazione e qualità audio](audio-quality.md) per decidere cosa cambiare.
 
 Le attuali versioni di Ilaria RVC cercano automaticamente un indice corrispondente quando selezioni una voce. Selezionare un indice e conferirgli influenza sono azioni separate. Un indice caricato contribuisce solo quando il **Rapporto indice** è superiore a zero. Le build precedenti potrebbero mostrare un layout diverso o chiederti di selezionare manualmente l'indice.
@@ -65,7 +65,7 @@ Fornisci alla WebUI il percorso completo di un breve file WAV locale. Se il perc
 
 In Desktop, attendi che il motore sia pronto, aggiungi il modello di inferenza alla libreria e apri **Converti audio** in modalità file singolo. In Gradio, apri l'interfaccia del browser e seleziona **Converti audio** o **Inferenza**, a seconda della versione. Aggiorna l'elenco dei modelli dopo aver aggiunto un checkpoint se manca.
 
-Seleziona la voce e il suo indice accoppiato, quindi conferma l'incorporamento del contenuto previsto da quel modello. Carica una breve registrazione e scegli WAV o FLAC per il test. Controlla le impostazioni riportate da una esecuzione precedente, in particolare intonazione, recupero ed effetti. Una linea di base utile inizia da zero semitoni con gli effetti disattivati. Avvia il lavoro una volta, attendi l'output e confronta la stessa frase in entrambe le registrazioni.
+Seleziona la voce e il suo indice accoppiato, quindi conferma l'incorporamento del contenuto previsto da quel modello. Carica una breve registrazione e scegli WAV o FLAC per il test. Controlla le impostazioni riportate da una esecuzione precedente, in particolare intonazione, recupero ed effetti. Una prova di riferimento utile inizia da zero semitoni con gli effetti disattivati. Avvia il lavoro una volta, attendi l'output e confronta la stessa frase in entrambe le registrazioni.
 
 ### Ottimizza il test prima di eseguire un batch
 
@@ -76,6 +76,6 @@ Seleziona la voce e il suo indice accoppiato, quindi conferma l'incorporamento d
 | Sibilanti o respiri distorti | Prova separatamente a ridurre il recupero e a rafforzare la protezione dei suoni non sonori. Se il difetto persiste su più registrazioni pulite, correggi o integra gli esempi di sibilanti e respiri nel dataset e riaddestra il modello. |
  | Il parlato ha un livello non uniforme | Regolare l'inviluppo del volume o livellare la traccia finita. Controlla che la fonte stessa sia pulita. |
 
-Quando la linea di base funziona, passa a **Batch** e scegli più file o una directory di input, a seconda dell'edizione. Conservare l'output in una posizione separata. Utilizza un'esecuzione diversa per i file che necessitano di impostazioni di intonazione diverse e ascolta almeno un risultato da ciascun gruppo prima di utilizzare l'intero batch.
+Quando la prova di riferimento funziona, passa a **Batch** e scegli più file o una directory di input, a seconda dell'edizione. Conservare l'output in una posizione separata. Utilizza un'esecuzione diversa per i file che necessitano di impostazioni di intonazione diverse e ascolta almeno un risultato da ciascun gruppo prima di utilizzare l'intero batch.
 
 Per problemi di importazione dei modelli e spiegazioni dettagliate sulle impostazioni, utilizzare [Modelli e file RVC](../start/models.md), [Intonazione e qualità audio](audio-quality.md) e [Risoluzione dei problemi](../reference/troubleshooting.md).

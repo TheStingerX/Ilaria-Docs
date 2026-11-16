@@ -47,7 +47,7 @@ Use gravações e modelos de voz que você tem permissão para usar. Para demons
 2. Extraia a versão e inicie seu servidor ou inicializador integrado. Abra o cliente a partir do endereço local mostrado na inicialização, caso ele não abra automaticamente.
 3. Importe a voz para um slot de modelo, selecione esse slot e defina os dispositivos de entrada e monitor. Inicie a conversão e ouça pelos fones de ouvido antes de conectar a saída a uma chamada.
 
-## Garfo desenvolvido Okada TG
+## Okada TG Developed Fork
 
 1. Escolha um pacote em [versões TGR](https://github.com/tg-develop/voice-changer/releases). No Windows, use CUDA para uma placa NVIDIA compatível ou a compilação DirectML para uma GPU AMD ou Intel compatível.
 2. Inicie a compilação extraída, selecione o dispositivo de computação correspondente e importe a voz para um slot RVC.
@@ -73,7 +73,7 @@ Use gravações e modelos de voz que você tem permissão para usar. Para demons
 
 ## Redpanda-vc
 
-1. Obtenha [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e inicie o WebUI com uma compilação adequada ao seu sistema. O projeto fornece uma opção de contêiner CUDA para NVIDIA.
+1. Descarregue [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e inicie o WebUI com uma compilação adequada ao seu sistema. O projeto fornece uma opção de contêiner CUDA para NVIDIA.
 2. Selecione o mecanismo RVC e carregue uma voz RVC compatível com seu índice opcional. Redpanda-vc também oferece outras famílias de modelos, cada uma com seu próprio formato de modelo.
 3. Para um teste de microfone do navegador, permita o acesso ao microfone, escolha a GPU pretendida se as configurações do stream exporem a seleção do dispositivo e inicie o stream. Verifique o monitor do fone de ouvido no buffer padrão antes de diminuir a latência.
 

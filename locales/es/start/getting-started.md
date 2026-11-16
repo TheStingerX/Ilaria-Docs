@@ -73,7 +73,7 @@ Utilice grabaciones y modelos de voz para los que tenga permiso. Para demostraci
 
 ## Redpanda-vc
 
-1. Obtenga [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e inicie WebUI con una compilación adecuada a su sistema. El proyecto proporciona una opción de contenedor CUDA para NVIDIA.
+1. Descargue [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e inicie WebUI con una compilación adecuada a su sistema. El proyecto proporciona una opción de contenedor CUDA para NVIDIA.
 2. Seleccione el motor RVC y cargue una voz RVC compatible con su índice opcional. Redpanda-vc también ofrece otras familias de modelos, cada una con su propio formato de modelo.
 3. Para una prueba de micrófono del navegador, permita el acceso al micrófono, elija la GPU deseada si la configuración de transmisión expone la selección del dispositivo e inicie la transmisión. Verifique el monitor de auriculares en el búfer predeterminado antes de reducir la latencia.
 

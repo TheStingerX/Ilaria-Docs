@@ -27,7 +27,7 @@ Una diagnosi utile inizia dalla prima fase che fallisce. Conserva la versione de
 ## Prepara una prova di riferimento
 
 1. Registra 10–20 secondi di un parlante con vocali chiare, un `s` o `f` e una pausa naturale. Utilizza un WAV locale, a livello moderato, senza musica o effetti.
-2. Seleziona un modello di inferenza attendibile compatibile con l'app. Registrane il nome, l'incorporatore e lo slot dell'altoparlante. Inizia dalla trasposizione zero con l'estrattore di tonalità predefinito, l'elaborazione opzionale disattivata e il recupero a zero.
+2. Seleziona un modello di inferenza attendibile compatibile con l'app. Registrane il nome, l’embedder e lo slot dell'altoparlante. Inizia dalla trasposizione zero con l'estrattore di tonalità predefinito, l'elaborazione opzionale disattivata e il recupero a zero.
 3. Converti e salva in una cartella locale scrivibile. Riproduci il file in un secondo lettore se l'anteprima del browser è silenziosa. Confronta la stessa frase con un volume simile.
 4. Ripetere con un modello noto utilizzando il proprio codificatore compatibile. Se entrambi i modelli falliscono sullo stesso input, controlla la decodifica, il runtime o le impostazioni condivise. Se solo uno fallisce costantemente, ispeziona il modello, la sua configurazione e i dati di addestramento, se disponibili.
 5. Riattiva un'opzione per test. Salva ciascun risultato con le impostazioni nel nome file o nelle note in modo da poter ripristinare una combinazione di lavoro nota.
@@ -85,7 +85,7 @@ Un `G_*.pth` o `D_*.pth` da un esperimento di solito serve per riassumere la for
 | Cosa senti | Test diagnostico e interpretazione |
 | --- | --- |
 | Respiri metallici o sibilanti distorte | Confronta alcune fonti pulite con effetti e recupero disattivati. Confronta la protezione separatamente. Se lo stesso modello distorce costantemente i suoni attraverso clip pulite, esamina gli esempi di addestramento per verificare il ritaglio, la riduzione del rumore o la scarsa copertura, correggi il set di dati e riqualifica. |
-| La voce convertita mantiene il timbro sorgente | Verificare che il modello e l'incorporatore di formazione siano d'accordo. Le funzionalità generiche di HuBERT possono conservare i segnali dell'oratore. Confrontare senza recupero, quindi con l'indice corretto. Una limitazione persistente del modello addestrato può richiedere una riqualificazione. |
+| La voce convertita mantiene il timbro sorgente | Verificare che il modello e l’embedder di formazione siano d'accordo. Le funzionalità generiche di HuBERT possono conservare i segnali dell'oratore. Confrontare senza recupero, quindi con l'indice corretto. Una limitazione persistente del modello addestrato può richiedere una riqualificazione. |
 | Le parole si rompono solo in una lingua | Prova le frasi trattenute contenenti i suoni interessati con diverse registrazioni pulite. Le registrazioni multilingue da sole non possono garantire che ContentVec preservi le distinzioni. Registrare la limitazione linguistica osservata anziché promettere che un diverso contesto formativo la risolverà. |
 | L'intonazione salta o cambia l'ottava | Ascolta la frase originale, prova la trasposizione zero e confronta separatamente gli estrattori F0 supportati. Per cantare, controlla le note alte e basse esposte. |
 | Suoni metallici attorno alla musica o voci di sottofondo | Confronta una voce secca isolata. Ascolta gli artefatti di separazione prima di utilizzare uno stelo isolato come dati di training. |

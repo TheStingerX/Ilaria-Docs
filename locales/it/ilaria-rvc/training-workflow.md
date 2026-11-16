@@ -7,7 +7,7 @@ permalink: /ilaria-rvc/training-workflow/
 
 ## Preparare un esperimento
 
-Selezionare un set di dati e scegliere l'architettura RVC compatibile, la frequenza di campionamento, la guida dell'intonazione, l'incorporatore e i pretraining del generatore/discriminatore. Utilizza un nome esperimento univoco e una dimensione batch adatta alla VRAM. Esegui **Elaborazione dati**, quindi estrai le funzionalità della presentazione e dei contenuti prima dell'allenamento.
+Selezionare un set di dati e scegliere l'architettura RVC compatibile, la frequenza di campionamento, la guida dell'intonazione, l’embedder e i pretraining del generatore/discriminatore. Utilizza un nome esperimento univoco e una dimensione batch adatta alla VRAM. Esegui **Elaborazione dati**, quindi estrai le funzionalità della presentazione e dei contenuti prima dell'allenamento.
 
 ## Confronta anteprime ed esportazioni
 

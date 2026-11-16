@@ -7,7 +7,7 @@ permalink: /ilaria-rvc/inference/
 
 ## Stabilisci un riferimento
 
-Apri **Single Inference**, scegli una voce e carica una breve clip asciutta. Imposta **Intonazione** e **Rapporto indice** su zero. Utilizza l'incorporatore previsto dal modello, inizia con RMVPE e lascia disattivati ​​gli effetti opzionali. Salva un WAV e confrontalo con il tuo input al volume corrispondente.
+Apri **Single Inference**, scegli una voce e carica una breve clip asciutta. Imposta **Intonazione** e **Rapporto indice** su zero. Utilizza l’embedder previsto dal modello, inizia con RMVPE e lascia disattivati ​​gli effetti opzionali. Salva un WAV e confrontalo con il tuo input al volume corrispondente.
 
 ## Ottimizza passaggi separati
 

@@ -17,7 +17,7 @@ Os codificadores de inferência disponíveis incluem ContentVec, Spin, Spin-v2 e
 
 O treinamento expõe ContentVec e Spin-v2. A alteração do codificador requer novos recursos e um nome de experimento separado. Combine seu par de gerador e discriminador com o vocoder, taxa de amostragem de treinamento, geração de RVC e configuração de pitch e siga os requisitos do codificador do editor do par. Ilaria RVC 2.1.0 suporta treinamento RefineGAN especificamente em 32 kHz com RVC V2 e orientação de pitch. O downloader pode listar outras taxas para uso em outro lugar.
 
-## Obtenha um par G/D
+## Descarregar um par G/D
 
 Em **Outro → Baixar modelos pré-treinados**, use um repositório ou arquivo pré-treinado ou insira um link para o ponto de verificação G e seu ponto de verificação D correspondente se a descoberta precisar de ajuda. O seletor **Pré-treinados recomendados** mostra as variantes de catálogo disponíveis e suas taxas de amostragem. Verifique a variante escolhida antes de instalar os dois arquivos. Retorne ao Treinamento, atualize a lista e selecione o par instalado. Se estiver usando a inicialização aleatória intencionalmente, escolha Nenhum. Mantenha os modelos de inferência e os pré-treinos de treinamento separados.
 

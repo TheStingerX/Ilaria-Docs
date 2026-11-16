@@ -19,7 +19,7 @@ Consulte el [directorio de herramientas RVC](../reference/tools.md) para descarg
  | Mainline RVC | El proyecto inicial proporciona una WebUI de capacitación e inferencia junto con una GUI dedicada en tiempo real. Consulte las instrucciones de lanzamiento y de inicio para la plataforma que utiliza. |
  | Applio | Sus interfaces Desktop y Gradio tienen sus propios flujos de trabajo en tiempo real. Utilice las instrucciones de configuración para la interfaz y la versión que haya instalado. |
  | w-okada VCClient | Un cambiador de voz para uso en vivo. La disponibilidad de RVC depende de la edición de lanzamiento y la plataforma. Verifique los modelos compatibles antes de instalar una compilación. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
- | Deiteris y Tg-Develop | Bifurcaciones w-okada independientes con sus propias compilaciones y configuraciones. Consulte las notas de la versión de la bifurcación antes de aplicar las instrucciones para otra edición. [Repositorio Deiteris](https://github.com/deiteris/voice-changer) · [Repositorio Tg-Develop](https://github.com/tg-develop/voice-changer) |
+ | Deiteris y Tg-Develop | Bifurcaciones w-okada independientes con sus propias compilaciones y configuraciones. Consulte las notas de la versión de el fork antes de aplicar las instrucciones para otra edición. [Repositorio Deiteris](https://github.com/deiteris/voice-changer) · [Repositorio Tg-Develop](https://github.com/tg-develop/voice-changer) |
 
 
 ## Escuche primero una señal limpia

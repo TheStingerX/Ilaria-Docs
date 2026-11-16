@@ -67,4 +67,4 @@ Per Vonovox, iniziare con la modalità condivisa WASAPI, ove disponibile. Utiliz
 | L'audio suona bene finché il PC non è sotto carico | Ripristina il buffer predefinito o aumentalo e prova con il gioco o l'app di streaming in esecuzione. |
 | Le sillabe scompaiono quando sussurri o canti | Test con rilevamento dell'attività vocale e soppressione del rumore disabilitati uno alla volta. |
 
-Ottimizza **Dimensione blocco** una volta completato il percorso completo. Abbassalo di un passo e ripeti la stessa frase. Se ricevi clic o parole mancanti, ripristina l'ultimo valore pulito. Lascia il lookahead e gli altri effetti sui valori predefiniti finché non avrai una linea di base stabile.
+Ottimizza **Dimensione blocco** una volta completato il percorso completo. Abbassalo di un passo e ripeti la stessa frase. Se ricevi clic o parole mancanti, ripristina l'ultimo valore pulito. Lascia il lookahead e gli altri effetti sui valori predefiniti finché non avrai una prova di riferimento stabile.

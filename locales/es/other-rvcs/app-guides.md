@@ -13,7 +13,7 @@ Elija la aplicación y edición exacta que desea utilizar. Los nombres de config
 | Convierta archivos, entrene voces, genere voz o configure la conversión en vivo en Applio | [Instale Applio](applio/installation.md) y elija la guía para su próximo paso. |
 | Utilice la interfaz de usuario web ascendente | [Comience con Mainline RVC](mainline/installation.md). |
 | Configure una voz en vivo con w-okada VCClient | [Elija e instale una compilación de VCClient](okada/installation.md), luego [pruebe y enrute su micrófono](okada/live-audio.md). |
-| Utilice la bifurcación desarrollada por TG | [Instala TGR](tgr/installation.md) para tu hardware y [configura audio en vivo](tgr/live-audio.md). |
+| Utilice Okada TG Developed Fork | [Instala TGR](tgr/installation.md) para tu hardware y [configura audio en vivo](tgr/live-audio.md). |
 | Convertir un archivo en la aplicación Tiger14n archivada | [Instalar y convertir con RVC GUI](rvc-gui/file-conversion.md). |
 | Pruebe Redpanda-vc con RVC | [Configure Redpanda-vc](redpanda/first-run.md), luego [pruebe la ruta en tiempo real de su escritorio o navegador](redpanda/live-audio.md). |
 

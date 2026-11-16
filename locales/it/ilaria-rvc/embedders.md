@@ -17,7 +17,7 @@ I codificatori di inferenza disponibili includono ContentVec, Spin, Spin-v2 e Hu
 
 La formazione espone ContentVec e Spin-v2. La modifica del codificatore richiede nuove funzionalità e un nome dell'esperimento separato. Abbina la coppia generatore e discriminatore al vocoder, alla frequenza di campionamento dell'addestramento, alla generazione RVC e alla configurazione dell'intonazione e segui i requisiti del codificatore dell'editore della coppia. Ilaria RVC 2.1.0 supporta l'allenamento RefineGAN specificamente a 32 kHz con RVC V2 e guida del tono. Il downloader potrebbe elencare altre tariffe da utilizzare altrove.
 
-## Ottieni una coppia G/D
+## Scarica una coppia G/D
 
 In **Altro → Scarica modelli preaddestrati**, utilizza un repository o un archivio preaddestrato oppure inserisci un collegamento al checkpoint G e al checkpoint D corrispondente se la scoperta ha bisogno di aiuto. Il selettore **Preaddestrati consigliati** mostra le varianti del catalogo disponibili e le relative frequenze di campionamento. Controlla la variante scelta prima di installare entrambi i file. Torna a Formazione, aggiorna l'elenco e seleziona la coppia installata. Se si utilizza intenzionalmente l'inizializzazione casuale, scegliere Nessuna. Mantieni separati i modelli di inferenza e i pre-training di addestramento.
 

@@ -25,7 +25,7 @@ Inizia con **RMVPE**, il valore predefinito per l'attuale inferenza di Ilaria RV
 - Per un parlato tranquillo, assicurati che l'input contenga una vocale chiara. Aumentando il livello di una clip che contiene principalmente rumore può renderne più difficile la diagnosi.
 - Per un batch di grandi dimensioni, confrontare prima un estratto dalle voci di origine più basse e quelle più alte. Confronta il tempo di elaborazione con lo stesso file e le stesse impostazioni sulla macchina prevista.
 
-L'estrazione della presentazione e l'estrazione del contenuto sono fasi separate. La modifica dell'estrattore F0 stima un profilo di intonazione diverso dallo stesso audio. L'incorporatore di contenuto deve ancora corrispondere al modello.
+L'estrazione della presentazione e l'estrazione del contenuto sono fasi separate. La modifica dell'estrattore F0 stima un profilo di intonazione diverso dallo stesso audio. L'embedder di contenuto deve ancora corrispondere al modello.
 
 ## Apporta modifiche mirate
 
@@ -39,7 +39,7 @@ L'estrazione della presentazione e l'estrazione del contenuto sono fasi separate
  | Una voce elaborata suona fragile | Disattiva la pulizia, la correzione automatica dell'intonazione e gli effetti di output. Aggiungili nuovamente individualmente dopo una conversione pulita. | Meno artefatti sulle sibilanti e sulle vocali sostenute. |
  | I picchi di uscita sono distorti | Controlla eventuali ritagli sulla forma d'onda originale o convertita. Ridurre il guadagno non necessario e confrontare prima di limitare. | Picchi puliti e nessun crepitio sulle sillabe forti. |
 
-Evitare di cambiare l'incorporatore per inseguire un suono. Deve corrispondere alla rappresentazione della feature su cui è stato addestrato il modello. **Rapporto indice** unisce le funzionalità recuperate da un indice di addestramento corrispondente nella conversione. Non fornisce un aumento di qualità generico. Una fusione elevata può rendere la pronuncia meno distinta, soprattutto su una fonte sconosciuta.
+Evitare di cambiare l’embedder per inseguire un suono. Deve corrispondere alla rappresentazione della feature su cui è stato addestrato il modello. **Rapporto indice** unisce le funzionalità recuperate da un indice di addestramento corrispondente nella conversione. Non fornisce un aumento di qualità generico. Una fusione elevata può rendere la pronuncia meno distinta, soprattutto su una fonte sconosciuta.
 
 Nel motore di file di Applio, un'impostazione **Inviluppo volume** più vicina allo zero segue più da vicino la dinamica della sorgente. Per **Proteggi consonanti senza voce**, i valori inferiori a 0,5 rafforzano la protezione e 0,5 la disabilita in quel motore. Controlla il tooltip e le note di rilascio della tua app prima di trasferire quei numeri a un altro fork.
 

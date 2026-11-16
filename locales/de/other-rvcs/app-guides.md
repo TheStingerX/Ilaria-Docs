@@ -13,7 +13,7 @@ Wählen Sie genau die App und Edition aus, die Sie verwenden möchten. Die Setup
 | Konvertieren Sie Dateien, trainieren Sie Stimmen, generieren Sie Sprache oder richten Sie eine Live-Konvertierung in Applio ein. | [Installieren Sie Applio](applio/installation.md) und wählen Sie die Anleitung für Ihren nächsten Schritt. |
 | Verwenden Sie die Upstream-WebUI | [Erste Schritte mit Mainline RVC](mainline/installation.md). |
 | Konfigurieren Sie eine Live-Stimme mit w-okada VCClient | [Wählen und installieren Sie einen VCClient-Build](okada/installation.md), dann [testen und leiten Sie Ihr Mikrofon](okada/live-audio.md). |
-| Verwenden Sie die von TG entwickelte Gabel | [Installieren Sie TGR](tgr/installation.md) für Ihre Hardware und [richten Sie Live-Audio ein](tgr/live-audio.md). |
+| Verwenden Sie Okada TG Developed Fork | [Installieren Sie TGR](tgr/installation.md) für Ihre Hardware und [richten Sie Live-Audio ein](tgr/live-audio.md). |
 | Konvertieren Sie eine Datei in der archivierten Tiger14n-App | [Installieren und konvertieren mit RVC GUI](rvc-gui/file-conversion.md). |
 | Redpanda-vc mit RVC testen | [Redpanda-vc einrichten](redpanda/first-run.md), dann [den Desktop- oder Browser-Echtzeitpfad testen](redpanda/live-audio.md). |
 

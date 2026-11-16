@@ -47,7 +47,7 @@ Verwenden Sie Aufnahmen und Sprachmodelle, zu deren Nutzung Sie berechtigt sind.
 2. Extrahieren Sie die Version und starten Sie den mitgelieferten Server oder Launcher. Öffnen Sie den Client über die beim Start angezeigte lokale Adresse, wenn er nicht automatisch geöffnet wird.
 3. Importieren Sie die Stimme in einen Modellsteckplatz, wählen Sie diesen Steckplatz aus und stellen Sie die Eingabe- und Überwachungsgeräte ein. Starten Sie die Konvertierung und hören Sie über Kopfhörer zu, bevor Sie den Ausgang mit einem Anruf verbinden.
 
-## Von Okada TG entwickelte Gabel
+## Okada TG Developed Fork
 
 1. Wählen Sie ein Paket aus [TGR-Releases](https://github.com/tg-develop/voice-changer/releases). Verwenden Sie unter Windows CUDA für eine unterstützte NVIDIA-Karte oder den DirectML-Build für eine unterstützte AMD- oder Intel-GPU.
 2. Starten Sie den extrahierten Build, wählen Sie das passende Rechengerät aus und importieren Sie die Stimme in einen RVC-Slot.
@@ -73,7 +73,7 @@ Verwenden Sie Aufnahmen und Sprachmodelle, zu deren Nutzung Sie berechtigt sind.
 
 ## Redpanda-vc
 
-1. Holen Sie sich [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) und starten Sie die WebUI mit einem Build, der für Ihr System geeignet ist. Das Projekt stellt eine CUDA-Container-Option für NVIDIA bereit.
+1. Laden Sie dieses Paket herunter: [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) und starten Sie die WebUI mit einem Build, der für Ihr System geeignet ist. Das Projekt stellt eine CUDA-Container-Option für NVIDIA bereit.
 2. Wählen Sie die RVC-Engine aus und laden Sie eine kompatible RVC-Stimme mit ihrem optionalen Index. Redpanda-vc bietet auch andere Modellfamilien mit jeweils eigenem Modellformat an.
 3. Erlauben Sie für einen Browser-Mikrofontest den Mikrofonzugriff, wählen Sie die gewünschte GPU aus, wenn die Stream-Einstellungen eine Geräteauswahl ermöglichen, und starten Sie den Stream. Überprüfen Sie den Kopfhörermonitor auf den Standardpuffer, bevor Sie die Latenz verringern.
 

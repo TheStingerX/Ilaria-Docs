@@ -7,7 +7,7 @@ permalink: /ilaria-rvc/troubleshooting/
 
 ## Trova la prima fase non riuscita
 
-Per problemi di avvio, utilizza `ILARIA_RVC_LOGS.bat` e annota il primo errore. In caso di errore nell'inferenza, testare un breve WAV locale con il recupero disattivato e confermare il modello e l'incorporatore. Per gli errori di training, identificare se la preelaborazione, l'estrazione delle funzionalità o la fase di training non sono riuscite prima di riprovare.
+Per problemi di avvio, utilizza `ILARIA_RVC_LOGS.bat` e annota il primo errore. In caso di errore nell'inferenza, testare un breve WAV locale con il recupero disattivato e confermare il modello e l’embedder. Per gli errori di training, identificare se la preelaborazione, l'estrazione delle funzionalità o la fase di training non sono riuscite prima di riprovare.
 
 ## Gestire la pressione della memoria
 

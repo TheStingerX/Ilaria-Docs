@@ -20,7 +20,7 @@ Vonovox è un convertitore vocale live di Windows per le GPU NVIDIA supportate. 
 1. Scarica lo ZIP, quindi utilizza **Estrai tutto** e posiziona l'intero pacchetto in una cartella locale scrivibile come `C:\VoiceTools\Vonovox`. Esegui i launcher dalla cartella estratta, con i file di supporto accanto a loro.
 2. Il pacchetto è già precompilato. Apri la cartella estratta ed esegui `start.bat`. Puoi saltare `setup.bat`.
 3. Attendi l'interfaccia. Se la finestra si chiude immediatamente, esegui lo stesso programma di avvio da un prompt dei comandi aperto in modo che l'ultimo errore rimanga visibile. Verifica di aver estratto l'intero archivio e di aver selezionato una build GPU compatibile.
-4. Seleziona il modello RVC V2 nell'area modello. Scegli l'incorporatore previsto quando l'interfaccia utente lo espone. Inizia con controlli di tonalità e formanti neutri, dimensioni predefinite dei blocchi ed effetti opzionali disattivati.
+4. Seleziona il modello RVC V2 nell'area modello. Scegli l’embedder previsto quando l'interfaccia utente lo espone. Inizia con controlli di tonalità e formanti neutri, dimensioni predefinite dei blocchi ed effetti opzionali disattivati.
 
 ## 3. Controllare il primo segnale
 
@@ -47,7 +47,7 @@ Se il modello non viene caricato, verificare RVC V2 e l'embedder prima di modifi
 ### Carica una voce e controllala prima di aprire una chiamata
 
 1. Decomprimere l'archivio vocale, se necessario. Trova l'inferenza `.pth`. I file denominati come `G_*.pth` o `D_*.pth` sono in genere checkpoint di addestramento.
-2. Scegli la voce RVC V2 e utilizza l'incorporatore specificato dal suo editore. Mantieni l'intonazione neutra, gli effetti disattivati ​​e il buffer impostato di default per il primo test.
+2. Scegli la voce RVC V2 e utilizza l’embedder specificato dal suo editore. Mantieni l'intonazione neutra, gli effetti disattivati ​​e il buffer impostato di default per il primo test.
 3. Seleziona il microfono fisico. Invia l'output alle cuffie per un test diretto, se supportato, oppure utilizza il cavo virtuale e il monitoraggio di Windows descritti in [Instrada e sintonizza Vonovox](live-audio.md).
 4. Avvia il convertitore e pronuncia una breve frase, quindi fai una pausa. L'output dovrebbe avere i tuoi tempi e le tue parole con il timbro della voce selezionata. Se senti il ​​tuo microfono normale o il silenzio, segui i controlli di instradamento prima di modificare l'intonazione o gli effetti.
 

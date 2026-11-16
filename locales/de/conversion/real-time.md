@@ -19,7 +19,7 @@ Im [RVC-Tools-Verzeichnis](../reference/tools.md) finden Sie Downloads und Hardw
  | Mainline RVC | Das Upstream-Projekt bietet eine Schulungs- und Inferenz-WebUI sowie eine dedizierte Echtzeit-GUI. Beachten Sie die Release- und Launcher-Anweisungen für die von Ihnen verwendete Plattform. |
  | Applio | Die Desktop- und Gradio-Schnittstellen verfügen über eigene Echtzeit-Workflows. Befolgen Sie die Setup-Anweisungen für die Schnittstelle und Version, die Sie installiert haben. |
  | w-okada VCClient | Ein Stimmverzerrer für den Live-Einsatz. Die RVC-Verfügbarkeit hängt von der Release-Edition und der Plattform ab. Überprüfen Sie die unterstützten Modelle, bevor Sie einen Build installieren. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
- | Deiteris und Tg-Develop | Unabhängige w-okada-Forks mit ihren eigenen Builds und Einstellungen. Überprüfen Sie die Versionshinweise der Gabel, bevor Sie Anweisungen für eine andere Edition anwenden. [Deiteris-Repository](https://github.com/deiteris/voice-changer) · [Tg-Develop-Repository](https://github.com/tg-develop/voice-changer) |
+ | Deiteris und Tg-Develop | Unabhängige w-okada-Forks mit ihren eigenen Builds und Einstellungen. Überprüfen Sie die Versionshinweise des Forks, bevor Sie Anweisungen für eine andere Edition anwenden. [Deiteris-Repository](https://github.com/deiteris/voice-changer) · [Tg-Develop-Repository](https://github.com/tg-develop/voice-changer) |
 
 
 ## Hören Sie zuerst ein sauberes Signal.

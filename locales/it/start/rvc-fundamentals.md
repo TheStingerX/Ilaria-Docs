@@ -31,7 +31,7 @@ Per i controlli di conversione specifici dell'app, vedere [Conversione vocale](.
 ## Verifica la compatibilità del modello prima dell'importazione
 
 1. **Conferma la famiglia e l'architettura del modello.** Utilizza un runtime che supporti esplicitamente il modello. Classic RVC v1 e v2 utilizzano dimensioni di funzionalità diverse, comunemente 256 e 768 rispettivamente in Mainline. Alcuni fork supportano anche architetture che richiedono il proprio runtime.
-2. **Controlla l'incorporatore.** Il runtime dovrebbe fornire la rappresentazione della funzionalità che il modello è stato addestrato ad aspettarsi. Un modello addestrato con un incorporatore personalizzato può aver bisogno di tale incorporatore al momento dell'inferenza. Un'estensione di file simile o una frequenza di campionamento corrispondente da sola forniscono poche prove di supporto.
+2. **Controlla l’embedder.** Il runtime dovrebbe fornire la rappresentazione della funzionalità che il modello è stato addestrato ad aspettarsi. Un modello addestrato con un embedder personalizzato può aver bisogno di tale embedder al momento dell'inferenza. Un'estensione di file simile o una frequenza di campionamento corrispondente da sola forniscono poche prove di supporto.
 3. **Utilizzare l'esportazione dell'inferenza.** Un `.pth` pronto all'uso e un checkpoint di training possono avere la stessa estensione. Seleziona il file identificato dall'editore come modello di inferenza. Un ZIP è un contenitore per i file ed è direttamente importabile solo se l'app supporta l'importazione ZIP.
 4. **Associa i dati di recupero al relativo checkpoint.** Un `.index` creato per un'altra voce o incorporamento può fallire o peggiorare il risultato. Mantieni insieme il modello e il suo indice e verifica che l'app abbia selezionato la coppia prevista. Se disponi solo di un modello compatibile, utilizza il flusso di lavoro senza recupero supportato dal tuo cliente.
 5. **Prova un file breve.** Prova una clip pulita con le impostazioni predefinite. Un modello caricato può comunque suonare in modo errato se il runtime utilizza l'estrattore di funzionalità sbagliato o se l'input è molto al di fuori della portata della voce.
@@ -45,7 +45,7 @@ Ottieni i file del modello dall'editore originale o da un'altra fonte di cui ti 
 
 Conserva una clip di riferimento asciutta e usa quella stessa clip per ogni confronto. Includi una frase tranquilla, una frase con consonanti acute e una vocale sostenuta. Mantieni i livelli di riproduzione simili in modo che il volume da solo non faccia sembrare migliore un'uscita.
 
-1. Visualizza una linea di base utilizzando le impostazioni predefinite dell'app.
+1. Visualizza una prova di riferimento utilizzando le impostazioni predefinite dell'app.
 2. Controlla prima la chiarezza delle parole. Se sia la clip originale che quella convertita sono difficili da comprendere, registra nuovamente la sorgente.
 3. Per l'oscillazione del tono, confrontare due predittori del tono supportati prima di modificare il recupero.
 4. Per un problema di timbro o struttura, confrontare con recupero disabilitato, quindi regolare il tasso di indice se l'indice corrispondente aiuta.

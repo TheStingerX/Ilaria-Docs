@@ -14,7 +14,7 @@ Apri **Impostazioni inferenza** per Singolo o Batch. Scegli il modello e selezio
  | Dividi audio | Trova luoghi tranquilli per dividere una registrazione preservando il tempo. | Controlla le giunzioni, le desinenze delle parole, i respiri e gli spazi vuoti. |
  | Autotune | Sposta il Fa0 sonoro verso le note cromatiche vicine. Utilizza la guida del tono. | Confronta note esposte e vibrato. |
  | Presentazione proposta | Utilizza una frequenza target e l'altezza mediana della voce sorgente per stimare uno spostamento limitato. | Testa i limiti alti e bassi della prestazione prima di una corsa completa. |
- | Formant Shifting | Cambia la risonanza vocale prima della conversione. Un rapporto pari a 1 mantiene la linea di base. | Confronta le vocali alla stessa altezza e livello di ascolto. |
+ | Formant Shifting | Cambia la risonanza vocale prima della conversione. Un rapporto pari a 1 mantiene la prova di riferimento. | Confronta le vocali alla stessa altezza e livello di ascolto. |
  | Audio pulito | Applica la riduzione del rumore dopo la conversione. | Ascolta le code acquose o le consonanti perse. |
  | Post-elaborazione | Applica gli effetti selezionati all'output convertito. Guadagno, Pitch Shift e Limiter espongono i controlli. | Confronta il livello abbinato con gli effetti disattivati. Conserva un'esportazione asciutta per modifiche successive. |
 

@@ -45,7 +45,7 @@ Apri il collegamento corrente dal passaggio 4 in un'altra scheda. Lascia la sess
 
 1. Nella scheda del browser di Ilaria RVC, apri **Altro → Importa modelli locali**. Aggiungi il checkpoint di inferenza o un ZIP supportato e aggiungi l'indice abbinato, se disponibile. Attendi il completamento dell'importazione.
 2. Apri **Inferenza**, aggiorna l'elenco delle voci se necessario, seleziona la voce desiderata e vai a **Inferenza singola**.
-3. Carica il breve WAV. Inizia con **Intonazione 0** e **Rapporto indice 0**. Lasciare disattivati ​​gli effetti opzionali e utilizzare l'incorporatore previsto dal modello.
+3. Carica il breve WAV. Inizia con **Intonazione 0** e **Rapporto indice 0**. Lasciare disattivati ​​gli effetti opzionali e utilizzare l’embedder previsto dal modello.
 4. Fare clic una volta sul controllo di conversione e attendere l'output. Riproduci il risultato, quindi scaricalo dal lettore, se disponibile. Mantieni il WAV di input in modo da poter confrontare la stessa frase in seguito.
 5. Se vuoi testare il recupero, seleziona l'indice corrispondente e prova un piccolo aumento da zero. Se l'output fallisce o la voce diventa più difficile da comprendere, tornare alla prova di riferimento e verificare l'abbinamento modello-indice.
 
