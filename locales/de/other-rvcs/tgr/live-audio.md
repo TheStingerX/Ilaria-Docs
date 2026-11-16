@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/tgr/live-audio/
 ---
 # Richten Sie Live-Audio in Okada TG Developed Fork ein
 
+> Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist **VAC Lite** die erste Wahl, **VB-CABLE** eine Alternative. Lies vor dem Anruf die vollständige Anleitung. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Verwenden Sie einen kompatiblen RVC-Inferenzkontrollpunkt und ein funktionierendes Mikrofon. Stellen Sie zunächst sicher, dass das umgewandelte Signal Ihren Kopfhörer erreicht. Senden Sie dieses Signal dann an eine andere Anwendung und machen Sie eine Aufzeichnung vom Empfängerende.
 
 ## Laden Sie eine RVC-Stimme.

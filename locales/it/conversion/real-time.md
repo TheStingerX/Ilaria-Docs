@@ -5,6 +5,8 @@ permalink: /real-time/
 ---
 # Conversione vocale in tempo reale
 
+> Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, **VAC Lite** è la prima scelta e **VB-CABLE** è un’alternativa. Leggi la guida completa prima di provare in chiamata. [VAC Lite / VB-CABLE](../other-rvcs/vonovox/live-audio.md)
+
 Per una registrazione o una cover, la conversione dei file ti consente di renderizzare e confrontare diverse riprese. In una configurazione live, il convertitore deve completare ciascun blocco audio abbastanza velocemente da mantenere in movimento il flusso del microfono. Configura prima un segnale locale affidabile, quindi collegalo a un'applicazione di chiamata, registrazione o streaming.
 
 ## Scegli uno strumento per il lavoro

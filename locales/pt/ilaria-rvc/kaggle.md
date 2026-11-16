@@ -51,6 +51,67 @@ Abra o link atual do passo 4 em outra aba. Deixe a sessão Kaggle em execução.
 
 Se a voz nunca aparecer, primeiro verifique o log de importação. Um ponto de verificação de treinamento salvo como um arquivo G ou D pertence a um experimento e precisa de uma exportação de inferência antes de poder ser selecionado aqui.
 
+## Prepare seu conjunto de dados e planeje uma execução de treinamento
+
+### Limpe o áudio com MVSEP somente quando necessário
+
+Mantenha uma cópia intacta de suas gravações. Se já contiverem uma única voz limpa e seca, pule a separação. Use material que você tem permissão para enviar para [MVSEP](https://mvsep.com/en/home) e para treinar. Para gravações confidenciais, limpe-as localmente.
+
+1. **Isole a voz.** Carregue um pequeno exemplo e escolha uma opção de separação vocal. Baixe a haste vocal em WAV quando disponível. Reproduza-o com o original e ouça através de fones de ouvido músicas, outras vozes, sílabas cortadas e artefatos aquosos ou metálicos.
+2. **Remova os backing vocals somente se estiverem presentes.** Para músicas com harmonias ou um refrão abaixo do alvo, use uma opção de separação lead-versus-backing na haste vocal. Mantenha a saída principal. Se os cantores ainda se sobrepuserem ou o solo tiver buracos, use uma seção limpa ou uma tomada diferente.
+3. **Reduza a reverberação apenas onde for audível.** Se a voz tiver uma cauda de reverberação estéreo ampla, primeiro teste uma opção de desreverberação estéreo em uma cópia. Para reflexões restantes da sala, compare uma passagem de reverberação da sala. Você pode pular qualquer uma das etapas. Ouça consoantes truncadas e respirações em cada passagem.
+4. **Remova o eco somente se ele repetir a voz.** Uma repetição audível atrasada solicita um breve teste separado. Mantenha o original ou substitua-o se a remoção remover palavras. Evite empilhar passes em áudio limpo.
+5. **Prepare os clipes finais.** Corte ruídos inutilizáveis ​​e longas seções vazias em um editor como o Audacity, mantendo respirações úteis e frases naturais. Exporte WAVs limpos. Junte os arquivos aprovados em um ZIP e mantenha alguns clipes limpos fora dele para avaliação.
+
+Teste toda a cadeia de limpeza alguns segundos antes de tratar todo o conjunto de dados. Um modelo pode aprender artefatos deixados em seu áudio de treinamento. Verifique vários clipes de sessões diferentes antes de enviar.
+
+### Limpe um conjunto de dados localmente com Ultimate Vocal Remover (UVR)
+
+UVR separa um arquivo de áudio em faixas chamadas stems. Use-o quando a voz alvo for misturada com música, efeitos sonoros ou outros vocais. Se você já possui uma gravação de voz limpa, mantenha a original. O UVR processa o áudio no seu computador após o download dos modelos necessários. Kaggle executa o trabalho de treinamento RVC posterior separadamente.
+
+#### Instale o UVR e prepare um clipe de teste
+
+1. Baixe o instalador ou pacote para o seu sistema operacional em [Versões UVR](https://github.com/Anjok07/ultimatevocalremovergui/releases). Inicie o aplicativo de desktop após instalá-lo.
+2. Faça uma cópia de 15 a 30 segundos de um exemplo que contenha uma linha clara e uma seção onde a música se sobrepõe. Mantenha o original seguro.
+3. Clique em **Selecionar entrada** e escolha o clipe de teste. Use **Select Output** para escolher uma nova pasta gravável, como `uvr-test`. Escolha **WAV** para o formato de saída.
+4. Selecione um **Método de processo** e um modelo que separe **vocais** de **instrumental**, por exemplo, um modelo de vocais em **MDX-Net**. Se a lista estiver vazia, abra as configurações **Centro de download**, selecione a família de modelos correspondente e baixe um modelo adequado. Volte para a janela principal e selecione-a.
+5. Habilite **Conversão de GPU** somente se a versão instalada reconhecer um dispositivo compatível. Se essa opção causar erro, desligue-a e teste na CPU. O processamento da CPU pode ser mais lento, então comece com um clipe curto.
+
+#### Separe os vocais e ouça
+
+Clique em **Iniciar processamento**. Quando terminar, encontre a haste vocal na pasta de saída. Alguns modelos também escrevem uma haste instrumental. Toque o original e os vocais em volume semelhante. Verifique consoantes, respirações, notas retidas e seções onde o acompanhamento é alto. Se você ainda ouvir instrumentos ou a voz parecer aquosa ou metálica, compare outro modelo no mesmo clipe de teste antes de processar o conjunto de dados completo.
+
+Se você selecionou o radical errado, verifique os nomes dos arquivos ou ouça cada saída. Mantenha aquele que contém sua voz principal alvo.
+
+#### Limpe os problemas restantes, um de cada vez.
+
+| O que resta | O que tentar em UVR |
+| --- | --- |
+| Backing vocals ou harmonias | Alimente a haste vocal isolada em um modelo destinado à separação de solo e apoio, se sua instalação oferecer uma. Mantenha a saída principal e verifique se o vocal alvo está completo. |
+| Reverberação entre frases | Experimente um modelo destinado à reverberação, se disponível. Compare o antes e o depois na mesma passagem. Mantenha a haste original se a reverberação danificar consoantes ou notas retidas. |
+| Repetições audíveis atrasadas | Teste um modelo de remoção de eco, se disponível. Se remover palavras ou distorcer a respiração, use outra tomada ou exclua a seção afetada. |
+| Zumbido ambiente, picos cortados ou outras vozes | Verifique o original. Se o tratamento continuar prejudicando a voz, substitua ou exclua o clipe. A separação não pode reconstruir picos perdidos no corte. |
+
+Processe o conjunto completo somente depois que uma breve comparação parecer correta. Use o Audacity ou outro editor para cortar material inutilizável. Mantenha pausas e respirações naturais, exporte os clipes aprovados como WAV e coloque apenas esses clipes no ZIP do conjunto de dados. Mantenha as hastes instrumentais e rejeitadas fora do ZIP. Em seguida, carregue-o em **Training** no Ilaria RVC e confirme **Path to Dataset** aponta para as gravações importadas.
+
+### Traduzir o fluxo de trabalho original do Applio para Ilaria RVC
+
+| Etapa no fluxo de trabalho original | O que fazer neste notebook Ilaria RVC |
+| --- | --- |
+| Configure uma conta Kaggle e verifique-a | Faça login e verifique se você pode ativar GPU e Internet. Conclua a verificação se Kaggle solicitar. |
+| Escolha um túnel ou modo de persistência | Execute o notebook oficial em ordem e abra a URL do Gradio da etapa 4. Ele cuida do túnel. Faça backup do experimento fora da sessão temporária usando a célula de exportação. |
+| Carregue o conjunto de dados e cole seu caminho | Use o seletor de upload no Ilaria RVC, espere que ele termine e confirme **Path to Dataset** aponta para seus arquivos preparados. Combine o nome do modelo com o que você inserirá ao exportar pontos de verificação. |
+| Escolha uma segmentação de dados e pós-normalização | **Dados do processo** controla o fatiamento e ajusta cada fatia automaticamente. O fluxo de trabalho Ilaria RVC não possui alternância separada do Applio Post. Combine a taxa de amostragem de treinamento com a arquitetura e os pré-treinos. A reamostragem não pode restaurar detalhes ausentes. |
+| Defina os arquivos de treinamento silenciosos como zero | Deixe **Arquivos de treinamento silenciosos** como padrão para sua primeira corrida. Se seus clipes já possuem pausas naturais e não há longas seções vazias, compare uma execução separada com zero. Verifique ambas as saídas nas mesmas pausas prolongadas. |
+| Escolha o tamanho do lote pelo comprimento do conjunto de dados | Comece com 2 ou 4 se não tiver certeza e use 8 somente se a GPU tiver espaço livre e a configuração funcionar. Verifique o log e VRAM. Reduza o lote após um erro de falta de memória. Kaggle não implica um multiplicador de lote fixo e o comprimento do conjunto de dados por si só não determina o tamanho do lote. |
+| Treine até que o modelo pareça correto | Salve a cada 5 ou 10 épocas se o tempo disponível e o espaço em disco permitirem. Compare as exportações de inferência salvas nos mesmos clipes de teste. Não existe uma meta de época universal, e estender uma execução até 500 épocas não pode reparar um conjunto de dados de baixa qualidade. |
+
+#### Ouça antes de decidir qual ponto de verificação manter.
+
+Use um pequeno conjunto de clipes retidos. Inclua uma frase simples, com consoantes agudas e uma pausa. Para cantar, teste também uma nota sustentada e uma transição entre registros. Comece com a afinação zero, a recuperação desativada e os efeitos opcionais desativados. Mantenha o modelo cujos resultados sejam mais claros em todo o conjunto. Se todas as versões tiverem as mesmas respirações metálicas ou palavras abafadas, revisite o conjunto de dados em vez de estender a execução às cegas.
+
+Mantenha a exportação de inferência e seu índice correspondente, se você usou um. Para continuar uma execução mais tarde, salve o experimento completo com a célula de exportação do notebook e mantenha o conjunto de dados original separadamente. Abra o ZIP baixado e verifique seu conteúdo antes de encerrar a sessão Kaggle.
+
 ## 5. Treine uma voz e salve seu trabalho
 
 1. Em **Treinamento**, escolha um novo **Nome do modelo**. Importe seu áudio ou ZIP por meio dos controles de upload do conjunto de dados. Aguarde a conclusão da importação e confirme que **Path to Dataset** aponta para as gravações importadas.

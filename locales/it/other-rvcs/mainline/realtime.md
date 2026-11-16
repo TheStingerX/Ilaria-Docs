@@ -6,6 +6,8 @@ permalink: /ilaria-rvc/mainline/realtime/
 
 # Converti la voce dal vivo con Mainline
 
+> Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, **VAC Lite** è la prima scelta e **VB-CABLE** è un’alternativa. Leggi la guida completa prima di provare in chiamata. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Usa la GUI separata inclusa nelle versioni supportate di Mainline per convertire in tempo reale la voce del microfono. La WebUI serve per convertire file e addestrare modelli. Ascolta il risultato in cuffia prima di mandarlo all'app di destinazione.
 
 ## Apri l'interfaccia e seleziona i tuoi file

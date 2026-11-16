@@ -6,6 +6,8 @@ permalink: /ilaria-rvc/mainline/realtime/
 
 # Utilice el cambiador de voz en tiempo real de Mainline
 
+> Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Esta guía se aplica a la GUI en tiempo real separada incluida en las compilaciones de Mainline compatibles. Puede pasar un micrófono a través de un modelo continuamente mientras la WebUI se usa para grabaciones y capacitación. Comience escuchando directamente a través de auriculares y luego envíe el audio procesado a su otra aplicación.
 
 ## Abra la interfaz y seleccione sus archivos

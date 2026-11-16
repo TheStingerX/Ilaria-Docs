@@ -51,6 +51,67 @@ Open the current link from step 4 in another tab. Leave the Kaggle session runni
 
 If the voice never appears, first check the import log. A training checkpoint saved as a G or D file belongs to an experiment and needs an inference export before it can be selected here.
 
+## Prepare your dataset and plan a training run
+
+### Clean the audio with MVSEP only where needed
+
+Keep an untouched copy of your recordings. If they already contain a single clean, dry voice, skip separation. Use material you have permission to upload to [MVSEP](https://mvsep.com/en/home) and to train on. For confidential recordings, clean them locally.
+
+1. **Isolate the voice.** Upload a short example and choose a vocal separation option. Download the vocal stem in WAV when available. Replay it against the original and listen through headphones for music, other voices, clipped syllables, and watery or metallic artifacts.
+2. **Remove backing vocals only if present.** For songs with harmonies or a chorus underneath the target, use a lead-versus-backing separation option on the vocal stem. Keep the lead output. If the singers still overlap or the lead has holes, use a clean section or a different take.
+3. **Reduce reverb only where audible.** If the voice has a wide stereo reverb tail, first test a stereo de-reverb option on a copy. For remaining room reflections, compare a room de-reverb pass. You can skip either stage. Listen for truncated consonants and breaths at each pass.
+4. **Remove echo only if it repeats the voice.** An audible delayed repeat calls for a separate short test. Keep the original or replace that take if removal strips out words. Avoid stacking passes on otherwise clean audio.
+5. **Prepare the final clips.** Trim unusable noise and long empty sections in an editor such as Audacity, while keeping useful breaths and natural phrasing. Export clean WAVs. Put the approved files together in a ZIP and keep a few clean clips outside it for evaluation.
+
+Test the full cleanup chain on a few seconds before treating the entire dataset. A model can learn artifacts that are left in its training audio. Check several clips from different sessions before uploading.
+
+### Clean a dataset locally with Ultimate Vocal Remover (UVR)
+
+UVR separates an audio file into tracks called stems. Use it when the target voice is mixed with music, sound effects or other vocals. If you already have a clean voice recording, keep the original. UVR processes audio on your computer after the required models are downloaded. Kaggle runs the later RVC training job separately.
+
+#### Install UVR and prepare a test clip
+
+1. Download the installer or package for your operating system from [UVR releases](https://github.com/Anjok07/ultimatevocalremovergui/releases). Launch the desktop app after installing it.
+2. Make a 15–30 second copy of an example that contains a clear line and a section where the music overlaps it. Keep the original safe.
+3. Click **Select Input** and choose that test clip. Use **Select Output** to choose a new writable folder, such as `uvr-test`. Choose **WAV** for the output format.
+4. Select a **Process Method** and a model that separates **vocals** from **instrumental**, for example a vocals model under **MDX-Net**. If the list is empty, open the settings **Download Center**, select the corresponding model family and download a suitable model. Return to the main window and select it.
+5. Enable **GPU Conversion** only if your installed build recognizes a supported device. If that option causes an error, turn it off and test on the CPU. CPU processing can be slower, so start with a short clip.
+
+#### Separate the vocals and listen
+
+Click **Start Processing**. When it finishes, find the vocals stem in the output folder. Some models also write an instrumental stem. Play the original and the vocals stem at similar volume. Check consonants, breaths, held notes, and sections where the accompaniment is loud. If you still hear instruments or the voice sounds watery or metallic, compare another model on the same test clip before processing the full dataset.
+
+If you've selected the wrong stem, check the filenames or listen to each output. Keep the one that contains your target lead voice.
+
+#### Clean the remaining problems one at a time
+
+| What remains | What to try in UVR |
+| --- | --- |
+| Backing vocals or harmonies | Feed the isolated vocal stem into a model intended for lead and backing separation, if your installation offers one. Keep the lead output and verify that the target vocal is complete. |
+| Reverb tails between phrases | Try a model intended for de-reverb if available. Compare before and after on the same passage. Keep the original stem if de-reverb damages consonants or held notes. |
+| Audible delayed repeats | Test an echo-removal model if available. If it removes words or distorts breaths, use another take or exclude the affected section. |
+| Room hum, clipped peaks or other voices | Check the original. If treatment keeps damaging the voice, replace or exclude the clip. Separation cannot reconstruct peaks lost to clipping. |
+
+Process the full set only after a short comparison sounds right. Use Audacity or another editor to trim unusable material. Keep natural pauses and breaths, export the approved clips as WAV, and pack only those clips into the dataset ZIP. Keep the instrumental and rejected stems out of the ZIP. Next, upload it in **Training** on Ilaria RVC and confirm **Path to Dataset** points to the imported recordings.
+
+### Translate the original Applio workflow to Ilaria RVC
+
+| Step in the original workflow | What to do in this Ilaria RVC notebook |
+| --- | --- |
+| Set up a Kaggle account and verify it | Sign in and check that you can enable GPU and Internet. Complete verification if Kaggle asks for it. |
+| Pick a tunnel or persistence mode | Run the official notebook in order and open the Gradio URL from step 4. It handles the tunnel. Back up the experiment outside the temporary session using the export cell. |
+| Upload the dataset and paste its path | Use the upload picker in Ilaria RVC, wait for it to finish, and confirm **Path to Dataset** points to your prepared files. Match the model name with what you will enter when exporting checkpoints. |
+| Choose a slicer and Post normalization | **Process Data** handles slicing and adjusts each slice automatically. The Ilaria RVC workflow has no separate Applio Post toggle. Match the training sample rate to the architecture and pretrains. Resampling cannot restore missing detail. |
+| Set silent training files to zero | Leave **Silent training files** at its default for your first run. If your clips already have natural pauses and no long empty sections, compare a separate run with zero. Check both outputs on the same held-out pauses. |
+| Choose batch size by dataset length | Start at 2 or 4 if you are unsure, and use 8 only if the GPU has headroom and the configuration works. Check the log and VRAM. Reduce the batch after an out-of-memory error. Kaggle does not imply a fixed batch multiplier, and dataset length alone does not determine the batch size. |
+| Train until the model sounds right | Save every 5 or 10 epochs if your available time and disk space allow. Compare saved inference exports on the same test clips. There is no universal epoch target, and extending a run toward 500 epochs cannot repair a poor dataset. |
+
+#### Listen before deciding which checkpoint to keep
+
+Use a short set of held-out clips. Include a plain sentence, one with sharp consonants, and a pause. For singing, also test a held note and a transition between registers. Start with pitch at zero, retrieval disabled, and optional effects off. Keep the model whose results are clearest across the set. If all versions have the same metallic breaths or muffled words, revisit the dataset instead of extending the run blindly.
+
+Keep the inference export and its matching index if you used one. To continue a run later, save the complete experiment with the notebook export cell and keep your original dataset separately. Open the downloaded ZIP and check its contents before ending the Kaggle session.
+
 ## 5. Train a voice and save your work
 
 1. In **Training**, choose a new **Model Name**. Import your audio or ZIP through the dataset upload controls. Wait for import completion and confirm **Path to Dataset** points to the imported recordings.

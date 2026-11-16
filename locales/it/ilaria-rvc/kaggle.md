@@ -51,6 +51,67 @@ Apri il collegamento corrente dal passaggio 4 in un'altra scheda. Lascia la sess
 
 Se la voce non appare mai, controlla prima il registro di importazione. Un checkpoint di addestramento salvato come file G o D appartiene a un esperimento e necessita di un'esportazione di inferenza prima di poter essere selezionato qui.
 
+## Prepara il tuo set di dati e pianifica un allenamento
+
+### Pulisci l'audio con MVSEP solo dove necessario
+
+Conserva una copia intatta delle tue registrazioni. Se contengono già un'unica voce pulita e asciutta, salta la separazione. Utilizza il materiale che sei autorizzato a caricare su [MVSEP](https://mvsep.com/en/home) e su cui allenarti. Per le registrazioni riservate, puliscile localmente.
+
+1. **Isola la voce.** Carica un breve esempio e scegli un'opzione di separazione vocale. Scarica la radice vocale in WAV quando disponibile. Riproducilo rispetto all'originale e ascolta tramite le cuffie musica, altre voci, sillabe spezzate e artefatti acquosi o metallici.
+2. **Rimuovi le voci di accompagnamento solo se presenti.** Per i brani con armonie o un ritornello sotto la destinazione, utilizza un'opzione di separazione solista-accompagnamento sul gambo vocale. Mantieni l'output principale. Se i cantanti si sovrappongono ancora o la solista presenta dei buchi, usa una sezione pulita o una ripresa diversa.
+3. **Riduci il riverbero solo dove udibile.** Se la voce ha un'ampia coda di riverbero stereo, prova prima un'opzione di de-reverbero stereo su una copia. Per le riflessioni rimanenti della stanza, confrontare un passaggio di de-reverbero della stanza. Puoi saltare entrambe le fasi. Ascolta le consonanti troncate e i respiri ad ogni passaggio.
+4. **Rimuovi l'eco solo se ripete la voce.** Una ripetizione ritardata udibile richiede un breve test separato. Conserva l'originale o sostituiscilo se la rimozione rimuove le parole. Evitare di impilare i passaggi su audio altrimenti pulito.
+5. **Prepara le clip finali.** Ritaglia il rumore inutilizzabile e le lunghe sezioni vuote in un editor come Audacity, mantenendo fiati utili e fraseggi naturali. Esporta WAV puliti. Metti insieme i file approvati in uno ZIP e conserva alcune clip pulite all'esterno per la valutazione.
+
+Testare l'intera catena di pulizia per alcuni secondi prima di trattare l'intero set di dati. Un modello può apprendere gli artefatti rimasti nel suo audio di addestramento. Controlla diverse clip di sessioni diverse prima del caricamento.
+
+### Pulisci un set di dati localmente con Ultimate Vocal Remover (UVR)
+
+UVR separa un file audio in tracce chiamate stem. Usalo quando la voce di destinazione è mixata con musica, effetti sonori o altre voci. Se hai già una registrazione vocale pulita, conserva l'originale. UVR elabora l'audio sul tuo computer dopo aver scaricato i modelli richiesti. Kaggle esegue separatamente il successivo lavoro di addestramento RVC.
+
+#### Installa UVR e prepara una clip di prova
+
+1. Scarica il programma di installazione o il pacchetto per il tuo sistema operativo da [UVR release](https://github.com/Anjok07/ultimatevocalremovergui/releases). Avvia l'app desktop dopo averla installata.
+2. Crea una copia di 15–30 secondi di un esempio che contenga una linea chiara e una sezione in cui la musica si sovrappone ad essa. Conserva l'originale al sicuro.
+3. Fai clic su **Select Input** e scegli la clip di prova. Utilizza **Select Output** per scegliere una nuova cartella scrivibile, come `uvr-test`. Scegli **WAV** come formato di output.
+4. Seleziona un **Process Method** e un modello che separa la **voce** dalla **strumentale**, ad esempio un modello vocale in **MDX-Net**. Se l'elenco è vuoto, apri le impostazioni **Centro download**, seleziona la famiglia di modelli corrispondente e scarica il modello adatto. Ritorna alla finestra principale e selezionala.
+5. Abilita la **Conversione GPU** solo se la build installata riconosce un dispositivo supportato. Se questa opzione causa un errore, disattivala e prova sulla CPU. L'elaborazione della CPU può essere più lenta, quindi inizia con una breve clip.
+
+#### Separa le voci e ascolta
+
+Fai clic su **Start Processing**. Al termine, trova la radice della voce nella cartella di output. Alcuni modelli scrivono anche una radice strumentale. Riproduci l'originale e la voce a un volume simile. Controlla le consonanti, i respiri, le note trattenute e le sezioni in cui l'accompagnamento è forte. Se senti ancora gli strumenti o la voce sembra acquosa o metallica, confronta un altro modello sulla stessa clip di prova prima di elaborare il set di dati completo.
+
+Se hai selezionato la radice sbagliata, controlla i nomi dei file o ascolta ogni uscita. Mantieni quello che contiene la voce principale di destinazione.
+
+#### Pulisci i problemi rimanenti uno alla volta
+
+| Cosa rimane | Cosa provare in UVR |
+| --- | --- |
+| Cori o armonie | Inserisci la radice vocale isolata in un modello destinato alla separazione solista e accompagnamento, se la tua installazione ne offre una. Conserva l'output principale e verifica che la voce di destinazione sia completa. |
+| Code di riverbero tra le frasi | Prova un modello destinato al de-riverbero, se disponibile. Confronta prima e dopo sullo stesso brano. Mantieni la radice originale se il de-riverbero danneggia le consonanti o le note trattenute. |
+| Ripetizioni ritardate udibili | Prova un modello di rimozione dell'eco, se disponibile. Se rimuove parole o distorce respiri, usa un'altra ripresa o escludi la sezione interessata. |
+| Ronzii ambientali, picchi tagliati o altre voci | Controlla l'originale. Se il trattamento continua a danneggiare la voce, sostituire o escludere la clip. La separazione non può ricostruire i picchi persi a causa del ritaglio. |
+
+Elaborare il set completo solo dopo che un breve confronto sembra corretto. Usa Audacity o un altro editor per tagliare il materiale inutilizzabile. Mantieni pause e respiri naturali, esporta le clip approvate come WAV e inserisci solo quelle clip nello ZIP del set di dati. Mantieni i gambi strumentali e rifiutati fuori dallo ZIP. Successivamente, caricalo in **Formazione** su Ilaria RVC e conferma che **Percorso del set di dati** punta alle registrazioni importate.
+
+### Traduci il flusso di lavoro originale di Applio in Ilaria RVC
+
+| Passa al flusso di lavoro originale | Cosa fare in questo taccuino di Ilaria RVC |
+| --- | --- |
+| Configura un account Kaggle e verificalo | Accedi e verifica di poter abilitare GPU e Internet. Verifica completa se Kaggle lo richiede. |
+| Scegli una modalità tunnel o persistenza | Esegui il notebook ufficiale in ordine e apri l'URL Gradio dal passaggio 4. Gestisce il tunnel. Esegui il backup dell'esperimento al di fuori della sessione temporanea utilizzando la cella di esportazione. |
+| Carica il set di dati e incolla il suo percorso | Utilizza il selettore di caricamento in Ilaria RVC, attendi che finisca e conferma che **Percorso del set di dati** punta ai file preparati. Abbina il nome del modello a quello che inserirai durante l'esportazione dei checkpoint. |
+| Scegli un'affettatrice e post-normalizzazione | **Dati di processo** gestisce l'affettatura e regola automaticamente ciascuna fetta. Il flusso di lavoro di Ilaria RVC non ha un interruttore Applio Post separato. Abbina la frequenza di campionamento del training all'architettura e ai pretraining. Il ricampionamento non può ripristinare i dettagli mancanti. |
+| Imposta i file di allenamento silenziosi su zero | Lascia i **File di allenamento silenziosi** sui valori predefiniti per la prima esecuzione. Se le tue clip hanno già pause naturali e non lunghe sezioni vuote, confronta una sequenza separata con zero. Controlla entrambe le uscite sulle stesse pause trattenute. |
+| Scegli la dimensione del batch in base alla lunghezza del set di dati | Inizia da 2 o 4 se non sei sicuro e usa 8 solo se la GPU ha margine e la configurazione funziona. Controlla il registro e la VRAM. Ridurre il batch dopo un errore di memoria insufficiente. Kaggle non implica un moltiplicatore batch fisso e la lunghezza del set di dati da sola non determina la dimensione del batch. |
+| Allenati finché il modello non suona bene | Salva ogni 5 o 10 epoche se il tempo disponibile e lo spazio su disco lo consentono. Confronta le esportazioni di inferenze salvate sulle stesse clip di prova. Non esiste un obiettivo epocale universale ed estendere un periodo fino a 500 epoche non può riparare un set di dati scadente. |
+
+#### Ascolta prima di decidere quale punto di controllo mantenere
+
+Utilizza una breve serie di clip tenute in mano. Includi una frase semplice, una con consonanti acute e una pausa. Per il canto, prova anche una nota tenuta e una transizione tra i registri. Inizia con l'intonazione a zero, il recupero disabilitato e gli effetti opzionali disattivati. Mantieni il modello i cui risultati sono più chiari nell'insieme. Se tutte le versioni hanno gli stessi soffi metallici o parole ovattate, rivisita il set di dati invece di estendere la corsa alla cieca.
+
+Conserva l'esportazione dell'inferenza e il relativo indice corrispondente, se ne hai utilizzato uno. Per continuare un'esecuzione in un secondo momento, salva l'esperimento completo con la cella di esportazione del notebook e conserva il set di dati originale separatamente. Apri lo ZIP scaricato e controllane il contenuto prima di terminare la sessione di Kaggle.
+
 ## 5. Allena una voce e salva il tuo lavoro
 
 1. In **Addestramento**, scegli un nuovo **Nome modello**. Importa il tuo audio o ZIP tramite i controlli di caricamento del set di dati. Attendi il completamento dell'importazione e conferma che **Il percorso del set di dati** punta alle registrazioni importate.

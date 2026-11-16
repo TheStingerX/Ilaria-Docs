@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/tgr/live-audio/
 ---
 # Configurer l'audio en direct dans Okada TG Developed Fork
 
+> Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec **VAC Lite** ou utilisez **VB-CABLE**. Lisez le guide complet avant un appel. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Utilisez un point de contrôle d'inférence RVC compatible et un microphone fonctionnel. Prouvez d’abord que le signal converti atteint vos écouteurs. Envoyez ensuite ce signal à une autre application et effectuez un enregistrement depuis le récepteur.
 
 ## Charger une voix RVC

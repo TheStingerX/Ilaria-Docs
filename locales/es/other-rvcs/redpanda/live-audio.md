@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/redpanda/live-audio/
 ---
 # Pruebe el audio en vivo en Redpanda-vc
 
+> Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 ## Elija escritorio o navegador
 
 El iniciador en tiempo real del escritorio de Windows utiliza los dispositivos expuestos a ese proceso local. La pestaña en tiempo real de WebUI captura la entrada del micrófono a través del navegador y pasa el audio al dispositivo de inferencia seleccionado. Utilice una ruta para su primera prueba y deje la otra cerrada para facilitar el diagnóstico de los comentarios y los trabajos competitivos.

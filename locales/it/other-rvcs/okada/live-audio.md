@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/okada/live-audio/
 ---
 # Convertire l'audio del microfono con w-okada VCClient
 
+> Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, **VAC Lite** è la prima scelta e **VB-CABLE** è un’alternativa. Leggi la guida completa prima di provare in chiamata. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Inizia con le cuffie e un unico percorso audio locale. Quando senti una voce convertita senza disturbi nelle cuffie, collegala a una chiamata o a un registratore. Questo ordine consente di individuare i problemi prima di aggiungere il cavo virtuale.
 
 ## Aggiungi un modello e ascolta il primo risultato

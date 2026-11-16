@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/redpanda/live-audio/
 ---
 # Testen Sie Live-Audio in Redpanda-vc
 
+> Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist **VAC Lite** die erste Wahl, **VB-CABLE** eine Alternative. Lies vor dem Anruf die vollständige Anleitung. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 ## Wählen Sie Desktop oder Browser
 
 Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind. Die WebUI-Echtzeitregisterkarte erfasst Mikrofoneingaben über den Browser und leitet Audio an das ausgewählte Inferenzgerät weiter. Verwenden Sie einen Pfad für Ihren ersten Test und lassen Sie den anderen geschlossen, um die Diagnose von Rückmeldungen und Konkurrenzjobs zu erleichtern.

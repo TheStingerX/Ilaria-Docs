@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/okada/live-audio/
 ---
 # Convert your microphone in w-okada VCClient
 
+> Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with **VAC Lite** for Vonovox, or use **VB-CABLE** as an alternative. Read the full routing guide before testing in a call. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder. This order lets you locate issues before adding the virtual cable.
 
 ## Add a model and hear the first result

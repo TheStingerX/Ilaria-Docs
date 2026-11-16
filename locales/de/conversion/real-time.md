@@ -5,6 +5,8 @@ permalink: /real-time/
 ---
 # Echtzeit-Sprachkonvertierung
 
+> Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist **VAC Lite** die erste Wahl, **VB-CABLE** eine Alternative. Lies vor dem Anruf die vollständige Anleitung. [VAC Lite / VB-CABLE](../other-rvcs/vonovox/live-audio.md)
+
 Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonvertierung mehrere Takes rendern und vergleichen. In einem Live-Setup muss der Konverter jeden Audioblock schnell genug fertigstellen, um den Mikrofonstrom in Bewegung zu halten. Konfigurieren Sie zunächst ein zuverlässiges lokales Signal und verbinden Sie es dann mit einer Anruf-, Aufnahme- oder Streaming-Anwendung.
 
 ## Wählen Sie ein Tool für den Job.

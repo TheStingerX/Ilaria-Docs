@@ -51,6 +51,67 @@ Klicken Sie im Editor auf **Alle ausführen**. Sie können die vier Codezellen a
 
 Wenn die Stimme nie erscheint, überprüfen Sie zuerst das Importprotokoll. Ein als G- oder D-Datei gespeicherter Trainingskontrollpunkt gehört zu einem Experiment und erfordert einen Inferenzexport, bevor er hier ausgewählt werden kann.
 
+## Bereiten Sie Ihren Datensatz vor und planen Sie einen Trainingslauf.
+
+### Reinigen Sie den Ton mit MVSEP nur dort, wo es nötig ist.
+
+Behalten Sie eine unberührte Kopie Ihrer Aufnahmen. Wenn sie bereits eine einzelne saubere, trockene Stimme enthalten, überspringen Sie die Trennung. Verwenden Sie Material, zu dessen Hochladen auf [MVSEP](https://mvsep.com/en/home)] und zum Trainieren Sie berechtigt sind. Bereinigen Sie vertrauliche Aufzeichnungen lokal.
+
+1. **Isolieren Sie die Stimme.** Laden Sie ein kurzes Beispiel hoch und wählen Sie eine Option zur Stimmtrennung. Laden Sie den Stimmstamm im WAV-Format herunter, sofern verfügbar. Spielen Sie es im Vergleich zum Original ab und achten Sie über Kopfhörer auf Musik, andere Stimmen, abgeschnittene Silben und wässrige oder metallische Artefakte.
+2. **Backing-Vocals nur entfernen, wenn vorhanden.** Für Songs mit Harmonien oder einem Refrain unterhalb des Ziels verwenden Sie eine Option zur Trennung von Lead und Backing am Stimmstamm. Behalten Sie die Lead-Ausgabe bei. Wenn sich die Sänger immer noch überschneiden oder der Lead Lücken aufweist, verwenden Sie einen sauberen Abschnitt oder einen anderen Take.
+3. **Reduzieren Sie den Hall nur dort, wo er hörbar ist.** Wenn die Stimme eine breite Stereo-Hallfahne hat, testen Sie zunächst eine Stereo-De-Reverb-Option an einer Kopie. Für verbleibende Raumreflexionen vergleichen Sie einen Raum-De-Reverb-Pass. Sie können jede Phase überspringen. Achten Sie bei jedem Durchgang auf abgeschnittene Konsonanten und Atemzüge.
+4. **Echo nur entfernen, wenn die Stimme wiederholt wird.** Eine hörbare verzögerte Wiederholung erfordert einen separaten kurzen Test. Behalten Sie das Original oder ersetzen Sie es, wenn beim Entfernen Wörter verloren gehen. Vermeiden Sie das Stapeln von Durchgängen bei ansonsten sauberem Audio.
+5. **Bereiten Sie die endgültigen Clips vor.** Schneiden Sie unbrauchbares Rauschen und lange leere Abschnitte in einem Editor wie Audacity ab und behalten Sie dabei nützliche Atemzüge und natürliche Phrasierung bei. Exportieren Sie saubere WAVs. Fassen Sie die genehmigten Dateien in einer ZIP-Datei zusammen und bewahren Sie einige saubere Clips zur Auswertung außerhalb der ZIP-Datei auf.
+
+Testen Sie die vollständige Bereinigungskette einige Sekunden lang, bevor Sie den gesamten Datensatz behandeln. Ein Modell kann Artefakte lernen, die in seinem Trainingsaudio verbleiben. Überprüfen Sie vor dem Hochladen mehrere Clips aus verschiedenen Sitzungen.
+
+### Bereinigen Sie einen Datensatz lokal mit Ultimate Vocal Remover (UVR)
+
+UVR unterteilt eine Audiodatei in Spuren, die als Stems bezeichnet werden. Verwenden Sie es, wenn die Zielstimme mit Musik, Soundeffekten oder anderen Stimmen gemischt wird. Wenn Sie bereits eine saubere Sprachaufnahme haben, behalten Sie das Original. UVR verarbeitet Audio auf Ihrem Computer, nachdem die erforderlichen Modelle heruntergeladen wurden. Kaggle führt den späteren RVC-Trainingsjob separat aus.
+
+#### Installieren Sie UVR und bereiten Sie einen Testclip vor.
+
+1. Laden Sie das Installationsprogramm oder Paket für Ihr Betriebssystem von [UVR-Releases](https://github.com/Anjok07/ultimatevocalremovergui/releases)] herunter. Starten Sie die Desktop-App nach der Installation.
+2. Erstellen Sie eine 15–30 Sekunden lange Kopie eines Beispiels, die eine klare Linie und einen Abschnitt enthält, in dem die Musik diese überlappt. Bewahren Sie das Original gut auf.
+3. Klicken Sie auf **Eingabe auswählen** und wählen Sie den Testclip aus. Verwenden Sie **Ausgabe auswählen**, um einen neuen beschreibbaren Ordner auszuwählen, z. B. `uvr-test`. Wählen Sie **WAV** als Ausgabeformat.
+4. Select a **Process Method** and a model that separates **vocals** from **instrumental**, for example a vocals model under **MDX-Net**. If the list is empty, open the settings **Download Center**, select the corresponding model family and download a suitable model. Kehren Sie zum Hauptfenster zurück und wählen Sie es aus.
+5. Enable **GPU Conversion** only if your installed build recognizes a supported device. If that option causes an error, turn it off and test on the CPU. CPU processing can be slower, so start with a short clip.
+
+#### Trennen Sie den Gesang und hören Sie zu
+
+Klicken Sie auf **Verarbeitung starten**. When it finishes, find the vocals stem in the output folder. Einige Modelle schreiben auch einen Instrumentalstamm. Play the original and the vocals stem at similar volume. Check consonants, breaths, held notes, and sections where the accompaniment is loud. If you still hear instruments or the voice sounds watery or metallic, compare another model on the same test clip before processing the full dataset.
+
+If you've selected the wrong stem, check the filenames or listen to each output. Keep the one that contains your target lead voice.
+
+#### Clean the remaining problems one at a time
+
+| What remains | What to try in UVR |
+| --- | --- |
+| Backing vocals or harmonies | Feed the isolated vocal stem into a model intended for lead and backing separation, if your installation offers one. Keep the lead output and verify that the target vocal is complete. |
+| Hallfahnen zwischen Phrasen | Probieren Sie, falls verfügbar, ein Modell aus, das für die Nachhallreduzierung vorgesehen ist. Vergleichen Sie Vorher und Nachher an derselben Passage. Behalten Sie den ursprünglichen Stiel bei, wenn durch De-Reverb Konsonanten oder gehaltene Noten beschädigt werden. |
+| Akustische verzögerte Wiederholungen | Testen Sie ein Echoentfernungsmodell, falls verfügbar. Wenn dadurch Wörter entfernt oder Atemzüge verzerrt werden, verwenden Sie eine andere Einstellung oder schließen Sie den betroffenen Abschnitt aus. |
+| Raumbrummen, abgeschnittene Spitzen oder andere Stimmen | Überprüfen Sie das Original. Wenn die Behandlung die Stimme weiterhin schädigt, tauschen Sie den Clip aus oder schließen Sie ihn aus. Durch die Trennung können durch Clipping verlorene Peaks nicht rekonstruiert werden. |
+
+Verarbeiten Sie den vollständigen Satz erst, nachdem ein kurzer Vergleich richtig klingt. Verwenden Sie Audacity oder einen anderen Editor, um unbrauchbares Material zuzuschneiden. Behalten Sie natürliche Pausen und Atemzüge bei, exportieren Sie die genehmigten Clips als WAV und packen Sie nur diese Clips in die ZIP-Datei des Datensatzes. Halten Sie die instrumentellen und zurückgewiesenen Stämme aus dem ZIP fern. Laden Sie es anschließend in **Training** auf Ilaria RVC hoch und bestätigen Sie, dass **Pfad zum Datensatz** auf die importierten Aufzeichnungen verweist.
+
+### Übersetzen Sie den ursprünglichen Applio-Workflow in Ilaria RVC.
+
+| Schritt im ursprünglichen Workflow. | Was in diesem Ilaria RVC-Notizbuch zu tun ist. |
+| --- | --- |
+| Richten Sie ein Kaggle-Konto ein und überprüfen Sie es. | Melden Sie sich an und prüfen Sie, ob Sie GPU und Internet aktivieren können. Vollständige Verifizierung, wenn Kaggle danach fragt. |
+| Wählen Sie einen Tunnel- oder Persistenzmodus. | Führen Sie das offizielle Notebook der Reihe nach aus und öffnen Sie die Gradio-URL aus Schritt 4. Sie verwaltet den Tunnel. Sichern Sie das Experiment außerhalb der temporären Sitzung mithilfe der Exportzelle. |
+| Laden Sie den Datensatz hoch und fügen Sie seinen Pfad ein. | Verwenden Sie die Upload-Auswahl in Ilaria RVC, warten Sie, bis der Vorgang abgeschlossen ist, und bestätigen Sie, dass **Pfad zum Datensatz** auf Ihre vorbereiteten Dateien verweist. Ordnen Sie den Modellnamen dem Namen zu, den Sie beim Exportieren von Prüfpunkten eingeben. |
+| Wählen Sie einen Slicer und Post-Normalisierung | **Prozessdaten** übernimmt das Slicing und passt jedes Slice automatisch an. Der Ilaria RVC-Workflow verfügt über keinen separaten Applio Post-Schalter. Passen Sie die Trainingsabtastrate an die Architektur und die Vorzüge an. Durch Resampling können fehlende Details nicht wiederhergestellt werden. |
+| Setzen Sie stille Trainingsdateien auf Null. | Belassen Sie **Stille Trainingsdateien** für Ihren ersten Lauf auf der Standardeinstellung. Wenn Ihre Clips bereits natürliche Pausen und keine langen leeren Abschnitte haben, vergleichen Sie einen separaten Lauf mit Null. Überprüfen Sie beide Ausgänge auf die gleichen ausgehaltenen Pausen. |
+| Wählen Sie die Stapelgröße nach Datensatzlänge. | Beginnen Sie bei 2 oder 4, wenn Sie sich nicht sicher sind, und verwenden Sie 8 nur, wenn die GPU Spielraum hat und die Konfiguration funktioniert. Überprüfen Sie das Protokoll und den VRAM. Reduzieren Sie den Stapel nach einem Fehler wegen unzureichendem Arbeitsspeicher. Kaggle impliziert keinen festen Batch-Multiplikator und die Datensatzlänge allein bestimmt nicht die Batch-Größe. |
+| Trainieren Sie, bis das Modell richtig klingt | Speichern Sie alle 5 oder 10 Epochen, wenn Ihre verfügbare Zeit und Ihr Speicherplatz dies zulassen. Vergleichen Sie gespeicherte Inferenzexporte für dieselben Testclips. Es gibt kein universelles Epochenziel und die Ausweitung eines Laufs auf 500 Epochen kann einen schlechten Datensatz nicht reparieren. |
+
+#### Hören Sie zu, bevor Sie entscheiden, welchen Kontrollpunkt Sie behalten möchten.
+
+Verwenden Sie einen kurzen Satz hingehaltener Clips. Fügen Sie einen einfachen Satz, einen mit scharfen Konsonanten und eine Pause ein. Testen Sie beim Singen auch eine gehaltene Note und einen Übergang zwischen Registern. Beginnen Sie mit einer Tonhöhe von Null, deaktiviertem Abruf und deaktivierten optionalen Effekten. Behalten Sie das Modell bei, dessen Ergebnisse im gesamten Satz am klarsten sind. Wenn alle Versionen die gleichen metallischen Atemzüge oder gedämpften Wörter haben, schauen Sie sich den Datensatz noch einmal an, anstatt den Lauf blind zu verlängern.
+
+Behalten Sie den Inferenzexport und den zugehörigen Index bei, falls Sie einen verwendet haben. Um einen Lauf später fortzusetzen, speichern Sie das gesamte Experiment mit der Notebook-Exportzelle und bewahren Sie Ihren Originaldatensatz separat auf. Öffnen Sie die heruntergeladene ZIP-Datei und überprüfen Sie ihren Inhalt, bevor Sie die Kaggle-Sitzung beenden.
+
 ## 5. Trainieren Sie Ihre Stimme und speichern Sie Ihre Arbeit
 
 1. Wählen Sie unter **Schulung** einen neuen **Modellnamen**. Importieren Sie Ihr Audio oder ZIP über die Steuerelemente zum Hochladen von Datensätzen. Warten Sie, bis der Import abgeschlossen ist, und bestätigen Sie, dass **Pfad zum Datensatz** auf die importierten Aufzeichnungen verweist.

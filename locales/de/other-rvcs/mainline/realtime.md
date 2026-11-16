@@ -6,6 +6,8 @@ permalink: /ilaria-rvc/mainline/realtime/
 
 # Verwenden Sie den Mainline-Echtzeit-Sprachwechsler
 
+> Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist **VAC Lite** die erste Wahl, **VB-CABLE** eine Alternative. Lies vor dem Anruf die vollständige Anleitung. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Diese Anleitung gilt für die separate Echtzeit-GUI, die in unterstützten Mainline-Builds enthalten ist. Es kann ein Mikrofon kontinuierlich durch ein Modell laufen lassen, während die WebUI für Aufzeichnungen und Schulungen verwendet wird. Hören Sie zunächst direkt über Kopfhörer zu und senden Sie dann den verarbeiteten Ton an Ihre andere App.
 
 ## Öffnen Sie die Schnittstelle und wählen Sie Ihre Dateien aus.

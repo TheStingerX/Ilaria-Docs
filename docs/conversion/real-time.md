@@ -5,6 +5,8 @@ permalink: /real-time/
 ---
 # Real-time voice conversion
 
+> Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with **VAC Lite** for Vonovox, or use **VB-CABLE** as an alternative. Read the full routing guide before testing in a call. [VAC Lite / VB-CABLE](../other-rvcs/vonovox/live-audio.md)
+
 For a recording or a cover, file conversion lets you render and compare several takes. In a live setup, the converter has to finish each audio block quickly enough to keep the microphone stream moving. Configure a reliable local signal first, then connect it to a call, recording or streaming application.
 
 ## Choose a tool for the job

@@ -5,6 +5,8 @@ permalink: /real-time/
 ---
 # Conversión de voz en tiempo real
 
+> Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../other-rvcs/vonovox/live-audio.md)
+
 Para una grabación o una portada, la conversión de archivos le permite renderizar y comparar varias tomas. En una configuración en vivo, el convertidor debe finalizar cada bloque de audio lo suficientemente rápido como para mantener la transmisión del micrófono en movimiento. Primero configure una señal local confiable y luego conéctela a una aplicación de llamadas, grabación o transmisión.
 
 ## Elija una herramienta para el trabajo

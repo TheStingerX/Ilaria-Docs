@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/applio/realtime/
 ---
 # Utilisez Applio avec un microphone
 
+> Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec **VAC Lite** ou utilisez **VB-CABLE**. Lisez le guide complet avant un appel. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Prouvez que votre modèle fonctionne avec [un clip enregistré](inference.md) avant de configurer l'audio en direct. Utilisez des écouteurs pour la surveillance afin que le microphone ne puisse pas recapturer les haut-parleurs. Arrêtez les tâches de formation ou de conversion de fichiers qui utilisent le même GPU.
 
 ## Écoutez localement la voix convertie

@@ -5,6 +5,8 @@ permalink: /ilaria-rvc/okada/live-audio/
 ---
 # Convertissez votre microphone dans w-okada VCClient
 
+> Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec **VAC Lite** ou utilisez **VB-CABLE**. Lisez le guide complet avant un appel. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 Commencez avec des écouteurs et un seul chemin audio local. Lorsque vous entendez une voix claire et convertie dans le casque, connectez-le à un appel ou à un enregistreur. Cet ordre vous permet de localiser les problèmes avant d'ajouter le câble virtuel.
 
 ## Ajoutez un modèle et écoutez le premier résultat

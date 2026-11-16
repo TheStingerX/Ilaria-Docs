@@ -6,6 +6,8 @@ permalink: /ilaria-rvc/mainline/realtime/
 
 # Use the Mainline real-time voice changer
 
+> Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with **VAC Lite** for Vonovox, or use **VB-CABLE** as an alternative. Read the full routing guide before testing in a call. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+
 This guide applies to the separate real-time GUI included in supported Mainline builds. It can run a microphone through a model continuously while the WebUI is used for recordings and training. Start by listening directly through headphones, then send the processed audio to your other app.
 
 ## Open the interface and select your files
