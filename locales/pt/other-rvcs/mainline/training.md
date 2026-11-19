@@ -1,10 +1,11 @@
 ---
-label: "🧪 Treine e exporte um modelo"
+label: "Treine e exporte um modelo"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
 
-# Treine e exporte um modelo Mainline RVC
+# Treine e exporte um modelo RVC WebUI (Mainline - Original RVC)
 
 Comece com um único alto-falante e um novo nome de experimento. O treinamento produz um modelo que você pode testar em novos desempenhos na [interface de inferência](inference.md). Mantenha o áudio bruto e o registro do experimento para poder reproduzir o resultado.
 
@@ -24,7 +25,7 @@ Consulte [preparação do conjunto de dados](../../model-training/dataset-prepar
 
 ## Configure o experimento e processe o áudio
 
-1. Abra **Train**. Use um nome novo como `voice_a_v2_40k` para que Mainline crie uma pasta separada em `logs/`.
+1. Abra **Train**. Use um nome novo como `voice_a_v2_40k` para que RVC WebUI (Mainline - Original RVC) crie uma pasta separada em `logs/`.
 2. Escolha uma taxa de amostragem alvo e uma versão de arquitetura compatível com seu lançamento. V2 é um ponto de partida razoável quando você planeja usar um cliente de inferência V2 compatível. A taxa, a arquitetura e a orientação de pitch devem estar de acordo com os pré-treinos do gerador e do discriminador. Use orientação de tom para um modelo de voz guiado por tom normal.
 3. Selecione um conjunto de dados de alto-falante único, onde a construção oferece uma escolha. Use o ID do alto-falante `0` para a primeira execução. Cole o caminho completo da pasta do conjunto de dados e clique em **Process Data** ou no botão de pré-processamento equivalente.
 4. Aguarde a conclusão do pré-processamento. Revise os avisos na saída e verifique se o experimento produziu áudio processado. Se a execução não produzir nada, verifique o caminho e teste se os arquivos de áudio incluídos são decodificados. Corrija isso antes de iniciar a extração.

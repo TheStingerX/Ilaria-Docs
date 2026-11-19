@@ -5,6 +5,8 @@ permalink: /voice-conversion/
 ---
 # Convert a recording with Ilaria RVC
 
+[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Voice conversion starts with a performance. The output usually follows the source words, timing, articulation, and pitch contour while changing the sound of the voice. Decisions about delivery still start with the original recording. For a sung cover, plan to convert an isolated lead vocal and mix the converted vocal with the instrumental afterward.
 
 ## Make a baseline conversion
@@ -47,11 +49,11 @@ When privacy or an unreliable connection matters, select an installed Windows vo
 - Save your settings alongside the result. Include the source file, model and index versions, speaker ID if applicable, embedder, pitch extractor, pitch shift, index ratio, processing, and output format.
 - When a model is missing or inference fails before producing audio, start with [Troubleshooting](../reference/troubleshooting.md). For microphone conversion, see [Real-time voice conversion](real-time.md).
 
-## Convert a recording in Mainline RVC
+## Convert a recording in RVC WebUI (Mainline - Original RVC) {#convert-a-recording-in-mainline-rvc}
 
 ### Set up the WebUI
 
-On Windows, use a Mainline package compatible with your hardware. Extract the entire archive to a local directory before running its launcher. Windows packages that include `go-web.bat` use it to start the local WebUI. Leave the console open while converting. If the browser does not open automatically, use the local address printed in the console.
+On Windows, use a RVC WebUI (Mainline - Original RVC) package compatible with your hardware. Extract the entire archive to a local directory before running its launcher. Windows packages that include `go-web.bat` use it to start the local WebUI. Leave the console open while converting. If the browser does not open automatically, use the local address printed in the console.
 
 ### Load the model and convert
 

@@ -1,20 +1,57 @@
 ---
-label: "📚 Guide per app"
+label: "Guide per app"
+icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
 ---
 # Guide passo passo per app
 
-Scegli l'app esatta e l'edizione che intendi utilizzare. La configurazione e i nomi dei dispositivi differiscono anche quando due programmi possono caricare lo stesso modello RVC. Ogni guida inizia con un primo test che è possibile ripetere, quindi descrive le impostazioni, il routing o l'esportazione e gli errori comuni.
+<div role="group" aria-label="Che cosa vuoi fare?" style="margin:1.4rem 0 2rem;padding:1rem;border:1px solid #db78a888;border-radius:1rem;background:#db78a810">
+  <p style="margin:0 0 .85rem;text-align:center;font-weight:700">Che cosa vuoi fare?</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:.65rem">
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Training o conversione di file</strong><br><span aria-hidden="true">↓</span> <a href="../installation/">Ilaria RVC</a></div>
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Microfono in tempo reale</strong><br>NVIDIA <span aria-hidden="true">→</span> <a href="../vonovox/installation/">Vonovox</a><br>AMD / Intel <span aria-hidden="true">→</span> <a href="../tgr/installation/">Okada TG Developed Fork</a></div>
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Altri flussi di lavoro</strong><br><span aria-hidden="true">↓</span> <a href="../applio/installation/">Applio</a> · <a href="../redpanda/first-run/">Redpanda-vc</a></div>
+  </div>
+</div>
 
-| Se vuoi... | Inizia qui |
-| --- | --- |
-| Convertire la voce del microfono su Windows con una GPU NVIDIA compatibile | [Installa Vonovox](vonovox/installation.md), quindi [instradalo e regolalo](vonovox/live-audio.md). |
-| Converti file, addestra voci, genera parlato o imposta la conversione live in Applio | [Installa Applio](applio/installation.md) e scegli la guida per il passaggio successivo. |
-| Utilizza la WebUI upstream | [Inizia con Mainline RVC](mainline/installation.md). |
-| Configura una voce dal vivo con w-okada VCClient | [Scegli e installa una build VCClient](okada/installation.md), quindi [prova e instrada il tuo microfono](okada/live-audio.md). |
-| Utilizza Okada TG Developed Fork | [Installa TGR](tgr/installation.md) per il tuo hardware e [configura l'audio live](tgr/live-audio.md). |
-| Converti un file nell'app Tiger14n archiviata | [Installa e converti con RVC GUI](rvc-gui/file-conversion.md). |
-| Prova Redpanda-vc con RVC | [Configura Redpanda-vc](redpanda/first-run.md), quindi [prova il suo percorso in tempo reale sul desktop o sul browser](redpanda/live-audio.md). |
+## Scegli in base all’obiettivo e alla scheda video
 
-Utilizza una registrazione breve e senza effetti o la stessa frase parlata per i tuoi primi test. Verifica di aver selezionato il modello e il dispositivo desiderati e salva una prova di riferimento pulita prima di aggiungere effetti o ridurre i buffer.
+Usa **Ilaria RVC** per addestrare un modello o convertire una registrazione. Per il microfono in tempo reale su Windows, scegli **Vonovox** con una GPU NVIDIA compatibile, oppure **Okada TG Developed Fork** con una GPU AMD o Intel compatibile. Per gli altri flussi di lavoro, parti da **Applio** o **Redpanda-vc**.
+
+[Installa Ilaria RVC](../ilaria-rvc/install/installation.md) · [GPU compatibili](../ilaria-rvc/install/gpu-compatibility.md) · [Usa Kaggle](../ilaria-rvc/cloud/kaggle.md)
+
+## Addestrare un modello con Ilaria RVC
+
+Prepara un dataset di registrazioni pulite di una sola persona. Parti dalla guida al dataset e segui, nell’ordine, la preparazione dei file, l’estrazione delle caratteristiche e l’addestramento. Salva più checkpoint durante il training e confrontali con gli stessi brevi campioni. Tieni quello che suona meglio anche su materiale mai usato per addestrarlo. Se generi un indice, conservalo insieme al modello corrispondente.
+
+[Prepara il dataset](../ilaria-rvc/train/datasets.md) · [Procedura di addestramento](../ilaria-rvc/train/training-workflow.md) · [Controlli di training](../ilaria-rvc/train/training-controls.md)
+
+## Convertire registrazioni con Ilaria RVC
+
+Importa un file di inferenza `.pth` compatibile e aggiungi il relativo `.index` se lo hai. Converti prima un breve WAV senza effetti. Salva il risultato come riferimento, quindi modifica intonazione e recupero dall’indice una regolazione alla volta. Passa alla conversione in serie quando le impostazioni funzionano su più clip rappresentative. Se il tuo computer non ha una GPU adatta, segui la guida a Kaggle per addestrare o convertire file.
+
+[Inferenza singola e in serie](../ilaria-rvc/convert/inference.md) · [Controlli di inferenza](../ilaria-rvc/convert/inference-buttons.md)
+
+## Convertire il microfono in tempo reale
+
+Su Windows con NVIDIA, installa Vonovox e scegli il pacchetto adatto alla GPU. Con AMD o Intel, parti dalla build DirectML di Okada TG Developed Fork se la scheda la supporta. Ascolta prima in cuffia per verificare che il programma riceva e converta il microfono. Invia poi l’audio convertito all’ingresso di riproduzione del cavo virtuale e seleziona l’uscita di registrazione come microfono in Discord, OBS, un gioco o un’altra app. Se l’audio salta, aumenta il buffer e riprova con l’app di destinazione aperta.
+
+[Installa Vonovox](vonovox/installation.md) · [Configura l’audio di Vonovox](vonovox/live-audio.md) · [Installa Okada TG Developed Fork](tgr/installation.md) · [Configura l’audio di TGR](tgr/live-audio.md)
+
+## Usare Applio o Redpanda-vc per gli altri casi
+
+Scegli Applio per convertire testo in parlato, gestire modelli o riunire più funzioni RVC nella stessa interfaccia. Scegli Redpanda-vc per confrontare RVC con motori come Beatrice e Rectified Flow o per provare la conversione dal vivo nel browser e nell’app desktop. Se usi un modello vocale RVC, seleziona il motore RVC. Parti dalle impostazioni predefinite e prova un solo file o flusso audio prima di toccare le opzioni avanzate.
+
+[Installa Applio](applio/installation.md) · [Sintesi vocale in Applio](applio/tts.md) · [Libreria modelli di Applio](applio/models.md) · [Configura Redpanda-vc](redpanda/first-run.md) · [Modalità live di Redpanda-vc](redpanda/live-audio.md)
+
+## Fai una prova di riferimento e risolvi un problema alla volta
+
+Per i file, confronta lo stesso campione allo stesso volume. Per il tempo reale, registra una breve prova nell’app che riceve l’audio e controlla se senti la voce doppia, interruzioni o ritardo. Se la voce suona male in entrambe le prove, verifica modello, motore e intonazione. Se il problema compare solo nell’app di destinazione, controlla prima cavo virtuale, microfono selezionato e ascolto in cuffia.
+
+## Altre app e compatibilità
+
+{{ include "../reference/tools.md#app-comparison" }}
+
+- [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
+- [Confronta tutte le app](../reference/tools.md)

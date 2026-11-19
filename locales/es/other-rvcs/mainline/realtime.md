@@ -1,14 +1,15 @@
 ---
-label: "🎧 Configuración del micrófono en tiempo real"
+label: "Configuración del micrófono en tiempo real"
+icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
 ---
 
-# Utilice el cambiador de voz en tiempo real de Mainline
+# Utilice el cambiador de voz en tiempo real de RVC WebUI (Mainline - Original RVC)
 
 > Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
 
-Esta guía se aplica a la GUI en tiempo real separada incluida en las compilaciones de Mainline compatibles. Puede pasar un micrófono a través de un modelo continuamente mientras la WebUI se usa para grabaciones y capacitación. Comience escuchando directamente a través de auriculares y luego envíe el audio procesado a su otra aplicación.
+Esta guía se aplica a la GUI en tiempo real separada incluida en las compilaciones de RVC WebUI (Mainline - Original RVC) compatibles. Puede pasar un micrófono a través de un modelo continuamente mientras la WebUI se usa para grabaciones y capacitación. Comience escuchando directamente a través de auriculares y luego envíe el audio procesado a su otra aplicación.
 
 ## Abra la interfaz y seleccione sus archivos
 
@@ -24,17 +25,17 @@ Esta guía se aplica a la GUI en tiempo real separada incluida en las compilacio
 3. Si la transmisión comienza pero recorta palabras, verifique la selección del dispositivo y el nivel de entrada. Si hay espacios repetidos, regrese a la longitud del bloque de procesamiento predeterminado. Una voz limpia y ligeramente retrasada es una mejor base que una señal de baja latencia que se interrumpe constantemente.
 4. Detén la transmisión antes de cambiar de dispositivo de audio o cargar un punto de control diferente. Reinicie y repita la misma prueba de escucha.
 
-## Enrute Mainline a una llamada o grabadora
+## Enrute RVC WebUI (Mainline - Original RVC) a una llamada o grabadora
 
-Configure un cable virtual u otro par de dispositivos de reproducción y grabación conectados. El final de la reproducción recibe sonido de Mainline. El extremo de grabación proporciona ese sonido a su llamada o grabadora.
+Configure un cable virtual u otro par de dispositivos de reproducción y grabación conectados. El final de la reproducción recibe sonido de RVC WebUI (Mainline - Original RVC). El extremo de grabación proporciona ese sonido a su llamada o grabadora.
 
 ```text
-Physical microphone → Mainline GUI → Virtual cable playback input
+Physical microphone → RVC WebUI (Mainline - Original RVC) GUI → Virtual cable playback input
                                            ↓
                        Call or recording app ← Virtual cable recording output
 ```
 
-1. Detenga la conversión y configure el dispositivo de salida de la línea principal en el extremo de reproducción del cable. Deje el micrófono físico seleccionado como entrada de Mainline.
+1. Detenga la conversión y configure el dispositivo de salida de la línea principal en el extremo de reproducción del cable. Deje el micrófono físico seleccionado como entrada de RVC WebUI (Mainline - Original RVC).
 2. En la aplicación de destino, elija el extremo de grabación del cable como micrófono. Seleccione sus auriculares para la reproducción de esa aplicación, de modo que el sonido de la llamada no regrese a través del cable.
 3. Inicie la conversión y realice una grabación privada o utilice la prueba de micrófono de la aplicación. Confirme que captura la voz convertida una vez. Si también necesita monitoreo local, use el monitoreo de la aplicación de destino cuando esté disponible y manténgala separada de la entrada del cable.
 4. Si la aplicación de destino corta sílabas silenciosas, compare una muestra breve con el procesamiento automático de ruido desactivado para realizar un diagnóstico. Restaura cualquier procesamiento que mejore el resultado sin perder palabras.

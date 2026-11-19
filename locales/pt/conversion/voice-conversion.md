@@ -5,6 +5,8 @@ permalink: /voice-conversion/
 ---
 # Converta uma gravação com Ilaria RVC
 
+[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 A conversão de voz começa com uma performance. A saída geralmente segue as palavras originais, o tempo, a articulação e o contorno do tom enquanto altera o som da voz. As decisões sobre a entrega ainda começam com a gravação original. Para um cover cantado, planeje converter um vocal principal isolado e depois mixar o vocal convertido com o instrumental.
 
 ## Faça uma conversão de linha de base
@@ -47,11 +49,11 @@ Quando a privacidade ou uma conexão não confiável for importante, selecione u
 - Salve suas configurações junto com o resultado. Inclua o arquivo de origem, modelo e versões de índice, ID do alto-falante, se aplicável, incorporador, extrator de pitch, mudança de pitch, proporção de índice, processamento e formato de saída.
 - Quando um modelo estiver faltando ou a inferência falhar antes de produzir o áudio, comece com [Solução de problemas](../reference/troubleshooting.md). Para conversão de microfone, consulte [Conversão de voz em tempo real](real-time.md).
 
-## Converter uma gravação no Mainline RVC
+## Converter uma gravação no RVC WebUI (Mainline - Original RVC) {#convert-a-recording-in-mainline-rvc}
 
 ### Configurar a WebUI
 
-No Windows, use um pacote Mainline compatível com o seu hardware. Extraia todo o arquivo para um diretório local antes de executar seu inicializador. Pacotes do Windows que incluem `go-web.bat` usam-no para iniciar o WebUI local. Deixe o console aberto durante a conversão. Se o navegador não abrir automaticamente, use o endereço local impresso no console.
+No Windows, use um pacote RVC WebUI (Mainline - Original RVC) compatível com o seu hardware. Extraia todo o arquivo para um diretório local antes de executar seu inicializador. Pacotes do Windows que incluem `go-web.bat` usam-no para iniciar o WebUI local. Deixe o console aberto durante a conversão. Se o navegador não abrir automaticamente, use o endereço local impresso no console.
 
 ### Carregue o modelo e converta
 

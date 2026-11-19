@@ -1,10 +1,11 @@
 ---
-label: "🧪 Trainieren und exportieren Sie ein Modell"
+label: "Trainieren und exportieren Sie ein Modell"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
 
-# Trainieren und exportieren Sie ein Mainline-RVC-Modell
+# Trainieren und exportieren Sie ein RVC WebUI (Mainline - Original RVC)-Modell
 
 Beginnen Sie mit einem einzelnen Sprecher und einem neuen Experimentnamen. Durch das Training entsteht ein Modell, das Sie an neuen Leistungen in der [Inferenzschnittstelle](inference.md)] testen können. Bewahren Sie Rohton und das Experimentprotokoll auf, damit Sie Ihr Ergebnis reproduzieren können.
 
@@ -24,7 +25,7 @@ Siehe [Datensatzvorbereitung](../../model-training/dataset-preparation.md) für 
 
 ## Konfigurieren Sie das Experiment und verarbeiten Sie Audio.
 
-1. Öffnen Sie **Train**. Verwenden Sie einen neuen Namen wie `voice_a_v2_40k`, damit Mainline einen separaten Ordner unter `logs/` erstellt.
+1. Öffnen Sie **Train**. Verwenden Sie einen neuen Namen wie `voice_a_v2_40k`, damit RVC WebUI (Mainline - Original RVC) einen separaten Ordner unter `logs/` erstellt.
 2. Wählen Sie eine Ziel-Abtastrate und eine Architekturversion, die von Ihrer Version unterstützt wird. V2 ist ein sinnvoller Ausgangspunkt, wenn Sie planen, einen kompatiblen V2-Inferenz-Client zu verwenden. Rate, Architektur und Tonhöhenführung müssen mit den Generator- und Diskriminator-Vorzügen übereinstimmen. Verwenden Sie die Tonhöhenführung für ein normales tonhöhengesteuertes Sprachmodell.
 3. Wählen Sie einen Datensatz mit einem einzigen Sprecher aus, bei dem der Build eine Auswahl bietet. Verwenden Sie für den ersten Durchgang die Sprecher-ID `0`. Fügen Sie den vollständigen Datensatzordnerpfad ein und klicken Sie dann auf **Daten verarbeiten** oder die entsprechende Vorverarbeitungsschaltfläche.
 4. Warten Sie, bis die Vorverarbeitung abgeschlossen ist. Überprüfen Sie die Warnungen in der Ausgabe und stellen Sie sicher, dass das Experiment verarbeitetes Audio erzeugt hat. Wenn der Lauf nichts ergibt, überprüfen Sie den Pfad und testen Sie, ob die enthaltenen Audiodateien dekodiert werden. Beheben Sie dieses Problem, bevor Sie mit der Extraktion beginnen.

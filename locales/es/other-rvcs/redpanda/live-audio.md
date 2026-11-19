@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Pruebe el audio en vivo en Redpanda-vc"
+label: "Pruebe el audio en vivo en Redpanda-vc"
+icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
 ---

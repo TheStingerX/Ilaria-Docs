@@ -1,14 +1,15 @@
 ---
-label: "🎧 Configuração do microfone em tempo real"
+label: "Configuração do microfone em tempo real"
+icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
 ---
 
-# Use o trocador de voz em tempo real do Mainline
+# Use o trocador de voz em tempo real do RVC WebUI (Mainline - Original RVC)
 
 > Usa o microfone físico no conversor, envia a saída para o dispositivo de reprodução do cabo e escolhe a entrada de gravação correspondente no Discord ou OBS. Para Vonovox, começa com **VAC Lite** ou usa **VB-CABLE**. Lê o guia completo antes de testar numa chamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
 
-Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do Mainline. Ele pode passar um microfone através de um modelo continuamente enquanto a WebUI é usada para gravações e treinamento. Comece ouvindo diretamente pelos fones de ouvido e depois envie o áudio processado para outro aplicativo.
+Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do RVC WebUI (Mainline - Original RVC). Ele pode passar um microfone através de um modelo continuamente enquanto a WebUI é usada para gravações e treinamento. Comece ouvindo diretamente pelos fones de ouvido e depois envie o áudio processado para outro aplicativo.
 
 ## Abra a interface e selecione seus arquivos
 
@@ -24,17 +25,17 @@ Este guia se aplica à GUI separada em tempo real incluída nas compilações su
 3. Se o stream começar, mas cortar palavras, verifique a seleção do dispositivo e o nível de entrada. Se houver lacunas repetidas, retorne ao comprimento padrão do bloco de processamento. Uma voz limpa e ligeiramente atrasada é uma base melhor do que um sinal de baixa latência que continua quebrando.
 4. Interrompa a transmissão antes de mudar de dispositivo de áudio ou carregar um ponto de verificação diferente. Reinicie e repita o mesmo teste de audição.
 
-## Direcione o Mainline para uma chamada ou gravador.
+## Direcione o RVC WebUI (Mainline - Original RVC) para uma chamada ou gravador.
 
-Configure um cabo virtual ou outro par de dispositivos de reprodução e gravação conectados. O final da reprodução recebe som do Mainline. A extremidade da gravação fornece esse som para sua chamada ou gravador.
+Configure um cabo virtual ou outro par de dispositivos de reprodução e gravação conectados. O final da reprodução recebe som do RVC WebUI (Mainline - Original RVC). A extremidade da gravação fornece esse som para sua chamada ou gravador.
 
 ```text
-Physical microphone → Mainline GUI → Virtual cable playback input
+Physical microphone → RVC WebUI (Mainline - Original RVC) GUI → Virtual cable playback input
                                            ↓
                        Call or recording app ← Virtual cable recording output
 ```
 
-1. Pare a conversão e configure o dispositivo de saída Mainline para a extremidade de reprodução do cabo. Deixe o microfone físico selecionado como entrada do Mainline.
+1. Pare a conversão e configure o dispositivo de saída RVC WebUI (Mainline - Original RVC) para a extremidade de reprodução do cabo. Deixe o microfone físico selecionado como entrada do RVC WebUI (Mainline - Original RVC).
 2. No aplicativo de destino, escolha a extremidade de gravação do cabo como microfone. Selecione seus fones de ouvido para a reprodução desse aplicativo para que o som da chamada não volte pelo cabo.
 3. Inicie a conversão e faça uma gravação privada ou use o teste de microfone do app. Confirme se ele captura a voz convertida uma vez. Se você também precisar de monitoramento local, use o monitoramento do aplicativo de destino quando disponível e mantenha-o separado da entrada do cabo.
 4. Se o aplicativo de destino cortar sílabas baixas, compare uma amostra curta com o processamento automático de ruído desativado para diagnóstico. Restaure qualquer processamento que melhore o resultado sem perder palavras.

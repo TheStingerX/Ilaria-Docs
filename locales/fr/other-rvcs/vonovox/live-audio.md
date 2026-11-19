@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Acheminer et régler Vonovox"
+label: "Acheminer et régler Vonovox"
+icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
 ---

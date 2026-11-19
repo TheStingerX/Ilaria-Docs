@@ -5,6 +5,8 @@ permalink: /training/
 ---
 # Trainieren Sie ein RVC-Sprachmodell
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Beim Training wird eine Zielstimme aus einer vorbereiteten Audiosammlung gelernt. Verwenden Sie diese Anleitung, wenn Sie ein Modell aus Ihren eigenen oder autorisierten Aufnahmen erstellen möchten. Wenn Sie bereits über ein Inferenzmodell verfügen, lesen Sie [RVC-Modelle und -Dateien](../start/models.md)], um mit der Verwendung zu beginnen.
 
 ## Planen Sie Ihren ersten Lauf

@@ -1,19 +1,20 @@
 ---
-label: "🎧 Configurazione del microfono in tempo reale"
+label: "Configurazione del microfono in tempo reale"
+icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
 ---
 
-# Converti la voce dal vivo con Mainline
+# Converti la voce dal vivo con RVC WebUI (Mainline - Original RVC)
 
 > Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, **VAC Lite** è la prima scelta e **VB-CABLE** è un’alternativa. Leggi la guida completa prima di provare in chiamata. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
 
-Usa la GUI separata inclusa nelle versioni supportate di Mainline per convertire in tempo reale la voce del microfono. La WebUI serve per convertire file e addestrare modelli. Ascolta il risultato in cuffia prima di mandarlo all'app di destinazione.
+Usa la GUI separata inclusa nelle versioni supportate di RVC WebUI (Mainline - Original RVC) per convertire in tempo reale la voce del microfono. La WebUI serve per convertire file e addestrare modelli. Ascolta il risultato in cuffia prima di mandarlo all'app di destinazione.
 
 ## Apri l'interfaccia e seleziona i tuoi file
 
 1. Completa [l'installazione](installation.md) e controlla il modello con una [breve conversione di prova](inference.md). Questo ti dà un test indipendente se si verifica un problema con il microfono.
-2. In un pacchetto Windows con `go-realtime_gui.bat`, avvialo dalla cartella del programma decompresso. Se hai installato Mainline da sorgente, attiva l'ambiente Python usato per la configurazione ed esegui `python realtime_gui.py` dalla directory del repository. Il nome del launcher può variare tra i pacchetti.
+2. In un pacchetto Windows con `go-realtime_gui.bat`, avvialo dalla cartella del programma decompresso. Se hai installato RVC WebUI (Mainline - Original RVC) da sorgente, attiva l'ambiente Python usato per la configurazione ed esegui `python realtime_gui.py` dalla directory del repository. Il nome del launcher può variare tra i pacchetti.
 3. Nella finestra in tempo reale, seleziona il modello di inferenza compatto `.pth`. Se hai il file `.index` corrispondente già popolato, selezionalo qui. Lascia **Index Rate** su `0` per il primo test di ascolto. Se la tua build richiede un indice nel selettore file, fornisci quello per il modello selezionato.
 4. Scegli un'interfaccia host audio, quindi seleziona il microfono fisico come ingresso e le cuffie come uscita. Scegli i valori normali per l'intonazione e la frequenza di campionamento offerti dalla tua build. Inizia con le impostazioni di prestazione predefinite.
 
@@ -24,17 +25,17 @@ Usa la GUI separata inclusa nelle versioni supportate di Mainline per convertire
 3. Se lo streaming si avvia ma le parole vengono tagliate, controlla la selezione del dispositivo e il livello di ingresso. Se l'audio si interrompe a scatti, torna alla lunghezza del blocco di elaborazione predefinita. Una voce pulita e leggermente ritardata è una prova di riferimento migliore rispetto a un segnale a bassa latenza che continua a interrompersi.
 4. Interrompi lo streaming prima di cambiare dispositivi audio o caricare un checkpoint diverso. Riavvia e ripeti lo stesso test di ascolto.
 
-## Invia l'audio di Mainline a una chiamata o a un registratore
+## Invia l'audio di RVC WebUI (Mainline - Original RVC) a una chiamata o a un registratore
 
-Configura un cavo virtuale o un'altra coppia di dispositivi di riproduzione e registrazione collegati. L'ingresso di riproduzione del cavo riceve l'audio da Mainline. L'estremità di registrazione fornisce l'audio alla chiamata o al registratore.
+Configura un cavo virtuale o un'altra coppia di dispositivi di riproduzione e registrazione collegati. L'ingresso di riproduzione del cavo riceve l'audio da RVC WebUI (Mainline - Original RVC). L'estremità di registrazione fornisce l'audio alla chiamata o al registratore.
 
 ```text
-Microfono fisico → GUI Mainline → Ingresso di riproduzione del cavo virtuale
+Microfono fisico → GUI RVC WebUI (Mainline - Original RVC) → Ingresso di riproduzione del cavo virtuale
                                            ↓
                        App di chiamata o registrazione ← Uscita di registrazione del cavo virtuale
 ```
 
-1. Interrompi la conversione e imposta il dispositivo di uscita Mainline sull'estremità di riproduzione del cavo. Lascia il microfono fisico selezionato come ingresso di Mainline.
+1. Interrompi la conversione e imposta il dispositivo di uscita RVC WebUI (Mainline - Original RVC) sull'estremità di riproduzione del cavo. Lascia il microfono fisico selezionato come ingresso di RVC WebUI (Mainline - Original RVC).
 2. Nell'app di destinazione, scegli l'estremità di registrazione del cavo come microfono. Seleziona le cuffie per la riproduzione dell'app in modo che l'audio della chiamata non ritorni indietro attraverso il cavo.
 3. Avvia la conversione ed effettua una registrazione privata o utilizza il test del microfono dell'app. Verifica che la registrazione contenga solo la voce convertita, senza duplicati. Se hai bisogno anche del monitoraggio locale, utilizza il monitoraggio dell'app di destinazione, ove disponibile, e mantienilo separato dall'ingresso del cavo.
 4. Se l'app di destinazione taglia le sillabe più deboli, confronta un breve campione con l'elaborazione automatica del rumore disattivata per la diagnosi. Ripristina ogni elaborazione che migliori il risultato senza perdere parole.

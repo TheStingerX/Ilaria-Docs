@@ -1,5 +1,6 @@
 ---
-label: "🎧 Configura il microfono in tempo reale"
+label: "Configura il microfono in tempo reale"
+icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
 ---

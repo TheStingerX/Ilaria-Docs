@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Risoluzione dei problemi RVC
 
+[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 È la tua prima volta con RVC? **Parti da un WAV di 10 secondi e un solo modello.** Se l’app si blocca, apri il log e cerca il primo errore. Se funziona ma la voce suona male, riascolta la stessa clip e cambia una sola impostazione alla volta. Il log è il registro delle operazioni. Il checkpoint è un salvataggio del modello o dello stato dell’addestramento.
 !!!
@@ -36,9 +38,9 @@ Una diagnosi utile inizia dalla prima fase che fallisce. Conserva la versione de
 
 ### La finestra si chiude o il setup non si completa mai
 
-- **Ilaria RVC:** Estrai il pacchetto completo, apri la sua cartella ed esegui `ILARIA_RVC_LOGS.bat`. Cerca sopra l'ultimo messaggio di arresto la prima eccezione utile. Verifica che Windows rilevi la GPU NVIDIA supportata e che l'ambiente e le risorse in bundle siano ancora presenti.
+- **Ilaria RVC:** Estrai il pacchetto completo, apri la sua cartella ed esegui `RUN_ILARIA_RVC_LOGS.bat`. Cerca sopra l'ultimo messaggio di arresto la prima eccezione utile. Verifica che Windows rilevi la GPU NVIDIA supportata e che l'ambiente e le risorse in bundle siano ancora presenti.
 - **Applio Desktop:** apri Configurazione e controlla lo stato del motore. Riparare l'installazione tramite i controlli di installazione del desktop quando il controllo del runtime o del pacchetto non riesce. Per Gradio, esegui il programma di avvio dal checkout previsto e verifica quale interprete è attivo.
-- **Mainline:** Abbina il launcher e il runtime all'archivio specifico o al checkout dell'origine. Un archivio precedente può contenere una build CUDA che non può eseguire i kernel per una GPU più recente. L'installazione di un pacchetto Python non correlato a livello globale non riparerà un interprete in bundle.
+- **RVC WebUI (Mainline - Original RVC):** Abbina il launcher e il runtime all'archivio specifico o al checkout dell'origine. Un archivio precedente può contenere una build CUDA che non può eseguire i kernel per una GPU più recente. L'installazione di un pacchetto Python non correlato a livello globale non riparerà un interprete in bundle.
 - **Errore DLL di Windows:** Per `llvmlite.dll` o una dipendenza Visual C++ mancante, controlla che l'architettura runtime corrisponda all'app e installa o ripara il ridistribuibile Microsoft Visual C++ ufficiale per quell'architettura. Se la DLL stessa è assente, ripristinala tramite il pacchetto originale o il programma di installazione.
 - **Errori di risorse dopo un aggiornamento:** controlla che l'installazione sia scrivibile, che siano presenti i file delle risorse richiesti e che il collegamento sul desktop punti alla cartella aggiornata. Conserva il backup di modelli, set di dati e registri prima di sostituire un'installazione.
 

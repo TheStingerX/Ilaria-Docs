@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # Fundamentos de RVC
 
+[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 A conversão de voz baseada em recuperação (RVC) pega uma gravação vocal e sintetiza uma versão com o caráter de uma voz treinada. A gravação fornece a performance, incluindo as palavras, o ritmo e grande parte do contorno do tom. O modelo determina como esse desempenho é renderizado. Para uma linha falada, registre a pronúncia e a entrega que deseja ouvir no resultado. Um ajuste de tom altera o registro sem traduzir ou reescrever a linha.
 
 ## Siga o sinal
@@ -30,7 +32,7 @@ Para controles de conversão específicos do aplicativo, consulte [Conversão de
 
 ## Verifique a compatibilidade do modelo antes de importar
 
-1. **Confirme a família e a arquitetura do modelo.** Use um tempo de execução que suporte explicitamente o modelo. O RVC clássico v1 e v2 usam dimensões de recursos diferentes, geralmente 256 e 768, respectivamente, no Mainline. Alguns forks também suportam arquiteturas que exigem seu próprio tempo de execução.
+1. **Confirme a família e a arquitetura do modelo.** Use um tempo de execução que suporte explicitamente o modelo. O RVC clássico v1 e v2 usam dimensões de recursos diferentes, geralmente 256 e 768, respectivamente, no RVC WebUI (Mainline - Original RVC). Alguns forks também suportam arquiteturas que exigem seu próprio tempo de execução.
 2. **Verifique o incorporador.** O tempo de execução deve fornecer a representação do recurso que o modelo foi treinado para esperar. Um modelo treinado com um incorporador personalizado pode precisar desse incorporador no momento da inferência. Uma extensão de arquivo semelhante ou uma taxa de amostragem correspondente por si só fornecem pouca evidência de suporte.
 3. **Use a exportação de inferência.** Um `.pth` pronto para uso e um ponto de verificação de treinamento podem ter a mesma extensão. Selecione o arquivo identificado pelo editor como modelo de inferência. Um ZIP é um contêiner para os arquivos e só pode ser importado diretamente quando o aplicativo oferece suporte à importação de ZIP.
 4. **Emparelhar dados de recuperação com seu ponto de verificação.** Um `.index` criado para outra voz ou incorporador pode falhar ou degradar o resultado. Mantenha o modelo e seu índice juntos e verifique se o aplicativo selecionou o par esperado. Se você tiver apenas um modelo compatível, use o fluxo de trabalho sem recuperação compatível com seu cliente.

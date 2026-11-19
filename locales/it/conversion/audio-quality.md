@@ -5,6 +5,8 @@ permalink: /audio-quality/
 ---
 # Ottimizza l'intonazione e la qualità audio
 
+[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta. Ascolta a livelli simili, quindi un risultato più forte non vince il confronto solo in base al volume. Per la musica, confronta prima la voce convertita da sola e poi nel mix.
 
 ## Intonazione, estensione e risonanza

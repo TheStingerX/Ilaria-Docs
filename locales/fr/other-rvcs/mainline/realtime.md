@@ -1,14 +1,15 @@
 ---
-label: "🎧 Configuration du microphone en temps réel"
+label: "Configuration du microphone en temps réel"
+icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
 ---
 
-# Utilisez le changeur de voix en temps réel Mainline
+# Utilisez le changeur de voix en temps réel RVC WebUI (Mainline - Original RVC)
 
 > Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec **VAC Lite** ou utilisez **VB-CABLE**. Lisez le guide complet avant un appel. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
 
-Ce guide s'applique à l'interface graphique en temps réel distincte incluse dans les versions Mainline prises en charge. Il peut faire passer un microphone à travers un modèle en continu pendant que l'interface Web est utilisée pour les enregistrements et la formation. Commencez par écouter directement avec des écouteurs, puis envoyez l'audio traité à votre autre application.
+Ce guide s'applique à l'interface graphique en temps réel distincte incluse dans les versions RVC WebUI (Mainline - Original RVC) prises en charge. Il peut faire passer un microphone à travers un modèle en continu pendant que l'interface Web est utilisée pour les enregistrements et la formation. Commencez par écouter directement avec des écouteurs, puis envoyez l'audio traité à votre autre application.
 
 ## Ouvrez l'interface et sélectionnez vos fichiers
 
@@ -26,15 +27,15 @@ Ce guide s'applique à l'interface graphique en temps réel distincte incluse da
 
 ## Acheminez la ligne principale vers un appel ou un enregistreur
 
-Configurez un câble virtuel ou une autre paire d'appareils de lecture et d'enregistrement connectés. La fin de la lecture reçoit le son de Mainline. L'extrémité d'enregistrement fournit le son à votre appel ou à votre enregistreur.
+Configurez un câble virtuel ou une autre paire d'appareils de lecture et d'enregistrement connectés. La fin de la lecture reçoit le son de RVC WebUI (Mainline - Original RVC). L'extrémité d'enregistrement fournit le son à votre appel ou à votre enregistreur.
 
 ```text
-Physical microphone → Mainline GUI → Virtual cable playback input
+Physical microphone → RVC WebUI (Mainline - Original RVC) GUI → Virtual cable playback input
                                            ↓
                        Call or recording app ← Virtual cable recording output
 ```
 
-1. Arrêtez la conversion et réglez le périphérique de sortie Mainline à l'extrémité de lecture du câble. Laissez le microphone physique sélectionné comme entrée de Mainline.
+1. Arrêtez la conversion et réglez le périphérique de sortie RVC WebUI (Mainline - Original RVC) à l'extrémité de lecture du câble. Laissez le microphone physique sélectionné comme entrée de RVC WebUI (Mainline - Original RVC).
 2. Dans l'application de destination, choisissez l'extrémité d'enregistrement du câble comme microphone. Sélectionnez vos écouteurs pour la lecture de cette application afin que le son de l'appel ne revienne pas via le câble.
 3. Démarrez la conversion et effectuez un enregistrement privé ou utilisez le test du microphone de l'application. Confirmez qu'il capture la voix convertie une fois. Si vous avez également besoin d'une surveillance locale, utilisez la surveillance de l'application de destination lorsqu'elle est disponible et séparez-la de l'entrée du câble.
 4. Si l'application de destination coupe les syllabes silencieuses, comparez un court échantillon avec le traitement automatique du bruit désactivé pour le diagnostic. Restaurez tout traitement qui améliore le résultat sans perdre de mots.

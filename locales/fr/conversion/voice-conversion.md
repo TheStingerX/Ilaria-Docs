@@ -5,6 +5,8 @@ permalink: /voice-conversion/
 ---
 # Convertir un enregistrement avec Ilaria RVC
 
+[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 La conversion vocale commence par une performance. La sortie suit généralement les mots sources, le timing, l'articulation et le contour de la hauteur tout en modifiant le son de la voix. Les décisions concernant la livraison commencent toujours par l'enregistrement original. Pour une reprise chantée, prévoyez de convertir une voix principale isolée et de mélanger ensuite la voix convertie avec l'instrument.
 
 ## Effectuez une conversion de base
@@ -47,11 +49,11 @@ Lorsque la confidentialité ou une connexion peu fiable sont importantes, sélec
 - Enregistrez vos paramètres à côté du résultat. Incluez le fichier source, les versions de modèle et d'index, l'ID du haut-parleur le cas échéant, l'intégration, l'extracteur de pitch, le pitch shift, le rapport d'index, le traitement et le format de sortie.
 - Lorsqu'un modèle est manquant ou que l'inférence échoue avant de produire de l'audio, commencez par [Dépannage](../reference/troubleshooting.md). Pour la conversion du microphone, voir [Conversion vocale en temps réel](real-time.md).
 
-## Convertir un enregistrement dans Mainline RVC
+## Convertir un enregistrement dans RVC WebUI (Mainline - Original RVC) {#convert-a-recording-in-mainline-rvc}
 
 ### Configurer la WebUI
 
-Sous Windows, utilisez un package Mainline compatible avec votre matériel. Extrayez l'intégralité de l'archive dans un répertoire local avant d'exécuter son lanceur. Les packages Windows qui incluent `go-web.bat` l'utilisent pour démarrer l'interface Web locale. Laissez la console ouverte pendant la conversion. Si le navigateur ne s'ouvre pas automatiquement, utilisez l'adresse locale imprimée dans la console.
+Sous Windows, utilisez un package RVC WebUI (Mainline - Original RVC) compatible avec votre matériel. Extrayez l'intégralité de l'archive dans un répertoire local avant d'exécuter son lanceur. Les packages Windows qui incluent `go-web.bat` l'utilisent pour démarrer l'interface Web locale. Laissez la console ouverte pendant la conversion. Si le navigateur ne s'ouvre pas automatiquement, utilisez l'adresse locale imprimée dans la console.
 
 ### Chargez le modèle et convertissez
 

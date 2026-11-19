@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Solución de problemas RVC
 
+[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 ¿Es tu primera vez con RVC? **Empieza con un WAV de 10 segundos y un solo modelo.** Si la aplicación falla, busca el primer error en el registro. Si funciona pero suena mal, escucha el mismo fragmento y cambia un solo ajuste por prueba. Un checkpoint guarda el modelo o el estado del entrenamiento.
 !!!
@@ -36,7 +38,7 @@ Un diagnóstico útil comienza en la primera etapa que falla. Conserve la versi�
 
 ### La ventana se cierra o la configuración nunca se completa
 
-- **Ilaria RVC:** Extraiga el paquete completo, abra su carpeta y ejecute `ILARIA_RVC_LOGS.bat`. Mire arriba del último mensaje de apagado para ver la primera excepción útil. Compruebe que Windows detecte la GPU NVIDIA compatible y que el entorno y los recursos incluidos todavía estén presentes.
+- **Ilaria RVC:** Extraiga el paquete completo, abra su carpeta y ejecute `RUN_ILARIA_RVC_LOGS.bat`. Mire arriba del último mensaje de apagado para ver la primera excepción útil. Compruebe que Windows detecte la GPU NVIDIA compatible y que el entorno y los recursos incluidos todavía estén presentes.
 - **Applio Desktop:** Abra Configuración e inspeccione el estado del motor. Repare la instalación a través de los controles de configuración del escritorio cuando falle el tiempo de ejecución o la verificación del paquete. Para Gradio, ejecute el iniciador desde la caja deseada y verifique qué intérprete está activo.
 - **Línea principal:** Haga coincidir el iniciador y el tiempo de ejecución con el archivo específico o el pago de la fuente. Un archivo antiguo puede contener una compilación CUDA que no puede ejecutar kernels para una GPU más nueva. La instalación global de un paquete Python no relacionado no reparará un intérprete incluido.
 - **Error de DLL de Windows:** Para `llvmlite.dll` o una dependencia de Visual C++ faltante, verifique que la arquitectura de tiempo de ejecución coincida con la aplicación e instale o repare el redistribuible oficial de Microsoft Visual C++ para esa arquitectura. Si no existe la DLL, restáurela mediante el paquete o instalador original.

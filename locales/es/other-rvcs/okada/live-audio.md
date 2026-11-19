@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Audio en vivo y enrutamiento"
+label: "Audio en vivo y enrutamiento"
+icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
 ---

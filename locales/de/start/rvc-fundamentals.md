@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # RVC-Grundlagen
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesangsaufnahme und synthetisiert eine Version mit dem Charakter einer trainierten Stimme. Die Aufnahme liefert die Darbietung, einschließlich der Worte, des Rhythmus und eines Großteils der Tonhöhenkontur. Das Modell bestimmt, wie diese Leistung erbracht wird. Notieren Sie für eine gesprochene Zeile die Aussprache und den Vortrag, die Sie im Ergebnis hören möchten. Eine Tonhöhenanpassung ändert das Register, ohne die Zeile zu übersetzen oder neu zu schreiben.
 
 ## Folgen Sie dem Signal
@@ -30,7 +32,7 @@ For app-specific conversion controls, see [Voice conversion](../conversion/voice
 
 ## Überprüfen Sie die Modellkompatibilität vor dem Import.
 
-1. **Bestätigen Sie die Modellfamilie und -architektur.** Verwenden Sie eine Laufzeit, die das Modell explizit unterstützt. Classic RVC v1 and v2 use different feature dimensions, commonly 256 and 768 respectively in Mainline. Some forks also support architectures that require their own runtime.
+1. **Bestätigen Sie die Modellfamilie und -architektur.** Verwenden Sie eine Laufzeit, die das Modell explizit unterstützt. Classic RVC v1 and v2 use different feature dimensions, commonly 256 and 768 respectively in RVC WebUI (Mainline - Original RVC). Some forks also support architectures that require their own runtime.
 2. **Überprüfen Sie den Embedder.** Die Laufzeit sollte die Feature-Darstellung bereitstellen, die das Modell erwartet hat. Ein mit einem benutzerdefinierten Einbetter trainiertes Modell kann diesen Einbetter zum Zeitpunkt der Inferenz benötigen. Eine ähnliche Dateierweiterung oder eine passende Abtastrate allein liefern kaum Hinweise auf eine Unterstützung.
 3. **Verwenden Sie den Inferenzexport.** Ein gebrauchsfertiges `.pth` und ein Trainingskontrollpunkt können dieselbe Erweiterung haben. Wählen Sie die vom Herausgeber identifizierte Datei als Inferenzmodell aus. Ein ZIP ist ein Container für die Dateien und kann nur dann direkt importiert werden, wenn die App den ZIP-Import unterstützt.
 4. **Koppeln Sie Abrufdaten mit ihrem Prüfpunkt.** Ein für eine andere Stimme oder einen anderen Embedder erstelltes `.index` kann fehlschlagen oder das Ergebnis verschlechtern. Behalten Sie das Modell und seinen Index bei und prüfen Sie, ob die App das erwartete Paar ausgewählt hat. Wenn Sie nur über ein kompatibles Modell verfügen, verwenden Sie den von Ihrem Kunden unterstützten No-Retrieval-Workflow.

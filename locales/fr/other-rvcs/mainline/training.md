@@ -1,10 +1,11 @@
 ---
-label: "🧪 Entraîner et exporter un modèle"
+label: "Entraîner et exporter un modèle"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
 
-# Entraîner et exporter un modèle RVC Mainline
+# Entraîner et exporter un modèle RVC WebUI (Mainline - Original RVC)
 
 Commencez avec un seul locuteur et un nouveau nom d'expérience. La formation produit un modèle que vous pouvez tester sur de nouvelles performances dans l'[interface d'inférence](inference.md). Conservez l'audio brut et le journal de l'expérience afin de pouvoir reproduire votre résultat.
 
@@ -24,7 +25,7 @@ Voir [préparation de l'ensemble de données](../../model-training/dataset-prepa
 
 ## Configurez l'expérience et traitez l'audio
 
-1. Ouvrez **Train**. Utilisez un nouveau nom tel que `voice_a_v2_40k` afin que Mainline crée un dossier séparé sous `logs/`.
+1. Ouvrez **Train**. Utilisez un nouveau nom tel que `voice_a_v2_40k` afin que RVC WebUI (Mainline - Original RVC) crée un dossier séparé sous `logs/`.
 2. Choisissez une fréquence d'échantillonnage cible et une version d'architecture prises en charge par votre version. La V2 est un point de départ raisonnable lorsque vous envisagez d'utiliser un client d'inférence V2 compatible. Le taux, l'architecture et le guidage en hauteur doivent être en accord avec les pré-entraînements du générateur et du discriminateur. Utilisez le guidage de hauteur pour un modèle vocal normal guidé par la hauteur.
 3. Sélectionnez un ensemble de données à un seul locuteur, où la construction offre un choix. Utilisez l'ID de haut-parleur `0` pour la première exécution. Collez le chemin complet du dossier de l'ensemble de données, puis cliquez sur **Traiter les données** ou sur le bouton de prétraitement équivalent.
 4. Attendez la fin du prétraitement. Examinez les avertissements dans le résultat et vérifiez que l’expérience a produit un son traité. Si l'exécution ne produit rien, vérifiez le chemin et testez si les fichiers audio inclus décodent. Corrigez cela avant de commencer l’extraction.

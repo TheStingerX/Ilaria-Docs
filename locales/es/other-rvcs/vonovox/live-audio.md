@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Enruta y sintoniza Vonovox"
+label: "Enruta y sintoniza Vonovox"
+icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
 ---

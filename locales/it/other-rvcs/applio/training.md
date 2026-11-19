@@ -1,5 +1,6 @@
 ---
-label: "🧪 Addestra e testa un modello"
+label: "Addestra e testa un modello"
+icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
 ---

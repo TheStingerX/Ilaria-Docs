@@ -1,9 +1,12 @@
 ---
-label: "🎛️ Mit RVC GUI installieren und konvertieren"
+label: "Mit RVC GUI installieren und konvertieren"
+icon: ":control_knobs:"
 order: 99
 permalink: /ilaria-rvc/rvc-gui/file-conversion/
 ---
 # Mit RVC GUI installieren und konvertieren
+
+[GitHub](https://github.com/Tiger14n/RVC-GUI)
 
 Diese Anleitung behandelt die archivierte Desktop-App von Tiger14n zum Konvertieren von Audiodateien. Bereiten Sie einen Sprachkontrollpunkt und eine kurze, trockene WAV-Aufnahme vor, bevor Sie beginnen.
 

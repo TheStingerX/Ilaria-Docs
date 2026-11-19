@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Troubleshooting RVC
 
+[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 New to RVC? **Start with a 10-second WAV and one model.** If the app fails, open the log and copy the first error. If it runs but sounds wrong, replay the same clip before changing one setting. The log is the app’s record of what happened. A checkpoint is a saved model or training state.
 !!!
@@ -36,9 +38,9 @@ A useful diagnosis starts at the first stage that fails. Keep the app version, t
 
 ### The window exits or setup never completes
 
-- **Ilaria RVC:** Extract the complete package, open its folder, and run `ILARIA_RVC_LOGS.bat`. Look above the last shutdown message for the first useful exception. Check that Windows detects the supported NVIDIA GPU and that the bundled environment and assets are still present.
+- **Ilaria RVC:** Extract the complete package, open its folder, and run `RUN_ILARIA_RVC_LOGS.bat`. Look above the last shutdown message for the first useful exception. Check that Windows detects the supported NVIDIA GPU and that the bundled environment and assets are still present.
 - **Applio Desktop:** Open Setup and inspect the engine status. Repair the installation through the Desktop setup controls when a runtime or package check fails. For Gradio, run the launcher from the intended checkout and verify which interpreter is active.
-- **Mainline:** Match the launcher and runtime to the specific archive or source checkout. An older archive can contain a CUDA build that cannot execute kernels for a newer GPU. Installing an unrelated Python package globally will not repair a bundled interpreter.
+- **RVC WebUI (Mainline - Original RVC):** Match the launcher and runtime to the specific archive or source checkout. An older archive can contain a CUDA build that cannot execute kernels for a newer GPU. Installing an unrelated Python package globally will not repair a bundled interpreter.
 - **Windows DLL error:** For `llvmlite.dll` or a missing Visual C++ dependency, check that the runtime architecture matches the app and install or repair the official Microsoft Visual C++ Redistributable for that architecture. If the DLL itself is absent, restore it through the original package or installer.
 - **Resource errors after an update:** Check that the installation is writable, required asset files are present, and the desktop shortcut points to the updated folder. Keep your models, datasets and logs backed up before replacing an installation.
 
@@ -67,7 +69,7 @@ Check the output folder and free disk space. Export WAV and inspect file duratio
 
 ### A model does not appear
 
-Make sure there is an actual inference `.pth` inside the archive. Put it in the library used by the current app, or use its import control and wait for installation to finish. Refresh the voice list and check the selection again. In Ilaria RVC, the model library is under `models/`. Mainline archives and current source can use different directory layouts. See [RVC models and files](../start/models.md) for file roles.
+Make sure there is an actual inference `.pth` inside the archive. Put it in the library used by the current app, or use its import control and wait for installation to finish. Refresh the voice list and check the selection again. In Ilaria RVC, the model library is under `models/`. RVC WebUI (Mainline - Original RVC) archives and current source can use different directory layouts. See [RVC models and files](../start/models.md) for file roles.
 
 ### Loading fails with missing keys or incompatible shapes
 

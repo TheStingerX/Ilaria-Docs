@@ -16,7 +16,7 @@ See the [RVC tools directory](../reference/tools.md) for downloads and hardware 
 | Tool | Where to start |
 | --- | --- |
 | Vonovox | A real-time converter for RVC V2 models on Windows with an NVIDIA GPU. Download a build for your GPU, load the model, and test your microphone through headphones before routing the converted signal to another app. [Vonovox downloads](https://huggingface.co/dr87/vonovox/tree/main) · [Project documentation](https://github.com/dr87/Vonovox) |
-| Mainline RVC | The upstream project provides a training and inference WebUI alongside a dedicated real-time GUI. Refer to its release and launcher instructions for the platform you use.  |
+| RVC WebUI (Mainline - Original RVC) | The upstream project provides a training and inference WebUI alongside a dedicated real-time GUI. Refer to its release and launcher instructions for the platform you use.  |
 | Applio | Its Desktop and Gradio interfaces have their own real-time workflows. Use the setup instructions for the interface and version you have installed.  |
 | w-okada VCClient | A voice changer for live use. RVC availability depends on the release edition and platform. Check the supported models before installing a build. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
 | Deiteris and Tg-Develop | Independent w-okada forks with their own builds and settings. Check the fork's release notes before applying instructions for another edition. [Deiteris repository](https://github.com/deiteris/voice-changer) · [Tg-Develop repository](https://github.com/tg-develop/voice-changer) |
@@ -57,7 +57,7 @@ End-to-end delay includes device buffers, conversion, virtual routing and any pr
 | Silence detection or input threshold | Lower a threshold that cuts off soft syllables. Evaluate this during pauses and quiet speech, not just a sustained loud input. |
 | Device rate | Check the device and virtual-cable sample rates if you hear unusual speed or crackle. Start with compatible settings across the chain. |
 
-Start with the app defaults and change one setting at a time. If a game or another GPU-heavy program shares the machine, repeat the test while it is running. Keep a working preset so you can restore it before going live. [Mainline real-time GUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
+Start with the app defaults and change one setting at a time. If a game or another GPU-heavy program shares the machine, repeat the test while it is running. Keep a working preset so you can restore it before going live. [RVC WebUI (Mainline - Original RVC) real-time GUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
 
 ## Troubleshoot by where the fault appears
 
@@ -71,3 +71,7 @@ Start with the app defaults and change one setting at a time. If a game or anoth
 | A model works in file conversion but fails live | Check the live client's edition, architecture and embedder support. Test a model listed as compatible in that client before changing audio devices. |
 
 [RVC fundamentals](../start/rvc-fundamentals.md) · [Troubleshooting](../reference/troubleshooting.md)
+
+## RVC Blue
+
+Windows desktop voice conversion. [Installation and setup](../other-rvcs/rvc-blue/installation.md).

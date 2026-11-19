@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # RVC fundamentals
 
+[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Retrieval-based voice conversion (RVC) takes a vocal recording and synthesizes a version with the character of a trained voice. The recording supplies the performance, including the words, rhythm and much of the pitch contour. The model determines how that performance is rendered. For a spoken line, record the pronunciation and delivery you want to hear in the result. A pitch adjustment changes the register without translating or rewriting the line.
 
 ## Follow the signal
@@ -30,7 +32,7 @@ For app-specific conversion controls, see [Voice conversion](../conversion/voice
 
 ## Check model compatibility before importing
 
-1. **Confirm the model family and architecture.** Use a runtime that explicitly supports the model. Classic RVC v1 and v2 use different feature dimensions, commonly 256 and 768 respectively in Mainline. Some forks also support architectures that require their own runtime.
+1. **Confirm the model family and architecture.** Use a runtime that explicitly supports the model. Classic RVC v1 and v2 use different feature dimensions, commonly 256 and 768 respectively in RVC WebUI (Mainline - Original RVC). Some forks also support architectures that require their own runtime.
 2. **Check the embedder.** The runtime should supply the feature representation the model was trained to expect. A model trained with a custom embedder can need that embedder at inference time. A similar file extension or a matching sample rate alone provides little evidence of support.
 3. **Use the inference export.** A ready-to-use `.pth` and a training checkpoint can have the same extension. Select the file identified by the publisher as the inference model. A ZIP is a container for the files and is only directly importable where the app supports ZIP import.
 4. **Pair retrieval data with its checkpoint.** An `.index` built for another voice or embedder can fail or degrade the result. Keep the model and its index together and check that the app selected the expected pair. If you only have a compatible model, use the no-retrieval workflow supported by your client.

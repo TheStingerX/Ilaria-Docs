@@ -5,6 +5,8 @@ permalink: /text-to-speech/
 ---
 # Text to Speech und RVC
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Text to Speech (TTS) generiert eine Quellaufzeichnung aus den von Ihnen eingegebenen Wörtern. RVC wendet dann ein separates Sprachmodell auf diese Aufnahme an. Die TTS-Stimme liefert Aussprache, Akzent, Timing und den größten Teil des Ausdrucks. Das Zielmodell verändert den Klang dieser Leistung.
 
 ## Machen Sie einen kurzen Test

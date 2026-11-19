@@ -1,5 +1,6 @@
 ---
-label: "🧪 Entraîner et tester un modèle"
+label: "Entraîner et tester un modèle"
+icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
 ---

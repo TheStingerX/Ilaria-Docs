@@ -7,22 +7,41 @@ description: "Comparez les applications compatibles pour la conversion vocale en
 
 # Choisissez une application RVC
 
-Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/kaggle.md)
+[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
+Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/cloud/kaggle.md)
 
 Pour installer, configurer ou dépanner une application, consultez les [guides pas à pas par application](../other-rvcs/app-guides.md).
 
 Commencez par ce que vous voulez faire. Un **changeur de voix en direct** traite le flux du microphone pendant que vous parlez. Un **convertisseur de fichiers** traite un enregistrement et enregistre la sortie pour l'éditer ou l'exporter. Un **entraîneur** transforme un ensemble de données d'enregistrements d'un locuteur en modèle. Certaines applications proposent les trois flux de travail. La version que vous installez détermine le matériel graphique et les formats de modèle que vous pouvez utiliser.
 
+///region app-comparison
+| Application | Training | Inférence (fichiers) | Realtime | Liens du projet |
+| --- | --- | --- | --- | --- |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Oui · Hérité de RVC WebUI (Mainline - Original RVC), sans mises à jour futures | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
+| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Oui | Oui | Oui · Lanceur séparé | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
+| [Applio](../other-rvcs/applio/installation.md) | Oui | Oui | Oui | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) |
+| [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Non | Oui | Non | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
+| [Vonovox](../other-rvcs/vonovox/installation.md) | Non | Non | Oui | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
+| [w-okada VCClient](../other-rvcs/okada/installation.md) | Non | Non | Oui | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
+| [Okada TG Developed Fork](../other-rvcs/tgr/installation.md) | Non | Non | Oui | [GitHub](https://github.com/tg-develop/voice-changer) |
+| [RVC Blue](../other-rvcs/rvc-blue/installation.md) | Non | Fichiers en temps réel | Oui | [GitHub](https://github.com/niel-blue/RVC-Realtime-GUI) · [Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI) |
+| [Replay](../reference/tools.md#replay) | Oui | Oui · ancienne version | Non | [Site officiel](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers) |
+
  | Application | Quand l'utiliser | Matériel et notes de construction |
 | --- | --- | --- |
- | Vonovox | Recommandé pour live RVC v2 sur Windows avec NVIDIA | NVIDIA CUDA uniquement. Faites correspondre le package Hugging Face à votre génération de GPU. |
- | w-okada VCClient | Conversion en direct sur plusieurs systèmes d'exploitation | Windows CUDA et packages standard, y compris DirectML ou CPU, lorsqu'ils sont pris en charge. Chemins d’installation distincts d’Apple Silicon et de Linux. |
- | Fork développé par Okada TG | Live RVC avec des options documentées pour les utilisateurs d'AMD, Intel et CPU | Windows CUDA ou DirectML. Les versions Linux et expérimentales de macOS ont des instructions distinctes. |
- | Ilaria RVC | Conversion de fichiers, TTS, formation et analyse audio | La distribution Windows actuelle est NVIDIA uniquement. |
- | Interface graphique RVC | Conversion simple de fichiers locaux dans l'interface de bureau existante | Archivé. Le projet documente Windows NVIDIA CUDA et une solution de contournement historique d'Apple Silicon. |
- | Applio | Conversion de fichiers, formation et temps réel dans une seule application | La documentation du bureau répertorie NVIDIA CUDA, les configurations AMD prises en charge et Apple MPS. La disponibilité dépend de l'édition et du moteur. |
- | Interface utilisateur Web RVC | Formation et inférence en amont, avec un lanceur en temps réel séparé | NVIDIA CUDA sur Windows et Ubuntu. La configuration du processeur en amont couvre les systèmes AMD et Intel, avec une utilisation possible de DirectML sous Windows. |
- | Redpanda-vc | Un fork Applio pour expérimenter plusieurs moteurs de conversion vocale | Le dépôt comprend un conteneur CUDA et documente la sélection de GPU pour les flux WebUI. Vérifiez le moteur sélectionné et créez pour d'autres backends. |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversion de fichiers, TTS, formation et analyse audio | La distribution Windows actuelle est NVIDIA uniquement. |
+| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Formation et inférence en amont, avec un lanceur en temps réel séparé | NVIDIA CUDA sur Windows et Ubuntu. La configuration du processeur en amont couvre les systèmes AMD et Intel, avec une utilisation possible de DirectML sous Windows. |
+| [Applio](../other-rvcs/applio/installation.md) | Conversion de fichiers, formation et temps réel dans une seule application | La documentation du bureau répertorie NVIDIA CUDA, les configurations AMD prises en charge et Apple MPS. La disponibilité dépend de l'édition et du moteur. |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Un fork Applio pour expérimenter plusieurs moteurs de conversion vocale | Le dépôt comprend un conteneur CUDA et documente la sélection de GPU pour les flux WebUI. Vérifiez le moteur sélectionné et créez pour d'autres backends. |
+| [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Conversion simple de fichiers locaux dans l'interface de bureau existante | Archivé. Le projet documente Windows NVIDIA CUDA et une solution de contournement historique d'Apple Silicon. |
+| [Vonovox](../other-rvcs/vonovox/installation.md) | Recommandé pour live RVC v2 sur Windows avec NVIDIA | NVIDIA CUDA uniquement. Faites correspondre le package Hugging Face à votre génération de GPU. |
+| [w-okada VCClient](../other-rvcs/okada/installation.md) | Conversion en direct sur plusieurs systèmes d'exploitation | Windows CUDA et packages standard, y compris DirectML ou CPU, lorsqu'ils sont pris en charge. Chemins d’installation distincts d’Apple Silicon et de Linux. |
+| [Okada TG Developed Fork](../other-rvcs/tgr/installation.md) | Live RVC avec des options documentées pour les utilisateurs d'AMD, Intel et CPU | Windows CUDA ou DirectML. Les versions Linux et expérimentales de macOS ont des instructions distinctes. |
+| [RVC Blue](../other-rvcs/rvc-blue/installation.md) | Conversion de voix en temps réel sous Windows | NVIDIA CUDA 12.8 / 11.8 (Windows) |
+| [Replay](../reference/tools.md#replay) | Entraînement de modèles et conversion de fichiers · déconseillé | [Installateurs archivés](https://archive.org/details/replay-8.7.0-installers) |
+///endregion
 
 ## Vonovox (recommandé pour une utilisation NVIDIA en direct)
 
@@ -70,3 +89,11 @@ Redpanda-vc est un fork d'Applio dont l'interface en temps réel prend en charge
 2. Commencez par le même court enregistrement ou répétez les mêmes quelques phrases dans votre microphone. Chargez le même modèle d'inférence et son index correspondant dans les deux applications si pris en charge.
 3. Utilisez le même pitch shift et désactivez les effets vocaux optionnels pour la première comparaison. Jugez des mots clairs, une hauteur stable et des pauses naturelles avant d'ajuster le son.
 4. Pour une utilisation en direct, exécutez l'application de jeu, d'appel ou de streaming que vous utilisez normalement et enregistrez la sortie acheminée pendant au moins une minute. Écoutez les interruptions, les coupures brutales et les retards audio avant de réduire la mémoire tampon.
+
+## Replay
+
+[Site officiel](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers)
+
+Depuis la fermeture de Weights.gg, Replay ne reçoit plus de support ni de mises à jour. La [page officielle de Replay](https://www.weights.com/replay) peut disparaître à tout moment. Internet Archive conserve les installateurs de Replay 8.7.0. Replay est déconseillé pour une nouvelle installation. Depuis la fermeture de Weights, le programme d'installation archivé risque de ne plus pouvoir télécharger les fichiers nécessaires et de ne pas terminer l'installation.
+
+[Installateurs archivés · Replay 8.7.0](https://archive.org/details/replay-8.7.0-installers)

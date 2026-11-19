@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
@@ -48,7 +48,40 @@ const staging = mkdtempSync(join(root, '.localized-build-'));
 const title = "<title>Ilaria&apos;s Docs &#x1F496;</title>";
 const headings = html => [...html.matchAll(/<h([1-6]) id="([^"]+)"/g)];
 const localizedPath = (lang, route) => lang === 'en' ? route : `/${lang}${route}`;
+const modifiedLabels = { en: 'Last updated', it: 'Ultima modifica', es: 'Última modificación', fr: 'Dernière modification', de: 'Zuletzt geändert', pt: 'Última atualização' };
+const pageSources = new Map(english.map(page => {
+  const source = readFileSync(join(root, 'docs', page), 'utf8');
+  const route = source.match(/^permalink:\s*(\/\S+)\s*$/m)?.[1] ?? '/';
+  return [route, page];
+}));
+const commitDates = new Map();
+const pendingFiles = new Set();
+try {
+  const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+  let timestamp;
+  for (const line of git(['log', '--format=@%ct', '--name-only', '--', 'docs', 'locales']).split(/\r?\n/)) {
+    if (line.startsWith('@')) timestamp = Number(line.slice(1)) * 1000;
+    else if (line && timestamp && !commitDates.has(line)) commitDates.set(line, timestamp);
+  }
+  for (const file of git(['diff', '--name-only', '-z', 'HEAD', '--', 'docs', 'locales']).split('\0')) pendingFiles.add(file);
+} catch {
+  // Source archives without Git history use the Markdown file timestamp.
+}
 
+function addModifiedDate(html, lang, route) {
+  const page = pageSources.get(route);
+  if (!page) return html;
+  const source = join(lang === 'en' ? 'docs' : `locales/${lang}`, page).split(sep).join('/');
+  const timestamp = pendingFiles.has(source) ? undefined : commitDates.get(source);
+  const date = new Date(timestamp ?? statSync(join(root, source)).mtimeMs);
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Rome', day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  }).formatToParts(date).map(({ type, value }) => [type, value]));
+  const display = `${parts.day}/${parts.month}/${parts.year} · ${parts.hour}:${parts.minute}`;
+  const markup = `<p class="docs-last-modified text-footer-text text-sm">${modifiedLabels[lang]} <time datetime="${date.toISOString()}">${display}</time></p>`;
+  return html.replace(/(<div id="retype-footer-links"[^>]*>)/, `$1\n                    ${markup}`);
+}
 function decorate(directory, lang) {
   for (const file of entries(directory, '.html')) {
     const path = relative(directory, file).split(sep).join('/');
@@ -90,7 +123,7 @@ function decorate(directory, lang) {
         return match?.[1] === level && match[2] !== id ? `<span id="${match[2]}" class="docs-anchor"></span>${tag}` : tag;
       });
     }
-    writeFileSync(file, html);
+    writeFileSync(file, addModifiedDate(html, lang, route));
   }
 }
 
@@ -116,6 +149,12 @@ try {
     decorate(join(staging, lang), lang);
   }
   mkdirSync(output, { recursive: true });
+  for (const code of Object.keys(languages)) {
+    const target = localizedPath(code, '/ilaria-rvc/tts/');
+    const folder = join(staging, code, 'ilaria-rvc', 'speech');
+    mkdirSync(folder, { recursive: true });
+    writeFileSync(join(folder, 'index.html'), `<!doctype html><html lang="${code}"><head><meta charset="utf-8"><title>TTS</title><link rel="canonical" href="${origin}${target}"><meta http-equiv="refresh" content="0;url=${target}"></head><body><a href="${target}">TTS</a></body></html>`);
+  }
   cpSync(join(staging, 'en'), output, { recursive: true });
   for (const lang of Object.keys(languages).slice(1)) {
     cpSync(join(staging, lang), join(output, lang), { recursive: true });

@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # Fondamentaux de RVC
 
+[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 La conversion vocale basée sur la récupération (RVC) prend un enregistrement vocal et synthétise une version avec le caractère d'une voix entraînée. L'enregistrement fournit la performance, y compris les paroles, le rythme et une grande partie du contour de la hauteur. Le modèle détermine la manière dont cette performance est rendue. Pour une ligne parlée, enregistrez la prononciation et la prestation que vous souhaitez entendre dans le résultat. Un ajustement de hauteur change le registre sans traduire ni réécrire la ligne.
 
 ## Suivre le signal
@@ -30,7 +32,7 @@ Pour les contrôles de conversion spécifiques à l'application, voir [Conversio
 
 ## Vérifiez la compatibilité du modèle avant l'importation
 
-1. **Confirmez la famille et l'architecture du modèle.** Utilisez un runtime qui prend explicitement en charge le modèle. Les RVC classiques v1 et v2 utilisent des dimensions de fonctionnalités différentes, généralement 256 et 768 respectivement dans Mainline. Certains forks prennent également en charge des architectures qui nécessitent leur propre runtime.
+1. **Confirmez la famille et l'architecture du modèle.** Utilisez un runtime qui prend explicitement en charge le modèle. Les RVC classiques v1 et v2 utilisent des dimensions de fonctionnalités différentes, généralement 256 et 768 respectivement dans RVC WebUI (Mainline - Original RVC). Certains forks prennent également en charge des architectures qui nécessitent leur propre runtime.
 2. **Vérifiez l'intégration.** Le moteur d'exécution doit fournir la représentation des fonctionnalités à laquelle le modèle a été entraîné. Un modèle formé avec un intégrateur personnalisé peut avoir besoin de cet intégrateur au moment de l'inférence. Une extension de fichier similaire ou une fréquence d'échantillonnage correspondante fournissent à elles seules peu de preuves de support.
 3. **Utilisez l'exportation d'inférence.** Un `.pth` prêt à l'emploi et un point de contrôle de formation peuvent avoir la même extension. Sélectionnez le fichier identifié par l'éditeur comme modèle d'inférence. Un ZIP est un conteneur pour les fichiers et n'est directement importable que lorsque l'application prend en charge l'importation ZIP.
 4. **Associez les données de récupération à leur point de contrôle.** Un `.index` construit pour une autre voix ou un autre intégrateur peut échouer ou dégrader le résultat. Conservez le modèle et son index ensemble et vérifiez que l'application a sélectionné la paire attendue. Si vous disposez uniquement d'un modèle compatible, utilisez le workflow de non-récupération pris en charge par votre client.

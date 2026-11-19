@@ -1,10 +1,11 @@
 ---
-label: "🧪 Train and export a model"
+label: "Train and export a model"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
 
-# Train and export a Mainline RVC model
+# Train and export a RVC WebUI (Mainline - Original RVC) model
 
 Start with a single speaker and a fresh experiment name. Training produces a model you can test on new performances in the [inference interface](inference.md). Keep raw audio and the experiment log so you can reproduce your result.
 
@@ -24,7 +25,7 @@ See [dataset preparation](../../model-training/dataset-preparation.md) for recor
 
 ## Configure the experiment and process audio
 
-1. Open **Train**. Use a fresh name such as `voice_a_v2_40k` so Mainline creates a separate folder under `logs/`.
+1. Open **Train**. Use a fresh name such as `voice_a_v2_40k` so RVC WebUI (Mainline - Original RVC) creates a separate folder under `logs/`.
 2. Choose a target sample rate and architecture version supported by your release. V2 is a reasonable starting point when you plan to use a compatible V2 inference client. Rate, architecture, and pitch guidance must agree with the generator and discriminator pretrains. Use pitch guidance for a normal pitch-guided voice model.
 3. Select a single-speaker dataset, where the build offers a choice. Use speaker ID `0` for the first run. Paste the complete dataset folder path, then click **Process Data** or the equivalent preprocessing button.
 4. Wait for preprocessing to finish. Review warnings in the output and check that the experiment has produced processed audio. If the run produces nothing, verify the path and test whether the included audio files decode. Fix this before starting extraction.

@@ -1,10 +1,11 @@
 ---
-label: "🎙️ Aufnahmen konvertieren"
+label: "Aufnahmen konvertieren"
+icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
 ---
 
-# Aufnahmen in Mainline RVC konvertieren
+# Aufnahmen in RVC WebUI (Mainline - Original RVC) konvertieren
 
 Beginnen Sie mit einer kurzen Aufnahme, die Sie in einem normalen Mediaplayer deutlich hören können, sowie einem exportierten RVC-Modell, zu dessen Verwendung Sie berechtigt sind. Das Model verändert die Stimme in der Aufnahme. Die Quelle liefert den Text, den Rhythmus und den Vortrag. Verwenden Sie für einen Song im ersten Durchgang eine separat aufgenommene oder isolierte Gesangsspur.
 
@@ -12,8 +13,8 @@ Beginnen Sie mit einer kurzen Aufnahme, die Sie in einem normalen Mediaplayer de
 
 | Was Sie erhalten haben. | Wo sie hingehört. |
 | --- | --- |
-| Eine ZIP-Datei oder 7z mit einem darin enthaltenen Modell. | Extrahieren Sie die Dateien, bevor Sie sie zu Mainline hinzufügen. |
-| Eine Inferenzdatei `.pth` | Kopieren Sie sie nach `assets/weights/` im Mainline-Ordner. Wenn Sie es selbst trainiert haben, verwenden Sie das exportierte kleine Modell. |
+| Eine ZIP-Datei oder 7z mit einem darin enthaltenen Modell. | Extrahieren Sie die Dateien, bevor Sie sie zu RVC WebUI (Mainline - Original RVC) hinzufügen. |
+| Eine Inferenzdatei `.pth` | Kopieren Sie sie nach `assets/weights/` im RVC WebUI (Mainline - Original RVC)-Ordner. Wenn Sie es selbst trainiert haben, verwenden Sie das exportierte kleine Modell. |
 | Ein ausgefülltes `.index` für genau dieses Modell | Kopieren Sie es in aktuellen Builds nach `assets/indices/`. Ältere Builds erkennen häufig Indizes unter `logs/`. Wenn die automatische Erkennung fehlschlägt, wählen Sie es aus oder geben Sie den vollständigen Pfad manuell ein. |
 | Ein `G_*.pth` oder `D_*.pth` Trainingskontrollpunkt | Behalten Sie das Experiment in `logs/` bei. Verwenden Sie den [Schulungsleitfaden](training.md), um ein Modell zur Inferenz zu identifizieren oder zu exportieren. |
 
@@ -34,7 +35,7 @@ Verwenden Sie `added_*.index`, wenn beim Training sowohl `trained_`- als auch `a
 | Tonhöhenverschiebung. | Transponiert die Quelle in Halbtönen. `+12` erhöht ihn um eine Oktave, `-12` senkt ihn um eine Oktave. Machen Sie zunächst kleine Bewegungen, wenn Wörter oder Noten angestrengt klingen. |
 | Tonhöhenextraktion | Schätzt die Tonhöhenkontur, die bei der tonhöhengesteuerten Konvertierung verwendet wird. Versuchen Sie eine andere Methode, wenn bei bestimmten Noten Stimmunterbrechungen auftreten. Vergleichen Sie denselben Clip und lassen Sie alles andere konstant. |
 | Indexrate | Mischt nahegelegene Funktionen der Zielstimme ein, wenn ein passender Index vorhanden ist. Erhöhen Sie den Wert schrittweise, wenn das Ergebnis zu viel von der ursprünglichen Klangfarbe beibehält. Machen Sie einen Schritt zurück, wenn die Diktion unklar wird. |
-| Schützen | Steuert, wie stark bei der Konvertierung stimmlose Details wie Atemzüge und Konsonanten erhalten bleiben. Niedrigere Werte verstärken den Schutz bei der üblichen Mainline-`0–0.5`-Steuerung. Versuchen Sie eine kleine Anpassung, nachdem der Indexabruf funktioniert hat. |
+| Schützen | Steuert, wie stark bei der Konvertierung stimmlose Details wie Atemzüge und Konsonanten erhalten bleiben. Niedrigere Werte verstärken den Schutz bei der üblichen RVC WebUI (Mainline - Original RVC)-`0–0.5`-Steuerung. Versuchen Sie eine kleine Anpassung, nachdem der Indexabruf funktioniert hat. |
 | Lautstärke-Hüllkurve | Ändert, wie genau das Ergebnis lauten und leisen Momenten in der Eingabe folgt. Näher an Null folgt die Quelle stärker. |
 | Sprecher-ID | Wählt eine Stimme innerhalb eines Kontrollpunkts mit mehreren Sprechern aus. Wählen Sie eine ID, die tatsächlich in diesem Modell vorhanden ist. |
 | Resample-Ausgabe | Legt die exportierte Audio-Abtastrate dort fest, wo der Build sie verfügbar macht. Behalten Sie beim ersten Test die Standardeinstellung des Modells bei. |

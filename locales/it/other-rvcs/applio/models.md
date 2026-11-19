@@ -1,5 +1,6 @@
 ---
-label: "📦 Installa e verifica una voce"
+label: "Installa e verifica una voce"
+icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
 ---

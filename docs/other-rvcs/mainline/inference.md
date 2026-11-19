@@ -1,10 +1,11 @@
 ---
-label: "🎙️ Convert recordings"
+label: "Convert recordings"
+icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
 ---
 
-# Convert recordings in Mainline RVC
+# Convert recordings in RVC WebUI (Mainline - Original RVC)
 
 Start with a short recording that you can hear clearly in a normal media player, plus an exported RVC model you have permission to use. The model changes the voice in the recording. The source provides the words, rhythm and delivery. For a song, use a separately recorded or isolated vocal track for the first pass.
 
@@ -12,8 +13,8 @@ Start with a short recording that you can hear clearly in a normal media player,
 
 | What you received | Where it goes |
 | --- | --- |
-| A ZIP or 7z with a model inside | Extract the files before adding them to Mainline. |
-| An inference `.pth` file | Copy it to `assets/weights/` inside the Mainline folder. If you trained it yourself, use the exported small model. |
+| A ZIP or 7z with a model inside | Extract the files before adding them to RVC WebUI (Mainline - Original RVC). |
+| An inference `.pth` file | Copy it to `assets/weights/` inside the RVC WebUI (Mainline - Original RVC) folder. If you trained it yourself, use the exported small model. |
 | A populated `.index` for that exact model | In current builds, copy it to `assets/indices/`. Older builds commonly discover indexes under `logs/`. If auto-detection fails, select it or enter its full path manually. |
 | A `G_*.pth` or `D_*.pth` training checkpoint | Keep it with the experiment in `logs/`. Use the [training guide](training.md) to identify or export a model for inference. |
 
@@ -34,7 +35,7 @@ Use `added_*.index` when training produced both `trained_` and `added_` files. T
 | Pitch shift | Transposes the source in semitones. `+12` raises it an octave, `-12` lowers it an octave. Make small moves first when words or notes sound strained. |
 | Pitch extraction | Estimates the pitch contour used in pitch-guided conversion. Try another method when voice breaks appear on certain notes. Compare the same clip and keep everything else constant. |
 | Index Rate | Mixes in nearby features from the target voice when a matching index exists. Increase it gradually if the result keeps too much of the source timbre. Back it down if diction gets muddy. |
-| Protect | Controls how much the conversion preserves unvoiced detail, such as breaths and consonants. Lower values strengthen protection in the usual Mainline `0–0.5` control. Try a small adjustment after index retrieval works. |
+| Protect | Controls how much the conversion preserves unvoiced detail, such as breaths and consonants. Lower values strengthen protection in the usual RVC WebUI (Mainline - Original RVC) `0–0.5` control. Try a small adjustment after index retrieval works. |
 | Volume envelope | Changes how closely the result follows loud and quiet moments in the input. Closer to zero follows the source more. |
 | Speaker ID | Selects a voice within a multi-speaker checkpoint. Choose an ID actually present in that model. |
 | Resample output | Sets the exported audio sample rate where the build exposes it. Leave it at the model default during your first test. |

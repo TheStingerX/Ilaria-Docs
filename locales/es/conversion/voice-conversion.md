@@ -5,6 +5,8 @@ permalink: /voice-conversion/
 ---
 # Convierte una grabación con Ilaria RVC
 
+[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 La conversión de voz comienza con una actuación. La salida generalmente sigue las palabras fuente, el tiempo, la articulación y el contorno del tono mientras cambia el sonido de la voz. Las decisiones sobre la entrega aún comienzan con la grabación original. Para una versión cantada, planea convertir una voz principal aislada y luego mezclar la voz convertida con la instrumental.
 
 ## Realice una conversión de referencia
@@ -47,11 +49,11 @@ Cuando la privacidad o una conexión poco confiable sean importantes, seleccione
 - Guarde su configuración junto con el resultado. Incluya el archivo fuente, las versiones del modelo y del índice, la identificación del altavoz, si corresponde, el incrustador, el extractor de tono, el cambio de tono, la relación de índice, el procesamiento y el formato de salida.
 - Cuando falta un modelo o falla la inferencia antes de producir audio, comience con [Solución de problemas](../reference/troubleshooting.md). Para la conversión de micrófono, consulte [Conversión de voz en tiempo real](real-time.md).
 
-## Convertir una grabación en Mainline RVC
+## Convertir una grabación en RVC WebUI (Mainline - Original RVC) {#convert-a-recording-in-mainline-rvc}
 
 ### Configurar la WebUI
 
-En Windows, utilice un paquete Mainline compatible con su hardware. Extraiga el archivo completo a un directorio local antes de ejecutar su iniciador. Los paquetes de Windows que incluyen `go-web.bat` lo utilizan para iniciar la WebUI local. Deje la consola abierta mientras realiza la conversión. Si el navegador no se abre automáticamente, utilice la dirección local impresa en la consola.
+En Windows, utilice un paquete RVC WebUI (Mainline - Original RVC) compatible con su hardware. Extraiga el archivo completo a un directorio local antes de ejecutar su iniciador. Los paquetes de Windows que incluyen `go-web.bat` lo utilizan para iniciar la WebUI local. Deje la consola abierta mientras realiza la conversión. Si el navegador no se abre automáticamente, utilice la dirección local impresa en la consola.
 
 ### Cargue el modelo y convierta
 

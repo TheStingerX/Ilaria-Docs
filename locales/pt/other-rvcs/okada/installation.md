@@ -1,9 +1,12 @@
 ---
-label: "📦 Instale o VCClient"
+label: "Instale o VCClient"
+icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/okada/installation/
 ---
 # Instale o w-okada VCClient
+
+[GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000)
 
 O VCClient converte o áudio do microfone ao vivo. A interface é o **cliente** e o processo de conversão é o **servidor**. Para seu primeiro teste, execute ambos no mesmo computador. A versão do cliente (v1 ou v2) e a versão do modelo (RVC V1 ou V2) identificam coisas diferentes. Verifique o suporte do modelo do pacote antes de escolher um arquivo.
 

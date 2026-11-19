@@ -5,6 +5,8 @@ permalink: /dataset-preparation/
 ---
 # Bereiten Sie einen Sprachdatensatz vor
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Jeder Clip bringt dem Modell etwas über seine Zielstimme bei. Entscheiden Sie vor dem Training, welche Teile dieser Stimme das Modell bearbeiten soll, und machen Sie dann Aufnahmen, die diese Teile deutlich zeigen. Beginnen Sie mit dem Material, zu dessen Verwendung Sie für Schulungen berechtigt sind, und bewahren Sie eine separate Kopie der Originaldateien auf.
 
 ## Wählen Sie Aufnahmen für Ihr Ziel aus.

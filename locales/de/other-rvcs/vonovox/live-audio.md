@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Routen und stimmen Sie Vonovox ab"
+label: "Routen und stimmen Sie Vonovox ab"
+icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
 ---

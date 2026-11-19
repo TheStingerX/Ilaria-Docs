@@ -5,6 +5,8 @@ permalink: /audio-quality/
 ---
 # Ajustez la hauteur et la qualité audio
 
+[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Choisissez un court extrait qui contient le problème. Effectuez une conversion de référence et comparez-la avec un paramètre modifié à la fois. Écoutez à des niveaux similaires afin qu'un résultat plus fort ne remporte pas la comparaison uniquement en termes de volume. Pour la musique, comparez d'abord la voix convertie seule, puis dans le mix.
 
 ## Hauteur, plage et résonance

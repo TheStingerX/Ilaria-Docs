@@ -1,9 +1,12 @@
 ---
-label: "💿 Instale o Applio"
+label: "Instale o Applio"
+icon: ":cd:"
 order: 97
 permalink: /ilaria-rvc/applio/installation/
 ---
 # Instale o Applio e verifique o mecanismo
+
+[GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
 O Applio possui duas interfaces. **Desktop** abre uma janela de aplicativo instalado e gerencia um ambiente de mecanismo na primeira inicialização. **Gradio** abre uma página da Web local e precisa do processo de inicialização para continuar funcionando. Essas etapas abrangem o Desktop e o pacote compilado do Windows Gradio. Escolha a interface mostrada nas instruções que deseja seguir.
 

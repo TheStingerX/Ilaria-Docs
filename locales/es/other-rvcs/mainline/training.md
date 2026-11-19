@@ -1,5 +1,6 @@
 ---
-label: "🧪 Entrene y exporte un modelo"
+label: "Entrene y exporte un modelo"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
@@ -24,7 +25,7 @@ Consulte [preparación del conjunto de datos](../../model-training/dataset-prepa
 
 ## Configure el experimento y procese el audio
 
-1. Abra **Train**. Utilice un nombre nuevo como `voice_a_v2_40k` para que Mainline cree una carpeta separada en `logs/`.
+1. Abra **Train**. Utilice un nombre nuevo como `voice_a_v2_40k` para que RVC WebUI (Mainline - Original RVC) cree una carpeta separada en `logs/`.
 2. Elija una frecuencia de muestreo objetivo y una versión de arquitectura compatible con su versión. V2 es un punto de partida razonable cuando planea utilizar un cliente de inferencia V2 compatible. La guía de velocidad, arquitectura y tono debe coincidir con los preentrenamientos del generador y del discriminador. Utilice la guía de tono para un modelo de voz normal guiado por tono.
 3. Seleccione un conjunto de datos de un solo hablante, donde la compilación ofrezca una opción. Utilice el ID de altavoz `0` para la primera ejecución. Pegue la ruta completa de la carpeta del conjunto de datos y luego haga clic en **Procesar datos** o el botón de preprocesamiento equivalente.
 4. Espere a que finalice el preprocesamiento. Revise las advertencias en el resultado y verifique que el experimento haya producido audio procesado. Si la ejecución no produce nada, verifique la ruta y pruebe si los archivos de audio incluidos se decodifican. Solucione esto antes de comenzar la extracción.

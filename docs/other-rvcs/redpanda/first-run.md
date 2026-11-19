@@ -1,9 +1,12 @@
 ---
-label: "💿 Set up Redpanda-vc"
+label: "Set up Redpanda-vc"
+icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/redpanda/first-run/
 ---
 # Set up Redpanda-vc
+
+[GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Redpanda-vc extends Applio and offers multiple voice model families. This walkthrough uses the **RVC** family throughout. Pick one installation and keep its dependencies separate from other RVC programs.
 

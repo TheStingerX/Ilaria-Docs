@@ -1,12 +1,15 @@
 ---
-label: "🧰 Installieren und öffnen Sie"
+label: "Installieren und öffnen Sie"
+icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
 ---
 
-# Mainline RVC installieren
+# RVC WebUI (Mainline - Original RVC) installieren
 
-Mainline ist die Upstream-Retrieval-basierte Sprachkonvertierungs-WebUI. Nutzen Sie die Browseroberfläche für die Dateikonvertierung und Schulung. Verwenden Sie für die Mikrofonkonvertierung die separate Desktop-Oberfläche, die im [Echtzeit-Guide](realtime.md)] beschrieben ist.
+[GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI)
+
+RVC WebUI (Mainline - Original RVC) ist die Upstream-Retrieval-basierte Sprachkonvertierungs-WebUI. Nutzen Sie die Browseroberfläche für die Dateikonvertierung und Schulung. Verwenden Sie für die Mikrofonkonvertierung die separate Desktop-Oberfläche, die im [Echtzeit-Guide](realtime.md)] beschrieben ist.
 
 ## Wählen Sie eine Installationsroute
 
@@ -19,14 +22,16 @@ Mainline ist die Upstream-Retrieval-basierte Sprachkonvertierungs-WebUI. Nutzen 
 
 ### Windows-Archiv
 
-1. Öffnen Sie die [Mainline Windows-Paket- und Asset-Downloads](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) und wählen Sie das Archiv aus, das zu Ihrer GPU passt. Suchen Sie für die aktuelle Paketfamilie nach der Variante `20260718` NVIDIA, NVIDIA 50-Serie oder AMD/Intel. Wenn Sie bereits über eine ältere Version verfügen, die funktioniert, belassen Sie diese in einem eigenen Verzeichnis.
+1. Öffnen Sie die [RVC WebUI (Mainline - Original RVC) Windows-Paket- und Asset-Downloads](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) und wählen Sie das Archiv aus, das zu Ihrer GPU passt. Suchen Sie für die aktuelle Paketfamilie nach der Variante `20260718` NVIDIA, NVIDIA 50-Serie oder AMD/Intel. Wenn Sie bereits über eine ältere Version verfügen, die funktioniert, belassen Sie diese in einem eigenen Verzeichnis.
 2. Extrahieren Sie das gesamte Archiv in einen beschreibbaren lokalen Ordner wie `C:\RVC\Mainline`. Lassen Sie Platz für den Download und die extrahierten Dateien. Öffnen Sie im Datei-Explorer den resultierenden Ordner und suchen Sie nach dem Launcher `assets` und der Python-Laufzeitumgebung. Wenn Sie ein weiteres umschließendes Verzeichnis sehen, öffnen Sie es.
 3. Führen Sie `go-webui.bat` aus, falls vorhanden. Ältere Archive nennen es möglicherweise `go-web.bat`. Lassen Sie das Befehlsfenster geöffnet und warten Sie auf die lokale Adresse. Wenn der Browser nicht startet, öffnen Sie die im Terminal angezeigte Adresse. Ein üblicher Standardwert ist `http://127.0.0.1:7865`.
 4. Bestätigen Sie, dass die Seite geöffnet wird und das Terminal weiterhin ausgeführt wird. Behalten Sie das Archiv bei, bis die [erste Konvertierung](inference.md) erfolgreich ist.
 
 ### Aktueller Quellzweig
 
-Laden Sie die [Mainline-Quell-ZIP](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip)] herunter und extrahieren Sie sie. Öffnen Sie ein Terminal im Verzeichnis, das `webui.py` und die Anforderungsdateien enthält. Die folgende Quellkonfiguration gilt für den Python 3.12-Zweig. Führen Sie jedes Snippet aus diesem Verzeichnis mit einem 64-Bit-Python 3.12-Interpreter aus.
+> **Empfohlen unter Windows:** Lade das [einsatzbereite Windows-Archiv](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) für deine GPU herunter. Die Installation aus dem Quellcode wird den meisten Benutzern nicht empfohlen, da Python und seine Abhängigkeiten manuell eingerichtet werden müssen.
+
+Laden Sie die [RVC WebUI (Mainline - Original RVC)-Quell-ZIP](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip)] herunter und extrahieren Sie sie. Öffnen Sie ein Terminal im Verzeichnis, das `webui.py` und die Anforderungsdateien enthält. Die folgende Quellkonfiguration gilt für den Python 3.12-Zweig. Führen Sie jedes Snippet aus diesem Verzeichnis mit einem 64-Bit-Python 3.12-Interpreter aus.
 
 **Windows PowerShell**
 

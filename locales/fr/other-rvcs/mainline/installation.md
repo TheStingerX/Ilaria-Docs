@@ -1,12 +1,15 @@
 ---
-label: "🧰 Installez et ouvrez"
+label: "Installez et ouvrez"
+icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
 ---
 
-# Installer Mainline RVC
+# Installer RVC WebUI (Mainline - Original RVC)
 
-Mainline est l'interface utilisateur Web de conversion vocale basée sur la récupération en amont. Utilisez son interface de navigateur pour la conversion de fichiers et la formation. Pour la conversion du microphone, utilisez l'interface de bureau distincte décrite dans le [guide en temps réel](realtime.md).
+[GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI)
+
+RVC WebUI (Mainline - Original RVC) est l'interface utilisateur Web de conversion vocale basée sur la récupération en amont. Utilisez son interface de navigateur pour la conversion de fichiers et la formation. Pour la conversion du microphone, utilisez l'interface de bureau distincte décrite dans le [guide en temps réel](realtime.md).
 
 ## Choisissez une voie d'installation
 
@@ -25,6 +28,8 @@ Mainline est l'interface utilisateur Web de conversion vocale basée sur la réc
 4. Confirmez que la page s'ouvre et que le terminal reste en cours d'exécution. Conservez l'archive intacte jusqu'à ce que la [première conversion](inference.md) réussisse.
 
 ### Branche source actuelle
+
+> **Recommandé sous Windows :** téléchargez [l’archive Windows prête à l’emploi](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) adaptée à votre GPU. L’installation à partir du code source est déconseillée à la plupart des utilisateurs, car elle exige de configurer Python et ses dépendances manuellement.
 
 Téléchargez et extrayez le [ZIP source principal](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip). Ouvrez un terminal dans le répertoire contenant `webui.py` et les fichiers d'exigences. La configuration source ci-dessous s'applique à la branche Python 3.12. Exécutez chaque extrait de ce répertoire à l'aide d'un interpréteur Python 3.12 64 bits.
 

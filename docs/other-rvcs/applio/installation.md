@@ -1,9 +1,12 @@
 ---
-label: "💿 Install Applio"
+label: "Install Applio"
+icon: ":cd:"
 order: 97
 permalink: /ilaria-rvc/applio/installation/
 ---
 # Install Applio and check the engine
+
+[GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
 Applio has two interfaces. **Desktop** opens an installed application window and manages an engine environment on first launch. **Gradio** opens a local web page and needs its launch process to stay running. These steps cover Desktop and the compiled Windows Gradio package. Pick the interface shown in the instructions you want to follow.
 

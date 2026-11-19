@@ -114,3 +114,16 @@
 @media (max-width: 560px) {
   .docs-language-name { display: none; }
 }
+
+#retype-content :is(h2, h3)[id] { scroll-margin-top: 6rem; }
+
+/* Keep wrapped sidebar labels aligned with their first line. */
+#retype-sidebar-left :is(a, button).flex-1 > span.py-1\.5 {
+  min-width: 0;
+  text-align: start;
+}
+
+#retype-sidebar-left :is(a, button).flex-1 > span.shrink-0 {
+  align-self: flex-start;
+  margin-block-start: .25rem;
+}

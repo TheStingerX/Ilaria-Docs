@@ -1,5 +1,6 @@
 ---
-label: "🎧 Modelo, micrófono y cable"
+label: "Modelo, micrófono y cable"
+icon: ":headphones:"
 order: 90
 permalink: /ilaria-rvc/tgr/live-audio/
 ---

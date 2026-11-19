@@ -1,0 +1,49 @@
+---
+label: "Cronologia delle versioni e differenze di rilascio"
+icon: ":clock3:"
+order: 83
+permalink: /ilaria-rvc/version-history/
+---
+# Cronologia delle versioni e differenze di rilascio
+
+[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
+## Quale versione descrive questa documentazione?
+
+L’ultima versione per Windows è **2.4.1**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
+
+## Tutte le versioni
+
+ | Versione | In evidenza |
+| --- | --- |
+| 2.4.1 | Aggiunge la sintesi vocale locale opzionale Kokoro v1.0 con 54 voci, tra cui Sara e Nicola in italiano. Chiarisce i requisiti dei motori TTS, corregge il percorso predefinito dei pesi RMVPE e nasconde i messaggi INFO più prolissi di HuBERT mantenendo avvisi ed errori. Installa e avvia prima la 2.4.0. Apri **Altro → Aggiorna Ilaria RVC** e installa la **2.4.1** quando compare. |
+| 2.4.0 | Il pacchetto Windows sposta l’app e il runtime in app/ e i modelli vocali nella cartella models/ alla radice. Arrivano i notebook Colab e Lightning AI Studio, le indicazioni per scaricare gli embedder opzionali nel training e la coppia Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Il runtime include pywin32 e corregge pip. |
+| 2.3.0 | RMVPE High Register aggiunge modalità di rilevamento dell’intonazione, limiti di frequenza e un grafico F0 di confronto per le note alte nel canto. ElevenLabs è disponibile tra i motori TTS. Inserisci la tua chiave API ElevenLabs e scegli una voce. Prova una frase breve prima di convertire l’audio generato. MRF HiFi-GAN è disponibile per training e inferenza. Il catalogo aggiunge 15 coppie di generatore e discriminatore, tra cui KLM 4.4 X1 e X2 a 40 kHz. Scegli una coppia adatta al vocoder e alla frequenza di campionamento. Portuguese HuBERT Base è un embedder opzionale per l’inferenza. Nel training RVC v2 puoi caricare e salvare un HuBERT personalizzato. L’app lo seleziona e ne riporta la configurazione nel modello esportato. |
+| 2.2.2.1 | Aggiornamento intermedio che prepara la build aggiornata della 2.2.2 alla 2.3.0. |
+| 2.2.2 | Attiva il caricamento con restrizioni di PyTorch per modelli vocali, strumenti per i modelli, esportazione ONNX e pesi di addestramento. Lo ZIP Windows aggiornato include Python 3.10 e PyTorch 2.10.0 con CUDA 12.8. Le GPU NVIDIA meno recenti usano il runtime CUDA 12.6 scaricabile. La release corregge la decodifica con PyAV e l’esportazione WAV e mostra l’avanzamento della scrittura dei segmenti durante il preprocessing. Il notebook Kaggle della 2.2.2 installa PyTorch e TorchAudio 2.10.0 con CUDA 12.8. |
+| 2.2.1 | Il player con forma d’onda ora ha un cursore del volume per gli audio in ingresso, i risultati e le anteprime. Usalo per ascoltare a volume più basso o confrontare clip a livelli simili. Il cursore regola solo l’ascolto. Per cambiare il livello del file convertito, regola Gain in Post-Process e ripeti la conversione. |
+| 2.2.0 | Aggiunge il supporto su Windows per inferenza e addestramento con NVIDIA GeForce RTX serie 50 (Blackwell), usando PyTorch 2.7.1 e CUDA 12.8. Al primo avvio il launcher rileva Blackwell, prepara il runtime (servono Internet e spazio libero) e verifica le operazioni CUDA forward e backward. Le altre GPU conservano il runtime esistente. Aggiornati anche il caricamento di ContentVec, la ripresa dai checkpoint e la gestione STFT. |
+| 2.1.2 | Uniformate le tre etichette in alto: **Ilaria’s Ko-Fi Shop**, **Ilaria’s RVC Website** e **Ilaria’s Docs**. |
+| 2.1.1 | Aggiunto il pulsante con il cuore per Ilaria Docs accanto al link al sito. |
+| 2.1.0 | Aggiunto il pulsante del sito Web, metriche del dashboard in tempo reale per l'esecuzione attiva e un migliore comportamento di avvio e aggiornamento in TensorBoard incorporato. |
+ | 2.0.0 | Introdotta la dashboard di formazione, TensorBoard incorporato, report diagnostici e anteprime di Dataset Checker di 12 secondi. Gli incorporamenti opzionali sono diventati download individuali. |
+ | 1.9.3 | Introdotta l'elaborazione audio avanzata, cinque formati di esportazione di inferenza, embedder configurabili e installazione HuBERT personalizzata. |
+ | 1.9.2 | Aggiunti collegamenti pubblici di Google Drive e MEGA al downloader del modello vocale. |
+ | 1.9.1 | Aggiunti controlli della frequenza di campionamento quando si riutilizza il nome di un esperimento, evitando un arresto anomalo dell'addestramento su configurazioni incompatibili. |
+ | 1.9.0 | Aggiunto FCPE, importazioni di modelli in streaming con annullamento, una scheda Altro riorganizzata e note di rilascio offline espandibili. |
+ | 1.8.1 | Aggiornati i suoni di completamento e test mantenendo il suono di errore di Windows. |
+ | 1.8.0 | Introdotto il launcher della console nascosta, il controllo del riavvio dell'interfaccia utente, l'analizzatore audio e un layout di cartelle condivise per i modelli e i relativi indici. |
+ | 1.7.2 | Corretta la conversione senza indice e nominati file di output singoli e batch in base alla voce selezionata. |
+ | 1.7.1 | Eliminato un traceback specifico di chiusura della connessione di Windows preservando altri messaggi di errore. |
+ | 1.7.0 | Aggiunti Edge e Windows TTS offline, lettori di forme d'onda e preparazione dello sfondo per l'estrazione del tono e modelli predefiniti supportati. |
+ | 1.6.0 | Aggiunta la coda di allenamento persistente, obiettivi di passi esatti, opzioni RefineGAN e Spin-v2, download preallenati accoppiati, più estrattori di tonalità ed esportazione ZIP. |
+ | 1.5.2 | Migliorata la diagnostica dei lanci duplicati e verificata la disponibilità del set di dati prima di ogni fase di training. |
+ | 1.5.1 | Preelaborazione bloccata mentre era attiva l'importazione di un set di dati o il percorso del set di dati era inutilizzabile. Aggiunto il pannello della cronologia delle modifiche offline. |
+ | 1.5.0 | Introdotti l'importazione e la gestione dei set di dati tramite trascinamento, l'advisor di formazione del PC e avvisi opzionali di completamento ed errore. |
+ | 1.4.0 | Aggiunte anteprime della formazione, Interrompi e salva ripristinabili e Dataset Checker. |
+ | 1.3.0 | Convalidato il percorso di aggiornamento dalla 1.2, mostrato la versione installata nella console e preparato un pacchetto Windows più piccolo. |
+ | 1.2.0 | Aggiunto l'aggiornamento integrato con verifica e ripristino, selezione della formazione FP32/FP16 e informazioni sul modello. |
+ | 1.1 Beta | Introdotta l'interfaccia a tema, il flusso di lavoro di formazione numerato, la conversione drag-and-drop, la corrispondenza automatica degli indici, le importazioni e l'unione dei modelli e il glossario dell'app. |
+
+
+Se un pulsante o un backend differisce nella tua build, confronta le note di rilascio prima di presumere che l'installazione non sia riuscita.

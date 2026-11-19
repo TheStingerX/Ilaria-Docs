@@ -4,19 +4,62 @@ order: 100
 ---
 # Documentazione di Ilaria RVC
 
-Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. [Ilaria RVC on Kaggle](ilaria-rvc/kaggle.md)
+<div class="docs-welcome" data-author-note="ilaria">
+
+**Una nota da Ilaria, prima di iniziare**
+
+Ciao, sono Ilaria. Ho scritto queste guide per condividere quello che ho imparato su RVC sviluppando Ilaria RVC, addestrando modelli vocali e provando altri programmi. Le spiegazioni e i consigli partono dalla mia esperienza e da quello che so al momento della scrittura. Posso interpretare male un’impostazione, trascurare un caso particolare o descrivere un passaggio che cambia in una versione successiva. Se trovi qualcosa di impreciso, può dipendere sia da un mio errore sia da un aggiornamento che ha reso la guida meno attuale.
+
+Anche seguendo gli stessi passaggi, potresti ottenere un risultato diverso sul tuo computer. Per esempio, un aggiornamento può spostare un pulsante, una funzione può dipendere dalla scheda video o dai driver e un’impostazione che funziona bene con una voce può peggiorarne un’altra. Considera i valori che suggerisco come punti di partenza. Provali su una clip breve, cambia un’impostazione alla volta e confronta il risultato prima di applicarli a tutto il progetto. Se devi sostituire dei file o aggiornare un’installazione che funziona, tieni una copia da cui ripartire.
+
+Se un passaggio non corrisponde a quello che vedi, controlla prima il nome del programma, la versione e l’eventuale messaggio di errore. Poi confronta le note di rilascio o le istruzioni per quella versione. Se vuoi segnalarmi un errore, indicami la pagina, il passaggio, la versione dell’app e cosa è successo. Con questi dettagli posso ripetere la prova e correggere la guida.
+
+<div style="border-left:4px solid #FFC0CB;padding:.75rem 1rem;margin:1rem 0;background:#ffc0cb12;border-radius:.3rem">
+
+Per problemi, suggerimenti o aggiornamenti, scrivimi su Discord.
+
+[**Discord · thestingerx**](https://discord.com/users/740255187234717838)
+
+</div>
+
+&#45; Ilaria
+
+</div>
+
+Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. [Ilaria RVC on Kaggle](ilaria-rvc/cloud/kaggle.md)
 
 <div class="docs-welcome">
 
 Ilaria RVC è un'applicazione Windows per la conversione di registrazioni e l'addestramento di modelli vocali. La sua interfaccia si apre in un browser e il motore di conversione viene eseguito sul tuo computer. Il pacchetto Windows è creato per le GPU NVIDIA.
 
-[Scarica per Windows](https://huggingface.co/TheStinger/Ilaria_RVC) · [Sfoglia demo vocali](https://ilariarvc.shop/en/demos/) · [Leggi il changelog](ilaria-rvc/version-history.md)
+[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Sfoglia demo vocali](https://ilariarvc.shop/en/demos/) · [Leggi il changelog](ilaria-rvc/install/version-history.md)
 
 </div>
 
+## Inizia con la configurazione
+
+### Windows con una GPU NVIDIA
+
+Controlla il tuo modello esatto in [Compatibilità GPU](ilaria-rvc/install/gpu-compatibility.md), quindi segui [Installazione e aggiornamenti](ilaria-rvc/install/installation.md). Quando l'app si apre, utilizza un WAV breve e pulito e un modello di inferenza in [Single Inference](ilaria-rvc/convert/inference.md). L'indice corrispondente è facoltativo. Salva il primo output in modo da avere un riferimento prima di modificare gli effetti o l'intonazione.
+
+### Un computer senza una GPU adatta
+
+Usa la [procedura dettagliata di Kaggle](ilaria-rvc/cloud/kaggle.md) per eseguire Ilaria RVC su una GPU remota. Riguarda l'avvio del notebook, l'accesso all'interfaccia, l'esecuzione di un test e il download dei risultati prima del termine della sessione.
+
+## Scegli il flusso di lavoro giusto
+
+- **Ho una registrazione e voglio una voce diversa.** Usa [Controlli di inferenza](ilaria-rvc/convert/inference-buttons.md) per scegliere un modello, convertire il file e trovare l'audio esportato.
+- **Ho del testo e desidero l'audio parlato.** Inizia con [Sintesi vocale](ilaria-rvc/convert/speech.md). Ascolta la voce di partenza prima di applicare un modello RVC in modo da poter correggere la pronuncia in anticipo.
+- **Voglio creare il mio modello vocale.** Prepara le registrazioni che sei autorizzato a utilizzare, tieni da parte una breve clip per testarla, quindi segui [Addestramento passo dopo passo](ilaria-rvc/train/training-workflow.md). Utilizza il [Riferimento controlli allenamento](ilaria-rvc/train/training-buttons.md) quando hai bisogno di comprendere un'impostazione.
+- **Voglio utilizzare un microfono convertito in una chiamata o in un gioco.** Scegli un'app in [Altri RVC](other-rvcs/app-guides.md), quindi segui [routing audio live](conversion/real-time.md) per testare il microfono, il convertitore e la destinazione in quest'ordine.
+
+## Quando qualcosa va storto
+
+Se l'app non si avvia, mantieni il log aperto e cerca il primo errore. Se l'app si avvia ma l'audio non sembra corretto, confronta lo stesso breve clip con l'elaborazione opzionale disattivata. La [guida alla risoluzione dei problemi](reference/troubleshooting.md) raggruppa le correzioni in base al sintomo. Il [glossario](reference/glossary.md) spiega termini come checkpoint, embedder e indice e [Altri controlli](ilaria-rvc/manage/other-buttons.md) mostra come ispezionare, importare ed esportare modelli.
+
  | Voglio… | Inizia da qui |
 | --- | --- |
- | Esplora l'app Ilaria RVC nel dettaglio | [Panoramica app](ilaria-rvc/overview.md), [installazione](ilaria-rvc/installation.md), [inferenza](ilaria-rvc/inference.md) e [procedura di addestramento](ilaria-rvc/training-workflow.md) |
+ | Esplora l'app Ilaria RVC nel dettaglio | [Panoramica app](ilaria-rvc/overview.md), [installazione](ilaria-rvc/install/installation.md), [inferenza](ilaria-rvc/convert/inference.md) e [procedura di addestramento](ilaria-rvc/train/training-workflow.md) |
  | Installa l'app e converti la mia prima clip | [Iniziare](start/getting-started.md) |
  | Comprendere come funziona RVC | [Fondamenti di RVC](start/rvc-fundamentals.md) e [modelli e file](start/models.md) |
  | Converti audio, confronta impostazioni o elabora una cartella | [Conversione vocale](conversion/voice-conversion.md) e [qualità audio](conversion/audio-quality.md) |

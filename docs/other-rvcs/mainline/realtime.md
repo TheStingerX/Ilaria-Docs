@@ -1,14 +1,15 @@
 ---
-label: "🎧 Real-time microphone setup"
+label: "Real-time microphone setup"
+icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
 ---
 
-# Use the Mainline real-time voice changer
+# Use the RVC WebUI (Mainline - Original RVC) real-time voice changer
 
 > Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with **VAC Lite** for Vonovox, or use **VB-CABLE** as an alternative. Read the full routing guide before testing in a call. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
 
-This guide applies to the separate real-time GUI included in supported Mainline builds. It can run a microphone through a model continuously while the WebUI is used for recordings and training. Start by listening directly through headphones, then send the processed audio to your other app.
+This guide applies to the separate real-time GUI included in supported RVC WebUI (Mainline - Original RVC) builds. It can run a microphone through a model continuously while the WebUI is used for recordings and training. Start by listening directly through headphones, then send the processed audio to your other app.
 
 ## Open the interface and select your files
 
@@ -24,17 +25,17 @@ This guide applies to the separate real-time GUI included in supported Mainline 
 3. If the stream starts but clips words, check the device selection and input level. If there are repeated gaps, return to the default processing block length. A clean, slightly delayed voice is a better baseline than a low-latency signal that keeps breaking up.
 4. Stop the stream before changing audio devices or loading a different checkpoint. Restart and repeat the same listening test.
 
-## Route Mainline into a call or recorder
+## Route RVC WebUI (Mainline - Original RVC) into a call or recorder
 
-Set up a virtual cable or other pair of connected playback and recording devices. The playback end receives sound from Mainline. The recording end supplies that sound to your call or recorder.
+Set up a virtual cable or other pair of connected playback and recording devices. The playback end receives sound from RVC WebUI (Mainline - Original RVC). The recording end supplies that sound to your call or recorder.
 
 ```text
-Physical microphone → Mainline GUI → Virtual cable playback input
+Physical microphone → RVC WebUI (Mainline - Original RVC) GUI → Virtual cable playback input
                                            ↓
                        Call or recording app ← Virtual cable recording output
 ```
 
-1. Stop conversion and set the Mainline output device to the cable's playback end. Leave the physical microphone selected as Mainline's input.
+1. Stop conversion and set the RVC WebUI (Mainline - Original RVC) output device to the cable's playback end. Leave the physical microphone selected as RVC WebUI (Mainline - Original RVC)'s input.
 2. In the destination app, choose the cable's recording end as its microphone. Select your headphones for that app's playback so sound from the call does not travel back through the cable.
 3. Start conversion and make a private recording or use the app's microphone test. Confirm that it captures the converted voice once. If you also need local monitoring, use the destination app's monitoring where available and keep it separate from the cable input.
 4. If the destination app cuts quiet syllables, compare a short sample with automatic noise processing off for diagnosis. Restore any processing that improves the result without losing words.

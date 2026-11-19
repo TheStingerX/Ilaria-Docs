@@ -5,6 +5,8 @@ permalink: /glossary/
 ---
 # Glossar
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
  | Begriff | Bedeutung |
 | --- | --- |
  | Inferenz | Verwendung eines trainierten Modells zum Konvertieren einer Aufnahme. |

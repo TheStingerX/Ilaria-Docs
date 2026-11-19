@@ -1,9 +1,12 @@
 ---
-label: "💿 Instale Vonovox"
+label: "Instale Vonovox"
+icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/vonovox/installation/
 ---
 # Instale Vonovox
+
+[GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox)
 
 Vonovox é um conversor de voz ao vivo do Windows para GPUs NVIDIA compatíveis. Use este guia para fazer um teste de microfone local limpo antes de abrir o Discord, OBS ou um jogo.
 

@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Instrada e sintonizza Vonovox"
+label: "Instrada e sintonizza Vonovox"
+icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
 ---

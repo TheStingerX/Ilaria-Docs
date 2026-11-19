@@ -5,6 +5,8 @@ permalink: /glossary/
 ---
 # Glossary
 
+[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 | Term | Meaning |
 | --- | --- |
 | Inference | Using a trained model to convert a recording. |

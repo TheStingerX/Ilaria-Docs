@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Solução de problemas de RVC
 
+[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 É a tua primeira vez com RVC? **Começa com um WAV de 10 segundos e um único modelo.** Se a aplicação falhar, procura o primeiro erro no registo. Se funcionar mas a voz soar mal, ouve o mesmo excerto e altera uma definição de cada vez. Um checkpoint guarda o modelo ou o estado do treino.
 !!!
@@ -36,7 +38,7 @@ Um diagnóstico útil começa no primeiro estágio que falha. Mantenha a versão
 
 ### A janela sai ou a configuração nunca é concluída
 
-- **Ilaria RVC:** Extraia o pacote completo, abra sua pasta e execute `ILARIA_RVC_LOGS.bat`. Procure acima da última mensagem de desligamento a primeira exceção útil. Verifique se o Windows detecta a GPU NVIDIA compatível e se o ambiente e os ativos incluídos ainda estão presentes.
+- **Ilaria RVC:** Extraia o pacote completo, abra sua pasta e execute `RUN_ILARIA_RVC_LOGS.bat`. Procure acima da última mensagem de desligamento a primeira exceção útil. Verifique se o Windows detecta a GPU NVIDIA compatível e se o ambiente e os ativos incluídos ainda estão presentes.
 - **Applio Desktop:** abra Configuração e inspecione o status do mecanismo. Repare a instalação por meio dos controles de configuração do Desktop quando uma verificação de tempo de execução ou pacote falhar. Para Gradio, execute o launcher a partir do checkout pretendido e verifique qual intérprete está ativo.
 - **Linha principal:** Combine o inicializador e o tempo de execução com o arquivo específico ou check-out de origem. Um arquivo mais antigo pode conter uma compilação CUDA que não pode executar kernels para uma GPU mais recente. Instalar globalmente um pacote Python não relacionado não reparará um interpretador incluído.
 - **Erro de DLL do Windows:** Para `llvmlite.dll` ou uma dependência ausente do Visual C++, verifique se a arquitetura do tempo de execução corresponde ao aplicativo e instale ou repare o Microsoft Visual C++ Redistributable oficial para essa arquitetura. Se a própria DLL estiver ausente, restaure-a por meio do pacote ou instalador original.

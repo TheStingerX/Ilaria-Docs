@@ -1,10 +1,11 @@
 ---
-label: "🎙️ Converti registrazioni"
+label: "Converti registrazioni"
+icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
 ---
 
-# Converti registrazioni in Mainline RVC
+# Converti registrazioni in RVC WebUI (Mainline - Original RVC)
 
 Inizia con una breve registrazione che puoi ascoltare chiaramente in un normale lettore multimediale, oltre a un modello RVC esportato che sei autorizzato a utilizzare. Il modello cambia la voce nella registrazione. La registrazione originale fornisce parole, ritmo e interpretazione. Per una canzone, utilizza una traccia vocale isolata o registrata separatamente per il primo passaggio.
 
@@ -12,8 +13,8 @@ Inizia con una breve registrazione che puoi ascoltare chiaramente in un normale 
 
 | Cosa hai ricevuto | Dove va |
 | --- | --- |
-| Uno ZIP o 7z con un modello all'interno | Estrai i file prima di aggiungerli a Mainline. |
-| Un file `.pth` di inferenza | Copialo in `assets/weights/` all'interno della cartella Mainline. Se l'hai addestrato tu stesso, usa il modello compatto esportato. |
+| Uno ZIP o 7z con un modello all'interno | Estrai i file prima di aggiungerli a RVC WebUI (Mainline - Original RVC). |
+| Un file `.pth` di inferenza | Copialo in `assets/weights/` all'interno della cartella RVC WebUI (Mainline - Original RVC). Se l'hai addestrato tu stesso, usa il modello compatto esportato. |
 | Un `.index` popolato per quel modello esatto | Nelle build attuali, copialo in `assets/indices/`. Le versioni precedenti di solito cercano gli indici in `logs/`. Se il rilevamento automatico fallisce, selezionalo o inserisci manualmente il percorso completo. |
 | Un checkpoint di addestramento `G_*.pth` o `D_*.pth` | Conservalo con l'esperimento in `logs/`. Utilizza la [guida all'addestramento](training.md) per identificare o esportare un modello per l'inferenza. |
 
@@ -34,7 +35,7 @@ Usa `added_*.index` quando l'addestramento ha prodotto sia file `trained_` che `
 | Pitch Shift | Traspone la sorgente in semitoni. `+12` lo alza di un'ottava, `-12` lo abbassa di un'ottava. Fai prima piccoli movimenti quando le parole o le note sembrano forzate. |
 | Pitch extraction | Stima il contorno dell'intonazione utilizzato nella conversione guidata dall'intonazione. Prova un altro metodo quando su alcune note compaiono interruzioni di voce. Confronta la stessa clip e mantieni tutto il resto costante. |
 | Index Rate | Mescola le caratteristiche vicine della voce di destinazione quando esiste un indice corrispondente. Aumentalo gradualmente se il risultato mantiene troppo il timbro sorgente. Riducilo se la dizione diventa confusa. |
-| Protect | Controlla quanto la conversione preserva i suoni non sonori, come i respiri e le consonanti. Valori più bassi rafforzano la protezione nel consueto controllo Mainline `0–0.5`. Prova una piccola regolazione dopo aver verificato che l'indice funzioni. |
+| Protect | Controlla quanto la conversione preserva i suoni non sonori, come i respiri e le consonanti. Valori più bassi rafforzano la protezione nel consueto controllo RVC WebUI (Mainline - Original RVC) `0–0.5`. Prova una piccola regolazione dopo aver verificato che l'indice funzioni. |
 | Volume envelope | Modifica la precisione con cui il risultato segue i momenti forti e quelli silenziosi nell'input. I valori vicini a zero seguono più fedelmente il volume della registrazione originale. |
 | Speaker ID | Seleziona una voce all'interno di un modello con più voci. Scegli un ID effettivamente presente in quel modello. |
 | Resample output | Imposta la frequenza di campionamento audio esportata dove la build la espone. Lascialo al valore predefinito del modello durante il tuo primo test. |

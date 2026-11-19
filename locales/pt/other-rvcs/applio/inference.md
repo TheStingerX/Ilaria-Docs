@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Converta uma gravação"
+label: "Converta uma gravação"
+icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
 ---

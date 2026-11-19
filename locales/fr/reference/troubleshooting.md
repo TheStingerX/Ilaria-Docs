@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Dépannage RVC
 
+[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 Vous débutez avec RVC ? **Commencez avec un WAV de 10 secondes et un seul modèle.** Si l’application échoue, cherchez la première erreur dans le journal. Si la voix sonne mal, réécoutez le même extrait et changez un réglage à la fois. Un checkpoint sauvegarde le modèle ou l’état de l’entraînement.
 !!!
@@ -36,9 +38,9 @@ Un diagnostic utile commence dès la première étape qui échoue. Conservez la 
 
 ### La fenêtre se ferme ou l'installation ne se termine jamais
 
-- **Ilaria RVC :** Extrayez le package complet, ouvrez son dossier et exécutez `ILARIA_RVC_LOGS.bat`. Recherchez au-dessus du dernier message d'arrêt la première exception utile. Vérifiez que Windows détecte le GPU NVIDIA pris en charge et que l'environnement et les ressources groupés sont toujours présents.
+- **Ilaria RVC :** Extrayez le package complet, ouvrez son dossier et exécutez `RUN_ILARIA_RVC_LOGS.bat`. Recherchez au-dessus du dernier message d'arrêt la première exception utile. Vérifiez que Windows détecte le GPU NVIDIA pris en charge et que l'environnement et les ressources groupés sont toujours présents.
 - **Applio Desktop :** Ouvrez la configuration et inspectez l'état du moteur. Réparez l'installation via les contrôles de configuration du bureau lorsqu'une vérification d'exécution ou de package échoue. Pour Gradio, exécutez le lanceur à partir de la caisse prévue et vérifiez quel interpréteur est actif.
-- **Mainline :** Faites correspondre le lanceur et le runtime à l'archive ou à l'extraction de source spécifique. Une archive plus ancienne peut contenir une version CUDA qui ne peut pas exécuter les noyaux d'un GPU plus récent. L'installation globale d'un package Python sans rapport ne réparera pas un interpréteur fourni.
+- **RVC WebUI (Mainline - Original RVC) :** Faites correspondre le lanceur et le runtime à l'archive ou à l'extraction de source spécifique. Une archive plus ancienne peut contenir une version CUDA qui ne peut pas exécuter les noyaux d'un GPU plus récent. L'installation globale d'un package Python sans rapport ne réparera pas un interpréteur fourni.
 - **Erreur DLL Windows :** Pour `llvmlite.dll` ou une dépendance Visual C++ manquante, vérifiez que l'architecture d'exécution correspond à l'application et installez ou réparez le redistribuable Microsoft Visual C++ officiel pour cette architecture. Si la DLL elle-même est absente, restaurez-la via le package ou le programme d'installation d'origine.
 - **Erreurs de ressources après une mise à jour :** Vérifiez que l'installation est accessible en écriture, que les fichiers d'actifs requis sont présents et que le raccourci sur le bureau pointe vers le dossier mis à jour. Sauvegardez vos modèles, ensembles de données et journaux avant de remplacer une installation.
 

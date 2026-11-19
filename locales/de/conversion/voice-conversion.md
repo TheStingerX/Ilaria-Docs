@@ -5,6 +5,8 @@ permalink: /voice-conversion/
 ---
 # Konvertieren Sie eine Aufnahme mit Ilaria RVC
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 Die Sprachkonvertierung beginnt mit einer Aufführung. Die Ausgabe folgt normalerweise den Quellwörtern, dem Timing, der Artikulation und der Tonhöhenkontur und verändert gleichzeitig den Klang der Stimme. Entscheidungen über die Auslieferung beginnen immer noch mit der Originalaufnahme. Planen Sie für ein gesungenes Cover, einen isolierten Hauptgesang umzuwandeln und den umgewandelten Gesang anschließend mit dem Instrumental zu mischen.
 
 ## Führen Sie eine Basiskonvertierung durch.
@@ -47,11 +49,11 @@ Wenn Datenschutz oder eine unzuverlässige Verbindung wichtig sind, wählen Sie 
 - Speichern Sie Ihre Einstellungen zusammen mit dem Ergebnis. Geben Sie die Quelldatei, die Modell- und Indexversionen, ggf. die Sprecher-ID, den Embedder, den Tonhöhenextraktor, die Tonhöhenverschiebung, das Indexverhältnis, die Verarbeitung und das Ausgabeformat an.
 - Wenn ein Modell fehlt oder die Inferenz vor der Audioproduktion fehlschlägt, beginnen Sie mit [Fehlerbehebung](../reference/troubleshooting.md). Informationen zur Mikrofonkonvertierung finden Sie unter [Sprachkonvertierung in Echtzeit](real-time.md).
 
-## Konvertieren Sie eine Aufnahme in Mainline RVC.
+## Konvertieren Sie eine Aufnahme in RVC WebUI (Mainline - Original RVC). {#convert-a-recording-in-mainline-rvc}
 
 ### Richten Sie die WebUI ein
 
-Verwenden Sie unter Windows ein Mainline-Paket, das mit Ihrer Hardware kompatibel ist. Extrahieren Sie das gesamte Archiv in ein lokales Verzeichnis, bevor Sie den Launcher ausführen. Windows-Pakete, die `go-web.bat` enthalten, verwenden es, um die lokale WebUI zu starten. Lassen Sie die Konsole während der Konvertierung geöffnet. Wenn der Browser nicht automatisch geöffnet wird, verwenden Sie die in der Konsole aufgedruckte lokale Adresse.
+Verwenden Sie unter Windows ein RVC WebUI (Mainline - Original RVC)-Paket, das mit Ihrer Hardware kompatibel ist. Extrahieren Sie das gesamte Archiv in ein lokales Verzeichnis, bevor Sie den Launcher ausführen. Windows-Pakete, die `go-web.bat` enthalten, verwenden es, um die lokale WebUI zu starten. Lassen Sie die Konsole während der Konvertierung geöffnet. Wenn der Browser nicht automatisch geöffnet wird, verwenden Sie die in der Konsole aufgedruckte lokale Adresse.
 
 ### Laden Sie das Modell und konvertieren Sie
 

@@ -1,5 +1,6 @@
 ---
-label: "🗣️ Gere fala a partir de texto"
+label: "Gere fala a partir de texto"
+icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
 ---

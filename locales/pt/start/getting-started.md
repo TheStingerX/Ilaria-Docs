@@ -5,7 +5,9 @@ permalink: /getting-started/
 ---
 # Primeiros passos
 
-Também podes usar o Ilaria RVC no Kaggle com a GPU remota, mesmo que o teu computador não tenha uma GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/kaggle.md)
+[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
+Também podes usar o Ilaria RVC no Kaggle com a GPU remota, mesmo que o teu computador não tenha uma GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/cloud/kaggle.md)
 
 Para os procedimentos completos de instalação, configuração e resolução de problemas, consulta os [guias passo a passo de cada aplicação](../other-rvcs/app-guides.md).
 
@@ -13,7 +15,7 @@ Para os procedimentos completos de instalação, configuração e resolução de
 
 1. Obtenha o pacote do Windows no [repositório Ilaria's Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC). Verifique as instruções do seu lançamento antes de atualizar o driver NVIDIA ou alterar dependências.
 2. Extraia o pacote completo para uma pasta gravável. Execute o inicializador a partir dessa pasta para que ele possa encontrar o tempo de execução e as ferramentas de áudio incluídas.
-3. Aberto `ILARIA_RVC.bat`. Se a inicialização falhar, feche essa tentativa e use `ILARIA_RVC_LOGS.bat` para ver o console.
+3. Aberto `RUN_ILARIA_RVC.bat`. Se a inicialização falhar, feche essa tentativa e use `RUN_ILARIA_RVC_LOGS.bat` para ver o console.
 4. Se a interface não abrir automaticamente, use [http://127.0.0.1:6969](http://127.0.0.1:6969) no mesmo PC. Mantenha o iniciador funcionando enquanto você trabalha.
 
 ### Converta um primeiro clipe
@@ -30,7 +32,7 @@ Para uma instalação existente, use **Outro → Atualizar Ilaria RVC** e leia a
 
 Use gravações e modelos de voz que você tem permissão para usar. Para demonstrações de modelos e disponibilidade, consulte o [catálogo](https://ilariarvc.shop/en/demos/).
 
-[Fonte Ilaria RVC e notas de instalação](https://github.com/TheStingerX/Ilaria-RVC) · [Notas de versão](https://github.com/TheStingerX/Ilaria-RVC/blob/main/CHANGELOG.md)
+[Fonte Ilaria RVC e notas de instalação](https://github.com/TheStingerX/Ilaria-RVC) · [Notas de versão](https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md)
 
 
 ## Vonovox
@@ -65,9 +67,9 @@ Use gravações e modelos de voz que você tem permissão para usar. Para demons
 2. Adicione uma voz à biblioteca de modelos e abra **Convert Audio**. Em versões mais antigas do Gradio, a guia pode ser chamada de **Inferência**.
 3. Selecione o modelo, o incorporador correspondente e o índice opcional e, em seguida, converta um WAV curto e limpo com pitch zero. Continue com o [fluxo de trabalho de conversão do Applio](../conversion/voice-conversion.md#convert-a-recording-in-applio) para exemplos de lote e configuração.
 
-## WebUI RVC (linha principal)
+## RVC WebUI (Mainline - Original RVC)
 
-1. Escolha um pacote compatível em [RVC WebUI releases](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/releases). Para um pacote do Windows que o inclua, extraia o arquivo e execute `go-web.bat`. Mantenha o console aberto enquanto usa o WebUI.
+1. Escolha um pacote compatível em [RVC WebUI (Mainline - Original RVC) releases](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/releases). Para um pacote do Windows que o inclua, extraia o arquivo e execute `go-web.bat`. Mantenha o console aberto enquanto usa o WebUI.
 2. Coloque o ponto de verificação de inferência em `assets/weights` e seu índice de recuperação correspondente em `logs`. Atualize as listas e selecione sua voz.
 3. Insira o caminho completo para um arquivo de áudio curto, mantenha o tom em zero e clique em **Converter**. Use o controle de download do player de saída para salvá-lo. Consulte o [fluxo de trabalho de conversão principal](../conversion/voice-conversion.md#convert-a-recording-in-mainline-rvc) para verificações adicionais.
 
@@ -78,3 +80,7 @@ Use gravações e modelos de voz que você tem permissão para usar. Para demons
 3. Para um teste de microfone do navegador, permita o acesso ao microfone, escolha a GPU pretendida se as configurações do stream exporem a seleção do dispositivo e inicie o stream. Verifique o monitor do fone de ouvido no buffer padrão antes de diminuir a latência.
 
 Para uma comparação lado a lado, consulte [Ferramentas RVC](../reference/tools.md). Para roteamento, latência e interrupções do microfone, consulte [Conversão de voz em tempo real](../conversion/real-time.md).
+
+## RVC Blue
+
+Conversão de voz em tempo real no Windows. [Instalação e configuração](../other-rvcs/rvc-blue/installation.md).

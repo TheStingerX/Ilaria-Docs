@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # Fundamentos de RVC
 
+[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 La conversión de voz basada en recuperación (RVC) toma una grabación vocal y sintetiza una versión con el carácter de una voz entrenada. La grabación proporciona la interpretación, incluidas las palabras, el ritmo y gran parte del contorno del tono. El modelo determina cómo se representa ese rendimiento. Para una línea hablada, registre la pronunciación y la entrega que desea escuchar en el resultado. Un ajuste de tono cambia el registro sin traducir ni reescribir la línea.
 
 ## Sigue la señal
@@ -30,7 +32,7 @@ Para conocer los controles de conversión específicos de la aplicación, consul
 
 ## Verifique la compatibilidad del modelo antes de importar
 
-1. **Confirme la familia y la arquitectura del modelo.** Utilice un tiempo de ejecución que admita explícitamente el modelo. Los RVC clásicos v1 y v2 utilizan diferentes dimensiones de funciones, comúnmente 256 y 768 respectivamente en Mainline. Algunas bifurcaciones también admiten arquitecturas que requieren su propio tiempo de ejecución.
+1. **Confirme la familia y la arquitectura del modelo.** Utilice un tiempo de ejecución que admita explícitamente el modelo. Los RVC clásicos v1 y v2 utilizan diferentes dimensiones de funciones, comúnmente 256 y 768 respectivamente en RVC WebUI (Mainline - Original RVC). Algunas bifurcaciones también admiten arquitecturas que requieren su propio tiempo de ejecución.
 2. **Verifique el incrustador.** El tiempo de ejecución debe proporcionar la representación de características que el modelo fue entrenado para esperar. Un modelo entrenado con un integrador personalizado puede necesitar ese integrador en el momento de la inferencia. Una extensión de archivo similar o una frecuencia de muestreo coincidente por sí solas proporcionan poca evidencia de respaldo.
 3. **Utilice la exportación de inferencia.** Un `.pth` listo para usar y un punto de control de entrenamiento pueden tener la misma extensión. Seleccione el archivo identificado por el editor como modelo de inferencia. Un ZIP es un contenedor para los archivos y solo se puede importar directamente cuando la aplicación admite la importación de ZIP.
 4. **Emparejar datos de recuperación con su punto de control.** Un `.index` creado para otra voz o incrustador puede fallar o degradar el resultado. Mantenga el modelo y su índice juntos y verifique que la aplicación haya seleccionado el par esperado. Si solo tiene un modelo compatible, utilice el flujo de trabajo sin recuperación admitido por su cliente.

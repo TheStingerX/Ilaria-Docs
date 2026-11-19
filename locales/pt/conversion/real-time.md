@@ -16,7 +16,7 @@ Consulte o [diretório de ferramentas RVC](../reference/tools.md) para downloads
  | Ferramenta | Por onde começar |
 | --- | --- |
  | Vonovox | Um conversor em tempo real para modelos RVC V2 no Windows com GPU NVIDIA. Baixe uma versão para sua GPU, carregue o modelo e teste seu microfone com fones de ouvido antes de direcionar o sinal convertido para outro aplicativo. [Downloads Vonovox](https://huggingface.co/dr87/vonovox/tree/main) · [Documentação do projeto](https://github.com/dr87/Vonovox) |
- | Mainline RVC | O projeto upstream fornece uma WebUI de treinamento e inferência junto com uma GUI dedicada em tempo real. Consulte as instruções de lançamento e inicializador para a plataforma que você usa. |
+ | RVC WebUI (Mainline - Original RVC) | O projeto upstream fornece uma WebUI de treinamento e inferência junto com uma GUI dedicada em tempo real. Consulte as instruções de lançamento e inicializador para a plataforma que você usa. |
  | Applio | Suas interfaces Desktop e Gradio possuem fluxos de trabalho próprios em tempo real. Use as instruções de configuração para a interface e versão que você instalou. |
  | w-okada VCClient | Um trocador de voz para uso ao vivo. A disponibilidade do RVC depende da edição de lançamento e da plataforma. Verifique os modelos suportados antes de instalar uma compilação. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
  | Deiteris e Tg-Develop | Forks w-okada independentes com suas próprias construções e configurações. Verifique as notas de lançamento do fork antes de aplicar as instruções para outra edição. [Repositório Deiteris](https://github.com/deiteris/voice-changer) · [Repositório Tg-Develop](https://github.com/tg-develop/voice-changer) |
@@ -71,3 +71,7 @@ Comece com os padrões do aplicativo e altere uma configuração de cada vez. Se
  | Um modelo funciona na conversão de arquivos, mas falha ao vivo | Verifique a edição, arquitetura e suporte do incorporador do cliente ativo. Teste um modelo listado como compatível nesse cliente antes de alterar os dispositivos de áudio. |
 
 [Fundamentos RVC](../start/rvc-fundamentals.md) · [Solução de problemas](../reference/troubleshooting.md)
+
+## RVC Blue
+
+Conversão de voz em tempo real no Windows. [Instalação e configuração](../other-rvcs/rvc-blue/installation.md).

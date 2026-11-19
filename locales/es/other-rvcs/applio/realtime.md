@@ -1,5 +1,6 @@
 ---
-label: "🎧 Configure un micrófono en vivo"
+label: "Configure un micrófono en vivo"
+icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
 ---

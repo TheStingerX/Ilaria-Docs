@@ -5,6 +5,8 @@ permalink: /rvc-fundamentals/
 ---
 # Fondamenti di RVC
 
+[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 La conversione vocale basata sul recupero (RVC) prende una registrazione vocale e sintetizza una versione con il carattere di una voce addestrata. La registrazione fornisce l'esecuzione, comprese le parole, il ritmo e gran parte del contorno dell'intonazione. Il modello determina il modo in cui viene resa la prestazione. Per una frase parlata, registra la pronuncia e la pronuncia che desideri ascoltare nel risultato. Una regolazione del tono cambia il registro senza tradurre o riscrivere la linea.
 
 ## Segui il segnale
@@ -30,7 +32,7 @@ Per i controlli di conversione specifici dell'app, vedere [Conversione vocale](.
 
 ## Verifica la compatibilità del modello prima dell'importazione
 
-1. **Conferma la famiglia e l'architettura del modello.** Utilizza un runtime che supporti esplicitamente il modello. Classic RVC v1 e v2 utilizzano dimensioni di funzionalità diverse, comunemente 256 e 768 rispettivamente in Mainline. Alcuni fork supportano anche architetture che richiedono il proprio runtime.
+1. **Conferma la famiglia e l'architettura del modello.** Utilizza un runtime che supporti esplicitamente il modello. Classic RVC v1 e v2 utilizzano dimensioni di funzionalità diverse, comunemente 256 e 768 rispettivamente in RVC WebUI (Mainline - Original RVC). Alcuni fork supportano anche architetture che richiedono il proprio runtime.
 2. **Controlla l’embedder.** Il runtime dovrebbe fornire la rappresentazione della funzionalità che il modello è stato addestrato ad aspettarsi. Un modello addestrato con un embedder personalizzato può aver bisogno di tale embedder al momento dell'inferenza. Un'estensione di file simile o una frequenza di campionamento corrispondente da sola forniscono poche prove di supporto.
 3. **Utilizzare l'esportazione dell'inferenza.** Un `.pth` pronto all'uso e un checkpoint di training possono avere la stessa estensione. Seleziona il file identificato dall'editore come modello di inferenza. Un ZIP è un contenitore per i file ed è direttamente importabile solo se l'app supporta l'importazione ZIP.
 4. **Associa i dati di recupero al relativo checkpoint.** Un `.index` creato per un'altra voce o incorporamento può fallire o peggiorare il risultato. Mantieni insieme il modello e il suo indice e verifica che l'app abbia selezionato la coppia prevista. Se disponi solo di un modello compatibile, utilizza il flusso di lavoro senza recupero supportato dal tuo cliente.

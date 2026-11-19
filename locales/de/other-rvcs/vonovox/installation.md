@@ -1,9 +1,12 @@
 ---
-label: "💿 Vonovox installieren"
+label: "Vonovox installieren"
+icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/vonovox/installation/
 ---
 # Vonovox installieren
+
+[GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox)
 
 Vonovox ist ein Windows Live-Sprachkonverter für unterstützte NVIDIA-GPUs. Verwenden Sie diese Anleitung, um einen sauberen lokalen Mikrofontest durchzuführen, bevor Sie Discord, OBS oder ein Spiel öffnen.
 

@@ -1,5 +1,6 @@
 ---
-label: "📦 Instalar y verificar una voz"
+label: "Instalar y verificar una voz"
+icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
 ---

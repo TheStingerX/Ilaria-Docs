@@ -1,5 +1,6 @@
 ---
-label: "🗣️ Générer une parole à partir d'un texte"
+label: "Générer une parole à partir d'un texte"
+icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
 ---

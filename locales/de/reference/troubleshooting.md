@@ -5,6 +5,8 @@ permalink: /troubleshooting/
 ---
 # Fehlerbehebung bei RVC
 
+[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
 !!!tip
 Neu bei RVC? **Beginne mit einer 10 Sekunden langen WAV-Datei und einem Modell.** Wenn die App scheitert, suche im Protokoll den ersten Fehler. Klingt die Stimme falsch, höre denselben Ausschnitt und ändere pro Versuch eine Einstellung. Ein Checkpoint speichert das Modell oder den Trainingsstand.
 !!!
@@ -36,9 +38,9 @@ Eine nützliche Diagnose beginnt in der ersten Phase, die fehlschlägt. Behalten
 
 ### Das Fenster wird geschlossen oder das Setup wird nie abgeschlossen
 
-- **Ilaria RVC:** Extrahieren Sie das vollständige Paket, öffnen Sie seinen Ordner und führen Sie `ILARIA_RVC_LOGS.bat` aus. Suchen Sie über der letzten Meldung zum Herunterfahren nach der ersten nützlichen Ausnahme. Überprüfen Sie, ob Windows die unterstützte NVIDIA-GPU erkennt und ob die gebündelte Umgebung und die Assets noch vorhanden sind.
+- **Ilaria RVC:** Extrahieren Sie das vollständige Paket, öffnen Sie seinen Ordner und führen Sie `RUN_ILARIA_RVC_LOGS.bat` aus. Suchen Sie über der letzten Meldung zum Herunterfahren nach der ersten nützlichen Ausnahme. Überprüfen Sie, ob Windows die unterstützte NVIDIA-GPU erkennt und ob die gebündelte Umgebung und die Assets noch vorhanden sind.
 - **Applio Desktop:** Öffnen Sie Setup und überprüfen Sie den Engine-Status. Reparieren Sie die Installation über die Desktop-Setup-Steuerelemente, wenn eine Laufzeit- oder Paketprüfung fehlschlägt. Führen Sie für Gradio den Launcher über den vorgesehenen Checkout aus und überprüfen Sie, welcher Interpreter aktiv ist.
-- **Mainline:** Passen Sie den Launcher und die Laufzeit an das spezifische Archiv oder den Quell-Checkout an. Ein älteres Archiv kann einen CUDA-Build enthalten, der keine Kernel für eine neuere GPU ausführen kann. Durch die globale Installation eines nicht verwandten Python-Pakets wird ein gebündelter Interpreter nicht repariert.
+- **RVC WebUI (Mainline - Original RVC):** Passen Sie den Launcher und die Laufzeit an das spezifische Archiv oder den Quell-Checkout an. Ein älteres Archiv kann einen CUDA-Build enthalten, der keine Kernel für eine neuere GPU ausführen kann. Durch die globale Installation eines nicht verwandten Python-Pakets wird ein gebündelter Interpreter nicht repariert.
 - **Windows-DLL-Fehler:** Überprüfen Sie bei `llvmlite.dll` oder einer fehlenden Visual C++-Abhängigkeit, ob die Laufzeitarchitektur mit der App übereinstimmt, und installieren oder reparieren Sie das offizielle Microsoft Visual C++ Redistributable für diese Architektur. Wenn die DLL selbst nicht vorhanden ist, stellen Sie sie über das Originalpaket oder das Originalinstallationsprogramm wieder her.
 - **Ressourcenfehler nach einem Update:** Überprüfen Sie, ob die Installation beschreibbar ist, die erforderlichen Asset-Dateien vorhanden sind und die Desktop-Verknüpfung auf den aktualisierten Ordner verweist. Sichern Sie Ihre Modelle, Datensätze und Protokolle, bevor Sie eine Installation ersetzen.
 

@@ -1,5 +1,6 @@
 ---
-label: "🧪 Train and test a model"
+label: "Train and test a model"
+icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
 ---

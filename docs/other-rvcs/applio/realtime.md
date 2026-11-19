@@ -1,5 +1,6 @@
 ---
-label: "🎧 Set up a live microphone"
+label: "Set up a live microphone"
+icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
 ---

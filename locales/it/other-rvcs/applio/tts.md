@@ -1,5 +1,6 @@
 ---
-label: "🗣️ Genera parlato dal testo"
+label: "Genera parlato dal testo"
+icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
 ---

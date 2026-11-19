@@ -1,0 +1,49 @@
+---
+label: "Version history and release differences"
+icon: ":clock3:"
+order: 83
+permalink: /ilaria-rvc/version-history/
+---
+# Version history and release differences
+
+[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+
+## Which version does this documentation describe?
+
+The latest Windows release is **2.4.1**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
+
+## All releases
+
+| Release | Highlights |
+| --- | --- |
+| 2.4.1 | Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install **2.4.1** when it appears. |
+| 2.4.0 | The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32. |
+| 2.3.0 | RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model. |
+| 2.2.2.1 | Updater bridge that prepares the refreshed 2.2.2 installation for 2.3.0. |
+| 2.2.2 | Uses PyTorch’s restricted checkpoint loader for voice models, model tools, ONNX export and training weights. The refreshed Windows ZIP includes Python 3.10 and PyTorch 2.10.0 with CUDA 12.8. Older NVIDIA GPUs use the downloadable CUDA 12.6 runtime. This update also fixes PyAV decoding and WAV export and reports preprocessing progress while writing segments. The 2.2.2 Kaggle notebook installs PyTorch and TorchAudio 2.10.0 with CUDA 12.8. |
+| 2.2.1 | The shared waveform player has a playback volume slider for inputs, results and previews. Use it to listen more quietly or compare clips at similar levels. It adjusts playback only. To change the level of the converted file, adjust Gain in Post-Process and convert again. |
+| 2.2.0 | Adds Windows inference and training support for NVIDIA GeForce RTX 50 series (Blackwell) with PyTorch 2.7.1 and CUDA 12.8. The launcher detects Blackwell, prepares the runtime on first launch (internet and free disk space required), and checks CUDA forward and backward execution. Other GPUs retain their runtime. Also updates ContentVec loading, checkpoint resume and STFT handling. |
+| 2.1.2 | Standardized the three header labels as **Ilaria’s Ko-Fi Shop**, **Ilaria’s RVC Website**, and **Ilaria’s Docs**. |
+| 2.1.1 | Added a heart-styled button for Ilaria Docs next to the website link. |
+| 2.1.0 | Added the website button, live dashboard metrics for the active run, and better startup and refresh behavior in embedded TensorBoard. |
+| 2.0.0 | Introduced the Training Dashboard, embedded TensorBoard, diagnostic reports and 12-second Dataset Checker previews. Optional embedders became individual downloads. |
+| 1.9.3 | Introduced advanced audio processing, five inference export formats, configurable embedders and custom HuBERT installation. |
+| 1.9.2 | Added public Google Drive and MEGA links to the voice model downloader. |
+| 1.9.1 | Added sample-rate checks when reusing an experiment name, avoiding a training crash on incompatible configurations. |
+| 1.9.0 | Added FCPE, streamed model imports with cancellation, a reorganized Other tab and expandable offline release notes. |
+| 1.8.1 | Updated completion and test sounds while retaining the Windows error sound. |
+| 1.8.0 | Introduced the hidden-console launcher, UI restart control, Audio Analyzer and a shared folder layout for models and their indexes. |
+| 1.7.2 | Fixed conversion without an index and named Single and Batch output files after the selected voice. |
+| 1.7.1 | Suppressed a specific Windows connection-close traceback while preserving other error messages. |
+| 1.7.0 | Added Edge and offline Windows TTS, waveform players and background preparation for pitch extraction and supported default models. |
+| 1.6.0 | Added the persistent training queue, exact step targets, RefineGAN and Spin-v2 options, paired pretrained downloads, more pitch extractors and ZIP export. |
+| 1.5.2 | Improved duplicate-launch diagnostics and checked dataset availability before each training stage. |
+| 1.5.1 | Blocked preprocessing while a dataset import was active or the dataset path was unusable. Added the offline change history panel. |
+| 1.5.0 | Introduced drag-and-drop dataset import and management, the PC training advisor and optional completion and error alerts. |
+| 1.4.0 | Added training previews, resumable Stop and save, and the Dataset Checker. |
+| 1.3.0 | Validated the update path from 1.2, showed the installed version in the console and prepared a smaller Windows package. |
+| 1.2.0 | Added the built-in updater with verification and recovery, FP32/FP16 training selection, and Model information. |
+| 1.1 Beta | Introduced the themed interface, numbered training workflow, drag-and-drop conversion, automatic index matching, model imports and merging, and the app glossary. |
+
+
+If a button or backend differs on your build, compare its release notes before assuming a failed install.

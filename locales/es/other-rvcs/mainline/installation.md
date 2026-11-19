@@ -1,12 +1,15 @@
 ---
-label: "🧰 Instalar y abrir"
+label: "Instalar y abrir"
+icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
 ---
 
-# Instalar Mainline RVC
+# Instalar RVC WebUI (Mainline - Original RVC)
 
-Mainline es la interfaz de usuario web de conversión de voz basada en recuperación. Utilice su interfaz de navegador para la conversión y capacitación de archivos. Para la conversión de micrófono, utilice la interfaz de escritorio separada que se describe en la [guía en tiempo real](realtime.md).
+[GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI)
+
+RVC WebUI (Mainline - Original RVC) es la interfaz de usuario web de conversión de voz basada en recuperación. Utilice su interfaz de navegador para la conversión y capacitación de archivos. Para la conversión de micrófono, utilice la interfaz de escritorio separada que se describe en la [guía en tiempo real](realtime.md).
 
 ## Elija una ruta de instalación
 
@@ -25,6 +28,8 @@ Mainline es la interfaz de usuario web de conversión de voz basada en recuperac
 4. Confirme que la página se abre y que el terminal sigue funcionando. Mantenga el archivo intacto hasta que la [primera conversión](inference.md) tenga éxito.
 
 ### Rama fuente actual
+
+> **Recomendado en Windows:** descarga el [paquete de Windows listo para usar](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) para tu GPU. Se desaconseja instalar desde el código fuente para la mayoría de usuarios porque requiere configurar Python y sus dependencias manualmente.
 
 Descargue y extraiga el [ZIP fuente principal](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip). Abra una terminal en el directorio que contiene `webui.py` y los archivos de requisitos. La configuración de origen siguiente se aplica a la rama Python 3.12. Ejecute cada fragmento de ese directorio utilizando un intérprete Python 3.12 de 64 bits.
 

@@ -1,5 +1,6 @@
 ---
-label: "🎙️ Live-Audio und Routing"
+label: "Live-Audio und Routing"
+icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
 ---

@@ -1,12 +1,15 @@
 ---
-label: "🧰 Installa e apri"
+label: "Installa e apri"
+icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
 ---
 
-# Installa Mainline RVC
+# Installa RVC WebUI (Mainline - Original RVC)
 
-Mainline è la WebUI originale del progetto Retrieval-based Voice Conversion. Aprila nel browser per convertire registrazioni o addestrare modelli. Per convertire la voce dal microfono, apri l'app desktop descritta nella [guida in tempo reale](realtime.md).
+[GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI)
+
+RVC WebUI (Mainline - Original RVC) è la WebUI originale del progetto Retrieval-based Voice Conversion. Aprila nel browser per convertire registrazioni o addestrare modelli. Per convertire la voce dal microfono, apri l'app desktop descritta nella [guida in tempo reale](realtime.md).
 
 ## Scegli un percorso di installazione
 
@@ -19,14 +22,16 @@ Mainline è la WebUI originale del progetto Retrieval-based Voice Conversion. Ap
 
 ### Archivio Windows
 
-1. Apri [Pacchetti e file di Mainline per Windows](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) e scegli l'archivio corrispondente alla tua GPU. Per l'attuale famiglia di pacchetti, cerca la variante `20260718` NVIDIA, NVIDIA serie 50 o AMD/Intel. Se hai già una versione precedente che funziona, lasciala nella sua directory.
+1. Apri [Pacchetti e file di RVC WebUI (Mainline - Original RVC) per Windows](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) e scegli l'archivio corrispondente alla tua GPU. Per l'attuale famiglia di pacchetti, cerca la variante `20260718` NVIDIA, NVIDIA serie 50 o AMD/Intel. Se hai già una versione precedente che funziona, lasciala nella sua directory.
 2. Estrai l'intero archivio in una cartella locale scrivibile come `C:\RVC\Mainline`. Lascia spazio sia per il download che per i file estratti. In Esplora file, apri la cartella risultante e cerca il launcher, la cartella `assets` e il runtime Python. Se vedi una sola sottocartella, aprila.
 3. Esegui `go-webui.bat` se presente. Gli archivi più vecchi potrebbero chiamarlo `go-web.bat`. Tieni aperta la finestra di comando e attendi l'indirizzo locale. Se il browser non si avvia, apri l'indirizzo visualizzato nel terminale. L'indirizzo predefinito è spesso `http://127.0.0.1:7865`.
 4. Verifica che la pagina si apra e che il terminale rimanga in esecuzione. Mantieni l'archivio intatto finché la [prima conversione](inference.md) non riesce.
 
 ### Installazione da sorgente
 
-Scarica ed estrai il file [ZIP del codice sorgente Mainline](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip). Apri un terminale nella directory contenente `webui.py` e i file dei requisiti. La configurazione del codice sorgente riportata di seguito si applica al ramo Python 3.12. Esegui ogni frammento da quella directory utilizzando un interprete Python 3.12 a 64 bit.
+> **Consigliato su Windows:** scarica il [pacchetto Windows già pronto](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main) adatto alla tua GPU. L’installazione da sorgente è sconsigliata per la maggior parte degli utenti perché richiede di configurare Python e le sue dipendenze a mano.
+
+Scarica ed estrai il file [ZIP del codice sorgente RVC WebUI (Mainline - Original RVC)](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/archive/refs/heads/main.zip). Apri un terminale nella directory contenente `webui.py` e i file dei requisiti. La configurazione del codice sorgente riportata di seguito si applica al ramo Python 3.12. Esegui ogni frammento da quella directory utilizzando un interprete Python 3.12 a 64 bit.
 
 **Windows PowerShell**
 

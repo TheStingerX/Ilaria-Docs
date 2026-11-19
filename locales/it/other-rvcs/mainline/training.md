@@ -1,10 +1,11 @@
 ---
-label: "🧪 Addestra ed esporta un modello"
+label: "Addestra ed esporta un modello"
+icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
 ---
 
-# Addestra ed esporta un modello RVC Mainline
+# Addestra ed esporta un modello RVC WebUI (Mainline - Original RVC)
 
 Inizia con una sola voce e un nuovo nome per l'esperimento. L'addestramento produce un modello che puoi testare su nuove registrazioni nell'[interfaccia di inferenza](inference.md). Conserva l'audio non elaborato e il registro dell'esperimento in modo da poter riprodurre il risultato.
 
@@ -12,7 +13,7 @@ Inizia con una sola voce e un nuovo nome per l'esperimento. L'addestramento prod
 
 1. Metti le registrazioni vocali pulite in una cartella locale come `C:\RVC\datasets\voice_a`. Conserva i backup altrove. Usa solo registrazioni per cui hai il permesso di addestrare un modello. Verifica che sia possibile riprodurre più file e che contengano la voce desiderata senza sottofondo musicale o altre voci.
 2. Conserva una o due brevi registrazioni di frasi diverse fuori dal dataset. Usale come input di test per ogni checkpoint. Per un dataset destinato al canto, assicurati di disporre di materiale con la gamma vocale pertinente ed esegui il test con una voce isolata.
-3. Se hai installato Mainline da sorgente, riapri l'ambiente Python usato per la WebUI e scarica i pesi preaddestrati e i file di silenzio. Le versioni in pacchetto potrebbero già contenerli.
+3. Se hai installato RVC WebUI (Mainline - Original RVC) da sorgente, riapri l'ambiente Python usato per la WebUI e scarica i pesi preaddestrati e i file di silenzio. Le versioni in pacchetto potrebbero già contenerli.
 
 ```text
 hf download lj1995/VoiceConversionWebUI --include "pretrained/*" "pretrained_v2/*" --local-dir assets
@@ -24,7 +25,7 @@ Vedi [preparazione del dataset](../../model-training/dataset-preparation.md) per
 
 ## Configura l'esperimento ed elabora l'audio
 
-1. Apri **Train**. Utilizza un nuovo nome come `voice_a_v2_40k` in modo che Mainline crei una cartella separata sotto `logs/`.
+1. Apri **Train**. Utilizza un nuovo nome come `voice_a_v2_40k` in modo che RVC WebUI (Mainline - Original RVC) crei una cartella separata sotto `logs/`.
 2. Scegli una frequenza di campionamento target e una versione dell'architettura supportata dalla tua versione. V2 è un punto di partenza ragionevole quando si prevede di utilizzare un client di inferenza V2 compatibile. Frequenza di campionamento, architettura e modalità di guida con il pitch devono essere compatibili con i pesi preaddestrati del generatore e del discriminatore. Attiva **Pitch guidance** per un normale modello che segue l'intonazione della voce sorgente.
 3. Seleziona un dataset a voce singola, in cui la build offre una scelta. Utilizza **Speaker ID** `0` per la prima esecuzione. Incolla il percorso completo della cartella del dataset, quindi fai clic su **Process Data** o sul pulsante di preprocessing equivalente.
 4. Attendi il completamento della preprocessing. Esamina gli avvisi nell'output e verifica che l'esperimento abbia prodotto audio elaborato. Se l'esecuzione non produce nulla, verifica il percorso e verifica se i file audio inclusi vengono decodificati. Risolvilo prima di iniziare l'estrazione.

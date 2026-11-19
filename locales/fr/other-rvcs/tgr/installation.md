@@ -1,9 +1,12 @@
 ---
-label: "📦 Installer TG Developed Fork"
+label: "Installer TG Developed Fork"
+icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/tgr/installation/
 ---
 # Installer Okada TG Developed Fork
+
+[GitHub](https://github.com/tg-develop/voice-changer)
 
 TG Developed Fork (TGR) vient de la branche Deiteris de la famille w-okada. L'éditeur documente ce fork comme RVC uniquement. Il possède ses propres fichiers de version, lanceurs et contraintes de périphérique. Conservez-le dans son propre dossier afin qu'une installation VCClient ou Deiteris fonctionnelle reste disponible à des fins de comparaison.
 
