@@ -5,7 +5,7 @@ Ein **Pitch Extractor** (auch **F0-Extraktionsmethode** genannt) ist der Algorit
 Während ein [Embedder](embedders.md) liest, *welche Wörter und Laute* gesprochen oder gesungen werden, misst der **Pitch Extractor**, *wie hoch oder tief* die Stimme in jedem Sekundenbruchteil klingt.
 
 !!!tip
-**Gute Nachricht zur Kompatibilität:**
+**Kompatibilität:**
 Anders als bei Embeddern **binden dich Pitch Extractors nicht an eine feste Wahl**. Selbst wenn ein Modell beim Dataset-Preprocessing mit `rmvpe` trainiert wurde, kannst du bei der Inferenz und im Live Voice Changer frei zwischen `rmvpe`, `rmvpe_gpu`, `fcpe` oder `crepe` wechseln.
 !!!
 
@@ -27,7 +27,7 @@ Anders als bei Embeddern **binden dich Pitch Extractors nicht an eine feste Wahl
 | **`crepe` / `crepe-full`** | Neuronales Netz | Langsam | Sehr genau bei sauberem Solo-Gesang und Vibrato. | Auf GPU/CPU viel schwerer als `rmvpe`. Meist zu langsam für Live Voice Changer. |
 | **`crepe-tiny`** | Neuronales Netz (klein) | Schnell | Leichtere `crepe`-Variante für ältere Systeme. | Ungenauer als `rmvpe` und `fcpe`; meist durch `fcpe` überholt. |
 | **`harvest`** | Klassisches DSP (WORLD) | Sehr langsam (CPU) | Alte Methode für saubere Sprache. | Anfällig für Oktavsprünge und metallische Artefakte bei Gesang oder Rauschen. Braucht oft `filter_radius`. |
-| **`pm`** | Klassisches DSP (Parselmouth) | Ultraschnell (CPU) | Schnelle Vorschau auf sehr schwachen PCs ohne GPU. | Verliert bei Gesang, Flüstern oder unsauberem Audio schnell die Tonhöhe. |
+| **Parselmouth (`pm`)** | Klassisches DSP | Ultraschnell (CPU) | Schnelle Vorschau auf sehr schwachen PCs ohne GPU. | Verliert bei Gesang, Flüstern oder unsauberem Audio schnell die Tonhöhe. |
 | **`dio`** | Klassisches DSP (WORLD) | Sehr schnell (CPU) | Alte schnelle CPU-Notlösung. | Weniger genau als `rmvpe` und `fcpe`; nicht für finale Exporte empfohlen. |
 | **`hybrid[...]`** | Kombinierte Methoden | Langsam | Mischt zwei Extraktoren (z. B. `hybrid[rmvpe+fcpe]` oder `hybrid[crepe+rmvpe]`). | In Applio und manchen Forks verfügbar, um Oktavsprünge bei schwerem Gesang zu glätten, läuft aber langsamer. |
 | **`swift` / `onnx`-Varianten** | Leicht / ONNX | Sehr schnell | Optimierte Tracker in neueren Forks (wie Applio oder Deiteris). | Nützlich auf CPU oder DirectML, wo Standard-PyTorch-Methoden langsamer sind. |

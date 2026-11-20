@@ -5,7 +5,7 @@ A **pitch extractor** (also called an **F0 extraction method**) is the algorithm
 While an [embedder](embedders.md) reads *what words and phonemes* are being spoken or sung, the **pitch extractor** measures *how high or low* the voice goes at every fraction of a second.
 
 !!!tip
-**Good news about compatibility:**
+**Compatibility:**
 Unlike embedders, **pitch extractors do not lock you into one choice**. Even if a model was trained using `rmvpe` for dataset preprocessing, you can freely switch between `rmvpe`, `rmvpe_gpu`, `fcpe`, or `crepe` during inference and live voice changing without breaking compatibility.
 !!!
 
@@ -27,7 +27,7 @@ Unlike embedders, **pitch extractors do not lock you into one choice**. Even if 
 | **`crepe` / `crepe-full`** | Neural network | Slow | High accuracy on clean solo singing and vibrato. | Much heavier on GPU/CPU than `rmvpe`. Usually too slow for live voice changers. |
 | **`crepe-tiny`** | Neural network (small) | Fast | Lighter version of `crepe` for older setups. | Lower accuracy than `rmvpe` and `fcpe`; mostly superseded by `fcpe`. |
 | **`harvest`** | Classic DSP (WORLD) | Very slow (CPU) | Legacy method for clean speech. | Prone to octave jumps and metallic artifacts on singing or noisy audio. Often needs median filtering (`filter_radius`). |
-| **`pm`** | Classic DSP (Parselmouth) | Ultra fast (CPU) | Quick previews on very weak PCs without a GPU. | Easily drops pitch tracking on singing, whispers, or rough vocals. |
+| **Parselmouth (`pm`)** | Classic DSP | Ultra fast (CPU) | Quick previews on very weak PCs without a GPU. | Easily drops pitch tracking on singing, whispers, or rough vocals. |
 | **`dio`** | Classic DSP (WORLD) | Very fast (CPU) | Legacy fast CPU fallback. | Less accurate than `rmvpe` and `fcpe`; not recommended for final renders. |
 | **`hybrid[...]`** | Combined methods | Slow | Mixes two extractors (for example `hybrid[rmvpe+fcpe]` or `hybrid[crepe+rmvpe]`). | Available in Applio and some RVC forks to smooth octave errors on tricky vocals, at the cost of running two methods. |
 | **`swift` / `onnx` variants** | Lightweight / ONNX | Very fast | Optimized pitch trackers found in newer forks (such as Applio or Deiteris). | Useful on CPU or DirectML setups where standard PyTorch extractors are slower. |

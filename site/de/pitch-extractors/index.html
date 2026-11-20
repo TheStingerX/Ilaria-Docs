@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848511726843">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848512395413">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848511726843" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848512395413" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848511726843" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848512395413" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848511726843" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848512395413" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -188,7 +188,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p><strong>Gute Nachricht zur Kompatibilität:</strong>
+<p><strong>Kompatibilität:</strong>
 Anders als bei Embeddern <strong>binden dich Pitch Extractors nicht an eine feste Wahl</strong>. Selbst wenn ein Modell beim Dataset-Preprocessing mit <code translate="no" v-pre>rmvpe</code> trainiert wurde, kannst du bei der Inferenz und im Live Voice Changer frei zwischen <code translate="no" v-pre>rmvpe</code>, <code translate="no" v-pre>rmvpe_gpu</code>, <code translate="no" v-pre>fcpe</code> oder <code translate="no" v-pre>crepe</code> wechseln.</p>
         </div>
     </div>
@@ -209,7 +209,7 @@ Anders als bei Embeddern <strong>binden dich Pitch Extractors nicht an eine fest
 | **`crepe` / `crepe-full`** | Neuronales Netz | Langsam | Sehr genau bei sauberem Solo-Gesang und Vibrato. | Auf GPU/CPU viel schwerer als `rmvpe`. Meist zu langsam für Live Voice Changer. |
 | **`crepe-tiny`** | Neuronales Netz (klein) | Schnell | Leichtere `crepe`-Variante für ältere Systeme. | Ungenauer als `rmvpe` und `fcpe`; meist durch `fcpe` überholt. |
 | **`harvest`** | Klassisches DSP (WORLD) | Sehr langsam (CPU) | Alte Methode für saubere Sprache. | Anfällig für Oktavsprünge und metallische Artefakte bei Gesang oder Rauschen. Braucht oft `filter_radius`. |
-| **`pm`** | Klassisches DSP (Parselmouth) | Ultraschnell (CPU) | Schnelle Vorschau auf sehr schwachen PCs ohne GPU. | Verliert bei Gesang, Flüstern oder unsauberem Audio schnell die Tonhöhe. |
+| **Parselmouth (`pm`)** | Klassisches DSP | Ultraschnell (CPU) | Schnelle Vorschau auf sehr schwachen PCs ohne GPU. | Verliert bei Gesang, Flüstern oder unsauberem Audio schnell die Tonhöhe. |
 | **`dio`** | Klassisches DSP (WORLD) | Sehr schnell (CPU) | Alte schnelle CPU-Notlösung. | Weniger genau als `rmvpe` und `fcpe`; nicht für finale Exporte empfohlen. |
 | **`hybrid[...]`** | Kombinierte Methoden | Langsam | Mischt zwei Extraktoren (z. B. `hybrid[rmvpe+fcpe]` oder `hybrid[crepe+rmvpe]`). | In Applio und manchen Forks verfügbar, um Oktavsprünge bei schwerem Gesang zu glätten, läuft aber langsamer. |
 | **`swift` / `onnx`-Varianten** | Leicht / ONNX | Sehr schnell | Optimierte Tracker in neueren Forks (wie Applio oder Deiteris). | Nützlich auf CPU oder DirectML, wo Standard-PyTorch-Methoden langsamer sind. |">
@@ -268,8 +268,8 @@ Anders als bei Embeddern <strong>binden dich Pitch Extractors nicht an eine fest
 <td>Anfällig für Oktavsprünge und metallische Artefakte bei Gesang oder Rauschen. Braucht oft <code translate="no" v-pre>filter_radius</code>.</td>
 </tr>
 <tr>
-<td><strong><code translate="no" v-pre>pm</code></strong></td>
-<td>Klassisches DSP (Parselmouth)</td>
+<td><strong>Parselmouth (<code translate="no" v-pre>pm</code>)</strong></td>
+<td>Klassisches DSP</td>
 <td>Ultraschnell (CPU)</td>
 <td>Schnelle Vorschau auf sehr schwachen PCs ohne GPU.</td>
 <td>Verliert bei Gesang, Flüstern oder unsauberem Audio schnell die Tonhöhe.</td>
@@ -346,7 +346,7 @@ Anders als bei Embeddern <strong>binden dich Pitch Extractors nicht an eine fest
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T17:29:46.000Z">20/11/2026 · 18:29</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T17:50:13.000Z">20/11/2026 · 18:50</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
