@@ -41,13 +41,15 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Não especificado | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Não especificado | `Loren85/IMA-TEST-V1` |
 | **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | `TheStinger/itaila` |
-| **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | Não especificado | `SeoulStreamingStation/KLM_BEATMASTER` |
-| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Não especificado | `SeoulStreamingStation/KLM49_HFG` |
-| **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | Não especificado | `SeoulStreamingStation/KLM4.4` *(não testado no Ilaria RVC)* |
+| **KLM - BeatzForge V2 / BeatMaster** | `32 kHz`, `48 kHz` | HiFi-GAN / Não especificado | Não especificado | `SeoulStreamingStation/KLM_BEATMASTER` |
+| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Não especificado | Não especificado | `SeoulStreamingStation/KLM49_HFG`, `KLM4`, `KLM4.1`, `KLM4.2`, `KLM43` |
+| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz`, `40 kHz` | MRF HiFi-GAN / Não especificado | Não especificado | `SeoulStreamingStation/KLM4.4` *(compatibilidade varia)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | RefineGAN | Não especificado | `SeoulStreamingStation/KLM5` |
-| **KLM 6.1 (Exp3 L6 / KLM 6.2)** | `32 kHz` | Não especificado | Não especificado | `SeoulStreamingStation/KLM6_Experimental` |
-| **Legacy Core V1.5** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` |
-| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` |
+| **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Não especificado | Não especificado | `SeoulStreamingStation/KLM6_Experimental` |
+| **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Não especificado | Não especificado | `SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel`, `RVC_KLM-X-10_Pretrained-Model`, `KLM_RVC_KLM-HF_Trainer` |
+| **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Não especificado | Não especificado | `SeoulStreamingStation/KLM_KpopUniverse`, `BlackTone_RVC_Pretrained` |
+| **Legacy Core V1.5** *(removido na 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` *(fonte removida)* |
+| **Legacy Core V1.5v2** *(removido na 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(fonte removida)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Não especificado | `juaow/mandaguesv2` |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Não especificado | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Não especificado | `shiromiya/nanashi-pretrain` |
