@@ -8,7 +8,7 @@ permalink: /ilaria-rvc/applio/installation/
 
 [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
-O Applio possui **duas opções de download** que executam **exatamente o mesmo mecanismo** — mudam apenas a **interface e o método de instalação**:
+O Applio possui **duas opções de download** que executam **exatamente o mesmo mecanismo** - mudam apenas a **interface e o método de instalação**:
 1. **Desktop App**: abre uma janela nativa instalada e gerencia o ambiente Python na primeira inicialização.
 2. **Gradio Web Interface**: executa a aplicação Python e abre uma interface web local no navegador (disponível como pacote Windows compilado ou instalação Python pelo código-fonte).
 

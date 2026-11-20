@@ -28,7 +28,7 @@ Dopo aver eseguito almeno una volta `run-training` e aver preparato una voce `.c
 1. Seleziona **Model** (e **Checkpoint** se la voce ha più step salvati).
 2. **Pitch (semitones)**: sposta l'intonazione in alto o in basso per adattarla alla voce target (`+12` = un'ottava sopra, `-12` = un'ottava sotto).
    - **Pitch match**: non andare a tentativi! Trascina clip della voce del modello in Pitch match per misurarne i Hz mediani, poi parla mentre converti così CVC misura la tua voce e propone lo spostamento esatto (**Apply**).
-3. **Advanced pitch** *(chiuso di default — la maggior parte delle voci non ne ha bisogno)*:
+3. **Advanced pitch** *(chiuso di default - la maggior parte delle voci non ne ha bisogno)*:
    - **Pitch offset (Hz)**: aggiunge un offset fisso in Hz dopo lo shift in semitoni. Valori positivi alzano le note basse più delle alte (restringendo l'estensione); valori negativi la ampliano.
    - **Pitch ceiling (Hz)** e **Above the ceiling (%)**: abbassa i picchi troppo acuti sopra la soglia mantenendo intonate le note sotto di essa (ottimo per il canto; `0%` blocca esattamente alla soglia).
 4. **Formant**: sposta la risonanza vocale (quanto "grande" o "piccola" suona la voce) senza cambiare l'intonazione (`0` = formante naturale del modello).

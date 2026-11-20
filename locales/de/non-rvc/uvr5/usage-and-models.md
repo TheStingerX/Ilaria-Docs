@@ -51,18 +51,18 @@ Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum T
 
 ## 3. Empfohlener Workflow für RVC-Datasets
 
-1. **Schritt 1 — Vocals trennen**: Track durch **`BS-Roformer-Viperx-1297`** schicken (Tab MDX-Net, GPU Conversion an).
-2. **Schritt 2 — Harmonien / Backing Vocals entfernen** *(falls vorhanden)*: isolierten Vocal-Stem durch **`5_HP-Karaoke-UVR`** schicken (Tab VR Architecture).
-3. **Schritt 3 — Hall & Echo entfernen**: **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** anwenden (oder **`UVR-DeEcho-DeReverb`** bei Aggression `3–5` / **`UVR-De-Echo-Normal`**).
-4. **Schritt 4 — Finales De-Noise** *(nur falls Rauschen bleibt)*: **`UVR-DeNoise`** (mit niedriger/negativer Aggression) oder **`UVR-DeNoise-Lite`** nutzen. Immer per Kopfhörer gegen den vorherigen Schritt vergleichen, um Konsonanten zu schützen.
+1. **Schritt 1 - Vocals trennen**: Track durch **`BS-Roformer-Viperx-1297`** schicken (Tab MDX-Net, GPU Conversion an).
+2. **Schritt 2 - Harmonien / Backing Vocals entfernen** *(falls vorhanden)*: isolierten Vocal-Stem durch **`5_HP-Karaoke-UVR`** schicken (Tab VR Architecture).
+3. **Schritt 3 - Hall & Echo entfernen**: **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** anwenden (oder **`UVR-DeEcho-DeReverb`** bei Aggression `3–5` / **`UVR-De-Echo-Normal`**).
+4. **Schritt 4 - Finales De-Noise** *(nur falls Rauschen bleibt)*: **`UVR-DeNoise`** (mit niedriger/negativer Aggression) oder **`UVR-DeNoise-Lite`** nutzen. Immer per Kopfhörer gegen den vorherigen Schritt vergleichen, um Konsonanten zu schützen.
 
 ## 4. Häufige Fehler beheben
 
 - **Speicherfehler (`RuntimeError`) oder Hänger bei 5 % unter DirectML (AMD/Intel)**:
   - Öffne **Choose MDX-Net Model → Edit Model Config** (oder bearbeite die `.yaml` unter `models\MDX_Net_Models\model_data\mdx_c_configs\`) und senke `chunk_size` (stelle sicher, dass **Segment Default** aktiviert ist):
-    - `352800` (8s) — Standard; Maximum für 8-GB-AMD/Intel-GPUs.
-    - `220500` (5s) oder `200655` (4,5s) — sicher für 4–6-GB-VRAM-Karten.
-    - `112455` (2,55s) — sicherer Minimalwert bei anhaltenden Abstürzen.
+    - `352800` (8s) - Standard; Maximum für 8-GB-AMD/Intel-GPUs.
+    - `220500` (5s) oder `200655` (4,5s) - sicher für 4–6-GB-VRAM-Karten.
+    - `112455` (2,55s) - sicherer Minimalwert bei anhaltenden Abstürzen.
   - Bei NVIDIA mit 2–4 GB VRAM in der NVIDIA Systemsteuerung **CUDA Sysmem Fallback Policy** auf **Prefer Sysmem Fallback** stellen.
 - **Roformer fehlt in Ensemble / Vocal Splitter**: in der `.yaml` die Stem-Namen von `other` / `vocals` / `Karaoke` exakt (Groß-/Kleinschreibung beachten) auf **`Instrumental`** und **`Vocals`** ändern.
 - **PC friert beim Trennen ein**: UVR-Priorität im Windows-Task-Manager auf **Niedrig (Idle)** stellen.

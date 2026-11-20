@@ -8,7 +8,7 @@ permalink: /non-rvc/mvsep/overview/
 
 [Site oficial (mvsep.com)](https://mvsep.com/) · [Classificação de qualidade](https://mvsep.com/quality_checker/multisong_leaderboard)
 
-**MVSep** (Music & Voice Separation) é uma plataforma web gratuita na nuvem para separação e restauro de áudio por IA. Como todos os modelos correm nos servidores remotos do MVSep, **não precisas de uma GPU potente nem de qualquer instalação local** — ideal se o teu PC não aguenta modelos Roformer pesados ou se queres aceder a algoritmos exclusivos como **BS Polarformer**, **MVSep DnR v3** e ensembles multi-modelo.
+**MVSep** (Music & Voice Separation) é uma plataforma web gratuita na nuvem para separação e restauro de áudio por IA. Como todos os modelos correm nos servidores remotos do MVSep, **não precisas de uma GPU potente nem de qualquer instalação local** - ideal se o teu PC não aguenta modelos Roformer pesados ou se queres aceder a algoritmos exclusivos como **BS Polarformer**, **MVSep DnR v3** e ensembles multi-modelo.
 
 ## O que o MVSep consegue fazer
 
@@ -33,4 +33,4 @@ O MVSep **não tem subscrição mensal**: os algoritmos principais continuam gra
 | **Formato de saída** | MP3 | **WAV 16-bit / FLAC 16-bit** | **WAV 32-bit float / FLAC 24-bit** |
 | **Lote e API completa** | Não | Limitado | **Acesso completo** |
 
-> **Dica**: criar uma simples **conta gratuita** em [mvsep.com](https://mvsep.com/) remove os CAPTCHAs, melhora a fila de espera e desbloqueia transferências sem perdas em **WAV / FLAC** — essencial ao preparar datasets RVC.
+> **Dica**: criar uma simples **conta gratuita** em [mvsep.com](https://mvsep.com/) remove os CAPTCHAs, melhora a fila de espera e desbloqueia transferências sem perdas em **WAV / FLAC** - essencial ao preparar datasets RVC.

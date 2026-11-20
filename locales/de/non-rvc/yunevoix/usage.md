@@ -25,7 +25,7 @@ Zum Teilen oder Sichern nutze **Voice Bank → Open folder** für die `.yvoice`-
 
 ## 2. Live-Audio-Routing einrichten
 
-> **Trage immer Kopfhörer** im Live-Betrieb. Über Lautsprecher gelangt die konvertierte Stimme zurück ins Mikrofon — Echo, Brummen und Rückkopplung.
+> **Trage immer Kopfhörer** im Live-Betrieb. Über Lautsprecher gelangt die konvertierte Stimme zurück ins Mikrofon - Echo, Brummen und Rückkopplung.
 
 ### Routing zu Discord, OBS, Spielen oder VRChat
 
@@ -33,7 +33,7 @@ Zum Teilen oder Sichern nutze **Voice Bank → Open folder** für die `.yvoice`-
 2. Wähle in **YuneVoix** dein physisches Mikrofon als Eingang und **`CABLE Input`** als Ausgabegerät.
 3. Wähle in **Discord, OBS, VRChat oder deinem Spiel** **`CABLE Output`** als Mikrofon.
 4. *(Optional)* Um dich selbst zu hören: öffne **Windows-Soundeinstellungen → Aufnahme → CABLE Output → Eigenschaften → Abhören**, aktiviere **„Dieses Gerät als Wiedergabequelle verwenden“** und wähle deine Kopfhörer.
-5. **In Discord** deaktiviere **Rauschunterdrückung (Krisp)** und die **automatische Eingangsempfindlichkeit** für dieses Mikrofon — sie schneiden Atemzüge und leise Wörter ab, und YuneVoix reinigt den Eingang bereits.
+5. **In Discord** deaktiviere **Rauschunterdrückung (Krisp)** und die **automatische Eingangsempfindlichkeit** für dieses Mikrofon - sie schneiden Atemzüge und leise Wörter ab, und YuneVoix reinigt den Eingang bereits.
 
 ### Erwartete Latenz
 

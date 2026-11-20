@@ -28,7 +28,7 @@ Cuando hayas ejecutado `run-training` al menos una vez y tengas una voz `.cvc` l
 1. Elige **Model** (y **Checkpoint** si la voz tiene varios pasos guardados).
 2. **Pitch (semitones)**: sube o baja tu tono para encajar con la voz objetivo (`+12` = una octava arriba, `-12` = una octava abajo).
    - **Pitch match**: ¡no adivines! Suelta clips de la voz del modelo en Pitch match para medir sus Hz medianos, luego habla mientras conviertes para que CVC mida tu voz y sugiera el ajuste exacto (**Apply**).
-3. **Advanced pitch** *(contraído por defecto — la mayoría de voces no lo necesitan)*:
+3. **Advanced pitch** *(contraído por defecto - la mayoría de voces no lo necesitan)*:
    - **Pitch offset (Hz)**: suma un desplazamiento fijo en Hz tras el cambio en semitonos. Valores positivos suben más las notas graves que las agudas (estrechan el rango); los negativos lo amplían.
    - **Pitch ceiling (Hz)** y **Above the ceiling (%)**: frena los picos agudos por encima del techo manteniendo afinadas las notas por debajo (ideal para cantar; `0%` se detiene en el techo).
 4. **Formant**: cambia la resonancia vocal (qué tan "grande" o "pequeño" suena el hablante) sin cambiar el tono (`0` = formante natural del modelo).

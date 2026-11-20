@@ -14,7 +14,7 @@ Créer une voix dans Causal Voice Changer consiste à affiner (fine-tune) le dé
 
 - Rassemblez des enregistrements propres d'**un seul locuteur** (sans musique de fond, forte réverbération ni voix superposées).
 - Vous pouvez pointer vers un **fichier audio unique** ou un **dossier** contenant plusieurs fichiers.
-- Aucun découpage ni rééchantillonnage manuel n'est nécessaire — CVC s'en charge automatiquement.
+- Aucun découpage ni rééchantillonnage manuel n'est nécessaire - CVC s'en charge automatiquement.
 
 ## 2. Entraîner avec l'interface graphique (Méthode débutant)
 

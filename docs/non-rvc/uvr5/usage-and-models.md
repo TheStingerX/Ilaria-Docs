@@ -51,18 +51,18 @@ Use this guide to configure UVR5 properly and pick the best models for separatin
 
 ## 3. Recommended RVC dataset cleaning workflow
 
-1. **Step 1 — Separate Vocals**: run your track through **`BS-Roformer-Viperx-1297`** (MDX-Net tab, GPU Conversion on).
-2. **Step 2 — Remove Harmonies / Backing Vocals** *(if present)*: pass the isolated vocal stem through **`5_HP-Karaoke-UVR`** (VR Architecture tab).
-3. **Step 3 — Remove Reverb & Echo**: run **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** (or **`UVR-DeEcho-DeReverb`** at Aggression `3–5` / **`UVR-De-Echo-Normal`**).
-4. **Step 4 — Final De-Noise** *(only if hiss or artifacts remain)*: run **`UVR-DeNoise`** (with low or negative aggression on vocals) or **`UVR-DeNoise-Lite`**. Listen to the dry output in headphones and compare against the previous step so you don't over-process consonants.
+1. **Step 1 - Separate Vocals**: run your track through **`BS-Roformer-Viperx-1297`** (MDX-Net tab, GPU Conversion on).
+2. **Step 2 - Remove Harmonies / Backing Vocals** *(if present)*: pass the isolated vocal stem through **`5_HP-Karaoke-UVR`** (VR Architecture tab).
+3. **Step 3 - Remove Reverb & Echo**: run **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** (or **`UVR-DeEcho-DeReverb`** at Aggression `3–5` / **`UVR-De-Echo-Normal`**).
+4. **Step 4 - Final De-Noise** *(only if hiss or artifacts remain)*: run **`UVR-DeNoise`** (with low or negative aggression on vocals) or **`UVR-DeNoise-Lite`**. Listen to the dry output in headphones and compare against the previous step so you don't over-process consonants.
 
 ## 4. Troubleshooting common errors
 
 - **Out of Memory (`RuntimeError`) or stuck at 5% on DirectML (AMD/Intel)**:
   - Open **Choose MDX-Net Model → Edit Model Config** (or edit the model's `.yaml` in `models\MDX_Net_Models\model_data\mdx_c_configs\`) and lower `chunk_size` (ensure **Segment Default** is checked in Advanced MDX Options):
-    - `352800` (8s) — default for most models; max for ~8 GB AMD/Intel GPUs.
-    - `220500` (5s) or `200655` (4.5s) — safe for 4–6 GB VRAM cards.
-    - `112455` (2.55s) — minimum safe starting point if crashes persist.
+    - `352800` (8s) - default for most models; max for ~8 GB AMD/Intel GPUs.
+    - `220500` (5s) or `200655` (4.5s) - safe for 4–6 GB VRAM cards.
+    - `112455` (2.55s) - minimum safe starting point if crashes persist.
   - On NVIDIA cards with 2–4 GB VRAM, set **CUDA Sysmem Fallback Policy** to **Prefer Sysmem Fallback** in NVIDIA Control Panel.
 - **Roformer missing from Ensemble / Vocal Splitter**: open its `.yaml` and rename stem labels from `other` / `vocals` / `Karaoke` to case-sensitive **`Instrumental`** and **`Vocals`**.
 - **PC freezes during separation**: set UVR's priority to **Idle** in Windows Task Manager.

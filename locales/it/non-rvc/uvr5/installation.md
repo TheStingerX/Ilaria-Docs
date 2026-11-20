@@ -35,10 +35,10 @@ I pacchetti ufficiali per Windows e macOS includono già un ambiente isolato Pyt
 
 Alcuni modelli della community (come `dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`) non compaiono nel Download Center e richiedono sia il file `.ckpt` che il file di configurazione `.yaml`:
 
-- **Metodo A — Opzione Install Model (Patch #10+)**:
+- **Metodo A - Opzione Install Model (Patch #10+)**:
   1. Fai tasto destro dentro l'elenco **Choose MDX-Net Model** e clicca **Install Model**.
   2. Seleziona il file `.ckpt` e il relativo `.yaml` quando richiesto.
-- **Metodo B — Installazione manuale**:
+- **Metodo B - Installazione manuale**:
   1. Copia il file `.ckpt` (o `.onnx`) in `Ultimate Vocal Remover\models\MDX_Net_Models\`.
   2. Copia il file `.yaml` in `Ultimate Vocal Remover\models\MDX_Net_Models\model_data\mdx_c_configs\`.
   3. Seleziona il modello in UVR5, premi **Yes** per riconoscerlo, scegli **Roformer** (quasi sempre **non-v2**; `BS` o `Mel` in base al nome del modello) e indica il file `.yaml`.

@@ -8,14 +8,14 @@ permalink: /non-rvc/causal-voice-changer/overview/
 
 [GitHub](https://github.com/mojowozo/Causal-Voice-Changer) · [Releases](https://github.com/mojowozo/Causal-Voice-Changer/releases)
 
-**Causal Voice Changer (CVC)** is a **48 kHz** real-time AI voice changer built to bridge the gap between ultra-low-latency systems (like Beatrice) and slower, high-fidelity systems (like RVC). Instead of trading away sound quality for speed—or speed for quality—CVC uses a distilled version of **ContentVec** and **RMVPE** in a causal architecture to deliver both clean audio and low delay.
+**Causal Voice Changer (CVC)** is a **48 kHz** real-time AI voice changer built to bridge the gap between ultra-low-latency systems (like Beatrice) and slower, high-fidelity systems (like RVC). Instead of trading away sound quality for speed - or speed for quality - CVC uses a distilled version of **ContentVec** and **RMVPE** in a causal architecture to deliver both clean audio and low delay.
 
 ## How CVC differs from RVC (explained simply)
 
 Traditional **RVC** was originally designed to convert complete audio files, not live streams:
 
 1. RVC grabs a block of your voice, converts it, and stitches it onto the previous block using a **crossfade**.
-2. When you lower the block size to reduce delay, RVC has less context—so quality and pitch accuracy drop. If you hold a note or draw out a word, you can often hear the seams between blocks as warbling or crackling.
+2. When you lower the block size to reduce delay, RVC has less context - so quality and pitch accuracy drop. If you hold a note or draw out a word, you can often hear the seams between blocks as warbling or crackling.
 
 **Causal Voice Changer (CVC)** works differently:
 
@@ -27,7 +27,7 @@ Traditional **RVC** was originally designed to convert complete audio files, not
 
 While CVC's source code is under the **MIT license**, the included pretrained base model was trained on **EARS (CC BY-NC)**, **VCTK**, and **LibriTTS-R**.
 
-> **Non-commercial use only**: Because of the EARS dataset, you may **not** use the included pretrained base model—or **any voice finetuned from it**—for commercial purposes.
+> **Non-commercial use only**: Because of the EARS dataset, you may **not** use the included pretrained base model - or **any voice finetuned from it** - for commercial purposes.
 
 ## Supported platforms & hardware
 

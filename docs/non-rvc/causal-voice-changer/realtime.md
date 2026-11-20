@@ -28,7 +28,7 @@ Once you have run `run-training` at least once and have a `.cvc` voice ready, la
 1. Pick your **Model** (and **Checkpoint** if the voice has multiple saved steps).
 2. **Pitch (semitones)**: shift your voice up or down to match the target voice (`+12` = one octave up, `-12` = one octave down).
    - **Pitch match**: don't guess! Drop clips of the model's voice into Pitch match to measure its median Hz, then talk while converting so CVC measures your voice and suggests the exact shift (**Apply**).
-3. **Advanced pitch** *(collapsed by default — most voices don't need it)*:
+3. **Advanced pitch** *(collapsed by default - most voices don't need it)*:
    - **Pitch offset (Hz)**: adds a fixed Hz offset after the semitone shift. Positive values raise low notes more than high notes (narrowing range); negative values widen it.
    - **Pitch ceiling (Hz)** & **Above the ceiling (%)**: pulls down squeaky high peaks above the ceiling while keeping notes below it in tune (great for singing; `0%` stops strictly at the ceiling).
 4. **Formant**: shifts vocal resonance (how "big" or "small" the speaker sounds) without changing pitch (`0` = model's natural formant).

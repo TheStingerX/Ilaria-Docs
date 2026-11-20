@@ -20,7 +20,7 @@ Chi supporta il progetto su [Ko-fi](https://ko-fi.com/yunevoix) ottiene l'access
 
 - **Tonalità errata**: imposta manualmente **Settings → Song Cover → Octave** su **`−12`**, **`0`** o **`+12`** invece di `Auto`.
 - **Duetti e cori**: l'opzione **"Lead vocal only"** dà il risultato più pulito. Con due cantanti principali entrambi ricevono la voce scelta (non è possibile isolarne uno solo).
-- **Copyright**: il brano resta di proprietà dei rispettivi autori — verifica le regole della piattaforma e i diritti prima di pubblicare le cover.
+- **Copyright**: il brano resta di proprietà dei rispettivi autori - verifica le regole della piattaforma e i diritti prima di pubblicare le cover.
 
 ## Licenza PREMIUM e attivazione
 

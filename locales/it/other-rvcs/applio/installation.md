@@ -8,7 +8,7 @@ permalink: /ilaria-rvc/applio/installation/
 
 [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
-Applio ha **due opzioni di download** che eseguono lo **stesso identico motore** — cambiano solo la **UI e il metodo di installazione**:
+Applio ha **due opzioni di download** che eseguono lo **stesso identico motore** - cambiano solo la **UI e il metodo di installazione**:
 1. **Desktop App**: apre una finestra applicativa nativa e gestisce l'ambiente del motore al primo avvio.
 2. **Gradio Web Interface**: avvia l'applicazione Python e apre una interfaccia web locale nel browser (disponibile come pacchetto Windows compilato o installazione Python da sorgente).
 

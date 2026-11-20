@@ -14,7 +14,7 @@ Beim Erstellen einer Stimme in Causal Voice Changer wird der Basis-Decoder auf d
 
 - Sammle saubere Aufnahmen **eines einzelnen Sprechers** (ohne Hintergrundmusik, starken Hall oder überlappende Stimmen).
 - Du kannst eine **einzelne Audiodatei** oder einen **Ordner** mit mehreren Dateien angeben.
-- Kein manuelles Schneiden oder Resampling nötig — CVC erledigt das automatisch.
+- Kein manuelles Schneiden oder Resampling nötig - CVC erledigt das automatisch.
 
 ## 2. Mit dem Training-Fenster trainieren (Einsteiger-Methode)
 
@@ -27,7 +27,7 @@ Beim Erstellen einer Stimme in Causal Voice Changer wird der Basis-Decoder auf d
    - **Save every**: Intervall für `.cvc`-Checkpoints (Standard `10.000`).
    - **Custom base** *(optional)*: aktivieren, um statt der Standard-EARS-Basis ein eigenes Basismodell aus `custom-base/` zu nutzen.
 3. Klicke auf **Start**.
-4. Du kannst jederzeit **Stop** klicken (oder das Fenster schließen) — CVC speichert einen Checkpoint, sodass du später mit demselben Modellnamen **fortsetzen** kannst.
+4. Du kannst jederzeit **Stop** klicken (oder das Fenster schließen) - CVC speichert einen Checkpoint, sodass du später mit demselben Modellnamen **fortsetzen** kannst.
 
 ## 3. Über die Kommandozeile trainieren (Optional)
 

@@ -20,7 +20,7 @@ Supporters on [Ko-fi](https://ko-fi.com/yunevoix) gain access to **YuneVoix PREM
 
 - **Wrong pitch**: set **Settings → Song Cover → Octave** manually to **`−12`**, **`0`**, or **`+12`** instead of `Auto`.
 - **Duets & backing vocals**: **"Lead vocal only"** gives the cleanest result. If a song has two lead singers, both are converted to the chosen voice (a single singer cannot be isolated).
-- **Copyright**: the song still belongs to its authors — check copyright and platform rules before publishing covers.
+- **Copyright**: the song still belongs to its authors - check copyright and platform rules before publishing covers.
 
 ## PREMIUM Licence & Activation
 
@@ -35,7 +35,7 @@ Supporters on [Ko-fi](https://ko-fi.com/yunevoix) gain access to **YuneVoix PREM
 - **One PC per licence**: a copied PREMIUM folder or licence will not unlock Song Cover on another computer.
 - **Hardware changes**: the licence is tied to your **motherboard**, **system disk**, and **Windows installation**.
   - Changing **one** of them is fine (and upgrading your GPU, RAM, or monitor does not count at all).
-  - Changing **two at once** (e.g., a new system disk with a fresh Windows install) requires a new licence — copy the new request code and contact support with your order.
+  - Changing **two at once** (e.g., a new system disk with a fresh Windows install) requires a new licence - copy the new request code and contact support with your order.
 
 ## Troubleshooting
 

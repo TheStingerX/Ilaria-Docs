@@ -20,7 +20,7 @@ Quienes apoyan el proyecto en [Ko-fi](https://ko-fi.com/yunevoix) obtienen acces
 
 - **Tono incorrecto**: ajusta manualmente **Settings → Song Cover → Octave** en **`−12`**, **`0`** o **`+12`** en lugar de `Auto`.
 - **Dúos y coros**: **"Lead vocal only"** da el resultado más limpio. Si hay dos cantantes principales, ambos reciben la voz elegida (no se puede aislar solo a uno).
-- **Derechos de autor**: la canción sigue perteneciendo a sus autores — revisa las normas de la plataforma y el copyright antes de publicar covers.
+- **Derechos de autor**: la canción sigue perteneciendo a sus autores - revisa las normas de la plataforma y el copyright antes de publicar covers.
 
 ## Licencia PREMIUM y activación
 

@@ -23,7 +23,7 @@ permalink: /non-rvc/causal-voice-changer/performance-and-tools/
   - **PM (fastest)**: mais rápido, mas menos suave.
 - **Pitch smoothing** *(apenas RMVPE)*: acompanha o tom como uma linha contínua sem saltos de oitava em notas longas (sem atraso extra).
 - **Volume envelope**: `0` segue exatamente o volume do teu microfone; `1` mantém o volume próprio do modelo.
-- **Fast GPU replay** *(ativo por predefinição)*: grava o trabalho da GPU uma vez e repete-o em cada bloco — cerca de **2× mais rápido** e muito mais estável (ex. uma RTX 5050 converte um chunk de `20 ms` em `4,4 ms` em vez de `9,7 ms`). Desliga apenas se a tua GPU falhar com ele.
+- **Fast GPU replay** *(ativo por predefinição)*: grava o trabalho da GPU uma vez e repete-o em cada bloco - cerca de **2× mais rápido** e muito mais estável (ex. uma RTX 5050 converte um chunk de `20 ms` em `4,4 ms` em vez de `9,7 ms`). Desliga apenas se a tua GPU falhar com ele.
 - **Auxiliares de qualidade e costuras**:
   - **Soften sudden treble**: suaviza cliques breves nos agudos a meio da palavra (adiciona `5 ms` de atraso).
   - **Match level across seams**: mantém o nível dos agudos estável entre blocos (sem atraso extra).

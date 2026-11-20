@@ -8,7 +8,7 @@ permalink: /non-rvc/yunevoix/overview/
 
 [Hugging Face (Descarga)](https://huggingface.co/JohnBlvck/YUNE/tree/main) · [Ko-fi (Soporte y Premium)](https://ko-fi.com/yunevoix)
 
-YuneVoix es una aplicación de conversión de voz por IA en tiempo real para Windows, impulsada por el motor **YUNE**. Al igual que RVC, transforma tu voz en la de otra persona — tanto para hablar como para cantar, en directo o sin conexión — pero **sin necesidad de entrenar un modelo de voz**. Todo se ejecuta localmente en tu tarjeta gráfica: sin nube, sin cuenta y tu audio nunca sale de tu PC.
+YuneVoix es una aplicación de conversión de voz por IA en tiempo real para Windows, impulsada por el motor **YUNE**. Al igual que RVC, transforma tu voz en la de otra persona - tanto para hablar como para cantar, en directo o sin conexión - pero **sin necesidad de entrenar un modelo de voz**. Todo se ejecuta localmente en tu tarjeta gráfica: sin nube, sin cuenta y tu audio nunca sale de tu PC.
 
 ## Cómo funciona
 
@@ -30,8 +30,8 @@ En modo **LIVE**, el audio se procesa en pequeños bloques de unos **160 ms**, c
 | **Herramientas de tono** (shift, autotune, estabilizador, armonía) | Incluido | Incluido |
 | **Carácter vocal y efectos** | Incluido | Incluido |
 | **Limpieza de entrada** (eliminación de ruido/clics, speech gate) | Incluido | Incluido |
-| **Song Cover** (separar voces, convertir y mezclar) | — | Incluido |
-| **Karaoke** (cantar con letras en pantalla) | — | Incluido |
+| **Song Cover** (separar voces, convertir y mezclar) | - | Incluido |
+| **Karaoke** (cantar con letras en pantalla) | - | Incluido |
 | **Licencia sin conexión** | No requerida | `license.yvl` por equipo |
 
 > **YuneVoix PREMIUM** está disponible para quienes apoyan el proyecto en [Ko-fi](https://ko-fi.com/yunevoix). El acceso se gestiona de forma privada por Ko-fi o DM, y la licencia funciona completamente sin conexión.

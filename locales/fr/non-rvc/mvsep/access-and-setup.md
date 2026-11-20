@@ -20,7 +20,7 @@ MVSep fonctionnant dans le cloud, il n'y a **rien à installer**. Cependant, bie
 
 - **Format de sortie** : choisissez toujours **WAV** (ou **FLAC**) avant de lancer une séparation si vous entraînez un modèle RVC ou enchaînez plusieurs étapes de nettoyage.
 - **Post-traitement / enchaînement** : connectez-vous, allez dans **Advanced settings → Home Screen** et activez **« Show post-processing algorithm »** pour appliquer un modèle de nettoyage juste après la séparation.
-- **Envoi ou téléchargement lent ?** MVSep propose des miroirs régionaux — basculez sur l'option miroir si le site principal est lent.
+- **Envoi ou téléchargement lent ?** MVSep propose des miroirs régionaux - basculez sur l'option miroir si le site principal est lent.
 
 ## 3. Crédits prépayés et API complète (Optionnel)
 

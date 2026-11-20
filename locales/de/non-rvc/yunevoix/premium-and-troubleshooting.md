@@ -20,7 +20,7 @@ Unterstützer auf [Ko-fi](https://ko-fi.com/yunevoix) erhalten Zugang zu **YuneV
 
 - **Falsche Tonhöhe**: stelle **Settings → Song Cover → Octave** manuell auf **`−12`**, **`0`** oder **`+12`** statt `Auto`.
 - **Duette & Backing Vocals**: **„Lead vocal only“** liefert das sauberste Ergebnis. Bei zwei Leadsängern erhalten beide die gewählte Stimme (ein einzelner Sänger lässt sich nicht isolieren).
-- **Urheberrecht**: der Song gehört weiterhin den Urhebern — prüfe Plattformregeln und Copyright vor dem Veröffentlichen von Covern.
+- **Urheberrecht**: der Song gehört weiterhin den Urhebern - prüfe Plattformregeln und Copyright vor dem Veröffentlichen von Covern.
 
 ## PREMIUM-Lizenz & Aktivierung
 

@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/rvc-model-merger/
 
 > **Wichtige Hinweise vorab**
 > - **Dieses Tool ist ausschließlich ein Model Merger**: Es konvertiert kein Audio, bietet keine Live-Mikrofonkonvertierung und trainiert keine neuen Modelle. Es mischt lediglich zwei oder mehr vorhandene RVC-`.pth`-Modelle zu einer neuen `.pth`-Datei.
-> - **Zusammenführen über verschiedene Sample-Raten hinweg wird unterstützt**: Entgegen der Angabe in der Repository-README kannst du Modelle mit **unterschiedlichen Sample-Raten** (z. B. `32k`, `40k`, `48k`) über **Encoder-only** zusammenführen — Voraussetzung sind lediglich **dieselbe RVC-Version** (`v1` oder `v2`) und **dieselbe Vocoder-Architektur** (`HiFi-GAN` oder `RefineGAN`).
+> - **Zusammenführen über verschiedene Sample-Raten hinweg wird unterstützt**: Entgegen der Angabe in der Repository-README kannst du Modelle mit **unterschiedlichen Sample-Raten** (z. B. `32k`, `40k`, `48k`) über **Encoder-only** zusammenführen - Voraussetzung sind lediglich **dieselbe RVC-Version** (`v1` oder `v2`) und **dieselbe Vocoder-Architektur** (`HiFi-GAN` oder `RefineGAN`).
 
 ## Kompatibilitätsregeln
 

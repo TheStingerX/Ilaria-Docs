@@ -33,4 +33,4 @@ MVSep **non ha abbonamenti mensili**: gli algoritmi principali restano gratuiti 
 | **Formato di uscita** | MP3 | **WAV 16-bit / FLAC 16-bit** | **WAV 32-bit float / FLAC 24-bit** |
 | **Batch e API complete** | No | Limitato | **Accesso completo** |
 
-> **Consiglio**: creare anche solo un **account gratuito** su [mvsep.com](https://mvsep.com/) elimina i CAPTCHA, velocizza la coda e sblocca il download lossless in **WAV / FLAC** — fondamentale per preparare dataset RVC.
+> **Consiglio**: creare anche solo un **account gratuito** su [mvsep.com](https://mvsep.com/) elimina i CAPTCHA, velocizza la coda e sblocca il download lossless in **WAV / FLAC** - fondamentale per preparare dataset RVC.
