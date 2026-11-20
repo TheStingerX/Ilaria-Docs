@@ -61,6 +61,8 @@ Si la detección automática elige el backend incorrecto, define la variable de 
 
 ## 4. Actualizar CVC
 
-Al actualizar a una versión nueva:
+Desde la versión **v0.3.1**, CVC incluye un **actualizador integrado** directamente en la aplicación. La comprobación automática está activa por defecto y puede desactivarse en la página **About**. Las instalaciones existentes también actualizan `weights/causalvc-base/` automáticamente en el siguiente inicio o entrenamiento.
+
+Al actualizar manualmente o desde código fuente:
 - En Windows, si usas el código fuente y la interfaz cambió, ejecuta `run-realtime.bat` / `run-training.bat` con `CAUSALVC_REBUILD=1` para recompilar WinUI 3.
 - En Linux, la interfaz Rust se recompila automáticamente en el siguiente arranque tras actualizar.

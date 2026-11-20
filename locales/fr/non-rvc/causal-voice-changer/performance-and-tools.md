@@ -11,7 +11,7 @@ description: "Enregistrez vos sessions directement dans CausalVC Realtime (déma
 
 ### Buffering
 
-- **Chunk** (par pas de `20 ms`) : quantité d'audio convertie à la fois. Le délai total correspond au lookahead fixe de **60 ms** de CVC + **1 chunk** + les tampons de la carte son/du câble virtuel.
+- **Chunk** (jusqu'à `10 ms` / `20 ms`) : quantité d'audio convertie à la fois. Le délai total correspond au lookahead fixe de **50 ms** sur la base 100 Hz v4 (`60 ms` sur les anciennes voix 50 Hz) + **1 chunk** + les tampons de la carte son/du câble virtuel.
   - Chunks plus courts = latence plus faible, mais GPU plus sollicité.
   - En cas de craquements ou de coupures (ou sur CPU avec une ancienne carte AMD), montez **Chunk** à `40 ms` ou `60 ms+`.
 - **Extra inference buffer** : quantité de parole récente examinée en arrière pour chaque bloc. Plus de contexte stabilise le timbre et la hauteur à faible coût GPU, **sans ajouter de délai**.

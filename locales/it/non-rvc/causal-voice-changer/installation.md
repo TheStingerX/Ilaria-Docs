@@ -61,6 +61,8 @@ Se il rilevamento automatico sceglie il backend sbagliato, imposta la variabile 
 
 ## 4. Aggiornare CVC
 
-Quando aggiorni a una nuova versione:
+Dalla versione **v0.3.1**, CVC include un **updater integrato** direttamente nell'app. Il controllo automatico degli aggiornamenti è attivo di default e può essere disattivato nella pagina **About**. Le installazioni esistenti aggiornano anche `weights/causalvc-base/` automaticamente al primo avvio o training successivo.
+
+Quando aggiorni manualmente o dai sorgenti:
 - Su Windows, se usi i sorgenti e l'interfaccia è cambiata, avvia `run-realtime.bat` / `run-training.bat` con `CAUSALVC_REBUILD=1` per ricompilare WinUI 3.
 - Su Linux, l'interfaccia Rust si ricompila automaticamente al primo avvio dopo l'aggiornamento.
