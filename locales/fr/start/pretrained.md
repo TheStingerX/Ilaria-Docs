@@ -36,7 +36,7 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | Pretrained | Sample rate(s) | Vocodeur | Embedder | Dépôt / Source |
 | --- | --- | --- | --- | --- |
 | **Stock RVC v2 (Par défaut)** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | **Recommandé (Stock RVC)** |
-| **AnimePretrain** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **AnimePretrain** | `32 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **DMR v2** | `32 kHz` | HiFi-GAN | Non spécifié | `ourbz/DMR-V2-ReUpload` |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Non spécifié | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Non spécifié | `Loren85/IMA-TEST-V1` |
@@ -54,23 +54,23 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
 | **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
-| **Nezox** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Nezox** | `32 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Ov2Super** | `32 kHz` | Non spécifié | Non spécifié | `poiqazwsx/Ov2Super32kfix` |
 | **PaBP** | `32 kHz` | HiFi-GAN | Non spécifié | `Razer112/pabp-v.5` |
 | **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Non spécifié | `SimplCup/RefGanVCTKV2` |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | `Aznamir/RefineGAN` |
 | **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Non spécifié | `SimplCup/RefineGanVCTKV1` |
 | **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Non spécifié | Non spécifié | `MUSTAR/Rigel-rvc-base-pretrained-model` |
-| **RIN_E3** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **RIN_E3** | `40 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Non spécifié | `Sztef/SingerPreTrained` |
-| **Snowie** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
-| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
-| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
-| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Snowie** | `40 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `blaise-tk/TITAN` |
 | **UKA** | `32 kHz` | HiFi-GAN | Non spécifié | `Plasmati/Pretrains` |
-| **UKR** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
-| **VocalCore** et **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **UKR** | `32 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **VocalCore** et **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 
 > **Note de compatibilité** : dans Ilaria RVC, l'entraînement RefineGAN est pris en charge spécifiquement à `32 kHz` avec RVC v2 et guidage F0. Choisir un pretrain RefineGAN `40 kHz` ou `44.1 kHz` tout en réglant l'entraînement sur `32 kHz` échouera ou produira un résultat inutilisable.
 

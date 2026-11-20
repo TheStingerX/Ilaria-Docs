@@ -36,7 +36,7 @@ If any of these settings do not match the pretrained pair, training will either 
 | Pretrained | Sample rate(s) | Vocoder | Embedder | Repository / Source |
 | --- | --- | --- | --- | --- |
 | **Stock RVC v2 (Default)** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | **Recommended stock RVC** |
-| **AnimePretrain** | `32 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+| **AnimePretrain** | `32 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **DMR v2** | `32 kHz` | HiFi-GAN | Not specified | `ourbz/DMR-V2-ReUpload` |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Not specified | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Not specified | `Loren85/IMA-TEST-V1` |
@@ -54,23 +54,23 @@ If any of these settings do not match the pretrained pair, training will either 
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Not specified | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Not specified | `shiromiya/nanashi-pretrain` |
 | **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | HiFi-GAN | Not specified | `shiromiya/nanashi-pretrain` |
-| **Nezox** | `32 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+| **Nezox** | `32 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Ov2Super** | `32 kHz` | Not specified | Not specified | `poiqazwsx/Ov2Super32kfix` |
 | **PaBP** | `32 kHz` | HiFi-GAN | Not specified | `Razer112/pabp-v.5` |
 | **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Not specified | `SimplCup/RefGanVCTKV2` |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | `Aznamir/RefineGAN` |
 | **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Not specified | `SimplCup/RefineGanVCTKV1` |
 | **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Not specified | Not specified | `MUSTAR/Rigel-rvc-base-pretrained-model` |
-| **RIN_E3** | `40 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+| **RIN_E3** | `40 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Not specified | `Sztef/SingerPreTrained` |
-| **Snowie** | `40 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
-| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
-| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
-| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+| **Snowie** | `40 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Not specified | `blaise-tk/TITAN` |
 | **UKA** | `32 kHz` | HiFi-GAN | Not specified | `Plasmati/Pretrains` |
-| **UKR** | `32 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
-| **VocalCore** & **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+| **UKR** | `32 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **VocalCore** & **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Not specified | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 
 !!!note
 **Note on Legacy Core (`V1.5` and `V1.5v2`):**

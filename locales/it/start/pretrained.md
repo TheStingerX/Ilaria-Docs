@@ -36,7 +36,7 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 | Pretrained | Sample rate | Vocoder | Embedder | Repository / Fonte |
 | --- | --- | --- | --- | --- |
 | **Stock RVC v2 (Predefinito)** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | **Consigliato (Stock RVC)** |
-| **AnimePretrain** | `32 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
+| **AnimePretrain** | `32 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **DMR v2** | `32 kHz` | HiFi-GAN | Non specificato | `ourbz/DMR-V2-ReUpload` |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Non specificato | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Non specificato | `Loren85/IMA-TEST-V1` |
@@ -54,23 +54,23 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non specificato | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non specificato | `shiromiya/nanashi-pretrain` |
 | **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | HiFi-GAN | Non specificato | `shiromiya/nanashi-pretrain` |
-| **Nezox** | `32 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
+| **Nezox** | `32 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Ov2Super** | `32 kHz` | Non specificato | Non specificato | `poiqazwsx/Ov2Super32kfix` |
 | **PaBP** | `32 kHz` | HiFi-GAN | Non specificato | `Razer112/pabp-v.5` |
 | **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Non specificato | `SimplCup/RefGanVCTKV2` |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | `Aznamir/RefineGAN` |
 | **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Non specificato | `SimplCup/RefineGanVCTKV1` |
 | **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Non specificato | Non specificato | `MUSTAR/Rigel-rvc-base-pretrained-model` |
-| **RIN_E3** | `40 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
+| **RIN_E3** | `40 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Non specificato | `Sztef/SingerPreTrained` |
-| **Snowie** | `40 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
-| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
-| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
-| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
+| **Snowie** | `40 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | `blaise-tk/TITAN` |
 | **UKA** | `32 kHz` | HiFi-GAN | Non specificato | `Plasmati/Pretrains` |
-| **UKR** | `32 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
-| **VocalCore** e **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
+| **UKR** | `32 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **VocalCore** e **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non specificato | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 
 > **Nota di compatibilità**: in Ilaria RVC il training con RefineGAN è supportato specificamente a `32 kHz` con RVC v2 e pitch guidance. Scegliere un pretrain RefineGAN a `40 kHz` o `44.1 kHz` impostando il training a `32 kHz` causerà errori o un risultato inutilizzabile.
 
