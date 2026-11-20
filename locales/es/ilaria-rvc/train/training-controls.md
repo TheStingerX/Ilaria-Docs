@@ -3,7 +3,7 @@ label: "Controles de entrenamiento y flujo de trabajo"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen..."
+description: "La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes."
 ---
 # Controles de entrenamiento y flujo de trabajo
 

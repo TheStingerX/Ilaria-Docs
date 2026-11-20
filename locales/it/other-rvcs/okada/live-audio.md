@@ -3,7 +3,7 @@ label: "Audio live e routing"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
-description: "Inizia con le cuffie e un unico percorso audio locale. Quando senti una voce convertita senza disturbi nelle cuffie, collegala a una chiamata o a un..."
+description: "Inizia con le cuffie e un unico percorso audio locale. Quando senti una voce convertita senza disturbi nelle cuffie, collegala a una chiamata o a un registratore."
 ---
 # Convertire l'audio del microfono con w-okada VCClient
 

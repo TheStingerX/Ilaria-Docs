@@ -3,7 +3,7 @@ label: "Instalação e atualizações"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
-description: "Baixe a versão NVIDIA suportada em Hugging Face. Extraia todo o arquivo em uma pasta local gravável e execute RUN_ILARIA_RVC.bat lá. O inicializador e o..."
+description: "Baixe a versão NVIDIA suportada em Hugging Face. Extraia todo o arquivo em uma pasta local gravável e execute RUN_ILARIA_RVC.bat lá."
 ---
 # Instalação e atualizações
 

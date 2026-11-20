@@ -3,7 +3,7 @@ label: "Configure un micrófono en vivo"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
-description: "Demuestre que su modelo funciona con un clip grabado antes de configurar el audio en vivo. Utilice auriculares para monitorear para que el micrófono no..."
+description: "Demuestre que su modelo funciona con un clip grabado antes de configurar el audio en vivo."
 ---
 # Use Applio con un micrófono
 

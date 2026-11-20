@@ -3,7 +3,7 @@ label: "Aufnahmen konvertieren"
 icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
-description: "Beginnen Sie mit einer kurzen Aufnahme, die Sie in einem normalen Mediaplayer deutlich hören können, sowie einem exportierten RVC-Modell, zu dessen..."
+description: "Beginnen Sie mit einer kurzen Aufnahme, die Sie in einem normalen Mediaplayer deutlich hören können, sowie einem exportierten RVC-Modell, zu dessen Verwendung Sie berechtigt sind."
 ---
 
 # Aufnahmen in RVC WebUI (Mainline - Original RVC) konvertieren

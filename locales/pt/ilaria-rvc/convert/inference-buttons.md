@@ -3,7 +3,7 @@ label: "Controles de inferência explicados"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
-description: "A inferência usa uma voz treinada para converter uma gravação. Para um primeiro teste, carregue um WAV curto e limpo, selecione uma voz, deixe o Pitch em..."
+description: "A inferência usa uma voz treinada para converter uma gravação."
 ---
 
 # Todos os controles de inferência explicados

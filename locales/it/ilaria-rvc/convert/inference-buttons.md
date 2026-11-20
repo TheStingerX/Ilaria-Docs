@@ -3,7 +3,7 @@ label: "Spiegazione dei controlli di inferenza"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
-description: "L'inferenza utilizza una voce addestrata per convertire una registrazione. Per un primo test, carica un breve WAV pulito, seleziona una voce, lascia il..."
+description: "L'inferenza utilizza una voce addestrata per convertire una registrazione."
 ---
 
 # Spiegazione di ogni controllo di inferenza

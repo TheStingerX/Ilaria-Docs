@@ -3,7 +3,7 @@ label: "Gere fala a partir de texto"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
-description: "Applio usa uma voz Edge TTS online para ler seu texto e um modelo RVC para alterar a voz gerada. A voz de origem determina a pronúncia, o ritmo e o idioma..."
+description: "Applio usa uma voz Edge TTS online para ler seu texto e um modelo RVC para alterar a voz gerada. A voz de origem determina a pronúncia, o ritmo e o idioma que ela lê."
 ---
 # Transforme um script curto em fala convertida
 

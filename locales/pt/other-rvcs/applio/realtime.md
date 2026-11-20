@@ -3,7 +3,7 @@ label: "Configure um microfone ao vivo"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
-description: "Prove que seu modelo funciona com um clipe gravado antes de configurar o áudio ao vivo. Use fones de ouvido para monitoramento para que o microfone não..."
+description: "Prove que seu modelo funciona com um clipe gravado antes de configurar o áudio ao vivo."
 ---
 # Use o Applio com um microfone
 

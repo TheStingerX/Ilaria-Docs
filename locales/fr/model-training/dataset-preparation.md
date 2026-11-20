@@ -2,7 +2,7 @@
 label: "🎧 Préparer un ensemble de données"
 order: 95
 permalink: /dataset-preparation/
-description: "Chaque clip apprend au modèle quelque chose sur sa voix cible. Avant l'entraînement, décidez quelles parties de cette voix vous souhaitez que le modèle..."
+description: "Chaque clip apprend au modèle quelque chose sur sa voix cible."
 ---
 # Préparer un ensemble de données vocales
 

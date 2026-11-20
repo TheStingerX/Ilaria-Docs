@@ -2,7 +2,7 @@
 label: "🎵 Stems et mixage"
 order: 91
 permalink: /stems-and-mixing/
-description: "Un stem est une partie isolée d'un mix, comme le vocal ou l'instrumental. RVC est plus facile à contrôler avec une voix claire seule. Si vous disposez de..."
+description: "Un stem est une partie isolée d'un mix, comme le vocal ou l'instrumental. RVC est plus facile à contrôler avec une voix claire seule."
 ---
 # Stems et mixage
 

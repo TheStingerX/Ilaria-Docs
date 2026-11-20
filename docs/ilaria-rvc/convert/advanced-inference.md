@@ -3,7 +3,7 @@ label: "Processing and export"
 icon: ":control_knobs:"
 order: 89
 permalink: /ilaria-rvc/advanced-inference/
-description: "Open Inference Settings, select rmvpe, expand RMVPE High Register and turn on Enable high register. Use this when a very high sung note drops an octave or..."
+description: "Open Inference Settings, select rmvpe, expand RMVPE High Register and turn on Enable high register."
 ---
 # Processing and export
 

@@ -3,7 +3,7 @@ label: "Installa VCClient"
 icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/okada/installation/
-description: "VCClient converte l'audio del microfono in tempo reale. L'interfaccia è il client e il processo di conversione è il server. Per la prima prova, eseguili..."
+description: "VCClient converte l'audio del microfono in tempo reale. L'interfaccia è il client e il processo di conversione è il server."
 ---
 # Installare w-okada VCClient
 

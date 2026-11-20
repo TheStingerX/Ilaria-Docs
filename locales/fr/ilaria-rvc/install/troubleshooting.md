@@ -3,7 +3,7 @@ label: "Journaux et récupération"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
-description: "Commencez avec Pitch 0, un court WAV sec et un modèle connu. Modifiez un paramètre par test. Voir Contrôles d'inférence pour les effets et les options..."
+description: "Commencez avec Pitch 0, un court WAV sec et un modèle connu. Modifiez un paramètre par test. Voir Contrôles d'inférence pour les effets et les options d'exportation."
 ---
 # Journaux et récupération
 

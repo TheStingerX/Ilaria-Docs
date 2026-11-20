@@ -3,7 +3,7 @@ label: "Convertir un enregistrement"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
-description: "Commencez par un court enregistrement que vous pouvez reconnaître instantanément. Le matériel de test oral pourrait être « Pourriez-vous mettre le livre..."
+description: "Commencez par un court enregistrement que vous pouvez reconnaître instantanément."
 ---
 # Convertir un enregistrement dans Applio
 

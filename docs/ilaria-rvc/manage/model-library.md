@@ -3,7 +3,7 @@ label: "Model library and merging"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
-description: "Open Other and import a supported local model or use the download control. Keep a checkpoint and its own index together. Refresh the inference list and..."
+description: "Open Other and import a supported local model or use the download control. Keep a checkpoint and its own index together."
 ---
 # Model library and merging
 

@@ -3,7 +3,7 @@ label: "Installation et mises à jour"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
-description: "Téléchargez la version NVIDIA prise en charge à partir de Hugging Face. Extrayez l'intégralité de l'archive dans un dossier local accessible en écriture..."
+description: "Téléchargez la version NVIDIA prise en charge à partir de Hugging Face."
 ---
 # Installation et mises à jour
 

@@ -2,7 +2,7 @@
 label: "🧠 RVC-Grundlagen"
 order: 94
 permalink: /rvc-fundamentals/
-description: "Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesangsaufnahme und synthetisiert eine Version mit dem Charakter einer trainierten Stimme. Die..."
+description: "Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesangsaufnahme und synthetisiert eine Version mit dem Charakter einer trainierten Stimme."
 ---
 # RVC-Grundlagen
 

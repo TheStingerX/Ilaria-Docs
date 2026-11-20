@@ -3,7 +3,7 @@ label: "Panoramica e piani"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/mvsep/overview/
-description: "MVSep (Music & Voice Separation) è una piattaforma web gratuita basata sul cloud per la separazione e il restauro audio tramite IA. Poiché tutti i modelli..."
+description: "MVSep (Music & Voice Separation) è una piattaforma web gratuita basata sul cloud per la separazione e il restauro audio tramite IA."
 ---
 # MVSep
 

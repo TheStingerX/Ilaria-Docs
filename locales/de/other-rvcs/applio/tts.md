@@ -3,7 +3,7 @@ label: "Sprache aus Text generieren"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
-description: "Applio verwendet eine Online-Edge-TTS-Stimme zum Vorlesen Ihres Textes und ein RVC-Modell zum Ändern der generierten Stimme. Die Ausgangsstimme bestimmt..."
+description: "Applio verwendet eine Online-Edge-TTS-Stimme zum Vorlesen Ihres Textes und ein RVC-Modell zum Ändern der generierten Stimme."
 ---
 # Wandeln Sie ein kurzes Skript in konvertierte Sprache um
 

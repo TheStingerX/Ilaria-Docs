@@ -3,7 +3,7 @@ label: "Live audio and routing"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
-description: "Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder. This order..."
+description: "Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder."
 ---
 # Convert your microphone in w-okada VCClient
 

@@ -3,7 +3,7 @@ label: "Training und Kontrollpunkte"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
-description: "Wählen Sie einen Datensatz und wählen Sie eine kompatible RVC-Architektur, Abtastrate, Tonhöhenführung, Einbetter und Generator/Diskriminator-Vorzüge..."
+description: "Wählen Sie einen Datensatz und wählen Sie eine kompatible RVC-Architektur, Abtastrate, Tonhöhenführung, Einbetter und Generator/Diskriminator-Vorzüge."
 ---
 # Training und Kontrollpunkte
 

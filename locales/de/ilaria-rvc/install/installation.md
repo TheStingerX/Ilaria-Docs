@@ -3,7 +3,7 @@ label: "Installation und Updates"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
-description: "Laden Sie den unterstützten NVIDIA-Build von Hugging Face] herunter. Extrahieren Sie das gesamte Archiv in einen beschreibbaren lokalen Ordner und führen..."
+description: "Laden Sie den unterstützten NVIDIA-Build von Hugging Face] herunter."
 ---
 # Installation und Updates
 

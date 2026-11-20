@@ -3,7 +3,7 @@ label: "Archivos, configuración y mantenimiento del código fuente"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
-description: "Se puede utilizar una exportación de inferencia para la conversión. Para un experimento reanudable, mantenga el par G/D guardado y el optimizador y el..."
+description: "Se puede utilizar una exportación de inferencia para la conversión."
 ---
 # Archivos, configuración y mantenimiento del código fuente
 

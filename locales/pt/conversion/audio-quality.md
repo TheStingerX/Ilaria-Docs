@@ -2,7 +2,7 @@
 label: "🎚️ Tom e qualidade do áudio"
 order: 94
 permalink: /audio-quality/
-description: "Escolha um pequeno trecho que contenha o problema. Faça uma conversão de referência e compare-a com uma configuração alterada de cada vez. Ouça em níveis..."
+description: "Escolha um pequeno trecho que contenha o problema. Faça uma conversão de referência e compare-a com uma configuração alterada de cada vez."
 ---
 # Ajuste o tom e a qualidade do áudio
 

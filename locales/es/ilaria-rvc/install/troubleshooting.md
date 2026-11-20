@@ -3,7 +3,7 @@ label: "Registros y recuperación"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
-description: "Comience con Pitch 0, un WAV corto y seco y un modelo en buen estado. Cambie una configuración por prueba. Consulte Controles de inferencia para conocer..."
+description: "Comience con Pitch 0, un WAV corto y seco y un modelo en buen estado. Cambie una configuración por prueba."
 ---
 # Registros y recuperación
 

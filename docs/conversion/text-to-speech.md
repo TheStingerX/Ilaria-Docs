@@ -2,7 +2,7 @@
 label: "💬 Text to speech"
 order: 93
 permalink: /text-to-speech/
-description: "Text to speech (TTS) generates a source recording from words you type. RVC then applies a separate voice model to that recording. The TTS voice supplies..."
+description: "Text to speech (TTS) generates a source recording from words you type. RVC then applies a separate voice model to that recording."
 ---
 # Text to speech and RVC
 

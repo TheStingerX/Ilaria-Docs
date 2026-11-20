@@ -3,7 +3,7 @@ label: "Guias por aplicativo"
 icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
-description: "Usa Ilaria RVC para treinar modelos e converter gravações. Para o microfone em tempo real no Windows, escolhe Vonovox com NVIDIA ou Okada TG Developed..."
+description: "Usa Ilaria RVC para treinar modelos e converter gravações."
 ---
 # Guias passo a passo por aplicativo
 

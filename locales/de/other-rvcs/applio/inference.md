@@ -3,7 +3,7 @@ label: "Konvertieren Sie eine Aufnahme"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
-description: "Beginnen Sie mit einer kurzen Aufnahme, die Sie sofort wiedererkennen. Gesprochenes Testmaterial könnte sein: „Könnten Sie das blaue Buch ans Fenster..."
+description: "Beginnen Sie mit einer kurzen Aufnahme, die Sie sofort wiedererkennen."
 ---
 # Konvertieren Sie eine Aufnahme in Applio
 

@@ -3,7 +3,7 @@ label: "Testen Sie Live-Audio in Redpanda-vc"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
-description: "Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind. Die WebUI-Echtzeitregisterkarte erfasst..."
+description: "Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind."
 ---
 # Testen Sie Live-Audio in Redpanda-vc
 

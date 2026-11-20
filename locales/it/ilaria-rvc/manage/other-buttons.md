@@ -3,7 +3,7 @@ label: "Spiegazione degli altri controlli"
 icon: ":toolbox:"
 order: 80
 permalink: /ilaria-rvc/other-buttons/
-description: "Usa Altro per gestire file, ispezionare o combinare modelli, rivedere l'audio e gestire l'app. Inizia decidendo se hai bisogno di un modello di inferenza..."
+description: "Usa Altro per gestire file, ispezionare o combinare modelli, rivedere l'audio e gestire l'app."
 ---
 
 # Spiegazione di tutti gli altri pannelli

@@ -3,7 +3,7 @@ label: "Training controls explained"
 icon: ":level_slider:"
 order: 82
 permalink: /ilaria-rvc/training-buttons/
-description: "Training creates a new voice model from recordings. For a first experiment, use a unique name, a small clean dataset and a compatible pretrained pair..."
+description: "Training creates a new voice model from recordings. For a first experiment, use a unique name, a small clean dataset and a compatible pretrained pair."
 ---
 
 # Every Training control explained

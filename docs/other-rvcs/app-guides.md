@@ -3,7 +3,7 @@ label: "Guides by app"
 icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
-description: "Use Ilaria RVC to train a model or convert a recording. For a live microphone on Windows, use Vonovox with a supported NVIDIA GPU, or Okada TG Developed..."
+description: "Use Ilaria RVC to train a model or convert a recording."
 ---
 # Step-by-step guides by app
 

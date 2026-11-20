@@ -3,7 +3,7 @@ label: "Addestramento e checkpoint"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
-description: "Selezionare un set di dati e scegliere l'architettura RVC compatibile, la frequenza di campionamento, la guida dell'intonazione, l’embedder e i..."
+description: "Selezionare un set di dati e scegliere l'architettura RVC compatibile, la frequenza di campionamento, la guida dell'intonazione, l’embedder e i pretraining del generatore/discriminatore."
 ---
 # Addestramento e checkpoint
 

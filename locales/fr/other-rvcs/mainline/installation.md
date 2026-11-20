@@ -3,7 +3,7 @@ label: "Installez et ouvrez"
 icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
-description: "RVC WebUI (Mainline - Original RVC) est l'interface utilisateur Web de conversion vocale basée sur la récupération en amont. Utilisez son interface de..."
+description: "RVC WebUI (Mainline - Original RVC) est l'interface utilisateur Web de conversion vocale basée sur la récupération en amont."
 ---
 
 # Installer RVC WebUI (Mainline - Original RVC)

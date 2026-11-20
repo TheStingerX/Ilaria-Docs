@@ -2,7 +2,7 @@
 label: "🛠️ Trainieren Sie ein Sprachmodell"
 order: 94
 permalink: /training/
-description: "Beim Training wird eine Zielstimme aus einer vorbereiteten Audiosammlung gelernt. Verwenden Sie diese Anleitung, wenn Sie ein Modell aus Ihren eigenen..."
+description: "Beim Training wird eine Zielstimme aus einer vorbereiteten Audiosammlung gelernt."
 ---
 # Trainieren Sie ein RVC-Sprachmodell
 

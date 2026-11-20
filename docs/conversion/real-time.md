@@ -2,7 +2,7 @@
 label: "⚡ Real-time conversion"
 order: 92
 permalink: /real-time/
-description: "For a recording or a cover, file conversion lets you render and compare several takes. In a live setup, the converter has to finish each audio block..."
+description: "For a recording or a cover, file conversion lets you render and compare several takes."
 ---
 # Real-time voice conversion
 

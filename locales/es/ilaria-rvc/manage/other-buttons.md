@@ -3,7 +3,7 @@ label: "Otros controles explicados"
 icon: ":toolbox:"
 order: 80
 permalink: /ilaria-rvc/other-buttons/
-description: "Utilice Otro para administrar archivos, inspeccionar o combinar modelos, revisar audio y mantener la aplicación. Comience por decidir si necesita un..."
+description: "Utilice Otro para administrar archivos, inspeccionar o combinar modelos, revisar audio y mantener la aplicación."
 ---
 
 # Todos los demás paneles explicados

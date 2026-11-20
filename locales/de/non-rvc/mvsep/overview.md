@@ -3,7 +3,7 @@ label: "Überblick & Tarife"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/mvsep/overview/
-description: "MVSep (Music & Voice Separation) ist eine kostenlose, cloudbasierte Webplattform für KI-Audiotrennung und -Restauration. Da alle Modelle auf den Servern..."
+description: "MVSep (Music & Voice Separation) ist eine kostenlose, cloudbasierte Webplattform für KI-Audiotrennung und -Restauration."
 ---
 # MVSep
 

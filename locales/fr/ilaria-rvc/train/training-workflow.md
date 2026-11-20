@@ -3,7 +3,7 @@ label: "Formation et points de contrôle"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
-description: "Sélectionnez un ensemble de données et choisissez l'architecture RVC compatible, la fréquence d'échantillonnage, le guidage de pitch, l'intégration et les..."
+description: "Sélectionnez un ensemble de données et choisissez l'architecture RVC compatible, la fréquence d'échantillonnage, le guidage de pitch, l'intégration et les pré-entraînements générateur/discriminateur."
 ---
 # Formation et points de contrôle
 

@@ -3,7 +3,7 @@ label: "Set up Redpanda-vc"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/redpanda/first-run/
-description: "Redpanda-vc extends Applio and offers multiple voice model families. This walkthrough uses the RVC family throughout. Pick one installation and keep its..."
+description: "Redpanda-vc extends Applio and offers multiple voice model families. This walkthrough uses the RVC family throughout."
 ---
 # Set up Redpanda-vc
 

@@ -3,7 +3,7 @@ label: "Einzel- und Batch-Inferenz"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
-description: "Öffnen Sie Single Inference, wählen Sie eine Stimme und laden Sie einen kurzen, trockenen Clip. Setzen Sie Pitch und Index Ratio auf Null. Verwenden Sie..."
+description: "Öffnen Sie Single Inference, wählen Sie eine Stimme und laden Sie einen kurzen, trockenen Clip. Setzen Sie Pitch und Index Ratio auf Null."
 ---
 # Einzel- und Batch-Inferenz
 

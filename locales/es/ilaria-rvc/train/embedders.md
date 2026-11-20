@@ -3,7 +3,7 @@ label: "Incrustadores y preentrenamientos"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
-description: "Abra Configuración de incrustador debajo de Procesamiento de audio. Lee automáticamente los metadatos del modelo almacenado y utiliza ContentVec cuando no..."
+description: "Abra Configuración de incrustador debajo de Procesamiento de audio."
 ---
 # Incrustadores y preentrenamientos
 

@@ -2,7 +2,7 @@
 label: "🧠 Fondamentaux de RVC"
 order: 94
 permalink: /rvc-fundamentals/
-description: "La conversion vocale basée sur la récupération (RVC) prend un enregistrement vocal et synthétise une version avec le caractère d'une voix entraînée..."
+description: "La conversion vocale basée sur la récupération (RVC) prend un enregistrement vocal et synthétise une version avec le caractère d'une voix entraînée."
 ---
 # Fondamentaux de RVC
 

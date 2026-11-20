@@ -3,7 +3,7 @@ label: "Texto para fala"
 icon: ":speech_balloon:"
 order: 96
 permalink: /ilaria-rvc/tts/
-description: "Use Inferência → TTS para transformar texto escrito em uma gravação. Você pode ouvir a fala gerada diretamente ou convertê-la com um modelo RVC. Os dois..."
+description: "Use Inferência → TTS para transformar texto escrito em uma gravação. Você pode ouvir a fala gerada diretamente ou convertê-la com um modelo RVC."
 ---
 # Texto para fala
 

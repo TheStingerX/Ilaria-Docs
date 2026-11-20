@@ -3,7 +3,7 @@ label: "Configuração do microfone em tempo real"
 icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
-description: "Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do RVC WebUI (Mainline - Original RVC). Ele pode passar um microfone..."
+description: "Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do RVC WebUI (Mainline - Original RVC)."
 ---
 
 # Use o trocador de voz em tempo real do RVC WebUI (Mainline - Original RVC)

@@ -3,7 +3,7 @@ label: "Text-zu-Sprache"
 icon: ":speech_balloon:"
 order: 96
 permalink: /ilaria-rvc/tts/
-description: "Verwenden Sie Inferenz → TTS, um geschriebenen Text in eine Aufzeichnung umzuwandeln. Sie können die generierte Sprache direkt anhören oder mit einem..."
+description: "Verwenden Sie Inferenz → TTS, um geschriebenen Text in eine Aufzeichnung umzuwandeln. Sie können die generierte Sprache direkt anhören oder mit einem RVC-Modell konvertieren."
 ---
 # Text-zu-Sprache
 

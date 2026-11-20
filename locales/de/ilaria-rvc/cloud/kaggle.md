@@ -3,7 +3,7 @@ label: "Kaggle"
 icon: ":notebook:"
 order: 98
 permalink: /ilaria-rvc/kaggle/
-description: "Klicken Sie im Editor auf Alle ausführen. Sie können die vier Codezellen auch einzeln von oben nach unten ausführen. Warten Sie, bis jede Zelle fertig..."
+description: "Klicken Sie im Editor auf Alle ausführen. Sie können die vier Codezellen auch einzeln von oben nach unten ausführen."
 ---
 # Kaggle
 

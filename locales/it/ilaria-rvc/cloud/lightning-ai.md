@@ -3,7 +3,7 @@ label: "Lightning AI Studio"
 icon: ":zap:"
 order: 96
 permalink: /ilaria-rvc/lightning-ai/
-description: "Prepara un WAV breve e pulito e un modello compatibile per l’inferenza. Per il training conserva sul tuo computer il dataset originale e alcune clip di..."
+description: "Prepara un WAV breve e pulito e un modello compatibile per l’inferenza. Per il training conserva sul tuo computer il dataset originale e alcune clip di prova separate."
 ---
 # Lightning AI Studio
 

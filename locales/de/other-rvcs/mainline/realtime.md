@@ -3,7 +3,7 @@ label: "Echtzeit-Mikrofon-Setup"
 icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
-description: "Diese Anleitung gilt für die separate Echtzeit-GUI, die in unterstützten RVC WebUI (Mainline - Original RVC)-Builds enthalten ist. Es kann ein Mikrofon..."
+description: "Diese Anleitung gilt für die separate Echtzeit-GUI, die in unterstützten RVC WebUI (Mainline - Original RVC)-Builds enthalten ist."
 ---
 
 # Verwenden Sie den RVC WebUI (Mainline - Original RVC)-Echtzeit-Sprachwechsler

@@ -3,7 +3,7 @@ label: "Überblick & Anforderungen"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/causal-voice-changer/overview/
-description: "Causal Voice Changer (CVC) ist ein 48-kHz-Echtzeit-KI-Stimmenverzerrer, der die Lücke zwischen extrem latenzarmen Systemen (wie Beatrice) und langsameren..."
+description: "Causal Voice Changer (CVC) ist ein 48-kHz-Echtzeit-KI-Stimmenverzerrer, der die Lücke zwischen extrem latenzarmen Systemen (wie Beatrice) und langsameren, klanglich sehr hochwertigen Systemen (wie RVC) schließt."
 ---
 # Causal Voice Changer (CVC)
 

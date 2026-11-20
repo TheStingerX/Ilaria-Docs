@@ -3,7 +3,7 @@ label: "Live-Audio und Routing"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
-description: "Beginnen Sie mit Kopfhörern und einem einzigen lokalen Audiopfad. Wenn Sie im Kopfhörer eine sauber umgewandelte Stimme hören, schließen Sie ihn an einen..."
+description: "Beginnen Sie mit Kopfhörern und einem einzigen lokalen Audiopfad."
 ---
 # Konvertieren Sie Ihr Mikrofon in w-okada VCClient
 

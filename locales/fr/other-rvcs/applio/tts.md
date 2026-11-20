@@ -3,7 +3,7 @@ label: "Générer une parole à partir d'un texte"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
-description: "Applio utilise une voix Edge TTS en ligne pour lire votre texte et un modèle RVC pour modifier la voix générée. La voix source détermine la prononciation..."
+description: "Applio utilise une voix Edge TTS en ligne pour lire votre texte et un modèle RVC pour modifier la voix générée."
 ---
 # Transformez un court script en parole convertie
 

@@ -3,7 +3,7 @@ label: "Modelo, micrófono y cable"
 icon: ":headphones:"
 order: 90
 permalink: /ilaria-rvc/tgr/live-audio/
-description: "Utilice un punto de control de inferencia RVC compatible y un micrófono que funcione. Primero prueba que la señal convertida llega a tus auriculares..."
+description: "Utilice un punto de control de inferencia RVC compatible y un micrófono que funcione. Primero prueba que la señal convertida llega a tus auriculares."
 ---
 # Configure audio en vivo en Okada TG Developed Fork
 
