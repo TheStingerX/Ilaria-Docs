@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848520688417">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848521069867">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848520688417" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848521069867" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848520688417" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848521069867" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848520688417" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848520688417" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848521069867" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848521069867" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -180,7 +180,7 @@
 <span id="1-performance--latency-performance-page" class="docs-anchor"></span><h2 id="1-prestazioni-e-latenza-pagina-performance">1. Prestazioni e latenza (pagina <code translate="no" v-pre>Performance</code>)</h2>
 <h3 id="buffering">Buffering</h3>
 <ul>
-<li><strong>Chunk</strong> (a passi di <code translate="no" v-pre>20 ms</code>): quanto audio viene convertito per volta. Il ritardo totale è dato dai <strong>60 ms</strong> fissi di lookahead di CVC + <strong>1 chunk</strong> + i buffer di scheda audio/cavo virtuale.
+<li><strong>Chunk</strong> (fino a <code translate="no" v-pre>10 ms</code> / <code translate="no" v-pre>20 ms</code>): quanto audio viene convertito per volta. Il ritardo totale è dato dai <strong>50 ms</strong> fissi di lookahead sulla base 100 Hz v4 (<code translate="no" v-pre>60 ms</code> sulle vecchie voci a 50 Hz) + <strong>1 chunk</strong> + i buffer di scheda audio/cavo virtuale.
 <ul>
 <li>Chunk più piccoli = latenza minore, ma richiedono una GPU più veloce.</li>
 <li>Se l&#x27;audio gracchia o scatta (o se usi la CPU su vecchie schede AMD), aumenta <strong>Chunk</strong> a <code translate="no" v-pre>40 ms</code> o <code translate="no" v-pre>60 ms+</code>.</li>
@@ -270,7 +270,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T20:12:33.000Z">20/11/2026 · 21:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

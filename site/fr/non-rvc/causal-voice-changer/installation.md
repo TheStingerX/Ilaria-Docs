@@ -54,6 +54,8 @@ Si la détection automatique choisit le mauvais backend, définissez `CAUSALVC_G
 
 ## 4. Mettre à jour CVC
 
-Lors d'une mise à jour :
+À partir de la version **v0.3.1**, CVC intègre un **outil de mise à jour** directement dans l'application. La vérification automatique est activée par défaut et peut être désactivée dans la page **About**. Les installations existantes mettent aussi à jour `weights/causalvc-base/` automatiquement au prochain lancement.
+
+Lors d'une mise à jour manuelle ou depuis les sources :
 - Sous Windows, depuis les sources, lancez `run-realtime.bat` / `run-training.bat` avec `CAUSALVC_REBUILD=1` si l'interface a changé.
 - Sous Linux, l'interface Rust se recompile automatiquement au lancement suivant après une mise à jour.

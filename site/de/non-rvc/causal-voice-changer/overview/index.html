@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848520717706">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848521091968">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848520717706" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848521091968" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848520717706" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848521091968" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848520717706" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848521091968" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -186,7 +186,7 @@
 </ol>
 <p><strong>Causal Voice Changer (CVC)</strong> arbeitet anders:</p>
 <ul>
-<li>Es ist <strong>kausal</strong>: Audio wird fortlaufend während des Eintreffens konvertiert, mit Blick nach hinten und nur <strong>60 ms Lookahead-Puffer</strong>.</li>
+<li>Es ist <strong>kausal</strong>: Audio wird fortlaufend während des Eintreffens konvertiert, mit Blick nach hinten und nur <strong>50 ms Lookahead-Puffer</strong> auf der 100-Hz-v4-Basis (<code translate="no" v-pre>60 ms</code> bei älteren 50-Hz-Stimmen).</li>
 <li>Da kontinuierlich gestreamt wird statt getrennte Blöcke zusammenzukleben, <strong>bleiben gehaltene Töne und lange Laute sauber und stabil</strong>.</li>
 <li>Du behältst nahezu die volle RVC-Qualität bei deutlich geringerer Latenz (unter Linux mit JACK-Audio oft rund <strong>130 ms Ende-zu-Ende</strong>).</li>
 </ul>
@@ -265,7 +265,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T20:12:33.000Z">20/11/2026 · 21:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

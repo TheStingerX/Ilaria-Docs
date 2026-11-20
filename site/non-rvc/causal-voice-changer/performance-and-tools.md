@@ -4,7 +4,7 @@
 
 ### Buffering
 
-- **Chunk** (steps of `20 ms`): how much audio is converted at a time. Total delay is CVC's fixed **60 ms** lookahead + **1 chunk** + your sound card/virtual cable buffers.
+- **Chunk** (down to `10 ms` / `20 ms`): how much audio is converted at a time. Total delay is CVC's fixed **50 ms** lookahead on the 100 Hz v4 base (`60 ms` on legacy 50 Hz voices) + **1 chunk** + your sound card/virtual cable buffers.
   - Lower chunks = lower latency, but require a faster GPU.
   - If audio crackles or stutters (or if you are running on CPU on an older AMD card), raise **Chunk** to `40 ms` or `60 ms+`.
 - **Extra inference buffer**: how much recent speech the model looks back at for each chunk. More context gives steadier tone and pitch at a small GPU cost, **with zero added delay**.

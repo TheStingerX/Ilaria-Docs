@@ -54,6 +54,8 @@ Se a deteção automática escolher o backend errado, define `CAUSALVC_GPU` ante
 
 ## 4. Atualizar o CVC
 
-Ao atualizar para uma nova versão:
+A partir da versão **v0.3.1**, o CVC inclui um **atualizador integrado** diretamente no app. A verificação automática fica ativa por padrão e pode ser desativada na página **About**. Instalações existentes também atualizam `weights/causalvc-base/` automaticamente na próxima inicialização ou treino.
+
+Ao atualizar manualmente ou a partir do código-fonte:
 - No Windows, a partir do código-fonte, executa `run-realtime.bat` / `run-training.bat` com `CAUSALVC_REBUILD=1` se a interface mudou.
 - No Linux, a interface Rust recompila-se automaticamente no arranque seguinte após uma atualização.

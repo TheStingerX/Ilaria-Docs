@@ -54,6 +54,8 @@ If auto-detection picks the wrong backend, set the `CAUSALVC_GPU` environment va
 
 ## 4. Updating CVC
 
-When updating to a newer version:
+Starting in **v0.3.1**, CVC includes a **built-in updater** directly in the app. Automatic update checks run by default and can be turned off on the **About** page. Existing installs also upgrade `weights/causalvc-base/` automatically on the next launch or voice build.
+
+When updating manually or from source:
 - On Windows, if you run from source and the UI changed, run `run-realtime.bat` / `run-training.bat` with `CAUSALVC_REBUILD=1` to rebuild the WinUI 3 interface.
 - On Linux, the Rust UI rebuilds automatically on the next launch after an update.

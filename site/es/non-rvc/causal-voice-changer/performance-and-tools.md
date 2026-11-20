@@ -4,7 +4,7 @@
 
 ### Búfer (Buffering)
 
-- **Chunk** (en pasos de `20 ms`): cuánto audio se convierte cada vez. El retardo total es el lookahead fijo de **60 ms** de CVC + **1 chunk** + los búferes de la tarjeta de sonido/cable virtual.
+- **Chunk** (hasta `10 ms` / `20 ms`): cuánto audio se convierte cada vez. El retardo total es el lookahead fijo de **50 ms** en la base 100 Hz v4 (`60 ms` en voces antiguas a 50 Hz) + **1 chunk** + los búferes de la tarjeta de sonido/cable virtual.
   - Chunks menores = menor latencia, pero exigen una GPU más rápida.
   - Si hay chasquidos o cortes (o si usas CPU en una AMD antigua), sube **Chunk** a `40 ms` o `60 ms+`.
 - **Extra inference buffer**: cuánto habla reciente mira hacia atrás el modelo para cada bloque. Más contexto da tono y afinación más estables con un pequeño coste de GPU, **sin añadir retardo**.
