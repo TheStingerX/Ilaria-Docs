@@ -1,5 +1,5 @@
 ---
-label: "⚡ Precisión (FP16 / FP32 / BF16)"
+label: "⚡ Precisión"
 order: 89
 permalink: /precision/
 description: "Guía sencilla de modos de precisión en RVC (FP16, FP32 y BF16): qué significan, compatibilidad GPU, entrenamiento vs inferencia y cómo evitar errores NaN o HalfTensor."
