@@ -58,4 +58,4 @@ Si quelque chose ne fonctionne toujours pas :
    ```bat
    YuneVoix.exe --check
    ```
-3. Envoyez le fichier **`check.txt`** généré ainsi que **`live-diag.log`** lorsque vous demandez de l'aide dans **`yune-support`**, par DM ou sur [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
+3. Envoyez le fichier **`check.txt`** généré ainsi que **`live-diag.log`** lorsque vous demandez de l'aide dans **`yune-support`**, par DM à **Kuroyuki** (`sxxyneko` sur Discord), ou sur [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
