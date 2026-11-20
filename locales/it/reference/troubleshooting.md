@@ -8,100 +8,132 @@ permalink: /troubleshooting/
 [Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
 !!!tip
-Nuovo su RVC? **Inizia sempre con un WAV da 10 secondi e un solo modello.** Se l'app si chiude, apri il log e copia il **primo** errore. Se funziona ma suona male, riprova sempre sulla stessa clip cambiando un solo parametro alla volta.
+**Nuovo su RVC? Segui queste 4 regole prima di tutto:**
+1. **Usa una cartella corta e semplice** come `C:\RVC` o `D:\IlariaRVC`. Non mettere mai il programma dentro `OneDrive`, `Programmi` (`Program Files`) o cartelle con spazi, accenti o emoji.
+2. **Estrai sempre tutto lo ZIP** prima di aprire qualsiasi file. Non avviare mai i file `.bat` direttamente da WinRAR, 7-Zip o dall'anteprima ZIP di Windows.
+3. **Non chiudere mai la finestra nera del terminale.** Quella finestra fa funzionare il programma e stampa il vero errore se qualcosa si blocca.
+4. **Fai prima un test con un file `.wav` pulito da 10 secondi.** Se il programma va in crash, copia il **primo** errore che appare nella console. Se funziona ma suona male, cambia **un'impostazione alla volta** sullo stesso file di test.
 !!!
 
-Una diagnosi efficace parte dal primo passaggio che fallisce. Conserva versione dell'app, primo errore esatto e un test riproducibile, applicando una modifica per volta.
+## Trova subito il tuo problema
 
-## Trova il tuo sintomo
+| Cosa sta succedendo? | Causa più probabile | Dove guardare |
+| --- | --- | --- |
+| La finestra nera si apre e si chiude in 1 secondo | Avviato dentro lo ZIP, bloccato dall'antivirus o runtime mancante | [1. Avvio, Windows, Antivirus e Download](#1-avvio-windows-antivirus-e-download) |
+| Il browser dice "Impossibile raggiungere il sito" o pagina bianca | App crashata all'avvio, porta sbagliata o VPN/proxy su `127.0.0.1` | [1. Avvio, Windows, Antivirus e Download](#1-avvio-windows-antivirus-e-download) |
+| L'app è lentissima oppure dice `CUDA out of memory` | Sta usando la CPU invece della GPU, HAGS di Windows è attivo o il batch/audio è troppo grande | [2. GPU, CUDA, AMD/Intel e Memoria](#2-gpu-cuda-amdintel-e-memoria) |
+| Il modello non appare o non si carica (`.pth` / `.index`) | Non hai cliccato Aggiorna, ZIP non estratto, download corrotto o file sbagliato | [3. Modelli, Checkpoint e Index](#3-modelli-checkpoint-e-index) |
+| La voce sembra uno scoiattolo, un mostro, un robot o la tua voce originale | Pitch (Transpose) sbagliato, audio sporco o Pitch Extractor errato | [4. Qualità della voce, Pitch e File Audio](#4-qualità-della-voce-pitch-e-file-audio) |
+| Il training si ferma, crasha o esporta una voce muta | Clip vuota o silenziosa nel dataset, troppi worker CPU o `Fresh Training` lasciato attivo | [5. Preprocessing Dataset e Training](#5-preprocessing-dataset-e-training) |
+| Il microfono ha ritardo, scatti, eco o Discord non ti sente | Sample rate diversi (`44100` vs `48000 Hz`), cavo virtuale sbagliato o Krisp | [6. Voice Changer Live, Microfono e Discord](#6-voice-changer-live-microfono-e-discord) |
+| Google Colab o Kaggle fallisce o si disconnette | Acceleratore GPU spento, quota finita o sessione scaduta | [7. Notebook Cloud (Colab e Kaggle)](#7-notebook-cloud-colab-e-kaggle) |
 
-| Sintomo | Primo controllo |
-| --- | --- |
-| Il launcher si chiude o il browser non si connette | Lascia aperta la console e verifica l'indirizzo locale stampato. |
-| Modello assente, non si carica o dà errore di chiavi mancanti | Verifica che sia un file di inferenza esportato e controlla versione RVC ed embedder. |
-| Il convertitore non legge il file | Prova un breve WAV PCM in un percorso locale semplice. |
-| La conversione funziona solo senza index | Verifica che l'index appartenga esattamente a quel modello ed embedder. |
-| Voce metallica, confusa o troppo simile alla tua | Testa più clip pulite e un modello sicuramente funzionante con effetti e retrieval a 0. |
-| Il training si blocca o non produce un export valido | Individua la fase fallita e controlla log e cartella dell'esperimento. |
-| Errore CUDA o memoria esaurita | Distingui tra GPU non supportata, VRAM piena e RAM / File di paging esauriti. |
-| Microfono con ritardo, scatti, silenzio o eco | Testa separatamente microfono fisico, monitoraggio in cuffia, cavo virtuale e app finale. |
+## Test base semplice in 5 passi
 
-## Imposta un test di riferimento
+Se tutto suona male o non sai quale opzione abbia rovinato l'audio, riparti da un test pulito:
 
-1. Registra 10-20 secondi di un solo parlante con vocali chiare, consonanti come `s` o `f` e una pausa naturale in WAV locale pulito.
-2. Scegli un modello di inferenza affidabile compatibile con l'app. Parti con pitch a `0`, estrattore di pitch predefinito, effetti disattivati e retrieval (`index`) a `0`.
-3. Converti e salva in una cartella locale scrivibile. Riproduci il file anche fuori dal browser.
-4. Ripeti con un secondo modello sicuramente funzionante per capire se il problema è nell'ambiente o nel singolo modello.
-5. Riattiva un'opzione per volta salvando il risultato con i parametri usati.
+1. **Prepara una clip pulita:** Registra 10-20 secondi di una sola voce che parla chiaramente in una stanza silenziosa (niente musica, niente eco). Salvala come `.wav` standard in una cartella semplice come `C:\RVC\test.wav`.
+2. **Scegli un modello affidabile:** Seleziona un modello `.pth` che sai già funzionare. Per il primo test lascia spento il file `.index` (`Index Rate = 0`).
+3. **Usa impostazioni sicure:**
+   - **Pitch / Transpose:** `0` (stesso genere), `+12` (da uomo a donna), `-12` (da donna a uomo).
+   - **Pitch Extractor:** `rmvpe` (miglior equilibrio tra velocità e qualità).
+   - **Effetti / pulizia extra:** Tutti **SPENTI**.
+4. **Converti e ascolta:** Salva il risultato in una cartella locale normale (non `OneDrive`). Se il player nel browser resta muto, scarica il file e aprilo con VLC o Windows Media Player.
+5. **Cambia una cosa alla volta:** Quando il test pulito funziona, attiva il file `.index` (parti da `0.5` - `0.75`) oppure regola il Pitch di `1` o `2` semitoni.
 
 ---
 
-## Errori noti e soluzioni esatte
+## Errori noti e soluzioni passo passo
 
-### 1. Errori di Windows, percorsi, Python e Launcher
+### 1. Avvio, Windows, Antivirus e Download
 
-| Errore / Messaggio | Causa | Come risolvere |
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
-| `[WinError 3] The system cannot find the path specified` / `[WinError 206] The filename or extension is too long` | Limite di 260 caratteri di Windows, oppure spazi e simboli speciali nei nomi di cartelle o file. | Sposta l'app e i dataset in un percorso corto alla radice (es. `C:\RVC` o `D:\IlariaRVC`). Rimuovi spazi, `()`, `[]` e caratteri non-ASCII/Unicode dai nomi di cartelle e audio. |
-| `[WinError 2] The system cannot find the file specified` (durante lettura/esportazione audio) | `ffmpeg.exe` / `ffprobe.exe` mancanti o non presenti nel `PATH`. | Verifica che `ffmpeg` sia nella cartella dell'app. Se usi un'installazione da sorgente, installa FFmpeg, aggiungilo al `PATH` di sistema e riavvia il terminale. |
-| `PermissionError: [Errno 13] Permission denied` / `[WinError 5]` | Scrittura in `Program Files`, `OneDrive`, cartella protetta o file aperto in un altro programma/antivirus. | Estrai l'app in una cartella scrivibile di tua proprietà (non `Program Files` né `OneDrive`), chiudi altri player audio e aggiungi la cartella alle eccezioni dell'antivirus. |
-| `ModuleNotFoundError: No module named 'fairseq'` | `fairseq` non compila facilmente su Python 3.11+ o senza strumenti di compilazione C++. | Usa il pacchetto portatile con runtime incluso, oppure ricrea l'ambiente da sorgente con **Python 3.9 o 3.10** installando **Microsoft Visual Studio Build Tools** (*Sviluppo di applicazioni desktop con C++*). |
-| `llvmlite.dll` / `OSError: [WinError 126]` / DLL mancante | Microsoft Visual C++ Redistributable mancante o incompatibile, oppure DLL danneggiata. | Installa o ripara **Microsoft Visual C++ 2015-2022 Redistributable (x64)**. Se la DLL manca fisicamente, riestrai il pacchetto originale. |
-| `Expecting value: line 1 column 1` / pagina Gradio bianca | Il server è andato in crash prima di rispondere, oppure un proxy/VPN intercetta `127.0.0.1`. | Lascia aperta la console e leggi il primo traceback Python. Controlla la porta esatta (`127.0.0.1:6969` in Ilaria RVC, `7865` in Gradio/Deiteris) e disattiva eventuali proxy su `localhost` / `127.0.0.1`. |
-| `urllib.error` / `ConnectionResetError` / `SSLError` | Blocco di rete, VPN o timeout da Hugging Face/GitHub durante il download di `hubert_base.pt` o `rmvpe.pt`. | Disattiva temporaneamente VPN o firewall restrittivi, oppure scarica manualmente `hubert_base.pt` e `rmvpe.pt` mettendoli in `assets/hubert/` e `assets/rmvpe/`. |
+| **La finestra nera si apre e si chiude subito** | Hai avviato il file dentro l'anteprima ZIP oppure Python ha dato errore subito all'avvio. | 1. Fai tasto destro sullo `.zip` ed estrai tutta la cartella prima.<br>2. In Ilaria RVC, avvia `RUN_ILARIA_RVC_LOGS.bat` invece del launcher normale così la finestra resta aperta e mostra l'errore. |
+| **Antivirus / Windows Defender elimina file `.bat`, `.exe` o `.dll`** | L'antivirus scambia per errore gli script portatili di IA per file sospetti. | Apri **Sicurezza di Windows → Protezione da virus e minacce → Cronologia protezione**, ripristina il file bloccato e aggiungi la cartella RVC (es. `C:\RVC`) alle **Esclusioni**. |
+| `WinError 10048` / `Address already in use` / porta occupata | Un'altra copia di RVC o un'altra app sta già usando quella porta (`6969` o `7865`). | Chiudi tutte le finestre nere aperte (o termina `python.exe` da **Gestione attività**), poi avvia l'app una sola volta. |
+| `[WinError 3] Impossibile trovare il percorso specificato` / `[WinError 206]` | Windows si blocca se il percorso supera 260 caratteri o contiene spazi, accenti o simboli (`()`, `[]`). | Sposta app e file audio in una cartella corta come `C:\RVC\`. Rinomina cartelle e file `.wav` usando solo lettere, numeri e `_`. |
+| `[WinError 2] Impossibile trovare il file specificato` (caricando/salvando audio) | Manca `ffmpeg.exe` o `ffprobe.exe` (il programma che legge i file audio). | Controlla che `ffmpeg.exe` sia dentro la cartella dell'app (se Defender l'ha tolto, riestrai lo ZIP). Su installazioni Python manuali, installa FFmpeg e aggiungilo al `PATH` di Windows, poi riavvia il terminale. |
+| `PermissionError: [Errno 13]` / `[WinError 5] Accesso negato` | Windows blocca la scrittura in `Program Files`, `OneDrive` o su un file aperto in un altro programma. | Sposta l'app fuori da `Program Files` e `OneDrive` in `C:\RVC\`. Chiudi eventuali player o editor che stanno tenendo aperto il file audio. |
+| `Expecting value: line 1 column 1` o pagina bianca nel browser | L'app è crashata prima di avviarsi, hai aperto la porta sbagliata o una VPN/proxy blocca le connessioni locali. | Leggi il **primo** errore nella finestra nera. Controlla l'indirizzo esatto stampato lì (`127.0.0.1:6969` per Ilaria RVC, `127.0.0.1:7865` per Gradio/Deiteris). Disattiva VPN/proxy per `localhost` e `127.0.0.1`. |
+| L'archivio diviso non si estrae (`.zip.001`, `.zip.002`) | L'estrattore di Windows non apre gli archivi in più parti, oppure manca una parte. | Metti tutte le parti (`.001`, `.002`, ecc.) nella stessa cartella, installa **7-Zip**, fai tasto destro **solo** sul file `.001` e scegli **7-Zip → Estrai qui**. |
+| `ModuleNotFoundError: No module named 'fairseq'` | Hai installato manualmente su Python 3.11+ o senza gli strumenti di compilazione C++. | Chi è alle prime armi dovrebbe usare lo ZIP portatile pronto. Per installazioni manuali, usa **Python 3.9 o 3.10** e installa **Microsoft Visual Studio Build Tools** (*Sviluppo di applicazioni desktop con C++*). |
+| `llvmlite.dll` / `OSError: [WinError 126]` / `.dll` mancante | A Windows mancano le librerie Visual C++ richieste dai pacchetti IA Python. | Scarica e installa il pacchetto ufficiale **Microsoft Visual C++ 2015-2022 Redistributable (x64)** dal sito Microsoft, poi riavvia il PC. |
+| `urllib.error` / `ConnectionResetError` / `SSLError` | La rete, il firewall o una VPN ha bloccato il download automatico di `hubert_base.pt` o `rmvpe.pt`. | Disattiva temporaneamente VPN o firewall troppo restrittivi, oppure scarica manualmente `hubert_base.pt` e `rmvpe.pt` e mettili in `assets/hubert/` e `assets/rmvpe/`. |
 
-### 2. Errori GPU, CUDA, DirectML e Memoria
+### 2. GPU, CUDA, AMD/Intel e Memoria
 
-| Errore / Messaggio | Causa | Come risolvere |
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
-| **VRAM che trabocca in RAM / training lentissimo / audio live robotico (Windows 10/11)** | La **Pianificazione GPU con accelerazione hardware (HAGS)** interferisce con l'allocazione VRAM di PyTorch e toglie risorse ai cambia-voce in background. | Vai in **Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate**, disattiva **Pianificazione GPU con accelerazione hardware** e **riavvia il PC**. |
-| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (Inferenza) | File audio troppo lungo o altre app (giochi, browser con accelerazione hardware) occupano VRAM. | Attiva **Split Audio** per brani lunghi, chiudi giochi/browser pesanti, scarica modelli non usati e disattiva il post-processing opzionale. |
-| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (Training) | Batch size troppo alto per la tua VRAM o caching del dataset in VRAM attivo. | Abbassa **Batch Size** (es. da `8` a `4`, `2` o `1`), disattiva la cache del dataset in VRAM e chiudi eventuali cambia-voce live prima di addestrare. |
-| `RuntimeError: CUDA error: an illegal memory access was encountered` | Driver/PyTorch incompatibili, overclock/undervolt instabile della GPU o memoria condivisa esaurita. | Aggiorna i driver NVIDIA, rimuovi qualsiasi overclock/undervolt della GPU e verifica la compatibilità CUDA della build PyTorch. |
-| `Torch not compiled with CUDA enabled` / `no kernel image is available for execution on the device` | Build non adatta alla generazione della GPU (es. vecchia build CUDA su RTX 50, oppure PyTorch solo CPU). | Usa il runtime giusto: Ilaria RVC include **CUDA 12.8** per GTX 16 / RTX 20-50 e scarica in automatico **CUDA 12.6** (`runtime-cu126`) per Maxwell/Pascal/Volta. GPU AMD/Intel richiedono build DirectML/ROCm o cloud. |
-| `RuntimeError: expected scalar type Half but found Float` (o errore `HalfTensor`) | Precisione `FP16` forzata su una GPU/backend che non la supporta (serie GTX 10, DirectML, CPU). | Disattiva **FP16** nelle impostazioni e passa a **FP32** (precisione completa). |
-| `OSError: [WinError 1455] The paging file is too small for this operation to complete` | Memoria virtuale di Windows (File di paging) esaurita durante caricamento modelli, creazione index o training. | Apri **Proprietà di sistema → Avanzate → Prestazioni (Impostazioni) → Avanzate → Memoria virtuale**, imposta un File di paging più grande (es. `16384–32768 MB`) e riavvia. |
+| **Tutto va lentissimo (usa la CPU invece della GPU)** | L'app non vede la scheda video, oppure hai scaricato una versione solo NVIDIA su una GPU AMD/Intel. | 1. Utenti NVIDIA: verifica che i driver siano installati e che non stia usando la grafica integrata.<br>2. Utenti AMD/Intel: le build CUDA standard non usano la tua GPU. Usa una versione **DirectML** (come YuneVoix, Deiteris DirectML o Mainline DirectML) oppure un notebook cloud. |
+| **Il PC scatta, la VRAM straborda nella RAM o la voce live diventa robotica (Windows 10/11)** | Un'impostazione di Windows chiamata **HAGS** (Pianificazione GPU con accelerazione hardware) ruba stabilità alla memoria video delle app IA. | Vai su **Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate**, imposta **Pianificazione GPU con accelerazione hardware** su **OFF** e **riavvia il PC**. |
+| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (in conversione) | La memoria della scheda video è finita perché la canzone è troppo lunga o un gioco/browser sta usando VRAM. | Attiva **Split Audio** per brani lunghi, chiudi giochi e schede pesanti del browser (o disattiva l'accelerazione hardware del browser) e disattiva gli effetti audio extra. |
+| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (in training) | Il **Batch Size** del training è troppo alto per la tua memoria video. | Abbassa il **Batch Size** un passo alla volta (da `8` a `4`, `2` o `1`). Disattiva "Cache dataset in GPU/VRAM" e chiudi eventuali voice changer live prima di allenare. |
+| `Torch not compiled with CUDA enabled` / `no kernel image is available` | La versione di CUDA dell'app non corrisponde alla generazione della tua scheda NVIDIA (es. RTX 50 nuova vs GTX 10 vecchia). | Usa la build corretta: **Ilaria RVC** include **CUDA 12.8** per GTX 16 / RTX 20-50 e scarica in automatico **CUDA 12.6** (`runtime-cu126`) per schede Maxwell/Pascal/Volta. |
+| `CUDA driver version is insufficient for CUDA runtime version` | I driver della tua scheda NVIDIA sono troppo vecchi per il motore IA dell'app. | Aggiorna i driver NVIDIA tramite **NVIDIA App / GeForce Experience** o il sito ufficiale NVIDIA, poi riavvia il PC. |
+| `RuntimeError: CUDA error: an illegal memory access was encountered` | La GPU è andata in crash per overclock/undervolt instabile, surriscaldamento o driver non allineati. | Riporta a zero eventuali overclock o undervolt in MSI Afterburner, aggiorna i driver NVIDIA e riprova. |
+| `RuntimeError: expected scalar type Half but found Float` / errore `HalfTensor` | La modalità veloce `FP16` è attiva, ma la tua GPU (serie GTX 10, DirectML o CPU) non la supporta. | Vai nelle Impostazioni e disattiva **FP16** (passa a **FP32**). |
+| `OSError: [WinError 1455] Il file di paging è troppo piccolo` | Windows ha finito la Memoria Virtuale (spazio su disco usato come RAM extra) mentre caricava modelli o creava l'index. | Premi il tasto Windows, cerca **Visualizza impostazioni di sistema avanzate → Impostazioni prestazioni → Avanzate → Memoria virtuale → Cambia**, togli la gestione automatica, imposta una dimensione personalizzata (es. Iniziale `16384` MB, Massima `32768` MB), clicca **Imposta** e **riavvia il PC**. |
 
-### 3. Caricamento modelli, Checkpoint, Embedder e Index
+### 3. Modelli, Checkpoint e Index
 
-| Errore / Messaggio | Causa | Come risolvere |
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
-| `UnpicklingError` / `Weights only load failed` (`fairseq.data.dictionary.Dictionary`) | PyTorch 2.6+ usa `weights_only=True` di default in `torch.load`, bloccando vecchi oggetti fairseq nelle build datate. | Aggiorna all'ultima versione dell'app (es. Ilaria RVC 2.4.0+ o ultimo Applio), che gestisce automaticamente `safe_globals` per `Dictionary`. |
-| `EOFError` / `RuntimeError: invalid load key` / `File is not a zip archive` | Download del `.pth` interrotto o corrotto, oppure il browser ha salvato una pagina HTML invece del file binario. | Controlla la dimensione del file (un `.pth` RVC valido pesa in genere 40-100+ MB, non pochi KB). Elimina il file corrotto e riscaricalo. |
-| `Missing key(s) in state_dict` / `RuntimeError: Sizes of tensors must match` | Hai caricato un checkpoint di training (`G_*.pth` o `D_*.pth` da `logs/`) invece dell'export di inferenza, oppure hai mischiato `v1` (256-d) e `v2` (768-d). | Usa lo strumento **Export** per generare un `.pth` da inferenza (non copiare i `G_*.pth` grezzi in `models/`) e verifica che versione RVC e sample rate coincidano. |
-| Pronuncia rovinata o la tua voce originale resta molto presente | **Embedder errato** tra training e inferenza, oppure uso di un HuBERT generico al posto di `contentvec`. | Usa lo stesso identico embedder usato in training (quasi sempre **`contentvec`**). Testa prima con index/retrieval a `0`. |
-| Errore sull'index / dimensioni incompatibili / crash RAM creando l'index | Uso di `trained_*.index` invece di `added_*.index`, index di un altro modello/embedder, o troppe feature per la RAM di sistema. | Seleziona sempre `added_*.index` (oppure metti retrieval a `0` per testare senza index). Non mischiare mai index tra modelli o versioni diverse. |
+| **Ho messo il modello nella cartella, perché non appare?** | Non hai cliccato Aggiorna, hai lasciato i file dentro uno `.zip` o li hai messi nella cartella sbagliata. | 1. Estrai lo `.zip` finché non vedi direttamente i file `.pth` e `.index`.<br>2. Metti il `.pth` in `assets/weights/` (o `weights/`) e il `.index` in `logs/` (controlla la cartella esatta della tua app).<br>3. Clicca il pulsante **Refresh / Aggiorna** accanto al menu del modello. |
+| `UnpicklingError` / `Weights only load failed` (`fairseq.data.dictionary.Dictionary`) | Le versioni recenti di PyTorch (2.6+) bloccano per sicurezza i vecchi formati di modelli RVC. | Aggiorna l'app all'ultima versione (es. **Ilaria RVC 2.4.0+** o ultimo **Applio**), che gestisce già il caricamento sicuro. |
+| `EOFError` / `RuntimeError: invalid load key` / `File is not a zip archive` | Il download del modello si è interrotto, è corrotto o ha salvato una pagina web invece del file vero. | Controlla la dimensione del file: un vero `.pth` RVC pesa di solito **da 40 a oltre 100 MB**. Se pesa pochi KB o 0 KB, eliminalo e riscaricalo. |
+| `Missing key(s) in state_dict` / `Sizes of tensors must match` | Hai caricato un checkpoint grezzo di training (`G_*.pth` o `D_*.pth`) invece del modello finale, oppure hai mescolato `v1` e `v2`. | Non copiare mai i file grezzi `G_*.pth` da `logs/` dentro `weights/`. Usa il pulsante **Export** dell'app per creare il `.pth` finale e controlla che `v1` / `v2` e sample rate combacino. |
+| **Errore Index / dimensioni sbagliate / crash RAM durante creazione index** | Hai scelto `trained_*.index` invece di `added_*.index`, hai abbinato un index di un'altra voce o il dataset è enorme. | Scegli sempre **`added_*.index`** (mai `trained_*.index`). Se dà ancora errore, imposta **Index Rate** su `0` per testare senza index. Non mescolare mai file `.index` di modelli diversi. |
 
-### 4. Preprocessing dataset, Estrazione feature e Training
+### 4. Qualità della voce, Pitch e File Audio
 
-| Errore / Messaggio | Causa | Come risolvere |
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
-| `ValueError: zero-size array to reduction operation` / tensore di dimensione zero | Cartella dataset vuota, clip completamente silenziosa, clip sotto 1 secondo, o spazi/Unicode nel percorso. | Usa un percorso semplice senza spazi, rimuovi clip mute o danneggiate, assicurati che siano WAV validi e rifai il preprocessing in un nuovo esperimento. |
-| `BrokenProcessPool` / i worker di preprocessing muoiono | Troppi worker CPU paralleli esauriscono la RAM di sistema. | Riduci il numero di thread/worker CPU nelle impostazioni di preprocessing e libera spazio su disco. |
-| `NaN loss` o modello esportato completamente muto | Audio corrotto o in clipping nel dataset, coppia pretrain `G`/`D` incompatibile, o overflow numerico in `FP16`. | Controlla che le clip non siano distorte/mute, verifica che il pretrain `G/D` corrisponda a sample rate e vocoder (oppure usa lo stock RVC) e prova un run in `FP32`. |
-| Impossibile riprendere il training o riparte dall'epoca 0 | `Fresh Training` lasciato attivo, oppure `G_*.pth` / `D_*.pth` / `config.json` spostati o rinominati. | Mantieni intatta la cartella `logs/<esperimento>/`, usa lo stesso nome esperimento, sample rate ed embedder, imposta un numero di epoche totali maggiore e lascia `Fresh Training` **disattivato**. |
+| **La voce sembra uno scoiattolo o un mostro profondo** | L'impostazione **Pitch (Transpose)** non corrisponde alla distanza tra chi parla e la voce obiettivo. | Usa `0` per stesso genere, `+12` per voce maschile che canta/parla su voce femminile, `-12` per voce femminile su voce maschile. Poi rifinisci di `+1` o `-1`. |
+| **La voce è metallica, acquosa, robotica o incomprensibile** | L'audio di partenza ha musica/riverbero, hai scelto il Pitch Extractor sbagliato o l'Embedder non combacia. | 1. Pulisci prima l'audio di partenza con **UVR5** o **MVSep** per togliere musica ed eco.<br>2. Imposta il Pitch Extractor su **`rmvpe`**.<br>3. Assicurati che l'Embedder coincida con quello del training (quasi sempre **`contentvec`**).<br>4. Abbassa **Index Rate** da `1.0` a `0.5` o `0.3`. |
+| **Il risultato assomiglia ancora troppo alla mia voce vera** | **Index Rate** è troppo basso, oppure il **Pitch** è rimasto nella tua estensione naturale invece di quella del modello. | Avvicina il Pitch alla voce del modello (`+12` / `-12`), alza leggermente **Index Rate** (`0.6` - `0.75`) o prova un modello più pulito. |
+| **Il convertitore non apre il mio file audio** | Il file è in un formato non supportato (es. `.m4a`, `.opus` o `.mp3` corrotto) oppure ha caratteri speciali nel nome. | Converti il file in **`.wav` PCM standard** (44100 Hz o 48000 Hz) e rinominalo in modo semplice, come `input.wav`. |
 
-### 5. Cambia-voce live, PortAudio e Routing audio
+### 5. Preprocessing Dataset e Training
 
-| Errore / Messaggio | Causa | Come risolvere |
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
-| `PortAudioError` / `Invalid sample rate` / dispositivo non disponibile | I dispositivi audio Windows hanno frequenze di campionamento diverse o un'altra app usa la modalità esclusiva. | Nel **Pannello di controllo Audio di Windows**, imposta microfono fisico, cuffie ed endpoint `VB-CABLE` tutti su **48000 Hz**, disattiva la **modalità esclusiva** e riavvia dopo aver installato cavi virtuali. |
-| Scatti robotici, crepitii o ritardo elevato | Il tempo di inferenza GPU supera la durata del Chunk, HAGS è attivo, o giochi/app pesanti saturano la GPU. | Aumenta il **Chunk Size**, usa **RMVPE** o **FCPE** al posto di Crepe pesante, disattiva **HAGS** su Windows e chiudi app GPU concorrenti. |
-| Eco o doppia voce in cuffia | Casse accese invece delle cuffie, oppure doppio monitoraggio ("Ascolta il dispositivo" di Windows + monitor dell'app). | Indossa sempre le **cuffie** e attiva il monitoraggio in **un solo punto**. |
-| Respiri o finali di parola tagliati su Discord | **Soppressione rumore (Krisp)** o **sensibilità automatica** di Discord li filtrano, oppure Noise Gate/VAD troppo alti. | Disattiva Krisp e sensibilità automatica nelle Impostazioni Vocali di Discord per il microfono virtuale e abbassa le soglie VAD / Noise Gate nell'app. |
+| `ValueError: zero-size array to reduction operation` / zero-size tensor | La cartella del dataset è vuota, contiene clip completamente mute, clip sotto 1 secondo o nomi cartella errati. | Assicurati che la cartella contenga file `.wav` non vuoti (lunghi almeno 2-10 secondi), elimina clip mute o corrotte, usa un percorso senza spazi e crea un nuovo esperimento. |
+| `BrokenProcessPool` / il PC si blocca durante il Preprocessing | Troppi thread CPU stanno lavorando insieme e saturano la RAM di sistema. | Abbassa il numero di **thread / worker CPU** nel Preprocessing (es. da `8` a `2` o `4`) e controlla di avere spazio libero su disco. |
+| `NaN loss` o il modello esportato è completamente muto | Un file audio corrotto o in clipping nel dataset ha rotto i calcoli, `FP16` è andato in overflow o il pretrain `G/D` non combacia. | Controlla che le clip del dataset non abbiano distorsioni estreme o silenzio assoluto. Usa il **pretrain stock RVC** adatto al tuo sample rate, disattiva `FP16` (usa `FP32`) e riparti con un nuovo training. |
+| **Il training non riprende / riparte da Epoch 0** | Hai lasciato attiva l'opzione `Fresh Training`, oppure hai rinominato/spostato file dentro `logs/`. | Lascia intatta tutta la cartella `logs/<nome_esperimento>/`, inserisci esattamente lo stesso **Nome Esperimento**, **Sample Rate** ed **Embedder**, imposta un totale di epoche più alto e disattiva `Fresh Training`. |
+| **Il modello suona ovattato, rumoroso o "overtrained"** | Il modello si è allenato per troppe epoche su un dataset piccolo/sporco e ha memorizzato il fruscio al posto della voce. | Fermati prima (prova i checkpoint ogni 50-100 epoche, es. 200-400 epoche per dataset piccoli) e pulisci sempre gli audio del dataset con **UVR5** o **MVSep** prima del training. |
+
+### 6. Voice Changer Live, Microfono e Discord
+
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
+| --- | --- | --- |
+| **Su Discord o in gioco nessuno sente la voce cambiata** | L'altra app sta ancora ascoltando il microfono vero invece del cavo virtuale, oppure il voice changer non è avviato. | 1. Installa **VB-CABLE** (e riavvia il PC dopo l'installazione).<br>2. Nel voice changer, imposta **Input** = il tuo microfono fisico e **Output** = `CABLE Input (VB-Audio Virtual Cable)`.<br>3. Su **Discord / Gioco**, imposta **Dispositivo di input** = `CABLE Output (VB-Audio Virtual Cable)`. |
+| `PortAudioError` / `Invalid sample rate` / il dispositivo audio non si avvia | Microfono, cuffie e VB-CABLE su Windows hanno velocità diverse (`44100 Hz` vs `48000 Hz`), oppure un'altra app ha bloccato il dispositivo. | Apri il **Pannello Audio di Windows (`mmsys.cpl`)**, apri **Proprietà → Avanzate** per Microfono, Cuffie, `CABLE Input` e `CABLE Output`, imposta **tutti su 48000 Hz**, togli la spunta da **Consenti alle applicazioni di assumere il controllo esclusivo** e riavvia l'app. |
+| **Scatti, crepitii o ritardo enorme nella voce** | La GPU impiega più tempo a elaborare un blocco audio rispetto alla durata del blocco stesso. | 1. Aumenta leggermente il **Chunk Size** (più stabilità, poco più ritardo).<br>2. Usa **RMVPE** o **FCPE** per il pitch (mai `crepe` full in live).<br>3. Disattiva **HAGS** su Windows.<br>4. Limita gli FPS dei giochi o chiudi app pesanti sulla GPU per lasciare margine al voice changer. |
+| **Eco o ti senti doppio in cuffia** | Stai usando le casse (il microfono le riprende) oppure due programmi stanno riproducendo la tua voce insieme. | Usa sempre le **cuffie**. Controlla che **"Ascolta il dispositivo"** su Windows sia **SPENTO** nelle impostazioni di Registrazione, e attiva il Monitor solo dentro il voice changer se ti serve davvero sentirti. |
+| **Discord taglia i respiri o la fine delle parole** | Il filtro rumore di Discord scambia le parti finali della voce convertita per rumore di fondo. | Nelle impostazioni **Voce e video** di Discord, disattiva **Soppressione rumore Krisp**, disattiva **Cancellazione eco** e disattiva **Determina automaticamente la sensibilità di input** (regolando la barra a mano). Abbassa anche la soglia VAD / Noise Gate nel voice changer. |
+
+### 7. Notebook Cloud (Colab e Kaggle)
+
+| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
+| --- | --- | --- |
+| `CUDA not available` / `No GPU found` su Colab o Kaggle | Hai dimenticato di attivare la GPU nelle impostazioni del notebook, oppure hai finito la quota gratuita. | **Colab:** vai su **Runtime → Cambia tipo di runtime → GPU T4**.<br>**Kaggle:** apri la barra destra **Settings → Accelerator → GPU T4 x2** (richiede verifica telefonica). |
+| **Download fallito nel notebook (`403` / quota Google Drive o Mega)** | Un link pubblico ha raggiunto il limite giornaliero di download oppure è stato messo privato. | Carica prima dataset o modello su **Hugging Face** o sul tuo Google Drive personale, poi scaricalo da lì dentro il notebook. |
+| **Il notebook si disconnette a metà training** | I notebook cloud si chiudono dopo inattività o sessioni lunghe, cancellando i file temporanei. | Salva o sincronizza sempre le cartelle `logs/` e `weights/` su **Google Drive** (o Output di Kaggle), e riprendi dall'ultimo checkpoint `G_*.pth` / `D_*.pth` salvato invece di ricominciare da zero. |
 
 ---
 
 ## Controlli rapidi per singola app
 
-- **Ilaria RVC:** Estrai il pacchetto completo, apri la cartella ed esegui `RUN_ILARIA_RVC_LOGS.bat`. Controlla la prima eccezione sopra l'ultimo messaggio di chiusura. Verifica che Windows veda la GPU NVIDIA e che `127.0.0.1:6969` non sia bloccata o già occupata.
-- **Applio Desktop:** Apri **Setup** e controlla lo stato del motore; usa **Install / Repair** se un controllo fallisce. Con **Gradio**, lascia aperta la console di avvio e usa l'indirizzo `localhost` stampato lì.
-- **RVC WebUI (Mainline) / w-okada / Deiteris / TGR:** Abbina correttamente la build CUDA o DirectML alla tua GPU. Per archivi divisi `.zip.001`, assicurati di avere tutte le parti nella stessa cartella prima di estrarre.
+- **Ilaria RVC:** Estrai tutto lo ZIP in un percorso corto come `C:\IlariaRVC`. Usa `RUN_ILARIA_RVC_LOGS.bat` se si chiude all'avvio, verifica che `127.0.0.1:6969` sia libero e guarda il **primo** errore sopra il messaggio di chiusura.
+- **Applio Desktop:** Apri la scheda **Setup** e controlla lo stato del motore. Clicca **Install / Repair** se un controllo è rosso. Per **Gradio**, tieni aperta la finestra della console e copia l'indirizzo `localhost` esatto stampato lì.
+- **RVC Mainline / w-okada / Deiteris / TGR:** Scegli il pacchetto giusto tra **CUDA** (NVIDIA) e **DirectML** (AMD/Intel) prima di scaricare. Estrai gli archivi divisi `.zip.001` con 7-Zip solo dopo aver messo tutte le parti nella stessa cartella.
 
-## Segnalare un problema
+## Come chiedere aiuto
 
-Quando chiedi supporto (ad esempio tramite la [pagina contatti](https://ilariarvc.shop/en/contact/) per Ilaria RVC), includi:
-1. Nome dell'app, edizione e versione (es. `Ilaria RVC 2.4.0`).
-2. Sistema operativo, modello esatto di GPU e backend (`CUDA` / `DirectML` / `CPU`).
-3. La **prima riga di errore** con le righe di log vicine (rimuovendo percorsi personali o dati sensibili).
-4. Per il training: fase fallita, sample rate, vocoder, embedder e se era un nuovo run o un resume. Per il live: catena completa dei dispositivi (`Mic → App → Cavo Virtuale → App destinazione`).
+Quando chiedi supporto (ad esempio dalla [pagina contatti di Ilaria RVC](https://ilariarvc.shop/it/contact/)), includi sempre questi 4 dettagli così chi ti aiuta può risolvere al primo colpo:
+1. **Nome e versione dell'app** (es. `Ilaria RVC 2.4.0`, `Applio Desktop`, `Deiteris`).
+2. **Specifiche del PC:** versione di Windows, modello esatto della GPU (es. `RTX 3060` o `RX 6700 XT`) e backend (`CUDA` / `DirectML` / `CPU`).
+3. **La PRIMA riga di errore** dal log della console (nascondi pure il tuo nome utente Windows se serve).
+4. **Cosa stavi facendo:** Training (indica sample rate, vocoder, embedder e se era nuovo o resume) oppure Voice Changer Live (indica la catena esatta: `Mic -> App -> VB-CABLE -> Discord`).
