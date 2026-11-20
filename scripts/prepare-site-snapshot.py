@@ -101,6 +101,10 @@ def publish(dist, source, location):
     if location.exists():
         raise ValueError('Snapshot worktree path already exists')
     git = lambda *args: subprocess.check_output(['git', *args], text=True).strip()
+    current = git('ls-remote', 'origin', 'refs/heads/main').split()
+    if not current or current[0] != source:
+        print(f'Skipping {source}: main has moved on.', flush=True)
+        return
     channel = 'refs/heads/site-content'
     previous = git('ls-remote', 'origin', channel)
     if previous:
