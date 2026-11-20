@@ -41,13 +41,15 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Non spécifié | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Non spécifié | `Loren85/IMA-TEST-V1` |
 | **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | `TheStinger/itaila` |
-| **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM_BEATMASTER` |
-| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM49_HFG` |
-| **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM4.4` *(non testé dans Ilaria RVC)* |
+| **KLM - BeatzForge V2 / BeatMaster** | `32 kHz`, `48 kHz` | HiFi-GAN / Non spécifié | Non spécifié | `SeoulStreamingStation/KLM_BEATMASTER` |
+| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Non spécifié | Non spécifié | `SeoulStreamingStation/KLM49_HFG`, `KLM4`, `KLM4.1`, `KLM4.2`, `KLM43` |
+| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz`, `40 kHz` | MRF HiFi-GAN / Non spécifié | Non spécifié | `SeoulStreamingStation/KLM4.4` *(compatibilité variable)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | RefineGAN | Non spécifié | `SeoulStreamingStation/KLM5` |
-| **KLM 6.1 (Exp3 L6 / KLM 6.2)** | `32 kHz` | Non spécifié | Non spécifié | `SeoulStreamingStation/KLM6_Experimental` |
-| **Legacy Core V1.5** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` |
-| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` |
+| **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | `SeoulStreamingStation/KLM6_Experimental` |
+| **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Non spécifié | Non spécifié | `SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel`, `RVC_KLM-X-10_Pretrained-Model`, `KLM_RVC_KLM-HF_Trainer` |
+| **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | `SeoulStreamingStation/KLM_KpopUniverse`, `BlackTone_RVC_Pretrained` |
+| **Legacy Core V1.5** *(retiré en 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(retiré par l'auteur)* |
+| **Legacy Core V1.5v2** *(retiré en 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(retiré par l'auteur)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Non spécifié | `juaow/mandaguesv2` |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
@@ -71,3 +73,9 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **VocalCore** et **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
 
 > **Note de compatibilité** : dans Ilaria RVC, l'entraînement RefineGAN est pris en charge spécifiquement à `32 kHz` avec RVC v2 et guidage F0. Choisir un pretrain RefineGAN `40 kHz` ou `44.1 kHz` tout en réglant l'entraînement sur `32 kHz` échouera ou produira un résultat inutilisable.
+
+
+!!!note
+**Note sur Legacy Core (`V1.5` et `V1.5v2`) :**
+Les modèles pretrained **Legacy Core** (`lyery/mode4` et `lyery/test`) ont été **retirés par leur auteur** et ne sont plus téléchargeables (retirés aussi du téléchargeur d'Ilaria RVC dans la `2.4.4`). Les lignes ci-dessus sont conservées **à titre purement informatif** ; seuls les poids déjà téléchargés auparavant restent utilisables pour l'entraînement.
+!!!

@@ -13,6 +13,8 @@ description: "Apri Impostazioni incorporamento sotto Elaborazione audio."
 
 > **2.4.0** · Il pacchetto Windows sposta l’app e il runtime in app/ e i modelli vocali nella cartella models/ alla radice. Arrivano i notebook Colab e Lightning AI Studio, le indicazioni per scaricare gli embedder opzionali nel training e la coppia Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Il runtime include pywin32 e corregge pip.
 
+> **2.4.6** · Aggiunge **KLM Vocal ContentVec** (`klm-vocal-contentvec`) come download opzionale per Inferenza e Training RVC v2, e aggiunge **43 coppie G/D KLM verificate** in **Recommended pretraineds** (la compatibilità in training varia per coppia). Nota: i download Legacy Core di Lyery sono stati rimossi nella 2.4.4 dopo la rimozione dei file sorgente.
+
 ## Incorporatori di inferenza
 
 Apri **Impostazioni incorporamento** sotto **Elaborazione audio**. Legge automaticamente i metadati del modello archiviati e utilizza ContentVec quando non viene registrato alcun incorporamento. Se l'editore specifica un codificatore, utilizza quel codificatore. Un indice di recupero necessita di funzionalità compatibili dello stesso esperimento. Lasciare il recupero disabilitato quando l'accoppiamento è incerto.

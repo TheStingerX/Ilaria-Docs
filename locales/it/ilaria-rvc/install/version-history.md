@@ -3,7 +3,7 @@ label: "Cronologia delle versioni e differenze di rilascio"
 icon: ":clock3:"
 order: 81
 permalink: /ilaria-rvc/version-history/
-description: "L'ultima versione per Windows è 2.4.5. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
+description: "L'ultima versione per Windows è 2.4.6. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
 ---
 # Cronologia delle versioni e differenze di rilascio
 
@@ -11,12 +11,13 @@ description: "L'ultima versione per Windows è 2.4.5. Controlla la versione inst
 
 ## Quale versione descrive questa documentazione?
 
-L’ultima versione per Windows è **2.4.5**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
+L’ultima versione per Windows è **2.4.6**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
 
 ## Tutte le versioni
 
  | Versione | In evidenza |
 | --- | --- |
+| 2.4.6 | Aggiunge **KLM Vocal ContentVec** (`klm-vocal-contentvec`) come download opzionale per Inferenza e Training RVC v2, e aggiunge **43 coppie G/D KLM verificate** ai **Modelli pretrained consigliati** con relativi sample rate (la compatibilità in training varia per coppia). Dalla **2.4.5**, apri **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |
 | 2.4.5 | Aggiunge la conversione dei pesi `.pth` ↔ `.safetensors` in **Altro → Convert model weights**, conservando i metadati RVC e aggiungendo il pulsante **Move .pth to models**. Migliora il messaggio in Inferenza per i file senza configurazione vocale e installa automaticamente `safetensors` al primo utilizzo se necessario. Dalla **2.4.4**, apri **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |
 | 2.4.4 | Rimuove le sei opzioni di download pretrained Legacy Core di Lyery dopo la rimozione dei file sorgente (i pesi già scaricati restano utilizzabili per il training). Richiede **2.4.2** o successiva. |
 | 2.4.3 | Aggiunge il training nativo in precisione mista **BF16**, selezionato in automatico sulle GPU NVIDIA RTX serie 30, 40 e 50 quando tutte le GPU scelte lo supportano (su Kaggle T4 il default resta FP16). Ricorda le scelte manuali `FP16` e `FP32`, mantiene la precisione salvata nei training esistenti salvo modifica esplicita, aggiorna Training Queue e PC training advisor e lascia l'estrazione delle feature in `FP32` mantenendo il formato standard di export RVC. Richiede prima la **2.4.2** tramite **Altro → Aggiorna Ilaria RVC**. |

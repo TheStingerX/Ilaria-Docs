@@ -49,4 +49,4 @@ Keep the old installation as a backup. Copy voice models to the new models/ fold
 
 ### Update from 2.4.0
 
-Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install the incremental updates up to **2.4.5** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5`).
+Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install the incremental updates up to **2.4.6** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6`).
