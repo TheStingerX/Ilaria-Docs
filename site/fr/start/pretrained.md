@@ -44,6 +44,7 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse), [BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
 | **Legacy Core V1.5** *(retiré en 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(retiré par l'auteur)* |
 | **Legacy Core V1.5v2** *(retiré en 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(retiré par l'auteur)* |
+| **Legacy Core V1.6** *(retiré)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(retiré par l'auteur)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Non spécifié | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non spécifié | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non spécifié | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -69,6 +70,6 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 > **Note de compatibilité** : dans Ilaria RVC, l'entraînement RefineGAN est pris en charge spécifiquement à `32 kHz` avec RVC v2 et guidage F0. Choisir un pretrain RefineGAN `40 kHz` ou `44.1 kHz` tout en réglant l'entraînement sur `32 kHz` échouera ou produira un résultat inutilisable.
 
 !!!note
-**Note sur Legacy Core (`V1.5` et `V1.5v2`) :**
+**Note sur Legacy Core (`V1.5`, `V1.5v2` et `V1.6`) :**
 Les modèles pretrained **Legacy Core** (`lyery/mode4` et `lyery/test`) ont été **retirés par leur auteur** et ne sont plus téléchargeables (retirés aussi du téléchargeur d'Ilaria RVC dans la `2.4.4`). Les lignes ci-dessus sont conservées **à titre purement informatif** ; seuls les poids déjà téléchargés auparavant restent utilisables pour l'entraînement.
 !!!

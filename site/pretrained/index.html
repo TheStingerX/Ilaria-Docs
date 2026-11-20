@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848533156803">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848534089988">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848533156803" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848534089988" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848533156803" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848534089988" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848533156803" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848534089988" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -228,6 +228,7 @@
 | **KLM KpopUniverse (I / II) &amp; BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse), [BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
 | **Legacy Core V1.5** *(removed in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(removed by author)* |
 | **Legacy Core V1.5v2** *(removed in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(removed by author)* |
+| **Legacy Core V1.6** *(removed)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(removed by author)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Not specified | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Not specified | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Not specified | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -365,6 +366,13 @@
 <td>HiFi-GAN</td>
 <td><code translate="no" v-pre>contentvec</code></td>
 <td><code translate="no" v-pre>lyery/test</code> <em>(removed by author)</em></td>
+</tr>
+<tr>
+<td><strong>Legacy Core V1.6</strong> <em>(removed)</em></td>
+<td><code translate="no" v-pre>32 kHz</code></td>
+<td>HiFi-GAN</td>
+<td><code translate="no" v-pre>contentvec</code></td>
+<td><code translate="no" v-pre>lyery</code> <em>(removed by author)</em></td>
 </tr>
 <tr>
 <td><strong>Mandagues V2</strong></td>
@@ -531,7 +539,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>note</h5>
-<p><strong>Note on Legacy Core (<code translate="no" v-pre>V1.5</code> and <code translate="no" v-pre>V1.5v2</code>):</strong>
+<p><strong>Note on Legacy Core (<code translate="no" v-pre>V1.5</code>, <code translate="no" v-pre>V1.5v2</code>, and <code translate="no" v-pre>V1.6</code>):</strong>
 The <strong>Legacy Core</strong> pretrained models (<code translate="no" v-pre>lyery/mode4</code> and <code translate="no" v-pre>lyery/test</code>) were <strong>removed by their author</strong> and are no longer available for download (they were also removed from Ilaria RVC&#x27;s downloader in <code translate="no" v-pre>2.4.4</code>). Their entries above are kept <strong>for informational purposes only</strong>; only weights you already downloaded previously can still be used for training.</p>
         </div>
     </div>
@@ -573,7 +581,7 @@ The <strong>Legacy Core</strong> pretrained models (<code translate="no" v-pre>l
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T23:37:29.000Z">21/11/2026 · 00:37</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T23:52:14.000Z">21/11/2026 · 00:52</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

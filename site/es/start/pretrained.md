@@ -44,6 +44,7 @@ Si cualquiera de estos ajustes no coincide, el entrenamiento fallará al instant
 | **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse), [BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
 | **Legacy Core V1.5** *(retirado en 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(retirado por el autor)* |
 | **Legacy Core V1.5v2** *(retirado en 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(retirado por el autor)* |
+| **Legacy Core V1.6** *(retirado)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(retirado por el autor)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | No especificado | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | No especificado | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | No especificado | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -69,6 +70,6 @@ Si cualquiera de estos ajustes no coincide, el entrenamiento fallará al instant
 > **Nota de compatibilidad**: en Ilaria RVC el entrenamiento con RefineGAN solo está soportado específicamente a `32 kHz` con RVC v2 y guía de tono. Elegir un pretrain RefineGAN de `40 kHz` o `44.1 kHz` configurando el entrenamiento en `32 kHz` fallará o producirá un resultado roto.
 
 !!!note
-**Nota sobre Legacy Core (`V1.5` y `V1.5v2`):**
+**Nota sobre Legacy Core (`V1.5`, `V1.5v2` y `V1.6`):**
 Los modelos pretrained **Legacy Core** (`lyery/mode4` y `lyery/test`) fueron **retirados por su autor** y ya no están disponibles para descargar (también fueron retirados del descargador de Ilaria RVC en `2.4.4`). Sus filas en la tabla se mantienen **solo con fines informativos**; únicamente podrás usar para entrenar pesos descargados previamente.
 !!!
