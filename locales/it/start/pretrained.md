@@ -48,8 +48,8 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 | **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Non specificato | Non specificato | `SeoulStreamingStation/KLM6_Experimental` |
 | **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Non specificato | Non specificato | `SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel`, `RVC_KLM-X-10_Pretrained-Model`, `KLM_RVC_KLM-HF_Trainer` |
 | **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Non specificato | Non specificato | `SeoulStreamingStation/KLM_KpopUniverse`, `BlackTone_RVC_Pretrained` |
-| **Legacy Core V1.5** *(rimosso in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` *(sorgente rimossa)* |
-| **Legacy Core V1.5v2** *(rimosso in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(sorgente rimossa)* |
+| **Legacy Core V1.5** *(rimosso in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(rimosso dall'autore)* |
+| **Legacy Core V1.5v2** *(rimosso in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(rimosso dall'autore)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Non specificato | `juaow/mandaguesv2` |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non specificato | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non specificato | `shiromiya/nanashi-pretrain` |
@@ -73,3 +73,9 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 | **VocalCore** e **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non specificato | `Politrees/RVC_resources` |
 
 > **Nota di compatibilità**: in Ilaria RVC il training con RefineGAN è supportato specificamente a `32 kHz` con RVC v2 e pitch guidance. Scegliere un pretrain RefineGAN a `40 kHz` o `44.1 kHz` impostando il training a `32 kHz` causerà errori o un risultato inutilizzabile.
+
+
+!!!note
+**Nota sui Legacy Core (`V1.5` e `V1.5v2`):**
+I modelli pretrained **Legacy Core** (`lyery/mode4` e `lyery/test`) sono stati **rimossi dall'autore** e non sono più scaricabili (rimossi anche dal downloader di Ilaria RVC nella `2.4.4`). Le voci in tabella restano **a solo scopo informativo**; solo eventuali pesi già scaricati in precedenza possono essere usati per il training.
+!!!

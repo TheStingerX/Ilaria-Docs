@@ -48,8 +48,8 @@ If any of these settings do not match the pretrained pair, training will either 
 | **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | `SeoulStreamingStation/KLM6_Experimental` |
 | **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Not specified | Not specified | `SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel`, `RVC_KLM-X-10_Pretrained-Model`, `KLM_RVC_KLM-HF_Trainer` |
 | **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | `SeoulStreamingStation/KLM_KpopUniverse`, `BlackTone_RVC_Pretrained` |
-| **Legacy Core V1.5** *(download removed in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` *(upstream taken down)* |
-| **Legacy Core V1.5v2** *(download removed in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(upstream taken down)* |
+| **Legacy Core V1.5** *(removed in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(removed by author)* |
+| **Legacy Core V1.5v2** *(removed in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(removed by author)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Not specified | `juaow/mandaguesv2` |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Not specified | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Not specified | `shiromiya/nanashi-pretrain` |
@@ -71,5 +71,10 @@ If any of these settings do not match the pretrained pair, training will either 
 | **UKA** | `32 kHz` | HiFi-GAN | Not specified | `Plasmati/Pretrains` |
 | **UKR** | `32 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
 | **VocalCore** & **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Not specified | `Politrees/RVC_resources` |
+
+!!!note
+**Note on Legacy Core (`V1.5` and `V1.5v2`):**
+The **Legacy Core** pretrained models (`lyery/mode4` and `lyery/test`) were **removed by their author** and are no longer available for download (they were also removed from Ilaria RVC's downloader in `2.4.4`). Their entries above are kept **for informational purposes only**; only weights you already downloaded previously can still be used for training.
+!!!
 
 > **Compatibility note**: In Ilaria RVC, RefineGAN training is supported specifically at `32 kHz` with RVC v2 and pitch guidance. Choosing a `40 kHz` or `44.1 kHz` RefineGAN pretrain while setting training to `32 kHz` will fail or produce broken output.
