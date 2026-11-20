@@ -1,7 +1,7 @@
 ---
 label: "Requisitos do sistema"
 icon: ":clipboard:"
-order: 82
+order: 83
 permalink: /ilaria-rvc/requirements/
 description: "O Ilaria RVC corre localmente no teu PC usando PyTorch 2.10.0 e NVIDIA CUDA."
 ---

@@ -1,5 +1,5 @@
 ---
-label: "Voice Blender (Merge Models)"
+label: "Merge Models"
 icon: ":twisted_rightwards_arrows:"
 order: 92
 permalink: /ilaria-rvc/voice-blender/
