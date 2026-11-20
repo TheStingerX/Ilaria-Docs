@@ -1,6 +1,6 @@
----
+﻿---
 label: "🧱 Modèles pretrained"
-order: 91
+order: 90
 permalink: /pretrained/
 ---
 # Modèles de base Pretrained RVC
