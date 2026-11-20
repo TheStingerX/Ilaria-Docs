@@ -10,12 +10,13 @@ permalink: /ilaria-rvc/version-history/
 
 ## Which version does this documentation describe?
 
-The latest Windows release is **2.4.1**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
+The latest Windows release is **2.4.2**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
 
 ## All releases
 
 | Release | Highlights |
 | --- | --- |
+| 2.4.2 | Fixes RMVPE inference when CUDA cuDNN rejects a GRU operation. RMVPE uses contiguous input and retries that GRU on the CPU if cuDNN returns `CUDNN_STATUS_NOT_SUPPORTED`. Requires 2.4.0 or later. Open **Other → Update Ilaria RVC** to install 2.4.2. |
 | 2.4.1 | Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install **2.4.1** when it appears. |
 | 2.4.0 | The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32. |
 | 2.3.0 | RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model. |

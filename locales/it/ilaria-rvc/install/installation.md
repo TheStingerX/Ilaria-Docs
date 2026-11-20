@@ -48,4 +48,4 @@ Conserva la vecchia installazione come copia di sicurezza. Copia i modelli in mo
 
 ### Aggiornamento dalla 2.4.0
 
-Installa e avvia prima la 2.4.0. Apri **Altro → Aggiorna Ilaria RVC** e installa la **2.4.1** quando compare.
+Richiede la 2.4.0 o successiva. Apri **Altro → Aggiorna Ilaria RVC** per installare la 2.4.2.

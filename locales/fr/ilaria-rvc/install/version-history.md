@@ -10,12 +10,13 @@ permalink: /ilaria-rvc/version-history/
 
 ## Quelle version cette documentation décrit-elle ?
 
-La dernière version Windows est la **2.4.1**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
+La dernière version Windows est la **2.4.2**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
 
 ## Toutes les versions
 
  | Version | Points forts |
 | --- | --- |
+| 2.4.2 | Corrige l’inférence RMVPE quand cuDNN refuse une opération GRU. RMVPE utilise une entrée contiguë et réessaie cette GRU sur le CPU en cas de `CUDNN_STATUS_NOT_SUPPORTED`. Nécessite la version 2.4.0 ou ultérieure. Installez la 2.4.2 via **Other → Update Ilaria RVC**. |
 | 2.4.1 | Ajoute la synthèse locale facultative Kokoro v1.0, avec 54 voix dont Sara et Nicola en italien. Précise les prérequis des moteurs TTS, corrige le chemin des poids RMVPE et masque les messages INFO verbeux de HuBERT tout en conservant les avertissements et les erreurs. Installez et lancez la 2.4.0. Ouvrez **Other → Update Ilaria RVC** et installez la **2.4.1** quand elle apparaît. |
 | 2.4.0 | Le paquet Windows déplace l’application et le runtime dans app/. Les modèles restent à la racine dans models/. Ajout de Colab, Lightning AI Studio, des indications de téléchargement des embedders, et de Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip est réparé et pywin32 est inclus. |
 | 2.3.0 | RMVPE High Register propose des modes de détection, des limites et un graphique comparatif de F0 pour les notes aiguës. ElevenLabs rejoint les moteurs TTS. Saisissez votre clé API ElevenLabs, choisissez une voix et testez une phrase courte. MRF HiFi-GAN prend en charge l’entraînement et l’inférence. Le catalogue ajoute 15 paires générateur/discriminateur, dont KLM 4.4 X1 et X2 à 40 kHz. Portuguese HuBERT Base est disponible en inférence. En entraînement RVC v2, importez et enregistrez un HuBERT personnalisé. Sa configuration est conservée dans le modèle exporté. |
