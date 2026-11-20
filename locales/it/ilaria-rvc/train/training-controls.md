@@ -15,6 +15,8 @@ description: "La versione 2.1.0 offre impostazioni a 32, 40 e 48 kHz con combina
 
 > **2.4.0** · Il pacchetto Windows sposta l’app e il runtime in app/ e i modelli vocali nella cartella models/ alla radice. Arrivano i notebook Colab e Lightning AI Studio, le indicazioni per scaricare gli embedder opzionali nel training e la coppia Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Il runtime include pywin32 e corregge pip.
 
+> **2.4.3** · Aggiunge il training nativo in precisione mista **BF16**, selezionato automaticamente sulle GPU RTX serie 30, 40 e 50 quando supportato (su Kaggle T4 il default è FP16). Le scelte manuali FP16/FP32 vengono ricordate, i training esistenti mantengono la loro precisione salvata e Training Queue e PC training advisor usano le nuove opzioni. L'estrazione delle feature resta in FP32.
+
 ## Quattro fasi
 
  | Fase | Input | Controlla prima di continuare |

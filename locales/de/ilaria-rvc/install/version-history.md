@@ -3,7 +3,7 @@ label: "Versionsverlauf und Release-Unterschiede"
 icon: ":clock3:"
 order: 83
 permalink: /ilaria-rvc/version-history/
-description: "Die neueste Windows-Version ist 2.4.1. Überprüfen Sie Ihre installierte Version unter Andere → Ilaria RVC aktualisieren. Verwenden Sie dort Alle..."
+description: "Die neueste Windows-Version ist 2.4.3. Überprüfen Sie Ihre installierte Version unter Andere → Ilaria RVC aktualisieren."
 ---
 # Versionsverlauf und Release-Unterschiede
 
@@ -11,12 +11,14 @@ description: "Die neueste Windows-Version ist 2.4.1. Überprüfen Sie Ihre insta
 
 ## Welche Version wird in dieser Dokumentation beschrieben?
 
-Die neueste Windows-Version ist **2.4.1**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
+Die neueste Windows-Version ist **2.4.3**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
 
 ## Alle Veröffentlichungen
 
  | Veröffentlichung | Highlights |
 | --- | --- |
+| 2.4.3 | Fügt natives **BF16**-Mixed-Precision-Training hinzu, automatisch gewählt auf NVIDIA RTX 30, 40 und 50, wenn alle gewählten GPUs es unterstützen (Kaggle T4 nutzt standardmäßig FP16). Merkt sich manuelle `FP16`- und `FP32`-Wahl, behält die Präzision bestehender Trainings bei, aktualisiert Training Queue und PC training advisor und belässt Feature-Extraktion in `FP32` sowie das Standard-RVC-Exportformat. Erfordert zuerst **2.4.2** über **Other → Update Ilaria RVC**. |
+| 2.4.2 | Fügt **RMVPE cuDNN recovery** hinzu, um bei cuDNN-Fehlern während der Pitch-Extraktion in Inferenz und Preprocessing sauber fortzufahren. Update von **2.4.1** über **Other → Update Ilaria RVC**. |
 | 2.4.1 | Ergänzt optionales lokales TTS mit Kokoro v1.0 und 54 Stimmen, darunter Sara und Nicola auf Italienisch. Erklärt die TTS-Voraussetzungen, korrigiert den Standardpfad der RMVPE-Gewichte und blendet ausführliche HuBERT-INFO-Meldungen aus. Warnungen und Fehler bleiben sichtbar. Installiere und starte zuerst 2.4.0. Öffne **Other → Update Ilaria RVC** und installiere **2.4.1**, sobald es angezeigt wird. |
 | 2.4.0 | Unter Windows liegen App und Laufzeit in app/ und Stimmmodelle in models/ im Hauptordner. Neu sind Colab, Lightning AI Studio, Hinweise zu optionalen Embeddern und Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip wurde repariert und pywin32 ist enthalten. |
 | 2.3.0 | RMVPE High Register bietet Modi, Erkennungsgrenzen und ein F0-Vergleichsdiagramm für hohe Gesangsnoten. ElevenLabs ist als TTS-Engine verfügbar. Gib deinen ElevenLabs-API-Schlüssel ein, wähle eine Stimme und teste einen kurzen Satz. MRF HiFi-GAN unterstützt Training und Inferenz. Der Katalog ergänzt 15 Generator-Diskriminator-Paare, darunter KLM 4.4 X1 und X2 mit 40 kHz. Portuguese HuBERT Base ist optional für die Inferenz. Beim RVC-v2-Training kannst du einen eigenen HuBERT-Embedder hochladen und speichern. Seine Konfiguration bleibt im exportierten Modell erhalten. |

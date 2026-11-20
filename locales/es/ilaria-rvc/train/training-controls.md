@@ -15,6 +15,8 @@ description: "La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con co
 
 > **2.4.0** · Windows mueve la aplicación y el entorno a app/, y los modelos a models/ en la raíz. Añade Colab, Lightning AI Studio, ayuda para descargar embedders y Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Se repara pip y se incluye pywin32.
 
+> **2.4.3** · Añade entrenamiento nativo en precisión mixta **BF16**, seleccionado automáticamente en GPUs RTX series 30, 40 y 50 compatibles (Kaggle T4 usa FP16 por defecto). Recuerda selecciones manuales FP16/FP32, los entrenamientos existentes conservan su precisión y Training Queue y PC training advisor usan las nuevas opciones. La extracción de rasgos sigue en FP32.
+
 ## Cuatro etapas
 
  | Etapa | Entradas | Verificar antes de continuar |
