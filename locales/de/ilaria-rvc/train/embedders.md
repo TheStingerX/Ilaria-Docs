@@ -13,6 +13,8 @@ description: "Öffnen Sie Embedder-Einstellungen unter Audioverarbeitung. Liest 
 
 > **2.4.0** · Unter Windows liegen App und Laufzeit in app/ und Stimmmodelle in models/ im Hauptordner. Neu sind Colab, Lightning AI Studio, Hinweise zu optionalen Embeddern und Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip wurde repariert und pywin32 ist enthalten.
 
+> **2.4.6** · Ergänzt **KLM Vocal ContentVec** (`klm-vocal-contentvec`) als optionalen Download für Inferenz und RVC-v2-Training sowie **43 geprüfte KLM-G/D-Paare** in **Recommended pretraineds** (Kompatibilität variiert je Paar). Hinweis: Die Lyery-Legacy-Core-Downloads wurden in 2.4.4 entfernt, nachdem die Quelldateien offline genommen wurden.
+
 ## Inferenz-Embedder
 
 Öffnen Sie **Embedder-Einstellungen** unter **Audioverarbeitung**. Liest gespeicherte Modellmetadaten automatisch und verwendet ContentVec, wenn kein Einbetter aufgezeichnet ist. Wenn der Herausgeber einen Encoder angibt, verwenden Sie diesen Encoder. Ein Abrufindex benötigt kompatible Funktionen aus demselben Experiment. Lassen Sie den Abruf deaktiviert, wenn die Kopplung unsicher ist.

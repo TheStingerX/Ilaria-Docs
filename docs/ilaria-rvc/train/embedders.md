@@ -13,6 +13,8 @@ description: "Open Embedder Settings below Audio Processing. Auto reads stored m
 
 > **2.4.0** · The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32.
 
+> **2.4.6** · Adds **KLM Vocal ContentVec** (`klm-vocal-contentvec`) as an optional download for Inference and RVC v2 Training, and adds **43 verified KLM G/D pairs** to **Recommended pretraineds** (training compatibility varies by pair). Note: Lyery Legacy Core downloads were removed in 2.4.4 after upstream source files were taken down.
+
 ## Inference embedders
 
 Open **Embedder Settings** below **Audio Processing**. Auto reads stored model metadata and uses ContentVec when no embedder is recorded. If the publisher specifies an encoder, use that encoder. A retrieval index needs compatible features from the same experiment. Leave retrieval disabled when the pairing is uncertain.

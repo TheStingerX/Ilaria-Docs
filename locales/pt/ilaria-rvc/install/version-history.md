@@ -3,7 +3,7 @@ label: "Histórico de versões e diferenças de lançamento"
 icon: ":clock3:"
 order: 81
 permalink: /ilaria-rvc/version-history/
-description: "A versão mais recente para Windows é a 2.4.5. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC."
+description: "A versão mais recente para Windows é a 2.4.6. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC."
 ---
 # Histórico de versões e diferenças de lançamento
 
@@ -11,12 +11,13 @@ description: "A versão mais recente para Windows é a 2.4.5. Verifique sua vers
 
 ## Qual versão esta documentação descreve?
 
-A versão mais recente para Windows é a **2.4.5**. Verifique sua versão instalada em **Outros → Atualizar Ilaria RVC**. Use **Todas as alterações até agora** para navegar pelas notas de lançamento por lançamento, mesmo off-line.
+A versão mais recente para Windows é a **2.4.6**. Verifique sua versão instalada em **Outros → Atualizar Ilaria RVC**. Use **Todas as alterações até agora** para navegar pelas notas de lançamento por lançamento, mesmo off-line.
 
 ## Todos os lançamentos
 
  | Lançamento | Destaques |
 | --- | --- |
+| 2.4.6 | Adiciona **KLM Vocal ContentVec** (`klm-vocal-contentvec`) como download opcional para Inferência e Treino RVC v2, e adiciona **43 pares G/D KLM verificados** em **Recommended pretrained models** com taxas listadas (a compatibilidade de treino varia por par). A partir da **2.4.5**, abra **Other → Update Ilaria RVC → Check for updates** e escolha **Download and restart**. |
 | 2.4.5 | Adiciona conversão de modelos `.pth` ↔ `.safetensors` em **Other → Convert model weights**, preservando metadados RVC e adicionando o botão **Move .pth to models**. Melhora a mensagem de Inferência para arquivos sem configuração vocal e instala `safetensors` automaticamente no primeiro uso. A partir da **2.4.4**, abra **Other → Update Ilaria RVC → Check for updates** e escolha **Download and restart**. |
 | 2.4.4 | Remove as seis opções de download pretrained Legacy Core de Lyery após a remoção dos arquivos originais (pesos já baixados continuam disponíveis para treino). Requer **2.4.2** ou posterior. |
 | 2.4.3 | Adiciona treino nativo em precisão mista **BF16**, selecionado automaticamente em GPUs NVIDIA RTX séries 30, 40 e 50 quando todas as GPUs selecionadas suportam (Kaggle T4 usa FP16 por padrão). Memoriza escolhas manuais de `FP16` e `FP32`, preserva a precisão de treinos existentes salvo alteração explícita, atualiza a Training Queue e o PC training advisor e mantém a extração de características em `FP32` e o formato padrão de exportação RVC. Requer **2.4.2** antes via **Other → Update Ilaria RVC**. |
