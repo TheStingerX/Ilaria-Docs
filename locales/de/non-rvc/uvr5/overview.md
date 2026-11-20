@@ -3,7 +3,7 @@ label: "Überblick & Anforderungen"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/uvr5/overview/
-description: "Bevorstehendes Release: UVR6 kommt bald!"
+description: "UVR5 (Ultimate Vocal Remover v5 GUI) ist eine kostenlose Open-Source-Desktop-App zur KI-gestützten Audiotrennung."
 ---
 # Ultimate Vocal Remover (UVR5)
 
@@ -11,6 +11,7 @@ description: "Bevorstehendes Release: UVR6 kommt bald!"
 
 !!!warning
 **Bevorstehendes Release: UVR6 kommt bald!**
+
 **Ultimate Vocal Remover 6 (UVR6)** erscheint am **11. Dezember 2026 für Windows**, **Mac** folgt kurz darauf und danach **Linux**. Da **UVR5** bald von dieser neuen Hauptversion abgelöst wird, behalte rund um den Release-Termin die offizielle Release-Seite im Blick, falls du umsteigen möchtest.
 !!!
 
