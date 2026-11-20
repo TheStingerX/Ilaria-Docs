@@ -3,6 +3,7 @@ label: "Panoramica di Ilaria RVC"
 icon: ":sparkling_heart:"
 order: 100
 permalink: /ilaria-rvc/overview/
+description: "Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. Ilaria RVC on Kaggle"
 ---
 # Panoramica di Ilaria RVC
 

@@ -2,6 +2,7 @@
 label: "🩺 Solución de problemas"
 order: 95
 permalink: /troubleshooting/
+description: "Solución de problemas RVC paso a paso para principiantes y expertos: errores de Windows/inicio, GPU/CUDA/DirectML, modelos, entrenamiento, micrófono en vivo y nube."
 ---
 # Solución de problemas de RVC
 

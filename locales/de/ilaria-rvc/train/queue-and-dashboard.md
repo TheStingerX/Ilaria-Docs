@@ -3,6 +3,7 @@ label: "Warteschlange, Dashboard und Warnungen"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
+description: "Konfigurieren Sie das Experiment im Training, bestätigen Sie seinen Datensatz und Modellnamen und fügen Sie es zur Trainingswarteschlange hinzu. Verwenden..."
 ---
 # Warteschlange, Dashboard und Warnungen
 

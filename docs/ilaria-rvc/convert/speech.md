@@ -3,6 +3,7 @@ label: "Text to speech"
 icon: ":speech_balloon:"
 order: 96
 permalink: /ilaria-rvc/tts/
+description: "Use Inference → TTS to turn written text into a recording. You can listen to the generated speech directly or convert it with an RVC model. The two stages..."
 ---
 # Text to speech
 

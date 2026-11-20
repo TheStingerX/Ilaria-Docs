@@ -1,7 +1,8 @@
-﻿---
+---
 label: "🧩 Embedders"
 order: 91
 permalink: /embedders/
+description: "Un embedder (también llamado content encoder) es la red neuronal que lee tu audio de entrada y transforma lo que se dice o canta en características..."
 ---
 # Embedders de RVC
 

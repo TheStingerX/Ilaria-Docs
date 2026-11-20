@@ -3,6 +3,7 @@ label: "Entraîner et tester un modèle"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
+description: "Une première exécution prouve que vos enregistrements, votre configuration et votre matériel peuvent produire une exportation avec laquelle vous pouvez..."
 ---
 # Entraîner, évaluer et exporter une voix dans Applio
 

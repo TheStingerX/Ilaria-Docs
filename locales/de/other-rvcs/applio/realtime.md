@@ -3,6 +3,7 @@ label: "Richten Sie ein Live-Mikrofon ein"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
+description: "Beweisen Sie, dass Ihr Modell mit einem aufgenommenen Clip funktioniert, bevor Sie Live-Audio einrichten. Verwenden Sie zur Überwachung Kopfhörer, damit..."
 ---
 # Verwenden Sie Applio mit einem Mikrofon
 

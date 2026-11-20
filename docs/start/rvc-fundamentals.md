@@ -2,6 +2,7 @@
 label: "🧠 RVC fundamentals"
 order: 94
 permalink: /rvc-fundamentals/
+description: "Retrieval-based voice conversion (RVC) takes a vocal recording and synthesizes a version with the character of a trained voice. The recording supplies the..."
 ---
 # RVC fundamentals
 

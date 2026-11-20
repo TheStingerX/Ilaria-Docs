@@ -2,6 +2,7 @@
 label: "🎙️ Sprachkonvertierung"
 order: 95
 permalink: /voice-conversion/
+description: "Die Sprachkonvertierung beginnt mit einer Aufführung. Die Ausgabe folgt normalerweise den Quellwörtern, dem Timing, der Artikulation und der..."
 ---
 # Konvertieren Sie eine Aufnahme mit Ilaria RVC
 

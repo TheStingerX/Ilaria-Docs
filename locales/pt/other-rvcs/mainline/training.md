@@ -3,6 +3,7 @@ label: "Treine e exporte um modelo"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
+description: "Comece com um único alto-falante e um novo nome de experimento. O treinamento produz um modelo que você pode testar em novos desempenhos na interface de..."
 ---
 
 # Treine e exporte um modelo RVC WebUI (Mainline - Original RVC)

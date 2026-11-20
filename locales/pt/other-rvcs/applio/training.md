@@ -3,6 +3,7 @@ label: "Treine e teste um modelo"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
+description: "Uma primeira execução prova que suas gravações, configuração e hardware podem produzir uma exportação com a qual você pode converter. Trabalhe em..."
 ---
 # Treine, avalie e exporte uma voz no Applio
 

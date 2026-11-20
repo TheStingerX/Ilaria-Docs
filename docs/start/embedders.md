@@ -1,7 +1,8 @@
-﻿---
+---
 label: "🧩 Embedders"
 order: 91
 permalink: /embedders/
+description: "An embedder (also called a content encoder) is the neural network that reads your input audio and converts what is being said or sung into numerical..."
 ---
 # RVC Embedders
 

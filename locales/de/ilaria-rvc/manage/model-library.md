@@ -3,6 +3,7 @@ label: "Modellbibliothek und Zusammenführung"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
+description: "Öffnen Sie Andere und importieren Sie ein unterstütztes lokales Modell oder verwenden Sie die Download-Steuerung. Halten Sie einen Prüfpunkt und seinen..."
 ---
 # Modellbibliothek und Zusammenführung
 

@@ -3,6 +3,7 @@ label: "Cloud"
 icon: ":cloud:"
 order: 94
 permalink: /ilaria-rvc/cloud/
+description: "Run Ilaria RVC in a browser with a GPU supplied by the cloud platform. Choose a notebook below. Enable an NVIDIA accelerator before running the first cell."
 ---
 # Ilaria RVC in the cloud
 

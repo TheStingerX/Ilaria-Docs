@@ -3,6 +3,7 @@ label: "Inference controls explained"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
+description: "Inference uses a trained voice to convert a recording. For a first test, upload a short clean WAV, select a voice, leave Pitch at zero and keep optional..."
 ---
 
 # Every Inference control explained

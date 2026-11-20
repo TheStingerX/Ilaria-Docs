@@ -1,7 +1,8 @@
-﻿---
+---
 label: "🧱 Modèles pretrained"
 order: 90
 permalink: /pretrained/
+description: "Un modèle de base pretrained (ou pretrain) est une paire de points de contrôle de départ : un Générateur (G_.pth) et un Discriminateur (D_.pth), déjà..."
 ---
 # Modèles de base Pretrained RVC
 

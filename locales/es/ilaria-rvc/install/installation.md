@@ -3,6 +3,7 @@ label: "Instalación y actualizaciones"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
+description: "Descargue la compilación de NVIDIA compatible desde Hugging Face. Extraiga todo el archivo en una carpeta local grabable y ejecute RUN_ILARIA_RVC.bat..."
 ---
 # Instalación y actualizaciones
 

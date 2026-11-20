@@ -2,6 +2,7 @@
 label: "🩺 Fehlerbehebung"
 order: 95
 permalink: /troubleshooting/
+description: "Schritt-für-Schritt-RVC-Fehlerbehebung für Einsteiger und Profis: Windows/Startfehler, GPU/CUDA/DirectML, Modelle, Training, Live-Mikrofon und Cloud-Notebooks."
 ---
 # RVC Fehlerbehebung
 

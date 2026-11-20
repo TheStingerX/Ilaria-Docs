@@ -3,6 +3,7 @@ label: "Datasets, Checker y Audio Analyzer"
 icon: ":level_slider:"
 order: 95
 permalink: /ilaria-rvc/datasets/
+description: "Tu dataset es el factor más importante para decidir qué tan natural, limpia y expresiva sonará tu voz RVC. Ni siquiera los mejores ajustes de..."
 ---
 # Datasets, Dataset Checker y Audio Analyzer
 

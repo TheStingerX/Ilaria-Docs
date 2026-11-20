@@ -3,6 +3,7 @@ label: "Installation & Einrichtung"
 icon: ":cd:"
 order: 98
 permalink: /non-rvc/causal-voice-changer/installation/
+description: "Diese Anleitung führt dich Schritt für Schritt durch die Installation auf Windows oder Linux, auch wenn du noch nie Python oder Git benutzt hast."
 ---
 # Causal Voice Changer installieren
 

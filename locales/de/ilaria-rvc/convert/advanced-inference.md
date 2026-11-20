@@ -3,6 +3,7 @@ label: "Verarbeitung und Export"
 icon: ":control_knobs:"
 order: 89
 permalink: /ilaria-rvc/advanced-inference/
+description: "Wähle in Inference Settings rmvpe, öffne RMVPE High Register und aktiviere Enable high register, wenn ein hoher Ton ausfällt oder eine Oktave zu tief..."
 ---
 # Verarbeitung und Export
 

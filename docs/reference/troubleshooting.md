@@ -2,6 +2,7 @@
 label: "🩺 Troubleshooting"
 order: 95
 permalink: /troubleshooting/
+description: "Step-by-step RVC troubleshooting for beginners and advanced users: Windows/launcher errors, GPU/CUDA/DirectML, models, training, live mic, and cloud notebooks."
 ---
 # Troubleshooting RVC
 

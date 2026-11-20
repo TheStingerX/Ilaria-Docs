@@ -3,6 +3,7 @@ label: "Logs e recuperação"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
+description: "Comece com Pitch 0, um WAV curto e seco e um modelo em bom estado. Altere uma configuração por teste. Consulte Controles de inferência para efeitos e..."
 ---
 # Logs e recuperação
 

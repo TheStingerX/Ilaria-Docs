@@ -3,6 +3,7 @@ label: "Training and checkpoints"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
+description: "Select a dataset and choose compatible RVC architecture, sample rate, pitch guidance, embedder and generator/discriminator pretrains. Use a unique..."
 ---
 # Training and checkpoints
 

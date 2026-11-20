@@ -3,6 +3,7 @@ label: "Route & tune Deiteris"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Always wear headphones during live conversion. Using speakers feeds the converted voice back into your microphone and creates echo and feedback loops."
 ---
 # Route and tune Deiteris w-okada Fork
 

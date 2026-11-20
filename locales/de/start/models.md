@@ -2,6 +2,7 @@
 label: "📦 RVC-Modelle und -Dateien"
 order: 93
 permalink: /models/
+description: "Ein RVC-Modell verändert die Klangfarbe einer vorhandenen Stimme. Wörter, Rhythmus und Pausen stammen aus der Eingabe. Beginne mit einer einzelnen Stimme..."
 ---
 # RVC-Modelle und -Dateien
 

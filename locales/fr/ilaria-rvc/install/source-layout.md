@@ -3,6 +3,7 @@ label: "Fichiers, configuration et maintenance des sources"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
+description: "Une exportation d'inférence peut être utilisée pour la conversion. Pour une expérience pouvant être reprise, conservez la paire G/D enregistrée..."
 ---
 # Fichiers, configuration et maintenance des sources
 

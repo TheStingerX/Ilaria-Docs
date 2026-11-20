@@ -3,6 +3,7 @@ label: "Files, source setup and maintenance"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
+description: "An inference export can be used for conversion. For a resumable experiment, keep the saved G/D pair and optimizer and training state together with the..."
 ---
 # Files, source setup and maintenance
 

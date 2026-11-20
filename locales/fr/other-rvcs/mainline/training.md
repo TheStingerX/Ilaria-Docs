@@ -3,6 +3,7 @@ label: "Entraîner et exporter un modèle"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
+description: "Commencez avec un seul locuteur et un nouveau nom d'expérience. La formation produit un modèle que vous pouvez tester sur de nouvelles performances dans..."
 ---
 
 # Entraîner et exporter un modèle RVC WebUI (Mainline - Original RVC)

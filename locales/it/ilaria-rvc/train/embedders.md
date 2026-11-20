@@ -3,6 +3,7 @@ label: "Embedder e pretraining"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
+description: "Apri Impostazioni incorporamento sotto Elaborazione audio. Legge automaticamente i metadati del modello archiviati e utilizza ContentVec quando non viene..."
 ---
 # Embedder e pretraining
 

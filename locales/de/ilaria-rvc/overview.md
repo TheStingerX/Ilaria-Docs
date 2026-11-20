@@ -3,6 +3,7 @@ label: "Ilaria RVC-Übersicht"
 icon: ":sparkling_heart:"
 order: 100
 permalink: /ilaria-rvc/overview/
+description: "Du kannst Ilaria RVC auch auf Kaggle mit einer entfernten GPU nutzen, selbst wenn dein Computer keine NVIDIA-GPU hat. Ilaria RVC on Kaggle"
 ---
 # Ilaria RVC-Übersicht
 

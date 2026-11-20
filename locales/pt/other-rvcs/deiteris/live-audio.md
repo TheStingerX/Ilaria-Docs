@@ -3,6 +3,7 @@ label: "Encaminhar e afinar Deiteris"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Usa sempre auscultadores durante a conversão ao vivo. Com colunas, a voz convertida volta a entrar no microfone e gera eco e microfonia."
 ---
 # Encaminhar e afinar Deiteris w-okada Fork
 

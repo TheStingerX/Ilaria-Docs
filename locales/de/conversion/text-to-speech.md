@@ -2,6 +2,7 @@
 label: "💬 Text to Speech"
 order: 93
 permalink: /text-to-speech/
+description: "Text to Speech (TTS) generiert eine Quellaufzeichnung aus den von Ihnen eingegebenen Wörtern. RVC wendet dann ein separates Sprachmodell auf diese..."
 ---
 # Text to Speech und RVC
 

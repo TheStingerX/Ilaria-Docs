@@ -3,6 +3,7 @@ label: "Contrôles et flux de travail de formation"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
+description: "La version 2.1.0 propose des réglages 32, 40 et 48 kHz avec des combinaisons disponibles déterminées par le vocodeur. HiFi-GAN et RefineGAN ont des..."
 ---
 # Contrôles de formation et flux de travail
 

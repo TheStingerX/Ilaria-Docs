@@ -3,6 +3,7 @@ label: "Explicación de los controles de inferencia"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
+description: "La inferencia utiliza una voz entrenada para convertir una grabación. Para una primera prueba, cargue un WAV breve y limpio, seleccione una voz, deje el..."
 ---
 
 # Explicación de cada control de inferencia

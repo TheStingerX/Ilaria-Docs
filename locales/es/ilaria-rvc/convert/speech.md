@@ -3,6 +3,7 @@ label: "Texto a voz"
 icon: ":speech_balloon:"
 order: 96
 permalink: /ilaria-rvc/tts/
+description: "Utilice Inferencia → TTS para convertir el texto escrito en una grabación. Puedes escuchar el discurso generado directamente o convertirlo con un modelo..."
 ---
 # Texto a voz
 

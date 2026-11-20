@@ -3,6 +3,7 @@ label: "Log e ripristino"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
+description: "Inizia con Pitch 0, un WAV breve e asciutto e un modello notoriamente valido. Modificare un'impostazione per test. Vedi Controlli di inferenza per gli..."
 ---
 # Log e ripristino
 

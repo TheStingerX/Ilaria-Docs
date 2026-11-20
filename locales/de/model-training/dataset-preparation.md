@@ -2,6 +2,7 @@
 label: "🎧 Bereiten Sie einen Datensatz vor"
 order: 95
 permalink: /dataset-preparation/
+description: "Jeder Clip bringt dem Modell etwas über seine Zielstimme bei. Entscheiden Sie vor dem Training, welche Teile dieser Stimme das Modell bearbeiten soll, und..."
 ---
 # Bereiten Sie einen Sprachdatensatz vor
 

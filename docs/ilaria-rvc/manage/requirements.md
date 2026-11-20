@@ -3,6 +3,7 @@ label: "System requirements"
 icon: ":clipboard:"
 order: 82
 permalink: /ilaria-rvc/requirements/
+description: "Ilaria RVC runs locally on your PC using PyTorch 2.10.0 and NVIDIA CUDA. Because voice conversion (inference) and model training have very different..."
 ---
 # System Requirements for Ilaria RVC
 

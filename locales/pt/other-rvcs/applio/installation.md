@@ -3,6 +3,7 @@ label: "Instale o Applio"
 icon: ":cd:"
 order: 97
 permalink: /ilaria-rvc/applio/installation/
+description: "O Applio possui duas opções de download que executam exatamente o mesmo mecanismo - mudam apenas a interface e o método de instalação:"
 ---
 # Instale o Applio e verifique o mecanismo
 

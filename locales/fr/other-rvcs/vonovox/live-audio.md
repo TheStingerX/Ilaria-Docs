@@ -3,6 +3,7 @@ label: "Acheminer et régler Vonovox"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Utilisez trois points de terminaison : votre microphone physique pour l'entrée, un câble virtuel pour le signal converti et des écouteurs pour la..."
 ---
 # Acheminer et régler Vonovox
 

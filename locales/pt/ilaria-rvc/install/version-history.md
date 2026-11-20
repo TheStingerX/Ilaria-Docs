@@ -3,6 +3,7 @@ label: "Histórico de versões e diferenças de lançamento"
 icon: ":clock3:"
 order: 83
 permalink: /ilaria-rvc/version-history/
+description: "A versão mais recente para Windows é a 2.4.1. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC. Use Todas as alterações até agora para..."
 ---
 # Histórico de versões e diferenças de lançamento
 

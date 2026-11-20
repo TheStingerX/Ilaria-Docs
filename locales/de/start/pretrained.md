@@ -1,7 +1,8 @@
-﻿---
+---
 label: "🧱 Pretrained-Modelle"
 order: 90
 permalink: /pretrained/
+description: "Ein Pretrained-Basismodell (auch Pretrain genannt) ist ein Paar aus Start-Checkpoints: ein Generator (G_.pth) und ein Diskriminator (D_.pth), die bereits..."
 ---
 # Pretrained-Basismodelle in RVC
 

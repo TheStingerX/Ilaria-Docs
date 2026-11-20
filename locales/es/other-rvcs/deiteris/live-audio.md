@@ -3,6 +3,7 @@ label: "Enrutar y ajustar Deiteris"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Usa siempre auriculares durante la conversión en vivo. Con altavoces, la voz convertida vuelve al micrófono y provoca eco y acoples."
 ---
 # Enrutar y ajustar Deiteris w-okada Fork
 

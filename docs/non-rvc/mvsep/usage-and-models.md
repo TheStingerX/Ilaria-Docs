@@ -3,6 +3,7 @@ label: "Recommended Models & Presets"
 icon: ":control_knobs:"
 order: 97
 permalink: /non-rvc/mvsep/usage-and-models/
+description: "Below are the best MVSep presets for preparing ultra-clean vocal tracks (for RVC training, covers, or voice conversion), complete with direct links that..."
 ---
 # MVSep Guide: Recommended Models & Presets
 

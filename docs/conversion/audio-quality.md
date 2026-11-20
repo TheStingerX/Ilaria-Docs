@@ -2,6 +2,7 @@
 label: "🎚️ Pitch and audio quality"
 order: 94
 permalink: /audio-quality/
+description: "Pick a short excerpt that contains the problem. Make a reference conversion and compare it with one changed setting at a time. Listen at similar levels so..."
 ---
 # Tune pitch and audio quality
 

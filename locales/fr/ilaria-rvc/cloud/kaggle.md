@@ -3,6 +3,7 @@ label: "Kaggle"
 icon: ":notebook:"
 order: 98
 permalink: /ilaria-rvc/kaggle/
+description: "Cliquez sur Exécuter tout dans l'éditeur. Vous pouvez également exécuter les quatre cellules de code une par une, de haut en bas. Attendez que chaque..."
 ---
 # Kaggle
 

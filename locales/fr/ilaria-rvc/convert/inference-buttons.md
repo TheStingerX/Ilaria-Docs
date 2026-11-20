@@ -3,6 +3,7 @@ label: "Contrôles d'inférence expliqués"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
+description: "L'inférence utilise une voix entraînée pour convertir un enregistrement. Pour un premier test, téléchargez un court WAV clair, sélectionnez une voix..."
 ---
 
 # Chaque contrôle d'inférence expliqué

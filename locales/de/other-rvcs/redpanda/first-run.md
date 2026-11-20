@@ -3,6 +3,7 @@ label: "Redpanda-vc einrichten"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/redpanda/first-run/
+description: "Redpanda-vc erweitert Applio und bietet mehrere Sprachmodellfamilien. In dieser exemplarischen Vorgehensweise wird durchgehend die RVC-Familie verwendet..."
 ---
 # Redpanda-vc einrichten
 

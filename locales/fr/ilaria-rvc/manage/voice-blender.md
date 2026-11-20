@@ -3,6 +3,7 @@ label: "Voice Blender (Merge Models)"
 icon: ":twisted_rightwards_arrows:"
 order: 92
 permalink: /ilaria-rvc/voice-blender/
+description: "Dans Ilaria RVC, la fonction Voice Blender se trouve dans l'onglet Other sous Merge models. Elle permet de fusionner les poids de deux modèles vocaux .pth..."
 ---
 # Voice Blender (Fusion de Modèles)
 

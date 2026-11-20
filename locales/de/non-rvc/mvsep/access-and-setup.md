@@ -3,6 +3,7 @@ label: "Zugang, Konto & API"
 icon: ":globe_with_meridians:"
 order: 98
 permalink: /non-rvc/mvsep/access-and-setup/
+description: "Da MVSep in der Cloud läuft, muss nichts installiert werden. Die richtige Einrichtung von Konto und Ausgabeformat macht jedoch einen großen Unterschied."
 ---
 # MVSep nutzen: Zugang, Konto & Einrichtung
 

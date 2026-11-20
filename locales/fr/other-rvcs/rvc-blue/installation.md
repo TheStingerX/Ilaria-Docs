@@ -3,6 +3,7 @@ label: "Installez et utilisez RVC Blue"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/rvc-blue/installation/
+description: "RVC Blue est un changeur de voix de bureau Windows basé sur l'interface graphique en temps réel de RVC WebUI (Mainline - Original RVC). Il convertit le..."
 ---
 # RVC Blue (RVC-Realtime-GUI)
 

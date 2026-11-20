@@ -3,6 +3,7 @@ label: "Fundir modelos RVC"
 icon: ":jigsaw:"
 order: 99
 permalink: /ilaria-rvc/rvc-model-merger/
+description: "Como instalar e usar o RVC Model Merger de Ardha27 para mesclar dois modelos de voz RVC v2 compatíveis com proporções ajustáveis."
 ---
 # RVC Model Merger
 

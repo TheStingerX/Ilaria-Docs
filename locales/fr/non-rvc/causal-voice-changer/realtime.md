@@ -3,6 +3,7 @@ label: "Changeur en temps réel"
 icon: ":studio_microphone:"
 order: 96
 permalink: /non-rvc/causal-voice-changer/realtime/
+description: "Après avoir exécuté run-training au moins une fois et préparé une voix .cvc, lancez le changeur de voix en direct avec :"
 ---
 # Utiliser CausalVC Realtime
 

@@ -3,6 +3,7 @@ label: "Inferencia única y por lotes"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
+description: "Abra Inferencia única, elija una voz y cargue un clip corto y seco. Establezca Pitch y Index Ratio en cero. Utilice el incrustador esperado por el modelo..."
 ---
 # Inferencia única y por lotes
 

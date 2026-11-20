@@ -3,6 +3,7 @@ label: "Addestra ed esporta un modello"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
+description: "Inizia con una sola voce e un nuovo nome per l'esperimento. L'addestramento produce un modello che puoi testare su nuove registrazioni nell'interfaccia di..."
 ---
 
 # Addestra ed esporta un modello RVC WebUI (Mainline - Original RVC)

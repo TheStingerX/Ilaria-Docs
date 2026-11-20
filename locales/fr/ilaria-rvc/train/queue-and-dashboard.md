@@ -3,6 +3,7 @@ label: "File d'attente, tableau de bord et alertes"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
+description: "Configurez l'expérience dans Training, confirmez son ensemble de données et le nom du modèle, et ajoutez-la à la File d'attente de formation. Utilisez des..."
 ---
 # File d'attente, tableau de bord et alertes
 

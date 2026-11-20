@@ -2,6 +2,7 @@
 label: "🎵 Pitch extractors"
 order: 92
 permalink: /pitch-extractors/
+description: "Un pitch extractor (ou méthode d'extraction F0) est l'algorithme ou le réseau neuronal qui suit la fréquence fondamentale (hauteur, mélodie et intonation)..."
 ---
 # Pitch Extractors RVC (Méthodes F0)
 

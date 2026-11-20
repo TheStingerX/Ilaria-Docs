@@ -3,6 +3,7 @@ label: "Model, microphone and cable"
 icon: ":headphones:"
 order: 90
 permalink: /ilaria-rvc/tgr/live-audio/
+description: "Use a compatible RVC inference checkpoint and a working microphone. First prove that the converted signal reaches your headphones. Then send that signal..."
 ---
 # Set up live audio in Okada TG Developed Fork
 

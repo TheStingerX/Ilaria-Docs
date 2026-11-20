@@ -3,6 +3,7 @@ label: "Other controls explained"
 icon: ":toolbox:"
 order: 80
 permalink: /ilaria-rvc/other-buttons/
+description: "Use Other to manage files, inspect or combine models, review audio and maintain the app. Start by deciding whether you need an inference model, a content..."
 ---
 
 # Every Other panel explained

@@ -3,6 +3,7 @@ label: "Rotear e sintonizar Vonovox"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Use três pontos de extremidade: seu microfone físico para entrada, um cabo virtual para o sinal convertido e fones de ouvido para monitoramento. Um cabo..."
 ---
 # Rotear e sintonizar Vonovox
 

@@ -3,6 +3,7 @@ label: "Leistung, Bereinigung & Tools"
 icon: ":wrench:"
 order: 95
 permalink: /non-rvc/causal-voice-changer/performance-and-tools/
+description: "Nimm Sitzungen direkt in CausalVC Realtime auf (zuerst Konvertierung starten):"
 ---
 # Leistung, Klangbereinigung & weitere Tools
 

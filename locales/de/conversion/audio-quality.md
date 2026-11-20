@@ -2,6 +2,7 @@
 label: "🎚️ Tonhöhe und Audioqualität"
 order: 94
 permalink: /audio-quality/
+description: "Wählen Sie einen kurzen Auszug aus, der das Problem enthält. Führen Sie eine Referenzkonvertierung durch und vergleichen Sie diese mit jeweils einer..."
 ---
 # Tonhöhe und Audioqualität einstellen
 

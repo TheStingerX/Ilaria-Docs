@@ -3,6 +3,7 @@ label: "Logs and recovery"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
+description: "Start with Pitch 0, a short dry WAV and one known-good model. Change one setting per test. See Inference controls for the effects and export options."
 ---
 # Logs and recovery
 

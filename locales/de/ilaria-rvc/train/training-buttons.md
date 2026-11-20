@@ -3,6 +3,7 @@ label: "Trainingssteuerung erklärt"
 icon: ":level_slider:"
 order: 82
 permalink: /ilaria-rvc/training-buttons/
+description: "Training erstellt aus Aufnahmen ein neues Sprachmodell. Verwenden Sie für ein erstes Experiment einen eindeutigen Namen, einen kleinen sauberen Datensatz..."
 ---
 
 # Jede Trainingssteuerung erklärt

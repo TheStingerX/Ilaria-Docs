@@ -3,6 +3,7 @@ label: "Unisci modelli RVC"
 icon: ":jigsaw:"
 order: 99
 permalink: /ilaria-rvc/rvc-model-merger/
+description: "Come installare e usare RVC Model Merger di Ardha27 per fondere due modelli vocali RVC v2 compatibili regolando le proporzioni."
 ---
 # RVC Model Merger
 

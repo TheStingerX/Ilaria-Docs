@@ -3,6 +3,7 @@ label: "Install and verify a voice"
 icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
+description: "Put model downloads in a known folder and extract any ZIP there. Keep the publisher’s notes alongside the files. Use models from sources you trust."
 ---
 # Install a voice in Applio
 

@@ -3,6 +3,7 @@ label: "Traitement et exportation"
 icon: ":control_knobs:"
 order: 89
 permalink: /ilaria-rvc/advanced-inference/
+description: "Dans Inference Settings, sélectionnez rmvpe, ouvrez RMVPE High Register et cochez Enable high register si une note aiguë disparaît ou tombe d’une octave."
 ---
 # Traitement et exportation
 

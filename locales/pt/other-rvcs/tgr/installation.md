@@ -3,6 +3,7 @@ label: "Instale o TG Developed Fork"
 icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/tgr/installation/
+description: "O TG Developed Fork (TGR) vem do ramo Deiteris da família w-okada. O editor documenta esta bifurcação como somente RVC. Possui seus próprios arquivos de..."
 ---
 # Instale o Okada TG Developed Fork
 

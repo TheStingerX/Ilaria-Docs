@@ -3,6 +3,7 @@ label: "Router et régler Deiteris"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Portez toujours un casque en conversion en direct. Avec des haut-parleurs, la voix convertie revient dans le micro et provoque écho et Larsen."
 ---
 # Router et régler Deiteris w-okada Fork
 

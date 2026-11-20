@@ -3,6 +3,7 @@ label: "Intégrateurs et pré-entraînements"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
+description: "Ouvrez Paramètres d'intégration ci-dessous Traitement audio. Lit automatiquement les métadonnées du modèle stocké et utilise ContentVec lorsqu'aucun..."
 ---
 # Intégrateurs et pré-entraînements
 

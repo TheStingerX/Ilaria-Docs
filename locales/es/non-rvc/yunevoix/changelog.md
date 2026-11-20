@@ -3,6 +3,7 @@ label: "Changelog"
 icon: ":memo:"
 order: 95
 permalink: /non-rvc/yunevoix/changelog/
+description: "Historial completo de versiones y changelog de YuneVoix desde la v0.6.0 hasta la v0.7.1, con mejoras DirectML, GPU AMD, WavLM+ y FlowEdit 3+1."
 ---
 # Historial de cambios de YuneVoix
 

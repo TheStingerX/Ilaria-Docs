@@ -3,6 +3,7 @@ label: "Premium, licence et assistance"
 icon: ":wrench:"
 order: 96
 permalink: /non-rvc/yunevoix/premium-and-troubleshooting/
+description: "Les soutiens sur Ko-fi accèdent à YuneVoix PREMIUM, qui débloque des fonctionnalités musicales hors ligne en plus de tout ce qui est inclus dans BASIC :"
 ---
 # Premium, licence et dépannage
 

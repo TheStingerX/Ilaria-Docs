@@ -3,6 +3,7 @@ label: "Analisador de Áudio"
 icon: ":chart_with_upwards_trend:"
 order: 85
 permalink: /ilaria-rvc/audio-analyzer/
+description: "Abra Outro → Analisador de Áudio. Adicione até oito arquivos de áudio para comparar. Um conjunto útil contém a entrada original, uma conversão de linha de..."
 ---
 # Analisador de Áudio
 

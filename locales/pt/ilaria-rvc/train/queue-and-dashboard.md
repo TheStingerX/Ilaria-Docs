@@ -3,6 +3,7 @@ label: "Fila, dashboard e alertas"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
+description: "Configure o experimento em Treinamento, confirme seu conjunto de dados e nome do modelo e adicione-o à Fila de Treinamento. Use nomes distintos para..."
 ---
 # Fila, dashboard e alertas
 

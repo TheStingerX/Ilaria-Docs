@@ -2,6 +2,7 @@
 label: "🎙️ Voice conversion"
 order: 95
 permalink: /voice-conversion/
+description: "Voice conversion starts with a performance. The output usually follows the source words, timing, articulation, and pitch contour while changing the sound..."
 ---
 # Convert a recording with Ilaria RVC
 

@@ -3,6 +3,7 @@ label: "Installa Applio"
 icon: ":cd:"
 order: 97
 permalink: /ilaria-rvc/applio/installation/
+description: "Applio ha due opzioni di download che eseguono lo stesso identico motore - cambiano solo la UI e il metodo di installazione:"
 ---
 # Installa Applio e controlla il motore
 
