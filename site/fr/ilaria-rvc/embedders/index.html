@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848528092392">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848532684403">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848528092392" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848532684403" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848528092392" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848532684403" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848528092392" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848532684403" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -183,6 +183,9 @@
 <blockquote>
 <p><strong>2.4.0</strong> · Le paquet Windows déplace l’application et le runtime dans app/. Les modèles restent à la racine dans models/. Ajout de Colab, Lightning AI Studio, des indications de téléchargement des embedders, et de Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip est réparé et pywin32 est inclus.</p>
 </blockquote>
+<blockquote>
+<p><strong>2.4.6</strong> · Ajoute <strong>KLM Vocal ContentVec</strong> (<code translate="no" v-pre>klm-vocal-contentvec</code>) en téléchargement optionnel pour l&#x27;Inférence et l&#x27;Entraînement RVC v2, ainsi que <strong>43 paires G/D KLM vérifiées</strong> dans <strong>Recommended pretraineds</strong> (la compatibilité varie selon la paire). Note : les téléchargements Lyery Legacy Core ont été retirés dans la 2.4.4 suite au retrait des fichiers sources.</p>
+</blockquote>
 <span id="inference-embedders" class="docs-anchor"></span><h2 id="intégrateurs-dinférence">Intégrateurs d&#x27;inférence</h2>
 <p>Ouvrez <strong>Paramètres d&#x27;intégration</strong> ci-dessous <strong>Traitement audio</strong>. Lit automatiquement les métadonnées du modèle stocké et utilise ContentVec lorsqu&#x27;aucun intégrateur n&#x27;est enregistré. Si l&#x27;éditeur spécifie un encodeur, utilisez cet encodeur. Un index de récupération a besoin de fonctionnalités compatibles issues de la même expérience. Laissez la récupération désactivée lorsque l’appairage est incertain.</p>
 <p>Les encodeurs d&#x27;inférence disponibles incluent ContentVec, Spin, Spin-v2 et la base HuBERT chinoise, japonaise et coréenne. Ouvrez <strong>Autre → Télécharger les modules intégrés</strong> pour installer les modèles facultatifs un par un. Pour les ressources HuBERT personnalisées, sélectionnez <strong>custom</strong>, nommez le dossier, fournissez les poids et les fichiers de configuration correspondants (.bin et .json) et installez-les ensemble.</p>
@@ -228,7 +231,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-20T23:24:10.000Z">21/11/2026 · 00:24</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

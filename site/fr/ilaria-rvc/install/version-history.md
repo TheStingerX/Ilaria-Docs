@@ -4,12 +4,13 @@
 
 ## Quelle version cette documentation décrit-elle ?
 
-La dernière version Windows est la **2.4.5**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
+La dernière version Windows est la **2.4.6**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
 
 ## Toutes les versions
 
  | Version | Points forts |
 | --- | --- |
+| 2.4.6 | Ajoute **KLM Vocal ContentVec** (`klm-vocal-contentvec`) en téléchargement optionnel pour l'Inférence et l'Entraînement RVC v2, et ajoute **43 paires G/D KLM vérifiées** dans **Recommended pretrained models** avec leurs sample rates (la compatibilité varie selon la paire). Depuis **2.4.5**, ouvrez **Other → Update Ilaria RVC → Check for updates** puis **Download and restart**. |
 | 2.4.5 | Ajoute la conversion `.pth` ↔ `.safetensors` dans **Other → Convert model weights**, en conservant les métadonnées RVC avec un bouton **Move .pth to models**. Améliore le message d'Inférence pour les fichiers sans configuration vocale et installe automatiquement `safetensors` au premier usage. Depuis **2.4.4**, ouvrez **Other → Update Ilaria RVC → Check for updates** puis **Download and restart**. |
 | 2.4.4 | Supprime les six options de téléchargement pretrained Legacy Core de Lyery suite au retrait des fichiers sources (les poids déjà téléchargés restent utilisables). Nécessite **2.4.2** ou ultérieure. |
 | 2.4.3 | Ajoute l'entraînement natif en précision mixte **BF16**, sélectionné automatiquement sur les GPU NVIDIA RTX séries 30, 40 et 50 lorsque tous les GPU sélectionnés le prennent en charge (Kaggle T4 reste sur FP16). Mémorise les choix manuels `FP16` et `FP32`, conserve la précision des entraînements existants sauf changement explicite, met à jour Training Queue et PC training advisor et garde l'extraction de traits en `FP32` ainsi que le format d'export RVC standard. Nécessite **2.4.2** via **Other → Update Ilaria RVC**. |

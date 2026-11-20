@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848528086915">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848532674853">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848528086915" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848532674853" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -220,13 +220,15 @@
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | No especificado | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | No especificado | `Loren85/IMA-TEST-V1` |
 | **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | `TheStinger/itaila` |
-| **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | No especificado | `SeoulStreamingStation/KLM_BEATMASTER` |
-| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | No especificado | `SeoulStreamingStation/KLM49_HFG` |
-| **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | No especificado | `SeoulStreamingStation/KLM4.4` *(sin probar en Ilaria RVC)* |
+| **KLM - BeatzForge V2 / BeatMaster** | `32 kHz`, `48 kHz` | HiFi-GAN / No especificado | No especificado | `SeoulStreamingStation/KLM_BEATMASTER` |
+| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / No especificado | No especificado | `SeoulStreamingStation/KLM49_HFG`, `KLM4`, `KLM4.1`, `KLM4.2`, `KLM43` |
+| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz`, `40 kHz` | MRF HiFi-GAN / No especificado | No especificado | `SeoulStreamingStation/KLM4.4` *(compatibilidad variable)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | RefineGAN | No especificado | `SeoulStreamingStation/KLM5` |
-| **KLM 6.1 (Exp3 L6 / KLM 6.2)** | `32 kHz` | No especificado | No especificado | `SeoulStreamingStation/KLM6_Experimental` |
-| **Legacy Core V1.5** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` |
-| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` |
+| **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | `SeoulStreamingStation/KLM6_Experimental` |
+| **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / No especificado | No especificado | `SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel`, `RVC_KLM-X-10_Pretrained-Model`, `KLM_RVC_KLM-HF_Trainer` |
+| **KLM KpopUniverse (I / II) &amp; BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | `SeoulStreamingStation/KLM_KpopUniverse`, `BlackTone_RVC_Pretrained` |
+| **Legacy Core V1.5** *(retirado en 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(retirado por el autor)* |
+| **Legacy Core V1.5v2** *(retirado en 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(retirado por el autor)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | No especificado | `juaow/mandaguesv2` |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | No especificado | `shiromiya/nanashi-pretrain` |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | No especificado | `shiromiya/nanashi-pretrain` |
@@ -303,25 +305,25 @@
 <td><code translate="no" v-pre>TheStinger/itaila</code></td>
 </tr>
 <tr>
-<td><strong>KLM - BeatzForge V2</strong></td>
-<td><code translate="no" v-pre>32 kHz</code></td>
-<td>HiFi-GAN</td>
+<td><strong>KLM - BeatzForge V2 / BeatMaster</strong></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
+<td>HiFi-GAN / No especificado</td>
 <td>No especificado</td>
 <td><code translate="no" v-pre>SeoulStreamingStation/KLM_BEATMASTER</code></td>
 </tr>
 <tr>
-<td><strong>KLM 4 HiFi-GAN</strong></td>
+<td><strong>KLM 4 / 4.1 / 4.2 / 4.3</strong></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
-<td>HiFi-GAN</td>
+<td>HiFi-GAN / No especificado</td>
 <td>No especificado</td>
-<td><code translate="no" v-pre>SeoulStreamingStation/KLM49_HFG</code></td>
+<td><code translate="no" v-pre>SeoulStreamingStation/KLM49_HFG</code>, <code translate="no" v-pre>KLM4</code>, <code translate="no" v-pre>KLM4.1</code>, <code translate="no" v-pre>KLM4.2</code>, <code translate="no" v-pre>KLM43</code></td>
 </tr>
 <tr>
-<td><strong>KLM 4.4 (X1 / X2)</strong></td>
-<td><code translate="no" v-pre>40 kHz</code></td>
-<td>MRF HiFi-GAN</td>
+<td><strong>KLM 4.4 (X1 / X2 / X2B)</strong></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code></td>
+<td>MRF HiFi-GAN / No especificado</td>
 <td>No especificado</td>
-<td><code translate="no" v-pre>SeoulStreamingStation/KLM4.4</code> <em>(sin probar en Ilaria RVC)</em></td>
+<td><code translate="no" v-pre>SeoulStreamingStation/KLM4.4</code> <em>(compatibilidad variable)</em></td>
 </tr>
 <tr>
 <td><strong>KLM 5 RefineGAN</strong></td>
@@ -331,25 +333,39 @@
 <td><code translate="no" v-pre>SeoulStreamingStation/KLM5</code></td>
 </tr>
 <tr>
-<td><strong>KLM 6.1 (Exp3 L6 / KLM 6.2)</strong></td>
-<td><code translate="no" v-pre>32 kHz</code></td>
+<td><strong>KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)</strong></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
 <td>No especificado</td>
 <td>No especificado</td>
 <td><code translate="no" v-pre>SeoulStreamingStation/KLM6_Experimental</code></td>
 </tr>
 <tr>
-<td><strong>Legacy Core V1.5</strong></td>
+<td><strong>KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG</strong></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
-<td>HiFi-GAN / RefineGAN (<code translate="no" v-pre>32k</code>)</td>
-<td><code translate="no" v-pre>contentvec</code> / <code translate="no" v-pre>spin-v2</code> (<code translate="no" v-pre>32k</code>)</td>
-<td><code translate="no" v-pre>lyery/mode4</code></td>
+<td>HiFi-GAN / No especificado</td>
+<td>No especificado</td>
+<td><code translate="no" v-pre>SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel</code>, <code translate="no" v-pre>RVC_KLM-X-10_Pretrained-Model</code>, <code translate="no" v-pre>KLM_RVC_KLM-HF_Trainer</code></td>
 </tr>
 <tr>
-<td><strong>Legacy Core V1.5v2</strong></td>
+<td><strong>KLM KpopUniverse (I / II) &amp; BlackTone</strong></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
+<td>No especificado</td>
+<td>No especificado</td>
+<td><code translate="no" v-pre>SeoulStreamingStation/KLM_KpopUniverse</code>, <code translate="no" v-pre>BlackTone_RVC_Pretrained</code></td>
+</tr>
+<tr>
+<td><strong>Legacy Core V1.5</strong> <em>(retirado en 2.4.4)</em></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
+<td>HiFi-GAN / RefineGAN 32k</td>
+<td><code translate="no" v-pre>contentvec</code> / <code translate="no" v-pre>spin-v2</code> 32k</td>
+<td><code translate="no" v-pre>lyery/mode4</code> <em>(retirado por el autor)</em></td>
+</tr>
+<tr>
+<td><strong>Legacy Core V1.5v2</strong> <em>(retirado en 2.4.4)</em></td>
 <td><code translate="no" v-pre>32 kHz</code></td>
 <td>HiFi-GAN</td>
 <td><code translate="no" v-pre>contentvec</code></td>
-<td><code translate="no" v-pre>lyery/test</code></td>
+<td><code translate="no" v-pre>lyery/test</code> <em>(retirado por el autor)</em></td>
 </tr>
 <tr>
 <td><strong>Mandagues V2</strong></td>
@@ -505,6 +521,25 @@
 <blockquote>
 <p><strong>Nota de compatibilidad</strong>: en Ilaria RVC el entrenamiento con RefineGAN solo está soportado específicamente a <code translate="no" v-pre>32 kHz</code> con RVC v2 y guía de tono. Elegir un pretrain RefineGAN de <code translate="no" v-pre>40 kHz</code> o <code translate="no" v-pre>44.1 kHz</code> configurando el entrenamiento en <code translate="no" v-pre>32 kHz</code> fallará o producirá un resultado roto.</p>
 </blockquote>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>note</h5>
+<p><strong>Nota sobre Legacy Core (<code translate="no" v-pre>V1.5</code> y <code translate="no" v-pre>V1.5v2</code>):</strong>
+Los modelos pretrained <strong>Legacy Core</strong> (<code translate="no" v-pre>lyery/mode4</code> y <code translate="no" v-pre>lyery/test</code>) fueron <strong>retirados por su autor</strong> y ya no están disponibles para descargar (también fueron retirados del descargador de Ilaria RVC en <code translate="no" v-pre>2.4.4</code>). Sus filas en la tabla se mantienen <strong>solo con fines informativos</strong>; únicamente podrás usar para entrenar pesos descargados previamente.</p>
+        </div>
+    </div>
+</div>
 
                 
                 <!-- Required only on API pages -->
@@ -539,7 +574,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T23:28:16.000Z">21/11/2026 · 00:28</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

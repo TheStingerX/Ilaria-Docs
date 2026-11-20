@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848528075621">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848532655759">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848528075621" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848532655759" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848528075621" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848532655759" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848528075621" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848532655759" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -217,6 +217,7 @@
 | **`japanese-hubert-base`** | HuBERT Base pretrained on Japanese speech. Can leak source speaker timbre. | RVC v2 | Informational / specialized only |
 | **`korean-hubert-base`** | HuBERT Base pretrained on Korean speech. Can leak source speaker timbre. | RVC v2 | Informational / specialized only |
 | **`portuguese-hubert-base`** | Fairseq HuBERT Portuguese (`shiromiya/fairseq-hubert-portuguese`, ~1.13 GB). | RVC v2 | Informational / specialized only |
+| **`klm-vocal-contentvec`** | KLM Vocal ContentVec (`SeoulStreamingStation/KLM-Vocal-Embedder_ContantVEC_For_RVC`, ~251 MiB). | RVC v2 | Informational / optional only |
 | **`custom` HuBERT Base** | User-provided HuBERT Base pair (`pytorch_model.bin` + `config.json`, 768 hidden size). | RVC v2 (v1 only if 256-d projection exists) | Informational / advanced only |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -272,6 +273,12 @@
 <td>Informational / specialized only</td>
 </tr>
 <tr>
+<td><strong><code translate="no" v-pre>klm-vocal-contentvec</code></strong></td>
+<td>KLM Vocal ContentVec (<code translate="no" v-pre>SeoulStreamingStation/KLM-Vocal-Embedder_ContantVEC_For_RVC</code>, ~251 MiB).</td>
+<td>RVC v2</td>
+<td>Informational / optional only</td>
+</tr>
+<tr>
 <td><strong><code translate="no" v-pre>custom</code> HuBERT Base</strong></td>
 <td>User-provided HuBERT Base pair (<code translate="no" v-pre>pytorch_model.bin</code> + <code translate="no" v-pre>config.json</code>, 768 hidden size).</td>
 <td>RVC v2 (v1 only if 256-d projection exists)</td>
@@ -321,7 +328,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T23:24:10.000Z">21/11/2026 · 00:24</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

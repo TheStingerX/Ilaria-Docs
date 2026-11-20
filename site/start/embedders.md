@@ -33,6 +33,7 @@ Because the RVC generator is trained to expect features from **one specific embe
 | **`japanese-hubert-base`** | HuBERT Base pretrained on Japanese speech. Can leak source speaker timbre. | RVC v2 | Informational / specialized only |
 | **`korean-hubert-base`** | HuBERT Base pretrained on Korean speech. Can leak source speaker timbre. | RVC v2 | Informational / specialized only |
 | **`portuguese-hubert-base`** | Fairseq HuBERT Portuguese (`shiromiya/fairseq-hubert-portuguese`, ~1.13 GB). | RVC v2 | Informational / specialized only |
+| **`klm-vocal-contentvec`** | KLM Vocal ContentVec (`SeoulStreamingStation/KLM-Vocal-Embedder_ContantVEC_For_RVC`, ~251 MiB). | RVC v2 | Informational / optional only |
 | **`custom` HuBERT Base** | User-provided HuBERT Base pair (`pytorch_model.bin` + `config.json`, 768 hidden size). | RVC v2 (v1 only if 256-d projection exists) | Informational / advanced only |
 
 ## When you actually need to touch the embedder setting

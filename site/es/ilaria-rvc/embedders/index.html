@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848528086915">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848532674853">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848528086915" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848532674853" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -183,6 +183,9 @@
 <blockquote>
 <p><strong>2.4.0</strong> · Windows mueve la aplicación y el entorno a app/, y los modelos a models/ en la raíz. Añade Colab, Lightning AI Studio, ayuda para descargar embedders y Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Se repara pip y se incluye pywin32.</p>
 </blockquote>
+<blockquote>
+<p><strong>2.4.6</strong> · Añade <strong>KLM Vocal ContentVec</strong> (<code translate="no" v-pre>klm-vocal-contentvec</code>) como descarga opcional para Inferencia y Entrenamiento RVC v2, y añade <strong>43 pares G/D KLM verificados</strong> en <strong>Recommended pretraineds</strong> (la compatibilidad varía por par). Nota: las descargas Legacy Core de Lyery se retiraron en la 2.4.4 tras eliminarse los archivos originales.</p>
+</blockquote>
 <span id="inference-embedders" class="docs-anchor"></span><h2 id="incrustadores-de-inferencia">Incrustadores de inferencia</h2>
 <p>Abra <strong>Configuración de incrustador</strong> debajo de <strong>Procesamiento de audio</strong>. Lee automáticamente los metadatos del modelo almacenado y utiliza ContentVec cuando no se registra ningún incrustador. Si el editor especifica un codificador, utilícelo. Un índice de recuperación necesita características compatibles del mismo experimento. Deje la recuperación desactivada cuando el emparejamiento sea incierto.</p>
 <p>Los codificadores de inferencia disponibles incluyen ContentVec, Spin, Spin-v2 y HuBERT Base en chino, japonés y coreano. Abra <strong>Otro → Descargar integradores</strong> para instalar modelos opcionales uno a la vez. Para activos HuBERT personalizados, seleccione <strong>personalizado</strong>, asigne un nombre a la carpeta, proporcione los pesos y archivos de configuración correspondientes (.bin y .json) e instálelos juntos.</p>
@@ -228,7 +231,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T23:24:10.000Z">21/11/2026 · 00:24</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

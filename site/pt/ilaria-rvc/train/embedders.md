@@ -6,6 +6,8 @@
 
 > **2.4.0** · No Windows, a aplicação e o runtime passam para app/ e os modelos ficam em models/ na raiz. Inclui notebooks Colab e Lightning AI Studio, indicações para descarregar embedders e Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Corrige pip e inclui pywin32.
 
+> **2.4.6** · Adiciona **KLM Vocal ContentVec** (`klm-vocal-contentvec`) como download opcional para Inferência e Treino RVC v2, e adiciona **43 pares G/D KLM verificados** em **Recommended pretraineds** (a compatibilidade varia por par). Nota: os downloads Lyery Legacy Core foram removidos na 2.4.4 após a retirada dos arquivos originais.
+
 ## Incorporadores de inferência
 
 Abra **Configurações do Embedder** abaixo de **Processamento de Áudio**. Lê automaticamente os metadados do modelo armazenado e usa ContentVec quando nenhum incorporador é gravado. Se o editor especificar um codificador, use-o. Um índice de recuperação precisa de recursos compatíveis do mesmo experimento. Deixe a recuperação desativada quando o emparelhamento for incerto.

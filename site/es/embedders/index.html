@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848528086915">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848532674853">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848528086915" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848532674853" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848528086915" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848532674853" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -218,6 +218,7 @@
 | **`japanese-hubert-base`** | HuBERT Base preentrenado en habla japonesa. Puede filtrar timbre original. | RVC v2 | Solo informativo / especializado |
 | **`korean-hubert-base`** | HuBERT Base preentrenado en habla coreana. Puede filtrar timbre original. | RVC v2 | Solo informativo / especializado |
 | **`portuguese-hubert-base`** | Fairseq HuBERT portugués (`shiromiya/fairseq-hubert-portuguese`, ~1,13 GB). | RVC v2 | Solo informativo / especializado |
+| **`klm-vocal-contentvec`** | KLM Vocal ContentVec (`SeoulStreamingStation/KLM-Vocal-Embedder_ContantVEC_For_RVC`, ~251 MiB). | RVC v2 | Solo informativo / opcional |
 | **`custom` HuBERT Base** | Par HuBERT Base proporcionado por el usuario (`pytorch_model.bin` + `config.json`, 768 dimensiones). | RVC v2 (v1 solo si tiene proyección 256-d) | Solo informativo / avanzado |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -273,6 +274,12 @@
 <td>Solo informativo / especializado</td>
 </tr>
 <tr>
+<td><strong><code translate="no" v-pre>klm-vocal-contentvec</code></strong></td>
+<td>KLM Vocal ContentVec (<code translate="no" v-pre>SeoulStreamingStation/KLM-Vocal-Embedder_ContantVEC_For_RVC</code>, ~251 MiB).</td>
+<td>RVC v2</td>
+<td>Solo informativo / opcional</td>
+</tr>
+<tr>
 <td><strong><code translate="no" v-pre>custom</code> HuBERT Base</strong></td>
 <td>Par HuBERT Base proporcionado por el usuario (<code translate="no" v-pre>pytorch_model.bin</code> + <code translate="no" v-pre>config.json</code>, 768 dimensiones).</td>
 <td>RVC v2 (v1 solo si tiene proyección 256-d)</td>
@@ -322,7 +329,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T23:24:10.000Z">21/11/2026 · 00:24</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
