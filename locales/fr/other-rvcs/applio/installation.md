@@ -6,15 +6,13 @@ permalink: /ilaria-rvc/applio/installation/
 ---
 # Installez Applio et vérifiez le moteur
 
-[GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) · [Documentation officielle](https://docs.applio.org/)
+[GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
 Applio propose **deux options de téléchargement** qui exécutent **exactement le même moteur** — seules **l'interface et la méthode d'installation** changent :
-1. **Desktop App** ([Guide officiel Desktop](https://docs.applio.org/getting-started/desktop/)) : ouvre une fenêtre d'application installée et gère l'environnement du moteur au premier lancement.
-2. **Gradio Web Interface** ([Guide officiel Gradio](https://docs.applio.org/getting-started/installation/#python-application-with-gradio)) : exécute l'application Python et ouvre une interface web locale dans votre navigateur (disponible en paquet Windows compilé ou en installation Python depuis les sources).
+1. **Desktop App** : ouvre une fenêtre d'application installée et gère l'environnement du moteur au premier lancement.
+2. **Gradio Web Interface** : exécute l'application Python et ouvre une interface web locale dans votre navigateur (disponible en paquet Windows compilé ou en installation Python depuis les sources).
 
 ## 1. Desktop App
-
-Voir aussi : [Documentation officielle Applio Desktop](https://docs.applio.org/getting-started/desktop/)
 
 1. Ouvrez les [téléchargements officiels du bureau](https://github.com/IAHispano/Applio-App/releases/latest). Recherchez **Assets** et développez la liste si le programme d'installation dont vous avez besoin est masqué. Choisissez l'actif pour votre système d'exploitation. Les archives du code source sont destinées aux développeurs.
 2. Sous Windows, exécutez l'exécutable d'installation et choisissez un dossier dans lequel votre compte peut écrire. L'application packagée utilise un répertoire `data` à côté de son exécutable. Sur macOS, utilisez l'image disque de votre processeur, ARM64 pour Apple Silicon ou x64 pour Intel. Sous Linux, installez le package Debian disponible ou rendez l'AppImage exécutable et ouvrez-le.
@@ -26,9 +24,7 @@ Vous pouvez installer un package Desktop officiel sans Node.js ou pnpm. Ces outi
 
 ## 2. Gradio Web Interface
 
-Voir aussi : [Guide officiel Python / Gradio](https://docs.applio.org/getting-started/installation/#python-application-with-gradio)
-
-1. **Paquet Windows compilé** : téléchargez un ZIP Windows depuis les [téléchargements Gradio compilés](https://huggingface.co/IAHispano/Applio/tree/main/Compiled/Windows), ou suivez les étapes [Python application with Gradio](https://docs.applio.org/getting-started/installation/#python-application-with-gradio) pour une installation depuis les sources / multiplateforme.
+1. **Paquet Windows compilé** : téléchargez un ZIP Windows depuis les [téléchargements Gradio compilés](https://huggingface.co/IAHispano/Applio/tree/main/Compiled/Windows), ou clonez le [dépôt GitHub](https://github.com/IAHispano/Applio) pour une installation Python manuelle depuis les sources.
 2. Extrayez le ZIP complet vers un chemin simple que vous possédez, par exemple `C:\Applio-Gradio`. Ouvrez ce dossier dans l'Explorateur. Si vous voyez un deuxième dossier contenant le lanceur, ouvrez-le.
 3. Exécutez `run-applio.bat` (ou `python app.py` sur une installation Python manuelle ; `python app.py --help` affiche les options du serveur). Laissez la console ouverte, attendez qu'elle affiche une adresse locale et ouvrez cette adresse exacte dans votre navigateur.
 4. Recherchez des **Modèles** ou des **Téléchargements**, selon la version. Ensuite, ouvrez **Convert Audio** ou **Inference**. Si le navigateur perd sa connexion, vérifiez si le lanceur est toujours en cours d'exécution avant de rouvrir la page.
