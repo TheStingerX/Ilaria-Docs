@@ -3,7 +3,7 @@ label: "Version history and release differences"
 icon: ":clock3:"
 order: 83
 permalink: /ilaria-rvc/version-history/
-description: "The latest Windows release is 2.4.1. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the..."
+description: "The latest Windows release is 2.4.3. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the release notes."
 ---
 # Version history and release differences
 
@@ -11,13 +11,14 @@ description: "The latest Windows release is 2.4.1. Check your installed version 
 
 ## Which version does this documentation describe?
 
-The latest Windows release is **2.4.2**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
+The latest Windows release is **2.4.3**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
 
 ## All releases
 
 | Release | Highlights |
 | --- | --- |
-| 2.4.2 | Fixes RMVPE inference when CUDA cuDNN rejects a GRU operation. RMVPE uses contiguous input and retries that GRU on the CPU if cuDNN returns `CUDNN_STATUS_NOT_SUPPORTED`. Requires 2.4.0 or later. Open **Other → Update Ilaria RVC** to install 2.4.2. |
+| 2.4.3 | Adds native **BF16** mixed-precision training, automatically selected on NVIDIA RTX 30, 40 and 50 series GPUs when all selected GPUs support it (Kaggle T4 defaults to FP16). Remembers manual `FP16` and `FP32` selections, preserves existing experiment precision unless changed explicitly, updates the Training Queue and PC training advisor, and keeps feature extraction in `FP32` and the standard RVC model export format. Requires **2.4.2** first via **Other → Update Ilaria RVC**. |
+| 2.4.2 | Adds **RMVPE cuDNN recovery** to recover cleanly from cuDNN pitch-extraction errors during inference and preprocessing. Install **2.4.1** first, then update via **Other → Update Ilaria RVC**. |
 | 2.4.1 | Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install **2.4.1** when it appears. |
 | 2.4.0 | The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32. |
 | 2.3.0 | RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model. |
