@@ -102,7 +102,7 @@ Si todo suena mal o no sabes qué ajuste estropeó el audio, vuelve a una prueba
 | `BrokenProcessPool` / el PC se congela en Preprocesamiento | Demasiados hilos de CPU procesando a la vez agotan la memoria RAM. | Reduce los **hilos / workers de CPU** en Preprocesamiento (ej. de `8` a `2` o `4`) y verifica que haya espacio libre en el disco. |
 | `NaN loss` o el modelo exportado sale en silencio total | Un clip dañado o saturado en el dataset rompió el cálculo, `FP16` desbordó o el pretrain `G/D` no coincide. | Revisa que los clips no tengan distorsión extrema ni silencio total. Usa el **pretrain estándar de RVC** para tu sample rate, apaga `FP16` (usa `FP32`) y empieza un entrenamiento nuevo. |
 | **El entrenamiento no reanuda / empieza desde Epoch 0** | Dejaste activado `Fresh Training` o renombraste/moviste archivos dentro de `logs/`. | Mantén intacta toda la carpeta `logs/<experimento>/`, escribe exactamente el mismo **Nombre de Experimento**, **Sample Rate** y **Embedder**, sube el total de épocas y desactiva `Fresh Training`. |
-| **La voz suena apagada, con ruido o "sobreentrenada"** | Entrenó demasiadas épocas con un dataset pequeño o sucio y memorizó estática en vez del timbre. | Detente antes (prueba checkpoints cada 50-100 épocas, ej. 200-400 épocas en datasets pequeños) y limpia los audios del dataset con **UVR5** o **MVSep** antes de entrenar. |
+| **La voz suena apagada, con ruido o con "overfitting"** | Entrenó demasiadas épocas con un dataset pequeño o sucio y memorizó estática en vez del timbre. | Detente antes (prueba checkpoints cada 50-100 épocas, ej. 200-400 épocas en datasets pequeños) y limpia los audios del dataset con **UVR5** o **MVSep** antes de entrenar. |
 
 ### 6. Cambiador de voz en vivo, Micrófono y Discord
 

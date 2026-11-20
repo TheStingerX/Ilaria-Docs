@@ -102,7 +102,7 @@ Se tudo soar estranho ou você não souber qual opção estragou o áudio, volte
 | `BrokenProcessPool` / PC congela no Pré-processamento | Muitos threads de CPU rodando ao mesmo tempo esgotam a memória RAM. | Reduza os **threads / workers de CPU** (ex. de `8` para `2` ou `4`) e confira o espaço livre em disco. |
 | `NaN loss` ou modelo exportado sai mudo | Um clipe estourado/corrompido no dataset quebrou o cálculo, `FP16` deu overflow ou o pretrain `G/D` não bate. | Verifique se não há distorção extrema nem silêncio total nos clipes. Use o **pretrain padrão do RVC** para seu sample rate, desligue `FP16` (use `FP32`) e comece um novo treino. |
 | **O treino não retoma / recomeça da Epoch 0** | `Fresh Training` ficou marcado ou arquivos dentro de `logs/` foram movidos/renomeados. | Mantenha toda a pasta `logs/<experimento>/` intacta, digite exatamente o mesmo **Nome do Experimento**, **Sample Rate** e **Embedder**, aumente o total de épocas e desmarque `Fresh Training`. |
-| **O modelo soa abafado, chiado ou "overtrained"** | Treinou épocas demais em um dataset pequeno ou sujo e decorou o chiado em vez da voz. | Pare antes (teste checkpoints a cada 50-100 épocas, ex. 200-400 épocas em datasets pequenos) e sempre limpe o dataset com **UVR5** ou **MVSep**. |
+| **O modelo soa abafado, chiado ou com "overfitting"** | Treinou épocas demais em um dataset pequeno ou sujo e decorou o chiado em vez da voz. | Pare antes (teste checkpoints a cada 50-100 épocas, ex. 200-400 épocas em datasets pequenos) e sempre limpe o dataset com **UVR5** ou **MVSep**. |
 
 ### 6. Voice Changer ao vivo, Microfone e Discord
 
