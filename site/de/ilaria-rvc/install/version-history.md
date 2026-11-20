@@ -4,12 +4,14 @@
 
 ## Welche Version wird in dieser Dokumentation beschrieben?
 
-Die neueste Windows-Version ist **2.4.3**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
+Die neueste Windows-Version ist **2.4.5**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
 
 ## Alle Veröffentlichungen
 
  | Veröffentlichung | Highlights |
 | --- | --- |
+| 2.4.5 | Fügt `.pth` ↔ `.safetensors`-Konvertierung unter **Other → Convert model weights** hinzu, inklusive Erhalt der RVC-Metadaten und **Move .pth to models**-Button. Verbessert die Inferenz-Meldung bei fehlender Stimmkonfiguration und installiert `safetensors` bei Erstnutzung automatisch. Ab **2.4.4** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |
+| 2.4.4 | Entfernt die sechs Legacy-Core-Pretrained-Downloads von Lyery, nachdem die Quelldateien entfernt wurden (bereits geladene Gewichte bleiben fürs Training nutzbar). Erfordert **2.4.2** oder neuer. |
 | 2.4.3 | Fügt natives **BF16**-Mixed-Precision-Training hinzu, automatisch gewählt auf NVIDIA RTX 30, 40 und 50, wenn alle gewählten GPUs es unterstützen (Kaggle T4 nutzt standardmäßig FP16). Merkt sich manuelle `FP16`- und `FP32`-Wahl, behält die Präzision bestehender Trainings bei, aktualisiert Training Queue und PC training advisor und belässt Feature-Extraktion in `FP32` sowie das Standard-RVC-Exportformat. Erfordert zuerst **2.4.2** über **Other → Update Ilaria RVC**. |
 | 2.4.2 | Fügt **RMVPE cuDNN recovery** hinzu, um bei cuDNN-Fehlern während der Pitch-Extraktion in Inferenz und Preprocessing sauber fortzufahren. Update von **2.4.1** über **Other → Update Ilaria RVC**. |
 | 2.4.1 | Ergänzt optionales lokales TTS mit Kokoro v1.0 und 54 Stimmen, darunter Sara und Nicola auf Italienisch. Erklärt die TTS-Voraussetzungen, korrigiert den Standardpfad der RMVPE-Gewichte und blendet ausführliche HuBERT-INFO-Meldungen aus. Warnungen und Fehler bleiben sichtbar. Installiere und starte zuerst 2.4.0. Öffne **Other → Update Ilaria RVC** und installiere **2.4.1**, sobald es angezeigt wird. |

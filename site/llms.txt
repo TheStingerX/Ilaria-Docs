@@ -31,8 +31,9 @@
 - [Installation and updates](https://docs.ilariarvc.shop/ilaria-rvc/install/installation.md): Download the supported NVIDIA build from Hugging Face. Extract the whole archive into a writable local folder and run RUN_ILARIA_RVC.bat there.
 - [Logs and recovery](https://docs.ilariarvc.shop/ilaria-rvc/install/troubleshooting.md): Start with Pitch 0, a short dry WAV and one known-good model. Change one setting per test. See Inference controls for the effects and export options.
 - [Files, source setup and maintenance](https://docs.ilariarvc.shop/ilaria-rvc/install/source-layout.md): An inference export can be used for conversion.
-- [Version history and release differences](https://docs.ilariarvc.shop/ilaria-rvc/install/version-history.md): The latest Windows release is 2.4.3. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the release notes.
+- [System Requirements for Ilaria RVC](https://docs.ilariarvc.shop/ilaria-rvc/install/requirements.md): Ilaria RVC runs locally on your PC using PyTorch 2.10.0 and NVIDIA CUDA.
 - [Compatible GPUs](https://docs.ilariarvc.shop/ilaria-rvc/install/gpu-compatibility.md): The Windows ZIP is about 5.00 GB. Extract it to a new folder and run RUN_ILARIA_RVC.bat, or RUN_ILARIA_RVC_LOGS.bat for logs. ContentVec and RMVPE are included.
+- [Version history and release differences](https://docs.ilariarvc.shop/ilaria-rvc/install/version-history.md): The latest Windows release is 2.4.5. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the release notes.
 
 ### Cloud
 
@@ -61,8 +62,8 @@
 
 - [Model library and merging](https://docs.ilariarvc.shop/ilaria-rvc/manage/model-library.md): Open Other and import a supported local model or use the download control. Keep a checkpoint and its own index together.
 - [Voice Blender (Merge Models)](https://docs.ilariarvc.shop/ilaria-rvc/manage/voice-blender.md): In Ilaria RVC, the Voice Blender feature is located in the Other tab under Merge models.
+- [Safetensors ↔ PTH Converter (Convert model weights)](https://docs.ilariarvc.shop/ilaria-rvc/manage/safetensors-converter.md): Complete beginner-friendly guide to Ilaria RVC's Safetensors and PTH model converter in the Other tab, including metadata preservation and Move .pth to models.
 - [Audio Analyzer](https://docs.ilariarvc.shop/ilaria-rvc/manage/audio-analyzer.md): Open Other → Audio Analyzer. Add up to eight audio files to compare.
-- [System Requirements for Ilaria RVC](https://docs.ilariarvc.shop/ilaria-rvc/manage/requirements.md): Ilaria RVC runs locally on your PC using PyTorch 2.10.0 and NVIDIA CUDA.
 - [Every Other panel explained](https://docs.ilariarvc.shop/ilaria-rvc/manage/other-buttons.md): Use Other to manage files, inspect or combine models, review audio and maintain the app.
 
 ## Other RVCs

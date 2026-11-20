@@ -4,12 +4,14 @@
 
 ## ¿Qué versión describe esta documentación?
 
-La última versión para Windows es la **2.4.3**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
+La última versión para Windows es la **2.4.5**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
 
 ## Todas las versiones
 
  | Versión | Aspectos destacados |
 | --- | --- |
+| 2.4.5 | Añade la conversión de modelos `.pth` ↔ `.safetensors` en **Other → Convert model weights**, conservando los metadatos RVC e incluyendo el botón **Move .pth to models**. Mejora el mensaje en Inferencia para archivos sin configuración de voz e instala `safetensors` automáticamente en el primer uso. Desde **2.4.4**, abre **Other → Update Ilaria RVC → Check for updates** y elige **Download and restart**. |
+| 2.4.4 | Elimina las seis opciones de descarga pretrained Legacy Core de Lyery tras la retirada de los archivos originales (los pesos ya descargados siguen disponibles para entrenar). Requiere **2.4.2** o posterior. |
 | 2.4.3 | Añade entrenamiento nativo con precisión mixta **BF16**, seleccionado automáticamente en GPUs NVIDIA RTX series 30, 40 y 50 cuando todas las GPUs elegidas lo soportan (Kaggle T4 usa FP16 por defecto). Recuerda selecciones manuales de `FP16` y `FP32`, conserva la precisión de entrenamientos existentes salvo cambio explícito, actualiza Training Queue y PC training advisor y mantiene la extracción de rasgos en `FP32` y el formato estándar de exportación RVC. Requiere **2.4.2** primero desde **Other → Update Ilaria RVC**. |
 | 2.4.2 | Añade **RMVPE cuDNN recovery** para recuperarse limpiamente de errores cuDNN de extracción de pitch en inferencia y preprocesamiento. Actualiza desde **2.4.1** mediante **Other → Update Ilaria RVC**. |
 | 2.4.1 | Añade la síntesis local opcional Kokoro v1.0 con 54 voces, incluidas Sara y Nicola en italiano. Aclara los requisitos de los motores TTS, corrige la ruta de los pesos RMVPE y oculta mensajes INFO detallados de HuBERT sin ocultar avisos ni errores. Instala e inicia primero la 2.4.0. Abre **Other → Update Ilaria RVC** e instala la **2.4.1** cuando aparezca. |
