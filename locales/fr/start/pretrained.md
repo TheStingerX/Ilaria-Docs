@@ -59,7 +59,7 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **PaBP** | `32 kHz` | HiFi-GAN | Non spécifié | [Razer112/pabp-v.5](https://huggingface.co/Razer112/pabp-v.5) |
 | **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Non spécifié | [SimplCup/RefGanVCTKV2](https://huggingface.co/SimplCup/RefGanVCTKV2) |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | [Aznamir/RefineGAN](https://huggingface.co/Aznamir/RefineGAN) |
-| **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Non spécifié | `SimplCup/RefineGanVCTKV1` |
+| **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Non spécifié | [SimplCup/RefineGanVCTKV1](https://huggingface.co/SimplCup/RefineGanVCTKV1) |
 | **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Non spécifié | Non spécifié | [MUSTAR/Rigel-rvc-base-pretrained-model](https://huggingface.co/MUSTAR/Rigel-rvc-base-pretrained-model) |
 | **RIN_E3** | `40 kHz` | HiFi-GAN | Non spécifié | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Non spécifié | [Sztef/SingerPreTrained](https://huggingface.co/Sztef/SingerPreTrained) |
