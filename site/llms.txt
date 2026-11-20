@@ -6,6 +6,7 @@
 - [Getting started](https://docs.ilariarvc.shop/start/getting-started.md): Download Ilaria RVC 2.4.0 for Windows (ZIP)
 - [RVC fundamentals](https://docs.ilariarvc.shop/start/rvc-fundamentals.md): Download Ilaria RVC 2.4.0 for Windows (ZIP)
 - [RVC models and files](https://docs.ilariarvc.shop/start/models.md): An RVC model changes the timbre of an existing performance. The source recording still provides the words, phrasing and timing. You need a compatible inference model and a recording or microphone signal.
+- [RVC Pitch Extractors (F0 Methods)](https://docs.ilariarvc.shop/start/pitch-extractors.md): A pitch extractor (also called an F0 extraction method) is the algorithm or neural network that tracks the fundamental frequency (pitch, melody, and intonation) of the input voice over time.
 - [RVC Embedders](https://docs.ilariarvc.shop/start/embedders.md): An embedder (also called a content encoder) is the neural network that reads your input audio and converts what is being said or sung into numerical content features before the RVC voice model reconstructs it in the target speaker's timbre.
 - [RVC Pretrained Base Models](https://docs.ilariarvc.shop/start/pretrained.md): A pretrained base model (also called a pretrain) is a pair of starting checkpoint files: a Generator (G_*.pth) and a Discriminator (D_*.pth), already trained on hundreds of hours of multi-speaker audio.
 - [Choose an RVC app](https://docs.ilariarvc.shop/reference/tools.md): Compare compatible apps for live voice conversion, file conversion, and training.
