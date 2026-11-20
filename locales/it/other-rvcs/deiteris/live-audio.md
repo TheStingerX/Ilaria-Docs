@@ -3,6 +3,7 @@ label: "Instrada e regola Deiteris"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Indossa sempre le cuffie durante la conversione live. Usare le casse fa rientrare la voce convertita nel microfono generando eco e fischi."
 ---
 # Instrada e regola Deiteris w-okada Fork
 

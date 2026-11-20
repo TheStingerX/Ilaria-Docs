@@ -3,6 +3,7 @@ label: "Instale Vonovox"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/vonovox/installation/
+description: "Vonovox é um conversor de voz ao vivo do Windows para GPUs NVIDIA compatíveis. Use este guia para fazer um teste de microfone local limpo antes de abrir o..."
 ---
 # Instale Vonovox
 

@@ -3,6 +3,7 @@ label: "Routen und stimmen Sie Vonovox ab"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Verwenden Sie drei Endpunkte: Ihr physisches Mikrofon für die Eingabe, ein virtuelles Kabel für das umgewandelte Signal und Kopfhörer für die Überwachung..."
 ---
 # Routen und stimmen Sie Vonovox ab
 

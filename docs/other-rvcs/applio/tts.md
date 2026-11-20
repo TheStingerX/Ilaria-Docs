@@ -3,6 +3,7 @@ label: "Generate speech from text"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
+description: "Applio uses an online Edge TTS voice to read your text and an RVC model to change the generated voice. The source voice determines pronunciation, pacing..."
 ---
 # Turn a short script into converted speech
 

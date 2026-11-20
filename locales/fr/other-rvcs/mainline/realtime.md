@@ -3,6 +3,7 @@ label: "Configuration du microphone en temps réel"
 icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
+description: "Ce guide s'applique à l'interface graphique en temps réel distincte incluse dans les versions RVC WebUI (Mainline - Original RVC) prises en charge. Il..."
 ---
 
 # Utilisez le changeur de voix en temps réel RVC WebUI (Mainline - Original RVC)

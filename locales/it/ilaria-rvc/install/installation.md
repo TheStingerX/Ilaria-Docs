@@ -3,6 +3,7 @@ label: "Installazione e aggiornamenti"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
+description: "Scarica la build NVIDIA supportata da Hugging Face. Estrai l'intero archivio in una cartella locale scrivibile ed esegui RUN_ILARIA_RVC.bat lì. Il..."
 ---
 # Installazione e aggiornamenti
 

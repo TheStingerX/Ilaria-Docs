@@ -3,6 +3,7 @@ label: "Sintesi vocale"
 icon: ":speech_balloon:"
 order: 96
 permalink: /ilaria-rvc/tts/
+description: "Usa Inferenza → TTS per trasformare il testo scritto in una registrazione. Puoi ascoltare direttamente il discorso generato o convertirlo con un modello..."
 ---
 # Sintesi vocale
 

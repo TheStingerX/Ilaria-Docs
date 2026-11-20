@@ -3,6 +3,7 @@ label: "Applio installieren"
 icon: ":cd:"
 order: 97
 permalink: /ilaria-rvc/applio/installation/
+description: "Applio bietet zwei Download-Optionen, die exakt dieselbe Engine ausführen - nur die Oberfläche und die Installation unterscheiden sich:"
 ---
 # Applio installieren und Engine überprüfen
 

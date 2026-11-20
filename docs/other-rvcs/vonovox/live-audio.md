@@ -3,6 +3,7 @@ label: "Route and tune Vonovox"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Use three endpoints: your physical microphone for input, a virtual cable for the converted signal, and headphones for monitoring. A virtual cable has a..."
 ---
 # Route and tune Vonovox
 

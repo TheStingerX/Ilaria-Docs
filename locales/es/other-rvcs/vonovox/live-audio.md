@@ -3,6 +3,7 @@ label: "Enruta y sintoniza Vonovox"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Utilice tres puntos finales: su micrófono físico como entrada, un cable virtual para la señal convertida y auriculares para monitoreo. Un cable virtual..."
 ---
 # Enruta y sintoniza Vonovox
 

@@ -2,6 +2,7 @@
 label: "🚀 Getting started"
 order: 95
 permalink: /getting-started/
+description: "You can also run Ilaria RVC on Kaggle using its remote GPU. This option works even if your computer has no NVIDIA GPU. Ilaria RVC on Kaggle"
 ---
 # Getting started
 

@@ -3,6 +3,7 @@ label: "Overview & Requirements"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/causal-voice-changer/overview/
+description: "Causal Voice Changer (CVC) is a 48 kHz real-time AI voice changer built to bridge the gap between ultra-low-latency systems (like Beatrice) and slower..."
 ---
 # Causal Voice Changer (CVC)
 

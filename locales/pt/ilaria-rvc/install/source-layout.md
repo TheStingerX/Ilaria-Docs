@@ -3,6 +3,7 @@ label: "Arquivos, configuração e manutenção da fonte"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
+description: "Uma exportação de inferência pode ser usada para conversão. Para um experimento retomável, mantenha o par G/D salvo, o otimizador e o estado de..."
 ---
 # Arquivos, configuração e manutenção da fonte
 

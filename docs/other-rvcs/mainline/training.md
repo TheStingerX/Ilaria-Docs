@@ -3,6 +3,7 @@ label: "Train and export a model"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
+description: "Start with a single speaker and a fresh experiment name. Training produces a model you can test on new performances in the inference interface. Keep raw..."
 ---
 
 # Train and export a RVC WebUI (Mainline - Original RVC) model

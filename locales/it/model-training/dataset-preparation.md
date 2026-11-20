@@ -2,6 +2,7 @@
 label: "🎧 Prepara un set di dati"
 order: 95
 permalink: /dataset-preparation/
+description: "Ogni clip insegna al modello qualcosa sulla sua voce di destinazione. Prima dell'addestramento, decidi quali parti di quella voce vuoi che il modello..."
 ---
 # Prepara un set di dati vocale
 

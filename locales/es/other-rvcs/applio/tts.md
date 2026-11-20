@@ -3,6 +3,7 @@ label: "Genera voz a partir de texto"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
+description: "Applio utiliza una voz Edge TTS en línea para leer tu texto y un modelo RVC para cambiar la voz generada. La voz de origen determina la pronunciación, el..."
 ---
 # Convierte un guión corto en voz convertida
 

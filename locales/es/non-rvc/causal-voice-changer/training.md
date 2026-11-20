@@ -3,6 +3,7 @@ label: "Entrenar voces (.cvc)"
 icon: ":mortar_board:"
 order: 97
 permalink: /non-rvc/causal-voice-changer/training/
+description: "Crear una voz en Causal Voice Changer ajusta (fine-tune) el decodificador base con tu audio objetivo. A diferencia de herramientas más antiguas, no..."
 ---
 # Entrenar una voz en CVC
 

@@ -3,6 +3,7 @@ label: "Contrôles d'entraînement expliqués"
 icon: ":level_slider:"
 order: 82
 permalink: /ilaria-rvc/training-buttons/
+description: "L'entraînement crée un nouveau modèle vocal à partir des enregistrements. Pour une première expérience, utilisez un nom unique, un petit ensemble de..."
 ---
 
 # Chaque contrôle d'entraînement expliqué

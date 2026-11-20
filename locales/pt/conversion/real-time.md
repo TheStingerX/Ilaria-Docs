@@ -2,6 +2,7 @@
 label: "⚡ Conversão em tempo real"
 order: 92
 permalink: /real-time/
+description: "Para uma gravação ou cover, a conversão de arquivo permite renderizar e comparar várias tomadas. Em uma configuração ao vivo, o conversor precisa terminar..."
 ---
 # Conversão de voz em tempo real
 

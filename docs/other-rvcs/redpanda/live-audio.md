@@ -3,6 +3,7 @@ label: "Test live audio in Redpanda-vc"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
+description: "The Windows desktop realtime launcher uses the devices exposed to that local process. The WebUI realtime tab captures microphone input through the browser..."
 ---
 # Test live audio in Redpanda-vc
 

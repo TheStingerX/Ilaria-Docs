@@ -3,6 +3,7 @@ label: "Coda, dashboard e avvisi"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
+description: "Configura l'esperimento in Training, conferma il set di dati e il nome del modello e aggiungilo alla Coda di training. Utilizzare nomi distinti per..."
 ---
 # Coda, dashboard e avvisi
 

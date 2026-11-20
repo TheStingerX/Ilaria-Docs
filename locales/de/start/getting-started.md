@@ -2,6 +2,7 @@
 label: "🚀 Erste Schritte"
 order: 95
 permalink: /getting-started/
+description: "Du kannst Ilaria RVC auch auf Kaggle mit einer entfernten GPU nutzen, selbst wenn dein Computer keine NVIDIA-GPU hat. Ilaria RVC on Kaggle"
 ---
 # Erste Schritte
 

@@ -2,6 +2,7 @@
 label: "🛠️ Entrenar un modelo de voz"
 order: 94
 permalink: /training/
+description: "El entrenamiento aprende una voz objetivo a partir de una colección de audio preparada. Utilice esta guía cuando desee construir un modelo a partir de..."
 ---
 # Entrenar un modelo de voz RVC
 

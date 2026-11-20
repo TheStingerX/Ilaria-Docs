@@ -2,6 +2,7 @@
 label: "💬 Sintesi vocale"
 order: 93
 permalink: /text-to-speech/
+description: "Sintesi vocale (TTS) genera una registrazione sorgente dalle parole digitate. RVC applica quindi un modello vocale separato a quella registrazione. La..."
 ---
 # Sintesi vocale e RVC
 

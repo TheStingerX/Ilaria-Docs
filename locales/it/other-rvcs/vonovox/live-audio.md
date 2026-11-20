@@ -3,6 +3,7 @@ label: "Instrada e sintonizza Vonovox"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/vonovox/live-audio/
+description: "Utilizza tre endpoint: il microfono fisico per l'ingresso, un cavo virtuale per il segnale convertito e le cuffie per il monitoraggio. Un cavo virtuale ha..."
 ---
 # Instrada e sintonizza Vonovox
 

@@ -3,6 +3,7 @@ label: "Cola, panel y alertas"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
+description: "Configure el experimento en Entrenamiento, confirme su conjunto de datos y nombre de modelo, y agréguelo a la Cola de entrenamiento. Utilice nombres..."
 ---
 # Cola, panel y alertas
 

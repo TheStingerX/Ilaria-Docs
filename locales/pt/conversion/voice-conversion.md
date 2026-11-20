@@ -2,6 +2,7 @@
 label: "🎙️ Conversão de voz"
 order: 95
 permalink: /voice-conversion/
+description: "A conversão de voz começa com uma performance. A saída geralmente segue as palavras originais, o tempo, a articulação e o contorno do tom enquanto altera..."
 ---
 # Converta uma gravação com Ilaria RVC
 

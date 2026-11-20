@@ -3,6 +3,7 @@ label: "Prova l'audio dal vivo in Redpanda-vc"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
+description: "L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale. La scheda in tempo reale dell'interfaccia utente Web..."
 ---
 # Prova l'audio dal vivo in Redpanda-vc
 

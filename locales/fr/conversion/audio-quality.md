@@ -2,6 +2,7 @@
 label: "🎚️ Hauteur et qualité audio"
 order: 94
 permalink: /audio-quality/
+description: "Choisissez un court extrait qui contient le problème. Effectuez une conversion de référence et comparez-la avec un paramètre modifié à la fois. Écoutez à..."
 ---
 # Ajustez la hauteur et la qualité audio
 

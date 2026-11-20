@@ -3,6 +3,7 @@ label: "Guía y modelos recomendados"
 icon: ":scissors:"
 order: 97
 permalink: /non-rvc/uvr5/usage-and-models/
+description: "Usa esta guía para configurar UVR5 correctamente y elegir los mejores modelos para aislar voces, eliminar coros/armonías, quitar reverberación/eco y..."
 ---
 # Guía de UVR5 y modelos recomendados
 

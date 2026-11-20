@@ -3,6 +3,7 @@ label: "VCClient installieren"
 icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/okada/installation/
+description: "VCClient konvertiert Live-Mikrofon-Audio. Die Schnittstelle ist der Client und der Konvertierungsprozess ist der Server. Führen Sie für Ihren ersten Test..."
 ---
 # w-okada VCClient installieren
 

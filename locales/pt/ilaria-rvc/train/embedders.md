@@ -3,6 +3,7 @@ label: "Incorporadores e pré-treinamentos"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
+description: "Abra Configurações do Embedder abaixo de Processamento de Áudio. Lê automaticamente os metadados do modelo armazenado e usa ContentVec quando nenhum..."
 ---
 # Incorporadores e pré-treinamentos
 

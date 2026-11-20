@@ -3,6 +3,7 @@ label: "Echtzeit-Stimmenverzerrer"
 icon: ":studio_microphone:"
 order: 96
 permalink: /non-rvc/causal-voice-changer/realtime/
+description: "Sobald du run-training mindestens einmal ausgeführt hast und eine .cvc-Stimme bereitliegt, startest du den Live-Stimmenverzerrer mit:"
 ---
 # CausalVC Realtime verwenden
 

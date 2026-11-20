@@ -3,6 +3,7 @@ label: "Audioanalysator"
 icon: ":chart_with_upwards_trend:"
 order: 85
 permalink: /ilaria-rvc/audio-analyzer/
+description: "Öffnen Sie Andere → Audioanalysator. Fügen Sie bis zu acht Audiodateien zum Vergleichen hinzu. Ein nützlicher Satz enthält die ursprüngliche Eingabe, eine..."
 ---
 # Audioanalysator
 

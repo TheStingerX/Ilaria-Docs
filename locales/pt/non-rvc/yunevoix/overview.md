@@ -3,6 +3,7 @@ label: "Visão geral e requisitos"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/yunevoix/overview/
+description: "YuneVoix é uma aplicação de conversão de voz por IA em tempo real para Windows, alimentada pelo motor YUNE. Tal como o RVC, transforma a tua voz na voz de..."
 ---
 # YuneVoix (YUNE)
 

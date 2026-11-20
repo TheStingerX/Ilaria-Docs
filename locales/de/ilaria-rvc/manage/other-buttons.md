@@ -3,6 +3,7 @@ label: "Weitere Steuerelemente erklärt"
 icon: ":toolbox:"
 order: 80
 permalink: /ilaria-rvc/other-buttons/
+description: "Verwenden Sie Andere, um Dateien zu verwalten, Modelle zu prüfen oder zu kombinieren, Audio zu überprüfen und die App zu warten. Entscheiden Sie zunächst..."
 ---
 
 # Jedes andere Bedienfeld erklärt

@@ -3,6 +3,7 @@ label: "Biblioteca de modelos y fusión"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
+description: "Abra Otro e importe un modelo local compatible o utilice el control de descarga. Mantenga juntos un punto de control y su propio índice. Actualice la..."
 ---
 # Biblioteca de modelos y fusión
 

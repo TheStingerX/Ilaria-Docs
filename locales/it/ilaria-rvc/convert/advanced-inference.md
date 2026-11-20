@@ -3,6 +3,7 @@ label: "Elaborazione ed esportazione"
 icon: ":control_knobs:"
 order: 89
 permalink: /ilaria-rvc/advanced-inference/
+description: "Apri Inference Settings, seleziona rmvpe, espandi RMVPE High Register e attiva Enable high register. Provalo se una nota molto acuta viene rilevata..."
 ---
 # Elaborazione ed esportazione
 

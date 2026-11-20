@@ -3,6 +3,7 @@ label: "Modelo, microfone e cabo"
 icon: ":headphones:"
 order: 90
 permalink: /ilaria-rvc/tgr/live-audio/
+description: "Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido..."
 ---
 # Configure o áudio ao vivo no Okada TG Developed Fork
 

@@ -3,6 +3,7 @@ label: "Inferenza singola e batch"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
+description: "Apri Single Inference, scegli una voce e carica una breve clip asciutta. Imposta Intonazione e Rapporto indice su zero. Utilizza l’embedder previsto dal..."
 ---
 # Inferenza singola e batch
 

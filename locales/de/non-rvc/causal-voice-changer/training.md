@@ -3,6 +3,7 @@ label: "Stimmen trainieren (.cvc)"
 icon: ":mortar_board:"
 order: 97
 permalink: /non-rvc/causal-voice-changer/training/
+description: "Beim Erstellen einer Stimme in Causal Voice Changer wird der Basis-Decoder auf dein Ziel-Audio feinabgestimmt. Anders als bei älteren Tools musst du..."
 ---
 # Eine Stimme in CVC trainieren
 

@@ -2,6 +2,7 @@
 label: "🧠 Fundamentos de RVC"
 order: 94
 permalink: /rvc-fundamentals/
+description: "La conversión de voz basada en recuperación (RVC) toma una grabación vocal y sintetiza una versión con el carácter de una voz entrenada. La grabación..."
 ---
 # Fundamentos de RVC
 

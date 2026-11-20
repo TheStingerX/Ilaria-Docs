@@ -3,6 +3,7 @@ label: "Converti una registrazione"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
+description: "Inizia con una breve registrazione che puoi riconoscere immediatamente. Una frase di prova potrebbe essere \"Potresti mettere il libro blu vicino alla..."
 ---
 # Converti una registrazione in Applio
 

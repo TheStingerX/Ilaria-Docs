@@ -3,6 +3,7 @@ label: "Modèles et presets recommandés"
 icon: ":control_knobs:"
 order: 97
 permalink: /non-rvc/mvsep/usage-and-models/
+description: "Voici les meilleurs presets MVSep pour obtenir des pistes vocales ultra-propres (pour entraînement RVC, covers ou conversion vocale), avec des liens..."
 ---
 # Guide MVSep : modèles et presets recommandés
 

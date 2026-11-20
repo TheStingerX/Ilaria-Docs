@@ -3,6 +3,7 @@ label: "Version history and release differences"
 icon: ":clock3:"
 order: 83
 permalink: /ilaria-rvc/version-history/
+description: "The latest Windows release is 2.4.1. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the..."
 ---
 # Version history and release differences
 

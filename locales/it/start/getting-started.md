@@ -2,6 +2,7 @@
 label: "🚀 Iniziare"
 order: 95
 permalink: /getting-started/
+description: "Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. Ilaria RVC on Kaggle"
 ---
 # Iniziare
 

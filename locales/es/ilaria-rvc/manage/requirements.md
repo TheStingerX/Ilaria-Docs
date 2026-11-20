@@ -3,6 +3,7 @@ label: "Requisitos del sistema"
 icon: ":clipboard:"
 order: 82
 permalink: /ilaria-rvc/requirements/
+description: "Ilaria RVC se ejecuta localmente en tu PC usando PyTorch 2.10.0 y NVIDIA CUDA. Como la conversión de voz (inferencia) y el entrenamiento de modelos tienen..."
 ---
 # Requisitos del sistema para Ilaria RVC
 

@@ -3,6 +3,7 @@ label: "Download & Installation"
 icon: ":cd:"
 order: 98
 permalink: /non-rvc/uvr5/installation/
+description: "The official Windows and macOS packages include an isolated Python and PyTorch environment, so you do not need to install Python separately."
 ---
 # Download and Install UVR5
 

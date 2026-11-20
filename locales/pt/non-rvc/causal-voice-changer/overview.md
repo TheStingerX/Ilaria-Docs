@@ -3,6 +3,7 @@ label: "Visão geral e requisitos"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/causal-voice-changer/overview/
+description: "Causal Voice Changer (CVC) é um alterador de voz por IA em tempo real a 48 kHz criado para preencher a lacuna entre opções de latência ultrabaixa (como..."
 ---
 # Causal Voice Changer (CVC)
 

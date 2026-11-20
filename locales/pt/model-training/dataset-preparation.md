@@ -2,6 +2,7 @@
 label: "🎧 Prepare um conjunto de dados"
 order: 95
 permalink: /dataset-preparation/
+description: "Cada clipe ensina ao modelo algo sobre sua voz alvo. Antes do treinamento, decida quais partes da voz você deseja que o modelo administre e, em seguida..."
 ---
 # Prepare um conjunto de dados de voz
 

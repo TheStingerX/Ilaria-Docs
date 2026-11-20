@@ -3,6 +3,7 @@ label: "Google Colab"
 icon: ":tangerine:"
 order: 97
 permalink: /ilaria-rvc/colab/
+description: "Préparez un WAV court et propre, un modèle d’inférence compatible et, pour l’entraînement, un jeu de données sauvegardé séparément."
 ---
 # Google Colab
 

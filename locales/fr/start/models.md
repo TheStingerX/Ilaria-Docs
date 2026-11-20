@@ -2,6 +2,7 @@
 label: "📦 Modèles et fichiers RVC"
 order: 93
 permalink: /models/
+description: "Un modèle RVC transforme le timbre d’une voix existante. Les mots, le rythme et les pauses viennent de l’enregistrement d’origine. Pour commencer..."
 ---
 # Modèles et fichiers RVC
 

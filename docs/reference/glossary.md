@@ -2,6 +2,7 @@
 label: "📖 Glossary"
 order: 94
 permalink: /glossary/
+description: "See RVC fundamentals, Models and files and Training for these terms in context."
 ---
 # Glossary
 

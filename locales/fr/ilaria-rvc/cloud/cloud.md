@@ -3,6 +3,7 @@ label: "Cloud"
 icon: ":cloud:"
 order: 94
 permalink: /ilaria-rvc/cloud/
+description: "Choisissez une plateforme pour utiliser Ilaria RVC dans le navigateur."
 ---
 # Ilaria RVC dans le cloud
 

@@ -3,6 +3,7 @@ label: "Google Colab"
 icon: ":tangerine:"
 order: 97
 permalink: /ilaria-rvc/colab/
+description: "Bereite eine kurze, saubere WAV-Datei, ein passendes Inferenzmodell und bei Bedarf eine Sicherung des Trainingsdatensatzes vor."
 ---
 # Google Colab
 

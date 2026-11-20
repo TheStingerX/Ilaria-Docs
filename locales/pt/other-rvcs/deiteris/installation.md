@@ -3,6 +3,7 @@ label: "Instalar Deiteris Fork"
 icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/deiteris/installation/
+description: "Deiteris w-okada Fork é um fork popular mantido pela comunidade de w-okada/voice-changer (VCClient), focado em menor latência, áudio mais limpo, correções..."
 ---
 # Instalar Deiteris w-okada Fork
 

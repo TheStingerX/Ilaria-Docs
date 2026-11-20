@@ -3,6 +3,7 @@ label: "Vonovox installieren"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/vonovox/installation/
+description: "Vonovox ist ein Windows Live-Sprachkonverter für unterstützte NVIDIA-GPUs. Verwenden Sie diese Anleitung, um einen sauberen lokalen Mikrofontest..."
 ---
 # Vonovox installieren
 

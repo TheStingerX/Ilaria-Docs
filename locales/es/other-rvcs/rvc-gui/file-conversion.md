@@ -3,6 +3,7 @@ label: "Instalar y convertir con RVC GUI"
 icon: ":control_knobs:"
 order: 99
 permalink: /ilaria-rvc/rvc-gui/file-conversion/
+description: "Esta guía cubre la aplicación de escritorio archivada de Tiger14n para convertir archivos de audio. Prepare un punto de control de voz y una grabación WAV..."
 ---
 # Instalar y convertir con RVC GUI
 

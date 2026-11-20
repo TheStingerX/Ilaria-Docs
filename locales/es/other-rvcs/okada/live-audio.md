@@ -3,6 +3,7 @@ label: "Audio en vivo y enrutamiento"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
+description: "Comience con auriculares y una única ruta de audio local. Cuando escuche una voz limpia y convertida en los auriculares, conéctela a una llamada o..."
 ---
 # Convierta su micrófono en w-okada VCClient
 

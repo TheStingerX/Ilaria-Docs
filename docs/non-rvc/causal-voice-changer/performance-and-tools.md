@@ -3,6 +3,7 @@ label: "Performance, Cleanup & Tools"
 icon: ":wrench:"
 order: 95
 permalink: /non-rvc/causal-voice-changer/performance-and-tools/
+description: "You can record your sessions directly inside CausalVC Realtime (start conversion first):"
 ---
 # Performance, Sound Cleanup & Extra Tools
 

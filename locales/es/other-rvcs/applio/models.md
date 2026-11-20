@@ -3,6 +3,7 @@ label: "Instalar y verificar una voz"
 icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
+description: "Coloque las descargas de modelos en una carpeta conocida y extraiga cualquier ZIP allí. Guarde las notas del editor junto con los archivos. Utilice..."
 ---
 # Instalar una voz en Applio
 

@@ -2,6 +2,7 @@
 label: "⚡ Echtzeitkonvertierung"
 order: 92
 permalink: /real-time/
+description: "Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonvertierung mehrere Takes rendern und vergleichen. In einem Live-Setup muss der Konverter..."
 ---
 # Echtzeit-Sprachkonvertierung
 

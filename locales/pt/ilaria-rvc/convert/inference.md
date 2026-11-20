@@ -3,6 +3,7 @@ label: "Inferência única e em lote"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
+description: "Abra Inferência Única, escolha uma voz e carregue um clipe curto e seco. Defina Pitch e Index Ratio como zero. Use o incorporador esperado pelo modelo..."
 ---
 # Inferência única e em lote
 

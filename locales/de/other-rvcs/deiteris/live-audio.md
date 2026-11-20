@@ -3,6 +3,7 @@ label: "Deiteris routen & abstimmen"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/deiteris/live-audio/
+description: "Trage bei der Live-Konvertierung immer Kopfhörer. Über Lautsprecher gelangt die konvertierte Stimme zurück ins Mikrofon und erzeugt Echo und Rückkopplung."
 ---
 # Deiteris w-okada Fork routen und abstimmen
 

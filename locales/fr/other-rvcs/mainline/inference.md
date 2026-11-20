@@ -3,6 +3,7 @@ label: "Convertir les enregistrements"
 icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
+description: "Commencez par un court enregistrement que vous pouvez entendre clairement dans un lecteur multimédia normal, plus un modèle RVC exporté que vous êtes..."
 ---
 
 # Convertir les enregistrements dans RVC WebUI (Mainline - Original RVC)

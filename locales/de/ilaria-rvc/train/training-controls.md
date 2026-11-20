@@ -3,6 +3,7 @@ label: "Trainingskontrollen und Arbeitsablauf"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
+description: "Version 2.1.0 bietet 32-, 40- und 48-kHz-Einstellungen mit verfügbaren Kombinationen, die vom Vocoder bestimmt werden. Für HiFi-GAN und RefineGAN gelten..."
 ---
 # Trainingskontrollen und Arbeitsablauf
 

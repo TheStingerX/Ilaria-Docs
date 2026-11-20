@@ -3,6 +3,7 @@ label: "Convert a recording"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
+description: "Start with one short recording you can recognize instantly. Spoken test material could be “Could you put the blue book by the window?” followed by a quiet..."
 ---
 # Convert a recording in Applio
 

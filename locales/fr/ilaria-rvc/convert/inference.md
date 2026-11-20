@@ -3,6 +3,7 @@ label: "Inférence unique et par lots"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
+description: "Ouvrez Single Inference, choisissez une voix et chargez un clip court et sec. Réglez Pitch et Index Ratio sur zéro. Utilisez l'intégrateur attendu par le..."
 ---
 # Inférence unique et par lots
 

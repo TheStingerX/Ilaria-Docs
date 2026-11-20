@@ -3,6 +3,7 @@ label: "Entrenamiento y puntos de control"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
+description: "Seleccione un conjunto de datos y elija arquitectura RVC compatible, frecuencia de muestreo, guía de tono, preentrenamientos de incrustador y..."
 ---
 # Entrenamiento y puntos de control
 

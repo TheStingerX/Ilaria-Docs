@@ -3,6 +3,7 @@ label: "Set up a live microphone"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
+description: "Prove that your model works with one recorded clip before setting up live audio. Use headphones for monitoring so the microphone cannot re-capture the..."
 ---
 # Use Applio with a microphone
 

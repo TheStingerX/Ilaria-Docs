@@ -3,6 +3,7 @@ label: "Entrene y exporte un modelo"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
+description: "Comience con un solo altavoz y un nuevo nombre de experimento. La capacitación produce un modelo que puede probar en nuevas actuaciones en la interfaz de..."
 ---
 
 # Entrene y exporte un modelo RVC de línea principal

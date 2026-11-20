@@ -3,6 +3,7 @@ label: "Explication des autres commandes"
 icon: ":toolbox:"
 order: 80
 permalink: /ilaria-rvc/other-buttons/
+description: "Utilisez Autre pour gérer les fichiers, inspecter ou combiner des modèles, réviser l'audio et maintenir l'application. Commencez par décider si vous avez..."
 ---
 
 # Explication de tous les autres panneaux

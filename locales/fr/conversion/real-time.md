@@ -2,6 +2,7 @@
 label: "⚡ Conversion en temps réel"
 order: 92
 permalink: /real-time/
+description: "Pour un enregistrement ou une reprise, la conversion de fichiers permet de restituer et de comparer plusieurs prises. Dans une configuration en direct, le..."
 ---
 # Conversion vocale en temps réel
 

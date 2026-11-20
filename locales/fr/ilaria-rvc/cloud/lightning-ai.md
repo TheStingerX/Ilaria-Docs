@@ -3,6 +3,7 @@ label: "Lightning AI Studio"
 icon: ":zap:"
 order: 96
 permalink: /ilaria-rvc/lightning-ai/
+description: "Préparez un WAV court et propre, un modèle d’inférence compatible et, pour l’entraînement, un jeu de données sauvegardé séparément."
 ---
 # Lightning AI Studio
 

@@ -3,6 +3,7 @@ label: "Install & Update"
 icon: ":cd:"
 order: 98
 permalink: /non-rvc/yunevoix/installation/
+description: "YuneVoix is a portable Windows application: nothing is installed into Windows, and all settings, voices, logs, and licences live next to YuneVoix.exe."
 ---
 # Install and update YuneVoix
 

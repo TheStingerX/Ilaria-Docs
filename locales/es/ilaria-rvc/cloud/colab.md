@@ -3,6 +3,7 @@ label: "Google Colab"
 icon: ":tangerine:"
 order: 97
 permalink: /ilaria-rvc/colab/
+description: "Prepara un WAV corto y limpio, un modelo compatible y una copia del conjunto de datos si vas a entrenar."
 ---
 # Google Colab
 

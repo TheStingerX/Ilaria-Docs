@@ -3,6 +3,7 @@ label: "Installieren und überprüfen Sie eine Stimme"
 icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
+description: "Legen Sie Modell-Downloads in einem bekannten Ordner ab und extrahieren Sie alle ZIP-Dateien dort. Bewahren Sie die Notizen des Herausgebers neben den..."
 ---
 # Installieren Sie eine Stimme in Applio
 

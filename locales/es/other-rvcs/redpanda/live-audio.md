@@ -3,6 +3,7 @@ label: "Pruebe el audio en vivo en Redpanda-vc"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
+description: "El iniciador en tiempo real del escritorio de Windows utiliza los dispositivos expuestos a ese proceso local. La pestaña en tiempo real de WebUI captura..."
 ---
 # Pruebe el audio en vivo en Redpanda-vc
 

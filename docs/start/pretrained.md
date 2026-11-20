@@ -1,7 +1,8 @@
-﻿---
+---
 label: "🧱 Pretrained models"
 order: 90
 permalink: /pretrained/
+description: "A pretrained base model (also called a pretrain) is a pair of starting checkpoint files: a Generator (G_.pth) and a Discriminator (D_.pth), already..."
 ---
 # RVC Pretrained Base Models
 

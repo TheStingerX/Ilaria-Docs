@@ -2,6 +2,7 @@
 label: "📦 RVC models and files"
 order: 93
 permalink: /models/
+description: "An RVC model changes the timbre of an existing performance. The source recording still provides the words, phrasing and timing. You need a compatible..."
 ---
 # RVC models and files
 
