@@ -50,6 +50,7 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 | **KLM KpopUniverse (I / II) & BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Não especificado | Não especificado | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse), [BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
 | **Legacy Core V1.5** *(removido na 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(removido pelo autor)* |
 | **Legacy Core V1.5v2** *(removido na 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(removido pelo autor)* |
+| **Legacy Core V1.6** *(removido)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(removido pelo autor)* |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | Não especificado | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Não especificado | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Não especificado | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -76,6 +77,6 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 
 
 !!!note
-**Nota sobre os Legacy Core (`V1.5` e `V1.5v2`):**
+**Nota sobre os Legacy Core (`V1.5`, `V1.5v2` e `V1.6`):**
 Os modelos pretrained **Legacy Core** (`lyery/mode4` e `lyery/test`) foram **removidos pelo autor** e não estão mais disponíveis para download (também removidos do downloader do Ilaria RVC na `2.4.4`). As linhas acima são mantidas **apenas para fins informativos**; somente pesos já baixados anteriormente podem ser usados no treino.
 !!!
