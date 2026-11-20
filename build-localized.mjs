@@ -87,7 +87,11 @@ function decorate(directory, lang) {
     const path = relative(directory, file).split(sep).join('/');
     const route = '/' + path.replace(/index\.html$/, '');
     const current = languages[lang];
-    const [locale, description, imageAlt] = previewCopy[lang];
+    const [locale, defaultDescription, imageAlt] = previewCopy[lang];
+    const originalHtml = readFileSync(file, 'utf8');
+    // Retype has already escaped the localized frontmatter value for an HTML attribute.
+    const pageDescription = originalHtml.match(/<meta name="description" content="([^"]*)"/)?.[1];
+    const description = route !== '/' && pageDescription ? pageDescription : defaultDescription;
     const preview = [
       '<meta name="theme-color" content="#FFC0CB">',
       `<meta property="og:locale" content="${locale}">`,
@@ -108,7 +112,7 @@ function decorate(directory, lang) {
       `<a href="${localizedPath(code, route)}" lang="${code}" hreflang="${code}"${code === lang ? ' aria-current="true"' : ''}>${flagIcon(code)} ${languages[code][1]}</a>`).join('');
     const selector = `<details class="docs-language"><summary aria-label="${current[2]}: ${current[1]}">${flagIcon(lang)}<span class="docs-language-name">${current[1]}</span></summary><div>${choices}</div></details>`;
     const defaultAlternate = available.includes('en') ? `\n    <link rel="alternate" hreflang="x-default" href="${origin}${route}">` : '';
-    let html = readFileSync(file, 'utf8')
+    let html = originalHtml
       .replace(/(<html lang=")[^"]+"/, `$1${lang}"`)
       .replace(/<title>[^<]*<\/title>/, title)
       .replace(/<meta property="og:site_name"[^\r\n]*/, '<meta property="og:site_name" content="Ilaria Docs &#x1F496;">')
