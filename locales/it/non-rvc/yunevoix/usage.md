@@ -60,7 +60,8 @@ Vai su **Settings → Pitch & Autotune**:
 
 - **Voice character**: regola intensità del timbro, formanti, calore e presenza, oppure parti da un preset.
 - **Vocal effects**: de-esser, compressore, riverbero e peak limiter.
-- **Content engine e FlowEdit** (**Settings → Voice & Timbre**):
-  - Su NVIDIA, prova **WavLM+** per mantenere risate, sussurri e respiri dalla tua voce.
-  - La modalità **FlowEdit** preserva di più il respiro e l'articolazione naturali.
+- **Content engine e FlowEdit 3+1** (**Settings → Voice & Timbre**):
+  - Prova **WavLM+** (supportato su NVIDIA e AMD DirectML; non disponibile se è selezionato AMD MIGraphX) per mantenere risate, sussurri e respiri dalla tua voce.
+  - La modalità **FlowEdit 3+1** (supportata su NVIDIA e AMD DirectML) preserva di più il respiro e l'articolazione naturali (in LIVE richiede un campione della tua voce).
+  - Su AMD viene usato **DirectML** sulla scheda dedicata per impostazione predefinita; puoi eventualmente provare **MIGraphX** (sperimentale, dopo il riavvio) in `Settings → General → "AMD graphics engine"`, ma `WavLM+` e `FlowEdit 3+1` richiedono DirectML.
   - Se stai **giocando contemporaneamente** e senti scatti audio, abbassa grafica/FPS del gioco, riduci **Model steps**, usa un prompt più corto o disattiva **Harmony**.

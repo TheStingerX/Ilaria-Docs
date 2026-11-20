@@ -44,7 +44,7 @@ En mode **LIVE**, l'audio est traité par petits blocs d'environ **160 ms**, ave
 - **Caractère vocal** : contrôles d'intensité du timbre, formant, chaleur et présence avec préréglages.
 - **Nettoyage d'entrée** : suppression du bruit et des clics (`DF3` / `Gentle`), speech gate et monitoring entrée/sortie.
 - **Effets vocaux** : dé-esseur, compresseur, réverbération et limiteur de crête.
-- **Options qualité vs. vitesse** : deux moteurs de contenu (dont **WavLM+** sur NVIDIA pour préserver vos rires, chuchotements et respirations) et plusieurs méthodes de modèle. Les modes rapides utilisent environ 40 % du temps GPU, et le mode **FlowEdit** préserve davantage votre respiration et votre articulation naturelles.
+- **Options qualité vs. vitesse** : deux moteurs de contenu (dont **WavLM+** sur NVIDIA et AMD DirectML pour préserver vos rires, chuchotements et respirations) et plusieurs méthodes de modèle. Les modes rapides utilisent environ 40 % du temps GPU, et le mode **FlowEdit 3+1** préserve davantage votre respiration et votre articulation naturelles.
 - **Song Cover & Karaoké (PREMIUM)** : rechantez des morceaux complets avec séparation vocale automatique ou chantez avec les paroles à l'écran.
 - **Interface en 6 langues** : Anglais, Allemand, Italien, Espagnol, Polonais et Portugais.
 
@@ -59,4 +59,4 @@ YuneVoix nécessite un **GPU dédié** et ne peut pas fonctionner sur CPU seul. 
 | **Pilote** | Pilote NVIDIA à jour | AMD Adrenalin **25.10.13.09** ou plus récent |
 | **Audio** | Microphone + **casque** (obligatoire en direct) | Microphone + **casque** (obligatoire en direct) |
 
-> **Note NVIDIA vs. AMD** : certains modes (comme le moteur de contenu `WavLM+`) sont exclusifs à NVIDIA. Sur AMD, Windows peut télécharger automatiquement **AMD MIGraphX** via Windows Update lors de la première configuration.
+> **Note NVIDIA vs. AMD** : depuis la **v0.7.1**, le paquet AMD utilise **DirectML** sur la carte dédiée par défaut, et **`WavLM+`** comme **`FlowEdit 3+1`** fonctionnent aussi sous AMD DirectML (en LIVE, covers et karaoké). Vous pouvez éventuellement passer `Settings → General → "AMD graphics engine"` sur le moteur expérimental **MIGraphX** (après redémarrage ; avec MIGraphX, `WavLM+` et `FlowEdit 3+1` sont indisponibles et Windows peut télécharger MIGraphX via Windows Update).

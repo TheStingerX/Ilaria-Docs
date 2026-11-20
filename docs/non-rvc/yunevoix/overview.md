@@ -44,7 +44,7 @@ In **LIVE** mode, audio is processed in small blocks of about **160 ms**, with r
 - **Voice character**: timbre strength, formant, warmth, and presence controls with presets.
 - **Clean input**: noise and click removal (`DF3` / `Gentle`), speech gate, and input/output monitoring.
 - **Vocal effects**: de-esser, compressor, reverb, and peak limiter.
-- **Quality vs. speed options**: two content engines (including **WavLM+** on NVIDIA to preserve your own laughter, whispers, and breaths) and several model methods. Faster modes use about 40% of the GPU time, and **FlowEdit** mode keeps more of your own breath and articulation.
+- **Quality vs. speed options**: two content engines (including **WavLM+** on NVIDIA and AMD DirectML to preserve your own laughter, whispers, and breaths) and several model methods. Faster modes use about 40% of the GPU time, and **FlowEdit 3+1** mode keeps more of your own breath and articulation.
 - **Song Cover & Karaoke (PREMIUM)**: re-sing full songs with automatic vocal separation or sing along to on-screen lyrics.
 - **Interface in 6 languages**: English, German, Italian, Spanish, Polish, and Portuguese.
 
@@ -59,4 +59,4 @@ YuneVoix requires a **dedicated GPU** and cannot run on CPU only. Intel integrat
 | **Driver** | Current NVIDIA driver | AMD Adrenalin **25.10.13.09** or newer |
 | **Audio** | Microphone + **headphones** (required for live use) | Microphone + **headphones** (required for live use) |
 
-> **Note for NVIDIA vs. AMD**: Some modes (such as the `WavLM+` content engine) are NVIDIA-only. On AMD, Windows may automatically download **AMD MIGraphX** through Windows Update on first setup.
+> **Note for NVIDIA vs. AMD**: As of **v0.7.1**, the AMD package uses **DirectML** on the dedicated card by default, and both **`WavLM+`** and **`FlowEdit 3+1`** work on AMD DirectML too (in LIVE, covers, and karaoke). You can optionally switch `Settings → General → "AMD graphics engine"` to experimental **MIGraphX** (after a restart; `WavLM+` and `FlowEdit 3+1` are unavailable under MIGraphX, and Windows may fetch MIGraphX via Windows Update).

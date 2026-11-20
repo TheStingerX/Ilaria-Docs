@@ -10,14 +10,17 @@ permalink: /non-rvc/yunevoix/installation/
 
 YuneVoix es una aplicación portátil para Windows: no instala nada en el sistema y toda la configuración, voces, registros y licencias permanecen junto a `YuneVoix.exe`.
 
-## 1. Descarga el paquete correcto
+## 1. Descarga el paquete correcto (v0.7.1)
 
-1. Abre el [repositorio de YUNE en Hugging Face](https://huggingface.co/JohnBlvck/YUNE/tree/main) (para **PREMIUM**, el acceso se entrega en privado por Ko-fi o DM).
-2. Descarga la compilación correspondiente a tu tarjeta gráfica:
-   - Paquete **NVIDIA** para GPUs GeForce RTX / CUDA.
-   - Paquete **AMD** para GPUs Radeon RX 7000+.
+1. Descarga la compilación **v0.7.1** que corresponda a tu tarjeta gráfica y edición desde [Hugging Face](https://huggingface.co/JohnBlvck/YUNE/tree/main) (para **PREMIUM**, la activación requiere un archivo `license.yvl` entregado en privado por [Ko-fi](https://ko-fi.com/yunevoix) o DM):
+   - **BASIC (Gratis)**:
+     - [Descargar YuneVoix BASIC NVIDIA v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_NVIDIA_v0.7.1.zip?download=true) (~8,42 GB) — para GPUs GeForce RTX / CUDA.
+     - [Descargar YuneVoix BASIC AMD v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_AMD_v0.7.1.zip?download=true) (~6,74 GB) — para GPUs Radeon RX 7000+.
+   - **PREMIUM** *(requiere `license.yvl`)*:
+     - [Descargar YuneVoix PREMIUM NVIDIA v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_PREMIUM_NVIDIA_v0.7.1.zip?download=true) (~9,88 GB)
+     - [Descargar YuneVoix PREMIUM AMD v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_PREMIUM_AMD_v0.7.1.zip?download=true) (~8,20 GB)
    > **Importante**: las compilaciones de NVIDIA y AMD son independientes y no intercambiables.
-3. Anota la contraseña del archivo: **`yunevoix`** (o la recibida con tu descarga).
+2. Anota la contraseña del archivo: **`yunevoix`** (o la recibida con tu descarga).
 
 ## 2. Extrae el archivo
 
@@ -34,13 +37,13 @@ El ZIP está cifrado con **AES-256**, por lo que el Explorador de Windows no pue
    - Si tu antivirus pone algún archivo en cuarentena, añade la carpeta `YuneVoix` como exclusión.
 3. **Espera la preparación inicial del motor**:
    - **NVIDIA**: unos minutos en el primer arranque.
-   - **AMD (MIGraphX)**: hasta **10–30 minutos** en el primer arranque (Windows también puede descargar AMD MIGraphX por Windows Update).
+   - **AMD**: desde la v0.7.1 usa **DirectML** en la tarjeta dedicada por defecto. Solo si cambias `Settings → General → "AMD graphics engine"` a **MIGraphX (experimental)** la primera preparación puede tardar **10–30 minutos** (Windows también puede descargar AMD MIGraphX por Windows Update).
    - Después del primer inicio, el modo **LIVE** arranca en unos **10 segundos**.
 4. Puedes cambiar el idioma de la interfaz en la parte superior de la ventana (**English, Deutsch, Italiano, Español, Polski, Português**).
 
 ## 4. Actualizar o pasar de BASIC → PREMIUM
 
-Para actualizar a una nueva versión o pasar de BASIC a PREMIUM sin perder voces ni ajustes:
+Las licencias, voces y ajustes de la **v0.6.0 / v0.7.0** siguen funcionando en la **v0.7.1**. Para actualizar a una nueva versión o pasar de BASIC a PREMIUM sin perder voces ni ajustes:
 
 1. Extrae la nueva versión en una **nueva** carpeta (no sobrescribas la anterior todavía).
 2. Copia estos archivos/carpetas de la carpeta antigua a la nueva:

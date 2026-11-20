@@ -43,7 +43,8 @@ Les soutiens sur [Ko-fi](https://ko-fi.com/yunevoix) accèdent à **YuneVoix PRE
 | --- | --- |
 | **Voix robotique, faible ou « sous l'eau »** | Augmentez le gain du micro dans Windows pour que la parole forte atteigne environ **−6 dBFS** (`Settings → General → Microphone level`) et gardez Input cleaning sur **`DF3`**. |
 | **Mauvaise octave / voix de tamia** | Dans `Settings → Pitch & Autotune`, réglez **Pitch shift** (`+12` homme→femme, `0` même registre, `−12` femme→homme) ou activez le pitch automatique. |
-| **Rires, respirations ou chuchotements coupés** | Désactivez **Speech gate**, passez Input cleaning sur **`Gentle`** (dans une pièce calme) et sur NVIDIA essayez le moteur **WavLM+**. |
+| **Rires, respirations ou chuchotements coupés** | Désactivez **Speech gate**, passez Input cleaning sur **`Gentle`** (dans une pièce calme) et essayez le moteur **WavLM+** (pris en charge sur NVIDIA et AMD DirectML). |
+| **AMD : se ferme sur START / WavLM+ ou FlowEdit indisponibles** | Mettez à jour vers la **v0.7.1** (corrige les plantages sur CPU avec GPU AMD intégré en utilisant DirectML sur la carte dédiée par défaut). Si vous avez activé MIGraphX expérimental dans `Settings → General → "AMD graphics engine"`, revenez sur **DirectML** et redémarrez pour réactiver `WavLM+` et `FlowEdit 3+1`. |
 | **Craquements ou brèves coupures** | Augmentez **Output buffer** (`Settings → General`), fermez les autres apps utilisant le GPU, réduisez **Model steps** ou la longueur du prompt et désactivez **Harmony**. |
 | **Saccades en jeu** | Baissez les graphismes ou la limite FPS du jeu, ou réduisez **Model steps** et la longueur du prompt dans `Settings → Voice & Timbre`. |
 | **L'Explorateur Windows dit que le ZIP est invalide** | Utilisez **7-Zip** ou **WinRAR** (l'archive est chiffrée en AES-256) avec le mot de passe `yunevoix`. |
@@ -57,4 +58,4 @@ Si quelque chose ne fonctionne toujours pas :
    ```bat
    YuneVoix.exe --check
    ```
-3. Envoyez le fichier **`check.txt`** généré ainsi que **`live-diag.log`** lorsque vous demandez de l'aide dans **`yune-support`**, par DM ou sur [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
+3. Envoyez le fichier **`check.txt`** généré ainsi que **`live-diag.log`** lorsque vous demandez de l'aide dans **`yune-support`**, par DM à **Kuroyuki** (`sxxyneko` sur Discord), ou sur [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
