@@ -5,7 +5,7 @@ order: 88
 permalink: /ilaria-rvc/safetensors-converter/
 description: "Guía sencilla y completa del convertidor Safetensors y PTH en la pestaña Other de Ilaria RVC, con conservación de metadatos RVC y Move .pth to models."
 ---
-# Convertidor Safetensors ↔ PTH (`Convert model weights`)
+# Convertidor Safetensors ↔ PTH
 
 [Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
