@@ -1,4 +1,4 @@
-# Convertitore Safetensors ↔ PTH (`Convert model weights`)
+# Convertitore Safetensors ↔ PTH
 
 [Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
