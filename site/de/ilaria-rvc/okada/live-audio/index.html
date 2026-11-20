@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/de">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510362649">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Konvertieren Sie Ihr Mikrofon in w-okada VCClient">
+    <meta name="description" content="Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/de/ilaria-rvc/okada/live-audio/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/de/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/de/ilaria-rvc/okada/live-audio/">
+    <meta property="og:title" content="Konvertieren Sie Ihr Mikrofon in w-okada VCClient">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/de/ilaria-rvc/okada/live-audio/">
+    <meta name="twitter:title" content="Konvertieren Sie Ihr Mikrofon in w-okada VCClient">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/de/other-rvcs/okada/live-audio.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848510362649" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848510362649" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848510362649" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:description" content="Eine Sammlung von Informationen rund um RVC mit Anleitungen zur Stimmkonvertierung, zum Modelltraining und zu kompatiblen Apps.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <meta name="twitter:description" content="Eine Sammlung von Informationen rund um RVC mit Anleitungen zur Stimmkonvertierung, zum Modelltraining und zu kompatiblen Apps.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/okada/live-audio/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/okada/live-audio/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/de/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Sprache: Deutsch"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg><span class="docs-language-name">Deutsch</span></summary><div><a href="/ilaria-rvc/okada/live-audio/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/okada/live-audio/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/okada/live-audio/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/okada/live-audio/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/okada/live-audio/" lang="de" hreflang="de" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/okada/live-audio/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="convert-your-microphone-in-w-okada-vcclient" class="docs-anchor"></span><h1 id="konvertieren-sie-ihr-mikrofon-in-w-okada-vcclient">Konvertieren Sie Ihr Mikrofon in w-okada VCClient</h1>
+<blockquote>
+<p>Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist <strong>VAC Lite</strong> die erste Wahl, <strong>VB-CABLE</strong> eine Alternative. Lies vor dem Anruf die vollständige Anleitung. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+</blockquote>
+<p>Beginnen Sie mit Kopfhörern und einem einzigen lokalen Audiopfad. Wenn Sie im Kopfhörer eine sauber umgewandelte Stimme hören, schließen Sie ihn an einen Anruf oder einen Rekorder an. Mit dieser Reihenfolge können Sie Probleme lokalisieren, bevor Sie das virtuelle Kabel hinzufügen.</p>
+<span id="add-a-model-and-hear-the-first-result" class="docs-anchor"></span><h2 id="fügen-sie-ein-modell-hinzu-und-hören-sie-das-erste-ergebnis">Fügen Sie ein Modell hinzu und hören Sie das erste Ergebnis.</h2>
+<ol>
+<li>Schließen Sie Ihr Mikrofon und Ihre Kopfhörer an, bevor Sie VCClient öffnen. Sprechen Sie im Betriebssystem in das Mikrofon und prüfen Sie, ob sich die Eingangsanzeige bewegt. Pausieren Sie Discord, OBS und andere Capture-Apps während dieses Tests.</li>
+<li>Wählen Sie unter <strong>Modellauswahl</strong> ein kompatibles Beispielmodell aus, sofern eines verfügbar ist. Für Ihr eigenes Modell verwenden Sie <strong>Bearbeiten</strong>, wählen Sie einen freien Steckplatz aus und wählen Sie <strong>Hochladen</strong>. Wählen Sie <strong>RVC</strong>, wenn das Dialogfeld einen Modelltyp anfordert. Geben Sie die von Ihrem Release akzeptierte Inferenzdatei und einen optionalen passenden Index an. Warten Sie den Upload ab und wählen Sie dann in der Hauptansicht den gefüllten Slot aus.</li>
+<li>Wählen Sie in den Audio-Steuerelementen <strong>Client</strong> für einen ersten browserseitigen Test. Wählen Sie den genauen Namen des physischen Mikrofons und den genauen Namen des Kopfhörers aus. Wenn der Browser um Erlaubnis bittet, erlauben Sie den Mikrofonzugriff für die lokale Seite.</li>
+<li>Deaktivieren Sie Passthrough, belassen Sie Pitch und Index auf Null und behalten Sie die Standardeinstellungen für Chunk, Kontext, Crossfade und Pitch Estimator bei. Wenn Sie einen Index importiert haben, können Sie ihn nach Anhören der Baseline auswerten.</li>
+<li>Drücken Sie <strong>Start</strong>, warten Sie, bis das Modell aufgewärmt ist, und sprechen Sie mindestens 30 Sekunden lang. Fügen Sie einen ruhigen Satz, einen normalen Satz, einen lauteren Satz und eine kurze Pause ein. Wenn die Konvertierung aktiviert ist, sollten Sie die ausgewählte Stimme hören. Drücken Sie <strong>Stop</strong>, wenn Sie Änderungen vornehmen, die einen Neustart des Streams erfordern.</li>
+<li>Wenn Sie Stille hören, testen Sie dieselben Geräte in einem einfachen Rekorder. Wenn Sie Ihre Originalstimme zweimal hören oder sie neben der Konvertierung hören, deaktivieren Sie die direkte Mikrofonüberwachung auf Ihrer Schnittstelle oder entfernen Sie den doppelten Softwarepfad.</li>
+</ol>
+<span id="understand-client-and-server-device-mode" class="docs-anchor"></span><h2 id="client--und-server-gerätemodus-verstehen">Client- und Server-Gerätemodus verstehen</h2>
+<p><strong>Client</strong> verwendet Geräte, die dem Client/Browser zur Verfügung stehen. Mikrofonberechtigungen und die Ausgabeauswahl des Browsers können sich auf die Geräteliste auswirken. <strong>Server</strong> öffnet Geräte auf dem Computer, auf dem die Konvertierungs-Engine ausgeführt wird. Dies ist auf zwei Computern von Bedeutung: Ein am Client angeschlossenes USB-Mikrofon erscheint nicht automatisch auf dem Server.</p>
+<p>Testen Sie auf einem PC zunächst den einfacheren Client-Pfad. Wechseln Sie zu Server, wenn Ihr Build einen separaten Monitor verfügbar macht oder der Browser den gewünschten Ausgabeendpunkt nicht auswählen kann. Wählen Sie im Servermodus die vom Server angebotene Host-API und Gerätenamen aus. Wenn mehrere Einträge denselben Namen haben, versuchen Sie, für die Ein- und Ausgabe dieselbe Audio-API zu verwenden. Sobald das Signal stabil ist, können Sie Alternativen auf Latenz testen.</p>
+<span id="send-conversion-to-discord-obs-or-another-app" class="docs-anchor"></span><h2 id="konvertierung-an-discord-obs-oder-eine-andere-app-senden">Konvertierung an Discord, OBS oder eine andere App senden</h2>
+<ol>
+<li>Installieren Sie ein virtuelles Kabel für Ihr Betriebssystem und öffnen Sie beide Anwendungen erneut, damit ihre Gerätelisten aktualisiert werden. Es sollte einen Wiedergabeendpunkt und einen entsprechenden Aufnahmeendpunkt verfügbar machen.</li>
+<li>Stellen Sie den VCClient-Eingang auf das physische Mikrofon ein. Stellen Sie den Ausgang des Konverters auf den <strong>Wiedergabe-Endpunkt</strong> des Kabels ein. Bei VB-CABLE ist dies üblicherweise <strong>CABLE Input</strong>.</li>
+<li>Wenn die App ein separates <strong>Monitor</strong>-Gerät bereitstellt, stellen Sie es auf die Kopfhörer ein. Lassen Sie die Lautsprecher der Zielanwendung auf den Kopfhörern.</li>
+<li>Wählen Sie den <strong>Aufnahme-Endpunkt</strong> des Kabels als Zielmikrofon aus. Bei VB-CABLE ist das üblicherweise <strong>CABLE-Ausgang</strong>. Wählen Sie in OBS dieses Gerät für die Audioeingangsaufnahme aus und schalten Sie jede zweite Aufnahme des physischen Mikrofons stumm.</li>
+<li>Nutzen Sie einen Testanruf oder machen Sie eine kurze lokale Aufnahme in der Ziel-App. Testen Sie leises und lautes Sprechen. Bestätigen Sie, dass das Stoppen von VCClient oder das Stummschalten der konvertierten Quelle dazu führt, dass die Anzeige stoppt. Wenn dies weiterhin der Fall ist, ist für das Ziel ein anderer Eingang aktiv oder es empfängt eine unbeabsichtigte Route.</li>
+<li>Vergleichen Sie die Zielrauschunterdrückung oder die automatische Verstärkung nur dann, wenn der Konverter lokal gut klingt und das Ziel Silben zerhackt oder den Pegel ändert. Behalten Sie die Optionen bei, die für Ihren Raum und Ihr Mikrofon geeignet sind.</li>
+</ol>
+<div id="konvertierung-an-discord-obs-oder-eine-andere-app-senden-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Physical microphone → VCClient → cable playback → cable recording → call or recorder
+                           └── optional monitor → headphones</code></pre>
+</doc-codeblock></div>
+<span id="tune-a-setup-that-already-works" class="docs-anchor"></span><h2 id="optimieren-sie-ein-setup-das-bereits-funktioniert">Optimieren Sie ein Setup, das bereits funktioniert</h2>
+<p>Beginnen Sie mit dem Standardblock und testen Sie ihn unter Ihrer tatsächlichen Arbeitslast. Wenn auf der Benutzeroberfläche die Blockdauer und die Konvertierungszeit angezeigt werden, vergleichen Sie diese in passenden Einheiten. Jeder Block benötigt genügend Zeit, um fertig zu werden. Lassen Sie Spielraum für Spitzen, während Sie ein Spiel ausführen oder streamen. Reduzieren Sie den Block Schritt für Schritt und achten Sie auf Aussetzer, bevor Sie die Änderung beibehalten. Wenn Wörter ausgelassen werden, erhöhen Sie sie erneut oder reduzieren Sie den zusätzlichen Kontext. Crossfade trägt dazu bei, Grenzen aufzuweichen, verbraucht aber auch einen Teil des verfügbaren Verarbeitungsbudgets.</p>
+<p>Wählen Sie einen Tonhöhenschätzer, der Ihren normalen Sprechumfang berücksichtigt. Vergleichen Sie bei jeder Einstellung denselben Satz. Die Tonhöhe ändert das Register, während die Indexmischung ändert, wie stark die Inferenz Merkmale verwendet, die aus dem passenden Trainingsindex abgerufen werden. Erhöhen Sie eine davon schrittweise und notieren Sie das Ergebnis. Halten Sie die Modell- und Mikrofonverstärkung während des Vergleichs konstant.</p>
+<retype-table copy-text="| Symptom | Spezifischer Test |
+| --- | --- |
+| Originalstimme erreicht den Anruf | Schalten Sie Passthrough aus und wählen Sie das Kabel als einziges Mikrofon in der empfangenden App. |
+| Verzerrungen sind bereits in der einfachen Mikrofonaufnahme vorhanden. | Verringern Sie die physische Eingangsverstärkung, bevor Sie das Modell abstimmen. |
+| Erste Silbe verschwindet nach einer Pause | Vergleichen Sie die Eingabeschwelle und die Zielsprachaktivierung. Versuchen Sie eine Aufnahme mit deaktivierter Sprachaktivierung, um die Bühne zu isolieren. |
+| Lokaler Monitor ist in Ordnung, aber Kabel-Audio knistert. | Passen Sie die unterstützten Abtastraten im Soundpanel des Betriebssystems an und öffnen Sie beide Streams erneut. Suchen Sie nach einer zweiten Anwendung, die den Endpunkt im exklusiven Modus hält. |
+| GPU-Konvertierung schlägt fehl und CPU funktioniert | Überprüfen Sie das ausgewählte Paket, das Modellformat und den Rechenanbieter separat. Testen Sie auf jedem Gerät mit demselben nachweislich funktionierenden Modell. |
+| Die Konvertierung fällt zurück, wenn ein Spiel geöffnet wird. | Erhöhen Sie die Blockgröße oder reduzieren Sie die konkurrierende GPU-Arbeitslast. Wiederholen Sie eine längere Aufnahme, bevor Sie live gehen. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Spezifischer Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Originalstimme erreicht den Anruf</td>
+<td>Schalten Sie Passthrough aus und wählen Sie das Kabel als einziges Mikrofon in der empfangenden App.</td>
+</tr>
+<tr>
+<td>Verzerrungen sind bereits in der einfachen Mikrofonaufnahme vorhanden.</td>
+<td>Verringern Sie die physische Eingangsverstärkung, bevor Sie das Modell abstimmen.</td>
+</tr>
+<tr>
+<td>Erste Silbe verschwindet nach einer Pause</td>
+<td>Vergleichen Sie die Eingabeschwelle und die Zielsprachaktivierung. Versuchen Sie eine Aufnahme mit deaktivierter Sprachaktivierung, um die Bühne zu isolieren.</td>
+</tr>
+<tr>
+<td>Lokaler Monitor ist in Ordnung, aber Kabel-Audio knistert.</td>
+<td>Passen Sie die unterstützten Abtastraten im Soundpanel des Betriebssystems an und öffnen Sie beide Streams erneut. Suchen Sie nach einer zweiten Anwendung, die den Endpunkt im exklusiven Modus hält.</td>
+</tr>
+<tr>
+<td>GPU-Konvertierung schlägt fehl und CPU funktioniert</td>
+<td>Überprüfen Sie das ausgewählte Paket, das Modellformat und den Rechenanbieter separat. Testen Sie auf jedem Gerät mit demselben nachweislich funktionierenden Modell.</td>
+</tr>
+<tr>
+<td>Die Konvertierung fällt zurück, wenn ein Spiel geöffnet wird.</td>
+<td>Erhöhen Sie die Blockgröße oder reduzieren Sie die konkurrierende GPU-Arbeitslast. Wiederholen Sie eine längere Aufnahme, bevor Sie live gehen.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Halten Sie den Namen des Arbeitspakets, das Modell, den Audiomodus, die Gerätenamen, die Tonhöhenmethode und die Puffersteuerungen in einer Notiz fest. So erhalten Sie nach einem Geräte- oder Software-Update eine zuverlässige Ausgangslage.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/okada/installation/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">VC​Client installieren</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/tgr/installation/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">TG Developed Fork installieren</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Live-Audio und Routing", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/okada/live-audio.md" }</script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="it" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/it">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510334626">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Embedder di RVC">
+    <meta name="description" content="Un embedder (chiamato anche content encoder) è la rete neurale che analizza l'audio in ingresso e trasforma ciò che viene detto o cantato in caratteristiche numeriche di contenuto prima che il modello vocale RVC lo ricostruisca con il timbro del parlante target.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/it/embedders/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/it/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/it/embedders/">
+    <meta property="og:title" content="Embedder di RVC">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/embedders/">
+    <meta name="twitter:title" content="Embedder di RVC">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/start/embedders.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848510334626" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848510334626" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848510334626" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:description" content="Una raccolta di informazioni sul mondo RVC, con guide alla conversione vocale, all’addestramento dei modelli e alle app compatibili.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <meta name="twitter:description" content="Una raccolta di informazioni sul mondo RVC, con guide alla conversione vocale, all’addestramento dei modelli e alle app compatibili.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/embedders/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/embedders/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/embedders/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/embedders/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/embedders/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/embedders/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/embedders/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/it/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Lingua: Italiano"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Italiano</span></summary><div><a href="/embedders/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/embedders/" lang="it" hreflang="it" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/embedders/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/embedders/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/embedders/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/embedders/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="rvc-embedders" class="docs-anchor"></span><h1 id="embedder-di-rvc">Embedder di RVC</h1>
+<p>Un <strong>embedder</strong> (chiamato anche <strong>content encoder</strong>) è la rete neurale che analizza l&#x27;audio in ingresso e trasforma ciò che viene detto o cantato in caratteristiche numeriche di contenuto prima che il modello vocale RVC lo ricostruisca con il timbro del parlante target.</p>
+<span id="what-an-embedder-does-and-how-it-works" class="docs-anchor"></span><h2 id="cosa-fa-un-embedder-e-come-funziona">Cosa fa un embedder e come funziona</h2>
+<p>Nella pipeline di RVC, l&#x27;audio viene diviso in flussi di informazioni separati:</p>
+<ol>
+<li><strong>Contenuto (cosa dici)</strong>: estratto fotogramma per fotogramma dall&#x27;<strong>embedder</strong> (fonemi, pronuncia, articolazione e ritmo).</li>
+<li><strong>Pitch / F0 (la melodia)</strong>: estratto separatamente da un rilevatore di pitch (come RMVPE o FCPE).</li>
+<li><strong>Timbro vocale (chi parla)</strong>: fornito dal modello <code translate="no" v-pre>.pth</code> addestrato (ed eventualmente supportato dal file <code translate="no" v-pre>.index</code>).</li>
+</ol>
+<p>Poiché il generatore RVC è addestrato per ricevere feature da <strong>un embedder specifico</strong>, valgono sempre due regole:</p>
+<ul>
+<li><strong>Addestramento e inferenza devono coincidere</strong>: se un modello è stato addestrato con <code translate="no" v-pre>contentvec</code>, devi convertire l&#x27;audio usando <code translate="no" v-pre>contentvec</code>. Usare un embedder diverso in inferenza (o in tempo reale) causa pronuncia distorta, artefatti metallici o una voce completamente rovinata.</li>
+<li><strong>Perdita dell&#x27;identità del parlante</strong>: gli encoder generici per il riconoscimento vocale (come i normali HuBERT) non sono addestrati per rimuovere l&#x27;identità di chi parla. Usarli può far filtrare il timbro della tua voce originale nell&#x27;output convertito.</li>
+</ul>
+<hr>
+<span id="known-rvc-embedders" class="docs-anchor"></span><h2 id="embedder-rvc-conosciuti">Embedder RVC conosciuti</h2>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Warning</h5>
+<p><strong>Solo a scopo informativo - uso fortemente sconsigliato</strong></p>
+<p>Tutto ciò che è elencato qui sotto riguardo agli embedder alternativi è <strong>esclusivamente a scopo informativo</strong>. <strong>È fortemente consigliato il NON utilizzo di embedder alternativi</strong>: i <strong>settaggi stock di RVC</strong> (<strong><code translate="no" v-pre>contentvec</code></strong>) sono i migliori e i più affidabili. Usare embedder alternativi rischia di produrre un modello vocale scadente o una pessima conversione sia offline che online (in tempo reale), oltre a rompere la compatibilità con i setup e gli index standard.</p>
+        </div>
+    </div>
+</div>
+<retype-table copy-text="| Embedder | Architettura / Note | Supporto RVC | Raccomandazione |
+| --- | --- | --- | --- |
+| **`contentvec`** (`hubert_base.pt`) | Content encoder predefinito di RVC, addestrato per mantenere il contenuto linguistico rimuovendo l'identità del parlante. | RVC v1 (256-d) e RVC v2 (768-d) | **Consigliato (Stock RVC)** |
+| **`spin`** | Encoder alternativo basato su Fairseq/HuBERT invariante al parlante. | RVC v2 | Sconsigliato per uso generale |
+| **`spin-v2`** (`spin-v2.pt`) | Versione aggiornata di Spin v2 (~361 MiB) usata da alcuni pretrain sperimentali. | RVC v2 | Sconsigliato per uso generale |
+| **`chinese-hubert-base`** | HuBERT Base pre-addestrato su parlato cinese. Può far filtrare il timbro sorgente. | RVC v2 | Solo informativo / specialistico |
+| **`japanese-hubert-base`** | HuBERT Base pre-addestrato su parlato giapponese. Può far filtrare il timbro sorgente. | RVC v2 | Solo informativo / specialistico |
+| **`korean-hubert-base`** | HuBERT Base pre-addestrato su parlato coreano. Può far filtrare il timbro sorgente. | RVC v2 | Solo informativo / specialistico |
+| **`portuguese-hubert-base`** | Fairseq HuBERT portoghese (`shiromiya/fairseq-hubert-portuguese`, ~1,13 GB). | RVC v2 | Solo informativo / specialistico |
+| **`custom` HuBERT Base** | Coppia HuBERT Base fornita dall'utente (`pytorch_model.bin` + `config.json`, 768 feature). | RVC v2 (v1 solo se ha proiezione 256-d) | Solo informativo / utenti avanzati |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Embedder</th>
+<th>Architettura / Note</th>
+<th>Supporto RVC</th>
+<th>Raccomandazione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code translate="no" v-pre>contentvec</code></strong> (<code translate="no" v-pre>hubert_base.pt</code>)</td>
+<td>Content encoder predefinito di RVC, addestrato per mantenere il contenuto linguistico rimuovendo l&#x27;identità del parlante.</td>
+<td>RVC v1 (256-d) e RVC v2 (768-d)</td>
+<td><strong>Consigliato (Stock RVC)</strong></td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>spin</code></strong></td>
+<td>Encoder alternativo basato su Fairseq/HuBERT invariante al parlante.</td>
+<td>RVC v2</td>
+<td>Sconsigliato per uso generale</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>spin-v2</code></strong> (<code translate="no" v-pre>spin-v2.pt</code>)</td>
+<td>Versione aggiornata di Spin v2 (~361 MiB) usata da alcuni pretrain sperimentali.</td>
+<td>RVC v2</td>
+<td>Sconsigliato per uso generale</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>chinese-hubert-base</code></strong></td>
+<td>HuBERT Base pre-addestrato su parlato cinese. Può far filtrare il timbro sorgente.</td>
+<td>RVC v2</td>
+<td>Solo informativo / specialistico</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>japanese-hubert-base</code></strong></td>
+<td>HuBERT Base pre-addestrato su parlato giapponese. Può far filtrare il timbro sorgente.</td>
+<td>RVC v2</td>
+<td>Solo informativo / specialistico</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>korean-hubert-base</code></strong></td>
+<td>HuBERT Base pre-addestrato su parlato coreano. Può far filtrare il timbro sorgente.</td>
+<td>RVC v2</td>
+<td>Solo informativo / specialistico</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>portuguese-hubert-base</code></strong></td>
+<td>Fairseq HuBERT portoghese (<code translate="no" v-pre>shiromiya/fairseq-hubert-portuguese</code>, ~1,13 GB).</td>
+<td>RVC v2</td>
+<td>Solo informativo / specialistico</td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>custom</code> HuBERT Base</strong></td>
+<td>Coppia HuBERT Base fornita dall&#x27;utente (<code translate="no" v-pre>pytorch_model.bin</code> + <code translate="no" v-pre>config.json</code>, 768 feature).</td>
+<td>RVC v2 (v1 solo se ha proiezione 256-d)</td>
+<td>Solo informativo / utenti avanzati</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="when-you-actually-need-to-touch-the-embedder-setting" class="docs-anchor"></span><h2 id="quando-ha-senso-toccare-limpostazione-dellembedder">Quando ha senso toccare l&#x27;impostazione dell&#x27;embedder</h2>
+<ul>
+<li><strong>Lascialo su <code translate="no" v-pre>Auto</code> o <code translate="no" v-pre>contentvec</code></strong> per quasi tutti i modelli e gli addestramenti.</li>
+<li><strong>Cambialo solo</strong> se hai scaricato un modello il cui autore indica esplicitamente un embedder diverso (ad esempio <code translate="no" v-pre>spin-v2</code> o <code translate="no" v-pre>japanese-hubert-base</code>), e usalo solo per convertire con quel modello specifico.</li>
+<li><strong>Non cambiare embedder a metà addestramento</strong>: cambiare encoder richiede di ri-estrarre le feature (<code translate="no" v-pre>3_feature768</code>) in un nuovo esperimento.</li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../models/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#128230; Modelli e file RVC</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../pretrained/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#129521; Modelli pretrained</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T14:05:46.000Z">20/11/2026 · 15:05</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🧩 Embedders", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/start/embedders.md" }</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿# Documentazione di Ilaria RVC
+
+> Una nota da Ilaria, prima di iniziare
+
+- [Documentazione di Ilaria RVC](https://docs.ilariarvc.shop/it/index.md): Documentazione di Ilaria RVC
+- [Iniziare](https://docs.ilariarvc.shop/it/start/getting-started.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Fondamenti di RVC](https://docs.ilariarvc.shop/it/start/rvc-fundamentals.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Modelli e file RVC](https://docs.ilariarvc.shop/it/start/models.md): Un modello RVC cambia il timbro di una voce già registrata o catturata dal microfono. Le parole, le pause e il ritmo partono dall’audio di ingresso. Per la prima prova scegli una voce isolata, così è più facile capire che cosa cambia dopo la conversione.
+- [Embedder di RVC](https://docs.ilariarvc.shop/it/start/embedders.md): Un embedder (chiamato anche content encoder) è la rete neurale che analizza l'audio in ingresso e trasforma ciò che viene detto o cantato in caratteristiche numeriche di contenuto prima che il modello vocale RVC lo ricostruisca con il timbro del parlante target.
+- [Modelli Pretrained di RVC](https://docs.ilariarvc.shop/it/start/pretrained.md): Un modello pretrained di base (o pretrain) è una coppia di checkpoint iniziali: un Generatore (G_*.pth) e un Discriminatore (D_*.pth), già addestrati su centinaia di ore di audio multi-parlante.
+- [Scegli un'app RVC](https://docs.ilariarvc.shop/it/reference/tools.md): Confronta app compatibili per la conversione vocale dal vivo, la conversione di file e la formazione.
+- [Risoluzione dei problemi RVC](https://docs.ilariarvc.shop/it/reference/troubleshooting.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Glossario](https://docs.ilariarvc.shop/it/reference/glossary.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Converti una registrazione con Ilaria RVC](https://docs.ilariarvc.shop/it/conversion/voice-conversion.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Ottimizza l'intonazione e la qualità audio](https://docs.ilariarvc.shop/it/conversion/audio-quality.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Sintesi vocale e RVC](https://docs.ilariarvc.shop/it/conversion/text-to-speech.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Conversione vocale in tempo reale](https://docs.ilariarvc.shop/it/conversion/real-time.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+- [Tracce separate e mixaggio](https://docs.ilariarvc.shop/it/conversion/stems-and-mixing.md): Un gambo è una parte isolata di un mix, come la voce o lo strumentale. RVC è più facile da controllare con una sola voce pulita. Se hai la registrazione originale del microfono o una voce isolata ufficiale, usala come fonte.
+- [Prepara un set di dati vocale](https://docs.ilariarvc.shop/it/model-training/dataset-preparation.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Addestra un modello vocale RVC](https://docs.ilariarvc.shop/it/model-training/training.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+
+## Ilaria RVC
+
+- [Panoramica di Ilaria RVC](https://docs.ilariarvc.shop/it/ilaria-rvc/overview.md): Scarica Ilaria RVC 2.4.2 per Windows (ZIP)
+
+### Installation
+
+- [Installazione e aggiornamenti](https://docs.ilariarvc.shop/it/ilaria-rvc/install/installation.md): GitHub · Hugging Face
+- [Log e ripristino](https://docs.ilariarvc.shop/it/ilaria-rvc/install/troubleshooting.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [File, configurazione e manutenzione della sorgente](https://docs.ilariarvc.shop/it/ilaria-rvc/install/source-layout.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Cronologia delle versioni e differenze di rilascio](https://docs.ilariarvc.shop/it/ilaria-rvc/install/version-history.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [GPU compatibili](https://docs.ilariarvc.shop/it/ilaria-rvc/install/gpu-compatibility.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+
+### Cloud
+
+- [Ilaria RVC nel cloud](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/cloud.md): Scegli una piattaforma per usare Ilaria RVC nel browser.
+- [Kaggle](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/kaggle.md): Apri il notebook ufficiale di Kaggle · Ottieni il file del notebook da GitHub
+- [Google Colab](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/colab.md): Notebook · GitHub · Google Colab
+- [Lightning AI Studio](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/lightning-ai.md): Notebook · GitHub · Lightning AI Studio
+
+### Inference
+
+- [Inferenza singola e batch](https://docs.ilariarvc.shop/it/ilaria-rvc/convert/inference.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Sintesi vocale](https://docs.ilariarvc.shop/it/ilaria-rvc/convert/speech.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Elaborazione ed esportazione](https://docs.ilariarvc.shop/it/ilaria-rvc/convert/advanced-inference.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Spiegazione di ogni controllo di inferenza](https://docs.ilariarvc.shop/it/ilaria-rvc/convert/inference-buttons.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+
+### Training
+
+- [Dataset, Dataset Checker e Audio Analyzer](https://docs.ilariarvc.shop/it/ilaria-rvc/train/datasets.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Addestramento e checkpoint](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-workflow.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Embedder e pretraining](https://docs.ilariarvc.shop/it/ilaria-rvc/train/embedders.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Controlli e flusso di lavoro dell'addestramento](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-controls.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Coda, dashboard e avvisi](https://docs.ilariarvc.shop/it/ilaria-rvc/train/queue-and-dashboard.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Spiegazione di tutti i controlli di allenamento](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-buttons.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+
+### Other
+
+- [Libreria modelli e unione](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/model-library.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Voice Blender (Fusione Modelli)](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/voice-blender.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Analizzatore audio](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/audio-analyzer.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+- [Requisiti di sistema di Ilaria RVC](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/requirements.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP) · GPU compatibili · Opzioni Cloud
+- [Spiegazione di tutti gli altri pannelli](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/other-buttons.md): Scarica Ilaria RVC 2.4.0 per Windows (ZIP)
+
+## Other RVCs
+
+- [Guide passo passo per app](https://docs.ilariarvc.shop/it/other-rvcs/app-guides.md): Usa Ilaria RVC per addestrare un modello o convertire una registrazione. Per il microfono in tempo reale su Windows, scegli Vonovox con una GPU NVIDIA compatibile, oppure Okada TG Developed Fork con una GPU AMD o Intel compatibile.
+
+### Vonovox
+
+- [Installa Vonovox](https://docs.ilariarvc.shop/it/other-rvcs/vonovox/installation.md): GitHub · Hugging Face
+- [Instrada e sintonizza Vonovox](https://docs.ilariarvc.shop/it/other-rvcs/vonovox/live-audio.md): Utilizza tre endpoint: il microfono fisico per l'ingresso, un cavo virtuale per il segnale convertito e le cuffie per il monitoraggio. Un cavo virtuale ha un lato di riproduzione per l'app che invia l'audio e un lato di registrazione per l'app che lo riceve.
+
+### Applio
+
+- [Installa Applio e controlla il motore](https://docs.ilariarvc.shop/it/other-rvcs/applio/installation.md): GitHub · Hugging Face
+- [Installa una voce in Applio](https://docs.ilariarvc.shop/it/other-rvcs/applio/models.md): Salva i file del modello in una cartella facile da trovare ed estrai gli eventuali archivi ZIP. Conserva le note dell'autore del modello accanto ai file. Utilizza modelli provenienti da fonti di cui ti fidi.
+- [Converti una registrazione in Applio](https://docs.ilariarvc.shop/it/other-rvcs/applio/inference.md): Inizia con una breve registrazione che puoi riconoscere immediatamente. Una frase di prova potrebbe essere "Potresti mettere il libro blu vicino alla finestra?" seguito da una breve pausa.
+- [Addestra, valuta ed esporta una voce in Applio](https://docs.ilariarvc.shop/it/other-rvcs/applio/training.md): Una prima esecuzione dimostra che le registrazioni, la configurazione e l'hardware possono produrre un modello utilizzabile per la conversione. Lavora su copie di registrazioni che hai il permesso di usare.
+- [Usa Applio con un microfono](https://docs.ilariarvc.shop/it/other-rvcs/applio/realtime.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+- [Genera il parlato e convertilo con Applio](https://docs.ilariarvc.shop/it/other-rvcs/applio/tts.md): Applio utilizza una voce Edge TTS online per leggere il tuo testo e un modello RVC per modificare la voce generata. La voce sorgente determina la pronuncia, il ritmo e la lingua che legge.
+
+### RVC WebUI (Mainline - Original RVC)
+
+- [Installa RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/it/other-rvcs/mainline/installation.md): GitHub · Hugging Face
+- [Converti registrazioni in RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/it/other-rvcs/mainline/inference.md): Inizia con una breve registrazione che puoi ascoltare chiaramente in un normale lettore multimediale, oltre a un modello RVC esportato che sei autorizzato a utilizzare.
+- [Addestra ed esporta un modello RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/it/other-rvcs/mainline/training.md): Inizia con una sola voce e un nuovo nome per l'esperimento. L'addestramento produce un modello che puoi testare su nuove registrazioni nell'interfaccia di inferenza.
+- [Converti la voce dal vivo con RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/it/other-rvcs/mainline/realtime.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+
+### w-okada VCClient
+
+- [Installare w-okada VCClient](https://docs.ilariarvc.shop/it/other-rvcs/okada/installation.md): GitHub · Hugging Face
+- [Convertire l'audio del microfono con w-okada VCClient](https://docs.ilariarvc.shop/it/other-rvcs/okada/live-audio.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+
+### Okada TG Developed Fork
+
+- [Installare Okada TG Developed Fork](https://docs.ilariarvc.shop/it/other-rvcs/tgr/installation.md): GitHub
+- [Configurare l'audio live in Okada TG Developed Fork](https://docs.ilariarvc.shop/it/other-rvcs/tgr/live-audio.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+
+### Deiteris w-okada Fork
+
+- [Installa Deiteris w-okada Fork](https://docs.ilariarvc.shop/it/other-rvcs/deiteris/installation.md): GitHub · Release
+- [Instrada e regola Deiteris w-okada Fork](https://docs.ilariarvc.shop/it/other-rvcs/deiteris/live-audio.md): Indossa sempre le cuffie durante la conversione live. Usare le casse fa rientrare la voce convertita nel microfono generando eco e fischi.
+
+### RVC GUI
+
+- [Installa e converti con la GUI RVC](https://docs.ilariarvc.shop/it/other-rvcs/rvc-gui/file-conversion.md): GitHub
+
+### Redpanda-vc
+
+- [Configura Redpanda-vc](https://docs.ilariarvc.shop/it/other-rvcs/redpanda/first-run.md): GitHub
+- [Prova l'audio dal vivo in Redpanda-vc](https://docs.ilariarvc.shop/it/other-rvcs/redpanda/live-audio.md): Collega il microfono fisico al voice changer, invia l’uscita al lato di riproduzione del cavo e seleziona il lato di registrazione in Discord o OBS. Per Vonovox, VAC Lite è la prima scelta e VB-CABLE è un’alternativa.
+
+### RVC Blue
+
+- [RVC Blue (RVC-Realtime-GUI)](https://docs.ilariarvc.shop/it/other-rvcs/rvc-blue/installation.md): GitHub · Hugging Face
+
+### RVC Model Merger
+
+- [RVC Model Merger](https://docs.ilariarvc.shop/it/other-rvcs/rvc-model-merger/usage.md): GitHub
+
+## Non-RVC
+
+
+### YuneVoix
+
+- [YuneVoix (YUNE)](https://docs.ilariarvc.shop/it/non-rvc/yunevoix/overview.md): Hugging Face (Download) · Ko-fi (Supporto e Premium)
+- [Installare e aggiornare YuneVoix](https://docs.ilariarvc.shop/it/non-rvc/yunevoix/installation.md): Scarica su Hugging Face · Ko-fi (Premium)
+- [Voice Bank e uso live](https://docs.ilariarvc.shop/it/non-rvc/yunevoix/usage.md): Usa questa guida per creare voci nel Voice Bank, instradare YuneVoix su Discord, OBS, giochi o VRChat e regolare i parametri per una conversione dal vivo pulita.
+- [Premium, licenza e risoluzione dei problemi](https://docs.ilariarvc.shop/it/non-rvc/yunevoix/premium-and-troubleshooting.md): Chi supporta il progetto su Ko-fi ottiene l'accesso a YuneVoix PREMIUM, che sblocca le funzioni musicali offline oltre a tutto ciò che è incluso in BASIC:
+- [Changelog di YuneVoix](https://docs.ilariarvc.shop/it/non-rvc/yunevoix/changelog.md): Novità rispetto alla v0.7.0.
+
+### Causal Voice Changer
+
+- [Causal Voice Changer (CVC)](https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/overview.md): GitHub · Release
+- [Installare Causal Voice Changer](https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/installation.md): Questa guida ti accompagna passo dopo passo nell'installazione di Causal Voice Changer su Windows o Linux, anche se non hai mai usato Python o Git.
+- [Addestrare una voce in CVC](https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/training.md): Creare una voce in Causal Voice Changer significa fare fine-tuning del decoder base sul tuo audio target. A differenza di molti strumenti più vecchi, non devi tagliare i file audio né rimuovere manualmente i silenzi, e le registrazioni possono avere qualsiasi sample rate.
+- [Usare CausalVC Realtime](https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/realtime.md): Dopo aver eseguito almeno una volta run-training e aver preparato una voce .cvc, avvia il cambia-voce live con:
+- [Prestazioni, pulizia audio e strumenti extra](https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/performance-and-tools.md): Chunk (a passi di 20 ms): quanto audio viene convertito per volta. Il ritardo totale è dato dai 60 ms fissi di lookahead di CVC + 1 chunk + i buffer di scheda audio/cavo virtuale.
+
+### UVR5
+
+- [Ultimate Vocal Remover (UVR5)](https://docs.ilariarvc.shop/it/non-rvc/uvr5/overview.md): GitHub · Release ufficiali · Patch Beta Roformer
+- [Scaricare e installare UVR5](https://docs.ilariarvc.shop/it/non-rvc/uvr5/installation.md): I pacchetti ufficiali per Windows e macOS includono già un ambiente isolato Python e PyTorch, quindi non serve installare Python separatamente.
+- [Guida UVR5 e modelli consigliati](https://docs.ilariarvc.shop/it/non-rvc/uvr5/usage-and-models.md): Usa questa guida per configurare correttamente UVR5 e scegliere i modelli migliori per separare voce, rimuovere cori/armonie, eliminare riverbero/eco e ripulire il rumore (inclusi i modelli mostrati nelle configurazioni consigliate).
+
+### MVSep
+
+- [MVSep](https://docs.ilariarvc.shop/it/non-rvc/mvsep/overview.md): Sito ufficiale (mvsep.com) · Classifica qualità
+- [Usare MVSep: accesso, account e impostazioni](https://docs.ilariarvc.shop/it/non-rvc/mvsep/access-and-setup.md): Poiché MVSep funziona interamente nel cloud, non c'è nulla da scaricare o installare. Tuttavia, impostare correttamente account e formato di output fa una grande differenza.
+- [Guida MVSep: modelli e preset consigliati](https://docs.ilariarvc.shop/it/non-rvc/mvsep/usage-and-models.md): Qui trovi i migliori preset di MVSep per ottenere tracce vocali pulitissime (per training RVC, cover o conversione vocale), con link diretti che preselezionano automaticamente l'algoritmo e le opzioni esatte.

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510353398">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Configurer l'audio en direct dans Okada TG Developed Fork">
+    <meta name="description" content="Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/tgr/live-audio/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/tgr/live-audio/">
+    <meta property="og:title" content="Configurer l'audio en direct dans Okada TG Developed Fork">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/tgr/live-audio/">
+    <meta name="twitter:title" content="Configurer l'audio en direct dans Okada TG Developed Fork">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/other-rvcs/tgr/live-audio.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848510353398" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/tgr/live-audio/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/tgr/live-audio/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/ilaria-rvc/tgr/live-audio/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/tgr/live-audio/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/tgr/live-audio/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/tgr/live-audio/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/tgr/live-audio/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/tgr/live-audio/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="set-up-live-audio-in-okada-tg-developed-fork" class="docs-anchor"></span><h1 id="configurer-laudio-en-direct-dans-okada-tg-developed-fork">Configurer l&#x27;audio en direct dans Okada TG Developed Fork</h1>
+<blockquote>
+<p>Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec <strong>VAC Lite</strong> ou utilisez <strong>VB-CABLE</strong>. Lisez le guide complet avant un appel. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+</blockquote>
+<p>Utilisez un point de contrôle d&#x27;inférence RVC compatible et un microphone fonctionnel. Prouvez d’abord que le signal converti atteint vos écouteurs. Envoyez ensuite ce signal à une autre application et effectuez un enregistrement depuis le récepteur.</p>
+<span id="load-an-rvc-voice" class="docs-anchor"></span><h2 id="charger-une-voix-rvc">Charger une voix RVC</h2>
+<ol>
+<li>Arrêter la conversion si elle est déjà en cours. Ouvrez <strong>Modifier</strong> dans la zone de sélection du modèle et choisissez un emplacement vide.</li>
+<li>Choisissez <strong>Télécharger</strong> et sélectionnez le fichier de modèle d&#x27;inférence RVC. Lorsque la boîte de dialogue expose un champ distinct pour l&#x27;index, ajoutez le <code translate="no" v-pre>.index</code> correspondant s&#x27;il est fourni. Utilisez uniquement des fichiers d&#x27;inférence compatibles. Un index à lui seul ne peut pas produire une voix.</li>
+<li>Attendez le téléchargement et cliquez sur l&#x27;emplacement nouvellement chargé dans la vue principale. Vérifiez le nom du modèle avant d’appuyer sur Démarrer.</li>
+<li>Réglez le pitch et la récupération à zéro. Assurez-vous que <strong>Passthrough</strong> est désactivé. Son état activé envoie le microphone sec, afin que le microphone puisse atteindre un appel même si la conversion est contournée.</li>
+</ol>
+<span id="test-the-microphone-and-the-compute-device" class="docs-anchor"></span><h2 id="testez-le-microphone-et-le-périphérique-de-calcul">Testez le microphone et le périphérique de calcul</h2>
+<ol>
+<li>Dans <strong>Audio</strong>, choisissez le mode pour les appareils que vous comptez utiliser. Dans un test de navigateur local, utilisez <strong>Client</strong> et accordez au site l&#x27;accès à votre microphone. Dans <strong>Serveur</strong>, choisissez les périphériques d&#x27;entrée et de sortie visibles par le processus qui exécute TGR.</li>
+<li>Nommez les points de terminaison avant de commencer. <strong>Input</strong> est le microphone physique, <strong>Output</strong> est le casque pour le premier test et <strong>Monitor</strong> est facultatif si votre version le propose.</li>
+<li>Choisissez votre GPU ou CPU prévu dans le sélecteur de périphérique. Pour une référence DirectML, essayez <code translate="no" v-pre>rmvpe_onnx</code> si cela est répertorié. Les détecteurs de pitch DirectML pris en charge documentés par le fork incluent également <code translate="no" v-pre>fcpe_onnx</code>, <code translate="no" v-pre>crepe_tiny_onnx</code> et <code translate="no" v-pre>crepe_full_onnx</code>. La build CUDA peut exposer une liste différente.</li>
+<li>Appuyez sur <strong>Démarrer</strong> à la taille de morceau par défaut. Donnez au modèle le temps de s&#x27;initialiser, puis prononcez une phrase calme et une phrase plus longue et plus forte. Faites une pause entre les deux. Vérifiez que la sortie change lors de la sélection du modèle et que l&#x27;audio reste stable pendant une minute.</li>
+<li>Si vous entendez également une copie sèche, désactivez l&#x27;effet local matériel ou supprimez l&#x27;autre boucle micro du système d&#x27;exploitation. Gardez les niveaux des écouteurs modérés pendant les tests.</li>
+</ol>
+<span id="connect-a-cable" class="docs-anchor"></span><h2 id="connecter-un-câble">Connecter un câble</h2>
+<p>L&#x27;éditeur de TGR utilise Virtual Audio Cable de Muzychenko pour ses exemples de dépannage Windows. Cela expose généralement les points de terminaison de lecture et d&#x27;enregistrement correspondants nommés <strong>Ligne 1</strong>. D&#x27;autres pilotes de câble utilisent des étiquettes différentes. Le signal doit entrer dans le point final de lecture et sortir par le point final d’enregistrement correspondant.</p>
+<retype-table copy-text="| Réglage | Premier test routé |
+| --- | --- |
+| Entrée TGR | Votre microphone physique, le même qui a fonctionné lors du test du casque. |
+| Sortie TGR | Point final de lecture du câble. |
+| Moniteur TGR | Casque, s'il est affiché comme une sortie séparée. |
+| Entrée Discord ou OBS | Le point final d'enregistrement du câble. |
+| Sortie Discord ou lecture du système d'exploitation | Casque. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Réglage</th>
+<th>Premier test routé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrée TGR</td>
+<td>Votre microphone physique, le même qui a fonctionné lors du test du casque.</td>
+</tr>
+<tr>
+<td>Sortie TGR</td>
+<td>Point final de lecture du câble.</td>
+</tr>
+<tr>
+<td>Moniteur TGR</td>
+<td>Casque, s&#x27;il est affiché comme une sortie séparée.</td>
+</tr>
+<tr>
+<td>Entrée Discord ou OBS</td>
+<td>Le point final d&#x27;enregistrement du câble.</td>
+</tr>
+<tr>
+<td>Sortie Discord ou lecture du système d&#x27;exploitation</td>
+<td>Casque.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<ol>
+<li>Installez le câble et redémarrez les applications pour actualiser les appareils audio.</li>
+<li>Réglez les appareils comme indiqué, puis vérifiez les formats par défaut du micro et du câble dans les paramètres audio du système d&#x27;exploitation. Choisissez une fréquence d’échantillonnage commune prise en charge. En mode serveur, recherchez les noms de périphériques en double répertoriés sous différentes API hôtes et utilisez une paire compatible.</li>
+<li>Démarrez la conversion, puis démarrez le test du micro de l&#x27;application réceptrice. Enregistrez une courte phrase. Écoutez ce que le destinataire reçoit, pas seulement le moniteur dans TGR.</li>
+<li>Dans OBS, désactivez le microphone physique séparé s&#x27;il duplique la source du câble. Lors d&#x27;un appel, vérifiez que l&#x27;entrée sélectionnée est explicite plutôt que de changer automatiquement lorsque vous branchez un nouveau casque.</li>
+<li>Arrêtez le convertisseur. Si le compteur de réception continue de répondre, vérifiez le point de terminaison d&#x27;enregistrement sélectionné et tout audio de bureau acheminé vers le câble.</li>
+</ol>
+<span id="tune-directml-and-cuda-without-losing-your-baseline" class="docs-anchor"></span><h2 id="ajustez-directml-et-cuda-sans-perdre-votre-base-de-référence">Ajustez DirectML et CUDA sans perdre votre base de référence</h2>
+<p><strong>Chunk</strong> contrôle le bloc de l&#x27;audio entrant. <strong>Extra</strong> fournit le contexte autour du bloc actuel. Les commandes <strong>Crossfade</strong> se chevauchent là où les blocs se rejoignent. Modifiez une commande à la fois et effectuez un enregistrement test. Si le temps de traitement se rapproche de la durée du fragment, commencez par augmenter le fragment ou réduire le contexte supplémentaire. Si un morceau modifié se comporte bizarrement, arrêtez et redémarrez la conversion.</p>
+<p>Sur la version DirectML documentée, les modifications apportées à Chunk, Extra et Crossfade peuvent nécessiter la sélection du CPU, puis la resélection du GPU prévu. Faites-le après l&#x27;arrêt, redémarrez le flux et répétez le même test avant d&#x27;évaluer la latence. Sur CUDA, autorisez l&#x27;échauffement au premier démarrage avant de mesurer. Certaines combinaisons audio et protocole du serveur affichent <strong>perf</strong> sans autres timings. Jugez le cheminement complet de l&#x27;appel avec un enregistrement dans l&#x27;application de réception.</p>
+<retype-table copy-text="| Défaut | Action suivante |
+| --- | --- |
+| Le micro passe inchangé | Désactivez **Passthrough**, vérifiez l'emplacement sélectionné et sélectionnez le câble comme seul microphone de l'application de réception. |
+| Une syllabe douce disparaît | Testez séparément le seuil d'entrée et la détection vocale de l'application de destination. Vérifiez un enregistrement simple pour le silence réel. |
+| Les clics démarrent une fois le câble connecté | Comparez les fréquences d'échantillonnage du micro et du câble et les sélections de l'API hôte. Retestez sans le câble pour confirmer quelle étape introduit le clic. |
+| Les mots bégaient lorsqu'un jeu s'ouvre | Restaurez le dernier morceau stable, réduisez le contexte ou la charge concurrente et retestez. Gardez le paramètre qui fonctionne avec les deux applications ouvert. |
+| Une seule méthode de pitch plante ou se bloque | Revenez à une méthode répertoriée par votre backend. Sur DirectML, comparez les options de pitch ONNX avec la même phrase courte. |
+| Une deuxième application dispose d'un compteur mais enregistre le bruit de la pièce | Arrêtez TGR et vérifiez à nouveau le compteur. Un compteur qui suit toujours votre micro indique un itinéraire supplémentaire ou un mauvais point final d'enregistrement. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Défaut</th>
+<th>Action suivante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le micro passe inchangé</td>
+<td>Désactivez <strong>Passthrough</strong>, vérifiez l&#x27;emplacement sélectionné et sélectionnez le câble comme seul microphone de l&#x27;application de réception.</td>
+</tr>
+<tr>
+<td>Une syllabe douce disparaît</td>
+<td>Testez séparément le seuil d&#x27;entrée et la détection vocale de l&#x27;application de destination. Vérifiez un enregistrement simple pour le silence réel.</td>
+</tr>
+<tr>
+<td>Les clics démarrent une fois le câble connecté</td>
+<td>Comparez les fréquences d&#x27;échantillonnage du micro et du câble et les sélections de l&#x27;API hôte. Retestez sans le câble pour confirmer quelle étape introduit le clic.</td>
+</tr>
+<tr>
+<td>Les mots bégaient lorsqu&#x27;un jeu s&#x27;ouvre</td>
+<td>Restaurez le dernier morceau stable, réduisez le contexte ou la charge concurrente et retestez. Gardez le paramètre qui fonctionne avec les deux applications ouvert.</td>
+</tr>
+<tr>
+<td>Une seule méthode de pitch plante ou se bloque</td>
+<td>Revenez à une méthode répertoriée par votre backend. Sur DirectML, comparez les options de pitch ONNX avec la même phrase courte.</td>
+</tr>
+<tr>
+<td>Une deuxième application dispose d&#x27;un compteur mais enregistre le bruit de la pièce</td>
+<td>Arrêtez TGR et vérifiez à nouveau le compteur. Un compteur qui suit toujours votre micro indique un itinéraire supplémentaire ou un mauvais point final d&#x27;enregistrement.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Si vous avez besoin d&#x27;aide pour un diagnostic plus approfondi, conservez l&#x27;identifiant de la version, le backend, les noms des périphériques de microphone et de câble, le détecteur choisi et la première erreur de console. Confirmez si le problème se produit également lors d&#x27;un test de casque local.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/tgr/installation/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Installer TG Developed Fork</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/deiteris/installation/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Installer Deiteris Fork</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Modèle, microphone et câble", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/tgr/live-audio.md" }</script>
+</body>
+</html>

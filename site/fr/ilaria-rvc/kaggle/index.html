@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510353398">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Kaggle">
+    <meta name="description" content="Ouvrez le notebook officiel de Kaggle · Récupérez le fichier du notebook depuis GitHub">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/kaggle/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/kaggle/">
+    <meta property="og:title" content="Kaggle">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/kaggle/">
+    <meta name="twitter:title" content="Kaggle">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/kaggle.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
+    <link href="../../resources/css/retype.css?v=4.6.0.848510353398" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/kaggle/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/kaggle/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/ilaria-rvc/kaggle/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/kaggle/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/kaggle/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/kaggle/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/kaggle/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/kaggle/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="kaggle">Kaggle</h1>
+<p><a href="https://www.kaggle.com/code/ilarialopez/ilaria-rvc">Ouvrez le notebook officiel de Kaggle</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-Kaggle.ipynb">Récupérez le fichier du notebook depuis GitHub</a></p>
+<blockquote>
+<p><strong>2.4.0</strong> · Le paquet Windows déplace l’application et le runtime dans app/. Les modèles restent à la racine dans models/. Ajout de Colab, Lightning AI Studio, des indications de téléchargement des embedders, et de Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip est réparé et pywin32 est inclus.</p>
+</blockquote>
+<p><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-Kaggle.ipynb">Kaggle</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-Colab.ipynb">Google Colab</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb">Lightning AI Studio</a></p>
+<span id="1-prepare-a-short-test" class="docs-anchor"></span><h2 id="1-préparez-un-court-test">1. Préparez un court test</h2>
+<ul>
+<li>Connectez-vous à Kaggle et gardez l&#x27;éditeur de bloc-notes ouvert pendant que vous travaillez.</li>
+<li>Pour la conversion, utilisez un modèle d’inférence compatible (<code translate="no" v-pre>.pth</code>). Le fichier <code translate="no" v-pre>.index</code> associé est facultatif. Préparez un WAV de 10 secondes avec une voix claire et sans musique.</li>
+<li>Pour la formation, conservez une copie locale de l&#x27;ensemble de données source. Préparez un ZIP des enregistrements utilisables que vous êtes autorisé à utiliser. Conservez un court clip séparé en dehors de l&#x27;ensemble de données d&#x27;entraînement afin de pouvoir tester votre modèle sur quelque chose qu&#x27;il n&#x27;a pas entendu.</li>
+<li>Commencez par un test de fichier avant de tenter un long entraînement. Kaggle contrôle la disponibilité et les limites du GPU, alors vérifiez l&#x27;heure et les ressources affichées dans votre propre session.</li>
+</ul>
+<span id="2-make-an-editable-copy-and-turn-on-the-gpu" class="docs-anchor"></span><h2 id="2-faites-une-copie-modifiable-et-allumez-le-gpu">2. Faites une copie modifiable et allumez le GPU</h2>
+<ol>
+<li>Ouvrez le <a href="https://www.kaggle.com/code/ilarialopez/ilaria-rvc">carnet publié</a>. Connectez-vous si vous y êtes invité. Utilisez <strong>Copier et modifier</strong> ou l&#x27;action de copie équivalente pour ouvrir votre propre version modifiable.</li>
+<li>Si vous démarrez plutôt depuis GitHub, téléchargez le fichier brut <code translate="no" v-pre>Ilaria-RVC-2.1-Kaggle.ipynb</code>, créez un notebook dans Kaggle et importez le fichier via l&#x27;éditeur de notebook. Ouvrez le notebook obtenu sur Kaggle plutôt que de l&#x27;exécuter sur votre propre machine.</li>
+<li>Ouvrez les paramètres de session dans l&#x27;éditeur. Pour <strong>Accélérateur</strong>, sélectionnez une option <strong>GPU</strong> disponible. Si Kaggle demande de redémarrer la session après le changement, acceptez avant d&#x27;ajouter des fichiers ou de démarrer une exécution.</li>
+<li>Activez <strong>Internet</strong> dans les mêmes paramètres de session. Le notebook a besoin d&#x27;une connectivité pour télécharger le code, les dépendances et les poids, puis ouvrir son lien Gradio.</li>
+<li>Si l&#x27;un des paramètres n&#x27;est pas disponible, lisez l&#x27;explication affichée par Kaggle. Vérifiez l’éligibilité de votre compte et la disponibilité actuelle de l’accélérateur. Réessayez lorsque vous pourrez activer les deux paramètres.</li>
+</ol>
+<span id="3-run-the-four-main-sections" class="docs-anchor"></span><h2 id="3-exécutez-les-quatre-sections-principales">3. Exécutez les quatre sections principales</h2>
+<p>Cliquez sur <strong>Exécuter tout</strong> dans l&#x27;éditeur. Vous pouvez également exécuter les quatre cellules de code une par une, de haut en bas. Attendez que chaque cellule soit terminée avant d&#x27;exécuter la suivante. Les cellules facultatives d&#x27;exportation et d&#x27;arrêt ne font rien avec leurs paramètres par défaut.</p>
+<retype-table copy-text="| Section Carnet | À quoi sert une exécution réussie | Que vérifier si elle s'arrête |
+| --- | --- | --- |
+| **1. Vérifier le GPU** | Affiche les informations du GPU et récupère le code à jour depuis `main` → `/kaggle/working/ilaria-rvc`. | Si les outils NVIDIA sont manquants, sélectionnez un GPU disponible et redémarrez la session avant de l'exécuter à nouveau. Si Git ne peut pas accéder au dépôt, vérifiez Internet. |
+| **2. Installer les dépendances** | Prépare l'environnement du notebook et vérifie que PyTorch voit le GPU. Recherchez `GPU ready:` suivi de son nom. | Lisez la première dépendance ou erreur du compilateur. Un périphérique CUDA manquant signifie que l'application ne peut toujours pas utiliser le GPU. |
+| **3. Télécharger les poids des modèles** | Télécharge et vérifie les actifs requis par le bloc-notes. | Laissez la nouvelle tentative intégrée se terminer. S'il continue d'échouer, vérifiez l'accès au réseau et l'espace libre. |
+| **4. Open Ilaria RVC** | Démarre l'interface et imprime **Open Ilaria RVC** dans la sortie de la cellule. | Si l'onglet ne s'est pas ouvert automatiquement, cliquez sur ce bouton. Si le portable signale que le lien Gradio n'est pas disponible, vérifiez Internet et réexécutez l'étape 4 une fois les étapes 1 à 3 réussies. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Section Carnet</th>
+<th>À quoi sert une exécution réussie</th>
+<th>Que vérifier si elle s&#x27;arrête</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Vérifier le GPU</strong></td>
+<td>Affiche les informations du GPU et récupère le code à jour depuis <code translate="no" v-pre>main</code> → <code translate="no" v-pre>/kaggle/working/ilaria-rvc</code>.</td>
+<td>Si les outils NVIDIA sont manquants, sélectionnez un GPU disponible et redémarrez la session avant de l&#x27;exécuter à nouveau. Si Git ne peut pas accéder au dépôt, vérifiez Internet.</td>
+</tr>
+<tr>
+<td><strong>2. Installer les dépendances</strong></td>
+<td>Prépare l&#x27;environnement du notebook et vérifie que PyTorch voit le GPU. Recherchez <code translate="no" v-pre>GPU ready:</code> suivi de son nom.</td>
+<td>Lisez la première dépendance ou erreur du compilateur. Un périphérique CUDA manquant signifie que l&#x27;application ne peut toujours pas utiliser le GPU.</td>
+</tr>
+<tr>
+<td><strong>3. Télécharger les poids des modèles</strong></td>
+<td>Télécharge et vérifie les actifs requis par le bloc-notes.</td>
+<td>Laissez la nouvelle tentative intégrée se terminer. S&#x27;il continue d&#x27;échouer, vérifiez l&#x27;accès au réseau et l&#x27;espace libre.</td>
+</tr>
+<tr>
+<td><strong>4. Open Ilaria RVC</strong></td>
+<td>Démarre l&#x27;interface et imprime <strong>Open Ilaria RVC</strong> dans la sortie de la cellule.</td>
+<td>Si l&#x27;onglet ne s&#x27;est pas ouvert automatiquement, cliquez sur ce bouton. Si le portable signale que le lien Gradio n&#x27;est pas disponible, vérifiez Internet et réexécutez l&#x27;étape 4 une fois les étapes 1 à 3 réussies.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Ouvrez le lien actuel de l&#x27;étape 4 dans un autre onglet. Laissez la session Kaggle en cours d&#x27;exécution. Après une réinitialisation de session ou un redémarrage de lancement, utilisez le lien nouvellement généré.</p>
+<blockquote>
+<p>Pour mettre à jour une session ouverte, sauvegardez votre travail, exécutez la cellule d’arrêt avec <code translate="no" v-pre>STOP = True</code>, puis relancez les étapes 1 à 4. La première cellule affiche la version chargée.</p>
+</blockquote>
+<span id="start-here-with-the-updated-notebook" class="docs-anchor"></span><h2 id="commencez-ici-avec-le-notebook-mis-à-jour">Commencez ici avec le notebook mis à jour</h2>
+<span id="before-running-anything" class="docs-anchor"></span><h3 id="avant-dexécuter-quoi-que-ce-soit">Avant d&#x27;exécuter quoi que ce soit</h3>
+<ol>
+<li>Ouvrez votre copie modifiable sur Kaggle et gardez-la <strong>privée</strong>. La cellule de lancement imprime les mots de passe. Conservez sa sortie à l’écart des captures d’écran, des journaux partagés et des versions publiées.</li>
+<li>Ouvrez <strong>Paramètres</strong>. L&#x27;ordinateur portable demande <strong>GPU T4 x2</strong> et <strong>Internet</strong>. Si Kaggle ne les a pas appliqués lors de l&#x27;importation, sélectionnez-les vous-même. Si T4 x2 n&#x27;est pas disponible, vérifiez le GPU proposé à votre compte et lisez la liste des GPU imprimées après le démarrage.</li>
+<li>Cliquez sur <strong>Exécuter tout</strong> ou exécutez les quatre sections numérotées dans l&#x27;ordre. Les sections 1 à 3 préparent l&#x27;application. La section 4 l&#x27;ouvre. Les cellules d&#x27;exportation et d&#x27;arrêt sont facultatives et désactivées par défaut.</li>
+<li>Dans le résultat de la section 1, vérifiez les noms des GPU et la version <strong>Ilaria RVC</strong>. La section 2 vérifie que PyTorch voit les GPU disponibles. La section 3 vérifie les poids téléchargés. Continuez une fois que chaque opération est terminée avec succès.</li>
+</ol>
+<span id="open-the-app-and-the-file-manager" class="docs-anchor"></span><h3 id="ouvrez-lapplication-et-le-gestionnaire-de-fichiers">Ouvrez l&#x27;application et le gestionnaire de fichiers</h3>
+<p>La section <strong>Démarrer → Accéder à la configuration</strong> propose deux options. Laissez <strong>Gradio + Cloudflare</strong> sélectionnés pour un premier test. Gradio ouvre Ilaria RVC et Cloudflare ouvre FileBrowser. Si vous choisissez <strong>Horizon</strong>, saisissez l&#x27;ID Horizon dans votre tableau de bord Horizon et approuvez la demande de jeton CLI lorsque vous y êtes invité. Horizon produit des liens distincts pour les deux mêmes services.</p>
+<ol>
+<li>Attendez <strong>Open Ilaria RVC</strong> dans la sortie et cliquez dessus si le nouvel onglet ne s&#x27;est pas ouvert automatiquement.</li>
+<li>Connectez-vous avec le nom d&#x27;utilisateur <code translate="no" v-pre>ilaria</code> et la valeur à côté de <strong>Mot de passe WebUI</strong> dans la sortie de lancement actuelle.</li>
+<li>Pour les fichiers exportés, cliquez sur <strong>Ouvrir FileBrowser</strong>. Utilisez le <strong>nom d&#x27;utilisateur FileBrowser</strong> et le <strong>mot de passe FileBrowser</strong> affichés dans le même résultat. Ces informations d&#x27;identification sont distinctes de la connexion WebUI. FileBrowser affiche uniquement le dossier d&#x27;exportation dédié.</li>
+<li>Gardez Kaggle en cours d&#x27;exécution pendant que vous utilisez l&#x27;un ou l&#x27;autre des onglets. Après avoir redémarré l&#x27;application, utilisez les liens et les informations d&#x27;identification de la nouvelle sortie. Si une page rejette le mot de passe, vérifiez que vous avez utilisé la bonne paire d&#x27;informations d&#x27;identification pour cette page.</li>
+</ol>
+<span id="select-only-the-weights-you-need" class="docs-anchor"></span><h3 id="sélectionnez-uniquement-les-poids-dont-vous-avez-besoin">Sélectionnez uniquement les poids dont vous avez besoin</h3>
+<p>La section 3 est par défaut <code translate="no" v-pre>TRAINING_SAMPLE_RATES = [&quot;32k&quot;]</code>. Laissez-le inchangé pour un premier test d&#x27;entraînement à 32 kHz. Si votre expérience prévue nécessite les pré-entraînements groupés à un autre rythme pris en charge, incluez <code translate="no" v-pre>&quot;40k&quot;</code> ou <code translate="no" v-pre>&quot;48k&quot;</code> dans cette liste avant d&#x27;exécuter la cellule. Utilisez une liste vide à des fins d&#x27;inférence uniquement. Cette liste contrôle les téléchargements de pré-entraînement. La fréquence d&#x27;échantillonnage de votre expérience doit toujours correspondre à l&#x27;architecture et aux pondérations sélectionnées dans l&#x27;interface Web.</p>
+<p>La même cellule a <code translate="no" v-pre>DOWNLOAD_FCPE</code>. Laissez les valeurs par défaut si vous n&#x27;êtes pas sûr. Si FCPE n&#x27;est pas disponible, le notebook le signale et vous pouvez sélectionner RMVPE.</p>
+<span id="tune-training-only-after-a-short-test" class="docs-anchor"></span><h3 id="réglage-de-lentraînement-uniquement-après-un-court-test">Réglage de l&#x27;entraînement uniquement après un court test</h3>
+<retype-table copy-text="| Réglage | Que faire pour la première exécution |
+| --- | --- |
+| Training Precision | Le notebook démarre avec FP16 lorsque tous les GPU visibles sont T4. Essayez FP32 pour une comparaison si nécessaire. Lors de la reprise, faites correspondre la configuration du point de contrôle existant. |
+| Taille du lot | La valeur de l'interface utilisateur est par GPU pour une nouvelle exécution avec ce portable. Un T4 au lot 8 et deux T4 au lot 4 donnent tous deux un lot global de 8 lorsque ce sont les appareils utilisés par l'exécution. Vérifiez les valeurs effectives dans **Training Log**. Commencez plus petit si la mémoire est limitée. |
+| Travailleurs et prélecture | Laissez-les à 2 chacun pour la première manche. Le bloc-notes suggère 4 travailleurs et en pré-extrait 8 par rapport à l'ancienne configuration du chargeur. Modifiez un facteur à la fois et comparez le timing en `train.log`. |
+| Fused AdamW | Laissez-le désactivé au début. Testez-le lors d'une nouvelle exécution si vous souhaitez comparer les performances. Conservez la configuration de lot d'origine lors de la reprise. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Réglage</th>
+<th>Que faire pour la première exécution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training Precision</td>
+<td>Le notebook démarre avec FP16 lorsque tous les GPU visibles sont T4. Essayez FP32 pour une comparaison si nécessaire. Lors de la reprise, faites correspondre la configuration du point de contrôle existant.</td>
+</tr>
+<tr>
+<td>Taille du lot</td>
+<td>La valeur de l&#x27;interface utilisateur est par GPU pour une nouvelle exécution avec ce portable. Un T4 au lot 8 et deux T4 au lot 4 donnent tous deux un lot global de 8 lorsque ce sont les appareils utilisés par l&#x27;exécution. Vérifiez les valeurs effectives dans <strong>Training Log</strong>. Commencez plus petit si la mémoire est limitée.</td>
+</tr>
+<tr>
+<td>Travailleurs et prélecture</td>
+<td>Laissez-les à 2 chacun pour la première manche. Le bloc-notes suggère 4 travailleurs et en pré-extrait 8 par rapport à l&#x27;ancienne configuration du chargeur. Modifiez un facteur à la fois et comparez le timing en <code translate="no" v-pre>train.log</code>.</td>
+</tr>
+<tr>
+<td>Fused AdamW</td>
+<td>Laissez-le désactivé au début. Testez-le lors d&#x27;une nouvelle exécution si vous souhaitez comparer les performances. Conservez la configuration de lot d&#x27;origine lors de la reprise.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Deux GPU ne regroupent pas leur VRAM dans un seul appareil plus grand. Si une exécution manque de mémoire, réduisez le lot par GPU et vérifiez les paramètres effectifs dans le journal avant de réessayer.</p>
+<span id="export-download-and-stop" class="docs-anchor"></span><h3 id="exportez-téléchargez-et-arrêtez">Exportez, téléchargez et arrêtez</h3>
+<p>Après la conversion ou après que <strong>Arrêter et enregistrer</strong> confirme le point de contrôle, définissez <code translate="no" v-pre>EXPORT = True</code> et exécutez <strong>Exporter les résultats</strong>. Laissez <code translate="no" v-pre>TRAINING_MODEL</code> vide pour les exportations régulières de modèles et d&#x27;audio, ou entrez le nom exact du modèle pour inclure ses fichiers d&#x27;expérience pouvant être repris. Ouvrez <strong>FileBrowser</strong> ou utilisez le lien affiché par la cellule d&#x27;exportation et téléchargez <strong>Ilaria-RVC-results.zip</strong>. L&#x27;archive est écrite en <code translate="no" v-pre>/kaggle/working/ilaria-shared</code>. Confirmez que vous pouvez l&#x27;ouvrir localement avant de fermer la session.</p>
+<p>Une fois terminé, définissez <code translate="no" v-pre>STOP = True</code> et exécutez <strong>Arrêter ou redémarrer</strong>. Cela ferme WebUI, FileBrowser et leurs tunnels. Pour les rouvrir dans la même session, réexécutez la section 4. Pour actualiser le code de l&#x27;application, enregistrez votre travail, arrêtez les services et réexécutez les étapes 1 à 4.</p>
+<span id="4-convert-one-recording" class="docs-anchor"></span><h2 id="4-convertir-un-enregistrement">4. Convertir un enregistrement</h2>
+<ol>
+<li>Dans l&#x27;onglet du navigateur Ilaria RVC, ouvrez <strong>Autre → Importer des modèles locaux</strong>. Importez le fichier du modèle d’inférence (<code translate="no" v-pre>.pth</code>) et, si vous l’avez, son index facultatif (<code translate="no" v-pre>.index</code>). Vous pouvez aussi importer un ZIP compatible contenant ces fichiers. Attendez la fin de l&#x27;importation. Vous pouvez aussi ouvrir <strong>Other → Download models from Hugging Face, Google Drive or MEGA</strong>, coller un lien public vers un ZIP compatible, un <code translate="no" v-pre>.pth</code> ou un <code translate="no" v-pre>.index</code>, puis cliquer sur <strong>Download and install model</strong>. Si le modèle et l’index facultatif ont des liens séparés, téléchargez-les un par un.</li>
+<li>Ouvrez <strong>Inférence</strong>, actualisez la liste des voix si nécessaire, sélectionnez la voix souhaitée et accédez à <strong>Single Inference</strong>.</li>
+<li>Téléchargez le court WAV. Commencez par <strong>Pitch 0</strong> et <strong>Index Ratio 0</strong>. Laissez les effets facultatifs désactivés et utilisez l&#x27;intégration attendue par le modèle.</li>
+<li>Cliquez une fois sur le contrôle de conversion et attendez la sortie. Jouez le résultat, puis téléchargez-le depuis le lecteur s&#x27;il est disponible. Conservez votre WAV d&#x27;entrée afin de pouvoir comparer la même phrase plus tard.</li>
+<li>Si vous souhaitez tester la récupération, sélectionnez l&#x27;index correspondant et essayez une petite augmentation à partir de zéro. Si la sortie échoue ou si la voix devient plus difficile à comprendre, revenez à la ligne de base et vérifiez l&#x27;appariement modèle-index.</li>
+</ol>
+<p>Si la voix n&#x27;apparaît jamais, vérifiez d&#x27;abord le journal d&#x27;importation. Un point de contrôle d&#x27;entraînement enregistré sous forme de fichier G ou D appartient à une expérience et nécessite une exportation d&#x27;inférence avant de pouvoir être sélectionné ici.</p>
+<span id="prepare-your-dataset-and-plan-a-training-run" class="docs-anchor"></span><h2 id="préparez-votre-ensemble-de-données-et-planifiez-une-séance-dentraînement">Préparez votre ensemble de données et planifiez une séance d&#x27;entraînement</h2>
+<span id="clean-the-audio-with-mvsep-only-where-needed" class="docs-anchor"></span><h3 id="nettoyez-laudio-avec-mvsep-uniquement-là-où-cela-est-nécessaire">Nettoyez l&#x27;audio avec MVSEP uniquement là où cela est nécessaire</h3>
+<p>Conservez une copie intacte de vos enregistrements. S’ils contiennent déjà une seule voix claire et sèche, sautez la séparation. Utilisez le matériel que vous êtes autorisé à télécharger sur <a href="https://mvsep.com/en/home">MVSEP</a> et sur lequel vous pouvez vous entraîner. Pour les enregistrements confidentiels, nettoyez-les localement.</p>
+<ol>
+<li><strong>Isolez la voix.</strong> Téléchargez un court exemple et choisissez une option de séparation vocale. Téléchargez la racine vocale au format WAV lorsqu&#x27;elle est disponible. Rejouez-le par rapport à l&#x27;original et écoutez avec des écouteurs de la musique, d&#x27;autres voix, des syllabes coupées et des artefacts aqueux ou métalliques.</li>
+<li><strong>Supprimez les chœurs uniquement s&#x27;ils sont présents.</strong> Pour les chansons avec des harmonies ou un refrain sous la cible, utilisez une option de séparation lead/backing sur la tige vocale. Gardez la sortie de plomb. Si les chanteurs se chevauchent encore ou si le lead présente des trous, utilisez une section propre ou une prise différente.</li>
+<li><strong>Réduisez la réverbération uniquement là où elle est audible.</strong> Si la voix a une large queue de réverbération stéréo, testez d&#x27;abord une option de dé-réverbération stéréo sur une copie. Pour les réflexions restantes de la pièce, comparez une passe de dé-réverbération de la pièce. Vous pouvez sauter l’une ou l’autre étape. Écoutez les consonnes tronquées et les respirations à chaque passage.</li>
+<li><strong>Supprimez l&#x27;écho uniquement s&#x27;il répète la voix.</strong> Une répétition audible retardée nécessite un court test séparé. Conservez l&#x27;original ou remplacez-le si la suppression supprime des mots. Évitez d’empiler les passes sur un son autrement propre.</li>
+<li><strong>Préparez les clips finaux.</strong> Coupez les bruits inutilisables et les longues sections vides dans un éditeur tel qu&#x27;Audacity, tout en gardant des souffles utiles et un phrasé naturel. Exportez des WAV propres. Rassemblez les fichiers approuvés dans un ZIP et conservez quelques clips propres à l&#x27;extérieur pour évaluation.</li>
+</ol>
+<p>Testez la chaîne de nettoyage complète sur quelques secondes avant de traiter l&#x27;intégralité de l&#x27;ensemble de données. Un modèle peut apprendre les artefacts laissés dans son audio d&#x27;entraînement. Vérifiez plusieurs clips de différentes sessions avant de les télécharger.</p>
+<span id="clean-a-dataset-locally-with-ultimate-vocal-remover-uvr" class="docs-anchor"></span><h3 id="nettoyez-un-ensemble-de-données-localement-avec-ultimate-vocal-remover-uvr">Nettoyez un ensemble de données localement avec Ultimate Vocal Remover (UVR)</h3>
+<p>UVR sépare un fichier audio en pistes appelées stems. Utilisez-le lorsque la voix cible est mélangée à de la musique, des effets sonores ou d&#x27;autres voix. Si vous disposez déjà d’un enregistrement vocal clair, conservez l’original. UVR traite l&#x27;audio sur votre ordinateur une fois les modèles requis téléchargés. Cloud exécute la dernière tâche de formation RVC séparément.</p>
+<span id="install-uvr-and-prepare-a-test-clip" class="docs-anchor"></span><h4 id="installez-uvr-et-préparez-un-clip-de-test">Installez UVR et préparez un clip de test</h4>
+<ol>
+<li>Téléchargez le programme d&#x27;installation ou le package pour votre système d&#x27;exploitation à partir de <a href="https://github.com/Anjok07/ultimatevocalremovergui/releases">versions UVR</a>. Lancez l&#x27;application de bureau après l&#x27;avoir installée.</li>
+<li>Faites une copie de 15 à 30 secondes d&#x27;un exemple contenant une ligne claire et une section où la musique la chevauche. Gardez l&#x27;original en sécurité.</li>
+<li>Cliquez sur <strong>Sélectionner l&#x27;entrée</strong> et choisissez ce clip de test. Utilisez <strong>Sélectionner la sortie</strong> pour choisir un nouveau dossier accessible en écriture, tel que <code translate="no" v-pre>uvr-test</code>. Choisissez <strong>WAV</strong> pour le format de sortie.</li>
+<li>Sélectionnez une <strong>Méthode de processus</strong> et un modèle qui sépare les <strong>voix</strong> de l&#x27;<strong>instrumental</strong>, par exemple un modèle de voix sous <strong>MDX-Net</strong>. Si la liste est vide, ouvrez les paramètres <strong>Centre de téléchargement</strong>, sélectionnez la famille de modèles correspondante et téléchargez un modèle approprié. Revenez à la fenêtre principale et sélectionnez-la.</li>
+<li>Activez la <strong>Conversion GPU</strong> uniquement si votre version installée reconnaît un périphérique pris en charge. Si cette option provoque une erreur, désactivez-la et testez sur le processeur. Le traitement du processeur peut être plus lent, alors commencez par un court clip.</li>
+</ol>
+<span id="separate-the-vocals-and-listen" class="docs-anchor"></span><h4 id="séparez-les-voix-et-écoutez">Séparez les voix et écoutez</h4>
+<p>Cliquez sur ** Démarrer le traitement **. Une fois terminé, recherchez la tige de voix dans le dossier de sortie. Certains modèles écrivent également une tige instrumentale. Jouez l&#x27;original et les voix à un volume similaire. Vérifiez les consonnes, les respirations, les notes tenues et les sections où l&#x27;accompagnement est fort. Si vous entendez toujours des instruments ou si la voix semble aqueuse ou métallique, comparez un autre modèle sur le même clip de test avant de traiter l&#x27;ensemble des données complet.</p>
+<p>Si vous avez sélectionné le mauvais stem, vérifiez les noms de fichiers ou écoutez chaque sortie. Gardez celui qui contient votre voix principale cible.</p>
+<span id="clean-the-remaining-problems-one-at-a-time" class="docs-anchor"></span><h4 id="nettoyer-les-problèmes-restants-un-à-la-fois">Nettoyer les problèmes restants un à la fois</h4>
+<retype-table copy-text="| Ce qui reste | Que tenter en UVR |
+| --- | --- |
+| Choeurs ou harmonies | Insérez la tige vocale isolée dans un modèle destiné à la séparation lead et backing, si votre installation en propose un. Conservez la sortie principale et vérifiez que la voix cible est complète. |
+| Queues de réverbération entre les phrases | Essayez un modèle destiné à la dé-réverbération si disponible. Comparez avant et après sur un même passage. Conservez la tige d'origine si la dé-réverbération endommage les consonnes ou les notes tenues. |
+| Répétitions différées audibles | Testez un modèle de suppression d'écho si disponible. Si cela supprime des mots ou déforme les respirations, utilisez une autre prise ou excluez la section concernée. |
+| Bourdonnement de la pièce, pics écrêtés ou autres voix | Vérifiez l'original. Si le traitement continue d’endommager la voix, remplacez ou excluez le clip. La séparation ne peut pas reconstruire les pics perdus à cause de l'écrêtage. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Ce qui reste</th>
+<th>Que tenter en UVR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choeurs ou harmonies</td>
+<td>Insérez la tige vocale isolée dans un modèle destiné à la séparation lead et backing, si votre installation en propose un. Conservez la sortie principale et vérifiez que la voix cible est complète.</td>
+</tr>
+<tr>
+<td>Queues de réverbération entre les phrases</td>
+<td>Essayez un modèle destiné à la dé-réverbération si disponible. Comparez avant et après sur un même passage. Conservez la tige d&#x27;origine si la dé-réverbération endommage les consonnes ou les notes tenues.</td>
+</tr>
+<tr>
+<td>Répétitions différées audibles</td>
+<td>Testez un modèle de suppression d&#x27;écho si disponible. Si cela supprime des mots ou déforme les respirations, utilisez une autre prise ou excluez la section concernée.</td>
+</tr>
+<tr>
+<td>Bourdonnement de la pièce, pics écrêtés ou autres voix</td>
+<td>Vérifiez l&#x27;original. Si le traitement continue d’endommager la voix, remplacez ou excluez le clip. La séparation ne peut pas reconstruire les pics perdus à cause de l&#x27;écrêtage.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Traitez l’ensemble complet seulement après qu’une courte comparaison semble correcte. Utilisez Audacity ou un autre éditeur pour couper le matériel inutilisable. Conservez les pauses et les respirations naturelles, exportez les clips approuvés au format WAV et regroupez uniquement ces clips dans l&#x27;ensemble de données ZIP. Gardez les tiges instrumentales et rejetées hors du ZIP. Ensuite, téléchargez-le dans <strong>Training</strong> sur Ilaria RVC et confirmez que <strong>Path to Dataset</strong> pointe vers les enregistrements importés.</p>
+<span id="translate-the-original-applio-workflow-to-ilaria-rvc" class="docs-anchor"></span><h3 id="traduisez-le-flux-de-travail-applio-dorigine-vers-ilaria-rvc">Traduisez le flux de travail Applio d&#x27;origine vers Ilaria RVC</h3>
+<retype-table copy-text="| Étape dans le flux de travail d'origine | Que faire dans ce bloc-notes Ilaria RVC |
+| --- | --- |
+| Créez un compte Kaggle et vérifiez-le | Connectez-vous et vérifiez que vous pouvez activer le GPU et Internet. Complétez la vérification si Kaggle le demande. |
+| Choisissez un tunnel ou un mode de persistance | Exécutez le notebook officiel dans l'ordre et ouvrez l'URL Gradio de l'étape 4. Il gère le tunnel. Sauvegardez l’expérience en dehors de la session temporaire à l’aide de la cellule d’exportation. |
+| Téléchargez l'ensemble de données et collez son chemin | Utilisez le sélecteur de téléchargement dans Ilaria RVC, attendez qu'il se termine et confirmez que **Chemin vers l'ensemble de données** pointe vers vos fichiers préparés. Faites correspondre le nom du modèle avec ce que vous saisirez lors de l'exportation des points de contrôle. |
+| Choisissez un slicer et post-normalisation | **Process Data** gère le découpage et ajuste automatiquement chaque tranche. Le flux de travail Ilaria RVC n'a pas de bascule Applio Post distincte. Faites correspondre la fréquence d'échantillonnage de la formation à l'architecture et aux pré-entraînements. Le rééchantillonnage ne peut pas restaurer les détails manquants. |
+| Définissez les fichiers d'entraînement silencieux sur zéro | Laissez **Fichiers d'entraînement silencieux** à leur valeur par défaut pour votre première exécution. Si vos clips comportent déjà des pauses naturelles et pas de longues sections vides, comparez une exécution distincte avec zéro. Vérifiez les deux sorties sur les mêmes pauses maintenues. |
+| Choisissez la taille du lot en fonction de la longueur de l'ensemble de données | Commencez à 2 ou 4 si vous n'êtes pas sûr, et utilisez 8 uniquement si le GPU a de la marge et que la configuration fonctionne. Vérifiez le journal et la VRAM. Réduisez le lot après une erreur de mémoire insuffisante. Kaggle n'implique pas de multiplicateur de lot fixe, et la longueur de l'ensemble de données à elle seule ne détermine pas la taille du lot. |
+| Entraînez-vous jusqu'à ce que le modèle sonne bien | Enregistrez toutes les 5 ou 10 époques si votre temps disponible et votre espace disque le permettent. Comparez les exportations d'inférence enregistrées sur les mêmes clips de test. Il n’existe pas d’objectif d’époque universel, et étendre une analyse à 500 époques ne peut pas réparer un ensemble de données médiocre. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Étape dans le flux de travail d&#x27;origine</th>
+<th>Que faire dans ce bloc-notes Ilaria RVC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Créez un compte Kaggle et vérifiez-le</td>
+<td>Connectez-vous et vérifiez que vous pouvez activer le GPU et Internet. Complétez la vérification si Kaggle le demande.</td>
+</tr>
+<tr>
+<td>Choisissez un tunnel ou un mode de persistance</td>
+<td>Exécutez le notebook officiel dans l&#x27;ordre et ouvrez l&#x27;URL Gradio de l&#x27;étape 4. Il gère le tunnel. Sauvegardez l’expérience en dehors de la session temporaire à l’aide de la cellule d’exportation.</td>
+</tr>
+<tr>
+<td>Téléchargez l&#x27;ensemble de données et collez son chemin</td>
+<td>Utilisez le sélecteur de téléchargement dans Ilaria RVC, attendez qu&#x27;il se termine et confirmez que <strong>Chemin vers l&#x27;ensemble de données</strong> pointe vers vos fichiers préparés. Faites correspondre le nom du modèle avec ce que vous saisirez lors de l&#x27;exportation des points de contrôle.</td>
+</tr>
+<tr>
+<td>Choisissez un slicer et post-normalisation</td>
+<td><strong>Process Data</strong> gère le découpage et ajuste automatiquement chaque tranche. Le flux de travail Ilaria RVC n&#x27;a pas de bascule Applio Post distincte. Faites correspondre la fréquence d&#x27;échantillonnage de la formation à l&#x27;architecture et aux pré-entraînements. Le rééchantillonnage ne peut pas restaurer les détails manquants.</td>
+</tr>
+<tr>
+<td>Définissez les fichiers d&#x27;entraînement silencieux sur zéro</td>
+<td>Laissez <strong>Fichiers d&#x27;entraînement silencieux</strong> à leur valeur par défaut pour votre première exécution. Si vos clips comportent déjà des pauses naturelles et pas de longues sections vides, comparez une exécution distincte avec zéro. Vérifiez les deux sorties sur les mêmes pauses maintenues.</td>
+</tr>
+<tr>
+<td>Choisissez la taille du lot en fonction de la longueur de l&#x27;ensemble de données</td>
+<td>Commencez à 2 ou 4 si vous n&#x27;êtes pas sûr, et utilisez 8 uniquement si le GPU a de la marge et que la configuration fonctionne. Vérifiez le journal et la VRAM. Réduisez le lot après une erreur de mémoire insuffisante. Kaggle n&#x27;implique pas de multiplicateur de lot fixe, et la longueur de l&#x27;ensemble de données à elle seule ne détermine pas la taille du lot.</td>
+</tr>
+<tr>
+<td>Entraînez-vous jusqu&#x27;à ce que le modèle sonne bien</td>
+<td>Enregistrez toutes les 5 ou 10 époques si votre temps disponible et votre espace disque le permettent. Comparez les exportations d&#x27;inférence enregistrées sur les mêmes clips de test. Il n’existe pas d’objectif d’époque universel, et étendre une analyse à 500 époques ne peut pas réparer un ensemble de données médiocre.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="listen-before-deciding-which-checkpoint-to-keep" class="docs-anchor"></span><h4 id="écoutez-avant-de-décider-quel-point-de-contrôle-conserver">Écoutez avant de décider quel point de contrôle conserver.</h4>
+<p>Utilisez une courte série de clips retenus. Incluez une phrase simple, une avec des consonnes pointues et une pause. Pour le chant, testez également une note tenue et une transition entre registres. Commencez avec le pitch à zéro, la récupération désactivée et les effets facultatifs désactivés. Conservez le modèle dont les résultats sont les plus clairs dans l’ensemble. Si toutes les versions ont les mêmes souffles métalliques ou les mêmes mots étouffés, revisitez l&#x27;ensemble de données au lieu de prolonger aveuglément l&#x27;analyse.</p>
+<p>Conservez l’exportation d’inférence et son index correspondant si vous en avez utilisé un. Pour poursuivre une exécution plus tard, enregistrez l&#x27;expérience complète avec la cellule d&#x27;exportation du bloc-notes et conservez votre ensemble de données d&#x27;origine séparément. Ouvrez le ZIP téléchargé et vérifiez son contenu avant de terminer la session Kaggle.</p>
+<span id="5-train-a-voice-and-save-your-work" class="docs-anchor"></span><h2 id="5-entraînez-une-voix-et-sauvegardez-votre-travail">5. Entraînez une voix et sauvegardez votre travail</h2>
+<ol>
+<li>Dans <strong>Formation</strong>, choisissez un nouveau <strong>Nom de modèle</strong>. Importez votre audio ou votre ZIP via les contrôles de téléchargement de l&#x27;ensemble de données. Attendez la fin de l&#x27;importation et confirmez que <strong>Chemin vers l&#x27;ensemble de données</strong> pointe vers les enregistrements importés.</li>
+<li>Exécutez le <strong>Dataset Checker</strong> et écoutez tous les enregistrements suspects. Confirmez que vos paramètres d&#x27;architecture RVC V2, de fréquence d&#x27;échantillonnage, d&#x27;intégration et de pitch correspondent à vos pré-entraînements G/D sélectionnés si vous les utilisez. Commencez avec une taille de lot adaptée au GPU alloué.</li>
+<li>Exécutez <strong>Process Data</strong>, puis <strong>Feature Extraction</strong>. Lisez l’état de chacun avant de continuer. Si vous modifiez l&#x27;ensemble de données ou l&#x27;encodeur, préparez de nouveaux fichiers pour cette expérience avant la formation.</li>
+<li>Exécutez <strong>Train Pth</strong> avec une première cible modeste et enregistrez les points de contrôle périodiques. Conservez un court clip de test en dehors des données d’entraînement. Comparez les points de contrôle exportés sur ce même clip avant de démarrer une exécution plus longue.</li>
+<li>Créez l&#x27;index des fonctionnalités si vous avez besoin d&#x27;une récupération, puis essayez d&#x27;abord l&#x27;exportation d&#x27;inférence à <strong>Rapport d&#x27;index 0</strong>. Pour une explication détaillée de chaque paramètre, voir <a href="../training-controls/">Contrôles de formation et flux de travail</a>.</li>
+<li>Si vous souhaitez vous arrêter en cours d&#x27;exécution, utilisez <strong>Stop and save</strong> dans Ilaria RVC et attendez que le journal confirme la sauvegarde. Téléchargez les résultats pendant que la session Cloud est toujours active.</li>
+</ol>
+<span id="6-download-a-backup-before-leaving" class="docs-anchor"></span><h2 id="6-téléchargez-une-sauvegarde-avant-de-quitter">6. Téléchargez une sauvegarde avant de quitter</h2>
+<p>La cellule facultative <strong>Exporter les résultats</strong> du notebook crée une archive en <code translate="no" v-pre>/kaggle/working/ilaria-shared/Ilaria-RVC-results.zip</code>. Une session en direct est temporaire. Vérifiez que vous disposez de la sauvegarde sur votre propre ordinateur avant d&#x27;arrêter ou de réinitialiser la session.</p>
+<ul>
+<li><strong>Pour les fichiers d&#x27;inférence uniquement :</strong> définissez <code translate="no" v-pre>EXPORT = True</code> et laissez <code translate="no" v-pre>TRAINING_MODEL = &quot;&quot;</code>. L&#x27;archive comprend les fichiers <code translate="no" v-pre>.pth</code> et <code translate="no" v-pre>.index</code> dans <code translate="no" v-pre>models</code>, ainsi que les fichiers écrits dans <code translate="no" v-pre>InferOutput</code>. Utilisez le bouton de téléchargement du lecteur pour toute conversion qui n&#x27;y a pas écrit de fichier.</li>
+<li><strong>Pour conserver une expérience d&#x27;entraînement pouvant être reprise :</strong> attendez <strong>Arrêter et enregistrer</strong> ou que l&#x27;entraînement termine l&#x27;enregistrement. Définissez <code translate="no" v-pre>EXPORT = True</code> et entrez le nom exact de l&#x27;expérience dans <code translate="no" v-pre>TRAINING_MODEL</code>. Entrez uniquement le nom, sans chemin de dossier. L&#x27;exportation inclut son arbre <code translate="no" v-pre>logs/&lt;name&gt;</code> aux côtés des sorties régulières.</li>
+<li>Exécutez cette cellule de code. Ouvrez le lien affiché ou téléchargez <strong>Ilaria-RVC-results.zip</strong> via Kaggle <strong>Output</strong>. Ouvrez le ZIP localement et confirmez qu&#x27;il contient ce dont vous avez besoin. Conservez votre ensemble de données d&#x27;origine séparément. La cellule d&#x27;exportation ne regroupe pas <code translate="no" v-pre>datasets</code>.</li>
+</ul>
+<p>Pour arrêter uniquement l&#x27;application, définissez <code translate="no" v-pre>STOP = True</code> dans <strong>Arrêter ou redémarrer</strong> et exécutez cette cellule facultative après l&#x27;enregistrement. Exécutez à nouveau l&#x27;étape 4 pour la rouvrir dans la même session. Arrêter ou réinitialiser toute la session Kaggle est une action distincte.</p>
+<span id="troubleshooting" class="docs-anchor"></span><h2 id="dépannage">Dépannage</h2>
+<retype-table copy-text="| Ce que vous voyez | Que faire en premier |
+| --- | --- |
+| L'étape 1 indique d'activer un GPU | Sélectionnez un GPU sous **Accélérateur**, redémarrez si vous y êtes invité, puis réexécutez à partir de l'étape 1. |
+| L'onglet Gradio est vide ou a expiré | Confirmez que la session est toujours en cours. Utilisez le dernier lien de l'étape 4. Si le lien ne peut pas être créé, vérifiez Internet et lisez la sortie de la cellule. |
+| La conversion ou l'entraînement manque de mémoire | Fermez les tâches concurrentes dans la session et essayez un court clip. Pour la formation, réduisez la taille du lot et désactivez la mise en cache facultative des jeux de données GPU si disponible. Enregistrez avant d’interrompre une exécution. |
+| Exporter indique qu'il n'y a aucun résultat | Convertissez ou exportez d'abord une voix. Vérifiez le répertoire de sortie et confirmez que le nom de l'expérience facultatif de l'archive correspond exactement au **Nom du modèle**. |
+| Certains fichiers disparaissent après une réinitialisation | Redémarrez l'installation et réimportez vos sauvegardes locales. Le dossier de travail appartient à la session active. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Ce que vous voyez</th>
+<th>Que faire en premier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L&#x27;étape 1 indique d&#x27;activer un GPU</td>
+<td>Sélectionnez un GPU sous <strong>Accélérateur</strong>, redémarrez si vous y êtes invité, puis réexécutez à partir de l&#x27;étape 1.</td>
+</tr>
+<tr>
+<td>L&#x27;onglet Gradio est vide ou a expiré</td>
+<td>Confirmez que la session est toujours en cours. Utilisez le dernier lien de l&#x27;étape 4. Si le lien ne peut pas être créé, vérifiez Internet et lisez la sortie de la cellule.</td>
+</tr>
+<tr>
+<td>La conversion ou l&#x27;entraînement manque de mémoire</td>
+<td>Fermez les tâches concurrentes dans la session et essayez un court clip. Pour la formation, réduisez la taille du lot et désactivez la mise en cache facultative des jeux de données GPU si disponible. Enregistrez avant d’interrompre une exécution.</td>
+</tr>
+<tr>
+<td>Exporter indique qu&#x27;il n&#x27;y a aucun résultat</td>
+<td>Convertissez ou exportez d&#x27;abord une voix. Vérifiez le répertoire de sortie et confirmez que le nom de l&#x27;expérience facultatif de l&#x27;archive correspond exactement au <strong>Nom du modèle</strong>.</td>
+</tr>
+<tr>
+<td>Certains fichiers disparaissent après une réinitialisation</td>
+<td>Redémarrez l&#x27;installation et réimportez vos sauvegardes locales. Le dossier de travail appartient à la session active.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Si un problème se répète, notez la section défaillante, le nom du GPU de l&#x27;étape 1 et la première erreur de la sortie de la cellule. Le bloc-notes écrit également le journal de démarrage de l&#x27;application sous <code translate="no" v-pre>/kaggle/working/.ilaria-notebook/startup.log</code>. Supprimez l&#x27;URL Gradio de tout journal que vous partagez. Voir <a href="../../troubleshooting/">Dépannage RVC</a> pour les diagnostics du modèle et de l&#x27;audio.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/cloud/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Cloud</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/colab/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Google Colab</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Kaggle", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/cloud/kaggle.md" }</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510353398">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Mise en route">
+    <meta name="description" content="Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/getting-started/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/getting-started/">
+    <meta property="og:title" content="Mise en route">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/getting-started/">
+    <meta name="twitter:title" content="Mise en route">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/start/getting-started.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848510353398" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/getting-started/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/getting-started/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/getting-started/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/getting-started/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/getting-started/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/getting-started/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/getting-started/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/getting-started/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/getting-started/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/getting-started/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/getting-started/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/getting-started/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/getting-started/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="getting-started" class="docs-anchor"></span><h1 id="mise-en-route">Mise en route</h1>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)</a></p>
+<p>Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. <a href="../ilaria-rvc/kaggle/">Ilaria RVC on Kaggle</a></p>
+<p>Pour installer, configurer ou dépanner une application, consultez les <a href="../ilaria-rvc/app-guides/">guides pas à pas par application</a>.</p>
+<h2 id="ilaria-rvc">Ilaria RVC</h2>
+<ol>
+<li>Obtenez le package Windows à partir du <a href="https://huggingface.co/TheStinger/Ilaria_RVC">référentiel Ilaria&#x27;s Hugging Face</a>. Vérifiez les instructions de votre version avant de mettre à jour votre pilote NVIDIA ou de modifier les dépendances.</li>
+<li>Extrayez le package complet dans un dossier accessible en écriture. Exécutez le lanceur à partir de ce dossier afin qu’il puisse trouver le runtime et les outils audio fournis.</li>
+<li>Ouvrez <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>. Si le démarrage échoue, fermez cette tentative et utilisez <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> pour voir la console.</li>
+<li>Si l&#x27;interface ne s&#x27;ouvre pas automatiquement, utilisez <a href="http://127.0.0.1:6969">http://127.0.0.1:6969</a> sur le même PC. Gardez le lanceur en marche pendant que vous travaillez.</li>
+</ol>
+<span id="convert-a-first-clip" class="docs-anchor"></span><h3 id="convertir-un-premier-clip">Convertir un premier clip</h3>
+<ol>
+<li>Importer un modèle compatible depuis <strong>Autre</strong>. Conservez son index de correspondance facultatif avec le point de contrôle.</li>
+<li>Ouvrez <strong>Single Inference</strong>, sélectionnez votre modèle et ajoutez un enregistrement vocal court et sec.</li>
+<li>Commencez par l&#x27;extracteur de pitch par défaut. Réglez le pitch shift et le <strong>Index Ratio</strong> sur zéro pour une ligne de base.</li>
+<li>Convertissez le clip et écoutez le début, la phrase la plus forte et toutes les consonnes qui semblent plus douces que dans l&#x27;original.</li>
+<li>Exportez une référence WAV. Suivez <a href="../voice-conversion/">Conversion vocale</a> pour comparer d&#x27;autres paramètres sur la même source.</li>
+</ol>
+<span id="update-and-back-up" class="docs-anchor"></span><h3 id="mettre-à-jour-et-sauvegarder">Mettre à jour et sauvegarder</h3>
+<p>Pour une installation existante, utilisez <strong>Autre → Mettre à jour Ilaria RVC</strong> et lisez les notes de version avant d&#x27;appliquer la mise à jour. Enregistrez une copie de vos ensembles de données, de vos modèles exportés, de vos points de contrôle d&#x27;entraînement et de l&#x27;audio converti avant de changer de version. Séparez les points de contrôle de formation des modèles d’inférence que vous utilisez ou partagez.</p>
+<p>Utilisez les enregistrements et les modèles vocaux que vous êtes autorisé à utiliser. Pour les démos de modèles et la disponibilité, consultez le <a href="https://ilariarvc.shop/en/demos/">catalogue</a>.</p>
+<p><a href="https://github.com/TheStingerX/Ilaria-RVC">Sources Ilaria RVC et notes d&#x27;installation</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md">Notes de version</a></p>
+<h2 id="vonovox">Vonovox</h2>
+<blockquote>
+<p><strong>Dernière version (bêta)</strong> · <a href="https://huggingface.co/dr87/vonovox/resolve/main/vonovox-200beta3.zip">Vonovox 2.0.0 Beta 3 (ZIP)</a></p>
+</blockquote>
+<ol>
+<li>Sous Windows avec NVIDIA, téléchargez l&#x27;archive de votre génération GPU à partir de <a href="https://huggingface.co/dr87/vonovox/tree/main">Vonovox sur Hugging Face</a>. Extrayez le package complet et démarrez l’application incluse.</li>
+<li>Chargez un modèle RVC V2 et sélectionnez votre microphone et vos écouteurs dans les paramètres du périphérique audio.</li>
+<li>Démarrez la conversion avec le tampon par défaut et prononcez une courte phrase. Confirmez que le moniteur sonne clairement avant de <a href="../real-time/">le router vers une autre application</a>.</li>
+</ol>
+<h2 id="w-okada-vcclient">w-okada VCClient</h2>
+<ol>
+<li>Obtenez un package pour votre plate-forme et votre backend à partir de <a href="https://huggingface.co/wok000/vcclient000/tree/main">VCClient on Hugging Face</a>. Vérifiez qu&#x27;il prend en charge RVC et le format de votre modèle. Le matériel pris en charge peut différer entre les modèles PyTorch et ONNX.</li>
+<li>Extrayez la version et démarrez son serveur ou son lanceur fourni. Ouvrez le client à partir de l&#x27;adresse locale indiquée au démarrage s&#x27;il ne s&#x27;ouvre pas automatiquement.</li>
+<li>Importez la voix dans un emplacement de modèle, sélectionnez cet emplacement et définissez les périphériques d&#x27;entrée et de surveillance. Démarrez la conversion et écoutez avec des écouteurs avant de connecter la sortie à un appel.</li>
+</ol>
+<span id="okada-tg-developed-fork" class="docs-anchor"></span><h2 id="fourche-développée-okada-tg">Fourche développée Okada TG</h2>
+<ol>
+<li>Choisissez un package parmi <a href="https://github.com/tg-develop/voice-changer/releases">TGR releases</a>. Sous Windows, utilisez CUDA pour une carte NVIDIA prise en charge ou la version DirectML pour un GPU AMD ou Intel pris en charge.</li>
+<li>Lancez la build extraite, sélectionnez le périphérique de calcul correspondant et importez la voix dans un emplacement RVC.</li>
+<li>Réglez le moniteur de votre microphone et de votre casque, puis testez avec le tampon par défaut. Choisissez un extracteur de pitch disponible dans votre build lors de la recréation d&#x27;un préréglage à partir d&#x27;un autre backend.</li>
+</ol>
+<h2 id="rvc-gui">RVC GUI</h2>
+<ol>
+<li>Téléchargez le package de bureau à partir de <a href="https://github.com/Tiger14n/RVC-GUI/releases">RVC GUI releases</a>. Cette application archivée est destinée aux configurations héritées compatibles.</li>
+<li>Extrayez et lancez l&#x27;application. Importez un ZIP contenant le point de contrôle d&#x27;inférence et son index correspondant s&#x27;il est fourni, puis sélectionnez la voix importée.</li>
+<li>Choisissez un enregistrement vocal court, commencez à zéro demi-ton et convertissez-le. Écoutez le résultat et enregistrez une copie de référence.</li>
+</ol>
+<h2 id="applio">Applio</h2>
+<ol>
+<li>Obtenez le programme d&#x27;installation ou le package pour votre plateforme à partir de <a href="https://applio.org/">Téléchargements Applio</a>. Dans Desktop, terminez la configuration du moteur et confirmez votre périphérique de calcul. Pour une version packagée de Gradio, extrayez l&#x27;archive complète, démarrez le lanceur et ouvrez son adresse locale.</li>
+<li>Ajoutez une voix à la bibliothèque de modèles et ouvrez <strong>Convert Audio</strong>. Dans les anciennes versions de Gradio, l&#x27;onglet peut être appelé <strong>Inférence</strong>.</li>
+<li>Sélectionnez le modèle, l&#x27;embedder correspondant et l&#x27;index optionnel, puis convertissez un WAV court et propre avec un pitch à zéro. Continuez avec le <a href="../voice-conversion/#convert-a-recording-in-applio">workflow de conversion Applio</a> pour des exemples de lots et de paramètres.</li>
+</ol>
+<h2 id="rvc-webui-mainline---original-rvc">RVC WebUI (Mainline - Original RVC)</h2>
+<ol>
+<li>Choisissez un package compatible parmi <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/releases">versions RVC WebUI (Mainline - Original RVC)</a>. Pour un package Windows qui l&#x27;inclut, extrayez l&#x27;archive et exécutez <code translate="no" v-pre>go-web.bat</code>. Gardez la console ouverte lorsque vous utilisez WebUI.</li>
+<li>Placez le point de contrôle d&#x27;inférence dans <code translate="no" v-pre>assets/weights</code> et son index de récupération correspondant sous <code translate="no" v-pre>logs</code>. Actualisez les listes et sélectionnez votre voix.</li>
+<li>Entrez le chemin complet d&#x27;un court fichier audio, gardez la hauteur à zéro et cliquez sur <strong>Convertir</strong>. Utilisez le contrôle de téléchargement du lecteur de sortie pour l&#x27;enregistrer. Consultez le <a href="../voice-conversion/#convert-a-recording-in-mainline-rvc">workflow de conversion principal</a> pour des vérifications supplémentaires.</li>
+</ol>
+<h2 id="redpanda-vc">Redpanda-vc</h2>
+<ol>
+<li>Téléchargez <a href="https://github.com/redpanda343/Redpanda-vc">Redpanda-vc</a> et démarrez WebUI avec une version adaptée à votre système. Le projet fournit une option de conteneur CUDA pour NVIDIA.</li>
+<li>Sélectionnez le moteur RVC et chargez une voix RVC compatible avec son index optionnel. Redpanda-vc propose également d&#x27;autres familles de modèles, chacune avec son propre format de modèle.</li>
+<li>Pour un test du microphone du navigateur, autorisez l&#x27;accès au microphone, choisissez le GPU prévu si les paramètres de flux exposent la sélection de périphérique et démarrez le flux. Vérifiez le moniteur du casque au tampon par défaut avant de réduire la latence.</li>
+</ol>
+<p>Pour une comparaison côte à côte, voir <a href="../tools/">Outils RVC</a>. Pour le routage, la latence et les pertes du microphone, voir <a href="../real-time/">Conversion vocale en temps réel</a>.</p>
+<h2 id="rvc-blue">RVC Blue</h2>
+<p>Conversion de voix en temps réel sous Windows. <a href="../ilaria-rvc/rvc-blue/installation/">Installation et configuration</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#127968; Accueil</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../rvc-fundamentals/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#129504; Fondamentaux de RVC</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🚀 Mise en route", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/start/getting-started.md" }</script>
+</body>
+</html>

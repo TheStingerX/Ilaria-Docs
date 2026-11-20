@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/es">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510344023">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Guías paso a paso por aplicación">
+    <meta name="description" content="Usa Ilaria RVC para entrenar modelos y convertir grabaciones. Para el micrófono en directo en Windows, elige Vonovox con NVIDIA u Okada TG Developed Fork con AMD o Intel compatible.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/es/ilaria-rvc/app-guides/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/es/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/es/ilaria-rvc/app-guides/">
+    <meta property="og:title" content="Guías paso a paso por aplicación">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/es/ilaria-rvc/app-guides/">
+    <meta name="twitter:title" content="Guías paso a paso por aplicación">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/es/other-rvcs/app-guides.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
+    <link href="../../resources/css/retype.css?v=4.6.0.848510344023" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <meta name="twitter:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/app-guides/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/app-guides/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/es/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Idioma: Español"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg><span class="docs-language-name">Español</span></summary><div><a href="/ilaria-rvc/app-guides/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/app-guides/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/app-guides/" lang="es" hreflang="es" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/app-guides/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/app-guides/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/app-guides/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="step-by-step-guides-by-app" class="docs-anchor"></span><h1 id="guías-paso-a-paso-por-aplicación">Guías paso a paso por aplicación</h1>
+<div role="group" aria-label="¿Qué quieres hacer?" style="margin:1.4rem 0 2rem;padding:1rem;border:1px solid #db78a888;border-radius:1rem;background:#db78a810">
+  <p style="margin:0 0 .85rem;text-align:center;font-weight:700">¿Qué quieres hacer?</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:.65rem">
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Entrenamiento o conversión de archivos</strong><br><span aria-hidden="true">↓</span> <a href="../installation/">Ilaria RVC</a></div>
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Micrófono en directo</strong><br>NVIDIA <span aria-hidden="true">→</span> <a href="../vonovox/installation/">Vonovox</a><br>AMD / Intel <span aria-hidden="true">→</span> <a href="../tgr/installation/">Okada TG Developed Fork</a></div>
+    <div style="padding:.8rem;border:1px solid #db78a866;border-radius:.65rem"><strong>Otras tareas</strong><br><span aria-hidden="true">↓</span> <a href="../applio/installation/">Applio</a> · <a href="../redpanda/first-run/">Redpanda-vc</a></div>
+  </div>
+</div>
+<span id="choose-by-task-and-graphics-card" class="docs-anchor"></span><h2 id="elige-según-la-tarea-y-la-gpu">Elige según la tarea y la GPU</h2>
+<p>Usa <strong>Ilaria RVC</strong> para entrenar modelos y convertir grabaciones. Para el micrófono en directo en Windows, elige <strong>Vonovox</strong> con NVIDIA u <strong>Okada TG Developed Fork</strong> con AMD o Intel compatible. Para otras tareas, empieza por <strong>Applio</strong> o <strong>Redpanda-vc</strong>.</p>
+<p><a href="../installation/">Instala Ilaria RVC</a> · <a href="../gpu-compatibility/">GPU compatibles</a> · <a href="../kaggle/">Usa Kaggle</a></p>
+<span id="train-with-ilaria-rvc" class="docs-anchor"></span><h2 id="entrena-un-modelo-con-ilaria-rvc">Entrena un modelo con Ilaria RVC</h2>
+<p>Prepara grabaciones limpias de una sola persona. Preprocesa los archivos, extrae características e inicia el entrenamiento. Compara varios checkpoints con audios reservados para las pruebas. Si generas un índice, guárdalo con su modelo.</p>
+<p><a href="../datasets/">Prepara el conjunto de datos</a> · <a href="../training-workflow/">Proceso de entrenamiento</a> · <a href="../training-controls/">Controles de entrenamiento</a></p>
+<span id="convert-recordings-with-ilaria-rvc" class="docs-anchor"></span><h2 id="convierte-archivos-con-ilaria-rvc">Convierte archivos con Ilaria RVC</h2>
+<p>Importa un <code translate="no" v-pre>.pth</code> de inferencia y añade su <code translate="no" v-pre>.index</code> si lo tienes. Convierte un WAV corto sin efectos. Guarda el resultado de referencia, cambia un ajuste cada vez y prueba varios clips antes de convertir por lotes. Usa Kaggle para entrenar o convertir si no tienes una GPU local adecuada.</p>
+<p><a href="../inference/">Inferencia individual y por lotes</a> · <a href="../inference-buttons/">Controles de inferencia</a></p>
+<span id="convert-a-microphone-live" class="docs-anchor"></span><h2 id="convierte-el-micrófono-en-directo">Convierte el micrófono en directo</h2>
+<p>Con NVIDIA, elige el paquete de Vonovox para tu GPU. Con AMD o Intel, prueba la versión DirectML de TGR si tu tarjeta es compatible. Escucha el resultado con auriculares antes de enviarlo a un cable virtual. Selecciona el extremo de grabación de ese cable como micrófono en Discord, OBS o tu juego. Si hay cortes, aumenta el búfer.</p>
+<p><a href="../vonovox/installation/">Instala Vonovox</a> · <a href="../vonovox/live-audio/">Configura Vonovox</a> · <a href="../tgr/installation/">Instala Okada TG Developed Fork</a> · <a href="../tgr/live-audio/">Configura TGR</a></p>
+<span id="use-applio-or-redpanda-vc-for-other-workflows" class="docs-anchor"></span><h2 id="otras-tareas-con-applio-o-redpanda-vc">Otras tareas con Applio o Redpanda-vc</h2>
+<p>Applio reúne la síntesis de voz y la gestión de modelos. Redpanda-vc permite comparar RVC, Beatrice y Rectified Flow y probar el directo en el navegador o en el escritorio. Elige el motor RVC para un modelo RVC.</p>
+<p><a href="../applio/installation/">Instala Applio</a> · <a href="../applio/tts/">Síntesis de voz en Applio</a> · <a href="../applio/models/">Modelos en Applio</a> · <a href="../redpanda/first-run/">Configura Redpanda-vc</a> · <a href="../redpanda/live-audio/">Directo en Redpanda-vc</a></p>
+<span id="keep-a-baseline-and-fix-one-issue-at-a-time" class="docs-anchor"></span><h2 id="guarda-una-prueba-de-referencia">Guarda una prueba de referencia</h2>
+<p>Compara archivos con la misma fuente y el mismo volumen. Para el directo, graba una prueba en la aplicación de destino. Si el problema solo aparece allí, revisa el cable virtual, el micrófono seleccionado y la monitorización.</p>
+<span id="other-apps-and-compatibility" class="docs-anchor"></span><h2 id="otras-aplicaciones-y-compatibilidad">Otras aplicaciones y compatibilidad</h2>
+<retype-table copy-text="| Aplicación | Training | Inferencia (archivos) | Realtime | Enlaces del proyecto |
+| --- | --- | --- | --- | --- |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Sí | Sí | Sí · Heredado de RVC WebUI (Mainline - Original RVC), sin futuras actualizaciones | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
+| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Sí | Sí | Sí · Iniciador independiente | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
+| [Applio](../other-rvcs/applio/installation.md) | Sí | Sí | Sí | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Sí | Sí | Sí | [GitHub](https://github.com/redpanda343/Redpanda-vc) |
+| [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | No | Sí | No | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
+| [Vonovox](../other-rvcs/vonovox/installation.md) | No | No | Sí | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
+| [w-okada VCClient](../other-rvcs/okada/installation.md) | No | No | Sí | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
+| [Okada TG Developed Fork](../other-rvcs/tgr/installation.md) | No | No | Sí | [GitHub](https://github.com/tg-develop/voice-changer) |
+| [RVC Blue](../other-rvcs/rvc-blue/installation.md) | No | Archivos en tiempo real | Sí | [GitHub](https://github.com/niel-blue/RVC-Realtime-GUI) · [Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI) |
+| [Replay](../reference/tools.md#replay) | Sí | Sí · versión antigua | No | [Sitio oficial](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Aplicación</th>
+<th>Training</th>
+<th>Inferencia (archivos)</th>
+<th>Realtime</th>
+<th>Enlaces del proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../installation/">Ilaria RVC</a></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí · Heredado de RVC WebUI (Mainline - Original RVC), sin futuras actualizaciones</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC">GitHub</a> · <a href="https://huggingface.co/TheStinger/Ilaria_RVC">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí · Iniciador independiente</td>
+<td><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">GitHub</a> · <a href="https://huggingface.co/lj1995/VoiceConversionWebUI">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../applio/installation/">Applio</a></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí</td>
+<td><a href="https://github.com/IAHispano/Applio">GitHub</a> · <a href="https://huggingface.co/IAHispano/Applio">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../redpanda/first-run/">Redpanda-vc</a></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí</td>
+<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
+<td>No</td>
+<td>Sí</td>
+<td>No</td>
+<td><a href="https://github.com/Tiger14n/RVC-GUI">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="../vonovox/installation/">Vonovox</a></td>
+<td>No</td>
+<td>No</td>
+<td>Sí</td>
+<td><a href="https://github.com/dr87/Vonovox">GitHub</a> · <a href="https://huggingface.co/dr87/vonovox">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../okada/installation/">w-okada VCClient</a></td>
+<td>No</td>
+<td>No</td>
+<td>Sí</td>
+<td><a href="https://github.com/w-okada/voice-changer">GitHub</a> · <a href="https://huggingface.co/wok000/vcclient000">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../tgr/installation/">Okada TG Developed Fork</a></td>
+<td>No</td>
+<td>No</td>
+<td>Sí</td>
+<td><a href="https://github.com/tg-develop/voice-changer">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="../rvc-blue/installation/">RVC Blue</a></td>
+<td>No</td>
+<td>Archivos en tiempo real</td>
+<td>Sí</td>
+<td><a href="https://github.com/niel-blue/RVC-Realtime-GUI">GitHub</a> · <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">Hugging Face</a></td>
+</tr>
+<tr>
+<td><a href="../../tools/#replay">Replay</a></td>
+<td>Sí</td>
+<td>Sí · versión antigua</td>
+<td>No</td>
+<td><a href="https://www.weights.com/replay">Sitio oficial</a> · <a href="https://archive.org/details/replay-8.7.0-installers">Internet Archive</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<retype-table copy-text="| Aplicación | Cuándo usarla | Hardware y notas de compilación |
+| --- | --- | --- |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversión de archivos, TTS, entrenamiento y análisis de audio | La distribución actual de Windows es solo NVIDIA. |
+| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Entrenamiento e inferencia ascendentes, con un iniciador en tiempo real independiente | NVIDIA CUDA en Windows y Ubuntu. La configuración de CPU ascendente cubre sistemas AMD e Intel, con posible uso de DirectML en Windows. |
+| [Applio](../other-rvcs/applio/installation.md) | Conversión de archivos, capacitación y tiempo real en una sola aplicación | La documentación de escritorio enumera NVIDIA CUDA, configuraciones AMD compatibles y Apple MPS. La disponibilidad depende de la edición y el motor. |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Una fork de Applio para experimentar con múltiples motores de conversión de voz | El repositorio incluye un contenedor CUDA y documenta la selección de GPU para transmisiones WebUI. Verifique el motor seleccionado y constrúyalo para otros backends. |
+| [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Conversión simple de archivos locales en la interfaz de escritorio heredada | Archivado. El proyecto documenta Windows NVIDIA CUDA y una solución histórica de Apple Silicon. |
+| [Vonovox](../other-rvcs/vonovox/installation.md) | Recomendado para RVC v2 en vivo en Windows con NVIDIA | Solo NVIDIA CUDA. Haga coincidir el paquete Hugging Face con su generación de GPU. |
+| [w-okada VCClient](../other-rvcs/okada/installation.md) | Conversión en vivo en varios sistemas operativos | Windows CUDA y paquetes estándar, incluidos DirectML o CPU, cuando sean compatibles. Separe las rutas de configuración de Apple Silicon y Linux. |
+| [Okada TG Developed Fork](../other-rvcs/tgr/installation.md) | Live RVC con opciones documentadas para usuarios de AMD, Intel y CPU | Windows CUDA o DirectML. Las compilaciones de Linux y macOS experimentales tienen instrucciones separadas. |
+| [RVC Blue](../other-rvcs/rvc-blue/installation.md) | Conversión de voz en tiempo real en Windows | NVIDIA CUDA 12.8 / 11.8 (Windows) |
+| [Replay](../reference/tools.md#replay) | Entrenamiento de modelos y conversión de archivos · no recomendado | [Instaladores archivados](https://archive.org/details/replay-8.7.0-installers) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Aplicación</th>
+<th>Cuándo usarla</th>
+<th>Hardware y notas de compilación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../installation/">Ilaria RVC</a></td>
+<td>Conversión de archivos, TTS, entrenamiento y análisis de audio</td>
+<td>La distribución actual de Windows es solo NVIDIA.</td>
+</tr>
+<tr>
+<td><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a></td>
+<td>Entrenamiento e inferencia ascendentes, con un iniciador en tiempo real independiente</td>
+<td>NVIDIA CUDA en Windows y Ubuntu. La configuración de CPU ascendente cubre sistemas AMD e Intel, con posible uso de DirectML en Windows.</td>
+</tr>
+<tr>
+<td><a href="../applio/installation/">Applio</a></td>
+<td>Conversión de archivos, capacitación y tiempo real en una sola aplicación</td>
+<td>La documentación de escritorio enumera NVIDIA CUDA, configuraciones AMD compatibles y Apple MPS. La disponibilidad depende de la edición y el motor.</td>
+</tr>
+<tr>
+<td><a href="../redpanda/first-run/">Redpanda-vc</a></td>
+<td>Una fork de Applio para experimentar con múltiples motores de conversión de voz</td>
+<td>El repositorio incluye un contenedor CUDA y documenta la selección de GPU para transmisiones WebUI. Verifique el motor seleccionado y constrúyalo para otros backends.</td>
+</tr>
+<tr>
+<td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
+<td>Conversión simple de archivos locales en la interfaz de escritorio heredada</td>
+<td>Archivado. El proyecto documenta Windows NVIDIA CUDA y una solución histórica de Apple Silicon.</td>
+</tr>
+<tr>
+<td><a href="../vonovox/installation/">Vonovox</a></td>
+<td>Recomendado para RVC v2 en vivo en Windows con NVIDIA</td>
+<td>Solo NVIDIA CUDA. Haga coincidir el paquete Hugging Face con su generación de GPU.</td>
+</tr>
+<tr>
+<td><a href="../okada/installation/">w-okada VCClient</a></td>
+<td>Conversión en vivo en varios sistemas operativos</td>
+<td>Windows CUDA y paquetes estándar, incluidos DirectML o CPU, cuando sean compatibles. Separe las rutas de configuración de Apple Silicon y Linux.</td>
+</tr>
+<tr>
+<td><a href="../tgr/installation/">Okada TG Developed Fork</a></td>
+<td>Live RVC con opciones documentadas para usuarios de AMD, Intel y CPU</td>
+<td>Windows CUDA o DirectML. Las compilaciones de Linux y macOS experimentales tienen instrucciones separadas.</td>
+</tr>
+<tr>
+<td><a href="../rvc-blue/installation/">RVC Blue</a></td>
+<td>Conversión de voz en tiempo real en Windows</td>
+<td>NVIDIA CUDA 12.8 / 11.8 (Windows)</td>
+</tr>
+<tr>
+<td><a href="../../tools/#replay">Replay</a></td>
+<td>Entrenamiento de modelos y conversión de archivos · no recomendado</td>
+<td><a href="https://archive.org/details/replay-8.7.0-installers">Instaladores archivados</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<ul>
+<li><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a> · <a href="../okada/installation/">w-okada VCClient</a> · <a href="../rvc-gui/file-conversion/">RVC GUI</a> · <a href="../rvc-blue/installation/">RVC Blue</a></li>
+<li><a href="../../tools/">Compara todas las aplicaciones</a></li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/other-buttons/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Otros controles explicados</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/vonovox/installation/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Instale Vonovox</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Guías por aplicación", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/app-guides.md" }</script>
+</body>
+</html>

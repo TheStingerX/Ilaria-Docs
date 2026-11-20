@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/pt">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510372315">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Resolução de problemas do RVC">
+    <meta name="description" content="Baixar Ilaria RVC 2.4.0 para Windows (ZIP)">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/pt/troubleshooting/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/pt/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/pt/troubleshooting/">
+    <meta property="og:title" content="Resolução de problemas do RVC">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/pt/troubleshooting/">
+    <meta name="twitter:title" content="Resolução de problemas do RVC">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/pt/reference/troubleshooting.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848510372315" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848510372315" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848510372315" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:description" content="Uma coleção de informações sobre o mundo do RVC, com guias sobre conversão de voz, treino de modelos e aplicações compatíveis.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
+    <meta name="twitter:description" content="Uma coleção de informações sobre o mundo do RVC, com guias sobre conversão de voz, treino de modelos e aplicações compatíveis.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/troubleshooting/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/troubleshooting/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/troubleshooting/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/troubleshooting/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/troubleshooting/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/troubleshooting/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/troubleshooting/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/pt/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/pt/">Site</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Idioma: Português"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg><span class="docs-language-name">Português</span></summary><div><a href="/troubleshooting/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/troubleshooting/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/troubleshooting/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/troubleshooting/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/troubleshooting/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/troubleshooting/" lang="pt" hreflang="pt" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/pt/">Site</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="troubleshooting-rvc" class="docs-anchor"></span><h1 id="resolução-de-problemas-do-rvc">Resolução de problemas do RVC</h1>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Baixar Ilaria RVC 2.4.0 para Windows (ZIP)</a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-tip" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M7.90625 2.15625C4.50944 2.15625 2.15625 4.58563 2.15625 7.54688C2.15625 8.96138 2.76575 9.88281 3.57075 10.8589L3.87837 11.2226C4.19894 11.6021 4.554 12.0218 4.84581 12.4416C5.25406 13.0324 5.61775 13.7296 5.7385 14.5834C5.76728 14.8608 5.68746 15.1386 5.51579 15.3583C5.34413 15.5781 5.09399 15.7228 4.8179 15.7621C4.5418 15.8013 4.26124 15.7321 4.03512 15.5689C3.809 15.4056 3.65493 15.1612 3.60525 14.8867C3.54775 14.4814 3.37094 14.1004 3.07338 13.6692C2.8306 13.3302 2.57055 13.0039 2.29425 12.6917C2.1735 12.5479 2.04556 12.397 1.909 12.2317C1.00769 11.1406 0 9.72613 0 7.54688C0 3.32062 3.39681 0 7.90625 0C12.4157 0 15.8125 3.32062 15.8125 7.54688C15.8125 9.72613 14.8048 11.1406 13.9035 12.2317C13.7669 12.397 13.639 12.5479 13.5183 12.6903C13.2207 13.0424 12.9677 13.3414 12.7406 13.6692C12.4416 14.1004 12.2662 14.4814 12.2087 14.8867C12.1557 15.1584 12.0003 15.3994 11.7747 15.5598C11.5492 15.7202 11.2706 15.7879 10.9965 15.7488C10.7225 15.7096 10.474 15.5667 10.3023 15.3496C10.1306 15.1325 10.0489 14.8577 10.074 14.582C10.1948 13.7296 10.5584 13.0324 10.9667 12.4416C11.2585 12.0218 11.6136 11.6021 11.9341 11.2226C12.0419 11.0961 12.1454 10.9739 12.2403 10.8589C13.0468 9.88281 13.6562 8.96138 13.6562 7.54688C13.6562 4.58563 11.3031 2.15625 7.90625 2.15625ZM4.67188 17.25H11.1406C11.4266 17.25 11.7008 17.3636 11.903 17.5658C12.1052 17.768 12.2188 18.0422 12.2188 18.3281C12.2188 18.6141 12.1052 18.8883 11.903 19.0905C11.7008 19.2927 11.4266 19.4062 11.1406 19.4062H4.67188C4.38594 19.4062 4.11171 19.2927 3.90953 19.0905C3.70734 18.8883 3.59375 18.6141 3.59375 18.3281C3.59375 18.0422 3.70734 17.768 3.90953 17.5658C4.11171 17.3636 4.38594 17.25 4.67188 17.25ZM5.03125 21.9219C5.03125 21.6359 5.14484 21.3617 5.34703 21.1595C5.54921 20.9573 5.82344 20.8438 6.10938 20.8438H9.70312C9.98906 20.8438 10.2633 20.9573 10.4655 21.1595C10.6677 21.3617 10.7812 21.6359 10.7812 21.9219C10.7812 22.2078 10.6677 22.482 10.4655 22.6842C10.2633 22.8864 9.98906 23 9.70312 23H6.10938C5.82344 23 5.54921 22.8864 5.34703 22.6842C5.14484 22.482 5.03125 22.2078 5.03125 21.9219Z" />
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>Novo no RVC? Siga estas 4 regras antes de qualquer coisa:</strong></p>
+<ol>
+<li><strong>Use uma pasta curta e simples</strong> como <code translate="no" v-pre>C:\RVC</code> ou <code translate="no" v-pre>D:\IlariaRVC</code>. Nunca coloque o aplicativo dentro do <code translate="no" v-pre>OneDrive</code>, <code translate="no" v-pre>Program Files</code> ou pastas com espaços, acentos ou emojis.</li>
+<li><strong>Extraia sempre o ZIP completo</strong> antes de abrir qualquer arquivo. Nunca execute arquivos <code translate="no" v-pre>.bat</code> de dentro do WinRAR, 7-Zip ou da pré-visualização de ZIP do Windows.</li>
+<li><strong>Nunca feche a janela preta do terminal.</strong> Essa janela faz o programa rodar e mostra o erro real se algo falhar.</li>
+<li><strong>Teste primeiro com um clipe <code translate="no" v-pre>.wav</code> limpo de 10 segundos.</strong> Se o app fechar, copie o <strong>primeiro</strong> erro do console. Se funcionar mas soar ruim, mude <strong>uma configuração por vez</strong> no mesmo clipe de teste.</li>
+</ol>
+        </div>
+    </div>
+</div>
+<span id="quick-symptom-finder" class="docs-anchor"></span><h2 id="encontre-seu-problema-rapidamente">Encontre seu problema rapidamente</h2>
+<retype-table copy-text="| O que está acontecendo? | Causa mais provável | Onde olhar |
+| --- | --- | --- |
+| A janela preta abre e fecha em 1 segundo | Executado dentro do ZIP, bloqueado pelo antivírus ou falta um runtime | [1. Inicialização, Windows, Antivírus e Downloads](#1-inicialização-windows-antivírus-e-downloads) |
+| Navegador mostra erro de conexão ou página em branco | O app travou ao iniciar, porta errada ou VPN/proxy em `127.0.0.1` | [1. Inicialização, Windows, Antivírus e Downloads](#1-inicialização-windows-antivírus-e-downloads) |
+| O app está muito lento ou diz `CUDA out of memory` | Usando CPU em vez de GPU, HAGS do Windows ligado ou batch/áudio muito grande | [2. GPU, CUDA, AMD/Intel e Memória](#2-gpu-cuda-amdintel-e-memória) |
+| O modelo não aparece ou falha ao carregar (`.pth` / `.index`) | Esqueceu de clicar em Refresh, ZIP não extraído, download corrompido ou arquivo errado | [3. Modelos, Checkpoints e Índices](#3-modelos-checkpoints-e-índices) |
+| A voz parece esquilo, monstro, robô ou sua voz original | Pitch (Transpose) errado, áudio sujo ou Pitch Extractor incorreto | [4. Qualidade de voz, Pitch e Arquivos de áudio](#4-qualidade-de-voz-pitch-e-arquivos-de-áudio) |
+| O treino para, trava ou exporta uma voz muda | Clipe vazio ou silencioso no dataset, workers de CPU demais ou `Fresh Training` ligado | [5. Pré-processamento de Dataset e Treino](#5-pré-processamento-de-dataset-e-treino) |
+| Microfone com atraso, cortes, eco ou Discord não te ouve | Taxas diferentes (`44100` vs `48000 Hz`), cabo virtual errado ou Krisp | [6. Voice Changer ao vivo, Microfone e Discord](#6-voice-changer-ao-vivo-microfone-e-discord) |
+| Google Colab ou Kaggle falha ou desconecta | Acelerador GPU desligado, cota esgotada ou tempo limite atingido | [7. Notebooks na nuvem (Colab e Kaggle)](#7-notebooks-na-nuvem-colab-e-kaggle) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>O que está acontecendo?</th>
+<th>Causa mais provável</th>
+<th>Onde olhar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A janela preta abre e fecha em 1 segundo</td>
+<td>Executado dentro do ZIP, bloqueado pelo antivírus ou falta um runtime</td>
+<td><doc-anchor-trigger to="#1-inicializa%C3%A7%C3%A3o-windows-antiv%C3%ADrus-e-downloads">1. Inicialização, Windows, Antivírus e Downloads</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>Navegador mostra erro de conexão ou página em branco</td>
+<td>O app travou ao iniciar, porta errada ou VPN/proxy em <code translate="no" v-pre>127.0.0.1</code></td>
+<td><doc-anchor-trigger to="#1-inicializa%C3%A7%C3%A3o-windows-antiv%C3%ADrus-e-downloads">1. Inicialização, Windows, Antivírus e Downloads</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>O app está muito lento ou diz <code translate="no" v-pre>CUDA out of memory</code></td>
+<td>Usando CPU em vez de GPU, HAGS do Windows ligado ou batch/áudio muito grande</td>
+<td><doc-anchor-trigger to="#2-gpu-cuda-amdintel-e-mem%C3%B3ria">2. GPU, CUDA, AMD/Intel e Memória</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>O modelo não aparece ou falha ao carregar (<code translate="no" v-pre>.pth</code> / <code translate="no" v-pre>.index</code>)</td>
+<td>Esqueceu de clicar em Refresh, ZIP não extraído, download corrompido ou arquivo errado</td>
+<td><doc-anchor-trigger to="#3-modelos-checkpoints-e-%C3%ADndices">3. Modelos, Checkpoints e Índices</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>A voz parece esquilo, monstro, robô ou sua voz original</td>
+<td>Pitch (Transpose) errado, áudio sujo ou Pitch Extractor incorreto</td>
+<td><doc-anchor-trigger to="#4-qualidade-de-voz-pitch-e-arquivos-de-%C3%A1udio">4. Qualidade de voz, Pitch e Arquivos de áudio</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>O treino para, trava ou exporta uma voz muda</td>
+<td>Clipe vazio ou silencioso no dataset, workers de CPU demais ou <code translate="no" v-pre>Fresh Training</code> ligado</td>
+<td><doc-anchor-trigger to="#5-pr%C3%A9-processamento-de-dataset-e-treino">5. Pré-processamento de Dataset e Treino</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>Microfone com atraso, cortes, eco ou Discord não te ouve</td>
+<td>Taxas diferentes (<code translate="no" v-pre>44100</code> vs <code translate="no" v-pre>48000 Hz</code>), cabo virtual errado ou Krisp</td>
+<td><doc-anchor-trigger to="#6-voice-changer-ao-vivo-microfone-e-discord">6. Voice Changer ao vivo, Microfone e Discord</doc-anchor-trigger></td>
+</tr>
+<tr>
+<td>Google Colab ou Kaggle falha ou desconecta</td>
+<td>Acelerador GPU desligado, cota esgotada ou tempo limite atingido</td>
+<td><doc-anchor-trigger to="#7-notebooks-na-nuvem-colab-e-kaggle">7. Notebooks na nuvem (Colab e Kaggle)</doc-anchor-trigger></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="simple-5-step-baseline-test" class="docs-anchor"></span><h2 id="teste-base-simples-em-5-passos">Teste base simples em 5 passos</h2>
+<p>Se tudo soar estranho ou você não souber qual opção estragou o áudio, volte a um teste limpo:</p>
+<ol>
+<li><strong>Prepare um clipe limpo:</strong> Grave de 10 a 20 segundos de uma única voz falando claro em um quarto silencioso (sem música, sem eco). Salve como <code translate="no" v-pre>.wav</code> padrão em uma pasta simples como <code translate="no" v-pre>C:\RVC\test.wav</code>.</li>
+<li><strong>Escolha um modelo confiável:</strong> Selecione um modelo <code translate="no" v-pre>.pth</code> que você sabe que funciona. Deixe o <code translate="no" v-pre>.index</code> desligado (<code translate="no" v-pre>Index Rate = 0</code>) no primeiro teste.</li>
+<li><strong>Use configurações seguras:</strong>
+<ul>
+<li><strong>Pitch / Transpose:</strong> <code translate="no" v-pre>0</code> (mesmo gênero), <code translate="no" v-pre>+12</code> (homem para mulher), <code translate="no" v-pre>-12</code> (mulher para homem).</li>
+<li><strong>Pitch Extractor:</strong> <code translate="no" v-pre>rmvpe</code> (melhor equilíbrio entre velocidade e qualidade).</li>
+<li><strong>Efeitos / limpeza opcionais:</strong> Todos <strong>DESLIGADOS</strong>.</li>
+</ul>
+</li>
+<li><strong>Converta e ouça:</strong> Salve em uma pasta local normal (não <code translate="no" v-pre>OneDrive</code>). Se o player do navegador ficar mudo, baixe o arquivo e abra no VLC ou Windows Media Player.</li>
+<li><strong>Mude uma coisa por vez:</strong> Quando o teste limpo funcionar, ative o <code translate="no" v-pre>.index</code> (comece em <code translate="no" v-pre>0.5</code> a <code translate="no" v-pre>0.75</code>) ou ajuste o Pitch em <code translate="no" v-pre>1</code> ou <code translate="no" v-pre>2</code> semitons.</li>
+</ol>
+<hr>
+<span id="known-errors--step-by-step-fixes" class="docs-anchor"></span><h2 id="erros-conhecidos-e-soluções-passo-a-passo">Erros conhecidos e soluções passo a passo</h2>
+<span id="1-launcher-windows-antivirus--downloads" class="docs-anchor"></span><h3 id="1-inicialização-windows-antivírus-e-downloads">1. Inicialização, Windows, Antivírus e Downloads</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| **A janela preta abre e fecha na hora** | Você executou dentro da prévia do ZIP ou o Python deu erro logo no início. | 1. Clique com o botão direito no `.zip` e extraia a pasta toda primeiro.&lt;br&gt;2. No Ilaria RVC, execute `RUN_ILARIA_RVC_LOGS.bat` para a janela ficar aberta e mostrar o erro. |
+| **Antivírus / Windows Defender apaga `.bat`, `.exe` ou `.dll`** | O antivírus bloqueia scripts portáteis de IA por engano. | Abra **Segurança do Windows → Proteção contra vírus e ameaças → Histórico de proteção**, restaure o arquivo e adicione sua pasta RVC (ex. `C:\RVC`) às **Exclusões**. |
+| `WinError 10048` / `Address already in use` / porta ocupada | Outra cópia do RVC ou outro programa já está usando essa porta (`6969` ou `7865`). | Feche todas as janelas pretas abertas (ou finalize `python.exe` no **Gerenciador de Tarefas**) e abra o app apenas uma vez. |
+| `[WinError 3]` / `[WinError 206]` (caminho não encontrado / muito longo) | O Windows falha quando o caminho passa de 260 caracteres ou tem espaços, acentos ou símbolos (`()`, `[]`). | Mova o app e os áudios para um caminho curto como `C:\RVC\`. Renomeie pastas e `.wav` usando apenas letras, números e `_`. |
+| `[WinError 2]` (ao carregar/salvar áudio) | Falta o `ffmpeg.exe` ou `ffprobe.exe` (a ferramenta que lê arquivos de áudio). | Confira se `ffmpeg.exe` está na pasta do app (reextraia o ZIP se o Defender removeu). Em instalações manuais, instale o FFmpeg, adicione ao `PATH` do Windows e reinicie o terminal. |
+| `PermissionError: [Errno 13]` / `[WinError 5] Acesso negado` | O Windows bloqueia escrita em `Program Files`, `OneDrive` ou em um arquivo aberto em outro programa. | Tire o app de `Program Files` e `OneDrive` para `C:\RVC\`. Feche qualquer player ou editor que esteja usando o arquivo de áudio. |
+| `Expecting value: line 1 column 1` ou página em branco | O app travou antes de carregar, porta errada ou VPN/proxy bloqueando conexões locais. | Leia o **primeiro** erro na janela preta. Confira o endereço exato impresso lá (`127.0.0.1:6969` no Ilaria RVC, `127.0.0.1:7865` no Gradio/Deiteris). Desative VPN/proxy para `localhost` e `127.0.0.1`. |
+| Arquivo dividido falha ao extrair (`.zip.001`, `.zip.002`) | O extrator do Windows não abre arquivos em várias partes ou falta uma parte. | Coloque todas as partes (`.001`, `.002`, etc.) na mesma pasta, instale o **7-Zip**, clique com o botão direito **apenas** no `.001` e escolha **7-Zip → Extrair aqui**. |
+| `ModuleNotFoundError: No module named 'fairseq'` | Instalação manual no Python 3.11+ ou sem ferramentas de compilação C++. | Iniciantes devem usar o pacote ZIP portátil pronto. Para instalação manual, use **Python 3.9 ou 3.10** e instale **Microsoft Visual Studio Build Tools** (*Desenvolvimento para desktop com C++*). |
+| `llvmlite.dll` / `OSError: [WinError 126]` / falta `.dll` | Faltam no Windows as bibliotecas Visual C++ exigidas pelos pacotes de IA em Python. | Baixe e instale o **Microsoft Visual C++ 2015-2022 Redistributable (x64)** oficial da Microsoft e reinicie o PC. |
+| `urllib.error` / `ConnectionResetError` / `SSLError` | Sua rede, firewall ou VPN bloqueou o download automático de `hubert_base.pt` ou `rmvpe.pt`. | Desative temporariamente a VPN/regras rígidas do firewall ou baixe manualmente `hubert_base.pt` e `rmvpe.pt` e coloque-os em `assets/hubert/` e `assets/rmvpe/`. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A janela preta abre e fecha na hora</strong></td>
+<td>Você executou dentro da prévia do ZIP ou o Python deu erro logo no início.</td>
+<td>1. Clique com o botão direito no <code translate="no" v-pre>.zip</code> e extraia a pasta toda primeiro.<br>2. No Ilaria RVC, execute <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> para a janela ficar aberta e mostrar o erro.</td>
+</tr>
+<tr>
+<td><strong>Antivírus / Windows Defender apaga <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code> ou <code translate="no" v-pre>.dll</code></strong></td>
+<td>O antivírus bloqueia scripts portáteis de IA por engano.</td>
+<td>Abra <strong>Segurança do Windows → Proteção contra vírus e ameaças → Histórico de proteção</strong>, restaure o arquivo e adicione sua pasta RVC (ex. <code translate="no" v-pre>C:\RVC</code>) às <strong>Exclusões</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>WinError 10048</code> / <code translate="no" v-pre>Address already in use</code> / porta ocupada</td>
+<td>Outra cópia do RVC ou outro programa já está usando essa porta (<code translate="no" v-pre>6969</code> ou <code translate="no" v-pre>7865</code>).</td>
+<td>Feche todas as janelas pretas abertas (ou finalize <code translate="no" v-pre>python.exe</code> no <strong>Gerenciador de Tarefas</strong>) e abra o app apenas uma vez.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>[WinError 3]</code> / <code translate="no" v-pre>[WinError 206]</code> (caminho não encontrado / muito longo)</td>
+<td>O Windows falha quando o caminho passa de 260 caracteres ou tem espaços, acentos ou símbolos (<code translate="no" v-pre>()</code>, <code translate="no" v-pre>[]</code>).</td>
+<td>Mova o app e os áudios para um caminho curto como <code translate="no" v-pre>C:\RVC\</code>. Renomeie pastas e <code translate="no" v-pre>.wav</code> usando apenas letras, números e <code translate="no" v-pre>_</code>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>[WinError 2]</code> (ao carregar/salvar áudio)</td>
+<td>Falta o <code translate="no" v-pre>ffmpeg.exe</code> ou <code translate="no" v-pre>ffprobe.exe</code> (a ferramenta que lê arquivos de áudio).</td>
+<td>Confira se <code translate="no" v-pre>ffmpeg.exe</code> está na pasta do app (reextraia o ZIP se o Defender removeu). Em instalações manuais, instale o FFmpeg, adicione ao <code translate="no" v-pre>PATH</code> do Windows e reinicie o terminal.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>PermissionError: [Errno 13]</code> / <code translate="no" v-pre>[WinError 5] Acesso negado</code></td>
+<td>O Windows bloqueia escrita em <code translate="no" v-pre>Program Files</code>, <code translate="no" v-pre>OneDrive</code> ou em um arquivo aberto em outro programa.</td>
+<td>Tire o app de <code translate="no" v-pre>Program Files</code> e <code translate="no" v-pre>OneDrive</code> para <code translate="no" v-pre>C:\RVC\</code>. Feche qualquer player ou editor que esteja usando o arquivo de áudio.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Expecting value: line 1 column 1</code> ou página em branco</td>
+<td>O app travou antes de carregar, porta errada ou VPN/proxy bloqueando conexões locais.</td>
+<td>Leia o <strong>primeiro</strong> erro na janela preta. Confira o endereço exato impresso lá (<code translate="no" v-pre>127.0.0.1:6969</code> no Ilaria RVC, <code translate="no" v-pre>127.0.0.1:7865</code> no Gradio/Deiteris). Desative VPN/proxy para <code translate="no" v-pre>localhost</code> e <code translate="no" v-pre>127.0.0.1</code>.</td>
+</tr>
+<tr>
+<td>Arquivo dividido falha ao extrair (<code translate="no" v-pre>.zip.001</code>, <code translate="no" v-pre>.zip.002</code>)</td>
+<td>O extrator do Windows não abre arquivos em várias partes ou falta uma parte.</td>
+<td>Coloque todas as partes (<code translate="no" v-pre>.001</code>, <code translate="no" v-pre>.002</code>, etc.) na mesma pasta, instale o <strong>7-Zip</strong>, clique com o botão direito <strong>apenas</strong> no <code translate="no" v-pre>.001</code> e escolha <strong>7-Zip → Extrair aqui</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>ModuleNotFoundError: No module named 'fairseq'</code></td>
+<td>Instalação manual no Python 3.11+ ou sem ferramentas de compilação C++.</td>
+<td>Iniciantes devem usar o pacote ZIP portátil pronto. Para instalação manual, use <strong>Python 3.9 ou 3.10</strong> e instale <strong>Microsoft Visual Studio Build Tools</strong> (<em>Desenvolvimento para desktop com C++</em>).</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>llvmlite.dll</code> / <code translate="no" v-pre>OSError: [WinError 126]</code> / falta <code translate="no" v-pre>.dll</code></td>
+<td>Faltam no Windows as bibliotecas Visual C++ exigidas pelos pacotes de IA em Python.</td>
+<td>Baixe e instale o <strong>Microsoft Visual C++ 2015-2022 Redistributable (x64)</strong> oficial da Microsoft e reinicie o PC.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>urllib.error</code> / <code translate="no" v-pre>ConnectionResetError</code> / <code translate="no" v-pre>SSLError</code></td>
+<td>Sua rede, firewall ou VPN bloqueou o download automático de <code translate="no" v-pre>hubert_base.pt</code> ou <code translate="no" v-pre>rmvpe.pt</code>.</td>
+<td>Desative temporariamente a VPN/regras rígidas do firewall ou baixe manualmente <code translate="no" v-pre>hubert_base.pt</code> e <code translate="no" v-pre>rmvpe.pt</code> e coloque-os em <code translate="no" v-pre>assets/hubert/</code> e <code translate="no" v-pre>assets/rmvpe/</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="2-gpu-cuda-amdintel--memory" class="docs-anchor"></span><h3 id="2-gpu-cuda-amdintel-e-memória">2. GPU, CUDA, AMD/Intel e Memória</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| **Tudo roda muito lento (usando CPU em vez de GPU)** | O app não detecta sua placa de vídeo ou você baixou uma versão só NVIDIA para uma GPU AMD/Intel. | 1. Usuários NVIDIA: confira se os drivers estão instalados e se não está usando vídeo integrado.&lt;br&gt;2. Usuários AMD/Intel: builds CUDA não usam sua GPU. Use uma build **DirectML** (YuneVoix, Deiteris DirectML, Mainline DirectML) ou um notebook na nuvem. |
+| **PC travando, VRAM vazando para a RAM ou voz ao vivo robótica** | Uma configuração do Windows chamada **HAGS** (Agendamento de GPU acelerado por hardware) prejudica a estabilidade da VRAM em apps de IA. | Vá em **Configurações do Windows → Sistema → Tela → Gráficos → Configurações avançadas de gráficos**, deixe **Agendamento de GPU acelerado por hardware** em **DESATIVADO** e **reinicie o PC**. |
+| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (conversão) | A memória da placa de vídeo acabou porque a música é longa ou um jogo/navegador está usando VRAM. | Ative **Split Audio** para faixas longas, feche jogos e abas pesadas (ou desligue a aceleração por hardware do navegador) e desative efeitos extras. |
+| `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (treino) | O **Batch Size** está grande demais para a memória da sua GPU. | Diminua o **Batch Size** aos poucos (de `8` para `4`, `2` ou `1`). Desative &quot;Cache dataset in GPU/VRAM&quot; e feche qualquer voice changer ao vivo antes de treinar. |
+| `Torch not compiled with CUDA enabled` / `no kernel image is available` | A versão CUDA do app não bate com a geração da sua placa NVIDIA (ex. RTX 50 nova vs GTX 10 antiga). | Use a build certa: o **Ilaria RVC** inclui **CUDA 12.8** para GTX 16 / RTX 20-50 e baixa automaticamente **CUDA 12.6** (`runtime-cu126`) para Maxwell/Pascal/Volta. |
+| `CUDA driver version is insufficient for CUDA runtime version` | Seu driver NVIDIA é antigo demais para o motor de IA. | Atualize o driver gráfico pelo **NVIDIA App / GeForce Experience** ou site oficial da NVIDIA e reinicie. |
+| `RuntimeError: CUDA error: an illegal memory access was encountered` | A GPU travou por overclock/undervolt instável, superaquecimento ou conflito de driver. | Zere qualquer overclock/undervolt no MSI Afterburner, atualize o driver NVIDIA e tente novamente. |
+| `RuntimeError: expected scalar type Half but found Float` / `HalfTensor` | O modo rápido `FP16` está ligado, mas sua GPU (série GTX 10, DirectML ou CPU) não suporta. | Vá nas Configurações e desative **FP16** (mude para **FP32**). |
+| `OSError: [WinError 1455]` (arquivo de paginação pequeno demais) | O Windows ficou sem Memória Virtual no disco ao carregar modelos ou criar o índice. | Pesquise **Exibir configurações avançadas do sistema → Configurações de desempenho → Avançado → Memória virtual → Alterar**, desmarque o gerenciamento automático, defina um tamanho personalizado (ex. Inicial `16384` MB, Máximo `32768` MB), clique em **Definir** e **reinicie o PC**. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tudo roda muito lento (usando CPU em vez de GPU)</strong></td>
+<td>O app não detecta sua placa de vídeo ou você baixou uma versão só NVIDIA para uma GPU AMD/Intel.</td>
+<td>1. Usuários NVIDIA: confira se os drivers estão instalados e se não está usando vídeo integrado.<br>2. Usuários AMD/Intel: builds CUDA não usam sua GPU. Use uma build <strong>DirectML</strong> (YuneVoix, Deiteris DirectML, Mainline DirectML) ou um notebook na nuvem.</td>
+</tr>
+<tr>
+<td><strong>PC travando, VRAM vazando para a RAM ou voz ao vivo robótica</strong></td>
+<td>Uma configuração do Windows chamada <strong>HAGS</strong> (Agendamento de GPU acelerado por hardware) prejudica a estabilidade da VRAM em apps de IA.</td>
+<td>Vá em <strong>Configurações do Windows → Sistema → Tela → Gráficos → Configurações avançadas de gráficos</strong>, deixe <strong>Agendamento de GPU acelerado por hardware</strong> em <strong>DESATIVADO</strong> e <strong>reinicie o PC</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>CUDA out of memory</code> / <code translate="no" v-pre>torch.cuda.OutOfMemoryError</code> (conversão)</td>
+<td>A memória da placa de vídeo acabou porque a música é longa ou um jogo/navegador está usando VRAM.</td>
+<td>Ative <strong>Split Audio</strong> para faixas longas, feche jogos e abas pesadas (ou desligue a aceleração por hardware do navegador) e desative efeitos extras.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>CUDA out of memory</code> / <code translate="no" v-pre>torch.cuda.OutOfMemoryError</code> (treino)</td>
+<td>O <strong>Batch Size</strong> está grande demais para a memória da sua GPU.</td>
+<td>Diminua o <strong>Batch Size</strong> aos poucos (de <code translate="no" v-pre>8</code> para <code translate="no" v-pre>4</code>, <code translate="no" v-pre>2</code> ou <code translate="no" v-pre>1</code>). Desative &quot;Cache dataset in GPU/VRAM&quot; e feche qualquer voice changer ao vivo antes de treinar.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Torch not compiled with CUDA enabled</code> / <code translate="no" v-pre>no kernel image is available</code></td>
+<td>A versão CUDA do app não bate com a geração da sua placa NVIDIA (ex. RTX 50 nova vs GTX 10 antiga).</td>
+<td>Use a build certa: o <strong>Ilaria RVC</strong> inclui <strong>CUDA 12.8</strong> para GTX 16 / RTX 20-50 e baixa automaticamente <strong>CUDA 12.6</strong> (<code translate="no" v-pre>runtime-cu126</code>) para Maxwell/Pascal/Volta.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>CUDA driver version is insufficient for CUDA runtime version</code></td>
+<td>Seu driver NVIDIA é antigo demais para o motor de IA.</td>
+<td>Atualize o driver gráfico pelo <strong>NVIDIA App / GeForce Experience</strong> ou site oficial da NVIDIA e reinicie.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>RuntimeError: CUDA error: an illegal memory access was encountered</code></td>
+<td>A GPU travou por overclock/undervolt instável, superaquecimento ou conflito de driver.</td>
+<td>Zere qualquer overclock/undervolt no MSI Afterburner, atualize o driver NVIDIA e tente novamente.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>RuntimeError: expected scalar type Half but found Float</code> / <code translate="no" v-pre>HalfTensor</code></td>
+<td>O modo rápido <code translate="no" v-pre>FP16</code> está ligado, mas sua GPU (série GTX 10, DirectML ou CPU) não suporta.</td>
+<td>Vá nas Configurações e desative <strong>FP16</strong> (mude para <strong>FP32</strong>).</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>OSError: [WinError 1455]</code> (arquivo de paginação pequeno demais)</td>
+<td>O Windows ficou sem Memória Virtual no disco ao carregar modelos ou criar o índice.</td>
+<td>Pesquise <strong>Exibir configurações avançadas do sistema → Configurações de desempenho → Avançado → Memória virtual → Alterar</strong>, desmarque o gerenciamento automático, defina um tamanho personalizado (ex. Inicial <code translate="no" v-pre>16384</code> MB, Máximo <code translate="no" v-pre>32768</code> MB), clique em <strong>Definir</strong> e <strong>reinicie o PC</strong>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="3-models-checkpoints--indexes" class="docs-anchor"></span><h3 id="3-modelos-checkpoints-e-índices">3. Modelos, Checkpoints e Índices</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| **Coloquei o modelo na pasta, por que não aparece?** | Esqueceu de atualizar a lista, deixou dentro de um `.zip` ou colocou na pasta errada. | 1. Extraia o `.zip` para ver `.pth` e `.index` diretamente.&lt;br&gt;2. Coloque `.pth` em `assets/weights/` (ou `weights/`) e `.index` em `logs/`.&lt;br&gt;3. Clique no botão **Refresh** ao lado do seletor de modelo. |
+| `UnpicklingError` / `Weights only load failed` (`fairseq.data.dictionary.Dictionary`) | Versões novas do PyTorch (2.6+) bloqueiam formatos antigos de RVC por padrão. | Atualize para a versão mais recente do app (ex. **Ilaria RVC 2.4.0+** ou último **Applio**), que já inclui o carregador seguro. |
+| `EOFError` / `RuntimeError: invalid load key` / `File is not a zip archive` | O download foi interrompido, corrompido ou salvou uma página web no lugar do arquivo. | Veja o tamanho do arquivo: um `.pth` real tem **40 a 100+ MB**. Se tiver só alguns KB ou 0 KB, apague e baixe novamente. |
+| `Missing key(s) in state_dict` / `Sizes of tensors must match` | Você carregou um checkpoint bruto (`G_*.pth` ou `D_*.pth`) em vez do modelo exportado, ou misturou `v1` e `v2`. | Nunca copie `G_*.pth` bruto de `logs/` para `weights/`. Use o botão **Export** do app para gerar o `.pth` final e confira se `v1` / `v2` e sample rate batem. |
+| **Erro de índice / dimensões / queda de RAM ao criar índice** | Você escolheu `trained_*.index` em vez de `added_*.index`, usou índice de outra voz ou o dataset é enorme. | Escolha sempre **`added_*.index`** (nunca `trained_*.index`). Se continuar errando, deixe **Index Rate** em `0` para testar sem índice. Nunca misture `.index` de modelos diferentes. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coloquei o modelo na pasta, por que não aparece?</strong></td>
+<td>Esqueceu de atualizar a lista, deixou dentro de um <code translate="no" v-pre>.zip</code> ou colocou na pasta errada.</td>
+<td>1. Extraia o <code translate="no" v-pre>.zip</code> para ver <code translate="no" v-pre>.pth</code> e <code translate="no" v-pre>.index</code> diretamente.<br>2. Coloque <code translate="no" v-pre>.pth</code> em <code translate="no" v-pre>assets/weights/</code> (ou <code translate="no" v-pre>weights/</code>) e <code translate="no" v-pre>.index</code> em <code translate="no" v-pre>logs/</code>.<br>3. Clique no botão <strong>Refresh</strong> ao lado do seletor de modelo.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>UnpicklingError</code> / <code translate="no" v-pre>Weights only load failed</code> (<code translate="no" v-pre>fairseq.data.dictionary.Dictionary</code>)</td>
+<td>Versões novas do PyTorch (2.6+) bloqueiam formatos antigos de RVC por padrão.</td>
+<td>Atualize para a versão mais recente do app (ex. <strong>Ilaria RVC 2.4.0+</strong> ou último <strong>Applio</strong>), que já inclui o carregador seguro.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>EOFError</code> / <code translate="no" v-pre>RuntimeError: invalid load key</code> / <code translate="no" v-pre>File is not a zip archive</code></td>
+<td>O download foi interrompido, corrompido ou salvou uma página web no lugar do arquivo.</td>
+<td>Veja o tamanho do arquivo: um <code translate="no" v-pre>.pth</code> real tem <strong>40 a 100+ MB</strong>. Se tiver só alguns KB ou 0 KB, apague e baixe novamente.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Missing key(s) in state_dict</code> / <code translate="no" v-pre>Sizes of tensors must match</code></td>
+<td>Você carregou um checkpoint bruto (<code translate="no" v-pre>G_*.pth</code> ou <code translate="no" v-pre>D_*.pth</code>) em vez do modelo exportado, ou misturou <code translate="no" v-pre>v1</code> e <code translate="no" v-pre>v2</code>.</td>
+<td>Nunca copie <code translate="no" v-pre>G_*.pth</code> bruto de <code translate="no" v-pre>logs/</code> para <code translate="no" v-pre>weights/</code>. Use o botão <strong>Export</strong> do app para gerar o <code translate="no" v-pre>.pth</code> final e confira se <code translate="no" v-pre>v1</code> / <code translate="no" v-pre>v2</code> e sample rate batem.</td>
+</tr>
+<tr>
+<td><strong>Erro de índice / dimensões / queda de RAM ao criar índice</strong></td>
+<td>Você escolheu <code translate="no" v-pre>trained_*.index</code> em vez de <code translate="no" v-pre>added_*.index</code>, usou índice de outra voz ou o dataset é enorme.</td>
+<td>Escolha sempre <strong><code translate="no" v-pre>added_*.index</code></strong> (nunca <code translate="no" v-pre>trained_*.index</code>). Se continuar errando, deixe <strong>Index Rate</strong> em <code translate="no" v-pre>0</code> para testar sem índice. Nunca misture <code translate="no" v-pre>.index</code> de modelos diferentes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="4-voice-quality-pitch--audio-files" class="docs-anchor"></span><h3 id="4-qualidade-de-voz-pitch-e-arquivos-de-áudio">4. Qualidade de voz, Pitch e Arquivos de áudio</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| **A voz parece esquilo ou monstro grave** | O ajuste **Pitch (Transpose)** não combina com a distância entre sua voz e a voz alvo. | Use `0` para o mesmo gênero, `+12` de voz masculina para feminina e `-12` de feminina para masculina. Ajuste de `1` em `1` depois. |
+| **A voz está metálica, aguada, robótica ou embolada** | O áudio de entrada tem música/eco, Pitch Extractor errado ou Embedder incompatível. | 1. Limpe o áudio antes com **UVR5** ou **MVSep** (sem música nem eco).&lt;br&gt;2. Use **`rmvpe`** como Pitch Extractor.&lt;br&gt;3. Use o mesmo Embedder do treino (quase sempre **`contentvec`**).&lt;br&gt;4. Baixe **Index Rate** de `1.0` para `0.5` ou `0.3`. |
+| **O resultado ainda parece muito com a minha própria voz** | **Index Rate** está baixo ou o **Pitch** continuou na sua região natural em vez da região do modelo. | Aproxime o Pitch da voz alvo (`+12` / `-12`), suba um pouco o **Index Rate** (`0.6` a `0.75`) ou teste um modelo mais limpo. |
+| **O conversor não abre meu arquivo de áudio** | Formato não suportado (`.m4a`, `.opus`, `.mp3` corrompido) ou caracteres especiais no nome. | Converta para **`.wav` PCM padrão** (44100 Hz ou 48000 Hz) e renomeie de forma simples, como `input.wav`. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A voz parece esquilo ou monstro grave</strong></td>
+<td>O ajuste <strong>Pitch (Transpose)</strong> não combina com a distância entre sua voz e a voz alvo.</td>
+<td>Use <code translate="no" v-pre>0</code> para o mesmo gênero, <code translate="no" v-pre>+12</code> de voz masculina para feminina e <code translate="no" v-pre>-12</code> de feminina para masculina. Ajuste de <code translate="no" v-pre>1</code> em <code translate="no" v-pre>1</code> depois.</td>
+</tr>
+<tr>
+<td><strong>A voz está metálica, aguada, robótica ou embolada</strong></td>
+<td>O áudio de entrada tem música/eco, Pitch Extractor errado ou Embedder incompatível.</td>
+<td>1. Limpe o áudio antes com <strong>UVR5</strong> ou <strong>MVSep</strong> (sem música nem eco).<br>2. Use <strong><code translate="no" v-pre>rmvpe</code></strong> como Pitch Extractor.<br>3. Use o mesmo Embedder do treino (quase sempre <strong><code translate="no" v-pre>contentvec</code></strong>).<br>4. Baixe <strong>Index Rate</strong> de <code translate="no" v-pre>1.0</code> para <code translate="no" v-pre>0.5</code> ou <code translate="no" v-pre>0.3</code>.</td>
+</tr>
+<tr>
+<td><strong>O resultado ainda parece muito com a minha própria voz</strong></td>
+<td><strong>Index Rate</strong> está baixo ou o <strong>Pitch</strong> continuou na sua região natural em vez da região do modelo.</td>
+<td>Aproxime o Pitch da voz alvo (<code translate="no" v-pre>+12</code> / <code translate="no" v-pre>-12</code>), suba um pouco o <strong>Index Rate</strong> (<code translate="no" v-pre>0.6</code> a <code translate="no" v-pre>0.75</code>) ou teste um modelo mais limpo.</td>
+</tr>
+<tr>
+<td><strong>O conversor não abre meu arquivo de áudio</strong></td>
+<td>Formato não suportado (<code translate="no" v-pre>.m4a</code>, <code translate="no" v-pre>.opus</code>, <code translate="no" v-pre>.mp3</code> corrompido) ou caracteres especiais no nome.</td>
+<td>Converta para <strong><code translate="no" v-pre>.wav</code> PCM padrão</strong> (44100 Hz ou 48000 Hz) e renomeie de forma simples, como <code translate="no" v-pre>input.wav</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="5-dataset-preprocessing--training" class="docs-anchor"></span><h3 id="5-pré-processamento-de-dataset-e-treino">5. Pré-processamento de Dataset e Treino</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| `ValueError: zero-size array` / tensor vazio | Pasta do dataset vazia, clipes totalmente mudos, menores que 1 segundo ou espaços/acentos no caminho. | Garanta arquivos `.wav` não vazios (de 2 a 10 segundos cada), remova clipes mudos ou corrompidos, use um caminho simples sem espaços e comece um novo experimento. |
+| `BrokenProcessPool` / PC congela no Pré-processamento | Muitos threads de CPU rodando ao mesmo tempo esgotam a memória RAM. | Reduza os **threads / workers de CPU** (ex. de `8` para `2` ou `4`) e confira o espaço livre em disco. |
+| `NaN loss` ou modelo exportado sai mudo | Um clipe estourado/corrompido no dataset quebrou o cálculo, `FP16` deu overflow ou o pretrain `G/D` não bate. | Verifique se não há distorção extrema nem silêncio total nos clipes. Use o **pretrain padrão do RVC** para seu sample rate, desligue `FP16` (use `FP32`) e comece um novo treino. |
+| **O treino não retoma / recomeça da Epoch 0** | `Fresh Training` ficou marcado ou arquivos dentro de `logs/` foram movidos/renomeados. | Mantenha toda a pasta `logs/&lt;experimento&gt;/` intacta, digite exatamente o mesmo **Nome do Experimento**, **Sample Rate** e **Embedder**, aumente o total de épocas e desmarque `Fresh Training`. |
+| **O modelo soa abafado, chiado ou com &quot;overfitting&quot;** | Treinou épocas demais em um dataset pequeno ou sujo e decorou o chiado em vez da voz. | Pare antes (teste checkpoints a cada 50-100 épocas, ex. 200-400 épocas em datasets pequenos) e sempre limpe o dataset com **UVR5** ou **MVSep**. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>ValueError: zero-size array</code> / tensor vazio</td>
+<td>Pasta do dataset vazia, clipes totalmente mudos, menores que 1 segundo ou espaços/acentos no caminho.</td>
+<td>Garanta arquivos <code translate="no" v-pre>.wav</code> não vazios (de 2 a 10 segundos cada), remova clipes mudos ou corrompidos, use um caminho simples sem espaços e comece um novo experimento.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>BrokenProcessPool</code> / PC congela no Pré-processamento</td>
+<td>Muitos threads de CPU rodando ao mesmo tempo esgotam a memória RAM.</td>
+<td>Reduza os <strong>threads / workers de CPU</strong> (ex. de <code translate="no" v-pre>8</code> para <code translate="no" v-pre>2</code> ou <code translate="no" v-pre>4</code>) e confira o espaço livre em disco.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>NaN loss</code> ou modelo exportado sai mudo</td>
+<td>Um clipe estourado/corrompido no dataset quebrou o cálculo, <code translate="no" v-pre>FP16</code> deu overflow ou o pretrain <code translate="no" v-pre>G/D</code> não bate.</td>
+<td>Verifique se não há distorção extrema nem silêncio total nos clipes. Use o <strong>pretrain padrão do RVC</strong> para seu sample rate, desligue <code translate="no" v-pre>FP16</code> (use <code translate="no" v-pre>FP32</code>) e comece um novo treino.</td>
+</tr>
+<tr>
+<td><strong>O treino não retoma / recomeça da Epoch 0</strong></td>
+<td><code translate="no" v-pre>Fresh Training</code> ficou marcado ou arquivos dentro de <code translate="no" v-pre>logs/</code> foram movidos/renomeados.</td>
+<td>Mantenha toda a pasta <code translate="no" v-pre>logs/&lt;experimento&gt;/</code> intacta, digite exatamente o mesmo <strong>Nome do Experimento</strong>, <strong>Sample Rate</strong> e <strong>Embedder</strong>, aumente o total de épocas e desmarque <code translate="no" v-pre>Fresh Training</code>.</td>
+</tr>
+<tr>
+<td><strong>O modelo soa abafado, chiado ou com &quot;overfitting&quot;</strong></td>
+<td>Treinou épocas demais em um dataset pequeno ou sujo e decorou o chiado em vez da voz.</td>
+<td>Pare antes (teste checkpoints a cada 50-100 épocas, ex. 200-400 épocas em datasets pequenos) e sempre limpe o dataset com <strong>UVR5</strong> ou <strong>MVSep</strong>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="6-live-voice-changer-mic--discord" class="docs-anchor"></span><h3 id="6-voice-changer-ao-vivo-microfone-e-discord">6. Voice Changer ao vivo, Microfone e Discord</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| **Ninguém no Discord ou jogo ouve minha voz mudada** | O app de destino ainda está ouvindo seu microfone real em vez do cabo virtual, ou o voice changer não foi iniciado. | 1. Instale o **VB-CABLE** e reinicie o PC.&lt;br&gt;2. No voice changer: **Input** = seu microfone físico, **Output** = `CABLE Input (VB-Audio Virtual Cable)`.&lt;br&gt;3. No **Discord / Jogo**: **Dispositivo de entrada** = `CABLE Output (VB-Audio Virtual Cable)`. |
+| `PortAudioError` / `Invalid sample rate` / dispositivo falha | Microfone, fones e VB-CABLE estão em taxas diferentes (`44100 Hz` vs `48000 Hz`) ou em Modo Exclusivo. | Abra o **Painel de Som do Windows (`mmsys.cpl`)**, vá em **Propriedades → Avançado** do Microfone, Fones, `CABLE Input` e `CABLE Output`, coloque **todos em 48000 Hz**, desmarque **Permitir que os aplicativos assumam controle exclusivo** e reinicie o app. |
+| **Cortes, estalos ou atraso enorme na voz** | Sua GPU demora mais para processar um bloco de áudio do que a duração do próprio bloco. | 1. Aumente um pouco o **Chunk Size**.&lt;br&gt;2. Use **RMVPE** ou **FCPE** para pitch.&lt;br&gt;3. Desative o **HAGS** no Windows.&lt;br&gt;4. Limite o FPS dos jogos ou feche apps pesados na GPU. |
+| **Eco ou você se ouve duas vezes** | Você está usando caixas de som ou dois programas estão reproduzindo seu microfone juntos. | Use sempre **fones de ouvido**. Desative **&quot;Escutar o dispositivo&quot;** em Gravação no Windows e ative o Monitor apenas no voice changer se precisar se ouvir. |
+| **Discord corta respirações ou o final das palavras** | O filtro de ruído do Discord confunde o fim da voz convertida com barulho de fundo. | Em **Voz e Vídeo** do Discord, desative **Supressão de ruído Krisp**, **Cancelamento de eco** e **Determinar sensibilidade de entrada automaticamente** (ajuste a barra manualmente). Abaixe também o VAD / Noise Gate no voice changer. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ninguém no Discord ou jogo ouve minha voz mudada</strong></td>
+<td>O app de destino ainda está ouvindo seu microfone real em vez do cabo virtual, ou o voice changer não foi iniciado.</td>
+<td>1. Instale o <strong>VB-CABLE</strong> e reinicie o PC.<br>2. No voice changer: <strong>Input</strong> = seu microfone físico, <strong>Output</strong> = <code translate="no" v-pre>CABLE Input (VB-Audio Virtual Cable)</code>.<br>3. No <strong>Discord / Jogo</strong>: <strong>Dispositivo de entrada</strong> = <code translate="no" v-pre>CABLE Output (VB-Audio Virtual Cable)</code>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>PortAudioError</code> / <code translate="no" v-pre>Invalid sample rate</code> / dispositivo falha</td>
+<td>Microfone, fones e VB-CABLE estão em taxas diferentes (<code translate="no" v-pre>44100 Hz</code> vs <code translate="no" v-pre>48000 Hz</code>) ou em Modo Exclusivo.</td>
+<td>Abra o <strong>Painel de Som do Windows (<code translate="no" v-pre>mmsys.cpl</code>)</strong>, vá em <strong>Propriedades → Avançado</strong> do Microfone, Fones, <code translate="no" v-pre>CABLE Input</code> e <code translate="no" v-pre>CABLE Output</code>, coloque <strong>todos em 48000 Hz</strong>, desmarque <strong>Permitir que os aplicativos assumam controle exclusivo</strong> e reinicie o app.</td>
+</tr>
+<tr>
+<td><strong>Cortes, estalos ou atraso enorme na voz</strong></td>
+<td>Sua GPU demora mais para processar um bloco de áudio do que a duração do próprio bloco.</td>
+<td>1. Aumente um pouco o <strong>Chunk Size</strong>.<br>2. Use <strong>RMVPE</strong> ou <strong>FCPE</strong> para pitch.<br>3. Desative o <strong>HAGS</strong> no Windows.<br>4. Limite o FPS dos jogos ou feche apps pesados na GPU.</td>
+</tr>
+<tr>
+<td><strong>Eco ou você se ouve duas vezes</strong></td>
+<td>Você está usando caixas de som ou dois programas estão reproduzindo seu microfone juntos.</td>
+<td>Use sempre <strong>fones de ouvido</strong>. Desative <strong>&quot;Escutar o dispositivo&quot;</strong> em Gravação no Windows e ative o Monitor apenas no voice changer se precisar se ouvir.</td>
+</tr>
+<tr>
+<td><strong>Discord corta respirações ou o final das palavras</strong></td>
+<td>O filtro de ruído do Discord confunde o fim da voz convertida com barulho de fundo.</td>
+<td>Em <strong>Voz e Vídeo</strong> do Discord, desative <strong>Supressão de ruído Krisp</strong>, <strong>Cancelamento de eco</strong> e <strong>Determinar sensibilidade de entrada automaticamente</strong> (ajuste a barra manualmente). Abaixe também o VAD / Noise Gate no voice changer.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="7-cloud-notebooks-colab--kaggle" class="docs-anchor"></span><h3 id="7-notebooks-na-nuvem-colab-e-kaggle">7. Notebooks na nuvem (Colab e Kaggle)</h3>
+<retype-table copy-text="| Problema ou Erro | O que significa (em palavras simples) | Como resolver |
+| --- | --- | --- |
+| `CUDA not available` / `No GPU found` no Colab ou Kaggle | Você esqueceu de ativar a GPU nas configurações ou atingiu a cota gratuita. | **Colab:** **Ambiente de execução → Alterar tipo de ambiente → GPU T4**.&lt;br&gt;**Kaggle:** barra direita **Settings → Accelerator → GPU T4 x2** (exige verificação por telefone). |
+| **Download falha no notebook (`403` / cota do Drive ou Mega)** | Um link público atingiu o limite diário ou ficou privado. | Suba primeiro seu dataset ou modelo para o **Hugging Face** ou para seu próprio Google Drive e baixe de lá. |
+| **Notebook desconecta no meio do treino** | Notebooks na nuvem desligam após inatividade ou sessões longas e apagam arquivos temporários. | Sempre salve ou sincronize `logs/` e `weights/` no **Google Drive** (ou Kaggle Output) e retome do último `G_*.pth` / `D_*.pth` salvo em vez de recomeçar do zero. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problema ou Erro</th>
+<th>O que significa (em palavras simples)</th>
+<th>Como resolver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>CUDA not available</code> / <code translate="no" v-pre>No GPU found</code> no Colab ou Kaggle</td>
+<td>Você esqueceu de ativar a GPU nas configurações ou atingiu a cota gratuita.</td>
+<td><strong>Colab:</strong> <strong>Ambiente de execução → Alterar tipo de ambiente → GPU T4</strong>.<br><strong>Kaggle:</strong> barra direita <strong>Settings → Accelerator → GPU T4 x2</strong> (exige verificação por telefone).</td>
+</tr>
+<tr>
+<td><strong>Download falha no notebook (<code translate="no" v-pre>403</code> / cota do Drive ou Mega)</strong></td>
+<td>Um link público atingiu o limite diário ou ficou privado.</td>
+<td>Suba primeiro seu dataset ou modelo para o <strong>Hugging Face</strong> ou para seu próprio Google Drive e baixe de lá.</td>
+</tr>
+<tr>
+<td><strong>Notebook desconecta no meio do treino</strong></td>
+<td>Notebooks na nuvem desligam após inatividade ou sessões longas e apagam arquivos temporários.</td>
+<td>Sempre salve ou sincronize <code translate="no" v-pre>logs/</code> e <code translate="no" v-pre>weights/</code> no <strong>Google Drive</strong> (ou Kaggle Output) e retome do último <code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code> salvo em vez de recomeçar do zero.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<hr>
+<span id="app-specific-quick-checks" class="docs-anchor"></span><h2 id="verificações-rápidas-por-aplicativo">Verificações rápidas por aplicativo</h2>
+<ul>
+<li><strong>Ilaria RVC:</strong> Extraia todo o ZIP em um caminho curto como <code translate="no" v-pre>C:\IlariaRVC</code>. Use <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> se fechar ao abrir, veja se <code translate="no" v-pre>127.0.0.1:6969</code> está livre e leia o <strong>primeiro</strong> erro acima da mensagem de encerramento.</li>
+<li><strong>Applio Desktop:</strong> Abra a aba <strong>Setup</strong> e confira o status do motor. Clique em <strong>Install / Repair</strong> se algum item estiver vermelho. No <strong>Gradio</strong>, mantenha o console aberto e copie o endereço <code translate="no" v-pre>localhost</code> exato impresso ali.</li>
+<li><strong>RVC Mainline / w-okada / Deiteris / TGR:</strong> Escolha <strong>CUDA</strong> (NVIDIA) ou <strong>DirectML</strong> (AMD/Intel) conforme sua GPU antes de baixar. Extraia arquivos divididos <code translate="no" v-pre>.zip.001</code> com o 7-Zip apenas depois que todas as partes estiverem na mesma pasta.</li>
+</ul>
+<span id="how-to-ask-for-help" class="docs-anchor"></span><h2 id="como-pedir-ajuda">Como pedir ajuda</h2>
+<p>Ao pedir suporte (por exemplo na <a href="https://ilariarvc.shop/en/contact/">página de contato do Ilaria RVC</a>), inclua estas 4 informações:</p>
+<ol>
+<li><strong>Nome e versão do app</strong> (ex. <code translate="no" v-pre>Ilaria RVC 2.4.0</code>, <code translate="no" v-pre>Applio Desktop</code>, <code translate="no" v-pre>Deiteris</code>).</li>
+<li><strong>Configuração do PC:</strong> versão do Windows, modelo exato da GPU (ex. <code translate="no" v-pre>RTX 3060</code> ou <code translate="no" v-pre>RX 6700 XT</code>) e backend (<code translate="no" v-pre>CUDA</code> / <code translate="no" v-pre>DirectML</code> / <code translate="no" v-pre>CPU</code>).</li>
+<li><strong>A PRIMEIRA linha de erro</strong> do console (oculte seu nome de usuário do Windows se quiser).</li>
+<li><strong>O que você estava fazendo:</strong> Treino (sample rate, vocoder, embedder e novo vs retomar) ou Voice Changer ao vivo (cadeia exata: <code translate="no" v-pre>Mic -&gt; App -&gt; VB-CABLE -&gt; Discord</code>).</li>
+</ol>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../tools/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#129520; Ferramentas RVC</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../glossary/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#128214; Gloss&#225;rio</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-20T16:28:39.000Z">20/11/2026 · 17:28</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🩺 Resolução de problemas", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/reference/troubleshooting.md" }</script>
+</body>
+</html>

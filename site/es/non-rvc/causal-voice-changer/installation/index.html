@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/es">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510344023">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Instalar Causal Voice Changer">
+    <meta name="description" content="Esta guía te explica paso a paso cómo instalar Causal Voice Changer en Windows o Linux, incluso si nunca has usado Python ni Git.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/es/non-rvc/causal-voice-changer/installation/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/es/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/es/non-rvc/causal-voice-changer/installation/">
+    <meta property="og:title" content="Instalar Causal Voice Changer">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/es/non-rvc/causal-voice-changer/installation/">
+    <meta name="twitter:title" content="Instalar Causal Voice Changer">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/es/non-rvc/causal-voice-changer/installation.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848510344023" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <meta name="twitter:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/non-rvc/causal-voice-changer/installation/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/non-rvc/causal-voice-changer/installation/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/es/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Idioma: Español"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg><span class="docs-language-name">Español</span></summary><div><a href="/non-rvc/causal-voice-changer/installation/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/non-rvc/causal-voice-changer/installation/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/non-rvc/causal-voice-changer/installation/" lang="es" hreflang="es" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/non-rvc/causal-voice-changer/installation/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/non-rvc/causal-voice-changer/installation/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/non-rvc/causal-voice-changer/installation/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="installing-causal-voice-changer" class="docs-anchor"></span><h1 id="instalar-causal-voice-changer">Instalar Causal Voice Changer</h1>
+<p>Esta guía te explica paso a paso cómo instalar Causal Voice Changer en <strong>Windows</strong> o <strong>Linux</strong>, incluso si nunca has usado Python ni Git.</p>
+<blockquote>
+<p><strong>Regla clave en el primer uso</strong>: ejecuta siempre <strong>primero</strong> el lanzador de entrenamiento (<code translate="no" v-pre>run-training.bat</code> en Windows o <code translate="no" v-pre>run-training.sh</code> en Linux), aunque solo quieras usar el cambiador de voz en vivo. Este lanzador instala Python, PyTorch para tu GPU y los ~900 MB de pesos preentrenados que necesitan ambas aplicaciones.</p>
+</blockquote>
+<span id="1-download-cvc" class="docs-anchor"></span><h2 id="1-descarga-cvc">1. Descarga CVC</h2>
+<p>Elige una de las dos opciones:</p>
+<span id="option-a-pre-built-release-recommended-for-beginners" class="docs-anchor"></span><h3 id="opción-a-release-precompilada-recomendada-para-principiantes">Opción A: Release precompilada (Recomendada para principiantes)</h3>
+<ol>
+<li>Ve a la <a href="https://github.com/mojowozo/Causal-Voice-Changer/releases">página de Releases de Causal Voice Changer</a>.</li>
+<li>Descarga el archivo para tu sistema operativo:
+<ul>
+<li><strong>Windows</strong>: <code translate="no" v-pre>Causal-Voice-Changer-&lt;version&gt;-windows-x64.zip</code></li>
+<li><strong>Linux</strong>: <code translate="no" v-pre>Causal-Voice-Changer-&lt;version&gt;-linux-x86_64.tar.gz</code> <em>(requiere glibc 2.35+, como Ubuntu 22.04, Debian 12 o posterior)</em></li>
+</ul>
+</li>
+<li>Extrae el archivo en una carpeta con permisos de escritura (por ejemplo <code translate="no" v-pre>D:\CausalVC</code> en Windows).
+<ul>
+<li><em>Nota</em>: la release ya incluye las ventanas compiladas, así que <strong>no</strong> necesitas instalar .NET SDK ni Rust manualmente.</li>
+</ul>
+</li>
+</ol>
+<span id="option-b-from-source-git-clone" class="docs-anchor"></span><h3 id="opción-b-desde-el-código-fuente-git-clone">Opción B: Desde el código fuente (<code translate="no" v-pre>git clone</code>)</h3>
+<p>Si clonas el repositorio con <code translate="no" v-pre>git clone https://github.com/mojowozo/Causal-Voice-Changer.git</code>, las ventanas se compilan automáticamente al primer arranque (y se recompilan si cambian los archivos fuente):</p>
+<ul>
+<li><strong>Windows</strong>: instala automáticamente <strong>.NET 10 SDK</strong> en <code translate="no" v-pre>.dotnet</code> si falta, para compilar la app WinUI 3.</li>
+<li><strong>Linux</strong>: compila la interfaz COSMIC en Rust usando <code translate="no" v-pre>cargo</code>.</li>
+<li>Si no se puede compilar la interfaz nativa, se abre automáticamente una ventana <strong>Tk</strong> más sencilla con las funciones básicas.</li>
+</ul>
+<span id="2-run-first-time-setup-run-training" class="docs-anchor"></span><h2 id="2-ejecuta-la-configuración-inicial-run-training">2. Ejecuta la configuración inicial (<code translate="no" v-pre>run-training</code>)</h2>
+<ol>
+<li>Abre la carpeta extraída de CVC.</li>
+<li>Ejecuta:
+<ul>
+<li><strong>Windows</strong>: haz doble clic en <strong><code translate="no" v-pre>run-training.bat</code></strong>
+<ul>
+<li>Como la app no está firmada, Windows SmartScreen puede mostrar <em>&quot;Windows protegió su PC&quot;</em>. Haz clic en <strong>Más información → Ejecutar de todas formas</strong>.</li>
+</ul>
+</li>
+<li><strong>Linux</strong>: abre una terminal en la carpeta y ejecuta <strong><code translate="no" v-pre>./run-training.sh</code></strong></li>
+</ul>
+</li>
+<li><strong>Espera al instalador automático</strong>:
+<ul>
+<li>Crea un entorno Python local (<code translate="no" v-pre>.venv-win</code> en Windows, <code translate="no" v-pre>.venv</code> en Linux) usando <strong><code translate="no" v-pre>uv</code></strong>.</li>
+<li>Instala la versión de <strong>PyTorch</strong> adecuada para tu tarjeta gráfica.</li>
+<li>Descarga el <strong>modelo base y los pesos de RMVPE</strong> (unos <strong>900 MB</strong>) en la carpeta <code translate="no" v-pre>weights/</code>.</li>
+</ul>
+</li>
+<li>Al terminar se abrirá la <strong>ventana de Entrenamiento</strong>. ¡Ya puedes cerrarla o empezar a crear una voz!</li>
+</ol>
+<span id="3-selecting-your-gpu-on-windows-if-needed" class="docs-anchor"></span><h2 id="3-selección-de-gpu-en-windows-si-es-necesario">3. Selección de GPU en Windows (si es necesario)</h2>
+<p>En Windows, <code translate="no" v-pre>scripts/gpu-extra.ps1</code> detecta tu GPU automáticamente:</p>
+<ul>
+<li><strong>NVIDIA</strong>: instala PyTorch <strong>CUDA</strong>.</li>
+<li><strong>AMD RX 7000 / 9000, PRO W7000, Ryzen AI</strong>: instala PyTorch <strong>ROCm</strong> (<code translate="no" v-pre>rocm</code>, requiere AMD Software <code translate="no" v-pre>26.2.2</code> o posterior).</li>
+<li><strong>AMD RX 6000 / PRO W6000</strong>: instala la compilación nightly de AMD (<code translate="no" v-pre>rocm-rdna2</code>).</li>
+<li><strong>AMD Radeon antiguas</strong>: funcionan en <strong>CPU</strong> (en tiempo real pon <strong>Chunk</strong> en <code translate="no" v-pre>60 ms</code> o más).</li>
+</ul>
+<p>Si la detección automática elige el backend incorrecto, define la variable de entorno <code translate="no" v-pre>CAUSALVC_GPU</code> antes de abrir el lanzador:</p>
+<ul>
+<li><code translate="no" v-pre>CAUSALVC_GPU=cuda</code></li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=rocm</code></li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=rocm-rdna2</code></li>
+</ul>
+<p><em>(Si ejecutas comandos <code translate="no" v-pre>uv</code> manualmente en Windows, añade <code translate="no" v-pre>--extra cuda</code>, <code translate="no" v-pre>--extra rocm</code> o <code translate="no" v-pre>--extra rocm-rdna2</code>.)</em></p>
+<span id="4-updating-cvc" class="docs-anchor"></span><h2 id="4-actualizar-cvc">4. Actualizar CVC</h2>
+<p>Al actualizar a una versión nueva:</p>
+<ul>
+<li>En Windows, si usas el código fuente y la interfaz cambió, ejecuta <code translate="no" v-pre>run-realtime.bat</code> / <code translate="no" v-pre>run-training.bat</code> con <code translate="no" v-pre>CAUSALVC_REBUILD=1</code> para recompilar WinUI 3.</li>
+<li>En Linux, la interfaz Rust se recompila automáticamente en el siguiente arranque tras actualizar.</li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/causal-voice-changer/overview/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Descripci&#243;n general y requisitos</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/causal-voice-changer/training/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Entrenar voces (.​cvc)</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-19T23:48:19.000Z">20/11/2026 · 00:48</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Instalación y configuración", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/causal-voice-changer/installation.md" }</script>
+</body>
+</html>

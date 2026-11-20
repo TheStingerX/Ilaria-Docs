@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/es">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510344023">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Convierte una grabación con Ilaria RVC">
+    <meta name="description" content="Descarga Ilaria RVC 2.4.0 para Windows (ZIP)">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/es/voice-conversion/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/es/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/es/voice-conversion/">
+    <meta property="og:title" content="Convierte una grabación con Ilaria RVC">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/es/voice-conversion/">
+    <meta name="twitter:title" content="Convierte una grabación con Ilaria RVC">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/es/conversion/voice-conversion.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848510344023" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848510344023" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <meta name="twitter:description" content="Una recopilación de información sobre el mundo de RVC, con guías de conversión de voz, entrenamiento de modelos y aplicaciones compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/voice-conversion/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/voice-conversion/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/voice-conversion/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/voice-conversion/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/voice-conversion/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/voice-conversion/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/voice-conversion/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/es/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Idioma: Español"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg><span class="docs-language-name">Español</span></summary><div><a href="/voice-conversion/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/voice-conversion/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/voice-conversion/" lang="es" hreflang="es" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/voice-conversion/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/voice-conversion/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/voice-conversion/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/es/">Sitio web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="convert-a-recording-with-ilaria-rvc" class="docs-anchor"></span><h1 id="convierte-una-grabación-con-ilaria-rvc">Convierte una grabación con Ilaria RVC</h1>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Descarga Ilaria RVC 2.4.0 para Windows (ZIP)</a></p>
+<p>La conversión de voz comienza con una actuación. La salida generalmente sigue las palabras fuente, el tiempo, la articulación y el contorno del tono mientras cambia el sonido de la voz. Las decisiones sobre la entrega aún comienzan con la grabación original. Para una versión cantada, planea convertir una voz principal aislada y luego mezclar la voz convertida con la instrumental.</p>
+<span id="make-a-baseline-conversion" class="docs-anchor"></span><h2 id="realice-una-conversión-de-referencia">Realice una conversión de referencia</h2>
+<ol>
+<li>Abra Ilaria RVC e importe el modelo de inferencia que desea utilizar. Un índice opcional pertenece al punto de control para el que fue creado. Si no hay una voz importada en el selector, consulte <a href="../models/">modelos y archivos RVC</a>.</li>
+<li>Abra <strong>Inferencia única</strong>, elija la voz y arrastre una grabación corta que pueda reconocer de oído. Una frase con una pausa, varias consonantes y una vocal más larga constituye una referencia útil.</li>
+<li>Establezca <strong>Pitch</strong> en cero y <strong>Index Ratio</strong> en cero. Haga coincidir el incrustador de contenido con el utilizado en la capacitación cuando el autor del modelo lo proporciona. Comience con el extractor de tono predeterminado de la aplicación y deje desactivado el procesamiento de audio opcional.</li>
+<li>Convierta el archivo y verifique el resultado. Utilice el reproductor de formas de onda para volver a visitar la misma frase y luego guarde una copia WAV o FLAC como referencia.</li>
+<li>Compare el clip original y convertido en niveles de reproducción similares. Note el primer problema audible y use <a href="../audio-quality/">Tono y calidad de audio</a> para decidir qué cambiar.</li>
+</ol>
+<p>Las versiones actuales de Ilaria RVC buscan automáticamente un índice coincidente cuando seleccionas una voz. Seleccionar un índice y darle influencia son acciones separadas. Un índice cargado contribuye solo cuando <strong>Proporción de índice</strong> es superior a cero. Las compilaciones más antiguas pueden mostrar un diseño diferente o solicitarle que seleccione el índice manualmente.</p>
+<span id="choose-a-source-that-fits-the-job" class="docs-anchor"></span><h2 id="elija-una-fuente-que-se-ajuste-al-trabajo">Elija una fuente que se ajuste al trabajo</h2>
+<retype-table copy-text="| Flujo de trabajo | Prepare la fuente | Escuche |
+| --- | --- | --- |
+ | Diálogo o narración | Utilice un orador por pista de entrada y mantenga una breve pausa natural entre líneas. | Palabras claras, terminaciones de palabras intactas y tono consistente entre frases. |
+ | Una voz principal sobre música | Aislar la voz principal. Deje las voces instrumentales, de acompañamiento y las armonías en sus propias pistas. | Notas sostenidas estables y consonantes que aún se alinean con el ritmo. |
+ | Múltiples tomas | Etiquete cada toma por escena o sección y conserve los nombres de los archivos originales en sus notas. | Una voz consistente en las tomas grabadas en diferentes niveles o tonos. |
+ | Texto hablado a través de TTS | Vista previa del discurso generado antes de aplicar el modelo. Primero ajuste la puntuación o la redacción del texto. | Pronunciación correcta y ritmo intencional antes de la etapa RVC. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Flujo de trabajo</th>
+<th>Prepare la fuente</th>
+<th>Escuche</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diálogo o narración</td>
+<td>Utilice un orador por pista de entrada y mantenga una breve pausa natural entre líneas.</td>
+<td>Palabras claras, terminaciones de palabras intactas y tono consistente entre frases.</td>
+</tr>
+<tr>
+<td>Una voz principal sobre música</td>
+<td>Aislar la voz principal. Deje las voces instrumentales, de acompañamiento y las armonías en sus propias pistas.</td>
+<td>Notas sostenidas estables y consonantes que aún se alinean con el ritmo.</td>
+</tr>
+<tr>
+<td>Múltiples tomas</td>
+<td>Etiquete cada toma por escena o sección y conserve los nombres de los archivos originales en sus notas.</td>
+<td>Una voz consistente en las tomas grabadas en diferentes niveles o tonos.</td>
+</tr>
+<tr>
+<td>Texto hablado a través de TTS</td>
+<td>Vista previa del discurso generado antes de aplicar el modelo. Primero ajuste la puntuación o la redacción del texto.</td>
+<td>Pronunciación correcta y ritmo intencional antes de la etapa RVC.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Si una voz separada todavía contiene platillos fuertes u otro cantante, compárala con una toma más limpia o una separación. Esos sonidos llegan al motor de conversión junto con la voz deseada. Mantenga las respiraciones y las terminaciones de palabras donde sean importantes para la interpretación.</p>
+<span id="convert-a-batch" class="docs-anchor"></span><h2 id="convertir-un-lote">Convertir un lote</h2>
+<p>Abra <strong>Inferencia por lotes</strong> después de que un solo archivo produzca un resultado utilizable. Agrupe archivos que necesitan el mismo modelo, paso y perfil de procesamiento. Ejecute un archivo representativo de cada grupo y guárdelo en una ubicación de salida separada para que pueda comparar los resultados de forma segura.</p>
+<p>Para una canción larga, escuche una sección con notas altas o bajas expuestas antes de convertir todo el archivo. <strong>Split Audio</strong> puede ayudar con grabaciones largas o limitaciones de memoria. Escuche las uniones y pausas de los segmentos después de la ejecución. Si una versión de la aplicación expone una consola o un registro de conversión, utilícelo para identificar cualquier elemento fallido y vuelva a intentar esos archivos por separado.</p>
+<span id="convert-generated-speech" class="docs-anchor"></span><h2 id="convertir-voz-generada">Convertir voz generada</h2>
+<p>En una versión con el espacio de trabajo <strong>TTS</strong>, proporcione texto o un archivo de texto UTF-8. Las versiones actuales de Ilaria RVC ofrecen voces en línea de Microsoft Edge y voces de Windows instaladas para TTS sin conexión. Elija una voz de origen en el idioma del guión, escuche la pronunciación y las pausas y luego aplique el modelo RVC a esa grabación generada. Si la primera etapa lee un nombre incorrectamente, primero corrija el texto o cambie la voz TTS. RVC generalmente transmitirá esas opciones de pronunciación de la fuente.</p>
+<p>Cuando la privacidad o una conexión poco confiable sean importantes, seleccione una voz de Windows instalada y verifique que funcione con su texto antes de comenzar un trabajo largo. La opción Edge requiere una conexión de red.</p>
+<span id="save-the-conversion-and-your-settings" class="docs-anchor"></span><h2 id="guarde-la-conversión-y-su-configuración">Guarde la conversión y su configuración</h2>
+<ul>
+<li>Conserve un master WAV o FLAC sin procesar antes de agregar compresión, reverberación o limitación.</li>
+<li>Para la música, alinee la voz convertida con la original, verifique su sincronización en las consonantes y escuche tanto en solitario como en la mezcla antes de exportar.</li>
+<li>Guarde su configuración junto con el resultado. Incluya el archivo fuente, las versiones del modelo y del índice, la identificación del altavoz, si corresponde, el incrustador, el extractor de tono, el cambio de tono, la relación de índice, el procesamiento y el formato de salida.</li>
+<li>Cuando falta un modelo o falla la inferencia antes de producir audio, comience con <a href="../troubleshooting/">Solución de problemas</a>. Para la conversión de micrófono, consulte <a href="../real-time/">Conversión de voz en tiempo real</a>.</li>
+</ul>
+<h2 id="convert-a-recording-in-mainline-rvc">Convertir una grabación en RVC WebUI (Mainline - Original RVC)</h2>
+<span id="set-up-the-webui" class="docs-anchor"></span><h3 id="configurar-la-webui">Configurar la WebUI</h3>
+<p>En Windows, utilice un paquete RVC WebUI (Mainline - Original RVC) compatible con su hardware. Extraiga el archivo completo a un directorio local antes de ejecutar su iniciador. Los paquetes de Windows que incluyen <code translate="no" v-pre>go-web.bat</code> lo utilizan para iniciar la WebUI local. Deje la consola abierta mientras realiza la conversión. Si el navegador no se abre automáticamente, utilice la dirección local impresa en la consola.</p>
+<span id="load-the-model-and-convert" class="docs-anchor"></span><h3 id="cargue-el-modelo-y-convierta">Cargue el modelo y convierta</h3>
+<p>Coloque el punto de control de inferencia en <code translate="no" v-pre>assets/weights</code> y su índice de recuperación correspondiente, si se proporciona, en <code translate="no" v-pre>logs</code>. Abra <strong>Inferencia de modelo</strong> y actualice las listas de voz e índice. Elija el punto de control y el índice coincidente. Establezca la tasa de recuperación en cero para los modelos sin índice.</p>
+<p>Proporcione a la WebUI la ruta completa a un archivo WAV local corto. Si la ruta falla, copie el archivo de prueba en una ubicación simple como <code translate="no" v-pre>C:\RVC\input\test.wav</code>. Mantenga la transposición en cero para la primera pasada y seleccione RMVPE si su compilación lo ofrece. Haga clic en <strong>Convertir</strong>, luego escuche en el reproductor de salida y guarde el resultado usando su control de descarga. Si la generación falla, lea el mensaje de la consola antes de cambiar la configuración. Por lo general, un modelo que no aparece en la lista debe moverse al directorio de pesos o redescubrirse mediante la actualización.</p>
+<span id="convert-a-recording-in-applio" class="docs-anchor"></span><h2 id="convertir-una-grabación-en-applio">Convertir una grabación en Applio</h2>
+<span id="set-up-a-single-file-test" class="docs-anchor"></span><h3 id="configurar-una-prueba-de-un-solo-archivo">Configurar una prueba de un solo archivo</h3>
+<p>En Desktop, espere hasta que el motor esté listo, agregue el modelo de inferencia a la biblioteca y abra <strong>Convertir audio</strong> en modo de archivo único. En Gradio, abra la interfaz del navegador y seleccione <strong>Convertir audio</strong> o <strong>Inferencia</strong>, según la versión. Actualice la lista de modelos después de agregar un punto de control si falta.</p>
+<p>Seleccione la voz y su índice emparejado, luego confirme el incrustador de contenido esperado por ese modelo. Cargue una grabación corta y elija WAV o FLAC para la prueba. Verifique las configuraciones transferidas de una ejecución anterior, especialmente el tono, la recuperación y los efectos. Una línea de base útil comienza en cero semitonos con los efectos desactivados. Inicie el trabajo una vez, espere el resultado y compare la misma frase en ambas grabaciones.</p>
+<span id="tune-the-test-before-running-a-batch" class="docs-anchor"></span><h3 id="ajuste-la-prueba-antes-de-ejecutar-un-lote">Ajuste la prueba antes de ejecutar un lote</h3>
+<retype-table copy-text="| Lo que escucha | Qué probar |
+| --- | --- |
+ | Las notas saltan o se tambalean | Compara extractores de tono usando la misma frase y luego prueba la transposición por separado. |
+| La voz convertida conserva el timbre de origen | Los encoders HuBERT genéricos pueden conservar rasgos del hablante. Comprueba que el encoder coincida con el modelo y prueba varias grabaciones limpias sin recuperación. Si el encoder de entrenamiento conserva el timbre de origen, vuelve a entrenar con un encoder compatible como ContentVec y reconstruye el índice. |
+| Sibilantes o respiraciones distorsionadas | Prueba por separado menos recuperación y más protección de sonidos sordos. Si el problema persiste con varias grabaciones limpias, corrige o añade ejemplos de sibilantes y respiraciones en el conjunto de entrenamiento y vuelve a entrenar. |
+ | La voz tiene un nivel desigual | Ajuste la envolvente del volumen o nivele la pista terminada. Compruebe que la fuente en sí esté limpia. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Lo que escucha</th>
+<th>Qué probar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Las notas saltan o se tambalean</td>
+<td>Compara extractores de tono usando la misma frase y luego prueba la transposición por separado.</td>
+</tr>
+<tr>
+<td>La voz convertida conserva el timbre de origen</td>
+<td>Los encoders HuBERT genéricos pueden conservar rasgos del hablante. Comprueba que el encoder coincida con el modelo y prueba varias grabaciones limpias sin recuperación. Si el encoder de entrenamiento conserva el timbre de origen, vuelve a entrenar con un encoder compatible como ContentVec y reconstruye el índice.</td>
+</tr>
+<tr>
+<td>Sibilantes o respiraciones distorsionadas</td>
+<td>Prueba por separado menos recuperación y más protección de sonidos sordos. Si el problema persiste con varias grabaciones limpias, corrige o añade ejemplos de sibilantes y respiraciones en el conjunto de entrenamiento y vuelve a entrenar.</td>
+</tr>
+<tr>
+<td>La voz tiene un nivel desigual</td>
+<td>Ajuste la envolvente del volumen o nivele la pista terminada. Compruebe que la fuente en sí esté limpia.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Cuando la línea base funcione, cambie a <strong>Batch</strong> y elija varios archivos o un directorio de entrada, según la edición. Mantenga la salida en una ubicación separada. Utilice una ejecución diferente para archivos que necesiten configuraciones de tono diferentes y escuche al menos un resultado de cada grupo antes de usar todo el lote.</p>
+<p>Para problemas de importación de modelos y explicaciones detalladas de configuración, utilice <a href="../models/">modelos y archivos RVC</a>, <a href="../audio-quality/">Tono y calidad de audio</a> y <a href="../troubleshooting/">Solución de problemas</a>].</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../non-rvc/mvsep/usage-and-models/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Modelos y presets recomendados</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../audio-quality/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#127898;️ Tono y calidad de audio</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🎙️ Conversión de voz", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/conversion/voice-conversion.md" }</script>
+</body>
+</html>

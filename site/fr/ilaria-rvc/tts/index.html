@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510353398">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Synthèse vocale">
+    <meta name="description" content="Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/tts/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/tts/">
+    <meta property="og:title" content="Synthèse vocale">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/tts/">
+    <meta name="twitter:title" content="Synthèse vocale">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/convert/speech.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
+    <link href="../../resources/css/retype.css?v=4.6.0.848510353398" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848510353398" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Une collection d’informations sur le monde de RVC, avec des guides sur la conversion vocale, l’entraînement des modèles et les applications compatibles.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/tts/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/tts/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/ilaria-rvc/tts/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/tts/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/tts/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/tts/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/tts/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/tts/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="text-to-speech" class="docs-anchor"></span><h1 id="synthèse-vocale">Synthèse vocale</h1>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)</a></p>
+<p>Utilisez <strong>Inférence → TTS</strong> pour transformer un texte écrit en enregistrement. Vous pouvez écouter directement la parole générée ou la convertir avec un modèle RVC. Les deux étapes effectuent des tâches différentes : le moteur vocal décide de la manière dont le script est prononcé et rythmé, tandis que RVC modifie le caractère vocal de l&#x27;enregistrement. Si un nom est mal prononcé dans le premier résultat, corrigez le script ou la voix source avant de régler RVC.</p>
+<blockquote>
+<p><strong>Nouveautés de la 2.3.0</strong> · ElevenLabs rejoint les moteurs TTS. Saisissez votre clé API ElevenLabs, choisissez une voix et testez une phrase courte.</p>
+</blockquote>
+<blockquote>
+<p><strong>Nouveautés de la 2.4.1</strong> · Kokoro v1.0. Dans <strong>Inference → TTS → Kokoro (local)</strong>, installez le moteur séparément. Il occupe environ 528 Mo après installation. Choisissez une voix et testez une phrase courte. Edge utilise Internet, Windows utilise les voix installées et ElevenLabs requiert une clé API.</p>
+</blockquote>
+<span id="choose-a-source-voice" class="docs-anchor"></span><h2 id="choisissez-une-voix-source">Choisissez une voix source</h2>
+<retype-table copy-text="| Moteur | Quand la choisir | Que vérifier |
+| --- | --- | --- |
+| Microsoft Edge | Vous souhaitez parcourir les voix en ligne par langue. | Le service a besoin d'une connexion Internet et envoie le texte à Microsoft pour synthèse. Choisissez une voix qui parle la langue du script. |
+| Windows | Vous souhaitez une synthèse hors ligne sur l'installation locale de Windows. | La liste dépend des voix de bureau prises en charge installées sur ce PC. Si la voix est manquante, vérifiez les paramètres vocaux de Windows et actualisez la liste. |
+| ElevenLabs | Vous souhaitez utiliser une voix de votre compte ElevenLabs. | Une connexion Internet et une clé API ElevenLabs sont nécessaires. Le texte est envoyé à ElevenLabs pour la synthèse. |
+| Kokoro (local) | Vous souhaitez utiliser Kokoro v1.0 en local. | Installez Kokoro dans l’onglet TTS. Il occupe environ 528 Mo et propose 54 voix, dont Sara et Nicola en italien. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Moteur</th>
+<th>Quand la choisir</th>
+<th>Que vérifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Edge</td>
+<td>Vous souhaitez parcourir les voix en ligne par langue.</td>
+<td>Le service a besoin d&#x27;une connexion Internet et envoie le texte à Microsoft pour synthèse. Choisissez une voix qui parle la langue du script.</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Vous souhaitez une synthèse hors ligne sur l&#x27;installation locale de Windows.</td>
+<td>La liste dépend des voix de bureau prises en charge installées sur ce PC. Si la voix est manquante, vérifiez les paramètres vocaux de Windows et actualisez la liste.</td>
+</tr>
+<tr>
+<td>ElevenLabs</td>
+<td>Vous souhaitez utiliser une voix de votre compte ElevenLabs.</td>
+<td>Une connexion Internet et une clé API ElevenLabs sont nécessaires. Le texte est envoyé à ElevenLabs pour la synthèse.</td>
+</tr>
+<tr>
+<td>Kokoro (local)</td>
+<td>Vous souhaitez utiliser Kokoro v1.0 en local.</td>
+<td>Installez Kokoro dans l’onglet TTS. Il occupe environ 528 Mo et propose 54 voix, dont Sara et Nicola en italien.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>La voix source prononce les mots. <strong>Voice Model</strong> est le modèle RVC qui modifie le timbre ultérieurement. Par exemple, commencez par une voix source italienne pour une écriture italienne, puis sélectionnez le modèle RVC cible séparément. Un modèle vocal fort n’ajoute pas les distinctions phonétiques manquantes à la source.</p>
+<span id="make-a-first-recording" class="docs-anchor"></span><h2 id="réalisez-un-premier-enregistrement">Réalisez un premier enregistrement</h2>
+<ol>
+<li>Ouvrez <strong>Inférence → TTS</strong>. Tapez une phrase courte ou importez un fichier UTF-8 <code translate="no" v-pre>.txt</code>. Le champ de texte prend en charge jusqu&#x27;à <strong>10 000 caractères</strong>. Commencez par un paragraphe avant d’importer un long script.</li>
+<li>Choisissez le moteur vocal. Filtrez la liste par langue, choisissez une voix source et utilisez <strong>Actualiser les voix</strong> si la liste est obsolète.</li>
+<li>Laissez le débit et le volume proches de leurs valeurs par défaut et laissez la conversion RVC désactivée pour le premier test. Générez le discours et écoutez le résultat original.</li>
+<li>Vérifiez les noms, la ponctuation et les pauses. Si une ligne semble précipitée, divisez la phrase ou ajustez le débit. Si une abréviation est mal lue, essayez de l’écrire. Générez à nouveau le même court extrait et comparez.</li>
+<li>Conservez cette première bonne version comme référence avant de modifier les commandes RVC.</li>
+</ol>
+<span id="convert-the-generated-speech" class="docs-anchor"></span><h2 id="convertissez-la-parole-générée">Convertissez la parole générée</h2>
+<ol>
+<li>Choisissez le <strong>Modèle vocal</strong> cible au-dessus du panneau TTS. Utilisez une inférence <code translate="no" v-pre>.pth</code> compatible avec votre application. Sa correspondance <code translate="no" v-pre>.index</code> est facultative.</li>
+<li>Activez la <strong>conversion RVC</strong>. Commencez avec une hauteur de conversion à <strong>0 demi-ton</strong>, l&#x27;extracteur de hauteur par défaut, <strong>Index Ratio 0</strong> et les effets facultatifs désactivés. Utilisez l&#x27;encodeur de contenu attendu par le modèle cible.</li>
+<li>Exécutez la conversion, puis écoutez séparément les lecteurs originaux et convertis. Comparez la même phrase à un niveau de lecture similaire. Utilisez le contrôle de téléchargement du lecteur converti pour enregistrer le WAV.</li>
+<li>Si vous disposez de l&#x27;indice correspondant, essayez d&#x27;augmenter légèrement le <strong>rapport d&#x27;indice</strong> et comparez à nouveau. Gardez-le à zéro si vous n&#x27;utilisez pas d&#x27;index. La récupération modifiée ne peut pas corriger un mot lu incorrectement par le moteur TTS.</li>
+</ol>
+<span id="what-each-setting-changes" class="docs-anchor"></span><h2 id="ce-que-chaque-paramètre-change">Ce que chaque paramètre change</h2>
+<retype-table copy-text="| Contrôle | Ce que cela change | Premier réglage à essayer |
+| --- | --- | --- |
+| Débit de parole | La vitesse de la voix source avant la conversion. | Ralentissez un peu si les syllabes se rejoignent. Vérifiez le timing avant de régler la hauteur. |
+| Volume source | Le niveau de la parole générée avant conversion. | Gardez la source propre et à un niveau utile. Comparez des fichiers avec un volume sonore similaire. |
+| Hauteur de la source en Hz | Change la hauteur pendant la synthèse Edge lorsque cela est pris en charge. | Laissez-le d'abord par défaut. Modifiez-le séparément du pas RVC. |
+| pitch RVC en demi-tons | Transpose la voix générée lors de la conversion. | Repartir à zéro et tester des petits décalages. Vérifiez les mots les plus bas et les plus hauts de l’échantillon. |
+| Extraction du pitch | Estimation du contour de hauteur à partir de l'audio généré. | Comparez les extracteurs uniquement si le pitch converti saute ou vacille. |
+| Taux d'index | Contrôle dans quelle mesure la conversion utilise l'index sélectionné. | Recommencez à zéro. Utilisez une valeur modeste uniquement avec l’index correspondant exactement. |
+| Volume du lecteur | Contrôle le volume d'écoute. | Utilisez-le pour comparer les niveaux de lecture. Utilisez les paramètres de conversion ou d'exportation si vous devez modifier le fichier résultant. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contrôle</th>
+<th>Ce que cela change</th>
+<th>Premier réglage à essayer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Débit de parole</td>
+<td>La vitesse de la voix source avant la conversion.</td>
+<td>Ralentissez un peu si les syllabes se rejoignent. Vérifiez le timing avant de régler la hauteur.</td>
+</tr>
+<tr>
+<td>Volume source</td>
+<td>Le niveau de la parole générée avant conversion.</td>
+<td>Gardez la source propre et à un niveau utile. Comparez des fichiers avec un volume sonore similaire.</td>
+</tr>
+<tr>
+<td>Hauteur de la source en Hz</td>
+<td>Change la hauteur pendant la synthèse Edge lorsque cela est pris en charge.</td>
+<td>Laissez-le d&#x27;abord par défaut. Modifiez-le séparément du pas RVC.</td>
+</tr>
+<tr>
+<td>pitch RVC en demi-tons</td>
+<td>Transpose la voix générée lors de la conversion.</td>
+<td>Repartir à zéro et tester des petits décalages. Vérifiez les mots les plus bas et les plus hauts de l’échantillon.</td>
+</tr>
+<tr>
+<td>Extraction du pitch</td>
+<td>Estimation du contour de hauteur à partir de l&#x27;audio généré.</td>
+<td>Comparez les extracteurs uniquement si le pitch converti saute ou vacille.</td>
+</tr>
+<tr>
+<td>Taux d&#x27;index</td>
+<td>Contrôle dans quelle mesure la conversion utilise l&#x27;index sélectionné.</td>
+<td>Recommencez à zéro. Utilisez une valeur modeste uniquement avec l’index correspondant exactement.</td>
+</tr>
+<tr>
+<td>Volume du lecteur</td>
+<td>Contrôle le volume d&#x27;écoute.</td>
+<td>Utilisez-le pour comparer les niveaux de lecture. Utilisez les paramètres de conversion ou d&#x27;exportation si vous devez modifier le fichier résultant.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="prepare-a-longer-script" class="docs-anchor"></span><h2 id="préparez-un-script-plus-long">Préparez un script plus long</h2>
+<p>Divisez un long script aux limites des paragraphes ou des scènes. Conservez les mêmes paramètres de voix source, de tarif, de modèle cible et de conversion dans toutes les sections. Enregistrez les sorties avec des noms ordonnés tels que <code translate="no" v-pre>01-intro.wav</code> et <code translate="no" v-pre>02-main.wav</code>. Rejoignez-les dans un éditeur audio et écoutez au-delà de chaque frontière. Faites correspondre les pauses et le volume avant d&#x27;exporter le fichier final.</p>
+<p>Pour les scripts comportant plusieurs langues, testez une courte phrase dans chaque langue avant le rendu. Utilisez des voix ou des sections sources distinctes si nécessaire. Certains contrastes phonétiques peuvent rester difficiles après conversion à cause du modèle cible ou de son encodeur de contenu.</p>
+<span id="troubleshooting" class="docs-anchor"></span><h2 id="dépannage">Dépannage</h2>
+<retype-table copy-text="| Ce que vous entendez ou voyez | Que vérifier |
+| --- | --- |
+| Edge ne produit aucune parole | Vérifiez l'accès à Internet, actualisez la liste vocale et essayez une courte phrase en texte brut avec une autre voix compatible. |
+| La liste Windows est vide | Vérifiez quelles voix vocales de bureau sont installées et disponibles pour l'application. La synthèse hors ligne dépend de l'environnement Windows local. |
+| Les clips source et convertis prononcent mal le même mot | Changez la voix source ou réécrivez le mot dans le script, puis régénérez la source. |
+| L'original est clair mais la conversion déforme les consonnes ou saute la hauteur | Testez la même source avec la récupération et les effets désactivés. Vérifiez l'encodeur et l'extraction du pitch. Si le même modèle déforme plusieurs entrées propres, inspectez les données d'entraînement et envisagez un recyclage. |
+| La voix convertie sonne toujours comme la source | Vérifiez le modèle et l'encodeur sélectionnés. Comparez un autre clip propre avant d’augmenter la récupération. |
+| Aucun résultat converti n'apparaît | Vérifiez que la **conversion RVC** est activée et que la voix sélectionnée est un modèle d'inférence. Lisez la première erreur dans le journal. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Ce que vous entendez ou voyez</th>
+<th>Que vérifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge ne produit aucune parole</td>
+<td>Vérifiez l&#x27;accès à Internet, actualisez la liste vocale et essayez une courte phrase en texte brut avec une autre voix compatible.</td>
+</tr>
+<tr>
+<td>La liste Windows est vide</td>
+<td>Vérifiez quelles voix vocales de bureau sont installées et disponibles pour l&#x27;application. La synthèse hors ligne dépend de l&#x27;environnement Windows local.</td>
+</tr>
+<tr>
+<td>Les clips source et convertis prononcent mal le même mot</td>
+<td>Changez la voix source ou réécrivez le mot dans le script, puis régénérez la source.</td>
+</tr>
+<tr>
+<td>L&#x27;original est clair mais la conversion déforme les consonnes ou saute la hauteur</td>
+<td>Testez la même source avec la récupération et les effets désactivés. Vérifiez l&#x27;encodeur et l&#x27;extraction du pitch. Si le même modèle déforme plusieurs entrées propres, inspectez les données d&#x27;entraînement et envisagez un recyclage.</td>
+</tr>
+<tr>
+<td>La voix convertie sonne toujours comme la source</td>
+<td>Vérifiez le modèle et l&#x27;encodeur sélectionnés. Comparez un autre clip propre avant d’augmenter la récupération.</td>
+</tr>
+<tr>
+<td>Aucun résultat converti n&#x27;apparaît</td>
+<td>Vérifiez que la <strong>conversion RVC</strong> est activée et que la voix sélectionnée est un modèle d&#x27;inférence. Lisez la première erreur dans le journal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Pour d&#x27;autres paramètres de conversion, voir <a href="../inference-buttons/">Contrôles d&#x27;inférence</a>. Pour les diagnostics, voir <a href="../../troubleshooting/">Dépannage</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/inference/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Inf&#233;rence unique et par lots</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/advanced-inference/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Traitement et exportation</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Synthèse vocale", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/convert/speech.md" }</script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="it" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/it">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848510334626">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Prepara un set di dati vocale">
+    <meta name="description" content="Scarica Ilaria RVC 2.4.0 per Windows (ZIP)">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/it/dataset-preparation/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/it/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/it/dataset-preparation/">
+    <meta property="og:title" content="Prepara un set di dati vocale">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/dataset-preparation/">
+    <meta name="twitter:title" content="Prepara un set di dati vocale">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/model-training/dataset-preparation.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848510334626" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848510334626" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848510334626" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:description" content="Una raccolta di informazioni sul mondo RVC, con guide alla conversione vocale, all’addestramento dei modelli e alle app compatibili.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <meta name="twitter:description" content="Una raccolta di informazioni sul mondo RVC, con guide alla conversione vocale, all’addestramento dei modelli e alle app compatibili.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/dataset-preparation/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/dataset-preparation/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/dataset-preparation/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/dataset-preparation/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/dataset-preparation/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/dataset-preparation/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/dataset-preparation/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/it/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Lingua: Italiano"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Italiano</span></summary><div><a href="/dataset-preparation/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/dataset-preparation/" lang="it" hreflang="it" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/dataset-preparation/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/dataset-preparation/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/dataset-preparation/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/dataset-preparation/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="prepare-a-voice-dataset" class="docs-anchor"></span><h1 id="prepara-un-set-di-dati-vocale">Prepara un set di dati vocale</h1>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Scarica Ilaria RVC 2.4.0 per Windows (ZIP)</a></p>
+<p>Ogni clip insegna al modello qualcosa sulla sua voce di destinazione. Prima dell&#x27;addestramento, decidi quali parti di quella voce vuoi che il modello gestisca, quindi conserva le registrazioni che dimostrano chiaramente quelle parti. Inizia con il materiale che sei autorizzato a utilizzare per la formazione e conserva una copia separata dei file originali.</p>
+<span id="choose-recordings-for-your-goal" class="docs-anchor"></span><h2 id="scegli-le-registrazioni-per-il-tuo-obiettivo">Scegli le registrazioni per il tuo obiettivo</h2>
+<retype-table copy-text="| Obiettivo | Cosa raccogliere |
+| --- | --- |
+ | Discorso colloquiale | Domande, affermazioni, frasi più lunghe e risposte brevi con consonanti e vocali diverse. |
+ | Discorso espressivo | Gli stili di esposizione previsti sia a livello calmo che enfatico. Registra le variazioni tra diverse frasi. |
+ | Canto | Vocali sostenute, cambi di nota ed esempi vicino alle comode estremità alte e basse dell'estensione prevista. |
+ | Più di una lingua | Chiari esempi di suoni e frasi che differiscono tra le lingue, registrati dallo stesso parlante. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Obiettivo</th>
+<th>Cosa raccogliere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discorso colloquiale</td>
+<td>Domande, affermazioni, frasi più lunghe e risposte brevi con consonanti e vocali diverse.</td>
+</tr>
+<tr>
+<td>Discorso espressivo</td>
+<td>Gli stili di esposizione previsti sia a livello calmo che enfatico. Registra le variazioni tra diverse frasi.</td>
+</tr>
+<tr>
+<td>Canto</td>
+<td>Vocali sostenute, cambi di nota ed esempi vicino alle comode estremità alte e basse dell&#x27;estensione prevista.</td>
+</tr>
+<tr>
+<td>Più di una lingua</td>
+<td>Chiari esempi di suoni e frasi che differiscono tra le lingue, registrati dallo stesso parlante.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<blockquote>
+<p>ContentVec può essere un collo di bottiglia nei modelli multilingue. Anche con un dataset nella lingua desiderata, l’encoder può perdere alcune distinzioni fonetiche. Tieni da parte clip di prova per ogni lingua, includendo i contrasti più difficili, e confronta la pronuncia dopo un breve addestramento. Se gli stessi errori si ripetono su clip pulite, documenta il limite per quella lingua. Cambiare encoder o configurazione di addestramento non è una soluzione affidabile.</p>
+</blockquote>
+<p>Un insieme di registrazioni pulito e vario è un punto di partenza migliore rispetto a una raccolta più ampia di frasi ripetute o audio danneggiato. Non esiste una durata che garantisca un buon risultato. Controlla cosa coprono le registrazioni prima di decidere se hai bisogno di più materiale.</p>
+<span id="plan-an-expressive-recording-session" class="docs-anchor"></span><h2 id="pianifica-una-sessione-di-registrazione-espressiva">Pianifica una sessione di registrazione espressiva</h2>
+<p>Una registrazione può essere priva di rumore e coprire comunque una minima parte della voce. Costruisci la sessione attorno alla performance che prevedi di convertire. Per la narrazione, registra una lettura chiara con un fraseggio intenzionale. Per la conversazione, includi risposte spontanee e cambiamenti di ritmo. Per cantare, raccogli brani a cappella asciutti nel registro previsto, con vocali sostenute e transizioni tra le note. Le sole battute danno al modello poca esposizione a quei suoni cantati.</p>
+<p>Registrati o concorda con l&#x27;esecutore il modello previsto e il suo utilizzo prima della registrazione. Per una conversazione remota, chiedi all&#x27;oratore di acquisire il proprio microfono localmente e di utilizzare solo quella traccia.</p>
+<retype-table copy-text="| Blocco sessione | Esempio di allocazione | Cosa catturare |
+| --- | --- | --- |
+ | Narrazione espressiva | 10 minuti | Leggi un passaggio con cambiamenti di enfasi, emozione e ritmo. |
+ | Conversazione | 10 minuti | Raccogli discorsi non scritti con domande, reazioni brevi e risposte più lunghe. |
+ | Copertura fonetica | 10 minuti | Usa materiale come Harvard Sentences, Rainbow Passage o Comma Gets a Cure per esercitare vocali, dittonghi, occlusive come P/B/T/K e sibilanti come S/Z/SH. |
+ | Intervallo di prestazione | 20 minuti | Registra la consegna di cui il modello ha bisogno, dal discorso sommesso alla proiezione. Prova ritmi, emozioni diversi e risatine o sospiri chiari, ove pertinente. Per un modello multilingue, includere una copertura intenzionale delle lingue di destinazione. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Blocco sessione</th>
+<th>Esempio di allocazione</th>
+<th>Cosa catturare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Narrazione espressiva</td>
+<td>10 minuti</td>
+<td>Leggi un passaggio con cambiamenti di enfasi, emozione e ritmo.</td>
+</tr>
+<tr>
+<td>Conversazione</td>
+<td>10 minuti</td>
+<td>Raccogli discorsi non scritti con domande, reazioni brevi e risposte più lunghe.</td>
+</tr>
+<tr>
+<td>Copertura fonetica</td>
+<td>10 minuti</td>
+<td>Usa materiale come Harvard Sentences, Rainbow Passage o Comma Gets a Cure per esercitare vocali, dittonghi, occlusive come P/B/T/K e sibilanti come S/Z/SH.</td>
+</tr>
+<tr>
+<td>Intervallo di prestazione</td>
+<td>20 minuti</td>
+<td>Registra la consegna di cui il modello ha bisogno, dal discorso sommesso alla proiezione. Prova ritmi, emozioni diversi e risatine o sospiri chiari, ove pertinente. Per un modello multilingue, includere una copertura intenzionale delle lingue di destinazione.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Quel piano di 50 minuti è un esempio di discorso espressivo. Un set mirato di dieci minuti può essere più utile di un set più ampio di registrazioni ripetitive o danneggiate. Aggiungi materiale per colmare una lacuna udibile nella copertura. La durata del set di dati da sola non determina il sovradattamento.</p>
+<span id="set-up-the-microphone" class="docs-anchor"></span><h3 id="imposta-il-microfono">Imposta il microfono</h3>
+<p>Cattura un singolo microfono su una traccia mono. Utilizza un filtro anti-pop o un parabrezza, mantieni costante la distanza del microfono e imposta il guadagno mentre provi la linea pianificata più rumorosa. Una stanza tranquilla con arredi delicati riduce i riflessi alla fonte. Preferisci un originale asciutto a una registrazione molto pulita con riverbero udibile o artefatti di separazione. Se converti le registrazioni stereo esistenti in mono, ascolta entrambi i canali e il pieghevole. Utilizzare un canale pulito se il segnale combinato suona vuoto o perde dettaglio.</p>
+<span id="check-the-prepared-audio" class="docs-anchor"></span><h3 id="controlla-laudio-preparato">Controlla l&#x27;audio preparato</h3>
+<ul>
+<li><strong>Frequenza di campionamento:</strong> Mantieni gli originali alla frequenza registrata. Scegli una frequenza di allenamento supportata dall&#x27;architettura e dai pesi preallenati. La fase di preelaborazione può ricampionare quando necessario. Il sovracampionamento non aggiunge alcun dettaglio alla registrazione originale.</li>
+<li><strong>Livelli:</strong> Confronta i livelli delle sessioni e correggi le grandi differenze di guadagno causate dal posizionamento del microfono o dalle impostazioni di registrazione. Preservare le modifiche intenzionali nella consegna. Controlla ciò che il frontend di training già normalizza prima di applicare un passaggio di volume separato.</li>
+<li><strong>Respiri e reazioni:</strong> Mantieni respiri naturali e segnali espressivi puliti laddove servono all&#x27;uso previsto. Elimina le risate taglienti, i sussulti aspri e gli scoppi esplosivi. Ascolta le modifiche incerte in cuffia.</li>
+<li><strong>Pause:</strong> mantieni le pause naturali e rimuovi i lunghi intervalli vuoti. Se vuoi testare una clip di silenzio autonoma, esegui un confronto con le stesse impostazioni e ascolta le pause trattenute. Alcune pipeline di preelaborazione gestiscono già il silenzio.</li>
+</ul>
+<span id="record-or-select-clean-material" class="docs-anchor"></span><h2 id="registra-o-seleziona-materiale-pulito">Registra o seleziona materiale pulito</h2>
+<ul>
+<li>Utilizza un altoparlante per il primo modello. Escludi voci sovrapposte, risposte del pubblico e dialoghi in cui l&#x27;oratore cambia a metà clip.</li>
+<li>Ascolta il rumore della ventola, gli echi, la musica e la distorsione digitale. Una clip che suona accettabile in un mix ad alto volume può comunque contenere problemi evidenti quando la voce è isolata.</li>
+<li>Se stai registrando una nuova sessione, usa una posizione coerente del microfono e lascia un margine di picco. Prova la frase più forte prima di registrare l&#x27;intera sessione.</li>
+<li>Quando combini le sessioni, ascoltale fianco a fianco. Mantieni le variazioni utili nella voce ed elimina le differenze brusche causate da effetti pesanti, suoni della stanza o un microfono inaffidabile.</li>
+<li>Rimuovi le riprese duplicate se aggiungono poca varietà. Metti da parte diverse sessioni o passaggi per la valutazione prima di modificare i tagli adiacenti nella cartella di formazione.</li>
+</ul>
+<span id="clean-a-working-copy" class="docs-anchor"></span><h2 id="pulisci-una-copia-di-lavoro">Pulisci una copia di lavoro</h2>
+<ol>
+<li><strong>Isola la voce di destinazione.</strong> Se la fonte include un accompagnamento, prova a separare e ad ascoltare la radice vocale risultante. Rifiuta le sezioni con sanguinamento dello strumento, cori o evidenti artefatti di separazione.</li>
+<li><strong>Esegui tagli lungo i confini naturali.</strong> Taglia l&#x27;aria morta da tempo e rimuovi le sezioni inutilizzabili. Ascolta attraverso ogni taglio le consonanti perdute, i cambiamenti improvvisi o l&#x27;ingresso di un secondo oratore.</li>
+<li><strong>Applica solo la pulizia necessaria alla registrazione.</strong> Confronta qualsiasi passaggio di denoising con l&#x27;originale. Se la versione ripulita inghiotte consonanti, confonde le sillabe o introduce un suono pulsante, riduci l&#x27;elaborazione o sostituisci la versione.</li>
+<li><strong>Controlla i livelli tra i file.</strong> Mantieni spazio sufficiente per i passaggi ad alto volume e bilancia le principali differenze di livello di registrazione. L&#x27;abbassamento del volume di un file già tagliato lascia i picchi danneggiati nella registrazione.</li>
+<li><strong>Esporta in un formato senza perdita di dati leggibile dalla tua build.</strong> WAV è un formato di lavoro pratico. La ricodifica di un file compresso come WAV preserva il risultato di tale decodifica e non può ripristinare i dettagli persi.</li>
+</ol>
+<p>Il motore di training può dividere i file nei propri segmenti e ricampionarli nella configurazione del modello selezionato. Mantieni intatte le parole e le frasi utilizzabili durante la modifica manuale e lascia che sia la fase di preelaborazione dell&#x27;addestramento a gestire la propria segmentazione.</p>
+<span id="organize-the-dataset-and-listening-tests" class="docs-anchor"></span><h2 id="organizzare-il-set-di-dati-e-le-prove-di-ascolto">Organizzare il set di dati e le prove di ascolto</h2>
+<p>Conservare gli input di confronto, le registrazioni scartate e l&#x27;output convertito fuori dalla cartella di formazione. In questo esempio vengono utilizzate cartelle separate per gli originali, la formazione e la valutazione.</p>
+<div id="organizzare-il-set-di-dati-e-le-prove-di-ascolto-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">my-voice-project/
+  originals/
+  training-audio/
+    session-a-01.wav
+    session-a-02.wav
+    session-b-01.wav
+  evaluation/
+    speech-test.wav
+    expressive-test.wav
+  notes.md</code></pre>
+</doc-codeblock></div>
+<p>Preelaborazione del punto a <code translate="no" v-pre>training-audio/</code>. Tieni <code translate="no" v-pre>evaluation/</code> separato. Un utile set di confronto potrebbe includere una frase parlata non familiare con consonanti acute, un passaggio tranquillo e una breve frase espressiva. Per un modello di canto, includere una nota tenuta e una frase che incrocia i registri. Trattenete interi passaggi o sessioni quando potete, in modo che l&#x27;audio di prova non duplichi le clip di allenamento vicine.</p>
+<p>Se ti alleni con un&#x27;interfaccia che supporta più di un relatore, segui le regole relative alla cartella del relatore e all&#x27;ID. Una cartella con un solo altoparlante con file audio direttamente al suo interno è più semplice da controllare per la prima volta.</p>
+<span id="review-the-dataset-in-ilaria-rvc" class="docs-anchor"></span><h2 id="rivedi-il-dataset-in-ilaria-rvc">Rivedi il dataset in Ilaria RVC</h2>
+<p>Le recenti build di Ilaria RVC ti consentono di trascinare l&#x27;audio o uno ZIP del set di dati nell&#x27;interfaccia di formazione e gestire lì i set di dati importati. Seleziona il set di dati desiderato ed esegui il <strong>Dataset Checker</strong>. Utilizza le sue brevi anteprime per esaminare i file contrassegnati per silenzio, ritaglio, livelli incoerenti o problemi di decodifica. L&#x27;<strong>Analizzatore audio</strong> può aiutare a confrontare i file sospetti utilizzando forme d&#x27;onda, intonazione e misurazioni di livello. Conferma la diagnosi ascoltando prima di rimuovere materiale altrimenti utile. Le etichette di disponibilità e controllo seguono la versione installata.</p>
+<retype-table copy-text="| Cosa noti | Cosa fare prima dell'allenamento |
+| --- | --- |
+ | Il file non verrà decodificato | Controlla che venga riprodotto in un editor. Riesportare dall'originale, se possibile, e verificare che la copia si apra. |
+ | Sezioni di quasi-silenzio | Ascolta l'intervallo contrassegnato e ritaglia gli intervalli vuoti. Mantieni pause naturali che aiutano a preservare i confini della frase. |
+ | Picchi distorti o appiattiti | Confrontare con la registrazione originale. Sostituisci una ripresa udibilmente tagliata quando hai un'alternativa pulita. |
+ | I suoni di sottofondo seguono la voce | Ascoltare in cuffia il gambo isolato ed escludere le parti interessate quando la separazione risulta instabile. |
+ | Una sessione è molto più silenziosa | Controlla se la performance dell'oratore è intenzionalmente silenziosa. Regola le differenze di guadagno della registrazione mantenendo la dinamica naturale utile. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Cosa noti</th>
+<th>Cosa fare prima dell&#x27;allenamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Il file non verrà decodificato</td>
+<td>Controlla che venga riprodotto in un editor. Riesportare dall&#x27;originale, se possibile, e verificare che la copia si apra.</td>
+</tr>
+<tr>
+<td>Sezioni di quasi-silenzio</td>
+<td>Ascolta l&#x27;intervallo contrassegnato e ritaglia gli intervalli vuoti. Mantieni pause naturali che aiutano a preservare i confini della frase.</td>
+</tr>
+<tr>
+<td>Picchi distorti o appiattiti</td>
+<td>Confrontare con la registrazione originale. Sostituisci una ripresa udibilmente tagliata quando hai un&#x27;alternativa pulita.</td>
+</tr>
+<tr>
+<td>I suoni di sottofondo seguono la voce</td>
+<td>Ascoltare in cuffia il gambo isolato ed escludere le parti interessate quando la separazione risulta instabile.</td>
+</tr>
+<tr>
+<td>Una sessione è molto più silenziosa</td>
+<td>Controlla se la performance dell&#x27;oratore è intenzionalmente silenziosa. Regola le differenze di guadagno della registrazione mantenendo la dinamica naturale utile.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Prima di continuare, riproduci alcuni clip di ogni sessione, conferma di aver selezionato la cartella preparata e registra la versione della cartella nelle tue note. Quindi <a href="../training/">esegui un esperimento di formazione</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../stems-and-mixing/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#127925; Tracce separate e mixaggio</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../training/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#128736;️ Addestra un modello vocale</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-19T21:46:11.000Z">19/11/2026 · 22:46</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🎧 Prepara un set di dati", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/model-training/dataset-preparation.md" }</script>
+</body>
+</html>
