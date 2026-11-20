@@ -4,6 +4,7 @@
 
 !!!warning
 **Bevorstehendes Release: UVR6 kommt bald!**
+
 **Ultimate Vocal Remover 6 (UVR6)** erscheint am **11. Dezember 2026 für Windows**, **Mac** folgt kurz darauf und danach **Linux**. Da **UVR5** bald von dieser neuen Hauptversion abgelöst wird, behalte rund um den Release-Termin die offizielle Release-Seite im Blick, falls du umsteigen möchtest.
 !!!
 
