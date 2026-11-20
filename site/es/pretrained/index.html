@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848523860261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848524191916">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Modelos Base Pretrained de RVC">
-    <meta name="description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos...">
+    <meta name="description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos de horas de audio multihablante.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/pretrained/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848523860261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848524191916" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848523860261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848524191916" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848523860261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848524191916" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos...">
+    <meta property="og:description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos de horas de audio multihablante.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos...">
+    <meta name="twitter:description" content="Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos de horas de audio multihablante.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/pretrained/">
@@ -175,7 +175,7 @@
 
                 <!-- Page content  -->
 <span id="rvc-pretrained-base-models" class="docs-anchor"></span><h1 id="modelos-base-pretrained-de-rvc">Modelos Base Pretrained de RVC</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos...</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Un modelo base pretrained (o pretrain) es un par de checkpoints iniciales: un Generador (G_.pth) y un Discriminador (D_.pth), ya entrenados sobre cientos de horas de audio multihablante.</div>
 <p>Un <strong>modelo base pretrained</strong> (o <strong>pretrain</strong>) es un par de checkpoints iniciales: un <strong>Generador (<code translate="no" v-pre>G_*.pth</code>)</strong> y un <strong>Discriminador (<code translate="no" v-pre>D_*.pth</code>)</strong>, ya entrenados sobre cientos de horas de audio multihablante. Al entrenar una voz RVC nueva, el entrenamiento no empieza desde cero, sino que hace <strong>fine-tuning</strong> de este par sobre el dataset de tu voz objetivo.</p>
 <span id="what-pretrained-models-do-and-why-they-exist" class="docs-anchor"></span><h2 id="qué-hacen-los-pretrained-y-por-qué-existen">Qué hacen los pretrained y por qué existen</h2>
 <p>Partir de un pretrained permite que RVC aprenda una voz en minutos u horas en vez de semanas:</p>
@@ -539,7 +539,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848523878394">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848524203094">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="RVC Pitch Extractors (F0-Methoden)">
-    <meta name="description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und...">
+    <meta name="description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/de/pitch-extractors/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848523878394" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848524203094" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848523878394" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848524203094" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848523878394" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848524203094" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und...">
+    <meta property="og:description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
-    <meta name="twitter:description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und...">
+    <meta name="twitter:description" content="Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/pitch-extractors/">
@@ -175,7 +175,7 @@
 
                 <!-- Page content  -->
 <span id="rvc-pitch-extractors-f0-methods" class="docs-anchor"></span><h1 id="rvc-pitch-extractors-f0-methoden">RVC Pitch Extractors (F0-Methoden)</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und...</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.</div>
 <p>Ein <strong>Pitch Extractor</strong> (auch <strong>F0-Extraktionsmethode</strong> genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.</p>
 <p>Während ein <a href="../embedders/">Embedder</a> liest, <em>welche Wörter und Laute</em> gesprochen oder gesungen werden, misst der <strong>Pitch Extractor</strong>, <em>wie hoch oder tief</em> die Stimme in jedem Sekundenbruchteil klingt.</p>
 <div class="flex mb-6">
@@ -347,7 +347,7 @@ Anders als bei Embeddern <strong>binden dich Pitch Extractors nicht an eine fest
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
