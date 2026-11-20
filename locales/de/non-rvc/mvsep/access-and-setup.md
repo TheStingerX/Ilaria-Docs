@@ -20,7 +20,7 @@ Da MVSep in der Cloud läuft, muss **nichts installiert** werden. Die richtige E
 
 - **Ausgabeformat**: wähle vor dem Start immer **WAV** (oder **FLAC**), wenn du ein RVC-Modell trainieren oder mehrere Bereinigungsschritte verketten willst.
 - **Post-Processing / Verkettung**: logge dich ein, gehe zu **Advanced settings → Home Screen** und aktiviere **„Show post-processing algorithm“**, um direkt nach der Trennung ein Bereinigungsmodell anzuwenden.
-- **Langsamer Upload/Download?** MVSep bietet regionale Spiegelserver (Mirrors) — wechsle bei langsamer Übertragung auf den Mirror.
+- **Langsamer Upload/Download?** MVSep bietet regionale Spiegelserver (Mirrors) - wechsle bei langsamer Übertragung auf den Mirror.
 
 ## 3. Prepaid-Credits & volle API (Optional)
 

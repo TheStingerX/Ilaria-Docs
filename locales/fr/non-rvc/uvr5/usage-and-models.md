@@ -51,18 +51,18 @@ Utilisez ce guide pour bien configurer UVR5 et choisir les meilleurs modèles po
 
 ## 3. Flux recommandé pour nettoyer un dataset RVC
 
-1. **Étape 1 — Isoler la voix** : passez le morceau dans **`BS-Roformer-Viperx-1297`** (onglet MDX-Net, GPU Conversion activé).
-2. **Étape 2 — Retirer harmonies / chœurs** *(si présents)* : passez la piste vocale isolée dans **`5_HP-Karaoke-UVR`** (onglet VR Architecture).
-3. **Étape 3 — Supprimer réverbération et écho** : passez **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** (ou **`UVR-DeEcho-DeReverb`** à Aggression `3–5` / **`UVR-De-Echo-Normal`**).
-4. **Étape 4 — Débruitage final** *(uniquement si du souffle ou des artefacts restent)* : utilisez **`UVR-DeNoise`** (agressivité basse ou négative sur voix) ou **`UVR-DeNoise-Lite`**. Écoutez toujours au casque par rapport à l'étape précédente pour ne pas abîmer les consonnes.
+1. **Étape 1 - Isoler la voix** : passez le morceau dans **`BS-Roformer-Viperx-1297`** (onglet MDX-Net, GPU Conversion activé).
+2. **Étape 2 - Retirer harmonies / chœurs** *(si présents)* : passez la piste vocale isolée dans **`5_HP-Karaoke-UVR`** (onglet VR Architecture).
+3. **Étape 3 - Supprimer réverbération et écho** : passez **`dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`** (ou **`UVR-DeEcho-DeReverb`** à Aggression `3–5` / **`UVR-De-Echo-Normal`**).
+4. **Étape 4 - Débruitage final** *(uniquement si du souffle ou des artefacts restent)* : utilisez **`UVR-DeNoise`** (agressivité basse ou négative sur voix) ou **`UVR-DeNoise-Lite`**. Écoutez toujours au casque par rapport à l'étape précédente pour ne pas abîmer les consonnes.
 
 ## 4. Dépannage courant
 
 - **Erreur mémoire (`RuntimeError`) ou blocage à 5 % sous DirectML (AMD/Intel)** :
   - Ouvrez **Choose MDX-Net Model → Edit Model Config** (ou éditez le `.yaml` dans `models\MDX_Net_Models\model_data\mdx_c_configs\`) et réduisez `chunk_size` (vérifiez que **Segment Default** est coché dans les options MDX avancées) :
-    - `352800` (8s) — valeur par défaut ; maximum conseillé sur GPU AMD/Intel 8 Go.
-    - `220500` (5s) ou `200655` (4,5s) — sûr pour les cartes 4–6 Go VRAM.
-    - `112455` (2,55s) — minimum sûr si les plantages persistent.
+    - `352800` (8s) - valeur par défaut ; maximum conseillé sur GPU AMD/Intel 8 Go.
+    - `220500` (5s) ou `200655` (4,5s) - sûr pour les cartes 4–6 Go VRAM.
+    - `112455` (2,55s) - minimum sûr si les plantages persistent.
   - Sur NVIDIA 2–4 Go VRAM, réglez **CUDA Sysmem Fallback Policy** sur **Prefer Sysmem Fallback** dans le Panneau de configuration NVIDIA.
 - **Roformer absent dans Ensemble / Vocal Splitter** : ouvrez son `.yaml` et renommez les pistes `other` / `vocals` / `Karaoke` en **`Instrumental`** et **`Vocals`** (respectez les majuscules).
 - **Le PC fige pendant la séparation** : passez la priorité d'UVR sur **Basse (Idle)** dans le Gestionnaire des tâches Windows.

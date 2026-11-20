@@ -14,7 +14,7 @@ Building a voice in Causal Voice Changer fine-tunes the base decoder on your tar
 
 - Gather clean recordings of **one speaker** (no background music, heavy reverb, or overlapping voices).
 - You can point CVC to a **single audio file** or a **folder** containing multiple audio files.
-- No manual slicing or resampling is needed — CVC handles it automatically.
+- No manual slicing or resampling is needed - CVC handles it automatically.
 
 ## 2. Train using the Training Window (Beginner method)
 
@@ -27,7 +27,7 @@ Building a voice in Causal Voice Changer fine-tunes the base decoder on your tar
    - **Save every**: how often to save a `.cvc` checkpoint (default `10,000`).
    - **Custom base** *(optional)*: toggle on if you want to train from a custom base placed in `custom-base/` instead of the default EARS base.
 3. Click **Start**.
-4. You can **Stop** (or close the window) at any time — CVC saves a checkpoint so you can **resume** later if the model name matches.
+4. You can **Stop** (or close the window) at any time - CVC saves a checkpoint so you can **resume** later if the model name matches.
 
 ## 3. Train using the Command Line (Optional)
 

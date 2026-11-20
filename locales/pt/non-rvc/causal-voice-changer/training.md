@@ -14,7 +14,7 @@ Criar uma voz no Causal Voice Changer faz o ajuste fino (fine-tuning) do descodi
 
 - Reúne gravações limpas de **apenas um locutor** (sem música de fundo, reverberação forte nem vozes sobrepostas).
 - Podes apontar para um **único ficheiro de áudio** ou uma **pasta** com vários ficheiros.
-- Não é necessário cortar nem reamostrar à mão — o CVC trata disso automaticamente.
+- Não é necessário cortar nem reamostrar à mão - o CVC trata disso automaticamente.
 
 ## 2. Treinar pela janela gráfica (Método para iniciantes)
 
@@ -27,7 +27,7 @@ Criar uma voz no Causal Voice Changer faz o ajuste fino (fine-tuning) do descodi
    - **Save every**: frequência para guardar um checkpoint `.cvc` (predefinição `10,000`).
    - **Custom base** *(opcional)*: ativa se quiseres treinar a partir de uma base personalizada em `custom-base/` em vez da base EARS predefinida.
 3. Clica em **Start**.
-4. Podes clicar em **Stop** (ou fechar a janela) a qualquer momento — o CVC guarda um checkpoint para poderes **retomar** mais tarde com o mesmo nome.
+4. Podes clicar em **Stop** (ou fechar a janela) a qualquer momento - o CVC guarda um checkpoint para poderes **retomar** mais tarde com o mesmo nome.
 
 ## 3. Treinar pela linha de comandos (Opcional)
 

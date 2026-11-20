@@ -20,7 +20,7 @@ Como o MVSep corre na nuvem, **não há nada para instalar**. Ainda assim, confi
 
 - **Formato de saída**: escolhe sempre **WAV** (ou **FLAC**) antes de iniciar uma separação se vais treinar um modelo RVC ou encadear vários passos de limpeza.
 - **Pós-processamento / encadeamento**: inicia sessão, vai a **Advanced settings → Home Screen** e ativa **"Show post-processing algorithm"** para aplicar um modelo de limpeza logo após a separação.
-- **Envio ou transferência lenta?** O MVSep disponibiliza espelhos (mirrors) regionais — muda para a opção de mirror se o site principal estiver lento.
+- **Envio ou transferência lenta?** O MVSep disponibiliza espelhos (mirrors) regionais - muda para a opção de mirror se o site principal estiver lento.
 
 ## 3. Créditos pré-pagos e API completa (Opcional)
 

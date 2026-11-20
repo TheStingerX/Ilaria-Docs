@@ -8,9 +8,11 @@ permalink: /ilaria-rvc/applio/installation/
 
 [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio)
 
-Applio tiene dos interfaces. **Escritorio** abre una ventana de la aplicación instalada y administra un entorno de motor en el primer inicio. **Gradio** abre una página web local y necesita que su proceso de inicio siga funcionando. Estos pasos cubren el escritorio y el paquete compilado de Windows Gradio. Elija la interfaz que se muestra en las instrucciones que desea seguir.
+Applio tiene **dos opciones de descarga** que ejecutan **exactamente el mismo motor** - solo cambian la **interfaz y el método de instalación**:
+1. **Desktop App**: abre una ventana de aplicación instalada y gestiona su entorno Python en el primer arranque.
+2. **Gradio Web Interface**: ejecuta la aplicación Python y abre una interfaz web local en tu navegador (disponible como paquete compilado de Windows o instalación Python desde código fuente).
 
-## Escritorio
+## 1. Desktop App
 
 1. Abra las [descargas oficiales de escritorio](https://github.com/IAHispano/Applio-App/releases/latest). Busque **Activos** y expanda la lista si el instalador que necesita está oculto. Elija el activo para su sistema operativo. Los archivos de código fuente son para desarrolladores.
 2. En Windows, ejecute el ejecutable de instalación y elija una carpeta en la que su cuenta pueda escribir. La aplicación empaquetada utiliza un directorio `data` al lado de su ejecutable. En macOS, use la imagen de disco de su procesador, ARM64 para Apple Silicon o x64 para Intel. En Linux, instale el paquete Debian disponible o haga ejecutable AppImage y ábralo.
@@ -20,11 +22,11 @@ Applio tiene dos interfaces. **Escritorio** abre una ventana de la aplicación i
 
 Puedes instalar un paquete de escritorio oficial sin Node.js o pnpm. Esas herramientas son para crear la aplicación desde el código fuente.
 
-## Gradio en Windows
+## 2. Gradio Web Interface
 
-1. Descargue un paquete de Windows desde [descargas compiladas de Gradio](https://huggingface.co/IAHispano/Applio/tree/main/Compiled/Windows).
+1. **Paquete compilado para Windows**: descargue un ZIP de Windows desde [descargas compiladas de Gradio](https://huggingface.co/IAHispano/Applio/tree/main/Compiled/Windows), o clone el [repositorio de GitHub](https://github.com/IAHispano/Applio) para una instalación Python manual desde el código fuente.
 2. Extraiga el ZIP completo a una ruta simple de su propiedad, por ejemplo `C:\Applio-Gradio`. Abra esa carpeta en el Explorador. Si ve una segunda carpeta que contiene el iniciador, ábrala.
-3. Ejecute `run-applio.bat` desde la carpeta extraída. Si se abre una consola, déjela ejecutándose. Espere a que imprima una dirección local y abra esa dirección exacta en su navegador.
+3. Ejecute `run-applio.bat` (o `python app.py` en una instalación Python manual; `python app.py --help` muestra las opciones del servidor). Deje la consola abierta, espere a que imprima una dirección local y ábrala exactamente en su navegador.
 4. Busque **Modelos** o **Descargar**, según la versión. Luego abra **Convertir audio** o **Inferencia**. Si el navegador pierde la conexión, verifique si el iniciador aún se está ejecutando antes de volver a abrir la página.
 
 ## Si la instalación se detiene

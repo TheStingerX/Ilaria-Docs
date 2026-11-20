@@ -28,7 +28,7 @@ Après avoir exécuté `run-training` au moins une fois et préparé une voix `.
 1. Choisissez **Model** (et **Checkpoint** si plusieurs étapes sont sauvegardées).
 2. **Pitch (semitones)** : décalez votre hauteur en demi-tons (`+12` = une octave au-dessus, `-12` = une octave en dessous).
    - **Pitch match** : ne devinez pas ! Déposez des extraits de la voix cible dans Pitch match pour mesurer sa médiane en Hz, puis parlez pendant la conversion afin que CVC mesure votre voix et propose le décalage exact (**Apply**).
-3. **Advanced pitch** *(replié par défaut — inutile pour la plupart des voix)* :
+3. **Advanced pitch** *(replié par défaut - inutile pour la plupart des voix)* :
    - **Pitch offset (Hz)** : ajoute un décalage fixe en Hz après le décalage en demi-tons. Positif = resserre l'étendue ; négatif = l'élargit.
    - **Pitch ceiling (Hz)** et **Above the ceiling (%)** : limite les pics trop aigus au-dessus du plafond tout en gardant les notes en dessous justes (idéal pour chanter ; `0%` bloque au plafond).
 4. **Formant** : modifie la résonance vocale sans changer la hauteur (`0` = formant naturel du modèle).

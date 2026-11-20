@@ -20,7 +20,7 @@ Because MVSep runs in the cloud, there is **nothing to install**. However, confi
 
 - **Output format**: always choose **WAV** (or **FLAC**) before starting separation if you plan to train an RVC model or chain multiple cleanup steps.
 - **Post-processing / chaining**: log in and go to **Advanced settings → Home Screen**, then enable **"Show post-processing algorithm"** if you want to chain a cleanup model right after separation.
-- **Slow upload/download?** MVSep provides regional mirrors — if the main site is slow for file transfers, switch to the mirror option.
+- **Slow upload/download?** MVSep provides regional mirrors - if the main site is slow for file transfers, switch to the mirror option.
 
 ## 3. Prepaid credits & Full API (Optional)
 

@@ -20,7 +20,7 @@ Les soutiens sur [Ko-fi](https://ko-fi.com/yunevoix) accèdent à **YuneVoix PRE
 
 - **Mauvaise tonalité** : réglez manuellement **Settings → Song Cover → Octave** sur **`−12`**, **`0`** ou **`+12`** au lieu de `Auto`.
 - **Duos et chœurs** : **« Lead vocal only »** donne le résultat le plus propre. S'il y a deux chanteurs principaux, les deux reçoivent la voix choisie (impossible d'isoler un seul chanteur).
-- **Droits d'auteur** : le morceau appartient toujours à ses auteurs — vérifiez les règles de la plateforme et les droits avant de publier des reprises.
+- **Droits d'auteur** : le morceau appartient toujours à ses auteurs - vérifiez les règles de la plateforme et les droits avant de publier des reprises.
 
 ## Licence PREMIUM et activation
 

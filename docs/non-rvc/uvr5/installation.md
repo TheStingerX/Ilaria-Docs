@@ -35,10 +35,10 @@ The official Windows and macOS packages include an isolated Python and PyTorch e
 
 Some newer community models (such as `dereverb_bs_roformer_anvuew_sdr_22.5050.ckpt`) are not in the Download Center and require both a checkpoint file (`.ckpt`) and its matching config (`.yaml`):
 
-- **Method A — Install Model button (Patch #10+)**:
+- **Method A - Install Model button (Patch #10+)**:
   1. Right-click inside the **Choose MDX-Net Model** dropdown list and click **Install Model**.
   2. Select the `.ckpt` model file and its matching `.yaml` config when prompted.
-- **Method B — Manual installation**:
+- **Method B - Manual installation**:
   1. Copy the `.ckpt` (or `.onnx`) file into `Ultimate Vocal Remover\models\MDX_Net_Models\`.
   2. Copy the `.yaml` file into `Ultimate Vocal Remover\models\MDX_Net_Models\model_data\mdx_c_configs\`.
   3. Select the model in UVR5, confirm **Yes** to recognize it, pick **Roformer** (almost always **non-v2**; `BS` or `Mel` matching the model name), and select the `.yaml`.

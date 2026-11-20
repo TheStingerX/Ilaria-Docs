@@ -16,7 +16,7 @@ permalink: /non-rvc/yunevoix/changelog/
 
 ### Novedades
 
-- **AMD**: el motor de contenido **`WavLM+`** y el método de modelo **`FlowEdit 3+1`** ahora funcionan también en tarjetas AMD (**DirectML**) — en **LIVE**, **covers** y **karaoke**. Si está seleccionado **AMD MIGraphX**, no están disponibles.
+- **AMD**: el motor de contenido **`WavLM+`** y el método de modelo **`FlowEdit 3+1`** ahora funcionan también en tarjetas AMD (**DirectML**) - en **LIVE**, **covers** y **karaoke**. Si está seleccionado **AMD MIGraphX**, no están disponibles.
 
 ---
 
@@ -28,9 +28,9 @@ permalink: /non-rvc/yunevoix/changelog/
 
 - **Método de modelo** (`Settings → Voice & Timbre`, y por separado en `Settings → Song Cover` para covers y karaoke; se aplica en el siguiente **START**):
   - **Classic**: igual que antes (opciones de pasos, solver y guidance).
-  - **Learned 4 steps**: ajustado para sonar como 10 pasos usando alrededor del **40%** del tiempo de GPU y menos VRAM — ideal para juegos y tarjetas más lentas.
+  - **Learned 4 steps**: ajustado para sonar como 10 pasos usando alrededor del **40%** del tiempo de GPU y menos VRAM - ideal para juegos y tarjetas más lentas.
   - **FlowEdit 3+1 (NVIDIA)**: parte de tu propia voz en lugar de ruido y cambia solo la identidad vocal, dejando pasar mucho mejor respiraciones, susurros, risas y articulación (alrededor del **60%** del tiempo de GPU del modelo). En **LIVE** usa la muestra de tu voz (`Voice & Timbre → "Sample of your voice…"`; si la configuraste en una versión anterior, vuelve a elegirla una vez); en covers y karaoke usa la propia pista vocal. Funciona tanto con **Whisper** como con **WavLM+**. Sin muestra de voz o en AMD, FlowEdit vuelve a **Learned 4 steps** (se muestra en la línea de estado LIVE).
-- **Karaoke (PREMIUM)**: canta tú una canción con las letras en pantalla — YUNE convierte tu canto en la voz elegida y lo mezcla con la música. Las letras se sincronizan automáticamente (texto pegado o `.lrc`; japonés también en romaji).
+- **Karaoke (PREMIUM)**: canta tú una canción con las letras en pantalla - YUNE convierte tu canto en la voz elegida y lo mezcla con la música. Las letras se sincronizan automáticamente (texto pegado o `.lrc`; japonés también en romaji).
   - Canta sobre la pista instrumental (separada con **PREPARE**) o sobre la canción original (arranca en segundos; se separa en el primer render).
   - Desplazamiento suave con la línea actual centrada; `Espacio` = pausa, `Esc` = detener (termina 5 s después), `F11` = pantalla completa y medidor de micrófono en la ventana de letras.
   - `Settings → Karaoke`: auriculares, micrófono, volumen de voz original y música, tamaño de letra, limpieza de grabación (`DF3`), motor de contenido, octava, ajuste a la melodía original, nivel vocal, reverberación, coros, seguir el nivel de la voz original, hacer espacio para la voz y suavizar vocal fry.
@@ -80,7 +80,7 @@ permalink: /non-rvc/yunevoix/changelog/
 
 - **Dos ediciones**: **BASIC** (conversión de voz en vivo, Voice Bank, todos los efectos) y **PREMIUM** (todo lo de BASIC + Song Cover).
 - **Licencia PREMIUM por PC**: `Song Cover → "Copy request code"` → `"Load license…"` (sin caducidad, sin conexión, válida si cambia 1 pieza entre placa base, disco del sistema o instalación de Windows).
-- **Motor de contenido `WavLM+`** (`Settings → Voice & Timbre → Content engine`; `Settings → Song Cover` para covers — **solo NVIDIA**): habla en vivo más clara, conserva risas, susurros y respiraciones propios y reduce el zumbido en risas y suspiros. `Whisper` sigue siendo el predeterminado para un timbre más exacto.
+- **Motor de contenido `WavLM+`** (`Settings → Voice & Timbre → Content engine`; `Settings → Song Cover` para covers - **solo NVIDIA**): habla en vivo más clara, conserva risas, susurros y respiraciones propios y reduce el zumbido en risas y suspiros. `Whisper` sigue siendo el predeterminado para un timbre más exacto.
 - **Interruptor "Silence stays silent"** (`Settings → EQ & Filters → YUNE output` y `Settings → Song Cover`; activado por defecto).
 - **Enlace a Ko-fi** (`ko-fi.com/yunevoix`) e indicador de edición debajo del número de versión.
 
@@ -88,5 +88,5 @@ permalink: /non-rvc/yunevoix/changelog/
 
 - Descripciones y consejos más breves y precisos en los seis idiomas, coincidiendo con los nombres de los botones.
 - `YuneVoix.exe --check` también informa la edición, el estado de la licencia PREMIUM y los archivos del modelo `WavLM+`.
-- **Eliminado** el vocoder `BigVGAN` — **PC-NSF** es ahora el único vocoder (antes predeterminado, mejor para canto y respiración).
+- **Eliminado** el vocoder `BigVGAN` - **PC-NSF** es ahora el único vocoder (antes predeterminado, mejor para canto y respiración).
 - Eliminadas las referencias obsoletas al filtro de artefactos de fotograma (eliminado en `v0.4.0`).

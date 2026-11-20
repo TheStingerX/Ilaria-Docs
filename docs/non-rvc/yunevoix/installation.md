@@ -14,8 +14,8 @@ YuneVoix is a portable Windows application: nothing is installed into Windows, a
 
 1. Download the **v0.7.1** build matching your graphics card and edition from [Hugging Face](https://huggingface.co/JohnBlvck/YUNE/tree/main) (for **PREMIUM**, activation requires a `license.yvl` obtained privately via [Ko-fi](https://ko-fi.com/yunevoix) or DMs):
    - **BASIC (Free)**:
-     - [Download YuneVoix BASIC NVIDIA v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_NVIDIA_v0.7.1.zip?download=true) (~8.42 GB) — for GeForce RTX / CUDA GPUs.
-     - [Download YuneVoix BASIC AMD v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_AMD_v0.7.1.zip?download=true) (~6.74 GB) — for Radeon RX 7000+ GPUs.
+     - [Download YuneVoix BASIC NVIDIA v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_NVIDIA_v0.7.1.zip?download=true) (~8.42 GB) - for GeForce RTX / CUDA GPUs.
+     - [Download YuneVoix BASIC AMD v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_BASIC_AMD_v0.7.1.zip?download=true) (~6.74 GB) - for Radeon RX 7000+ GPUs.
    - **PREMIUM** *(requires `license.yvl`)*:
      - [Download YuneVoix PREMIUM NVIDIA v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_PREMIUM_NVIDIA_v0.7.1.zip?download=true) (~9.88 GB)
      - [Download YuneVoix PREMIUM AMD v0.7.1 (ZIP)](https://huggingface.co/JohnBlvck/YUNE/resolve/main/YuneVoix_PREMIUM_AMD_v0.7.1.zip?download=true) (~8.20 GB)

@@ -33,7 +33,7 @@ Para partilhar ou fazer cópia de segurança de uma voz, usa **Voice Bank → Op
 2. No **YuneVoix**, seleciona o teu microfone físico como entrada e **`CABLE Input`** como dispositivo de saída.
 3. No **Discord, OBS, VRChat ou no jogo**, seleciona **`CABLE Output`** como microfone.
 4. *(Opcional)* Para te ouvires: abre **Definições de Som do Windows → Gravação → CABLE Output → Propriedades → Ouvir**, ativa **"Ouvir este dispositivo"** e escolhe os teus auscultadores.
-5. **No Discord**, desativa a **Supressão de ruído (Krisp)** e a **sensibilidade de entrada automática** para este microfone — cortam respirações e palavras baixas, e o YuneVoix já limpa a entrada.
+5. **No Discord**, desativa a **Supressão de ruído (Krisp)** e a **sensibilidade de entrada automática** para este microfone - cortam respirações e palavras baixas, e o YuneVoix já limpa a entrada.
 
 ### Latência esperada
 

@@ -15,7 +15,7 @@ permalink: /non-rvc/causal-voice-changer/overview/
 Klassisches **RVC** wurde ursprünglich für ganze Audiodateien entwickelt, nicht für Live-Streams:
 
 1. RVC nimmt einen Audioblock auf, konvertiert ihn und fügt ihn per **Crossfade** an den vorherigen Block an.
-2. Verringert man die Blockgröße für weniger Latenz, fehlt RVC Kontext — Qualität und Tonhöhengenauigkeit sinken. Bei gehaltenen Tönen oder langgezogenen Wörtern hört man oft die Übergänge zwischen den Blöcken als Flattern.
+2. Verringert man die Blockgröße für weniger Latenz, fehlt RVC Kontext - Qualität und Tonhöhengenauigkeit sinken. Bei gehaltenen Tönen oder langgezogenen Wörtern hört man oft die Übergänge zwischen den Blöcken als Flattern.
 
 **Causal Voice Changer (CVC)** arbeitet anders:
 

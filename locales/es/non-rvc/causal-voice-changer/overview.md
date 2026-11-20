@@ -8,7 +8,7 @@ permalink: /non-rvc/causal-voice-changer/overview/
 
 [GitHub](https://github.com/mojowozo/Causal-Voice-Changer) · [Releases](https://github.com/mojowozo/Causal-Voice-Changer/releases)
 
-**Causal Voice Changer (CVC)** es un cambiador de voz por IA en tiempo real a **48 kHz** creado para cerrar la brecha entre las opciones de latencia ultrabaja (como Beatrice) y las opciones de mayor fidelidad pero más lentas (como RVC). En lugar de sacrificar calidad por velocidad —o velocidad por calidad— CVC utiliza una versión destilada de **ContentVec** y **RMVPE** en una arquitectura causal para lograr audio limpio con bajo retardo.
+**Causal Voice Changer (CVC)** es un cambiador de voz por IA en tiempo real a **48 kHz** creado para cerrar la brecha entre las opciones de latencia ultrabaja (como Beatrice) y las opciones de mayor fidelidad pero más lentas (como RVC). En lugar de sacrificar calidad por velocidad  - o velocidad por calidad -  CVC utiliza una versión destilada de **ContentVec** y **RMVPE** en una arquitectura causal para lograr audio limpio con bajo retardo.
 
 ## Diferencias frente a RVC (explicado de forma sencilla)
 
@@ -27,7 +27,7 @@ El **RVC** tradicional se diseñó originalmente para convertir archivos de audi
 
 Aunque el código fuente de CVC tiene licencia **MIT**, el modelo base preentrenado incluido fue entrenado con **EARS (CC BY-NC)**, **VCTK** y **LibriTTS-R**.
 
-> **Solo uso no comercial**: debido al conjunto de datos EARS, **no** puedes usar el modelo base preentrenado incluido —ni **ninguna voz ajustada a partir de él**— con fines comerciales.
+> **Solo uso no comercial**: debido al conjunto de datos EARS, **no** puedes usar el modelo base preentrenado incluido  - ni **ninguna voz ajustada a partir de él** -  con fines comerciales.
 
 ## Plataformas y hardware compatibles
 

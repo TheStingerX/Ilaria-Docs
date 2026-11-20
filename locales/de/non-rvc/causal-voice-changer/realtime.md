@@ -27,8 +27,8 @@ Sobald du `run-training` mindestens einmal ausgeführt hast und eine `.cvc`-Stim
 
 1. Wähle **Model** (und **Checkpoint**, falls mehrere Steps gespeichert sind).
 2. **Pitch (semitones)**: verschiebt deine Tonhöhe in Halbtönen (`+12` = eine Oktave höher, `-12` = eine Oktave tiefer).
-   - **Pitch match**: nicht raten! Ziehe Clips der Modellstimme in Pitch match, um deren Median-Hz zu messen, und sprich beim Konvertieren — CVC misst deine Stimme und schlägt den exakten Shift vor (**Apply**).
-3. **Advanced pitch** *(standardmäßig eingeklappt — für die meisten Stimmen nicht nötig)*:
+   - **Pitch match**: nicht raten! Ziehe Clips der Modellstimme in Pitch match, um deren Median-Hz zu messen, und sprich beim Konvertieren - CVC misst deine Stimme und schlägt den exakten Shift vor (**Apply**).
+3. **Advanced pitch** *(standardmäßig eingeklappt - für die meisten Stimmen nicht nötig)*:
    - **Pitch offset (Hz)**: addiert nach dem Halbton-Shift einen festen Hz-Offset. Positiv engt den Tonumfang ein; negativ weitet ihn.
    - **Pitch ceiling (Hz)** & **Above the ceiling (%)**: zieht schrille Spitzen oberhalb der Grenze herunter, während Töne darunter sauber gestimmt bleiben (ideal für Gesang; `0%` stoppt exakt an der Grenze).
 4. **Formant**: verschiebt die Stimmresonanz ohne Tonhöhenänderung (`0` = natürlicher Formant des Modells).
