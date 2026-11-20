@@ -39,7 +39,7 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 | **DMR v2** | `32 kHz` | HiFi-GAN | Nicht angegeben | `ourbz/DMR-V2-ReUpload` |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Nicht angegeben | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Nicht angegeben | `Loren85/IMA-TEST-V1` |
-| **Itaila** | `32 kHz` | Nicht angegeben | Nicht angegeben | `TheStinger/itaila` |
+| **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | `TheStinger/itaila` |
 | **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | Nicht angegeben | `SeoulStreamingStation/KLM_BEATMASTER` |
 | **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Nicht angegeben | `SeoulStreamingStation/KLM49_HFG` |
 | **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | Nicht angegeben | `SeoulStreamingStation/KLM4.4` *(in Ilaria RVC ungetestet)* |

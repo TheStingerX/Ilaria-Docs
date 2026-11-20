@@ -39,7 +39,7 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 | **DMR v2** | `32 kHz` | HiFi-GAN | Non specificato | `ourbz/DMR-V2-ReUpload` |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Non specificato | `Essid/GuideVocalPretrain` |
 | **IMA** | `32 kHz` | HiFi-GAN | Non specificato | `Loren85/IMA-TEST-V1` |
-| **Itaila** | `32 kHz` | Non specificato | Non specificato | `TheStinger/itaila` |
+| **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | `TheStinger/itaila` |
 | **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | Non specificato | `SeoulStreamingStation/KLM_BEATMASTER` |
 | **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non specificato | `SeoulStreamingStation/KLM49_HFG` |
 | **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | Non specificato | `SeoulStreamingStation/KLM4.4` *(non testato in Ilaria RVC)* |
