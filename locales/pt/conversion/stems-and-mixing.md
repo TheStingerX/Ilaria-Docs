@@ -2,7 +2,7 @@
 label: "🎵 Hastes e mixagem"
 order: 91
 permalink: /stems-and-mixing/
-description: "Uma haste é uma parte isolada de uma mixagem, como vocal ou instrumental. O RVC é mais fácil de controlar com um vocal limpo por si só. Se você tiver a..."
+description: "Uma haste é uma parte isolada de uma mixagem, como vocal ou instrumental. O RVC é mais fácil de controlar com um vocal limpo por si só."
 ---
 # Hastes e mixagem
 

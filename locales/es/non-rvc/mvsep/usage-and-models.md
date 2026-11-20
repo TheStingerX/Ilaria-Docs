@@ -3,7 +3,7 @@ label: "Modelos y presets recomendados"
 icon: ":control_knobs:"
 order: 97
 permalink: /non-rvc/mvsep/usage-and-models/
-description: "Estos son los mejores presets de MVSep para conseguir pistas vocales ultra limpias (para entrenamiento RVC, covers o conversión de voz), con enlaces..."
+description: "Estos son los mejores presets de MVSep para conseguir pistas vocales ultra limpias (para entrenamiento RVC, covers o conversión de voz), con enlaces directos que ya seleccionan el algoritmo y las opciones exactas."
 ---
 # Guía de MVSep: modelos y presets recomendados
 

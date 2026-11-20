@@ -2,7 +2,7 @@
 label: "🎚️ Intonazione e qualità audio"
 order: 94
 permalink: /audio-quality/
-description: "Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta. Ascolta a..."
+description: "Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta."
 ---
 # Ottimizza l'intonazione e la qualità audio
 

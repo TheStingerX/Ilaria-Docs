@@ -3,7 +3,7 @@ label: "Guide per app"
 icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
-description: "Usa Ilaria RVC per addestrare un modello o convertire una registrazione. Per il microfono in tempo reale su Windows, scegli Vonovox con una GPU NVIDIA..."
+description: "Usa Ilaria RVC per addestrare un modello o convertire una registrazione."
 ---
 # Guide passo passo per app
 

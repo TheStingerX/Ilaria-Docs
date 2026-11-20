@@ -3,7 +3,7 @@ label: "Erklärung der Inferenzsteuerung"
 icon: ":control_knobs:"
 order: 81
 permalink: /ilaria-rvc/inference-buttons/
-description: "Inferenz verwendet eine geschulte Stimme, um eine Aufnahme zu konvertieren. Laden Sie für einen ersten Test eine kurze, saubere WAV-Datei hoch, wählen Sie..."
+description: "Inferenz verwendet eine geschulte Stimme, um eine Aufnahme zu konvertieren."
 ---
 
 # Erklärung aller Inferenzsteuerung

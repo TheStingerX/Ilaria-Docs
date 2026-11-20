@@ -3,7 +3,7 @@ label: "Dateien, Quelleneinrichtung und -wartung"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
-description: "Zur Konvertierung kann ein Inferenzexport verwendet werden. Behalten Sie für ein fortsetzbares Experiment das gespeicherte G/D-Paar und den Optimierer-..."
+description: "Zur Konvertierung kann ein Inferenzexport verwendet werden."
 ---
 # Dateien, Quelleneinrichtung und -wartung
 

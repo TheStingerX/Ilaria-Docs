@@ -2,7 +2,7 @@
 label: "💬 Texto para fala"
 order: 93
 permalink: /text-to-speech/
-description: "Texto para fala (TTS) gera uma gravação de origem a partir das palavras que você digita. O RVC então aplica um modelo de voz separado a essa gravação. A..."
+description: "Texto para fala (TTS) gera uma gravação de origem a partir das palavras que você digita. O RVC então aplica um modelo de voz separado a essa gravação."
 ---
 # Texto para fala e RVC
 

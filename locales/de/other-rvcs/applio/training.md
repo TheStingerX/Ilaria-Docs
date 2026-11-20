@@ -3,7 +3,7 @@ label: "Trainieren und testen Sie ein Modell"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
-description: "Ein erster Durchlauf beweist, dass Ihre Aufnahmen, Konfiguration und Hardware einen Export erzeugen können, mit dem Sie konvertieren können. Arbeiten Sie..."
+description: "Ein erster Durchlauf beweist, dass Ihre Aufnahmen, Konfiguration und Hardware einen Export erzeugen können, mit dem Sie konvertieren können."
 ---
 # Trainieren, bewerten und exportieren Sie eine Stimme in Applio
 

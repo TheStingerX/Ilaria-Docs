@@ -3,7 +3,7 @@ label: "Guide & Recommended Models"
 icon: ":scissors:"
 order: 97
 permalink: /non-rvc/uvr5/usage-and-models/
-description: "Use this guide to configure UVR5 properly and pick the best models for separating vocals, removing harmonies/backing vocals, stripping reverb/echo, and..."
+description: "Use this guide to configure UVR5 properly and pick the best models for separating vocals, removing harmonies/backing vocals, stripping reverb/echo, and cleaning noise (including the exact models shown in the recommended setups)."
 ---
 # UVR5 Guide & Recommended Models
 

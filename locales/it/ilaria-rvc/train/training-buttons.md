@@ -3,7 +3,7 @@ label: "Spiegazione dei controlli di allenamento"
 icon: ":level_slider:"
 order: 82
 permalink: /ilaria-rvc/training-buttons/
-description: "L'allenamento crea un nuovo modello vocale dalle registrazioni. Per un primo esperimento, utilizza un nome univoco, un piccolo set di dati pulito e una..."
+description: "L'allenamento crea un nuovo modello vocale dalle registrazioni."
 ---
 
 # Spiegazione di tutti i controlli di allenamento

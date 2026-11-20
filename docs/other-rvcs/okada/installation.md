@@ -3,7 +3,7 @@ label: "Install VCClient"
 icon: ":package:"
 order: 100
 permalink: /ilaria-rvc/okada/installation/
-description: "VCClient converts live microphone audio. The interface is the client and the conversion process is the server. For your first test, run both on the same..."
+description: "VCClient converts live microphone audio. The interface is the client and the conversion process is the server. For your first test, run both on the same computer."
 ---
 # Install w-okada VCClient
 

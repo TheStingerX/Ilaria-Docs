@@ -3,7 +3,7 @@ label: "Embedders and pretrains"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
-description: "Open Embedder Settings below Audio Processing. Auto reads stored model metadata and uses ContentVec when no embedder is recorded. If the publisher..."
+description: "Open Embedder Settings below Audio Processing. Auto reads stored model metadata and uses ContentVec when no embedder is recorded."
 ---
 # Embedders and pretrains
 

@@ -3,7 +3,7 @@ label: "Installa e verifica una voce"
 icon: ":package:"
 order: 96
 permalink: /ilaria-rvc/applio/models/
-description: "Salva i file del modello in una cartella facile da trovare ed estrai gli eventuali archivi ZIP. Conserva le note dell'autore del modello accanto ai file..."
+description: "Salva i file del modello in una cartella facile da trovare ed estrai gli eventuali archivi ZIP. Conserva le note dell'autore del modello accanto ai file."
 ---
 # Installa una voce in Applio
 

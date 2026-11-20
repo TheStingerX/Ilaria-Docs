@@ -3,7 +3,7 @@ label: "Configura il microfono in tempo reale"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
-description: "Verifica che il modello funzioni con una clip registrata prima di configurare l'audio dal vivo. Usa le cuffie per l'ascolto, altrimenti il microfono può..."
+description: "Verifica che il modello funzioni con una clip registrata prima di configurare l'audio dal vivo."
 ---
 # Usa Applio con un microfono
 

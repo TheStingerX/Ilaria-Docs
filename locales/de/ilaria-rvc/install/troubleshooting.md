@@ -3,7 +3,7 @@ label: "Protokolle und Wiederherstellung"
 icon: ":hammer_and_wrench:"
 order: 92
 permalink: /ilaria-rvc/troubleshooting/
-description: "Beginnen Sie mit Pitch 0, einem kurzen trockenen WAV und einem bekanntermaßen guten Modell. Ändern Sie eine Einstellung pro Test. Informationen zu den..."
+description: "Beginnen Sie mit Pitch 0, einem kurzen trockenen WAV und einem bekanntermaßen guten Modell. Ändern Sie eine Einstellung pro Test."
 ---
 # Protokolle und Wiederherstellung
 

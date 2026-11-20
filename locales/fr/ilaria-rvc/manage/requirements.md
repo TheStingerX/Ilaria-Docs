@@ -3,7 +3,7 @@ label: "Configuration requise"
 icon: ":clipboard:"
 order: 82
 permalink: /ilaria-rvc/requirements/
-description: "Ilaria RVC fonctionne localement sur votre PC avec PyTorch 2.10.0 et NVIDIA CUDA. La conversion vocale (inférence) et l'entraînement de modèles ayant des..."
+description: "Ilaria RVC fonctionne localement sur votre PC avec PyTorch 2.10.0 et NVIDIA CUDA."
 ---
 # Configuration requise pour Ilaria RVC
 

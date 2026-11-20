@@ -3,7 +3,7 @@ label: "Converta uma gravação"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/applio/inference/
-description: "Comece com uma gravação curta que você possa reconhecer instantaneamente. O material do teste falado poderia ser “Você poderia colocar o livro azul perto..."
+description: "Comece com uma gravação curta que você possa reconhecer instantaneamente."
 ---
 # Converta uma gravação no Applio
 

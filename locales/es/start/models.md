@@ -2,7 +2,7 @@
 label: "📦 Modelos y archivos RVC"
 order: 93
 permalink: /models/
-description: "Un modelo RVC cambia el timbre de una voz existente. Las palabras, el ritmo y las pausas proceden de la grabación original. Empieza con una voz aislada..."
+description: "Un modelo RVC cambia el timbre de una voz existente. Las palabras, el ritmo y las pausas proceden de la grabación original. Empieza con una voz aislada, sin música ni efectos."
 ---
 # Modelos y archivos RVC
 

@@ -2,7 +2,7 @@
 label: "🎵 Tracce separate e mixaggio"
 order: 91
 permalink: /stems-and-mixing/
-description: "Un gambo è una parte isolata di un mix, come la voce o lo strumentale. RVC è più facile da controllare con una sola voce pulita. Se hai la registrazione..."
+description: "Un gambo è una parte isolata di un mix, come la voce o lo strumentale. RVC è più facile da controllare con una sola voce pulita."
 ---
 # Tracce separate e mixaggio
 

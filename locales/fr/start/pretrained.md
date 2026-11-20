@@ -2,7 +2,7 @@
 label: "🧱 Modèles pretrained"
 order: 90
 permalink: /pretrained/
-description: "Un modèle de base pretrained (ou pretrain) est une paire de points de contrôle de départ : un Générateur (G_.pth) et un Discriminateur (D_.pth), déjà..."
+description: "Un modèle de base pretrained (ou pretrain) est une paire de points de contrôle de départ : un Générateur (G_.pth) et un Discriminateur (D_.pth), déjà entraînés sur des centaines d'heures d'audio multi-locuteurs."
 ---
 # Modèles de base Pretrained RVC
 

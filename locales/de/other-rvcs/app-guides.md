@@ -3,7 +3,7 @@ label: "Anleitungen nach App"
 icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
-description: "Verwende Ilaria RVC für Training und Dateikonvertierung. Für das Mikrofon unter Windows empfiehlt sich Vonovox mit NVIDIA oder Okada TG Developed Fork mit..."
+description: "Verwende Ilaria RVC für Training und Dateikonvertierung."
 ---
 # Schritt-für-Schritt-Anleitungen nach App
 

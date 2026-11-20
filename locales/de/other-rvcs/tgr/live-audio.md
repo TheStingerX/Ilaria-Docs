@@ -3,7 +3,7 @@ label: "Modell, Mikrofon und Kabel"
 icon: ":headphones:"
 order: 90
 permalink: /ilaria-rvc/tgr/live-audio/
-description: "Verwenden Sie einen kompatiblen RVC-Inferenzkontrollpunkt und ein funktionierendes Mikrofon. Stellen Sie zunächst sicher, dass das umgewandelte Signal..."
+description: "Verwenden Sie einen kompatiblen RVC-Inferenzkontrollpunkt und ein funktionierendes Mikrofon."
 ---
 # Richten Sie Live-Audio in Okada TG Developed Fork ein
 

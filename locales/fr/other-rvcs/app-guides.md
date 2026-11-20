@@ -3,7 +3,7 @@ label: "Guides par application"
 icon: ":books:"
 order: 80
 permalink: /ilaria-rvc/app-guides/
-description: "Ilaria RVC est le premier choix pour entraîner un modèle et convertir des fichiers. Pour le microphone en direct sous Windows, utilisez Vonovox sur NVIDIA..."
+description: "Ilaria RVC est le premier choix pour entraîner un modèle et convertir des fichiers."
 ---
 # Guides étape par étape par application
 

@@ -3,7 +3,7 @@ label: "Training Voices (.cvc)"
 icon: ":mortar_board:"
 order: 97
 permalink: /non-rvc/causal-voice-changer/training/
-description: "Building a voice in Causal Voice Changer fine-tunes the base decoder on your target audio. Unlike many older tools, you do not need to slice your audio..."
+description: "Building a voice in Causal Voice Changer fine-tunes the base decoder on your target audio."
 ---
 # Training a Voice in CVC
 

@@ -2,7 +2,7 @@
 label: "💬 Texto a voz"
 order: 93
 permalink: /text-to-speech/
-description: "Texto a voz (TTS) genera una grabación fuente a partir de las palabras que usted escribe. Luego, RVC aplica un modelo de voz independiente a esa..."
+description: "Texto a voz (TTS) genera una grabación fuente a partir de las palabras que usted escribe. Luego, RVC aplica un modelo de voz independiente a esa grabación."
 ---
 # Texto a voz y RVC
 

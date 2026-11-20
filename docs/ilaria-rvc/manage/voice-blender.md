@@ -3,7 +3,7 @@ label: "Voice Blender (Merge Models)"
 icon: ":twisted_rightwards_arrows:"
 order: 92
 permalink: /ilaria-rvc/voice-blender/
-description: "In Ilaria RVC, the Voice Blender feature is located in the Other tab under Merge models. It lets you combine the weights of two compatible .pth voice..."
+description: "In Ilaria RVC, the Voice Blender feature is located in the Other tab under Merge models."
 ---
 # Voice Blender (Merge Models)
 

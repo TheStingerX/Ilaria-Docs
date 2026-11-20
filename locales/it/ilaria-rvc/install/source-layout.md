@@ -3,7 +3,7 @@ label: "File, configurazione e manutenzione della sorgente"
 icon: ":card_file_box:"
 order: 84
 permalink: /ilaria-rvc/source-layout/
-description: "Per la conversione è possibile utilizzare un'esportazione di inferenza. Per un esperimento ripristinabile, mantieni la coppia G/D salvata, l'ottimizzatore..."
+description: "Per la conversione è possibile utilizzare un'esportazione di inferenza."
 ---
 # File, configurazione e manutenzione della sorgente
 

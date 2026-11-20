@@ -3,7 +3,7 @@ label: "Libreria modelli e unione"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
-description: "Apri Altro e importa un modello locale supportato o utilizza il controllo download. Mantieni insieme un checkpoint e il relativo indice. Aggiorna l'elenco..."
+description: "Apri Altro e importa un modello locale supportato o utilizza il controllo download. Mantieni insieme un checkpoint e il relativo indice."
 ---
 # Libreria modelli e unione
 

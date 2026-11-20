@@ -3,7 +3,7 @@ label: "Audio Analyzer"
 icon: ":chart_with_upwards_trend:"
 order: 85
 permalink: /ilaria-rvc/audio-analyzer/
-description: "Open Other → Audio Analyzer. Add up to eight audio files to compare. A useful set contains the original input, a baseline conversion and one or two..."
+description: "Open Other → Audio Analyzer. Add up to eight audio files to compare."
 ---
 # Audio Analyzer
 

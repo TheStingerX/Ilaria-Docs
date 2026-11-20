@@ -2,7 +2,7 @@
 label: "🛠️ Addestra un modello vocale"
 order: 94
 permalink: /training/
-description: "L'addestramento apprende una voce di destinazione da una raccolta audio preparata. Utilizza questa guida quando desideri creare un modello da..."
+description: "L'addestramento apprende una voce di destinazione da una raccolta audio preparata. Utilizza questa guida quando desideri creare un modello da registrazioni tue o autorizzate."
 ---
 # Addestra un modello vocale RVC
 

@@ -2,7 +2,7 @@
 label: "🎧 Prepare a dataset"
 order: 95
 permalink: /dataset-preparation/
-description: "Every clip teaches the model something about its target voice. Before training, decide which parts of that voice you want the model to handle, then keep..."
+description: "Every clip teaches the model something about its target voice."
 ---
 # Prepare a voice dataset
 

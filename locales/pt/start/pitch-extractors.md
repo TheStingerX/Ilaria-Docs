@@ -2,7 +2,7 @@
 label: "🎵 Pitch extractors"
 order: 92
 permalink: /pitch-extractors/
-description: "Um pitch extractor (também chamado de método de extração F0) é o algoritmo ou rede neural que acompanha a frequência fundamental (afinação, melodia e..."
+description: "Um pitch extractor (também chamado de método de extração F0) é o algoritmo ou rede neural que acompanha a frequência fundamental (afinação, melodia e entonação) da voz de entrada ao longo do tempo."
 ---
 # Pitch Extractors do RVC (Métodos F0)
 

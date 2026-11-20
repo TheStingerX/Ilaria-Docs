@@ -3,7 +3,7 @@ label: "Real-time microphone setup"
 icon: ":headphones:"
 order: 10
 permalink: /ilaria-rvc/mainline/realtime/
-description: "This guide applies to the separate real-time GUI included in supported RVC WebUI (Mainline - Original RVC) builds. It can run a microphone through a model..."
+description: "This guide applies to the separate real-time GUI included in supported RVC WebUI (Mainline - Original RVC) builds."
 ---
 
 # Use the RVC WebUI (Mainline - Original RVC) real-time voice changer

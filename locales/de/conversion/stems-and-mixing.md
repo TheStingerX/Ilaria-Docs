@@ -2,7 +2,7 @@
 label: "🎵 Stems und Mischung"
 order: 91
 permalink: /stems-and-mixing/
-description: "Ein Stem ist ein isolierter Teil einer Mischung, wie zum Beispiel der Gesang oder das Instrumental. RVC lässt sich am einfachsten mit einem klaren Gesang..."
+description: "Ein Stem ist ein isolierter Teil einer Mischung, wie zum Beispiel der Gesang oder das Instrumental. RVC lässt sich am einfachsten mit einem klaren Gesang allein steuern."
 ---
 # Stems und Mischung
 

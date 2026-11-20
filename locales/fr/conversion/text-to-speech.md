@@ -2,7 +2,7 @@
 label: "💬 Synthèse vocale"
 order: 93
 permalink: /text-to-speech/
-description: "La synthèse vocale (TTS) génère un enregistrement source à partir des mots que vous tapez. RVC applique ensuite un modèle vocal distinct à cet..."
+description: "La synthèse vocale (TTS) génère un enregistrement source à partir des mots que vous tapez. RVC applique ensuite un modèle vocal distinct à cet enregistrement."
 ---
 # Synthèse vocale et RVC
 

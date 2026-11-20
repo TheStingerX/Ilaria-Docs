@@ -2,7 +2,7 @@
 label: "⚡ Conversión en tiempo real"
 order: 92
 permalink: /real-time/
-description: "Para una grabación o una portada, la conversión de archivos le permite renderizar y comparar varias tomas. En una configuración en vivo, el convertidor..."
+description: "Para una grabación o una portada, la conversión de archivos le permite renderizar y comparar varias tomas."
 ---
 # Conversión de voz en tiempo real
 

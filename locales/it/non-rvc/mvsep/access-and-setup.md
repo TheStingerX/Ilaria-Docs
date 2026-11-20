@@ -3,7 +3,7 @@ label: "Accesso, account e API"
 icon: ":globe_with_meridians:"
 order: 98
 permalink: /non-rvc/mvsep/access-and-setup/
-description: "Poiché MVSep funziona interamente nel cloud, non c'è nulla da scaricare o installare. Tuttavia, impostare correttamente account e formato di output fa una..."
+description: "Poiché MVSep funziona interamente nel cloud, non c'è nulla da scaricare o installare. Tuttavia, impostare correttamente account e formato di output fa una grande differenza."
 ---
 # Usare MVSep: accesso, account e impostazioni
 

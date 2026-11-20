@@ -3,7 +3,7 @@ label: "Bibliothèque de modèles et fusion"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
-description: "Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index..."
+description: "Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble."
 ---
 # Bibliothèque de modèles et fusion
 

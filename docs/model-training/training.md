@@ -2,7 +2,7 @@
 label: "🛠️ Train a voice model"
 order: 94
 permalink: /training/
-description: "Training learns a target voice from a prepared collection of audio. Use this guide when you want to build a model from your own or authorized recordings..."
+description: "Training learns a target voice from a prepared collection of audio. Use this guide when you want to build a model from your own or authorized recordings."
 ---
 # Train an RVC voice model
 

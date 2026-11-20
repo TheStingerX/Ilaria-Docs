@@ -3,7 +3,7 @@ label: "Testez l'audio en direct dans Redpanda-vc"
 icon: ":studio_microphone:"
 order: 98
 permalink: /ilaria-rvc/redpanda/live-audio/
-description: "Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local. L'onglet en temps réel de WebUI capture l'entrée du..."
+description: "Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local."
 ---
 # Testez l'audio en direct dans Redpanda-vc
 

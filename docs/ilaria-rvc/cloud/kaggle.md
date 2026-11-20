@@ -3,7 +3,7 @@ label: "Kaggle"
 icon: ":notebook:"
 order: 98
 permalink: /ilaria-rvc/kaggle/
-description: "Click Run All in the editor. You can also run the four code cells one at a time, from top to bottom. Wait for each cell to finish before running the next..."
+description: "Click Run All in the editor. You can also run the four code cells one at a time, from top to bottom. Wait for each cell to finish before running the next."
 ---
 # Kaggle
 

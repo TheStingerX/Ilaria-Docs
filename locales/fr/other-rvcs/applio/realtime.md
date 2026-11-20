@@ -3,7 +3,7 @@ label: "Configurer un microphone en direct"
 icon: ":headphones:"
 order: 93
 permalink: /ilaria-rvc/applio/realtime/
-description: "Prouvez que votre modèle fonctionne avec un clip enregistré avant de configurer l'audio en direct. Utilisez des écouteurs pour la surveillance afin que le..."
+description: "Prouvez que votre modèle fonctionne avec un clip enregistré avant de configurer l'audio en direct."
 ---
 # Utilisez Applio avec un microphone
 

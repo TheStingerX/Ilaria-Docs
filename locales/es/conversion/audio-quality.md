@@ -2,7 +2,7 @@
 label: "🎚️ Tono y calidad de audio"
 order: 94
 permalink: /audio-quality/
-description: "Elija un breve extracto que contenga el problema. Realice una conversión de referencia y compárela con una configuración modificada a la vez. Escuche a..."
+description: "Elija un breve extracto que contenga el problema. Realice una conversión de referencia y compárela con una configuración modificada a la vez."
 ---
 # Sintonice el tono y la calidad de audio
 

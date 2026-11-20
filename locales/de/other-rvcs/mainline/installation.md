@@ -3,7 +3,7 @@ label: "Installieren und öffnen Sie"
 icon: ":toolbox:"
 order: 40
 permalink: /ilaria-rvc/mainline/installation/
-description: "RVC WebUI (Mainline - Original RVC) ist die Upstream-Retrieval-basierte Sprachkonvertierungs-WebUI. Nutzen Sie die Browseroberfläche für die..."
+description: "RVC WebUI (Mainline - Original RVC) ist die Upstream-Retrieval-basierte Sprachkonvertierungs-WebUI. Nutzen Sie die Browseroberfläche für die Dateikonvertierung und Schulung."
 ---
 
 # RVC WebUI (Mainline - Original RVC) installieren

@@ -3,7 +3,7 @@ label: "Installation and updates"
 icon: ":cd:"
 order: 99
 permalink: /ilaria-rvc/installation/
-description: "Download the supported NVIDIA build from Hugging Face. Extract the whole archive into a writable local folder and run RUN_ILARIA_RVC.bat there. The..."
+description: "Download the supported NVIDIA build from Hugging Face. Extract the whole archive into a writable local folder and run RUN_ILARIA_RVC.bat there."
 ---
 # Installation and updates
 

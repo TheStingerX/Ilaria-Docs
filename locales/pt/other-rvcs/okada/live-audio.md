@@ -3,7 +3,7 @@ label: "Áudio ao vivo e roteamento"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
-description: "Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz limpa e convertida nos fones de ouvido, conecte-a a uma chamada ou..."
+description: "Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz limpa e convertida nos fones de ouvido, conecte-a a uma chamada ou gravador."
 ---
 # Converta seu microfone em w-okada VCClient
 

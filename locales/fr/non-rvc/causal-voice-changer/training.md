@@ -3,7 +3,7 @@ label: "Entraîner des voix (.cvc)"
 icon: ":mortar_board:"
 order: 97
 permalink: /non-rvc/causal-voice-changer/training/
-description: "Créer une voix dans Causal Voice Changer consiste à affiner (fine-tune) le décodeur de base sur votre audio cible. Contrairement à d'anciens outils, vous..."
+description: "Créer une voix dans Causal Voice Changer consiste à affiner (fine-tune) le décodeur de base sur votre audio cible."
 ---
 # Entraîner une voix dans CVC
 

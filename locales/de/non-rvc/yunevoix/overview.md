@@ -3,7 +3,7 @@ label: "Überblick & Anforderungen"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/yunevoix/overview/
-description: "YuneVoix ist eine Echtzeit-KI-Stimmkonvertierungs-App für Windows, angetrieben von der YUNE-Engine. Genau wie RVC verwandelt sie deine Stimme in eine..."
+description: "YuneVoix ist eine Echtzeit-KI-Stimmkonvertierungs-App für Windows, angetrieben von der YUNE-Engine."
 ---
 # YuneVoix (YUNE)
 

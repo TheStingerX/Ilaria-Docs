@@ -3,7 +3,7 @@ label: "Addestra e testa un modello"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/applio/training/
-description: "Una prima esecuzione dimostra che le registrazioni, la configurazione e l'hardware possono produrre un modello utilizzabile per la conversione. Lavora su..."
+description: "Una prima esecuzione dimostra che le registrazioni, la configurazione e l'hardware possono produrre un modello utilizzabile per la conversione."
 ---
 # Addestra, valuta ed esporta una voce in Applio
 

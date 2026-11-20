@@ -3,7 +3,7 @@ label: "Trainieren und exportieren Sie ein Modell"
 icon: ":test_tube:"
 order: 20
 permalink: /ilaria-rvc/mainline/training/
-description: "Beginnen Sie mit einem einzelnen Sprecher und einem neuen Experimentnamen. Durch das Training entsteht ein Modell, das Sie an neuen Leistungen in der..."
+description: "Beginnen Sie mit einem einzelnen Sprecher und einem neuen Experimentnamen."
 ---
 
 # Trainieren und exportieren Sie ein RVC WebUI (Mainline - Original RVC)-Modell

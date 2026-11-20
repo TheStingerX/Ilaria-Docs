@@ -3,7 +3,7 @@ label: "Access, Account & API"
 icon: ":globe_with_meridians:"
 order: 98
 permalink: /non-rvc/mvsep/access-and-setup/
-description: "Because MVSep runs in the cloud, there is nothing to install. However, configuring your account and output settings properly makes a big difference in..."
+description: "Because MVSep runs in the cloud, there is nothing to install. However, configuring your account and output settings properly makes a big difference in quality and convenience."
 ---
 # Using MVSep: Access, Account & Setup
 

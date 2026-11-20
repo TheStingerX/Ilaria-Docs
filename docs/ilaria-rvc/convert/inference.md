@@ -3,7 +3,7 @@ label: "Single and batch inference"
 icon: ":studio_microphone:"
 order: 97
 permalink: /ilaria-rvc/inference/
-description: "Open Single Inference, choose a voice and load a short, dry clip. Set Pitch and Index Ratio to zero. Use the embedder expected by the model, start with..."
+description: "Open Single Inference, choose a voice and load a short, dry clip. Set Pitch and Index Ratio to zero."
 ---
 # Single and batch inference
 

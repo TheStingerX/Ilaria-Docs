@@ -2,7 +2,7 @@
 label: "🛠️ Former un modèle vocal"
 order: 94
 permalink: /training/
-description: "La formation apprend une voix cible à partir d'une collection audio préparée. Utilisez ce guide lorsque vous souhaitez créer un modèle à partir de vos..."
+description: "La formation apprend une voix cible à partir d'une collection audio préparée."
 ---
 # Former un modèle vocal RVC
 

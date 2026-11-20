@@ -3,7 +3,7 @@ label: "Convert recordings"
 icon: ":studio_microphone:"
 order: 30
 permalink: /ilaria-rvc/mainline/inference/
-description: "Start with a short recording that you can hear clearly in a normal media player, plus an exported RVC model you have permission to use. The model changes..."
+description: "Start with a short recording that you can hear clearly in a normal media player, plus an exported RVC model you have permission to use."
 ---
 
 # Convert recordings in RVC WebUI (Mainline - Original RVC)

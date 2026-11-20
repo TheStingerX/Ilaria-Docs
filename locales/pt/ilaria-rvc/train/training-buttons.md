@@ -3,7 +3,7 @@ label: "Controles de treinamento explicados"
 icon: ":level_slider:"
 order: 82
 permalink: /ilaria-rvc/training-buttons/
-description: "O treinamento cria um novo modelo de voz a partir de gravações. Para um primeiro experimento, use um nome exclusivo, um pequeno conjunto de dados limpo e..."
+description: "O treinamento cria um novo modelo de voz a partir de gravações."
 ---
 
 # Todos os controles de treinamento explicados

@@ -3,7 +3,7 @@ label: "Overview & Requirements"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/uvr5/overview/
-description: "UVR5 (Ultimate Vocal Remover v5 GUI) is a free, open-source desktop application for AI audio source separation. It runs locally on your PC and lets you..."
+description: "Upcoming release: UVR6 is arriving soon!"
 ---
 # Ultimate Vocal Remover (UVR5)
 

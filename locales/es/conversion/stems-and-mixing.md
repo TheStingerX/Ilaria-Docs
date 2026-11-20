@@ -2,7 +2,7 @@
 label: "🎵 Raíces y mezcla"
 order: 91
 permalink: /stems-and-mixing/
-description: "Una raíz es una parte aislada de una mezcla, como la vocal o la instrumental. RVC es más fácil de controlar con una voz limpia por sí sola. Si tienes la..."
+description: "Una raíz es una parte aislada de una mezcla, como la vocal o la instrumental. RVC es más fácil de controlar con una voz limpia por sí sola."
 ---
 # Raíces y mezcla
 

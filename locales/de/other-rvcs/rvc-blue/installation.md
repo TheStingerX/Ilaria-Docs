@@ -3,7 +3,7 @@ label: "Installieren und verwenden Sie RVC Blue"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/rvc-blue/installation/
-description: "RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert. Es konvertiert Mikrofon..."
+description: "RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert."
 ---
 # RVC Blue (RVC-Realtime-GUI)
 

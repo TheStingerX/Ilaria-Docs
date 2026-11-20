@@ -3,7 +3,7 @@ label: "Guida e modelli consigliati"
 icon: ":scissors:"
 order: 97
 permalink: /non-rvc/uvr5/usage-and-models/
-description: "Usa questa guida per configurare correttamente UVR5 e scegliere i modelli migliori per separare voce, rimuovere cori/armonie, eliminare riverbero/eco e..."
+description: "Usa questa guida per configurare correttamente UVR5 e scegliere i modelli migliori per separare voce, rimuovere cori/armonie, eliminare riverbero/eco e ripulire il rumore (inclusi i modelli mostrati nelle configurazioni consigliate)."
 ---
 # Guida UVR5 e modelli consigliati
 

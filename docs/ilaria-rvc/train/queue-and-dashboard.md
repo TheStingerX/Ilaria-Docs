@@ -3,7 +3,7 @@ label: "Queue, dashboard and alerts"
 icon: ":bar_chart:"
 order: 86
 permalink: /ilaria-rvc/queue-and-dashboard/
-description: "Configure the experiment in Training, confirm its dataset and model name, and add it to the Training Queue. Use distinct names for distinct..."
+description: "Configure the experiment in Training, confirm its dataset and model name, and add it to the Training Queue. Use distinct names for distinct configurations."
 ---
 # Queue, dashboard and alerts
 

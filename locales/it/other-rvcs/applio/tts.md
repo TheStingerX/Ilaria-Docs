@@ -3,7 +3,7 @@ label: "Genera parlato dal testo"
 icon: ":speech_balloon:"
 order: 92
 permalink: /ilaria-rvc/applio/tts/
-description: "Applio utilizza una voce Edge TTS online per leggere il tuo testo e un modello RVC per modificare la voce generata. La voce sorgente determina la..."
+description: "Applio utilizza una voce Edge TTS online per leggere il tuo testo e un modello RVC per modificare la voce generata."
 ---
 # Genera il parlato e convertilo con Applio
 

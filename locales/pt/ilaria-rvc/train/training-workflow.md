@@ -3,7 +3,7 @@ label: "Treinamento e pontos de verificação"
 icon: ":test_tube:"
 order: 94
 permalink: /ilaria-rvc/training-workflow/
-description: "Selecione um conjunto de dados e escolha arquitetura RVC compatível, taxa de amostragem, orientação de pitch, pré-treinamento de incorporador e..."
+description: "Selecione um conjunto de dados e escolha arquitetura RVC compatível, taxa de amostragem, orientação de pitch, pré-treinamento de incorporador e gerador/discriminador."
 ---
 # Treinamento e pontos de verificação
 

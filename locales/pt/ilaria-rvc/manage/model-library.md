@@ -3,7 +3,7 @@ label: "Biblioteca de modelos e mesclagem"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
-description: "Abra Outro e importe um modelo local compatível ou use o controle de download. Mantenha um ponto de verificação e seu próprio índice juntos. Atualize a..."
+description: "Abra Outro e importe um modelo local compatível ou use o controle de download. Mantenha um ponto de verificação e seu próprio índice juntos."
 ---
 # Biblioteca de modelos e mesclagem
 

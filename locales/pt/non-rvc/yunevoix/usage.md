@@ -3,7 +3,7 @@ label: "Voice Bank e uso ao vivo"
 icon: ":studio_microphone:"
 order: 97
 permalink: /non-rvc/yunevoix/usage/
-description: "Usa este guia para criar vozes no Voice Bank, encaminhar o YuneVoix para Discord, OBS, jogos ou VRChat e ajustar as definições de áudio para uma conversão..."
+description: "Usa este guia para criar vozes no Voice Bank, encaminhar o YuneVoix para Discord, OBS, jogos ou VRChat e ajustar as definições de áudio para uma conversão ao vivo limpa."
 ---
 # Voice Bank e utilização ao vivo
 

@@ -2,7 +2,7 @@
 label: "📦 Modelli e file RVC"
 order: 93
 permalink: /models/
-description: "Un modello RVC cambia il timbro di una voce già registrata o catturata dal microfono. Le parole, le pause e il ritmo partono dall’audio di ingresso. Per..."
+description: "Un modello RVC cambia il timbro di una voce già registrata o catturata dal microfono. Le parole, le pause e il ritmo partono dall’audio di ingresso."
 ---
 # Modelli e file RVC
 

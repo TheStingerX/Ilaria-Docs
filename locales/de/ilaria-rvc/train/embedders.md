@@ -3,7 +3,7 @@ label: "Embedder und Pretrains"
 icon: ":jigsaw:"
 order: 88
 permalink: /ilaria-rvc/embedders/
-description: "Öffnen Sie Embedder-Einstellungen unter Audioverarbeitung. Liest gespeicherte Modellmetadaten automatisch und verwendet ContentVec, wenn kein Einbetter..."
+description: "Öffnen Sie Embedder-Einstellungen unter Audioverarbeitung. Liest gespeicherte Modellmetadaten automatisch und verwendet ContentVec, wenn kein Einbetter aufgezeichnet ist."
 ---
 # Embedder und Pretrains
 

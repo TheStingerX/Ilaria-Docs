@@ -3,7 +3,7 @@ label: "Anleitung & empfohlene Modelle"
 icon: ":scissors:"
 order: 97
 permalink: /non-rvc/uvr5/usage-and-models/
-description: "Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum Trennen von Vocals, Entfernen von Harmonien/Backing Vocals, Hall/Echo und..."
+description: "Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum Trennen von Vocals, Entfernen von Harmonien/Backing Vocals, Hall/Echo und Rauschen zu wählen (inklusive der empfohlenen Setup-Modelle)."
 ---
 # UVR5-Anleitung & empfohlene Modelle
 

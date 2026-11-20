@@ -3,7 +3,7 @@ label: "Audio en direct et routage"
 icon: ":studio_microphone:"
 order: 90
 permalink: /ilaria-rvc/okada/live-audio/
-description: "Commencez avec des écouteurs et un seul chemin audio local. Lorsque vous entendez une voix claire et convertie dans le casque, connectez-le à un appel ou..."
+description: "Commencez avec des écouteurs et un seul chemin audio local. Lorsque vous entendez une voix claire et convertie dans le casque, connectez-le à un appel ou à un enregistreur."
 ---
 # Convertissez votre microphone dans w-okada VCClient
 
