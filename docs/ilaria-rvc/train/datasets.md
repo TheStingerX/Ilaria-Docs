@@ -66,7 +66,7 @@ Use the **Audio Analyzer** to inspect *why* a recording or conversion sounds wro
 | **Leaving reverb/echo in dataset** | The voice always sounds like it is in a bathroom or cave. | Use drier source recordings, or carefully clean with UVR5/MVSep DeReverb. |
 | **Background music bleed** | Random musical warbles or metallic artifacts in converted speech. | Re-separate vocals with `BS-Roformer` / `BS Polarformer` and delete dirty clips. |
 | **Multiple speakers in one dataset** | Voice timbre shifts unpredictably mid-sentence. | Keep strictly one speaker per dataset folder. |
-| **Tiny repetitive dataset (< 2 min)** | Model memorizes noise ("overtraining") and breaks on new words. | Add more varied phrases and stop training earlier (fewer epochs). |
+| **Tiny repetitive dataset (< 2 min)** | Model memorizes noise ("overfitting") and breaks on new words. | Add more varied phrases and stop training earlier (fewer epochs). |
 | **Clipped / distorted loud recordings** | Harsh crackling, robotic voice, or `NaN loss` crash. | Remove clipped takes and normalize clean audio safely below `0 dBFS`. |
 
 Read [Prepare a voice dataset](../../model-training/dataset-preparation.md) for more general recording and evaluation guidelines.

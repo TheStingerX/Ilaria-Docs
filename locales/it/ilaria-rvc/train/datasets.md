@@ -66,7 +66,7 @@ Usa l'**Audio Analyzer** per capire *perché* una registrazione o una conversion
 | **Lasciare riverbero/eco nel dataset** | La voce suona sempre come dentro un bagno o una grotta. | Usa sorgenti più asciutte oppure pulisci con attenzione usando UVR5/MVSep DeReverb. |
 | **Residui di musica di sottofondo** | Tremolii musicali casuali o artefatti metallici nella voce convertita. | Risepara la voce con `BS-Roformer` / `BS Polarformer` ed elimina le clip sporche. |
 | **Più voci nello stesso dataset** | Il timbro cambia in modo imprevedibile a metà frase. | Mantieni rigorosamente un solo parlatore per cartella dataset. |
-| **Dataset minuscolo e ripetitivo (< 2 min)** | Il modello memorizza il rumore ("overtraining") e si rompe su parole nuove. | Aggiungi più frasi varie e ferma il training prima (meno epoche). |
+| **Dataset minuscolo e ripetitivo (< 2 min)** | Il modello memorizza il rumore ("overfitting") e si rompe su parole nuove. | Aggiungi più frasi varie e ferma il training prima (meno epoche). |
 | **Registrazioni in clipping / distorte** | Crepitii forti, voce robotica o crash `NaN loss`. | Rimuovi le clip distorte e normalizza l'audio pulito sotto `0 dBFS`. |
 
 Leggi anche [Preparare un dataset vocale](../../model-training/dataset-preparation.md) per altre indicazioni generali su registrazione e valutazione.

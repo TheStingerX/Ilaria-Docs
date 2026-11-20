@@ -66,7 +66,7 @@ Usa el **Audio Analyzer** para descubrir *por qué* una grabación o conversión
 | **Dejar reverb/eco en el dataset** | La voz siempre suena como dentro de un baño o cueva. | Usa grabaciones más secas o limpia con cuidado usando UVR5/MVSep DeReverb. |
 | **Restos de música de fondo** | Gorjeos musicales aleatorios o artefactos metálicos al convertir. | Vuelve a separar la voz con `BS-Roformer` / `BS Polarformer` y borra clips sucios. |
 | **Varias voces en un dataset** | El timbre cambia de golpe a mitad de frase. | Mantén estrictamente un solo hablante por carpeta de dataset. |
-| **Dataset diminuto y repetitivo (< 2 min)** | El modelo memoriza ruido ("overtraining") y falla con palabras nuevas. | Añade frases variadas y detén el entrenamiento antes (menos épocas). |
+| **Dataset diminuto y repetitivo (< 2 min)** | El modelo memoriza ruido ("overfitting") y falla con palabras nuevas. | Añade frases variadas y detén el entrenamiento antes (menos épocas). |
 | **Grabaciones saturadas / con clipping** | Chasquidos duros, voz robótica o error `NaN loss`. | Elimina las tomas saturadas y normaliza el audio limpio por debajo de `0 dBFS`. |
 
 Lee también [Preparar un dataset de voz](../../model-training/dataset-preparation.md) para ver más pautas generales de grabación y evaluación.

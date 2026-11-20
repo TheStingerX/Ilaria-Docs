@@ -66,7 +66,7 @@ Mit dem **Audio Analyzer** erkennst du, *warum* eine Aufnahme oder Konvertierung
 | **Hall/Echo im Dataset lassen** | Die Stimme klingt dauerhaft wie im Bad oder in einer Höhle. | Trockenere Aufnahmen nutzen oder vorsichtig mit UVR5/MVSep DeReverb säubern. |
 | **Reste von Hintergrundmusik** | Zufälliges musikalisches Leiern oder metallische Artefakte. | Vocals mit `BS-Roformer` / `BS Polarformer` neu trennen und unsaubere Clips löschen. |
 | **Mehrere Sprecher gemischt** | Stimmfarbe springt mitten im Satz unvorhersehbar. | Strikt nur einen Sprecher pro Dataset-Ordner verwenden. |
-| **Winziges, monotones Dataset (< 2 Min.)** | Modell lernt Rauschen auswendig ("Overtraining") und scheitert an neuen Wörtern. | Mehr abwechslungsreiche Sätze hinzufügen und Training früher beenden (weniger Epochen). |
+| **Winziges, monotones Dataset (< 2 Min.)** | Modell lernt Rauschen auswendig ("Overfitting") und scheitert an neuen Wörtern. | Mehr abwechslungsreiche Sätze hinzufügen und Training früher beenden (weniger Epochen). |
 | **Übersteuerte / clippende Aufnahmen** | Hartes Knacken, Roboterstimme oder `NaN loss`-Absturz. | Übersteuerte Takes entfernen und sauberes Audio sicher unter `0 dBFS` normalisieren. |
 
 Lies auch [Ein Stimm-Dataset vorbereiten](../../model-training/dataset-preparation.md) für weitere allgemeine Aufnahme- und Bewertungsregeln.

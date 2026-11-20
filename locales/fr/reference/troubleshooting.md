@@ -102,7 +102,7 @@ Si tout sonne faux ou si vous ne savez pas quel réglage a cassé l'audio, repar
 | `BrokenProcessPool` / le PC fige au Prétraitement | Trop de threads CPU travaillent en parallèle et saturent la RAM. | Réduisez le nombre de **threads / workers CPU** (ex. de `8` à `2` ou `4`) et vérifiez l'espace disque disponible. |
 | `NaN loss` ou modèle exporté totalement muet | Clip saturé/corrompu dans le dataset, débordement `FP16` ou pretrain `G/D` incompatible. | Vérifiez l'absence de saturation ou de silence total dans vos clips. Utilisez le **pretrain RVC standard** pour votre sample rate, coupez `FP16` (passez en `FP32`) et relancez un entraînement neuf. |
 | **L'entraînement ne reprend pas / repart à l'Epoch 0** | `Fresh Training` est resté coché ou vous avez déplacé/renommé des fichiers dans `logs/`. | Laissez tout le dossier `logs/<expérience>/` intact, saisissez exactement le même **Nom d'expérience**, **Sample Rate** et **Embedder**, augmentez le nombre total d'époques et décochez `Fresh Training`. |
-| **Le modèle sonne étouffé, bruité ou "sur-entraîné"** | Trop d'époques sur un dataset petit ou bruité : le modèle a mémorisé le souffle. | Arrêtez plus tôt (testez les checkpoints toutes les 50-100 époques, ex. 200-400 époques pour un petit dataset) et nettoyez toujours vos audios avec **UVR5** ou **MVSep**. |
+| **Le modèle sonne étouffé, bruité ou en "overfitting"** | Trop d'époques sur un dataset petit ou bruité : le modèle a mémorisé le souffle. | Arrêtez plus tôt (testez les checkpoints toutes les 50-100 époques, ex. 200-400 époques pour un petit dataset) et nettoyez toujours vos audios avec **UVR5** ou **MVSep**. |
 
 ### 6. Voice Changer en direct, Micro et Discord
 

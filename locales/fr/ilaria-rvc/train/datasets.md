@@ -66,7 +66,7 @@ Servez-vous de l'**Audio Analyzer** pour comprendre *pourquoi* une prise ou une 
 | **Laisser réverbération/écho** | La voix sonne toujours comme dans une salle de bain ou une grotte. | Utilisez des prises plus sèches ou nettoyez prudemment avec UVR5/MVSep DeReverb. |
 | **Restes de musique de fond** | Gazouillis musicaux ou artefacts métalliques aléatoires à la conversion. | Re-séparez la voix avec `BS-Roformer` / `BS Polarformer` et supprimez les clips sales. |
 | **Plusieurs voix dans un dataset** | Le timbre change brutalement au milieu des phrases. | Gardez strictement un seul locuteur par dossier de dataset. |
-| **Dataset minuscule et répétitif (< 2 min)** | Le modèle mémorise le bruit ("overtraining") et échoue sur de nouveaux mots. | Ajoutez des phrases variées et arrêtez l'entraînement plus tôt (moins d'époques). |
+| **Dataset minuscule et répétitif (< 2 min)** | Le modèle mémorise le bruit ("overfitting") et échoue sur de nouveaux mots. | Ajoutez des phrases variées et arrêtez l'entraînement plus tôt (moins d'époques). |
 | **Prises saturées / clippées** | Grésillements durs, voix robotique ou erreur `NaN loss`. | Supprimez les prises saturées et normalisez l'audio propre sous `0 dBFS`. |
 
 Lisez également [Préparer un dataset vocal](../../model-training/dataset-preparation.md) pour d'autres conseils généraux d'enregistrement et d'évaluation.

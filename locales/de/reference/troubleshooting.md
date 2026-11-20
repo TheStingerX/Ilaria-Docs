@@ -102,7 +102,7 @@ Wenn alles falsch klingt oder du nicht weißt, welche Einstellung den Ton ruinie
 | `BrokenProcessPool` / PC friert bei Vorbereitung ein | Zu viele CPU-Threads gleichzeitig verbrauchen den gesamten Arbeitsspeicher. | Reduziere die **CPU-Threads / Worker** beim Preprocessing (z. B. von `8` auf `2` oder `4`) und prüfe auf genug freien Speicherplatz. |
 | `NaN loss` oder exportiertes Modell ist komplett stumm | Übersteuerter/defekter Clip im Dataset, `FP16`-Überlauf oder unpassendes `G/D`-Pretrain. | Prüfe alle Clips auf starkes Clipping oder totale Stille. Nutze das **Standard-RVC-Pretrain** passend zur Abtastrate, schalte `FP16` **AUS** (nutze `FP32`) und starte ein neues Training. |
 | **Training setzt nicht fort / startet bei Epoch 0** | `Fresh Training` war noch aktiviert oder Dateien in `logs/` wurden verschoben/umbenannt. | Lasse den gesamten Ordner `logs/<Experiment>/` unverändert, gib exakt denselben **Experimentnamen**, **Sample Rate** und **Embedder** ein, erhöhe die Ziel-Epochen und schalte `Fresh Training` **AUS**. |
-| **Stimme klingt dumpf, verrauscht oder "übertrainiert"** | Das Modell wurde zu viele Epochen auf einem kleinen/unsauberen Dataset trainiert. | Stoppe früher (teste Checkpoints alle 50-100 Epochen, z. B. 200-400 Epochen bei kleinen Datasets) und reinige das Dataset vorher mit **UVR5** oder **MVSep**. |
+| **Stimme klingt dumpf, verrauscht oder hat "Overfitting"** | Das Modell wurde zu viele Epochen auf einem kleinen/unsauberen Dataset trainiert. | Stoppe früher (teste Checkpoints alle 50-100 Epochen, z. B. 200-400 Epochen bei kleinen Datasets) und reinige das Dataset vorher mit **UVR5** oder **MVSep**. |
 
 ### 6. Live Voice Changer, Mikrofon & Discord
 
