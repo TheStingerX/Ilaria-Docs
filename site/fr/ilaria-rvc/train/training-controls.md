@@ -8,6 +8,8 @@
 
 > **2.4.0** · Le paquet Windows déplace l’application et le runtime dans app/. Les modèles restent à la racine dans models/. Ajout de Colab, Lightning AI Studio, des indications de téléchargement des embedders, et de Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip est réparé et pywin32 est inclus.
 
+> **2.4.3** · Ajoute l'entraînement natif en précision mixte **BF16**, sélectionné automatiquement sur les GPU RTX séries 30, 40 et 50 compatibles (Kaggle T4 reste sur FP16). Mémorise les choix manuels FP16/FP32, conserve la précision des entraînements existants et met à jour Training Queue et PC training advisor. L'extraction de traits reste en FP32.
+
 ## Quatre étapes
 
  | Étape | Entrées | Vérifier avant de continuer |

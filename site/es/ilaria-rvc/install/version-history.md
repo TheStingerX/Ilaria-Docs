@@ -4,13 +4,14 @@
 
 ## ¿Qué versión describe esta documentación?
 
-La última versión para Windows es la **2.4.2**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
+La última versión para Windows es la **2.4.3**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
 
 ## Todas las versiones
 
  | Versión | Aspectos destacados |
 | --- | --- |
-| 2.4.2 | Corrige la inferencia de RMVPE cuando cuDNN rechaza una operación GRU. RMVPE usa una entrada contigua y reintenta esa GRU en la CPU si cuDNN devuelve `CUDNN_STATUS_NOT_SUPPORTED`. Requiere la versión 2.4.0 o posterior. Instala la 2.4.2 desde **Other → Update Ilaria RVC**. |
+| 2.4.3 | Añade entrenamiento nativo con precisión mixta **BF16**, seleccionado automáticamente en GPUs NVIDIA RTX series 30, 40 y 50 cuando todas las GPUs elegidas lo soportan (Kaggle T4 usa FP16 por defecto). Recuerda selecciones manuales de `FP16` y `FP32`, conserva la precisión de entrenamientos existentes salvo cambio explícito, actualiza Training Queue y PC training advisor y mantiene la extracción de rasgos en `FP32` y el formato estándar de exportación RVC. Requiere **2.4.2** primero desde **Other → Update Ilaria RVC**. |
+| 2.4.2 | Añade **RMVPE cuDNN recovery** para recuperarse limpiamente de errores cuDNN de extracción de pitch en inferencia y preprocesamiento. Actualiza desde **2.4.1** mediante **Other → Update Ilaria RVC**. |
 | 2.4.1 | Añade la síntesis local opcional Kokoro v1.0 con 54 voces, incluidas Sara y Nicola en italiano. Aclara los requisitos de los motores TTS, corrige la ruta de los pesos RMVPE y oculta mensajes INFO detallados de HuBERT sin ocultar avisos ni errores. Instala e inicia primero la 2.4.0. Abre **Other → Update Ilaria RVC** e instala la **2.4.1** cuando aparezca. |
 | 2.4.0 | Windows mueve la aplicación y el entorno a app/, y los modelos a models/ en la raíz. Añade Colab, Lightning AI Studio, ayuda para descargar embedders y Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Se repara pip y se incluye pywin32. |
 | 2.3.0 | RMVPE High Register añade modos, límites de detección y un gráfico comparativo de F0 para notas agudas. ElevenLabs se incorpora a TTS. Introduce tu clave API de ElevenLabs, elige una voz y prueba una frase breve. MRF HiFi-GAN admite entrenamiento e inferencia. El catálogo añade 15 pares de generador y discriminador, incluidos KLM 4.4 X1 y X2 a 40 kHz. Portuguese HuBERT Base es opcional en inferencia. En el entrenamiento RVC v2 puedes cargar y guardar un HuBERT personalizado. Su configuración se conserva en el modelo exportado. |

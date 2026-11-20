@@ -8,6 +8,8 @@
 
 > **2.4.0** · The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32.
 
+> **2.4.3** · Adds native **BF16** mixed-precision training, automatically selected on RTX 30, 40 and 50 series GPUs when supported (Kaggle T4 defaults to FP16). Manual FP16/FP32 choices are remembered, existing runs keep their saved precision, and the Training Queue and PC training advisor reflect the new precision options. Feature extraction stays in FP32.
+
 ## Four stages
 
 | Stage | Inputs | Check before continuing |
