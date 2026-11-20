@@ -1,0 +1,72 @@
+---
+label: "🧱 Modèles pretrained"
+order: 91
+permalink: /pretrained/
+---
+# Modèles de base Pretrained RVC
+
+Un **modèle de base pretrained** (ou **pretrain**) est une paire de points de contrôle de départ : un **Générateur (`G_*.pth`)** et un **Discriminateur (`D_*.pth`)**, déjà entraînés sur des centaines d'heures d'audio multi-locuteurs. Lorsque vous entraînez une nouvelle voix RVC, l'entraînement ne part pas de zéro, mais effectue un **fine-tuning** de cette paire sur le dataset de votre voix cible.
+
+## Ce que font les pretrained et pourquoi ils existent
+
+Partir d'un pretrain permet à RVC d'apprendre une voix en quelques minutes ou heures plutôt qu'en plusieurs semaines :
+
+1. **Le Générateur (`G`)** sait déjà transformer les features de contenu et la hauteur en parole ou en chant naturel.
+2. **Le Discriminateur (`D`)** sait déjà distinguer un audio réaliste d'un audio artificiel.
+3. **Votre entraînement** adapte ces poids existants à votre voix cible.
+
+Chaque paire pretrained est liée à des paramètres architecturaux précis qui **doivent correspondre exactement à votre entraînement** :
+- **Fréquence d'échantillonnage** (`32 kHz`, `40 kHz`, `44.1 kHz` ou `48 kHz`)
+- **Architecture vocodeur** (`HiFi-GAN`, `RefineGAN` ou `MRF HiFi-GAN`)
+- **Version RVC et guidage de hauteur** (la quasi-totalité des pretrains communautaires sont en RVC v2 avec F0)
+- **Embedder attendu** (généralement `contentvec`, bien que certaines variantes exigent `spin-v2`)
+
+Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédiatement ou produira un son fortement déformé.
+
+---
+
+## Modèles pretrained RVC connus
+
+> [!WARNING]
+> **À titre purement informatif - utilisation fortement déconseillée**
+>
+> Toutes les informations ci-dessous concernant les modèles pretrained alternatifs sont fournies **à titre purement informatif**. **Nous recommandons fortement de NE PAS utiliser de pretrained alternatifs** : les **réglages stock de RVC** (pretrained RVC v2 HiFi-GAN par défaut) sont les meilleurs et les plus fiables. Les pretrains personnalisés peuvent facilement introduire des artefacts métalliques, de l'instabilité, du surapprentissage ou une mauvaise qualité de conversion hors ligne et en ligne (en direct).
+
+| Pretrained | Sample rate(s) | Vocodeur | Embedder | Dépôt / Source |
+| --- | --- | --- | --- | --- |
+| **Stock RVC v2 (Par défaut)** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | **Recommandé (Stock RVC)** |
+| **AnimePretrain** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **DMR v2** | `32 kHz` | HiFi-GAN | Non spécifié | `ourbz/DMR-V2-ReUpload` |
+| **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Non spécifié | `Essid/GuideVocalPretrain` |
+| **IMA** | `32 kHz` | HiFi-GAN | Non spécifié | `Loren85/IMA-TEST-V1` |
+| **Itaila** | `32 kHz` | Non spécifié | Non spécifié | `TheStinger/itaila` |
+| **KLM - BeatzForge V2** | `32 kHz` | HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM_BEATMASTER` |
+| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM49_HFG` |
+| **KLM 4.4 (X1 / X2)** | `40 kHz` | MRF HiFi-GAN | Non spécifié | `SeoulStreamingStation/KLM4.4` *(non testé dans Ilaria RVC)* |
+| **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | RefineGAN | Non spécifié | `SeoulStreamingStation/KLM5` |
+| **KLM 6.1 (Exp3 L6 / KLM 6.2)** | `32 kHz` | Non spécifié | Non spécifié | `SeoulStreamingStation/KLM6_Experimental` |
+| **Legacy Core V1.5** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN (`32k`) | `contentvec` / `spin-v2` (`32k`) | `lyery/mode4` |
+| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` |
+| **Mandagues V2** | `40 kHz` | HiFi-GAN | Non spécifié | `juaow/mandaguesv2` |
+| **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
+| **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
+| **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | HiFi-GAN | Non spécifié | `shiromiya/nanashi-pretrain` |
+| **Nezox** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Ov2Super** | `32 kHz` | Non spécifié | Non spécifié | `poiqazwsx/Ov2Super32kfix` |
+| **PaBP** | `32 kHz` | HiFi-GAN | Non spécifié | `Razer112/pabp-v.5` |
+| **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Non spécifié | `SimplCup/RefGanVCTKV2` |
+| **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | `Aznamir/RefineGAN` |
+| **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Non spécifié | `SimplCup/RefineGanVCTKV1` |
+| **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Non spécifié | Non spécifié | `MUSTAR/Rigel-rvc-base-pretrained-model` |
+| **RIN_E3** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Non spécifié | `Sztef/SingerPreTrained` |
+| **Snowie** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Snowie × RIN** | `40 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Non spécifié | `blaise-tk/TITAN` |
+| **UKA** | `32 kHz` | HiFi-GAN | Non spécifié | `Plasmati/Pretrains` |
+| **UKR** | `32 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+| **VocalCore** et **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Non spécifié | `Politrees/RVC_resources` |
+
+> **Note de compatibilité** : dans Ilaria RVC, l'entraînement RefineGAN est pris en charge spécifiquement à `32 kHz` avec RVC v2 et guidage F0. Choisir un pretrain RefineGAN `40 kHz` ou `44.1 kHz` tout en réglant l'entraînement sur `32 kHz` échouera ou produira un résultat inutilisable.
