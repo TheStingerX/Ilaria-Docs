@@ -1,7 +1,7 @@
 ---
 label: "GPU compatibles"
 icon: ":desktop_computer:"
-order: 79
+order: 82
 permalink: /ilaria-rvc/gpu-compatibility/
 description: "Le ZIP Windows pèse environ 5,00 Go. Extrayez-le puis lancez RUN_ILARIA_RVC.bat, ou RUN_ILARIA_RVC_LOGS.bat pour les journaux. ContentVec et RMVPE sont inclus."
 ---

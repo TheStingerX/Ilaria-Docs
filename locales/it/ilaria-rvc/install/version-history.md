@@ -1,9 +1,9 @@
 ---
 label: "Cronologia delle versioni e differenze di rilascio"
 icon: ":clock3:"
-order: 83
+order: 81
 permalink: /ilaria-rvc/version-history/
-description: "L'ultima versione per Windows è 2.4.3. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
+description: "L'ultima versione per Windows è 2.4.5. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
 ---
 # Cronologia delle versioni e differenze di rilascio
 
@@ -11,12 +11,14 @@ description: "L'ultima versione per Windows è 2.4.3. Controlla la versione inst
 
 ## Quale versione descrive questa documentazione?
 
-L’ultima versione per Windows è **2.4.3**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
+L’ultima versione per Windows è **2.4.5**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
 
 ## Tutte le versioni
 
  | Versione | In evidenza |
 | --- | --- |
+| 2.4.5 | Aggiunge la conversione dei pesi `.pth` ↔ `.safetensors` in **Altro → Convert model weights**, conservando i metadati RVC e aggiungendo il pulsante **Move .pth to models**. Migliora il messaggio in Inferenza per i file senza configurazione vocale e installa automaticamente `safetensors` al primo utilizzo se necessario. Dalla **2.4.4**, apri **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |
+| 2.4.4 | Rimuove le sei opzioni di download pretrained Legacy Core di Lyery dopo la rimozione dei file sorgente (i pesi già scaricati restano utilizzabili per il training). Richiede **2.4.2** o successiva. |
 | 2.4.3 | Aggiunge il training nativo in precisione mista **BF16**, selezionato in automatico sulle GPU NVIDIA RTX serie 30, 40 e 50 quando tutte le GPU scelte lo supportano (su Kaggle T4 il default resta FP16). Ricorda le scelte manuali `FP16` e `FP32`, mantiene la precisione salvata nei training esistenti salvo modifica esplicita, aggiorna Training Queue e PC training advisor e lascia l'estrazione delle feature in `FP32` mantenendo il formato standard di export RVC. Richiede prima la **2.4.2** tramite **Altro → Aggiorna Ilaria RVC**. |
 | 2.4.2 | Aggiunge il ripristino automatico **RMVPE cuDNN recovery** per gestire in modo pulito gli errori cuDNN durante l'estrazione del pitch in inferenza e preprocessing. Aggiorna dalla **2.4.1** tramite **Altro → Aggiorna Ilaria RVC**. |
 | 2.4.1 | Aggiunge la sintesi vocale locale opzionale Kokoro v1.0 con 54 voci, tra cui Sara e Nicola in italiano. Chiarisce i requisiti dei motori TTS, corregge il percorso predefinito dei pesi RMVPE e nasconde i messaggi INFO più prolissi di HuBERT mantenendo avvisi ed errori. Installa e avvia prima la 2.4.0. Apri **Altro → Aggiorna Ilaria RVC** e installa la **2.4.1** quando compare. |
