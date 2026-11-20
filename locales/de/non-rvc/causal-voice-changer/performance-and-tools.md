@@ -11,7 +11,7 @@ description: "Nimm Sitzungen direkt in CausalVC Realtime auf (zuerst Konvertieru
 
 ### Buffering
 
-- **Chunk** (in `20-ms`-Schritten): wie viel Audio jeweils auf einmal konvertiert wird. Gesamtlatenz = feste **60 ms** Lookahead + **1 Chunk** + Soundkarten-/Virtual-Cable-Puffer.
+- **Chunk** (ab `10 ms` / `20 ms`): wie viel Audio jeweils auf einmal konvertiert wird. Gesamtlatenz = feste **50 ms** Lookahead auf der 100-Hz-v4-Basis (`60 ms` bei alten 50-Hz-Stimmen) + **1 Chunk** + Soundkarten-/Virtual-Cable-Puffer.
   - Kleinere Chunks = geringere Latenz, erfordern aber eine schnellere GPU.
   - Bei Knacksern oder Aussetzern (oder auf CPU bei älteren AMD-Karten) **Chunk** auf `40 ms` oder `60 ms+` erhöhen.
 - **Extra inference buffer**: wie weit das Modell pro Chunk zurückblickt. Mehr Kontext stabilisiert Klang und Tonhöhe bei geringem GPU-Aufwand **ohne zusätzliche Latenz**.

@@ -20,7 +20,7 @@ El **RVC** tradicional se diseñó originalmente para convertir archivos de audi
 
 **Causal Voice Changer (CVC)** funciona de otra manera:
 
-- Es **causal**: convierte el audio de forma continua conforme llega, mirando casi siempre hacia atrás con un búfer de lookahead de solo **60 ms**.
+- Es **causal**: convierte el audio de forma continua conforme llega, mirando casi siempre hacia atrás con un búfer de lookahead de solo **50 ms** en la base 100 Hz v4 (`60 ms` en voces antiguas a 50 Hz).
 - Al transmitir en flujo continuo en lugar de unir bloques independientes, **los sonidos sostenidos y las notas largas se mantienen suaves**, sin romperse ni vibrar.
 - Conservas casi toda la calidad de RVC con una latencia mucho menor (por ejemplo, unos **130 ms totales de extremo a extremo** en Linux con audio JACK).
 

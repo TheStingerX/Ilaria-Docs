@@ -61,6 +61,8 @@ Falls die automatische Erkennung das falsche Backend wählt, setze vor dem Start
 
 ## 4. CVC aktualisieren
 
-Nach einem Update:
+Ab Version **v0.3.1** besitzt CVC einen **integrierten Updater** direkt in der App. Automatische Prüfungen sind standardmäßig aktiv und können auf der **About**-Seite deaktiviert werden. Bestehende Installationen aktualisieren außerdem `weights/causalvc-base/` automatisch beim nächsten Start oder Training.
+
+Bei manuellen Updates oder aus dem Quellcode:
 - Unter Windows (aus dem Quellcode) starte `run-realtime.bat` / `run-training.bat` mit `CAUSALVC_REBUILD=1`, falls sich die WinUI-3-Oberfläche geändert hat.
 - Unter Linux baut sich die Rust-UI beim nächsten Start automatisch neu.

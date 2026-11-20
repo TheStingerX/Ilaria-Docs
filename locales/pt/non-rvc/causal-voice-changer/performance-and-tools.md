@@ -11,7 +11,7 @@ description: "Grava sessões diretamente no CausalVC Realtime (inicia primeiro a
 
 ### Buffering
 
-- **Chunk** (em passos de `20 ms`): quanto áudio é convertido de cada vez. O atraso total é o lookahead fixo de **60 ms** do CVC + **1 chunk** + buffers da placa de som/cabo virtual.
+- **Chunk** (até `10 ms` / `20 ms`): quanto áudio é convertido de cada vez. O atraso total é o lookahead fixo de **50 ms** na base 100 Hz v4 (`60 ms` em vozes antigas de 50 Hz) + **1 chunk** + buffers da placa de som/cabo virtual.
   - Chunks menores = menor latência, mas exigem GPU mais rápida.
   - Se o áudio estalar ou falhar (ou se estiveres na CPU numa AMD antiga), sobe **Chunk** para `40 ms` ou `60 ms+`.
 - **Extra inference buffer**: quanto da fala recente o modelo observa para trás em cada bloco. Mais contexto dá tom e afinação mais estáveis com pequeno custo de GPU, **sem adicionar atraso**.
