@@ -7,11 +7,11 @@ description: "Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU dist
 ---
 # Présentation d'Ilaria RVC
 
-[Télécharger Ilaria RVC 2.4.1 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.2 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
 Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. [Ilaria RVC on Kaggle](cloud/kaggle.md)
 
-Ilaria RVC 2.4.1 est une application Windows basée sur RVC WebUI (Mainline - Original RVC). Son interface s'ouvre dans un navigateur, tandis que son moteur fourni fonctionne sur le PC. Le package Windows actuel cible NVIDIA. La version comprend l'inférence, le TTS, la formation de modèles, une bibliothèque de modèles et l'analyse audio.
+Ilaria RVC 2.4.2 est une application Windows basée sur RVC WebUI (Mainline - Original RVC). Son interface s'ouvre dans un navigateur, tandis que son moteur fourni fonctionne sur le PC. Le package Windows actuel cible NVIDIA. La version comprend l'inférence, le TTS, la formation de modèles, une bibliothèque de modèles et l'analyse audio.
 
  | Où | Ce que vous pouvez faire |
 | --- | --- |

@@ -1,5 +1,5 @@
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
-import { join, relative, resolve, sep } from 'node:path';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, unlinkSync, writeFileSync } from 'node:fs';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const languages = {
@@ -35,25 +35,25 @@ const output = join(root, 'dist');
 const entries = (folder, extension) => readdirSync(folder, { recursive: true, withFileTypes: true })
   .filter(entry => entry.isFile() && entry.name.endsWith(extension))
   .map(entry => join(entry.parentPath, entry.name));
-const english = entries(join(root, 'docs'), '.md').map(file => relative(join(root, 'docs'), file));
+const sourceDirectory = lang => join(root, lang === 'en' ? 'docs' : `locales/${lang}`);
+const pagesByLanguage = new Map(Object.keys(languages).map(lang => {
+  const directory = sourceDirectory(lang);
+  return [lang, new Set(entries(directory, '.md').map(file => relative(directory, file)))];
+}));
 const groups = ['start', 'conversion', 'model-training', 'reference'];
-
-for (const lang of Object.keys(languages).slice(1)) {
-  for (const page of english) {
-    if (!existsSync(join(root, 'locales', lang, page))) throw new Error(`Missing ${lang}/${page}`);
-  }
-}
 
 const staging = mkdtempSync(join(root, '.localized-build-'));
 const title = "<title>Ilaria&apos;s Docs &#x1F496;</title>";
 const headings = html => [...html.matchAll(/<h([1-6]) id="([^"]+)"/g)];
 const localizedPath = (lang, route) => lang === 'en' ? route : `/${lang}${route}`;
 const modifiedLabels = { en: 'Last updated', it: 'Ultima modifica', es: 'Última modificación', fr: 'Dernière modification', de: 'Zuletzt geändert', pt: 'Última atualização' };
-const pageSources = new Map(english.map(page => {
-  const source = readFileSync(join(root, 'docs', page), 'utf8');
-  const route = source.match(/^permalink:\s*(\/\S+)\s*$/m)?.[1] ?? '/';
-  return [route, page];
-}));
+const pageSources = new Map([...pagesByLanguage].map(([lang, pages]) => [
+  lang, new Map([...pages].map(page => {
+    const source = readFileSync(join(sourceDirectory(lang), page), 'utf8');
+    const route = source.match(/^permalink:\s*(\/\S+)\s*$/m)?.[1] ?? (page === 'index.md' ? '/' : undefined);
+    return [route, page];
+  }).filter(([route]) => route)),
+]));
 const commitDates = new Map();
 const pendingFiles = new Set();
 try {
@@ -69,7 +69,7 @@ try {
 }
 
 function addModifiedDate(html, lang, route) {
-  const page = pageSources.get(route);
+  const page = pageSources.get(lang).get(route);
   if (!page) return html;
   const source = join(lang === 'en' ? 'docs' : `locales/${lang}`, page).split(sep).join('/');
   const timestamp = pendingFiles.has(source) ? undefined : commitDates.get(source);
@@ -87,7 +87,11 @@ function decorate(directory, lang) {
     const path = relative(directory, file).split(sep).join('/');
     const route = '/' + path.replace(/index\.html$/, '');
     const current = languages[lang];
-    const [locale, description, imageAlt] = previewCopy[lang];
+    const [locale, defaultDescription, imageAlt] = previewCopy[lang];
+    const originalHtml = readFileSync(file, 'utf8');
+    // Retype has already escaped the localized frontmatter value for an HTML attribute.
+    const pageDescription = originalHtml.match(/<meta name="description" content="([^"]*)"/)?.[1];
+    const description = route !== '/' && pageDescription ? pageDescription : defaultDescription;
     const preview = [
       '<meta name="theme-color" content="#FFC0CB">',
       `<meta property="og:locale" content="${locale}">`,
@@ -101,20 +105,22 @@ function decorate(directory, lang) {
       `<meta name="twitter:image" content="${previewImage}">`,
       `<meta name="twitter:image:alt" content="${imageAlt}">`,
     ].join('\n    ');
-    const alternate = Object.keys(languages).map(code =>
+    const available = Object.keys(languages).filter(code => existsSync(join(staging, code, path)));
+    const alternate = available.map(code =>
       `    <link rel="alternate" hreflang="${code}" href="${origin}${localizedPath(code, route)}">`).join('\n');
-    const choices = Object.entries(languages).map(([code, [, name]]) =>
-      `<a href="${localizedPath(code, route)}" lang="${code}" hreflang="${code}"${code === lang ? ' aria-current="true"' : ''}>${flagIcon(code)} ${name}</a>`).join('');
+    const choices = available.map(code =>
+      `<a href="${localizedPath(code, route)}" lang="${code}" hreflang="${code}"${code === lang ? ' aria-current="true"' : ''}>${flagIcon(code)} ${languages[code][1]}</a>`).join('');
     const selector = `<details class="docs-language"><summary aria-label="${current[2]}: ${current[1]}">${flagIcon(lang)}<span class="docs-language-name">${current[1]}</span></summary><div>${choices}</div></details>`;
-    let html = readFileSync(file, 'utf8')
+    const defaultAlternate = available.includes('en') ? `\n    <link rel="alternate" hreflang="x-default" href="${origin}${route}">` : '';
+    let html = originalHtml
       .replace(/(<html lang=")[^"]+"/, `$1${lang}"`)
       .replace(/<title>[^<]*<\/title>/, title)
       .replace(/<meta property="og:site_name"[^\r\n]*/, '<meta property="og:site_name" content="Ilaria Docs &#x1F496;">')
       .replace(/^[ \t]*<meta (?:property="og:(?:locale|description|image(?::[\w-]+)?)"|name="(?:theme-color|twitter:(?:description|image(?::alt)?))")[^\r\n]*\r?\n/gm, '')
       .replace('</head>', `    ${preview}\n</head>`)
-      .replace('</head>', `${alternate}\n    <link rel="alternate" hreflang="x-default" href="${origin}${route}">\n</head>`)
+      .replace('</head>', `${alternate}${defaultAlternate}\n</head>`)
       .replace(/(\s*)<\/header>/, `\n        ${selector}$1</header>`);
-    if (lang !== 'en') {
+    if (lang !== 'en' && available.includes('en')) {
       const original = readFileSync(join(staging, 'en', path), 'utf8');
       const aliases = headings(original);
       let index = 0;
@@ -132,7 +138,15 @@ try {
     const input = join(staging, `source-${lang}`);
     cpSync(join(root, 'docs'), input, { recursive: true });
     if (lang !== 'en') {
-      for (const page of english) cpSync(join(root, 'locales', lang, page), join(input, page));
+      const pages = pagesByLanguage.get(lang);
+      for (const page of pagesByLanguage.get('en')) {
+        if (!pages.has(page)) unlinkSync(join(input, page));
+      }
+      for (const page of pages) {
+        const target = join(input, page);
+        mkdirSync(dirname(target), { recursive: true });
+        cpSync(join(sourceDirectory(lang), page), target);
+      }
       for (const [index, group] of groups.entries()) {
         const file = join(input, group, 'index.yml');
         writeFileSync(file, readFileSync(file, 'utf8').replace(/^label:.*/m, `label: ${JSON.stringify(names[index + 4])}`));
@@ -146,10 +160,11 @@ try {
       .replace('text: Website', `text: ${JSON.stringify(names[3])}`)
       .replace('https://ilariarvc.shop/en/', `https://ilariarvc.shop/${lang}/`));
     execFileSync(retype, ['build', config], { stdio: 'inherit' });
-    decorate(join(staging, lang), lang);
   }
+  for (const lang of Object.keys(languages)) decorate(join(staging, lang), lang);
   mkdirSync(output, { recursive: true });
   for (const code of Object.keys(languages)) {
+    if (!existsSync(join(staging, code, 'ilaria-rvc', 'tts', 'index.html'))) continue;
     const target = localizedPath(code, '/ilaria-rvc/tts/');
     const folder = join(staging, code, 'ilaria-rvc', 'speech');
     mkdirSync(folder, { recursive: true });

@@ -9,6 +9,8 @@ description: "Commencez avec Pitch 0, un court WAV sec et un modèle connu. Modi
 
 [Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
+> **RMVPE · 2.4.2** · Corrige l’inférence RMVPE quand cuDNN refuse une opération GRU. RMVPE utilise une entrée contiguë et réessaie cette GRU sur le CPU en cas de `CUDNN_STATUS_NOT_SUPPORTED`. Nécessite la version 2.4.0 ou ultérieure. Installez la 2.4.2 via **Other → Update Ilaria RVC**.
+
 ## L'application se ferme ou le navigateur reste vide
 
 1. Exécutez `RUN_ILARIA_RVC_LOGS.bat` à partir du dossier entièrement extrait. Laissez la console ouverte et lisez la première erreur, y compris le fichier ou le périphérique qu'elle nomme.

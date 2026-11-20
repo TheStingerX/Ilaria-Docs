@@ -9,6 +9,8 @@ description: "Inizia con Pitch 0, un WAV breve e asciutto e un modello notoriame
 
 [Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
 
+> **RMVPE · 2.4.2** · Corregge l’inferenza RMVPE quando cuDNN rifiuta un’operazione GRU su CUDA. RMVPE usa un input contiguo e riprova quella GRU sulla CPU se cuDNN restituisce `CUDNN_STATUS_NOT_SUPPORTED`. Richiede la 2.4.0 o successiva. Apri **Altro → Aggiorna Ilaria RVC** per installare la 2.4.2.
+
 ## L'app si chiude o il browser rimane vuoto
 
 1. Esegui `RUN_ILARIA_RVC_LOGS.bat` dalla cartella completamente estratta. Lascia la console aperta e leggi il primo errore, incluso il file o il dispositivo a cui fa riferimento.

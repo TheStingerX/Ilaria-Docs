@@ -1,0 +1,48 @@
+name: Build Ilaria Docs snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "locales/**"
+      - "build-localized.mjs"
+      - "retype.yml"
+      - "scripts/prepare-site-snapshot.py"
+      - ".github/workflows/site-snapshot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ilaria-docs-site-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build the existing Retype site
+        shell: pwsh
+        run: |
+          npm install --no-save --no-package-lock retypeapp-win-x64@4.6.0
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          node build-localized.mjs node_modules/retypeapp-win-x64/bin/retype.exe
+      - name: Validate and publish snapshot data
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python scripts/prepare-site-snapshot.py dist $env:GITHUB_SHA (Join-Path $env:RUNNER_TEMP "docs-snapshot")
