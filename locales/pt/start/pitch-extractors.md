@@ -10,7 +10,7 @@ Um **pitch extractor** (também chamado de **método de extração F0**) é o al
 Enquanto o [embedder](embedders.md) lê *quais palavras e fonemas* estão sendo falados ou cantados, o **pitch extractor** mede *o quão grave ou aguda* está a voz a cada milissegundo.
 
 !!!tip
-**Boa notícia sobre compatibilidade:**
+**Compatibilidade:**
 Diferente dos embedders, **os pitch extractors não prendem você a uma única escolha**. Mesmo que um modelo tenha sido treinado usando `rmvpe` no pré-processamento do dataset, você pode alternar livremente entre `rmvpe`, `rmvpe_gpu`, `fcpe` ou `crepe` na inferência e no voice changer ao vivo sem quebrar a compatibilidade.
 !!!
 
@@ -32,7 +32,7 @@ Diferente dos embedders, **os pitch extractors não prendem você a uma única e
 | **`crepe` / `crepe-full`** | Rede neural | Lento | Alta precisão em canto solo limpo e vibrato. | Bem mais pesado na GPU/CPU que o `rmvpe`. Geralmente lento demais para uso ao vivo. |
 | **`crepe-tiny`** | Rede neural (pequena) | Rápido | Versão leve do `crepe` para PCs antigos. | Menos preciso que `rmvpe` e `fcpe`; superado pelo `fcpe`. |
 | **`harvest`** | DSP clássico (WORLD) | Muito lento (CPU) | Método antigo para fala limpa. | Tende a dar saltos de oitava e som metálico em canto ou áudio com ruído. Costuma exigir `filter_radius`. |
-| **`pm`** | DSP clássico (Parselmouth) | Ultra rápido (CPU) | Prévias rápidas em PCs muito fracos sem GPU. | Perde fácil o rastreamento em canto, sussurros ou vozes sujas. |
+| **Parselmouth (`pm`)** | DSP clássico | Ultra rápido (CPU) | Prévias rápidas em PCs muito fracos sem GPU. | Perde fácil o rastreamento em canto, sussurros ou vozes sujas. |
 | **`dio`** | DSP clássico (WORLD) | Muito rápido (CPU) | Alternativa antiga rápida em CPU. | Menos preciso que `rmvpe` e `fcpe`; não recomendado para renderizações finais. |
 | **`hybrid[...]`** | Métodos combinados | Lento | Mistura dois extratores (ex. `hybrid[rmvpe+fcpe]` ou `hybrid[crepe+rmvpe]`). | Disponível no Applio e alguns forks para suavizar saltos de oitava em canto difícil, mas roda mais devagar. |
 | **Variantes `swift` / `onnx`** | Leve / ONNX | Muito rápido | Extratores otimizados em forks recentes (como Applio ou Deiteris). | Úteis em CPU ou DirectML onde extratores PyTorch padrão são mais lentos. |
