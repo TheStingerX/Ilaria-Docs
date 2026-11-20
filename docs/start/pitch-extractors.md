@@ -11,7 +11,7 @@ While an [embedder](embedders.md) reads *what words and phonemes* are being spok
 
 !!!tip
 **Compatibility:**
-Unlike embedders, **pitch extractors do not lock you into one choice**. Even if a model was trained using `rmvpe` for dataset preprocessing, you can freely switch between `rmvpe`, `rmvpe_gpu`, `fcpe`, or `crepe` during inference and live voice changing without breaking compatibility.
+Unlike embedders, **pitch extractors do not lock you into one choice**. Even if a model was trained using `rmvpe` for dataset preprocessing, you can use any available pitch extractor during inference and live voice changing without breaking compatibility.
 !!!
 
 ## Quick recommendation
