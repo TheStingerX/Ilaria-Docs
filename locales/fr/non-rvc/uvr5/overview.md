@@ -9,6 +9,11 @@ description: "UVR5 (Ultimate Vocal Remover v5 GUI) est une application bureautiq
 
 [GitHub](https://github.com/Anjok07/ultimatevocalremovergui) · [Releases officielles](https://github.com/Anjok07/ultimatevocalremovergui/releases) · [Patchs Beta Roformer](https://github.com/TRvlvr/model_repo/releases/tag/uvr_update_patches)
 
+!!!warning
+**Sortie prochaine : UVR6 arrive bientôt !**
+**Ultimate Vocal Remover 6 (UVR6)** sortira sur **Windows le 11 décembre 2026**, suivi peu après par **Mac**, puis par **Linux**. Comme **UVR5** va bientôt être remplacé par cette nouvelle génération majeure, surveillez la page officielle des releases autour de la sortie si vous souhaitez passer à la nouvelle version.
+!!!
+
 **UVR5** (Ultimate Vocal Remover v5 GUI) est une application bureautique gratuite et open-source de **séparation de sources audio par IA**. Elle fonctionne localement sur votre PC et permet de séparer chansons ou dialogues en voix propre, instrumental, chœurs, pistes séparées (batterie, basse, autres) et de supprimer réverbération, écho et bruit de fond - l'un des outils les plus populaires pour préparer des datasets RVC et des covers.
 
 ## Architectures IA prises en charge
