@@ -6,6 +6,20 @@ permalink: /non-rvc/yunevoix/changelog/
 ---
 # YuneVoix Changelog
 
+## v0.7.1 (2026-11-20)
+
+*Changes since v0.7.0.*
+
+### Fixed
+
+- **AMD**: fixed an issue where YuneVoix closed when pressing **START** on computers whose processor also has AMD integrated graphics. The AMD package now uses **DirectML** on the dedicated card by default. **MIGraphX** can still be chosen in `Settings → General → "AMD graphics engine"` (experimental, applies after a restart). Licences, voices, and settings from `v0.7.0` keep working.
+
+### New
+
+- **AMD**: the **`WavLM+`** content engine and the **`FlowEdit 3+1`** model method now work on AMD cards too (**DirectML**) — in **LIVE**, **covers**, and **karaoke**. When **AMD MIGraphX** is selected, they are not available.
+
+---
+
 ## v0.7.0 (2026-11-19)
 
 *Changes since v0.6.0.*

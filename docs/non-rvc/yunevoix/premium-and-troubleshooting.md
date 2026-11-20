@@ -43,7 +43,8 @@ Supporters on [Ko-fi](https://ko-fi.com/yunevoix) gain access to **YuneVoix PREM
 | --- | --- |
 | **Robotic, quiet, or "underwater" voice** | Raise your mic gain in Windows so loud speech peaks near **−6 dBFS** (`Settings → General → Microphone level`) and keep Input cleaning on **`DF3`**. |
 | **Wrong octave / sounds like a chipmunk** | In `Settings → Pitch & Autotune`, set **Pitch shift** (`+12` male→female, `0` same range, `−12` female→male) or enable automatic pitch. |
-| **Laughs, breaths, or whispers get lost** | Disable **Speech gate**, switch Input cleaning to **`Gentle`** (in a quiet room), and on NVIDIA try the **WavLM+** content engine. |
+| **Laughs, breaths, or whispers get lost** | Disable **Speech gate**, switch Input cleaning to **`Gentle`** (in a quiet room), and try the **WavLM+** content engine (supported on NVIDIA and AMD DirectML). |
+| **AMD: closes on START / WavLM+ or FlowEdit unavailable** | Update to **v0.7.1** (fixes crashes on CPUs with integrated AMD graphics by defaulting to DirectML on the dedicated GPU). If you enabled experimental MIGraphX in `Settings → General → "AMD graphics engine"`, switch back to **DirectML** and restart so `WavLM+` and `FlowEdit 3+1` work. |
 | **Crackles or short dropouts** | Raise **Output buffer** (`Settings → General`), close other GPU-heavy apps, reduce **Model steps** or prompt length, and turn off **Harmony**. |
 | **Stuttering while gaming** | Lower the game's graphics or FPS cap, or lower **Model steps** and prompt length in `Settings → Voice & Timbre`. |
 | **Windows Explorer says ZIP is invalid** | Use **7-Zip** or **WinRAR** (the archive uses AES-256 encryption) with password `yunevoix`. |

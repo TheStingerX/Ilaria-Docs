@@ -43,7 +43,8 @@ Chi supporta il progetto su [Ko-fi](https://ko-fi.com/yunevoix) ottiene l'access
 | --- | --- |
 | **Voce robotica, bassa o "sott'acqua"** | Alza il volume del microfono su Windows finché i picchi arrivano vicino a **−6 dBFS** (`Settings → General → Microphone level`) e lascia Input cleaning su **`DF3`**. |
 | **Ottava sbagliata / effetto "chipmunk"** | In `Settings → Pitch & Autotune`, imposta **Pitch shift** (`+12` uomo→donna, `0` stesso registro, `−12` donna→uomo) o attiva il pitch automatico. |
-| **Risate, respiri o sussurri spariscono** | Disattiva **Speech gate**, imposta Input cleaning su **`Gentle`** (in stanza silenziosa) e su NVIDIA prova il content engine **WavLM+**. |
+| **Risate, respiri o sussurri spariscono** | Disattiva **Speech gate**, imposta Input cleaning su **`Gentle`** (in stanza silenziosa) e prova il content engine **WavLM+** (supportato su NVIDIA e AMD DirectML). |
+| **AMD: si chiude su START / WavLM+ o FlowEdit non disponibili** | Aggiorna alla **v0.7.1** (risolve i crash su CPU con grafica AMD integrata usando DirectML sulla GPU dedicata). Se hai attivato il motore sperimentale MIGraphX in `Settings → General → "AMD graphics engine"`, torna su **DirectML** e riavvia per riattivare `WavLM+` e `FlowEdit 3+1`. |
 | **Crepitii o brevi interruzioni** | Aumenta **Output buffer** (`Settings → General`), chiudi altre app che usano la GPU, riduci **Model steps** o la lunghezza del prompt e disattiva **Harmony**. |
 | **Scatti mentre giochi** | Abbassa la grafica o il limite FPS del gioco, oppure riduci **Model steps** e lunghezza del prompt in `Settings → Voice & Timbre`. |
 | **Esplora File dice che lo ZIP non è valido** | Usa **7-Zip** o **WinRAR** (l'archivio usa cifratura AES-256) con password `yunevoix`. |

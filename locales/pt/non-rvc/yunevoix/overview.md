@@ -44,7 +44,7 @@ No modo **LIVE**, o áudio é processado em pequenos blocos de cerca de **160 ms
 - **Carácter vocal**: controlos de intensidade do timbre, formante, calor e presença com predefinições.
 - **Limpeza de entrada**: remoção de ruído e cliques (`DF3` / `Gentle`), speech gate e monitorização de entrada/saída.
 - **Efeitos vocais**: de-esser, compressor, reverberação e limitador de picos.
-- **Opções de qualidade vs. velocidade**: dois motores de conteúdo (incluindo **WavLM+** em NVIDIA para preservar os teus risos, sussurros e respirações) e vários métodos de modelo. Os modos rápidos usam cerca de 40% do tempo de GPU, e o modo **FlowEdit** preserva melhor a tua respiração e articulação naturais.
+- **Opções de qualidade vs. velocidade**: dois motores de conteúdo (incluindo **WavLM+** em NVIDIA e AMD DirectML para preservar os teus risos, sussurros e respirações) e vários métodos de modelo. Os modos rápidos usam cerca de 40% do tempo de GPU, e o modo **FlowEdit 3+1** preserva melhor a tua respiração e articulação naturais.
 - **Song Cover e Karaoke (PREMIUM)**: re-canta músicas completas com separação vocal automática ou canta acompanhando as letras no ecrã.
 - **Interface em 6 idiomas**: Inglês, Alemão, Italiano, Espanhol, Polaco e Português.
 
@@ -59,4 +59,4 @@ O YuneVoix requer uma **GPU dedicada** e não funciona apenas com CPU. Gráficos
 | **Driver** | Driver NVIDIA atual | AMD Adrenalin **25.10.13.09** ou mais recente |
 | **Áudio** | Microfone + **auscultadores** (obrigatórios ao vivo) | Microfone + **auscultadores** (obrigatórios ao vivo) |
 
-> **Nota NVIDIA vs. AMD**: alguns modos (como o motor de conteúdo `WavLM+`) são exclusivos da NVIDIA. Em AMD, o Windows pode transferir automaticamente o **AMD MIGraphX** através do Windows Update na primeira configuração.
+> **Nota NVIDIA vs. AMD**: desde a **v0.7.1**, o pacote AMD usa **DirectML** na placa dedicada por predefinição, e tanto o **`WavLM+`** como o **`FlowEdit 3+1`** também funcionam em AMD DirectML (em LIVE, covers e karaoke). Opcionalmente podes mudar `Settings → General → "AMD graphics engine"` para o motor experimental **MIGraphX** (após reiniciar; com MIGraphX, `WavLM+` e `FlowEdit 3+1` não ficam disponíveis e o Windows pode transferir o MIGraphX via Windows Update).

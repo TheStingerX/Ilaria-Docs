@@ -44,7 +44,7 @@ In modalità **LIVE**, l'audio viene elaborato in piccoli blocchi da circa **160
 - **Carattere vocale**: controlli per intensità del timbro, formanti, calore e presenza con preset.
 - **Pulizia ingresso**: rimozione di rumore e click (`DF3` / `Gentle`), speech gate e monitoraggio ingresso/uscita.
 - **Effetti vocali**: de-esser, compressore, riverbero e peak limiter.
-- **Opzioni qualità vs. velocità**: due content engine (incluso **WavLM+** su NVIDIA per preservare risate, sussurri e respiri) e diversi metodi di modello. Le modalità più veloci usano circa il 40% del tempo GPU e la modalità **FlowEdit** conserva meglio il respiro e l'articolazione naturali.
+- **Opzioni qualità vs. velocità**: due content engine (incluso **WavLM+** su NVIDIA e AMD DirectML per preservare risate, sussurri e respiri) e diversi metodi di modello. Le modalità più veloci usano circa il 40% del tempo GPU e la modalità **FlowEdit 3+1** conserva meglio il respiro e l'articolazione naturali.
 - **Song Cover e Karaoke (PREMIUM)**: ricanta interi brani con separazione vocale automatica oppure canta seguendo i testi sullo schermo.
 - **Interfaccia in 6 lingue**: Inglese, Tedesco, Italiano, Spagnolo, Polacco e Portoghese.
 
@@ -59,4 +59,4 @@ YuneVoix richiede una **GPU dedicata** e non può funzionare solo su CPU. Schede
 | **Driver** | Driver NVIDIA aggiornato | AMD Adrenalin **25.10.13.09** o successivo |
 | **Audio** | Microfono + **cuffie** (obbligatorie per l'uso live) | Microfono + **cuffie** (obbligatorie per l'uso live) |
 
-> **Nota NVIDIA vs. AMD**: alcune modalità (come il content engine `WavLM+`) sono esclusive per NVIDIA. Su AMD, Windows potrebbe scaricare automaticamente **AMD MIGraphX** tramite Windows Update al primo avvio.
+> **Nota NVIDIA vs. AMD**: dalla **v0.7.1**, il pacchetto AMD usa **DirectML** sulla scheda dedicata per impostazione predefinita, ed entrambi **`WavLM+`** e **`FlowEdit 3+1`** funzionano anche su AMD DirectML (in LIVE, cover e karaoke). Puoi eventualmente cambiare `Settings → General → "AMD graphics engine"` sul motore sperimentale **MIGraphX** (dopo il riavvio; con MIGraphX `WavLM+` e `FlowEdit 3+1` non sono disponibili e Windows può scaricare MIGraphX via Windows Update).

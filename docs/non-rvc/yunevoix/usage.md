@@ -60,7 +60,8 @@ Go to **Settings → Pitch & Autotune**:
 
 - **Voice character**: adjust timbre strength, formant, warmth, and presence, or start from a built-in preset.
 - **Vocal effects**: de-esser, compressor, reverb, and peak limiter.
-- **Content engines & FlowEdit** (**Settings → Voice & Timbre**):
-  - On NVIDIA, try **WavLM+** to carry over laughter, whispers, and breaths from your own voice.
-  - **FlowEdit** mode preserves more of your natural breath and articulation.
+- **Content engines & FlowEdit 3+1** (**Settings → Voice & Timbre**):
+  - Try **WavLM+** (supported on NVIDIA and AMD DirectML; unavailable if experimental AMD MIGraphX is selected) to carry over laughter, whispers, and breaths from your own voice.
+  - **FlowEdit 3+1** mode (supported on NVIDIA and AMD DirectML) preserves more of your natural breath and articulation (requires a sample of your voice in LIVE).
+  - On AMD, **DirectML** on your dedicated GPU is used by default; you can optionally test **MIGraphX** (experimental, after restart) under `Settings → General → "AMD graphics engine"`, though `WavLM+` and `FlowEdit 3+1` require DirectML.
   - If you are **gaming simultaneously** and notice stutters, lower the game's graphics/FPS, reduce **Model steps**, use a shorter prompt, or turn off **Harmony**.

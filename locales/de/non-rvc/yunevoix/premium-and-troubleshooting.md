@@ -43,7 +43,8 @@ Unterstützer auf [Ko-fi](https://ko-fi.com/yunevoix) erhalten Zugang zu **YuneV
 | --- | --- |
 | **Stimme klingt robotisch, leise oder „unter Wasser“** | Erhöhe die Mikrofonverstärkung in Windows, sodass lautes Sprechen bei **−6 dBFS** liegt (`Settings → General → Microphone level`), und lasse Input cleaning auf **`DF3`**. |
 | **Falsche Oktave / Chipmunk-Stimme** | Stelle unter `Settings → Pitch & Autotune` **Pitch shift** ein (`+12` Mann→Frau, `0` gleiche Lage, `−12` Frau→Mann) oder aktiviere automatischen Pitch. |
-| **Lachen, Atmen oder Flüstern gehen verloren** | Deaktiviere **Speech gate**, stelle Input cleaning auf **`Gentle`** (im ruhigen Raum) und teste auf NVIDIA die **WavLM+** Content-Engine. |
+| **Lachen, Atmen oder Flüstern gehen verloren** | Deaktiviere **Speech gate**, stelle Input cleaning auf **`Gentle`** (im ruhigen Raum) und teste die **WavLM+** Content-Engine (unterstützt auf NVIDIA und AMD DirectML). |
+| **AMD: schließt bei START / WavLM+ oder FlowEdit fehlt** | Auf **v0.7.1** aktualisieren (behebt Abstürze bei CPUs mit integrierter AMD-Grafik durch Standard-DirectML auf der dedizierten GPU). Falls experimentelles MIGraphX unter `Settings → General → "AMD graphics engine"` aktiv ist, auf **DirectML** zurückstellen und neu starten. |
 | **Knackser oder kurze Aussetzer** | Erhöhe **Output buffer** (`Settings → General`), schließe andere GPU-Apps, reduziere **Model steps** oder Prompt-Länge und deaktiviere **Harmony**. |
 | **Ruckler beim Spielen** | Senke die Spielgrafik oder das FPS-Limit, oder reduziere **Model steps** und Prompt-Länge unter `Settings → Voice & Timbre`. |
 | **Windows-Explorer meldet ungültige ZIP** | Nutze **7-Zip** oder **WinRAR** (AES-256-Verschlüsselung) mit dem Passwort `yunevoix`. |
