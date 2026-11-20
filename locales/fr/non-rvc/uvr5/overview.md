@@ -3,7 +3,7 @@ label: "Aperçu et prérequis"
 icon: ":book:"
 order: 99
 permalink: /non-rvc/uvr5/overview/
-description: "Sortie prochaine : UVR6 arrive bientôt !"
+description: "UVR5 (Ultimate Vocal Remover v5 GUI) est une application bureautique gratuite et open-source de séparation de sources audio par IA."
 ---
 # Ultimate Vocal Remover (UVR5)
 
@@ -11,6 +11,7 @@ description: "Sortie prochaine : UVR6 arrive bientôt !"
 
 !!!warning
 **Sortie prochaine : UVR6 arrive bientôt !**
+
 **Ultimate Vocal Remover 6 (UVR6)** sortira sur **Windows le 11 décembre 2026**, suivi peu après par **Mac**, puis par **Linux**. Comme **UVR5** va bientôt être remplacé par cette nouvelle génération majeure, surveillez la page officielle des releases autour de la sortie si vous souhaitez passer à la nouvelle version.
 !!!
 
