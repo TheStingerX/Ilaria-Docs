@@ -46,14 +46,14 @@ If you share or export a model (for example using **Export model ZIP** in Ilaria
 
 ## 3. How to tune `Index Rate` (`0` to `1.0`)
 
-The **Index Rate** slider (sometimes called *Search Feature Ratio* or *Retrieval Ratio*) controls how strongly the `.index` database pulls the converted audio toward the exact frames of the training dataset:
+The **Index Rate** (or **Index Ratio**) slider controls how strongly retrieved FAISS feature vectors (`retrieved_features`) are blended with your input's extracted features (`original_features`) *before* the `.pth` generator runs (`features = retrieved_features * index_rate + original_features * (1 - index_rate)`). The `.pth` generator is **always** used regardless of Index Rate:
 
-| Index Rate | Effect on the voice | Best use case |
+| Index Rate | Effect on features | Suggested starting point for testing |
 | --- | --- | --- |
-| **`0.0` (Off)** | 100% `.pth` weights, 0% `.index`. | Cleanest pronunciation, lowest CPU load, best starting baseline for troubleshooting, live voice changers, and merged models. |
-| **`0.25 - 0.50`** | Adds subtle speaker texture while keeping your original pronunciation and pacing intact. | **Speaking**, **cross-language conversion** (e.g. English input into a Japanese/Italian model), or models trained on slightly noisy datasets. |
-| **`0.60 - 0.75`** | Strong speaker likeness and realism without overpowering your input audio. | **Recommended default** for clean singing and same-language voiceovers. |
-| **`0.85 - 1.00`** | Maximum retrieval; forces features as close as possible to the dataset frames. | Only for studio-clean, same-language datasets when you want maximum timbre accuracy. High risk of slurred words or dataset noise. |
+| **`0.0` (Off)** | `100%` original input features (`0%` FAISS retrieval); `.pth` still runs normally. | Useful diagnostic baseline without FAISS feature retrieval, lowest CPU load, and merged models. |
+| **`0.25 - 0.50`** | Light-to-moderate blend toward the index's acoustic feature vectors. | Starting range to test for speech or cross-language conversion. |
+| **`0.60 - 0.75`** | Stronger pull toward the index's feature vectors. | Starting range to test for clean, same-language singing when the index matches. |
+| **`0.85 - 1.00`** | Maximum retrieval weight; heavily replaces original features with index matches. | Test cautiously only on very clean matched datasets; higher risk of slurred consonants. |
 
 ---
 
@@ -61,7 +61,7 @@ The **Index Rate** slider (sometimes called *Search Feature Ratio* or *Retrieval
 
 Raising **Index Rate** toward `1.0` does **not** automatically make a voice better. Lower it to `0.2 - 0.4` (or `0`) whenever you notice:
 
-1. **Background hiss, crackle, or room echo:** Because `.index` pulls features directly from the original training recordings, any static, room reverb, or mic noise in the dataset gets injected back into your output.
+1. **Noisy or reverberant training datasets:** An `.index` stores extracted **feature vectors**, not raw audio recordings (it does not inject raw audio waves directly), but a noisy or reverberant dataset distorts those feature vectors, which can degrade conversion quality at high Index Rates.
 2. **Garbled words or a strange accent:** If you speak one language into a model trained on a different language, a high Index Rate tries to force foreign vowel/consonant habits onto your speech.
 3. **Blended / Merged voices:** Merging two `.pth` models in [Voice Blender](../ilaria-rvc/manage/voice-blender.md) does **not** create a new `.index`. Always test blended models at `Index Rate = 0` first.
 4. **Live Voice Changer stutters:** Searching a large FAISS index on every live audio chunk adds CPU work. Turning `Index Rate` down or to `0` reduces latency and CPU spikes.
