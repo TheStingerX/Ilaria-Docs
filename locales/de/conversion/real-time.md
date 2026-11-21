@@ -76,3 +76,16 @@ Beginnen Sie mit den App-Standardeinstellungen und ändern Sie jeweils eine Eins
 ## RVC Blue
 
 Echtzeit-Stimmkonvertierung unter Windows. [Installation und Einrichtung](../other-rvcs/rvc-blue/installation.md).
+## Geräte-Rollen und Audio-Backends
+
+| Begriff | Bedeutung |
+| --- | --- |
+| **Input Device** | Dein physisches Mikrofon für den Eingang. |
+| **Output Device** | Ziel der konvertierten Stimme (Wiedergabeseite des virtuellen Kabels für Discord/OBS/Spiele oder Kopfhörer). |
+| **Monitor Device** | Optionaler zweiter Ausgang zum Mithören per Kopfhörer. |
+| **Virtual Cable Input** *(Wiedergabe)* | Unter Windows-Wiedergabe (Line 1 / CABLE Input). Als **Output Device** wählen. |
+| **Virtual Cable Output** *(Aufnahme)* | Unter Windows-Aufnahme (Line 1 / CABLE Output). In Discord/OBS/Spielen als **Mikrofon** wählen. |
+
+- **USB-Mikrofone / XLR-Interfaces / WASAPI / ASIO:** Alles auf 48000 Hz stellen; **WASAPI Shared** für Kompatibilität, **WASAPI Exclusive** oder **ASIO** falls unterstützt.
+- **Discord, OBS & Spiele:** Krisp/Echounterdrückung in Discord bei abgeschnittenen Silben deaktivieren; Spiel-FPS begrenzen für GPU-Reserve.
+- **Rechenlatenz vs. Gesamtlatenz:** **GPU Delay** misst nur die GPU-Zeit pro Block; die **End-to-End-Latenz** umfasst Mikrofon, **Block Size**, virtuelles Kabel und Zielpuffer.

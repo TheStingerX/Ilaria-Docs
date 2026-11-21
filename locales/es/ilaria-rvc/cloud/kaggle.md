@@ -23,7 +23,7 @@ description: "Haga clic en Ejecutar todo en el editor. También puedes ejecutar 
 ## 2. Haga una copia editable y encienda la GPU
 
 1. Abra el [cuaderno publicado](https://www.kaggle.com/code/ilarialopez/ilaria-rvc). Inicie sesión si se le solicita. Utilice **Copiar y editar** o la acción de copia equivalente para abrir su propia versión editable.
-2. Si, en cambio, está comenzando desde GitHub, descargue el archivo `Ilaria-RVC-2.1-Kaggle.ipynb` sin formato, cree un cuaderno en Kaggle e importe el archivo a través del editor del cuaderno. Abra el cuaderno resultante en Kaggle en lugar de ejecutarlo en su propia máquina.
+2. Si, en cambio, está comenzando desde GitHub, descargue el archivo `Ilaria-RVC-Kaggle.ipynb` sin formato, cree un cuaderno en Kaggle e importe el archivo a través del editor del cuaderno. Abra el cuaderno resultante en Kaggle en lugar de ejecutarlo en su propia máquina.
 3. Abra la configuración de la sesión en el editor. Para **Acelerador**, seleccione una opción de **GPU** disponible. Si Kaggle solicita reiniciar la sesión después del cambio, acepte antes de agregar archivos o iniciar una ejecución.
 4. Habilite **Internet** en la misma configuración de sesión. El notebook necesita conectividad para descargar el código, dependencias y pesos, y luego abrir su enlace Gradio.
 5. Si alguna de las configuraciones no está disponible, lea la explicación que muestra Kaggle. Verifique la elegibilidad de su cuenta y la disponibilidad actual de la aceleradora. Vuelva a intentarlo cuando pueda habilitar ambas configuraciones.

@@ -21,7 +21,7 @@ description: "Click Run All in the editor. You can also run the four code cells 
 ## 2. Make an editable copy and turn on the GPU
 
 1. Open the [published notebook](https://www.kaggle.com/code/ilarialopez/ilaria-rvc). Sign in if prompted. Use **Copy & Edit** or the equivalent copy action to open your own editable version.
-2. If you are starting from GitHub instead, download the raw `Ilaria-RVC-2.1-Kaggle.ipynb` file, create a notebook in Kaggle and import the file through the notebook editor. Open the resulting notebook on Kaggle rather than running it on your own machine.
+2. If you are starting from GitHub instead, download the raw `Ilaria-RVC-Kaggle.ipynb` file from `notebooks/Ilaria-RVC-Kaggle.ipynb`, create a notebook in Kaggle and import the file through the notebook editor. Open the resulting notebook on Kaggle rather than running it on your own machine.
 3. Open the session settings in the editor. For **Accelerator**, select an available **GPU** option. If Kaggle asks to restart the session after the change, accept before adding files or starting a run.
 4. Enable **Internet** in the same session settings. The notebook needs connectivity to download the code, dependencies and weights, and then open its Gradio link.
 5. If either setting is unavailable, read the explanation shown by Kaggle. Check your account eligibility and current accelerator availability. Retry when you can enable both settings.

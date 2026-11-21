@@ -15,6 +15,15 @@ description: "Scarica la build NVIDIA supportata da Hugging Face. Estrai l'inter
 
 Scarica la build NVIDIA supportata da [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC). Estrai l'intero archivio in una cartella locale scrivibile ed esegui `RUN_ILARIA_RVC.bat` lì. Il programma di avvio e il runtime in bundle devono rimanere insieme. Se non si apre alcuna scheda del browser, prova `http://127.0.0.1:6969` sullo stesso PC.
 
+
+### Perché non dovresti aggiornare manualmente PyTorch
+
+Ilaria RVC include una combinazione testata e bloccata di **PyTorch (2.10.0)**, **CUDA (12.8 o 12.6)**, 	orchaudio, 	orchvision, aiss e dipendenze audio. **Non** eseguire manualmente pip install --upgrade torch:
+
+- Aggiornare solo PyTorch può rompere la compatibilità binaria con 	orchaudio, airseq, onnxruntime o estensioni C++/CUDA.
+- Versioni più recenti possono rimuovere il supporto a GPU meno recenti (Maxwell, Pascal, Volta) o introdurre errori UnpicklingError.
+- Attendi sempre un aggiornamento ufficiale di Ilaria RVC invece di modificare manualmente il runtime portatile.
+
 ## Prima del primo avvio
 
 Lo ZIP completo di Windows è di circa 5,00 GB. Lasciare spazio sia per l'archivio che per i file estratti. Estrailo in una nuova cartella locale in cui puoi scrivere file. Mantieni insieme il launcher, il runtime e le risorse. ContentVec e RMVPE sono inclusi. I codificatori opzionali sono disponibili in **Altro → Scarica incorporamenti**.

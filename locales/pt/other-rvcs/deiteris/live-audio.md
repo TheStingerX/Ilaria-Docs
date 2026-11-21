@@ -27,5 +27,5 @@ Usa sempre **auscultadores** durante a conversão ao vivo. Com colunas, a voz co
 
 ## 3. Correções comuns
 
-- **Latência alta ou engasgos robóticos**: desativa o **Agendamento de GPU acelerado por hardware (HAGS)** nas Definições gráficas do Windows e reinicia, fecha jogos/separadores pesados e sobe o Chunk um nível.
+- **Latência alta ou cortes robóticos**: fecha jogos/separadores pesados na GPU, sobe Chunk um nível e, se persistir, testa desativar **HAGS** (reinicia, compara antes/depois e reativa se não melhorar).
 - **Erro de PortAudio / dispositivo**: alinha todos os dispositivos de áudio para a mesma taxa de amostragem (`48000 Hz`) nas Definições de Som do Windows e fecha apps com controlo exclusivo do dispositivo.

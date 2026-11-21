@@ -77,8 +77,8 @@ Use the navigation to find setup, conversion, training, and troubleshooting guid
 
 ## Documentation at a glance
 
-- **Pages in total:** **93** pages (`92` guides + Home)
-- **Total pages across all 6 languages (`en`, `it`, `es`, `fr`, `de`, `pt`):** **558** pages (`93 x 6`)
+- **Pages in total:** **97** pages (`96` guides + Home)
+- **Total pages across all 6 languages (`en`, `it`, `es`, `fr`, `de`, `pt`):** **582** pages (`97 x 6`)
 
 ## A few fun facts about the site and Ilaria
 

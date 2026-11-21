@@ -19,7 +19,7 @@ Si votre ordinateur ne possède pas de GPU local compatible, vous pouvez exécut
 | --- | --- | --- | --- |
 | **Google Colab** | Offre payante requise pour les Web UI | Temporaire (par session) | Ngrok |
 | **Kaggle** | Quota GPU hebdomadaire gratuit (**T4 x2**) | Session + persistance optionnelle | Ngrok |
-| **Lightning.AI** | Crédits mensuels gratuits (75h T4 16Go / 31h L4 24Go / 15h L40 48Go) | Persistant (**Teamspace Drive**) | Port Viewer (recommandé), sélecteur de tunnel |
+| **Lightning.AI** | Par crédits (`1 crédit = $1 USD` par seconde ; Studio 4-CPU gratuit + crédits de départ ; voir [Tarifs](https://lightning.ai/pricing)) | Persistant (**Teamspace Drive**, 10 Go gratuits) | Port Viewer (recommandé), sélecteur de tunnel |
 
 ## 2. Configurer un câble audio virtuel (Discord, OBS, jeux)
 

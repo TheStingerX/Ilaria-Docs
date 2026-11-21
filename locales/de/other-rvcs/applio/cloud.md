@@ -19,7 +19,7 @@ Wenn dein Computer keine unterstützte lokale GPU hat, kannst du die **Applio We
 | --- | --- | --- | --- |
 | **Google Colab** | Bezahlter Tarif für Web-UIs nötig | Google-Drive-Sync | Gradio, Ngrok, LocalTunnel |
 | **Kaggle** | Kostenloses Wochenkontingent (**T4 x2**) | Sitzung + optionale Persistenz | Ngrok, Gradio + LocalTunnel, LocalTunnel, Horizon |
-| **Lightning.AI** | Kostenlose Monats-Credits (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistent (**Teamspace Drive**) | Gradio, Port Viewer (`6969`), Ngrok, Cloudflare, LocalTunnel, Horizon |
+| **Lightning.AI** | Credit-basiert (`1 Credit = $1 USD` pro Sekunde; kostenloses 4-CPU-Studio + Startguthaben; siehe [Preise](https://lightning.ai/pricing)) | Persistent (**Teamspace Drive**, 10 GB frei) | Gradio, Port Viewer (`6969`), Ngrok, Cloudflare, LocalTunnel, Horizon |
 
 ## 2. Option A: Google Colab Web-UI
 

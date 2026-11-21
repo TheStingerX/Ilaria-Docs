@@ -90,6 +90,24 @@ Redpanda-vc is an Applio fork whose realtime interface supports RVC, Beatrice, a
 3. Use the same pitch shift and turn off optional voice effects for the first comparison. Judge clear words, stable pitch, and natural pauses before adjusting the sound.
 4. For live use, run the game, call, or streaming app you normally use and record the routed output for at least a minute. Listen for gaps, hard cuts, and delayed audio before reducing the buffer.
 
+## Extended Platform, Format, License & Maintenance Matrix
+
+> **Claimed vs. Tested:** Only **Ilaria RVC** (verified on RTX 4070) and the documented workflows in this wiki have direct verification notes; capabilities for other apps below reflect their **project-documented** support as of November 2026.
+
+| App | OS | GPU / CPU Support | Formats | TTS | Status & License | Ease of Install |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ilaria RVC** | Windows (local), Linux (Cloud) | NVIDIA CUDA (`12.8` / `12.6` legacy) | `.pth`, `.index`, `.safetensors` (converter) | Yes (Kokoro / Edge) | **Active** (MIT / RVC-based) | Easy (Portable ZIP) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 `.pth`, `.index` | No | **Beta** (`2.0.0 Beta 3`) | Easy (GPU-specific ZIP) |
+| **Applio** | Windows, Linux, macOS (MPS) | NVIDIA, AMD (documented), Apple MPS, CPU | `.pth`, `.index`, `.onnx` (export) | Yes | **Active** (MIT) | Easy–Moderate (Installer / Python) |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML (AMD/Intel), MPS, CPU | `.pth`, `.onnx` | No | **Active / Maintained** (MIT) | Moderate (Edition-dependent) |
+| **Okada TG Developed Fork** | Windows, Linux, macOS (exp.) | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Active Fork** | Moderate (ZIP / Build) |
+| **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Active Fork** | Moderate (ZIP / Build) |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | No | **Upstream / Slow** (MIT) | Moderate (ZIP / Git) |
+| **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | No | **Active** | Easy (Portable ZIP) |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice on CPU) | RVC, Beatrice, Rectified Flow | No | **Active Fork** | Moderate |
+| **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archived** | Easy (Legacy ZIP) |
+| **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Discontinued** (Weights.gg shut down) | Broken / Legacy only |
+
 ## Replay
 
 [Official website](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers)

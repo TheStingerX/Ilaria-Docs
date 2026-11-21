@@ -15,6 +15,15 @@ Run Ilaria RVC in a browser with a GPU supplied by the cloud platform. Choose a 
 
 Prepare one short clean WAV and a compatible inference model. For training, keep the original dataset and a few separate test clips on your own computer. The notebook runs on a remote Linux machine.
 
+### Google Colab limits, compute units, and policies
+
+Before starting a long run, understand how [Google Colab](https://research.google.com/colaboratory/faq.html) manages resources:
+
+- **Free tier vs. Paid plans (Compute Units):** Colab's free tier offers GPUs when available, but runtime length, idle timeouts, and GPU type (such as T4) are dynamic and never guaranteed. Paid tiers (**Colab Pro**, **Pro+**, and **Pay As You Go**) use **compute units** consumed dynamically based on the GPU/TPU you select; when your compute unit balance runs out, the account reverts to free-tier limits.
+- **Disallowed activities & WebUI restrictions:** Google's [Disallowed Activities policy](https://research.google.com/colaboratory/faq.html#disallowed-activities) prohibits hosting files, serving public web applications unrelated to interactive computing, running remote proxies, bypassing safety/access limits, using multiple accounts to evade quotas, or creating deepfakes. While interactive Gradio notebooks are not blanket-banned in every scenario, running persistent public WebUI tunnels on the free tier frequently triggers runtime disconnections or policy warnings.
+- **Disconnections, saving, and privacy:** Colab can disconnect idle or long-running sessions and wipe local VM storage. Export your results (`EXPORT = True`) or sync important checkpoints to Google Drive regularly, and never upload confidential audio or credentials to public/shared notebooks.
+- **Alternatives:** If Colab disconnects or lacks GPU availability, use [Kaggle](kaggle.md) (free weekly GPU quota after phone verification) or [Lightning AI Studio](lightning-ai.md).
+
 ## Run on Google Colab
 
 1. Open in Colab and select a GPU runtime.

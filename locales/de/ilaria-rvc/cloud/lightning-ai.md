@@ -15,6 +15,14 @@ Bereite eine kurze, saubere WAV-Datei, ein passendes Inferenzmodell und bei Beda
 
 1. Erstelle ein GPU-Studio und öffne das hochgeladene Notebook in JupyterLab.
 2. Führe die Zellen 1 bis 4 aus, um GPU, Abhängigkeiten und Modellgewichte einzurichten und die Oberfläche zu starten.
+### Credits, Gratis-Tarif und GPU-Verfügbarkeit
+
+Lightning AI nutzt ein **Credit-System** (1 Credit =  USD pro Sekunde; siehe [Lightning AI Preise](https://lightning.ai/pricing)):
+
+- **Gratis-Tarif:** Enthält **ein kostenloses 4-CPU-Studio** (bis zu 4 Std. am Stück vor Neustart) und **10 GB freien Speicher**.
+- **Startguthaben vs. Bezahl-Tarife:** Neue Konten erhalten meist Start-Credits nach Verifizierung (keine monatlich erneuerten Gratis-GPU-Stunden). **Pro**-Tarife enthalten monatliche Credits.
+- **Guthaben & GPUs prüfen:** Prüfe dein Guthaben im Studio-Dashboard und richte die Umgebung zuerst im kostenlosen CPU-Studio ein.
+
 3. Öffne in **Port viewer** den angezeigten Port (Standard 7865) und halte ihn privat.
 
 ## Zellen überprüfen

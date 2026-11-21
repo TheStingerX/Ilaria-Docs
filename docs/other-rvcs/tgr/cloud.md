@@ -19,7 +19,7 @@ If your computer does not have a compatible NVIDIA, AMD, or Intel GPU, you can r
 | --- | --- | --- | --- |
 | **Google Colab** | Paid tier required for Web UIs | Temporary (per session) | Ngrok |
 | **Kaggle** | Free weekly GPU quota (**T4 x2**) | Session + optional persistence | Ngrok |
-| **Lightning.AI** | Free monthly credits (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistent (**Teamspace Drive**) | Port Viewer (recommended), Tunnel selector |
+| **Lightning.AI** | Credits-based (`1 credit = $1 USD`, per-second billing; free 4-CPU Studio + starter credits on new accounts; see [Pricing](https://lightning.ai/pricing)) | Persistent (**Teamspace Drive**, 10 GB free) | Port Viewer (recommended), Tunnel selector |
 
 ## 2. Set up a Virtual Audio Cable (for Discord, OBS, or games)
 

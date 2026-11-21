@@ -3,7 +3,7 @@ label: "Controlli e flusso di lavoro dell'addestramento"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "La versione 2.1.0 offre impostazioni a 32, 40 e 48 kHz con combinazioni disponibili determinate dal vocoder. HiFi-GAN e RefineGAN hanno vincoli diversi."
+description: "La versione 2.4.7 offre impostazioni a 32, 40 e 48 kHz con combinazioni disponibili determinate dal vocoder. HiFi-GAN e RefineGAN hanno vincoli diversi."
 ---
 # Controlli e flusso di lavoro dell'addestramento
 
@@ -28,7 +28,7 @@ description: "La versione 2.1.0 offre impostazioni a 32, 40 e 48 kHz con combina
 
 ## Architettura e prestazioni
 
-La versione 2.1.0 offre impostazioni a 32, 40 e 48 kHz con combinazioni disponibili determinate dal vocoder. HiFi-GAN e RefineGAN hanno vincoli diversi. Controllare la coppia compatibile prima della preelaborazione. La guida del passo controlla se le funzionalità F0 condizionano il modello. Configura i thread della CPU per la macchina e seleziona una GPU NVIDIA supportata per l'addestramento. FP32 è l'impostazione predefinita nell'interfaccia utente selezionata. FP16 può ridurre il carico di memoria sull'hardware supportato. La dimensione del batch controlla quanti campioni vengono elaborati insieme. Se la VRAM si esaurisce, ridurre il batch e disabilitare la memorizzazione nella cache opzionale.
+La versione 2.4.7 offre impostazioni a 32, 40 e 48 kHz con combinazioni disponibili determinate dal vocoder. HiFi-GAN e RefineGAN hanno vincoli diversi. Controllare la coppia compatibile prima della preelaborazione. La guida del passo controlla se le funzionalità F0 condizionano il modello. Configura i thread della CPU per la macchina e seleziona una GPU NVIDIA supportata per l'addestramento. FP32 è l'impostazione predefinita nell'interfaccia utente selezionata. FP16 può ridurre il carico di memoria sull'hardware supportato. La dimensione del batch controlla quanti campioni vengono elaborati insieme. Se la VRAM si esaurisce, ridurre il batch e disabilitare la memorizzazione nella cache opzionale.
 
 **File di addestramento silenzioso** controlla il numero di esempi silenziosi inclusi nell'app. Confronta le stesse pause trattenute quando valuti un cambiamento.
 

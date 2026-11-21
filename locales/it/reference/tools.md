@@ -97,3 +97,18 @@ Redpanda-vc è un fork di Applio la cui interfaccia in tempo reale supporta RVC,
 Dopo la chiusura di Weights.gg, Replay non riceve più supporto né aggiornamenti. La [pagina ufficiale di Replay](https://www.weights.com/replay) potrebbe essere rimossa in qualsiasi momento. Internet Archive conserva gli installer storici di Replay 8.7.0. L’uso di Replay è sconsigliato per nuove installazioni. Con la chiusura di Weights, è probabile che l'installer archiviato non riesca a scaricare i file necessari e che l'installazione non vada a buon fine.
 
 [Installer archiviati · Replay 8.7.0](https://archive.org/details/replay-8.7.0-installers)
+## Matrice estesa: Piattaforme, Formati, Licenze e Stato
+
+> **Dichiarato vs. Testato:** Solo **Ilaria RVC** (verificata su RTX 4070) ha note di verifica diretta; le capacità delle altre app riflettono la documentazione ufficiale dei rispettivi progetti a novembre 2026.
+
+| App | OS | GPU / CPU | Formati | TTS | Stato e Licenza | Facilità |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sì (Kokoro / Edge) | **Attivo** (MIT) | Facile (ZIP portatile) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | No | **Beta** (2.0.0 Beta 3) | Facile |
+| **Applio** | Windows, Linux, macOS | NVIDIA, AMD (doc.), MPS, CPU | .pth, .index, .onnx | Sì | **Attivo** (MIT) | Facile–Media |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | No | **Attivo** (MIT) | Media |
+| **Okada TGR / Deiteris** | Windows, Linux, macOS | NVIDIA CUDA, DirectML, CPU | .pth, .onnx | No | **Fork attivi** | Media |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | .pth, .index | No | **Upstream lento** (MIT) | Media |
+| **RVC Blue** | Windows | NVIDIA CUDA (12.8 / 11.8) | .pth, .index | No | **Attivo** | Facile |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
+| **RVC GUI / Replay** | Windows / Legacy | NVIDIA / Legacy | .pth | No | **Archiviato / Dismesso** | Legacy |

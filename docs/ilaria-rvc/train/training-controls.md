@@ -3,7 +3,7 @@ label: "Training controls and workflow"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints."
+description: "Ilaria RVC 2.4.7 training controls: 32, 40 and 48 kHz sample rates, vocoder constraints, FP32/FP16/BF16 precision, batch size, and FAISS indexing."
 ---
 # Training controls and workflow
 
@@ -28,7 +28,7 @@ description: "Version 2.1.0 offers 32, 40 and 48 kHz settings with available com
 
 ## Architecture and performance
 
-Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints. Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. FP32 is the default in the checked UI. FP16 can reduce memory pressure on supported hardware. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.
+Ilaria RVC **2.4.7** offers `32 kHz`, `40 kHz`, and `48 kHz` settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints (RefineGAN training in Ilaria RVC is supported specifically at `32 kHz` with RVC v2 and pitch guidance). Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. **FP32**, **FP16**, and **BF16** (on supported RTX 30/40/50 GPUs) let you balance speed and memory pressure. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.
 
 **Silent training files** controls how many silent examples the app includes. Compare the same held-out pauses when evaluating a change.
 

@@ -27,5 +27,5 @@ Trage bei der Live-Konvertierung immer **Kopfhörer**. Über Lautsprecher gelang
 
 ## 3. Häufige Korrekturen
 
-- **Hohe Latenz oder robotisches Stottern**: deaktiviere **Hardwarebeschleunigte GPU-Planung (HAGS)** in den Windows-Grafikeinstellungen und starte neu, schließe GPU-lastige Spiele/Tabs und erhöhe Chunk um eine Stufe.
+- **Hohe Latenz oder robotisches Stottern**: schließe GPU-lastige Spiele/Tabs, erhöhe Chunk um eine Stufe und teste bei Bedarf das Deaktivieren von **HAGS** (neu starten, vorher/nachher vergleichen und ohne Vorteil wieder aktivieren).
 - **PortAudio- / Gerätefehler**: stelle alle Audiogeräte in den Windows-Soundeinstellungen auf dieselbe Abtastrate (`48000 Hz`) und schließe Apps mit exklusivem Gerätezugriff.

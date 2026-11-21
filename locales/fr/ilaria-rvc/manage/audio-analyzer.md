@@ -1,24 +1,34 @@
 ---
-label: "Analyseur audio"
+label: "Audio Analyzer"
 icon: ":chart_with_upwards_trend:"
 order: 85
 permalink: /ilaria-rvc/audio-analyzer/
-description: "Ouvrez Autre → Analyseur audio. Ajoutez jusqu'à huit fichiers audio à comparer."
+description: "Ouvrez Other → Audio Analyzer dans Ilaria RVC pour comparer jusqu'à huit fichiers audio (forme d'onde, spectrogramme, spectre moyen, hauteur et niveaux)."
 ---
-# Analyseur audio
+# Audio Analyzer
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
-Ouvrez **Autre → Analyseur audio**. Ajoutez jusqu'à huit fichiers audio à comparer. Un ensemble utile contient l'entrée d'origine, une conversion de base et une ou deux variantes réalisées avec un paramètre modifié.
+Ouvrez **Other → Audio Analyzer** et ajoutez jusqu'à huit fichiers audio (original, conversion de référence et variantes avec un seul réglage modifié).
 
- | Vue | Question à répondre |
-| --- | --- |
- | Forme d'onde | Où se trouvent les pics forts, les passages calmes ou les jointures brusques ? |
- | Spectrogramme | Quelles fréquences sont présentes au moment où un artefact démarre ? |
- | Spectre moyen | Une version présente-t-elle un déséquilibre de fréquence persistant ? |
- | Estimation de la hauteur | Le F0 converti suit-il le contour prévu dans les passages voisés ? |
- | Tableaux de niveaux et de silence | Comparez-vous à des volumes similaires et utilisez la même définition du silence ? |
+## Ce que mesure chaque vue
 
-Choisissez une plage horaire et une vue de chaîne. Utilisez la même fenêtre FFT, la même échelle de fréquence et le même seuil de silence dans les comparaisons. Une fenêtre FFT plus grande améliore la résolution en fréquence et lisse les événements rapides dans le temps. Écoutez la région sélectionnée dans le lecteur avant de décider si une différence visible constitue un problème.
+| Vue | Ce qu'elle affiche directement | Question associée |
+| --- | --- | --- |
+| **Waveform** | Amplitude temporelle | Où sont les crêtes, l'écrêtage plat, les silences ou coupures ? |
+| **Spectrogram** | Énergie fréquentielle dans le temps | Quelles fréquences apparaissent au début d'un artefact ? |
+| **Average spectrum** | Équilibre spectral moyen | Une version a-t-elle un déséquilibre ou une résonance ? |
+| **Pitch estimation** | Contour F0 estimé | La hauteur suit-elle la ligne voulue sans saut d'octave ? |
+| **Level & silence tables** | Niveaux mesurés et silences | Comparez-vous à volume égal et même seuil de silence ? |
 
-Exportez CSV ou JSON pour les mesures, ou un ZIP avec des graphiques pour un examen ultérieur. Si vous souhaitez diagnostiquer un clip d'ensemble de données bruyant, vérifiez d'abord la source non traitée et comparez le même intervalle dans l'exportation. Lorsque les résultats de hauteur semblent étranges en termes de respirations ou de consonnes sourdes, écoutez l'audio avant d'interpréter l'estimation.
+> **Mesure directe vs interprétation :** Audio Analyzer mesure niveaux, silences, spectre et F0 estimé, mais **ne** juge pas seul la qualité vocale. **Écoutez toujours l'extrait** avant de conclure à un défaut.
+
+## Exemples pratiques
+
+- **Écrêtage (clipping) :** Crêtes plates en haut de la **Waveform** : baissez le gain d'entrée.
+- **Bruit de fond / souffle :** Bande horizontale constante dans le **Spectrogram** pendant les pauses : nettoyez avec UVR5 ou MVSep.
+- **Silences trop longs / volume faible ou fort :** Vérifiez les **Level & silence tables** pour comparer à volume égal.
+- **Réverbération & distorsion :** Traînées floues après les mots dans le **Spectrogram**.
+- **Consonnes sourdes (`s`, `f`, `t`) :** Une estimation F0 instable sur les souffles est normale.
+
+Exportez en **CSV**, **JSON** ou **ZIP avec graphiques** avec la même **FFT window**.
