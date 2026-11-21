@@ -12,7 +12,7 @@ Se il tuo computer non ha una GPU locale supportata, puoi eseguire **Deiteris w-
 | --- | --- | --- | --- |
 | **Google Colab** | Piano a pagamento richiesto per le Web UI | Temporanea (per sessione) | Ngrok |
 | **Kaggle** | Quota GPU settimanale gratuita (**T4 x2**) | Sessione + persistenza opzionale | Ngrok |
-| **Lightning.AI** | Crediti mensili gratuiti (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistente (**Teamspace Drive**) | Port Viewer (consigliato), selettore tunnel |
+| **Lightning.AI** | A crediti (`1 credito = $1 USD` al secondo; Studio 4-CPU gratuito + crediti iniziali; vedi [Prezzi](https://lightning.ai/pricing)) | Persistente (**Teamspace Drive**, 10 GB gratis) | Port Viewer (consigliato), selettore tunnel |
 
 ## 2. Configura un cavo audio virtuale (per Discord, OBS o giochi)
 

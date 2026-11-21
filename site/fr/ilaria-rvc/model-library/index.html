@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612432600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614447409">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Bibliothèque de modèles et fusion">
-    <meta name="description" content="Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble.">
+    <meta name="title" content="Bibliothèque et fusion de modèles">
+    <meta name="description" content="Importez, inspectez et gérez les fichiers RVC .pth, .index, .safetensors, embedders et fusions Voice Blender dans Ilaria RVC.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/model-library/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/model-library/">
-    <meta property="og:title" content="Bibliothèque de modèles et fusion">
+    <meta property="og:title" content="Bibliothèque et fusion de modèles">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/model-library/">
-    <meta name="twitter:title" content="Bibliothèque de modèles et fusion">
+    <meta name="twitter:title" content="Bibliothèque et fusion de modèles">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/model-library.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612432600" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614447409" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:description" content="Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble.">
+    <meta property="og:description" content="Importez, inspectez et gérez les fichiers RVC .pth, .index, .safetensors, embedders et fusions Voice Blender dans Ilaria RVC.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
-    <meta name="twitter:description" content="Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble.">
+    <meta name="twitter:description" content="Importez, inspectez et gérez les fichiers RVC .pth, .index, .safetensors, embedders et fusions Voice Blender dans Ilaria RVC.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/model-library/">
@@ -174,14 +174,95 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="model-library-and-merging" class="docs-anchor"></span><h1 id="bibliothèque-de-modèles-et-fusion">Bibliothèque de modèles et fusion</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ouvrez Autre et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble.</div>
+<span id="model-library-and-merging" class="docs-anchor"></span><h1 id="bibliothèque-et-fusion-de-modèles">Bibliothèque et fusion de modèles</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Importez, inspectez et gérez les fichiers RVC .pth, .index, .safetensors, embedders et fusions Voice Blender dans Ilaria RVC.</div>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)</a></p>
-<p><a href="../other-buttons/">Panneaux de Other</a></p>
-<span id="import-and-inspect" class="docs-anchor"></span><h2 id="importer-et-inspecter">Importer et inspecter</h2>
-<p>Ouvrez <strong>Autre</strong> et importez un modèle local pris en charge ou utilisez le contrôle de téléchargement. Gardez un point de contrôle et son propre index ensemble. Actualisez la liste d&#x27;inférence et confirmez la voix souhaitée avant de tester. Utilisez les <strong>informations sur le modèle</strong> pour inspecter la fréquence d&#x27;échantillonnage, l&#x27;architecture et la précision stockées dans le fichier.</p>
-<span id="merge-compatible-voices" class="docs-anchor"></span><h2 id="fusionner-les-voix-compatibles">Fusionner les voix compatibles</h2>
-<p>Choisissez deux points de contrôle d&#x27;inférence et exécutez d&#x27;abord la vérification de compatibilité. Utilisez le rapport de mélange pour définir le poids de chacun. Enregistrez sous un nouveau nom et testez le résultat avec la récupération désactivée. Un index existant appartient au modèle et aux fonctionnalités pour lesquels il a été créé.</p>
+<p><a href="../other-buttons/">Autres panneaux</a></p>
+<span id="format-compatibility-matrix" class="docs-anchor"></span><h2 id="matrice-de-compatibilité-des-formats">Matrice de compatibilité des formats</h2>
+<retype-table copy-text="| Fichier / Ressource | Usage | Opérations compatibles dans Ilaria RVC | Guide |
+| --- | --- | --- | --- |
+| **`.pth` d'inférence** | Conversion vocale | Inférence simple/lot, Voice Blender, Safetensors | [Fichiers `.pth`](../../start/pth-files.md) |
+| **Checkpoints (`G_*.pth` / `D_*.pth`)** | Reprise d'entraînement | Reprise RVC v2 uniquement (non utilisable en inférence) | [Procédure d'entraînement](../train/training-workflow.md) |
+| **Index (`added_*.index`)** | Récupération de timbre | Inférence (avec son `.pth` associé) | [Fichiers Index](../../start/indexes.md) |
+| **Modèles `.onnx`** | Moteurs temps réel ONNX | Pour clients externes DirectML (AMD/Intel) | [Fichiers `.onnx`](../../start/onnx-files.md) |
+| **`.safetensors`** | Stockage sûr des poids | Conversion via **Safetensors Converter** | [Convertisseur Safetensors](safetensors-converter.md) |
+| **Embedders** | Extraction de caractéristiques | Inférence et Entraînement | [Embedders](../../start/embedders.md) |
+| **Pretrained G/D** | Poids de base | Entraînement RVC uniquement | [Modèles pré-entraînés](../../start/pretrained.md) |
+| **Voice Blender** | Fusion de deux voix | Fusionne deux `.pth` d'inférence compatibles | [Voice Blender](voice-blender.md) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Fichier / Ressource</th>
+<th>Usage</th>
+<th>Opérations compatibles dans Ilaria RVC</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code translate="no" v-pre>.pth</code> d&#x27;inférence</strong></td>
+<td>Conversion vocale</td>
+<td>Inférence simple/lot, Voice Blender, Safetensors</td>
+<td><a href="../../pth/">Fichiers <code translate="no" v-pre>.pth</code></a></td>
+</tr>
+<tr>
+<td><strong>Checkpoints (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>)</strong></td>
+<td>Reprise d&#x27;entraînement</td>
+<td>Reprise RVC v2 uniquement (non utilisable en inférence)</td>
+<td><a href="../training-workflow/">Procédure d&#x27;entraînement</a></td>
+</tr>
+<tr>
+<td><strong>Index (<code translate="no" v-pre>added_*.index</code>)</strong></td>
+<td>Récupération de timbre</td>
+<td>Inférence (avec son <code translate="no" v-pre>.pth</code> associé)</td>
+<td><a href="../../indexes/">Fichiers Index</a></td>
+</tr>
+<tr>
+<td><strong>Modèles <code translate="no" v-pre>.onnx</code></strong></td>
+<td>Moteurs temps réel ONNX</td>
+<td>Pour clients externes DirectML (AMD/Intel)</td>
+<td><a href="../../onnx/">Fichiers <code translate="no" v-pre>.onnx</code></a></td>
+</tr>
+<tr>
+<td><strong><code translate="no" v-pre>.safetensors</code></strong></td>
+<td>Stockage sûr des poids</td>
+<td>Conversion via <strong>Safetensors Converter</strong></td>
+<td><a href="../safetensors-converter/">Convertisseur Safetensors</a></td>
+</tr>
+<tr>
+<td><strong>Embedders</strong></td>
+<td>Extraction de caractéristiques</td>
+<td>Inférence et Entraînement</td>
+<td><a href="../../embedders/">Embedders</a></td>
+</tr>
+<tr>
+<td><strong>Pretrained G/D</strong></td>
+<td>Poids de base</td>
+<td>Entraînement RVC uniquement</td>
+<td><a href="../../pretrained/">Modèles pré-entraînés</a></td>
+</tr>
+<tr>
+<td><strong>Voice Blender</strong></td>
+<td>Fusion de deux voix</td>
+<td>Fusionne deux <code translate="no" v-pre>.pth</code> d&#x27;inférence compatibles</td>
+<td><a href="../voice-blender/">Voice Blender</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<blockquote>
+<p><strong>Pourquoi un checkpoint n&#x27;est PAS un modèle d&#x27;inférence :</strong> <code translate="no" v-pre>G_*.pth</code> et <code translate="no" v-pre>D_*.pth</code> dans <code translate="no" v-pre>app/logs/</code> contiennent l&#x27;état d&#x27;entraînement ; utilisez toujours le <code translate="no" v-pre>.pth</code> d&#x27;inférence exporté (~40–110 Mo) dans <code translate="no" v-pre>models/</code>.</p>
+</blockquote>
+<span id="import-inspect-and-safety" class="docs-anchor"></span><h2 id="importer-inspecter-et-sécurité">Importer, inspecter et sécurité</h2>
+<ol>
+<li>Ouvrez <strong>Other → Import local models</strong> (ou téléchargez via URL).</li>
+<li>Gardez <code translate="no" v-pre>.pth</code> et <code translate="no" v-pre>added_*.index</code> ensemble, actualisez et vérifiez <strong>Model information</strong>.</li>
+<li><strong>Sécurité :</strong> Les <code translate="no" v-pre>.pth</code> utilisent <code translate="no" v-pre>pickle</code> : téléchargez uniquement depuis des sources sûres ou utilisez <code translate="no" v-pre>.safetensors</code>.</li>
+</ol>
+<span id="merge-compatible-voices" class="docs-anchor"></span><h2 id="fusionner-des-voix-compatibles">Fusionner des voix compatibles</h2>
+<p>Choisissez deux <code translate="no" v-pre>.pth</code> d&#x27;<strong>inférence</strong> compatibles dans <a href="../voice-blender/">Voice Blender</a> et testez avec <code translate="no" v-pre>Index Ratio = 0</code>.</p>
 
                 
                 <!-- Required only on API pages -->
@@ -216,7 +297,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -249,6 +330,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Bibliothèque de modèles et fusion", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/manage/model-library.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Bibliothèque et fusion de modèles", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/manage/model-library.md" }</script>
 </body>
 </html>

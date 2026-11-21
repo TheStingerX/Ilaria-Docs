@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612412882">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612412882" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -284,7 +284,7 @@
 <retype-table copy-text="| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
 | **La finestra nera si apre e si chiude subito** | Hai avviato il file dentro l'anteprima ZIP oppure Python ha dato errore subito all'avvio. | 1. Fai tasto destro sullo `.zip` ed estrai tutta la cartella prima.&lt;br&gt;2. In Ilaria RVC, avvia `RUN_ILARIA_RVC_LOGS.bat` invece del launcher normale così la finestra resta aperta e mostra l'errore. |
-| **Antivirus / Windows Defender elimina file `.bat`, `.exe` o `.dll`** | L'antivirus scambia per errore gli script portatili di IA per file sospetti. | Apri **Sicurezza di Windows → Protezione da virus e minacce → Cronologia protezione**, ripristina il file bloccato e aggiungi la cartella RVC (es. `C:\RVC`) alle **Esclusioni**. |
+| **Antivirus / Windows Defender segnala `.bat`, `.exe` o `.dll`** | I pacchetti AI portatili contengono launcher non firmati o binari Python/PyTorch che possono generare falsi positivi. | 1. **Non disattivare mai l'antivirus globalmente** e non aggiungere esclusioni su intere cartelle.&lt;br&gt;2. Verifica la fonte ufficiale (GitHub Releases / Hugging Face) e controlla hash SHA-256 o firma digitale.&lt;br&gt;3. Apri **Sicurezza di Windows → Protezione da virus e minacce → Cronologia protezione** (mantiene gli eventi per 14 giorni) per ispezionare il file esatto.&lt;br&gt;4. Se è un falso positivo su un download ufficiale, preferisci riscaricare/riestrarre dalla fonte verificata; se il file è sospetto o sconosciuto, **fermati subito** e chiedi supporto. |
 | `WinError 10048` / `Address already in use` / porta occupata | Un'altra copia di RVC o un'altra app sta già usando quella porta (`6969` o `7865`). | Chiudi tutte le finestre nere aperte (o termina `python.exe` da **Gestione attività**), poi avvia l'app una sola volta. |
 | `[WinError 3] Impossibile trovare il percorso specificato` / `[WinError 206]` | Windows si blocca se il percorso supera 260 caratteri o contiene spazi, accenti o simboli (`()`, `[]`). | Sposta app e file audio in una cartella corta come `C:\RVC\`. Rinomina cartelle e file `.wav` usando solo lettere, numeri e `_`. |
 | `[WinError 2] Impossibile trovare il file specificato` (caricando/salvando audio) | Manca `ffmpeg.exe` o `ffprobe.exe` (il programma che legge i file audio). | Controlla che `ffmpeg.exe` sia dentro la cartella dell'app (se Defender l'ha tolto, riestrai lo ZIP). Su installazioni Python manuali, installa FFmpeg e aggiungilo al `PATH` di Windows, poi riavvia il terminale. |
@@ -310,9 +310,9 @@
 <td>1. Fai tasto destro sullo <code translate="no" v-pre>.zip</code> ed estrai tutta la cartella prima.<br>2. In Ilaria RVC, avvia <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> invece del launcher normale così la finestra resta aperta e mostra l&#x27;errore.</td>
 </tr>
 <tr>
-<td><strong>Antivirus / Windows Defender elimina file <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code> o <code translate="no" v-pre>.dll</code></strong></td>
-<td>L&#x27;antivirus scambia per errore gli script portatili di IA per file sospetti.</td>
-<td>Apri <strong>Sicurezza di Windows → Protezione da virus e minacce → Cronologia protezione</strong>, ripristina il file bloccato e aggiungi la cartella RVC (es. <code translate="no" v-pre>C:\RVC</code>) alle <strong>Esclusioni</strong>.</td>
+<td><strong>Antivirus / Windows Defender segnala <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code> o <code translate="no" v-pre>.dll</code></strong></td>
+<td>I pacchetti AI portatili contengono launcher non firmati o binari Python/PyTorch che possono generare falsi positivi.</td>
+<td>1. <strong>Non disattivare mai l&#x27;antivirus globalmente</strong> e non aggiungere esclusioni su intere cartelle.<br>2. Verifica la fonte ufficiale (GitHub Releases / Hugging Face) e controlla hash SHA-256 o firma digitale.<br>3. Apri <strong>Sicurezza di Windows → Protezione da virus e minacce → Cronologia protezione</strong> (mantiene gli eventi per 14 giorni) per ispezionare il file esatto.<br>4. Se è un falso positivo su un download ufficiale, preferisci riscaricare/riestrarre dalla fonte verificata; se il file è sospetto o sconosciuto, <strong>fermati subito</strong> e chiedi supporto.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>WinError 10048</code> / <code translate="no" v-pre>Address already in use</code> / porta occupata</td>
@@ -367,7 +367,7 @@
 <retype-table copy-text="| Problema o Errore | Cosa significa (in parole semplici) | Come risolverlo |
 | --- | --- | --- |
 | **Tutto va lentissimo (usa la CPU invece della GPU)** | L'app non vede la scheda video, oppure hai scaricato una versione solo NVIDIA su una GPU AMD/Intel. | 1. Utenti NVIDIA: verifica che i driver siano installati e che non stia usando la grafica integrata.&lt;br&gt;2. Utenti AMD/Intel: le build CUDA standard non usano la tua GPU. Usa una versione **DirectML** (come YuneVoix, Deiteris DirectML o Mainline DirectML) oppure un notebook cloud. |
-| **Il PC scatta, la VRAM straborda nella RAM o la voce live diventa robotica (Windows 10/11)** | Un'impostazione di Windows chiamata **HAGS** (Pianificazione GPU con accelerazione hardware) ruba stabilità alla memoria video delle app IA. | Vai su **Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate**, imposta **Pianificazione GPU con accelerazione hardware** su **OFF** e **riavvia il PC**. |
+| **PC rallentato, VRAM piena o voce live a scatti (Windows 10/11)** | **HAGS** (Hardware-Accelerated GPU Scheduling) gestisce la coda memoria GPU: è sicuro nella maggior parte dei casi, ma su alcune configurazioni AI+giochi può creare contesa. | HAGS **non** è dannoso e non va spento su tutti i PC. Se hai scatti inspiegabili, prova a disattivarlo in **Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate**, riavvia e confronta prima/dopo; se non migliora, riattivalo. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (in conversione) | La memoria della scheda video è finita perché la canzone è troppo lunga o un gioco/browser sta usando VRAM. | Attiva **Split Audio** per brani lunghi, chiudi giochi e schede pesanti del browser (o disattiva l'accelerazione hardware del browser) e disattiva gli effetti audio extra. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (in training) | Il **Batch Size** del training è troppo alto per la tua memoria video. | Abbassa il **Batch Size** un passo alla volta (da `8` a `4`, `2` o `1`). Disattiva &quot;Cache dataset in GPU/VRAM&quot; e chiudi eventuali voice changer live prima di allenare. |
 | `Torch not compiled with CUDA enabled` / `no kernel image is available` | La versione di CUDA dell'app non corrisponde alla generazione della tua scheda NVIDIA (es. RTX 50 nuova vs GTX 10 vecchia). | Usa la build corretta: **Ilaria RVC** include **CUDA 12.8** per GTX 16 / RTX 20-50 e scarica in automatico **CUDA 12.6** (`runtime-cu126`) per schede Maxwell/Pascal/Volta. |
@@ -391,9 +391,9 @@
 <td>1. Utenti NVIDIA: verifica che i driver siano installati e che non stia usando la grafica integrata.<br>2. Utenti AMD/Intel: le build CUDA standard non usano la tua GPU. Usa una versione <strong>DirectML</strong> (come YuneVoix, Deiteris DirectML o Mainline DirectML) oppure un notebook cloud.</td>
 </tr>
 <tr>
-<td><strong>Il PC scatta, la VRAM straborda nella RAM o la voce live diventa robotica (Windows 10/11)</strong></td>
-<td>Un&#x27;impostazione di Windows chiamata <strong>HAGS</strong> (Pianificazione GPU con accelerazione hardware) ruba stabilità alla memoria video delle app IA.</td>
-<td>Vai su <strong>Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate</strong>, imposta <strong>Pianificazione GPU con accelerazione hardware</strong> su <strong>OFF</strong> e <strong>riavvia il PC</strong>.</td>
+<td><strong>PC rallentato, VRAM piena o voce live a scatti (Windows 10/11)</strong></td>
+<td><strong>HAGS</strong> (Hardware-Accelerated GPU Scheduling) gestisce la coda memoria GPU: è sicuro nella maggior parte dei casi, ma su alcune configurazioni AI+giochi può creare contesa.</td>
+<td>HAGS <strong>non</strong> è dannoso e non va spento su tutti i PC. Se hai scatti inspiegabili, prova a disattivarlo in <strong>Impostazioni Windows → Sistema → Schermo → Grafica → Impostazioni grafiche avanzate</strong>, riavvia e confronta prima/dopo; se non migliora, riattivalo.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>CUDA out of memory</code> / <code translate="no" v-pre>torch.cuda.OutOfMemoryError</code> (in conversione)</td>
@@ -574,7 +574,7 @@
 | --- | --- | --- |
 | **Su Discord o in gioco nessuno sente la voce cambiata** | L'altra app sta ancora ascoltando il microfono vero invece del cavo virtuale, oppure il voice changer non è avviato. | 1. Installa **VB-CABLE** (e riavvia il PC dopo l'installazione).&lt;br&gt;2. Nel voice changer, imposta **Input** = il tuo microfono fisico e **Output** = `CABLE Input (VB-Audio Virtual Cable)`.&lt;br&gt;3. Su **Discord / Gioco**, imposta **Dispositivo di input** = `CABLE Output (VB-Audio Virtual Cable)`. |
 | `PortAudioError` / `Invalid sample rate` / il dispositivo audio non si avvia | Microfono, cuffie e VB-CABLE su Windows hanno velocità diverse (`44100 Hz` vs `48000 Hz`), oppure un'altra app ha bloccato il dispositivo. | Apri il **Pannello Audio di Windows (`mmsys.cpl`)**, apri **Proprietà → Avanzate** per Microfono, Cuffie, `CABLE Input` e `CABLE Output`, imposta **tutti su 48000 Hz**, togli la spunta da **Consenti alle applicazioni di assumere il controllo esclusivo** e riavvia l'app. |
-| **Scatti, crepitii o ritardo enorme nella voce** | La GPU impiega più tempo a elaborare un blocco audio rispetto alla durata del blocco stesso. | 1. Aumenta leggermente il **Chunk Size** (più stabilità, poco più ritardo).&lt;br&gt;2. Usa **RMVPE** o **FCPE** per il pitch (mai `crepe` full in live).&lt;br&gt;3. Disattiva **HAGS** su Windows.&lt;br&gt;4. Limita gli FPS dei giochi o chiudi app pesanti sulla GPU per lasciare margine al voice changer. |
+| **Scatti, scoppiettii o forte ritardo voce** | La GPU impiega più tempo della durata del blocco audio per elaborarlo. | 1. Alza leggermente **Chunk Size**.&lt;br&gt;2. Usa **RMVPE** o **FCPE** (mai `crepe` full dal vivo).&lt;br&gt;3. Limita gli FPS dei giochi o chiudi app GPU pesanti.&lt;br&gt;4. Facoltativamente prova a disattivare **HAGS** (confronto prima/dopo). |
 | **Eco o ti senti doppio in cuffia** | Stai usando le casse (il microfono le riprende) oppure due programmi stanno riproducendo la tua voce insieme. | Usa sempre le **cuffie**. Controlla che **&quot;Ascolta il dispositivo&quot;** su Windows sia **SPENTO** nelle impostazioni di Registrazione, e attiva il Monitor solo dentro il voice changer se ti serve davvero sentirti. |
 | **Discord taglia i respiri o la fine delle parole** | Il filtro rumore di Discord scambia le parti finali della voce convertita per rumore di fondo. | Nelle impostazioni **Voce e video** di Discord, disattiva **Soppressione rumore Krisp**, disattiva **Cancellazione eco** e disattiva **Determina automaticamente la sensibilità di input** (regolando la barra a mano). Abbassa anche la soglia VAD / Noise Gate nel voice changer. |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -598,9 +598,9 @@
 <td>Apri il <strong>Pannello Audio di Windows (<code translate="no" v-pre>mmsys.cpl</code>)</strong>, apri <strong>Proprietà → Avanzate</strong> per Microfono, Cuffie, <code translate="no" v-pre>CABLE Input</code> e <code translate="no" v-pre>CABLE Output</code>, imposta <strong>tutti su 48000 Hz</strong>, togli la spunta da <strong>Consenti alle applicazioni di assumere il controllo esclusivo</strong> e riavvia l&#x27;app.</td>
 </tr>
 <tr>
-<td><strong>Scatti, crepitii o ritardo enorme nella voce</strong></td>
-<td>La GPU impiega più tempo a elaborare un blocco audio rispetto alla durata del blocco stesso.</td>
-<td>1. Aumenta leggermente il <strong>Chunk Size</strong> (più stabilità, poco più ritardo).<br>2. Usa <strong>RMVPE</strong> o <strong>FCPE</strong> per il pitch (mai <code translate="no" v-pre>crepe</code> full in live).<br>3. Disattiva <strong>HAGS</strong> su Windows.<br>4. Limita gli FPS dei giochi o chiudi app pesanti sulla GPU per lasciare margine al voice changer.</td>
+<td><strong>Scatti, scoppiettii o forte ritardo voce</strong></td>
+<td>La GPU impiega più tempo della durata del blocco audio per elaborarlo.</td>
+<td>1. Alza leggermente <strong>Chunk Size</strong>.<br>2. Usa <strong>RMVPE</strong> o <strong>FCPE</strong> (mai <code translate="no" v-pre>crepe</code> full dal vivo).<br>3. Limita gli FPS dei giochi o chiudi app GPU pesanti.<br>4. Facoltativamente prova a disattivare <strong>HAGS</strong> (confronto prima/dopo).</td>
 </tr>
 <tr>
 <td><strong>Eco o ti senti doppio in cuffia</strong></td>
@@ -700,7 +700,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

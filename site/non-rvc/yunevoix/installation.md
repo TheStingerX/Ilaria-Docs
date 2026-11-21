@@ -28,7 +28,7 @@ The ZIP archive is encrypted with **AES-256**, which Windows Explorer cannot ope
 
 1. Open the extracted folder and run `YuneVoix.exe`.
 2. Because the executable is not code-signed yet, Windows SmartScreen may show *"Windows protected your PC"*. Click **More info → Run anyway**.
-   - If your antivirus quarantines any file, add the `YuneVoix` folder as an exclusion.
+   - If your antivirus flags any file, verify the archive came from the official YuneVoix release, inspect **Windows Security → Protection history**, and avoid disabling antivirus globally or adding broad folder exclusions unless you have verified the exact file.
 3. **Wait for first-time engine preparation**:
    - **NVIDIA**: a few minutes on the very first start.
    - **AMD**: uses **DirectML** on the dedicated card by default as of v0.7.1. Only if you switch `Settings → General → "AMD graphics engine"` to experimental **MIGraphX** can first-time preparation take **10–30 minutes** (Windows may also fetch AMD MIGraphX via Windows Update).

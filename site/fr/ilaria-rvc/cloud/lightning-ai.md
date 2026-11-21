@@ -8,6 +8,14 @@ Préparez un WAV court et propre, un modèle d’inférence compatible et, pour 
 
 1. Créez un Studio GPU et ouvrez le notebook importé dans JupyterLab.
 2. Exécutez les cellules 1 à 4 dans l’ordre pour vérifier le GPU, installer les dépendances, télécharger les poids et lancer l’interface.
+### Crédits, offre gratuite et disponibilité GPU
+
+Lightning AI fonctionne par **crédits** (1 crédit =  USD à la seconde ; voir [Tarifs Lightning AI](https://lightning.ai/pricing)) :
+
+- **Offre gratuite :** Inclut **un Studio 4-CPU gratuit** (jusqu'à 4h continues avant redémarrage) et **10 Go de stockage gratuits**.
+- **Crédits de départ vs offres payantes :** Les nouveaux comptes reçoivent des crédits de départ après vérification (pas d'heures GPU gratuites renouvelées chaque mois). Les plans **Pro** incluent des crédits mensuels.
+- **Vérifier le solde et les GPU :** Consultez votre solde dans le tableau de bord du Studio et préparez l'environnement sur le Studio CPU gratuit avant d'activer un GPU.
+
 3. Ouvrez le port affiché dans **Port viewer** (7865 par défaut) et gardez-le privé.
 
 ## Vérifier les cellules

@@ -20,5 +20,5 @@ Usa siempre **auriculares** durante la conversión en vivo. Con altavoces, la vo
 
 ## 3. Soluciones frecuentes
 
-- **Latencia alta o cortes robóticos**: desactiva la **Programación de GPU acelerada por hardware (HAGS)** en Configuración de gráficos de Windows y reinicia, cierra juegos/pestañas pesadas y sube el Chunk un paso.
+- **Latencia alta o cortes robóticos**: cierra juegos o pestañas pesadas en GPU, sube Chunk un paso y, si persiste, prueba desactivar **Hardware-accelerated GPU Scheduling (HAGS)** (reinicia, compara antes/después y reactívalo si no mejora).
 - **Error de PortAudio / dispositivo**: iguala todos los dispositivos de audio al mismo sample rate (`48000 Hz`) en Sonido de Windows y cierra apps que usen modo exclusivo.

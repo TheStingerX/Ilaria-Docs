@@ -8,6 +8,14 @@ Run Ilaria RVC in a browser with a GPU supplied by the cloud platform. Choose a 
 
 Prepare one short clean WAV and a compatible inference model. For training, keep the original dataset and a few separate test clips on your own computer. The notebook runs on a remote Linux machine.
 
+### Credits, free tier, and GPU availability
+
+Lightning AI uses a **credits-based billing model** (`1 credit = $1 USD`, billed per second of GPU compute; see [Lightning AI Pricing](https://lightning.ai/pricing)):
+
+- **Free tier:** Includes **one free 4-CPU Studio** (up to 4 continuous hours before restart) and **10 GB of free storage** (storage above 10 GB is billed monthly).
+- **Starter credits vs. paid plans:** New accounts typically receive initial starter credits after sign-up/verification (not renewing monthly free GPU hours). Paid **Pro** subscriptions provide a monthly credit allotment.
+- **Check your balance and GPUs:** Open your Studio dashboard / billing panel to check your remaining credit balance before starting a GPU instance, and remember that specific GPU types (such as T4, L4, or L40) are subject to regional/account availability. Do dependency setup on the free CPU Studio first, then switch to GPU only when ready to run inference or training.
+
 ## Run on Lightning AI Studio
 
 1. Create a GPU Studio, upload the notebook and open it in JupyterLab.

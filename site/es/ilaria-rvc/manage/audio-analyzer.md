@@ -1,17 +1,27 @@
-# Analizador de audio
+# Audio Analyzer
 
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
-Abra **Otro → Analizador de audio**. Agregue hasta ocho archivos de audio para comparar. Un conjunto útil contiene la entrada original, una conversión de referencia y una o dos variantes realizadas con una configuración modificada.
+Abre **Other → Audio Analyzer**. Añade hasta ocho archivos de audio para comparar (original, conversión base y variantes con un solo ajuste cambiado).
 
- | Ver | Pregunta a responder |
-| --- | --- |
- | Forma de onda | ¿Dónde hay picos fuertes, pasajes silenciosos o uniones abruptas? |
- | Espectrograma | ¿Qué frecuencias están presentes en el momento en que comienza un artefacto? |
- | Espectro promedio | ¿Alguna versión tiene un desequilibrio de frecuencia persistente? |
- | Estimación del tono | ¿El F0 convertido sigue el contorno previsto en los pasajes sonoros? |
- | Tablas de nivel y silencio | ¿Estás comparando volúmenes similares y usando la misma definición de silencio? |
+## Qué mide cada vista
 
-Elija un rango de tiempo y vista de canal. Utilice la misma ventana FFT, escala de frecuencia y umbral de silencio en las comparaciones. Una ventana FFT más grande mejora la resolución de frecuencia y suaviza los eventos rápidos en el tiempo. Escuche la región seleccionada en el reproductor antes de decidir si una diferencia visible es un problema.
+| Vista | Qué muestra directamente | Qué ayuda a responder |
+| --- | --- | --- |
+| **Waveform** | Amplitud en el tiempo | ¿Dónde hay picos, clipping plano, silencios o cortes bruscos? |
+| **Spectrogram** | Energía frecuencial en el tiempo | ¿Qué frecuencias aparecen justo cuando empieza un artefacto? |
+| **Average spectrum** | Balance frecuencial medio | ¿Una versión tiene más brillo o resonancias persistentes? |
+| **Pitch estimation** | Contorno F0 estimado | ¿El tono sigue la melodía sin saltos de octava? |
+| **Level & silence tables** | Niveles medidos y silencios | ¿Comparas con volumen similar y el mismo umbral de silencio? |
 
-Exporte CSV o JSON para mediciones, o un ZIP con gráficos para su posterior revisión. Si desea diagnosticar un clip de conjunto de datos ruidoso, verifique primero la fuente sin procesar y compare el mismo intervalo en la exportación. Cuando los resultados del tono parezcan extraños en respiraciones o consonantes sordas, escuche el audio antes de interpretar la estimación.
+> **Qué mide vs. qué sugiere:** Audio Analyzer mide niveles, silencios, espectro y F0 estimado, pero **no** diagnostica por sí solo la calidad tímbrica. **Escucha siempre la región seleccionada** antes de asumir un fallo.
+
+## Ejemplos prácticos
+
+- **Clipping:** Picos planos en el límite de la **Waveform**; baja la ganancia antes de entrenar o convertir.
+- **Ruido de fondo:** Banda horizontal constante en el **Spectrogram** durante las pausas; limpia con UVR5 o MVSep.
+- **Silencios largos:** Recorta pausas largas en los datasets.
+- **Distorsión y reverberación:** Colas difusas tras cada palabra en el **Spectrogram** indican eco de sala.
+- **Consonantes sordas:** Si el F0 salta en respiraciones o `s`/`f`/`t`, escucha primero: esos sonidos no tienen tono estable.
+
+Exporta **CSV**, **JSON** o un **ZIP con gráficos** usando siempre la misma **FFT window** y escala.

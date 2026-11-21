@@ -96,3 +96,13 @@ No Ilaria RVC, versões recentes usam a biblioteca de modelos para exportações
  | Um modelo utilizável não possui índice | Verifique se a geração do índice foi ignorada ou falhou. Exporte e teste o ponto de verificação de forma independente e, em seguida, crie o seu índice a partir da experiência correspondente, se necessário. |
 
 Mantenha a primeira mensagem de falha e a configuração associada à execução. Para mais verificações, consulte [Solução de problemas](../reference/troubleshooting.md).
+## Perfis indicativos de treino (adaptar a dados e hardware)
+
+- **Beginner Training:** RVC **v2** · **40 kHz** (32 kHz para RefineGAN) · mvpe · contentvec · **Batch Size 4–8** · **Epochs 200** (guardar a cada 25–50) · **FP32** (ou **BF16** em RTX 30/40/50) · GPU Caching **OFF** · Workers 2.
+- **Intermediate Training:** RVC **v2** · **40/48 kHz** · mvpe · **Batch Size 8–12** · **Epochs 250–350** · **BF16** / **FP16** · Workers 4, Prefetch 4–8 · Índice **FAISS Auto**.
+- **Advanced Training & Optimization:** Datasets curados, 12–24 GB+ VRAM · **Total Steps** · **Batch Size 12–16+** · **GPU Caching ON** (se couber na VRAM) · **Fused AdamW ON** · **Training Queue** + **TensorBoard** + [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
+
+## Detetar Underfitting vs. Overfitting de ouvido
+
+1. **Underfitting:** Ainda soa demasiado à voz original → continua a partir de G_*.pth/D_*.pth.
+2. **Overfitting:** Soa metálico em frases novas ou copia ruído do dataset → recua 50–100 épocas.

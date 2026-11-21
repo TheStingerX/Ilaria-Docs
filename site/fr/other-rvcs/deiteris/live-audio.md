@@ -20,5 +20,5 @@ Portez toujours un **casque** en conversion en direct. Avec des haut-parleurs, l
 
 ## 3. Correctifs fréquents
 
-- **Forte latence ou saccades robotiques** : désactivez la **Planification GPU à accélération matérielle (HAGS)** dans les paramètres graphiques de Windows et redémarrez, fermez les jeux/onglets lourds et montez Chunk d'un cran.
+- **Latence élevée ou saccades robotiques** : fermez les jeux/onglets lourds sur le GPU, montez Chunk d'un cran et testez si besoin la désactivation de **HAGS** (redémarrez, comparez avant/après et réactivez si inchangé).
 - **Erreur PortAudio / périphérique** : alignez tous vos périphériques audio sur la même fréquence (`48000 Hz`) dans les paramètres Son Windows et fermez les applis en mode exclusif.

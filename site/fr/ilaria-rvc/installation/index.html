@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612432600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614447409">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612432600" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614447409" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -219,6 +219,13 @@
 </div>
 </retype-table>
 <p>Si vous disposez de plusieurs GPU, lisez le journal du lanceur pour voir quel runtime a réellement démarré. Le chemin CUDA 12.6 décrit ci-dessus s&#x27;applique lorsque tous les GPU NVIDIA du PC proviennent de familles plus anciennes.</p>
+<span id="why-you-should-not-manually-upgrade-pytorch" class="docs-anchor"></span><h3 id="pourquoi-ne-pas-mettre-à-jour-pytorch-manuellement">Pourquoi ne pas mettre à jour PyTorch manuellement</h3>
+<p>Ilaria RVC embarque une combinaison testée de <strong>PyTorch (2.10.0)</strong>, <strong>CUDA (12.8 ou 12.6)</strong>, 	orchaudio, 	orchvision, aiss et dépendances audio. N&#x27;exécutez <strong>pas</strong> pip install --upgrade torch manuellement :</p>
+<ul>
+<li>Mettre à jour PyTorch seul peut casser 	orchaudio, airseq, onnxruntime ou des extensions C++/CUDA.</li>
+<li>Des versions plus récentes peuvent supprimer des architectures plus anciennes (Maxwell, Pascal, Volta) ou provoquer des UnpicklingError.</li>
+<li>Attendez toujours une mise à jour officielle d&#x27;Ilaria RVC.</li>
+</ul>
 <span id="check-that-the-app-started-correctly" class="docs-anchor"></span><h2 id="vérifiez-que-lapplication-a-démarré-correctement">Vérifiez que l&#x27;application a démarré correctement</h2>
 <ol>
 <li>Exécutez <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code> à partir du dossier extrait. Attendez que l&#x27;interface s&#x27;ouvre. Si l&#x27;ancien runtime est en cours de téléchargement, vérifiez <code translate="no" v-pre>cu126-runtime-install.log</code> pour la progression.</li>
@@ -266,7 +273,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

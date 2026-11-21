@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612412882">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612412882" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -182,6 +182,16 @@
 <ol>
 <li>Apri il notebook in Colab e seleziona un runtime con GPU.</li>
 <li>Esegui le celle da 1 a 4 nell’ordine per verificare la GPU, installare le dipendenze, scaricare i pesi e avviare la Web UI.</li>
+</ol>
+<span id="google-colab-limits-compute-units-and-policies" class="docs-anchor"></span><h3 id="limiti-compute-unit-e-regole-di-google-colab">Limiti, compute unit e regole di Google Colab</h3>
+<p>Prima di avviare sessioni lunghe, verifica come <a href="https://research.google.com/colaboratory/faq.html">Google Colab</a> gestisce le risorse:</p>
+<ul>
+<li><strong>Piano gratuito vs. piani a pagamento (Compute Units):</strong> Il piano gratuito offre GPU quando disponibili, ma durata, timeout e modello di GPU (es. T4) sono dinamici e mai garantiti. I piani <strong>Pro / Pro+ / Pay As You Go</strong> usano <strong>compute unit</strong> consumate in base alla GPU; esaurite le unità, si torna ai limiti gratuiti.</li>
+<li><strong>Attività non consentite e WebUI:</strong> Le <a href="https://research.google.com/colaboratory/faq.html#disallowed-activities">norme di Colab</a> vietano web hosting pubblico, proxy remoti, aggiramento limiti e deepfake. L&#x27;uso interattivo di Gradio non è vietato in assoluto, ma tunnel WebUI persistenti sul piano gratuito provocano spesso disconnessioni o avvisi.</li>
+<li><strong>Disconnessioni, salvataggio e privacy:</strong> Colab può disconnettere sessioni inattive e azzerare la VM: esporta (EXPORT = True) o salva su Google Drive e non caricare audio riservati su notebook condivisi.</li>
+<li><strong>Alternative:</strong> <a href="../kaggle/">Kaggle</a> o <a href="../lightning-ai/">Lightning AI Studio</a>.</li>
+</ul>
+<ol start="3">
 <li>Apri la vista incorporata nella cella di avvio e lascia collegato il runtime.</li>
 </ol>
 <span id="run-on-google-colab" class="docs-anchor"></span><h2 id="controlla-ogni-cella-prima-di-proseguire">Controlla ogni cella prima di proseguire</h2>
@@ -306,7 +316,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

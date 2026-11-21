@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612442521">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614457516">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612442521" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614457516" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -182,6 +182,16 @@
 <ol>
 <li>Öffne das Notebook in Colab mit einer GPU-Laufzeit.</li>
 <li>Führe die Zellen 1 bis 4 aus, um GPU, Abhängigkeiten und Modellgewichte einzurichten und die Oberfläche zu starten.</li>
+</ol>
+<span id="google-colab-limits-compute-units-and-policies" class="docs-anchor"></span><h3 id="limits-compute-units-und-richtlinien-von-google-colab">Limits, Compute Units und Richtlinien von Google Colab</h3>
+<p>Prüfe vor langen Läufen, wie <a href="https://research.google.com/colaboratory/faq.html">Google Colab</a> Ressourcen verwaltet:</p>
+<ul>
+<li><strong>Gratis-Tarif vs. Bezahl-Tarife (Compute Units):</strong> Der Gratis-Tarif bietet GPUs nach Verfügbarkeit ohne feste Laufzeitgarantie. <strong>Pro / Pro+ / Pay As You Go</strong> verbrauchen <strong>Compute Units</strong> je nach GPU.</li>
+<li><strong>Unzulässige Aktivitäten &amp; WebUI:</strong> Die <a href="https://research.google.com/colaboratory/faq.html#disallowed-activities">Colab-Richtlinie</a> verbietet öffentliches Web-Hosting, Remote-Proxies, Limit-Umgehung und Deepfakes. Interaktives Gradio ist nicht pauschal verboten, aber dauerhafte WebUI-Tunnel im Gratis-Tarif führen oft zu Abbrüchen.</li>
+<li><strong>Abbrüche, Speichern &amp; Datenschutz:</strong> Exportiere regelmäßig (EXPORT = True) oder sichere auf Google Drive und lade keine vertraulichen Audios in geteilte Notebooks.</li>
+<li><strong>Alternativen:</strong> <a href="../kaggle/">Kaggle</a> oder <a href="../lightning-ai/">Lightning AI Studio</a>.</li>
+</ul>
+<ol start="3">
 <li>Öffne die eingebettete Ansicht und halte die Laufzeit verbunden.</li>
 </ol>
 <span id="run-on-google-colab" class="docs-anchor"></span><h2 id="zellen-überprüfen">Zellen überprüfen</h2>
@@ -306,7 +316,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

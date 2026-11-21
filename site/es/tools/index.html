@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612422780">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614437388">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612422780" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614437388" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612422780" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614437388" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612422780" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614437388" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -383,10 +383,94 @@
 <li>Utilice el mismo cambio de tono y desactive los efectos de voz opcionales para la primera comparación. Juzgue palabras claras, tono estable y pausas naturales antes de ajustar el sonido.</li>
 <li>Para uso en vivo, ejecute la aplicación de juegos, llamadas o transmisión que usa normalmente y grabe la salida enrutada durante al menos un minuto. Escuche espacios, cortes bruscos y audio retrasado antes de reducir el búfer.</li>
 </ol>
-<h2 id="replay">Replay</h2>
+<span id="extended-platform-format-license--maintenance-matrix" class="docs-anchor"></span><h2 id="replay">Replay</h2>
 <p><a href="https://www.weights.com/replay">Sitio oficial</a> · <a href="https://archive.org/details/replay-8.7.0-installers">Internet Archive</a></p>
 <p>Tras el cierre de Weights.gg, Replay dejó de recibir soporte y actualizaciones. La <a href="https://www.weights.com/replay">página oficial de Replay</a> podría desaparecer en cualquier momento. Internet Archive conserva los instaladores de Replay 8.7.0. Se desaconseja usar Replay en instalaciones nuevas. Tras el cierre de Weights, es probable que el instalador archivado no pueda descargar los archivos necesarios y que la instalación quede incompleta.</p>
 <p><a href="https://archive.org/details/replay-8.7.0-installers">Instaladores archivados · Replay 8.7.0</a></p>
+<span id="replay" class="docs-anchor"></span><h2 id="matriz-ampliada-plataformas-formatos-licencias-y-estado">Matriz ampliada: Plataformas, Formatos, Licencias y Estado</h2>
+<blockquote>
+<p><strong>Declarado vs. Probado:</strong> Solo <strong>Ilaria RVC</strong> (probada en RTX 4070) cuenta con verificación directa; el resto refleja la documentación oficial de cada proyecto a noviembre de 2026.</p>
+</blockquote>
+<retype-table copy-text="| App | SO | GPU / CPU | Formatos | TTS | Estado y Licencia | Facilidad |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sí | **Activo** (MIT) | Fácil |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | No | **Beta** (2.0.0 Beta 3) | Fácil |
+| **Applio** | Windows, Linux, macOS | NVIDIA, AMD, MPS, CPU | .pth, .index, .onnx | Sí | **Activo** (MIT) | Fácil–Media |
+| **w-okada / TGR / Deiteris** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | No | **Activos** (MIT/Forks) | Media |
+| **RVC WebUI / RVC Blue / Redpanda-vc** | Windows, Linux | NVIDIA CUDA (DirectML/CPU var.) | .pth, .index | No | **Activos / Upstream** | Fácil–Media |
+| **RVC GUI / Replay** | Windows / Legacy | Legacy | .pth | No | **Archivado / Descontinuado** | Legacy |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>App</th>
+<th>SO</th>
+<th>GPU / CPU</th>
+<th>Formatos</th>
+<th>TTS</th>
+<th>Estado y Licencia</th>
+<th>Facilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ilaria RVC</strong></td>
+<td>Windows, Linux (Cloud)</td>
+<td>NVIDIA CUDA (12.8 / 12.6)</td>
+<td>.pth, .index, .safetensors</td>
+<td>Sí</td>
+<td><strong>Activo</strong> (MIT)</td>
+<td>Fácil</td>
+</tr>
+<tr>
+<td><strong>Vonovox</strong></td>
+<td>Windows</td>
+<td>NVIDIA CUDA</td>
+<td>RVC v2 .pth, .index</td>
+<td>No</td>
+<td><strong>Beta</strong> (2.0.0 Beta 3)</td>
+<td>Fácil</td>
+</tr>
+<tr>
+<td><strong>Applio</strong></td>
+<td>Windows, Linux, macOS</td>
+<td>NVIDIA, AMD, MPS, CPU</td>
+<td>.pth, .index, .onnx</td>
+<td>Sí</td>
+<td><strong>Activo</strong> (MIT)</td>
+<td>Fácil–Media</td>
+</tr>
+<tr>
+<td><strong>w-okada / TGR / Deiteris</strong></td>
+<td>Windows, macOS, Linux</td>
+<td>NVIDIA, DirectML, MPS, CPU</td>
+<td>.pth, .onnx</td>
+<td>No</td>
+<td><strong>Activos</strong> (MIT/Forks)</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>RVC WebUI / RVC Blue / Redpanda-vc</strong></td>
+<td>Windows, Linux</td>
+<td>NVIDIA CUDA (DirectML/CPU var.)</td>
+<td>.pth, .index</td>
+<td>No</td>
+<td><strong>Activos / Upstream</strong></td>
+<td>Fácil–Media</td>
+</tr>
+<tr>
+<td><strong>RVC GUI / Replay</strong></td>
+<td>Windows / Legacy</td>
+<td>Legacy</td>
+<td>.pth</td>
+<td>No</td>
+<td><strong>Archivado / Descontinuado</strong></td>
+<td>Legacy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 
                 
                 <!-- Required only on API pages -->
@@ -421,7 +505,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

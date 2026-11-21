@@ -8,6 +8,15 @@ Préparez un WAV court et propre, un modèle d’inférence compatible et, pour 
 
 1. Ouvrez le notebook dans Colab avec un environnement GPU.
 2. Exécutez les cellules 1 à 4 dans l’ordre pour vérifier le GPU, installer les dépendances, télécharger les poids et lancer l’interface.
+### Limites, compute units et règles de Google Colab
+
+Avant une longue session, vérifiez comment [Google Colab](https://research.google.com/colaboratory/faq.html) gère les ressources :
+
+- **Offre gratuite vs offres payantes (Compute Units) :** L'offre gratuite fournit un GPU selon disponibilité, sans garantie de durée ou de modèle. Les offres **Pro / Pro+ / Pay As You Go** consomment des **compute units** selon le GPU choisi.
+- **Activités interdites et WebUI :** La [politique Colab](https://research.google.com/colaboratory/faq.html#disallowed-activities) interdit l'hébergement web public, les proxies distants, le contournement des limites et les deepfakes. Gradio interactif n'est pas interdit en bloc, mais les tunnels WebUI persistants en offre gratuite déclenchent souvent des coupures.
+- **Coupures, sauvegarde et confidentialité :** Exportez (EXPORT = True) ou sauvegardez sur Google Drive et gardez vos notebooks privés.
+- **Alternatives :** [Kaggle](kaggle.md) ou [Lightning AI Studio](lightning-ai.md).
+
 3. Ouvrez la vue intégrée et gardez la session connectée.
 
 ## Vérifier les cellules

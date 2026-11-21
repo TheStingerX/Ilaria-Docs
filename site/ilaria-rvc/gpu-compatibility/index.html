@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -180,7 +180,125 @@
 <p>The Windows ZIP is about 5.00 GB. Extract it to a new folder and run <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>, or <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> for logs. ContentVec and RMVPE are included. Optional embedders are under Other → Download embedders.</p>
 <p>PyTorch 2.10.0 with CUDA 12.8 is included and ready for RTX 50 with a compatible driver. On PCs with only Maxwell, Pascal or Volta GPUs, the launcher downloads and verifies PyTorch 2.10.0 with CUDA 12.6 once, then reuses <code translate="no" v-pre>runtime-cu126</code>. See <code translate="no" v-pre>cu126-runtime-install.log</code>.</p>
 <h2 id="validation">Validation</h2>
-<p>Compute, backpropagation and ContentVec loading were tested on an RTX 4070. For other GPUs, the table shows expected compatibility based on architecture. Compatibility with individual cards is unverified and cannot be guaranteed.</p>
+<p>Compute, backpropagation and ContentVec loading were tested on an <strong>RTX 4070</strong>. For other GPUs, the tables below show <strong>Expected</strong> compatibility based on architecture and CUDA runtime selection. Compatibility with individual cards is not guaranteed model by model.</p>
+<h3 id="architecture--runtime-overview">Architecture &amp; Runtime Overview</h3>
+<retype-table copy-text="| GPU Family | Architecture | Compute Capability | Expected Runtime | Training &amp; Inference | Precision | Limitations &amp; Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| **RTX 40 series** (e.g. RTX 4070) | Ada Lovelace | `8.9` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32`, `FP16`, `BF16` | **Tested** (RTX 4070); other models **Expected** |
+| **RTX 50 series** | Blackwell | `12.0` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32`, `FP16`, `BF16` | **Expected** (requires compatible NVIDIA driver) |
+| **RTX 30 series** | Ampere | `8.6` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32`, `FP16`, `BF16` | **Expected**; lower-VRAM cards (e.g. 6–8 GB) need smaller batch sizes |
+| **RTX 20 series** | Turing | `7.5` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32`, `FP16` | **Expected**; no native `BF16` |
+| **GTX 16 series** | Turing (no Tensor) | `7.5` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32` (safer; `FP16` varies) | **Expected**; `FP16` can be slower or error on some GTX 16 cards |
+| **Maxwell / Pascal / Volta** (GTX 900/10, Titan V) | `5.x` / `6.x` / `7.0` | `5.0`–`7.0` | Auto `runtime-cu126` (CUDA 12.6) | Inference &amp; Training | `FP32` | **Expected**; first launch downloads `runtime-cu126`; GTX 10-series often fail with `FP16` |
+| **Workstation / Datacenter** (Quadro RTX, RTX A-series, T4, L4) | Turing / Ampere / Ada | `7.5`–`8.9` | CUDA 12.8 (`2.10.0`) | Inference &amp; Training | `FP32`, `FP16` (`BF16` on Ampere+) | **Expected**; T4 in Kaggle defaults to `FP16` |
+| **Multi-GPU systems** | Mixed or matched NVIDIA | Varies | Matched to lowest/active set | Training (DDP in Kaggle/supported setups) | Matches active GPUs | **Expected**; two GPUs do **not** combine into one larger VRAM pool |
+| **AMD / Intel / Integrated** | RDNA / Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../../ilaria-rvc/cloud/cloud.md) or DirectML apps |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>GPU Family</th>
+<th>Architecture</th>
+<th>Compute Capability</th>
+<th>Expected Runtime</th>
+<th>Training &amp; Inference</th>
+<th>Precision</th>
+<th>Limitations &amp; Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RTX 40 series</strong> (e.g. RTX 4070)</td>
+<td>Ada Lovelace</td>
+<td><code translate="no" v-pre>8.9</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code>, <code translate="no" v-pre>FP16</code>, <code translate="no" v-pre>BF16</code></td>
+<td><strong>Tested</strong> (RTX 4070); other models <strong>Expected</strong></td>
+</tr>
+<tr>
+<td><strong>RTX 50 series</strong></td>
+<td>Blackwell</td>
+<td><code translate="no" v-pre>12.0</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code>, <code translate="no" v-pre>FP16</code>, <code translate="no" v-pre>BF16</code></td>
+<td><strong>Expected</strong> (requires compatible NVIDIA driver)</td>
+</tr>
+<tr>
+<td><strong>RTX 30 series</strong></td>
+<td>Ampere</td>
+<td><code translate="no" v-pre>8.6</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code>, <code translate="no" v-pre>FP16</code>, <code translate="no" v-pre>BF16</code></td>
+<td><strong>Expected</strong>; lower-VRAM cards (e.g. 6–8 GB) need smaller batch sizes</td>
+</tr>
+<tr>
+<td><strong>RTX 20 series</strong></td>
+<td>Turing</td>
+<td><code translate="no" v-pre>7.5</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code>, <code translate="no" v-pre>FP16</code></td>
+<td><strong>Expected</strong>; no native <code translate="no" v-pre>BF16</code></td>
+</tr>
+<tr>
+<td><strong>GTX 16 series</strong></td>
+<td>Turing (no Tensor)</td>
+<td><code translate="no" v-pre>7.5</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code> (safer; <code translate="no" v-pre>FP16</code> varies)</td>
+<td><strong>Expected</strong>; <code translate="no" v-pre>FP16</code> can be slower or error on some GTX 16 cards</td>
+</tr>
+<tr>
+<td><strong>Maxwell / Pascal / Volta</strong> (GTX 900/10, Titan V)</td>
+<td><code translate="no" v-pre>5.x</code> / <code translate="no" v-pre>6.x</code> / <code translate="no" v-pre>7.0</code></td>
+<td><code translate="no" v-pre>5.0</code>–<code translate="no" v-pre>7.0</code></td>
+<td>Auto <code translate="no" v-pre>runtime-cu126</code> (CUDA 12.6)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code></td>
+<td><strong>Expected</strong>; first launch downloads <code translate="no" v-pre>runtime-cu126</code>; GTX 10-series often fail with <code translate="no" v-pre>FP16</code></td>
+</tr>
+<tr>
+<td><strong>Workstation / Datacenter</strong> (Quadro RTX, RTX A-series, T4, L4)</td>
+<td>Turing / Ampere / Ada</td>
+<td><code translate="no" v-pre>7.5</code>–<code translate="no" v-pre>8.9</code></td>
+<td>CUDA 12.8 (<code translate="no" v-pre>2.10.0</code>)</td>
+<td>Inference &amp; Training</td>
+<td><code translate="no" v-pre>FP32</code>, <code translate="no" v-pre>FP16</code> (<code translate="no" v-pre>BF16</code> on Ampere+)</td>
+<td><strong>Expected</strong>; T4 in Kaggle defaults to <code translate="no" v-pre>FP16</code></td>
+</tr>
+<tr>
+<td><strong>Multi-GPU systems</strong></td>
+<td>Mixed or matched NVIDIA</td>
+<td>Varies</td>
+<td>Matched to lowest/active set</td>
+<td>Training (DDP in Kaggle/supported setups)</td>
+<td>Matches active GPUs</td>
+<td><strong>Expected</strong>; two GPUs do <strong>not</strong> combine into one larger VRAM pool</td>
+</tr>
+<tr>
+<td><strong>AMD / Intel / Integrated</strong></td>
+<td>RDNA / Arc / iGPU</td>
+<td>N/A (No CUDA)</td>
+<td>None in local Windows build</td>
+<td><strong>Unsupported</strong> locally</td>
+<td>N/A</td>
+<td><strong>Unsupported</strong> locally in Ilaria RVC Windows; use <a href="../cloud/">Cloud</a> or DirectML apps</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="check-your-gpu-model--diagnose-errors-on-windows">Check Your GPU Model &amp; Diagnose Errors on Windows</h3>
+<ol>
+<li>Press <code translate="no" v-pre>Ctrl + Shift + Esc</code> → <strong>Performance → GPU</strong> (or run <code translate="no" v-pre>nvidia-smi</code> in Command Prompt) to read your exact GPU name, VRAM, and driver version.</li>
+<li><strong><code translate="no" v-pre>no kernel image is available</code></strong>: The CUDA build does not match your GPU architecture (e.g., Maxwell/Pascal needing <code translate="no" v-pre>runtime-cu126</code>).</li>
+<li><strong><code translate="no" v-pre>CUDA driver version is insufficient</code></strong>: Update your NVIDIA driver via the NVIDIA App or official website, then restart.</li>
+<li><strong><code translate="no" v-pre>CUDA out of memory</code></strong>: Your GPU VRAM is full; lower <strong>Batch Size</strong>, disable dataset GPU caching, or enable <strong>Split Audio</strong> during inference.</li>
+</ol>
 <h2 id="models">Models</h2>
 <h2 id="gtx-16">GTX 16</h2>
 <retype-table copy-text="| GPU | CUDA |
@@ -912,7 +1030,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

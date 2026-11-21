@@ -8,6 +8,14 @@
 
 Laden Sie den unterstützten NVIDIA-Build von [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)] herunter. Extrahieren Sie das gesamte Archiv in einen beschreibbaren lokalen Ordner und führen Sie dort `RUN_ILARIA_RVC.bat` aus. Der Launcher und die gebündelte Laufzeit müssen zusammen bleiben. Wenn sich kein Browser-Tab öffnet, versuchen Sie es mit `http://127.0.0.1:6969` auf demselben PC.
 
+### Warum du PyTorch nicht manuell aktualisieren solltest
+
+Ilaria RVC enthält eine getestete Kombination aus **PyTorch (2.10.0)**, **CUDA (12.8 oder 12.6)**, 	orchaudio, 	orchvision, aiss und Audio-Paketen. Führe **kein** manuelles pip install --upgrade torch aus:
+
+- Ein manuelles PyTorch-Upgrade kann 	orchaudio, airseq, onnxruntime oder C++/CUDA-Erweiterungen beschädigen.
+- Neuere Builds können ältere GPUs (Maxwell, Pascal, Volta) ausschließen oder UnpicklingError auslösen.
+- Warte immer auf ein offizielles Ilaria-RVC-Update statt die portable Laufzeit manuell zu ändern.
+
 ## Vor dem ersten Start
 
 Die vollständige Windows-ZIP-Datei ist etwa 5,00 GB groß. Lassen Sie Platz für das Archiv und die extrahierten Dateien. Extrahieren Sie es in einen neuen lokalen Ordner, in den Sie Dateien schreiben können. Halten Sie Launcher, Laufzeit und Assets zusammen. ContentVec und RMVPE sind enthalten. Optionale Encoder sind unter **Andere → Embedder herunterladen** verfügbar.

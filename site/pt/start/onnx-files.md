@@ -41,5 +41,5 @@ Quase todas as vozes RVC são compartilhadas em `.pth`, não em `.onnx`. Se voc�
 ## 4. Dicas para usar `.onnx` em tempo real
 
 - **Use `FP32` no DirectML se houver falhas:** Em placas AMD/Intel, `FP16` costuma dar erro ou chiado no DirectML; mude para `FP32` se o áudio quebrar.
-- **Desative o HAGS no Windows:** Desligue o *Agendamento de GPU acelerado por hardware* no Windows e reinicie o PC para evitar engasgos robóticos ao vivo.
+- **Testa o Windows HAGS apenas se necessário:** O **Hardware-Accelerated GPU Scheduling** não é prejudicial por omissão, mas sob carga pesada podes testar desativá-lo nas Definições gráficas do Windows (reinicia, compara antes/depois e repõe se nada mudar).
 - **Mantenha `48000 Hz` em tudo:** Configure microfone, fones e `VB-CABLE` em `48000 Hz` no Painel de Som (`mmsys.cpl`) para evitar `PortAudioError`.

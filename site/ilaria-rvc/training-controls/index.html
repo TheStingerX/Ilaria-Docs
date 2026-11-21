@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Training controls and workflow">
-    <meta name="description" content="Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints.">
+    <meta name="description" content="Ilaria RVC 2.4.7 training controls: 32, 40 and 48 kHz sample rates, vocoder constraints, FP32/FP16/BF16 precision, batch size, and FAISS indexing.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/ilaria-rvc/training-controls/">
@@ -35,23 +35,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints.">
+    <meta property="og:description" content="Ilaria RVC 2.4.7 training controls: 32, 40 and 48 kHz sample rates, vocoder constraints, FP32/FP16/BF16 precision, batch size, and FAISS indexing.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
-    <meta name="twitter:description" content="Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints.">
+    <meta name="twitter:description" content="Ilaria RVC 2.4.7 training controls: 32, 40 and 48 kHz sample rates, vocoder constraints, FP32/FP16/BF16 precision, batch size, and FAISS indexing.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/training-controls/">
@@ -174,7 +174,7 @@
 
                 <!-- Page content  -->
 <h1 id="training-controls-and-workflow">Training controls and workflow</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ilaria RVC 2.4.7 training controls: 32, 40 and 48 kHz sample rates, vocoder constraints, FP32/FP16/BF16 precision, batch size, and FAISS indexing.</div>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Download Ilaria RVC 2.4.7 for Windows (ZIP)</a></p>
 <p><a href="../training-buttons/">Training controls</a></p>
 <blockquote>
@@ -228,7 +228,7 @@
 </div>
 </retype-table>
 <h2 id="architecture-and-performance">Architecture and performance</h2>
-<p>Version 2.1.0 offers 32, 40 and 48 kHz settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints. Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. FP32 is the default in the checked UI. FP16 can reduce memory pressure on supported hardware. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.</p>
+<p>Ilaria RVC <strong>2.4.7</strong> offers <code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, and <code translate="no" v-pre>48 kHz</code> settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints (RefineGAN training in Ilaria RVC is supported specifically at <code translate="no" v-pre>32 kHz</code> with RVC v2 and pitch guidance). Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. <strong>FP32</strong>, <strong>FP16</strong>, and <strong>BF16</strong> (on supported RTX 30/40/50 GPUs) let you balance speed and memory pressure. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.</p>
 <p><strong>Silent training files</strong> controls how many silent examples the app includes. Compare the same held-out pauses when evaluating a change.</p>
 <h2 id="how-index-algorithm-works">How Index Algorithm works</h2>
 <p>Every option produces a <strong>FAISS retrieval index</strong>. The selector changes which extracted feature vectors go into the index, independently of the training of the voice model. A feature vector represents a short audio frame. The thresholds below count vectors, not clips, epochs or minutes.</p>
@@ -312,7 +312,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

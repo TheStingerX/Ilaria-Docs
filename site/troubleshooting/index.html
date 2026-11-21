@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -283,7 +283,7 @@
 <retype-table copy-text="| Problem or Error | What it means (in plain words) | How to fix it |
 | --- | --- | --- |
 | **Black console window opens and closes immediately** | You ran the launcher inside a ZIP preview, or Python hit an error before starting. | 1. Right-click the `.zip` and extract the whole folder first.&lt;br&gt;2. In Ilaria RVC, run `RUN_ILARIA_RVC_LOGS.bat` instead of the normal launcher so the window stays open and shows the error. |
-| **Antivirus / Windows Defender deletes `.bat`, `.exe`, or `.dll` files** | Security software falsely flags portable AI scripts as suspicious. | Open **Windows Security → Virus &amp; threat protection → Protection history**, restore the blocked file, and add your RVC folder (e.g. `C:\RVC`) to **Exclusions**. |
+| **Antivirus / Windows Defender flags `.bat`, `.exe`, or `.dll` files** | Portable AI packages often ship unsigned launchers or bundled Python/PyTorch binaries that heuristic scanners may flag. | 1. **Never disable your antivirus globally** or blindly exclude entire folders.&lt;br&gt;2. Verify the file came from the **official GitHub Releases or Hugging Face** repository and check its SHA-256 hash or digital signature if provided.&lt;br&gt;3. Open **Windows Security → Virus &amp; threat protection → Protection history** (Microsoft Defender keeps events for 14 days, color-coded by severity) to see the exact file and threat name.&lt;br&gt;4. If you suspect a false positive on an official download, prefer **re-downloading/re-extracting** from the official source or submitting the file to Microsoft Security Intelligence. If an unexpected executable or unknown third-party archive triggers an alert, **stop immediately**, keep it quarantined, and ask for help on the official project Discord/GitHub. |
 | `WinError 10048` / `Address already in use` / port busy | Another copy of RVC or another app is already using that local port (`6969` or `7865`). | Close all open black console windows (or end `python.exe` in **Task Manager**), then launch the app once. |
 | `[WinError 3] The system cannot find the path specified` / `[WinError 206] filename too long` | Windows breaks when folder paths are over 260 characters or contain spaces, accents, or symbols (`()`, `[]`). | Move the app and audio files to a short folder like `C:\RVC\`. Rename folders and `.wav` files using only letters, numbers, and underscores `_`. |
 | `[WinError 2] The system cannot find the file specified` (when loading/saving audio) | `ffmpeg.exe` or `ffprobe.exe` (the tool that reads audio files) is missing. | Check that `ffmpeg.exe` is inside the app folder (re-extract the ZIP if Defender removed it). On manual Python installs, install FFmpeg and add it to Windows `PATH`, then restart your terminal. |
@@ -309,9 +309,9 @@
 <td>1. Right-click the <code translate="no" v-pre>.zip</code> and extract the whole folder first.<br>2. In Ilaria RVC, run <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> instead of the normal launcher so the window stays open and shows the error.</td>
 </tr>
 <tr>
-<td><strong>Antivirus / Windows Defender deletes <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code>, or <code translate="no" v-pre>.dll</code> files</strong></td>
-<td>Security software falsely flags portable AI scripts as suspicious.</td>
-<td>Open <strong>Windows Security → Virus &amp; threat protection → Protection history</strong>, restore the blocked file, and add your RVC folder (e.g. <code translate="no" v-pre>C:\RVC</code>) to <strong>Exclusions</strong>.</td>
+<td><strong>Antivirus / Windows Defender flags <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code>, or <code translate="no" v-pre>.dll</code> files</strong></td>
+<td>Portable AI packages often ship unsigned launchers or bundled Python/PyTorch binaries that heuristic scanners may flag.</td>
+<td>1. <strong>Never disable your antivirus globally</strong> or blindly exclude entire folders.<br>2. Verify the file came from the <strong>official GitHub Releases or Hugging Face</strong> repository and check its SHA-256 hash or digital signature if provided.<br>3. Open <strong>Windows Security → Virus &amp; threat protection → Protection history</strong> (Microsoft Defender keeps events for 14 days, color-coded by severity) to see the exact file and threat name.<br>4. If you suspect a false positive on an official download, prefer <strong>re-downloading/re-extracting</strong> from the official source or submitting the file to Microsoft Security Intelligence. If an unexpected executable or unknown third-party archive triggers an alert, <strong>stop immediately</strong>, keep it quarantined, and ask for help on the official project Discord/GitHub.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>WinError 10048</code> / <code translate="no" v-pre>Address already in use</code> / port busy</td>
@@ -366,7 +366,7 @@
 <retype-table copy-text="| Problem or Error | What it means (in plain words) | How to fix it |
 | --- | --- | --- |
 | **Everything runs super slow (using CPU instead of GPU)** | The app cannot see your graphics card, or you downloaded an NVIDIA-only app on an AMD/Intel GPU. | 1. NVIDIA users: check that your GPU drivers are installed and you are not forcing integrated graphics.&lt;br&gt;2. AMD/Intel GPU users: standard CUDA builds will not use your GPU. Use a **DirectML** build (such as YuneVoix, Deiteris DirectML, or Mainline DirectML) or a cloud notebook. |
-| **PC lags, VRAM overflows to RAM, or live voice turns robotic (Windows 10/11)** | A Windows setting called **HAGS** (Hardware-Accelerated GPU Scheduling) steals VRAM stability from AI apps. | Open **Windows Settings → System → Display → Graphics → Advanced Graphics Settings**, turn **OFF** **Hardware-accelerated GPU Scheduling**, and **restart your PC**. |
+| **PC lags, VRAM pressure rises, or live voice stutters (Windows 10/11)** | **HAGS** (Hardware-Accelerated GPU Scheduling) lets the GPU manage its own memory queue, which works well for most games/apps but can occasionally cause VRAM/latency contention on some AI + gaming setups. | HAGS is **not** inherently harmful and does not need to be turned off on every PC. If you hit unexplained live stuttering, test turning it **OFF** in **Windows Settings → System → Display → Graphics → Advanced Graphics Settings**, **restart your PC**, and compare before/after. If there is no clear improvement, turn HAGS back **ON** and restart. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (while converting audio) | Your graphics card ran out of video memory because the song/clip is too long or a game/browser is using VRAM. | Enable **Split Audio** for long tracks, close games and heavy browser tabs (or turn off browser hardware acceleration), and turn off extra audio effects. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (while training) | The training **Batch Size** is too large for your GPU memory. | Lower **Batch Size** step by step (from `8` down to `4`, `2`, or `1`). Turn **OFF** &quot;Cache dataset in GPU/VRAM&quot;, and close any live voice changer before training. |
 | `Torch not compiled with CUDA enabled` / `no kernel image is available` | Your app's CUDA version does not match your NVIDIA card generation (e.g. brand-new RTX 50 vs older GTX 10). | Use the matching build: **Ilaria RVC** includes **CUDA 12.8** for GTX 16 / RTX 20-50 and auto-downloads **CUDA 12.6** (`runtime-cu126`) for older Maxwell/Pascal/Volta cards. |
@@ -390,9 +390,9 @@
 <td>1. NVIDIA users: check that your GPU drivers are installed and you are not forcing integrated graphics.<br>2. AMD/Intel GPU users: standard CUDA builds will not use your GPU. Use a <strong>DirectML</strong> build (such as YuneVoix, Deiteris DirectML, or Mainline DirectML) or a cloud notebook.</td>
 </tr>
 <tr>
-<td><strong>PC lags, VRAM overflows to RAM, or live voice turns robotic (Windows 10/11)</strong></td>
-<td>A Windows setting called <strong>HAGS</strong> (Hardware-Accelerated GPU Scheduling) steals VRAM stability from AI apps.</td>
-<td>Open <strong>Windows Settings → System → Display → Graphics → Advanced Graphics Settings</strong>, turn <strong>OFF</strong> <strong>Hardware-accelerated GPU Scheduling</strong>, and <strong>restart your PC</strong>.</td>
+<td><strong>PC lags, VRAM pressure rises, or live voice stutters (Windows 10/11)</strong></td>
+<td><strong>HAGS</strong> (Hardware-Accelerated GPU Scheduling) lets the GPU manage its own memory queue, which works well for most games/apps but can occasionally cause VRAM/latency contention on some AI + gaming setups.</td>
+<td>HAGS is <strong>not</strong> inherently harmful and does not need to be turned off on every PC. If you hit unexplained live stuttering, test turning it <strong>OFF</strong> in <strong>Windows Settings → System → Display → Graphics → Advanced Graphics Settings</strong>, <strong>restart your PC</strong>, and compare before/after. If there is no clear improvement, turn HAGS back <strong>ON</strong> and restart.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>CUDA out of memory</code> / <code translate="no" v-pre>torch.cuda.OutOfMemoryError</code> (while converting audio)</td>
@@ -573,7 +573,7 @@
 | --- | --- | --- |
 | **Nobody in Discord / game can hear my converted voice** | Your target app is still listening to your real mic instead of the virtual cable, or the voice changer is not started. | 1. Install **VB-CABLE** (restart your PC afterward).&lt;br&gt;2. In the voice changer, set **Input** = your physical mic, and **Output** = `CABLE Input (VB-Audio Virtual Cable)`.&lt;br&gt;3. In **Discord / Game**, set **Input Device** = `CABLE Output (VB-Audio Virtual Cable)`. |
 | `PortAudioError` / `Invalid sample rate` / audio device fails to start | Your Windows mic, headphones, and VB-CABLE are running at different speeds (`44100 Hz` vs `48000 Hz`), or another app locked the device. | Open **Windows Sound Control Panel (`mmsys.cpl`)**, open **Properties → Advanced** for your Mic, Headphones, `CABLE Input`, and `CABLE Output`, set **all of them to 48000 Hz**, uncheck **Allow applications to take exclusive control**, and restart the app. |
-| **Stuttering, crackling, or huge voice delay** | Your GPU takes longer to process each audio chunk than the chunk length itself. | 1. Increase **Chunk Size** slightly (more stability, slightly more delay).&lt;br&gt;2. Use **RMVPE** or **FCPE** for pitch (never `crepe` full for live).&lt;br&gt;3. Turn **OFF** Windows **HAGS**.&lt;br&gt;4. Cap game FPS or close heavy GPU apps so the voice changer always has GPU headroom. |
+| **Stuttering, crackling, or huge voice delay** | Your GPU takes longer to process each audio chunk than the chunk length itself. | 1. Increase **Chunk Size** slightly (more stability, slightly more delay).&lt;br&gt;2. Use **RMVPE** or **FCPE** for pitch (never `crepe` full for live).&lt;br&gt;3. Cap game FPS or close heavy GPU apps so the voice changer always has GPU headroom.&lt;br&gt;4. Optionally test toggling Windows **HAGS** (before/after comparison) if stuttering persists. |
 | **Echo or hearing yourself twice** | You are using speakers (the mic hears them), or two apps are playing your mic back at the same time. | Always wear **headphones**. Make sure Windows **&quot;Listen to this device&quot;** is **OFF** in Recording settings, and only enable Monitor inside the voice changer if you actually need to hear yourself. |
 | **Discord cuts off breaths or the ends of words** | Discord's noise filter thinks your converted voice edges are background noise. | In Discord **Voice &amp; Video** settings, turn **OFF** **Krisp Noise Suppression**, turn **OFF** **Echo Cancellation**, and turn **OFF** **Automatically determine input sensitivity** (set the slider manually). Also lower the VAD / Noise Gate threshold inside your voice changer. |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -599,7 +599,7 @@
 <tr>
 <td><strong>Stuttering, crackling, or huge voice delay</strong></td>
 <td>Your GPU takes longer to process each audio chunk than the chunk length itself.</td>
-<td>1. Increase <strong>Chunk Size</strong> slightly (more stability, slightly more delay).<br>2. Use <strong>RMVPE</strong> or <strong>FCPE</strong> for pitch (never <code translate="no" v-pre>crepe</code> full for live).<br>3. Turn <strong>OFF</strong> Windows <strong>HAGS</strong>.<br>4. Cap game FPS or close heavy GPU apps so the voice changer always has GPU headroom.</td>
+<td>1. Increase <strong>Chunk Size</strong> slightly (more stability, slightly more delay).<br>2. Use <strong>RMVPE</strong> or <strong>FCPE</strong> for pitch (never <code translate="no" v-pre>crepe</code> full for live).<br>3. Cap game FPS or close heavy GPU apps so the voice changer always has GPU headroom.<br>4. Optionally test toggling Windows <strong>HAGS</strong> (before/after comparison) if stuttering persists.</td>
 </tr>
 <tr>
 <td><strong>Echo or hearing yourself twice</strong></td>
@@ -699,7 +699,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

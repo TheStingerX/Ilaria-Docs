@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Audio Analyzer">
-    <meta name="description" content="Open Other → Audio Analyzer. Add up to eight audio files to compare.">
+    <meta name="description" content="Open Other → Audio Analyzer in Ilaria RVC to compare up to eight audio files using waveforms, spectrograms, average spectrum, pitch estimation, and level tables.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/ilaria-rvc/audio-analyzer/">
@@ -35,23 +35,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="Open Other → Audio Analyzer. Add up to eight audio files to compare.">
+    <meta property="og:description" content="Open Other → Audio Analyzer in Ilaria RVC to compare up to eight audio files using waveforms, spectrograms, average spectrum, pitch estimation, and level tables.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
-    <meta name="twitter:description" content="Open Other → Audio Analyzer. Add up to eight audio files to compare.">
+    <meta name="twitter:description" content="Open Other → Audio Analyzer in Ilaria RVC to compare up to eight audio files using waveforms, spectrograms, average spectrum, pitch estimation, and level tables.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/audio-analyzer/">
@@ -174,51 +174,70 @@
 
                 <!-- Page content  -->
 <h1 id="audio-analyzer">Audio Analyzer</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Open Other → Audio Analyzer. Add up to eight audio files to compare.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Open Other → Audio Analyzer in Ilaria RVC to compare up to eight audio files using waveforms, spectrograms, average spectrum, pitch estimation, and level tables.</div>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Download Ilaria RVC 2.4.7 for Windows (ZIP)</a></p>
-<p>Open <strong>Other → Audio Analyzer</strong>. Add up to eight audio files to compare. A useful set contains the original input, a baseline conversion and one or two variants made with one changed setting.</p>
-<retype-table copy-text="| View | Question to answer |
-| --- | --- |
-| Waveform | Where are loud peaks, quiet passages or abrupt joins? |
-| Spectrogram | Which frequencies are present at the time an artifact starts? |
-| Average spectrum | Does one version have a persistent frequency imbalance? |
-| Pitch estimation | Does the converted F0 follow the intended contour in voiced passages? |
-| Level and silence tables | Are you comparing at similar volumes and using the same definition of silence? |">
+<p>Open <strong>Other → Audio Analyzer</strong>. Add up to eight audio files to compare. A useful set contains the original input, a baseline conversion, and one or two variants made with a single changed setting.</p>
+<h2 id="what-each-view-measures">What each view measures</h2>
+<retype-table copy-text="| View | What it directly shows | Question to answer |
+| --- | --- | --- |
+| **Waveform** | Amplitude over time | Where are loud peaks, flat-topped clipping, quiet passages, or abrupt joins? |
+| **Spectrogram** | Frequency energy over time | Which frequencies are present at the exact moment hiss, buzz, or an artifact starts? |
+| **Average spectrum** | Overall frequency balance | Does one version sound noticeably brighter, duller, or have a persistent resonance? |
+| **Pitch estimation** | Estimated F0 contour over voiced segments | Does the converted pitch follow the intended melody/inflection without octave jumps? |
+| **Level &amp; silence tables** | Measured loudness/peak levels and silence segments | Are you comparing files at similar volumes and using the same silence threshold? |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
 <th>View</th>
+<th>What it directly shows</th>
 <th>Question to answer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Waveform</td>
-<td>Where are loud peaks, quiet passages or abrupt joins?</td>
+<td><strong>Waveform</strong></td>
+<td>Amplitude over time</td>
+<td>Where are loud peaks, flat-topped clipping, quiet passages, or abrupt joins?</td>
 </tr>
 <tr>
-<td>Spectrogram</td>
-<td>Which frequencies are present at the time an artifact starts?</td>
+<td><strong>Spectrogram</strong></td>
+<td>Frequency energy over time</td>
+<td>Which frequencies are present at the exact moment hiss, buzz, or an artifact starts?</td>
 </tr>
 <tr>
-<td>Average spectrum</td>
-<td>Does one version have a persistent frequency imbalance?</td>
+<td><strong>Average spectrum</strong></td>
+<td>Overall frequency balance</td>
+<td>Does one version sound noticeably brighter, duller, or have a persistent resonance?</td>
 </tr>
 <tr>
-<td>Pitch estimation</td>
-<td>Does the converted F0 follow the intended contour in voiced passages?</td>
+<td><strong>Pitch estimation</strong></td>
+<td>Estimated F0 contour over voiced segments</td>
+<td>Does the converted pitch follow the intended melody/inflection without octave jumps?</td>
 </tr>
 <tr>
-<td>Level and silence tables</td>
-<td>Are you comparing at similar volumes and using the same definition of silence?</td>
+<td><strong>Level &amp; silence tables</strong></td>
+<td>Measured loudness/peak levels and silence segments</td>
+<td>Are you comparing files at similar volumes and using the same silence threshold?</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<p>Choose a time range and channel view. Use the same FFT window, frequency scale and silence threshold in comparisons. A larger FFT window improves frequency resolution and smooths fast events in time. Listen to the selected region in the player before deciding whether a visible difference is a problem.</p>
-<p>Export CSV or JSON for measurements, or a ZIP with charts for later review. If you want to diagnose a noisy dataset clip, check the unprocessed source first and compare the same interval in the export. When pitch results look odd in breaths or unvoiced consonants, listen to the audio before interpreting the estimate.</p>
+<blockquote>
+<p><strong>What Audio Analyzer measures vs. what it suggests:</strong> Audio Analyzer directly plots and measures signal levels, silence intervals, spectral energy, and estimated F0 contours. It does <strong>not</strong> automatically diagnose &quot;good&quot; vs. &quot;bad&quot; voice timbre on its own. Always <strong>listen to the selected region</strong> in the built-in player before treating a visual difference as a problem.</p>
+</blockquote>
+<h2 id="practical-examples-what-to-look-for">Practical examples: what to look for</h2>
+<ul>
+<li><strong>Clipping:</strong> Flat-topped peaks hitting the maximum amplitude in the <strong>Waveform</strong> (often heard as harsh crackle). Lower input gain or normalize the source before training or conversion.</li>
+<li><strong>Background noise / hiss:</strong> A constant horizontal band or bright floor across mid/high frequencies in the <strong>Spectrogram</strong> during pauses. Clean the source with UVR5 or MVSep before training.</li>
+<li><strong>Excessive silence or dead gaps:</strong> Long flat sections in the <strong>Waveform</strong> and high silence ratios in the <strong>Level and silence tables</strong>. Trim long pauses in datasets so training does not waste steps on silence.</li>
+<li><strong>Too quiet / too loud volume:</strong> Very thin waveform amplitude (risks noisy amplification) or near-max peaks. Check the <strong>Level and silence tables</strong> so A/B comparisons are judged at matched loudness.</li>
+<li><strong>Distortion &amp; reverb:</strong> Blurry, smeared horizontal tails extending after words end in the <strong>Spectrogram</strong> indicate room reverb; harsh vertical spikes or smeared harmonics suggest distortion or over-processing.</li>
+<li><strong>Dataset quality check:</strong> Inspect raw source clips <em>before</em> training, then compare the same phrase across checkpoints. When pitch estimation looks erratic during breaths or unvoiced consonants (<code translate="no" v-pre>s</code>, <code translate="no" v-pre>f</code>, <code translate="no" v-pre>t</code>), listen first: unvoiced sounds naturally have no stable pitch.</li>
+</ul>
+<h2 id="comparison-tips--exports">Comparison tips &amp; exports</h2>
+<p>Choose a matching time range and channel view, and keep the same <strong>FFT window</strong>, frequency scale, and silence threshold across comparisons. A larger FFT window improves frequency detail while smoothing fast time events. Export <strong>CSV</strong> or <strong>JSON</strong> for numeric measurements, or a <strong>ZIP with charts</strong> for later review.</p>
 
                 
                 <!-- Required only on API pages -->
@@ -253,7 +272,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

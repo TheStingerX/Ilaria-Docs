@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612432600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614447409">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612432600" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614447409" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -357,6 +357,25 @@
 </div>
 </retype-table>
 <p>Conserver le premier message d&#x27;échec et la configuration associée à l&#x27;exécution. Pour plus de vérifications, voir <a href="../troubleshooting/">Dépannage</a>.</p>
+<span id="indicative-training-profiles-adapt-to-your-data--hardware" class="docs-anchor"></span><h2 id="profils-dentraînement-indicatifs-à-adapter">Profils d&#x27;entraînement indicatifs (à adapter)</h2>
+<ul>
+<li>
+<p><strong>Beginner Training :</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> (32 kHz pour RefineGAN) ·
+mvpe · contentvec · <strong>Batch Size 4–8</strong> · <strong>Epochs 200</strong> (sauvegarde tous les 25–50) · <strong>FP32</strong> (ou <strong>BF16</strong> sur RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers 2.</p>
+</li>
+<li>
+<p><strong>Intermediate Training :</strong> RVC <strong>v2</strong> · <strong>40/48 kHz</strong> ·
+mvpe · <strong>Batch Size 8–12</strong> · <strong>Epochs 250–350</strong> · <strong>BF16</strong> / <strong>FP16</strong> · Workers 4, Prefetch 4–8 · Index <strong>FAISS Auto</strong>.</p>
+</li>
+<li>
+<p><strong>Advanced Training &amp; Optimization :</strong> Grands datasets, 12–24 Go+ VRAM · <strong>Total Steps</strong> · <strong>Batch Size 12–16+</strong> · <strong>GPU Caching ON</strong> (si VRAM suffisante) · <strong>Fused AdamW ON</strong> · <strong>Training Queue</strong> + <strong>TensorBoard</strong> + <a href="../ilaria-rvc/audio-analyzer/">Audio Analyzer</a>.</p>
+</li>
+</ul>
+<h2 id="repérer-underfitting-vs-overfitting-à-loreille">Repérer Underfitting vs Overfitting à l&#x27;oreille</h2>
+<ol>
+<li><strong>Underfitting :</strong> Ressemble encore trop à l&#x27;orateur d&#x27;origine → reprenez depuis G_<em>.pth/D_</em>.pth.</li>
+<li><strong>Overfitting :</strong> Son métallique sur de nouvelles phrases ou bruit du dataset copié → revenez 50–100 époques en arrière.</li>
+</ol>
 
                 
                 <!-- Required only on API pages -->
@@ -384,7 +403,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

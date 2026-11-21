@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -230,6 +230,60 @@
 <li>Test for longer than a single word. Include quiet speech, a loud phrase and a short pause. Listen for cutoffs, drift or glitches under the same workload you plan to use live.</li>
 </ol>
 <p>Avoid listening through speakers near an active microphone. Headphones help you identify a routing issue without feeding the output back into the input.</p>
+<h2 id="understand-device-roles-and-audio-backends">Understand device roles and audio backends</h2>
+<p>Before wiring any app, know what each endpoint does:</p>
+<retype-table copy-text="| Term | What it is |
+| --- | --- |
+| **Input Device** | Your physical microphone (or audio interface channel) feeding raw voice into the voice changer. |
+| **Output Device** | Where the converted voice goes (your **virtual cable playback endpoint** for Discord/OBS/games, or headphones for a local test). |
+| **Monitor Device** | Optional second output so you can hear your own converted voice in headphones while **Output Device** feeds a virtual cable. |
+| **Virtual Cable Input** *(Playback side)* | Appears under Windows Playback (e.g. `Line 1` in VAC Lite or `CABLE Input` in VB-CABLE). Set this as the voice changer's **Output Device**. |
+| **Virtual Cable Output** *(Recording side)* | Appears under Windows Recording (e.g. `Line 1` in VAC Lite or `CABLE Output` in VB-CABLE). Select this as the **Microphone** in Discord, OBS, or games. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Term</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input Device</strong></td>
+<td>Your physical microphone (or audio interface channel) feeding raw voice into the voice changer.</td>
+</tr>
+<tr>
+<td><strong>Output Device</strong></td>
+<td>Where the converted voice goes (your <strong>virtual cable playback endpoint</strong> for Discord/OBS/games, or headphones for a local test).</td>
+</tr>
+<tr>
+<td><strong>Monitor Device</strong></td>
+<td>Optional second output so you can hear your own converted voice in headphones while <strong>Output Device</strong> feeds a virtual cable.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Input</strong> <em>(Playback side)</em></td>
+<td>Appears under Windows Playback (e.g. <code translate="no" v-pre>Line 1</code> in VAC Lite or <code translate="no" v-pre>CABLE Input</code> in VB-CABLE). Set this as the voice changer&#x27;s <strong>Output Device</strong>.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Output</strong> <em>(Recording side)</em></td>
+<td>Appears under Windows Recording (e.g. <code translate="no" v-pre>Line 1</code> in VAC Lite or <code translate="no" v-pre>CABLE Output</code> in VB-CABLE). Select this as the <strong>Microphone</strong> in Discord, OBS, or games.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="usb-microphones-audio-interfaces-and-backends">USB microphones, audio interfaces, and backends</h3>
+<ul>
+<li><strong>USB microphones:</strong> Plug directly into a rear motherboard USB port (avoid unpowered hubs), set Windows format to <strong>48000 Hz</strong>, and disable USB selective suspend if the mic drops out.</li>
+<li><strong>Audio interfaces (XLR):</strong> Use <strong>ASIO</strong> when supported by your voice changer (such as RVC Blue or w-okada) for lower driver buffer latency, or <strong>WASAPI</strong> when routing to standard Windows virtual cables.</li>
+<li><strong>WASAPI Shared vs. WASAPI Exclusive:</strong> <strong>WASAPI Shared</strong> is the safest starting point because Windows and virtual cables can share <code translate="no" v-pre>48000 Hz</code> streams cleanly. <strong>WASAPI Exclusive</strong> bypasses the Windows mixer for lower driver latency when supported, but locks the device so other apps cannot share it.</li>
+</ul>
+<h2 id="app-specific-setup-discord-obs-games-calls-recording">App-specific setup (Discord, OBS, games, calls, recording)</h2>
+<ul>
+<li><strong>Discord / calling apps:</strong> Set <strong>Input Device</strong> to your virtual cable recording endpoint (<code translate="no" v-pre>Line 1</code> / <code translate="no" v-pre>CABLE Output</code>), set <strong>Output Device</strong> to your headphones, and turn <strong>OFF</strong> Krisp, Echo Cancellation, and automatic input sensitivity if Discord clips breaths or word endings.</li>
+<li><strong>OBS Studio &amp; local recording:</strong> Add an <strong>Audio Input Capture</strong> source pointing to the virtual cable recording endpoint, mute any separate raw microphone source, and record a local test clip to check sync and levels.</li>
+<li><strong>Games:</strong> Select the virtual cable recording endpoint as your in-game mic (or set it as Windows Default Communication Recording Device). Always cap in-game FPS or leave GPU headroom so the game does not starve the voice changer.</li>
+</ul>
 <h2 id="send-converted-audio-to-another-app">Send converted audio to another app</h2>
 <p>A virtual audio device provides a playback endpoint for the converter and a corresponding recording endpoint for the receiving app. Endpoint names depend on the driver. For example, a virtual cable may call its playback endpoint “Input” and its recording endpoint “Output” because the instructions use the cable&#x27;s perspective.</p>
 <div id="send-converted-audio-to-another-app-code-1" class="codeblock-wrapper"><doc-codeblock>
@@ -239,7 +293,7 @@
 </doc-codeblock></div>
 <p>Select the matching recording endpoint as the microphone in the receiving app and make a short test recording there. If your local monitor sounds correct but the recording does not, verify the destination input and remove any duplicate microphone source. If you monitor the converted audio, use a separate headphone output. Avoid routing your entire desktop mix or the receiving app&#x27;s audio back into the converter.</p>
 <h2 id="tune-latency-without-losing-stability">Tune latency without losing stability</h2>
-<p>End-to-end delay includes device buffers, conversion, virtual routing and any processing in the destination. A processing-time figure in the converter measures only part of that path. Capture a local test of both the dry mic and the converted route if you need to measure the delay between them.</p>
+<p><strong>Processing latency vs. total end-to-end latency:</strong> The <strong>GPU Delay</strong> / inference time shown inside your voice changer is <strong>only</strong> how long the GPU takes to convert one chunk. <strong>Total end-to-end latency</strong> adds microphone input buffering, <strong>Block Size / Chunk Size</strong>, crossfade/context overhead, virtual cable buffering, and Discord/OBS/game audio buffers. Do not confuse a low GPU Delay (e.g. <code translate="no" v-pre>15 ms</code>) with total round-trip latency.</p>
 <retype-table copy-text="| Control | Practical adjustment |
 | --- | --- |
 | Block size or chunk size | Increase it if speech breaks up under load. Once stable, try a smaller setting and keep it only if normal speech stays clean. Smaller blocks leave less time to finish processing. |
@@ -289,11 +343,13 @@
 <h2 id="troubleshoot-by-where-the-fault-appears">Troubleshoot by where the fault appears</h2>
 <retype-table copy-text="| Symptom | Check first |
 | --- | --- |
-| Neither the converter meter nor a dry mic recording responds | Check the operating system input device and microphone permission. |
-| Dry mic works, but converted output is silent | Confirm the stream started, the model loaded and the converter selected the correct output. Check the input threshold. |
-| The local monitor works, but the call receives the original voice | Select the virtual recording endpoint as the call microphone and disable any separate physical-mic source in that app. |
-| You hear two versions of the voice | Mute duplicate input routes and verify the headphone monitor is separate from the virtual route. |
-| Audio crackles only under load | Return to the last stable chunk size, reduce competing workloads and retest. |
+| Neither the converter meter nor a dry mic recording responds | Check Windows mic permission, physical mute switch, and Input Device selection. |
+| Dry mic works, but converted output is silent | Confirm the stream started, the model loaded, and Output Device is set correctly. Lower VAD/silence threshold. |
+| The local monitor works, but the call receives the original voice | Select the virtual recording endpoint (`CABLE Output` / `Line 1`) as the call mic and disable any separate raw-mic source. |
+| Double monitoring / echo / feedback loop | Never use speakers near a live mic. Turn off Windows **&quot;Listen to this device&quot;** if the app already monitors, and never route desktop/call audio into the virtual cable. |
+| Crackling, stuttering, or buffer underruns | Align **all** endpoints (Mic, Headphones, Cable Input/Output) to **48000 Hz** (`mmsys.cpl`), raise **Block/Chunk Size** one step, and check for CPU overload. |
+| Robot voice or broken syllables | Pitch extractor is too heavy (`crepe` full) -&gt; switch to **RMVPE** or **FCPE**, or lower **Index Ratio**. |
+| High **GPU Delay** or crackling only while gaming | **GPU saturation**: cap in-game FPS, lower heavy GPU settings, or raise **Block Size**. |
 | A model works in file conversion but fails live | Check the live client's edition, architecture and embedder support. Test a model listed as compatible in that client before changing audio devices. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -306,23 +362,31 @@
 <tbody>
 <tr>
 <td>Neither the converter meter nor a dry mic recording responds</td>
-<td>Check the operating system input device and microphone permission.</td>
+<td>Check Windows mic permission, physical mute switch, and Input Device selection.</td>
 </tr>
 <tr>
 <td>Dry mic works, but converted output is silent</td>
-<td>Confirm the stream started, the model loaded and the converter selected the correct output. Check the input threshold.</td>
+<td>Confirm the stream started, the model loaded, and Output Device is set correctly. Lower VAD/silence threshold.</td>
 </tr>
 <tr>
 <td>The local monitor works, but the call receives the original voice</td>
-<td>Select the virtual recording endpoint as the call microphone and disable any separate physical-mic source in that app.</td>
+<td>Select the virtual recording endpoint (<code translate="no" v-pre>CABLE Output</code> / <code translate="no" v-pre>Line 1</code>) as the call mic and disable any separate raw-mic source.</td>
 </tr>
 <tr>
-<td>You hear two versions of the voice</td>
-<td>Mute duplicate input routes and verify the headphone monitor is separate from the virtual route.</td>
+<td>Double monitoring / echo / feedback loop</td>
+<td>Never use speakers near a live mic. Turn off Windows <strong>&quot;Listen to this device&quot;</strong> if the app already monitors, and never route desktop/call audio into the virtual cable.</td>
 </tr>
 <tr>
-<td>Audio crackles only under load</td>
-<td>Return to the last stable chunk size, reduce competing workloads and retest.</td>
+<td>Crackling, stuttering, or buffer underruns</td>
+<td>Align <strong>all</strong> endpoints (Mic, Headphones, Cable Input/Output) to <strong>48000 Hz</strong> (<code translate="no" v-pre>mmsys.cpl</code>), raise <strong>Block/Chunk Size</strong> one step, and check for CPU overload.</td>
+</tr>
+<tr>
+<td>Robot voice or broken syllables</td>
+<td>Pitch extractor is too heavy (<code translate="no" v-pre>crepe</code> full) -&gt; switch to <strong>RMVPE</strong> or <strong>FCPE</strong>, or lower <strong>Index Ratio</strong>.</td>
+</tr>
+<tr>
+<td>High <strong>GPU Delay</strong> or crackling only while gaming</td>
+<td><strong>GPU saturation</strong>: cap in-game FPS, lower heavy GPU settings, or raise <strong>Block Size</strong>.</td>
 </tr>
 <tr>
 <td>A model works in file conversion but fails live</td>
@@ -369,7 +433,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

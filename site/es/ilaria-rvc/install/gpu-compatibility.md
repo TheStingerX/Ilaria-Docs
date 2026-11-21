@@ -14,6 +14,28 @@ Las pruebas de cálculo, retropropagación y carga de ContentVec se realizaron e
 
 ## Modelos
 
+### Resumen de Arquitecturas y Runtime
+
+| Familia GPU | Arquitectura | Compute Capability | Runtime esperado | Training e Inferencia | Precisión | Estado y límites |
+| --- | --- | --- | --- | --- | --- | --- |
+| **RTX 40** (p. ej. RTX 4070) | Ada Lovelace | 8.9 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Tested** (RTX 4070); resto **Expected** |
+| **RTX 50** | Blackwell | 12.0 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Expected** (requiere driver compatible) |
+| **RTX 30** | Ampere | 8.6 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Expected** |
+| **RTX 20 / GTX 16** | Turing | 7.5 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32 (FP16 en RTX 20) | **Expected** |
+| **Maxwell / Pascal / Volta** (GTX 900/10) | 5.x/6.x/7.0 | 5.0–7.0 | Auto untime-cu126 (CUDA 12.6) | Inferencia y Training | FP32 | **Expected** |
+| **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
+| **Multi-GPU** | Varias NVIDIA | Variable | Runtime activo | Training | Según GPU activa | **Expected**; la VRAM **no** se suma |
+| **AMD / Intel / Integrada** | RDNA / Arc / iGPU | N/A | Ninguno en Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../../ilaria-rvc/cloud/cloud.md) o DirectML |
+
+### Comprobar GPU en Windows y diagnosticar errores
+
+1. Pulsa Ctrl + Shift + Esc → **Rendimiento → GPU** (o 
+vidia-smi).
+2. **
+o kernel image is available**: runtime CUDA incorrecto para tu arquitectura.
+3. **CUDA driver version is insufficient**: actualiza el driver NVIDIA.
+4. **CUDA out of memory**: reduce **Batch Size** o activa **Split Audio**.
+
 ## GTX 16
 
 | GPU | CUDA |

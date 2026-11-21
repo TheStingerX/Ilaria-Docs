@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612422780">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614437388">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612422780" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614437388" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612422780" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614437388" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612422780" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614437388" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -182,7 +182,134 @@
 <p>Incluye PyTorch 2.10.0 con CUDA 12.8. En equipos con solo GPU Maxwell, Pascal o Volta, el iniciador descarga y verifica PyTorch 2.10.0 con CUDA 12.6 y reutiliza <code translate="no" v-pre>runtime-cu126</code>. Consulta <code translate="no" v-pre>cu126-runtime-install.log</code>.</p>
 <span id="validation" class="docs-anchor"></span><h2 id="verificación">Verificación</h2>
 <p>Las pruebas de cálculo, retropropagación y carga de ContentVec se realizaron en una RTX 4070. Para las demás GPU, la tabla muestra la compatibilidad prevista según la arquitectura. La compatibilidad de cada tarjeta está pendiente de verificación y no se garantiza.</p>
-<span id="models" class="docs-anchor"></span><h2 id="modelos">Modelos</h2>
+<h2 id="modelos">Modelos</h2>
+<span id="check-your-gpu-model--diagnose-errors-on-windows" class="docs-anchor"></span><h3 id="resumen-de-arquitecturas-y-runtime">Resumen de Arquitecturas y Runtime</h3>
+<retype-table copy-text="| Familia GPU | Arquitectura | Compute Capability | Runtime esperado | Training e Inferencia | Precisión | Estado y límites |
+| --- | --- | --- | --- | --- | --- | --- |
+| **RTX 40** (p. ej. RTX 4070) | Ada Lovelace | 8.9 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Tested** (RTX 4070); resto **Expected** |
+| **RTX 50** | Blackwell | 12.0 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Expected** (requiere driver compatible) |
+| **RTX 30** | Ampere | 8.6 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16, BF16 | **Expected** |
+| **RTX 20 / GTX 16** | Turing | 7.5 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32 (FP16 en RTX 20) | **Expected** |
+| **Maxwell / Pascal / Volta** (GTX 900/10) | 5.x/6.x/7.0 | 5.0–7.0 | Auto untime-cu126 (CUDA 12.6) | Inferencia y Training | FP32 | **Expected** |
+| **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
+| **Multi-GPU** | Varias NVIDIA | Variable | Runtime activo | Training | Según GPU activa | **Expected**; la VRAM **no** se suma |
+| **AMD / Intel / Integrada** | RDNA / Arc / iGPU | N/A | Ninguno en Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../../ilaria-rvc/cloud/cloud.md) o DirectML |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Familia GPU</th>
+<th>Arquitectura</th>
+<th>Compute Capability</th>
+<th>Runtime esperado</th>
+<th>Training e Inferencia</th>
+<th>Precisión</th>
+<th>Estado y límites</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RTX 40</strong> (p. ej. RTX 4070)</td>
+<td>Ada Lovelace</td>
+<td>8.9</td>
+<td>CUDA 12.8 (2.10.0)</td>
+<td>Inferencia y Training</td>
+<td>FP32, FP16, BF16</td>
+<td><strong>Tested</strong> (RTX 4070); resto <strong>Expected</strong></td>
+</tr>
+<tr>
+<td><strong>RTX 50</strong></td>
+<td>Blackwell</td>
+<td>12.0</td>
+<td>CUDA 12.8 (2.10.0)</td>
+<td>Inferencia y Training</td>
+<td>FP32, FP16, BF16</td>
+<td><strong>Expected</strong> (requiere driver compatible)</td>
+</tr>
+<tr>
+<td><strong>RTX 30</strong></td>
+<td>Ampere</td>
+<td>8.6</td>
+<td>CUDA 12.8 (2.10.0)</td>
+<td>Inferencia y Training</td>
+<td>FP32, FP16, BF16</td>
+<td><strong>Expected</strong></td>
+</tr>
+<tr>
+<td><strong>RTX 20 / GTX 16</strong></td>
+<td>Turing</td>
+<td>7.5</td>
+<td>CUDA 12.8 (2.10.0)</td>
+<td>Inferencia y Training</td>
+<td>FP32 (FP16 en RTX 20)</td>
+<td><strong>Expected</strong></td>
+</tr>
+<tr>
+<td><strong>Maxwell / Pascal / Volta</strong> (GTX 900/10)</td>
+<td>5.x/6.x/7.0</td>
+<td>5.0–7.0</td>
+<td>Auto</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>untime-cu126 (CUDA 12.6)</td>
+<td>Inferencia y Training</td>
+<td>FP32</td>
+<td><strong>Expected</strong></td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td><strong>Workstation / Datacenter</strong> (T4, L4, RTX A)</td>
+<td>Turing / Ampere / Ada</td>
+<td>7.5–8.9</td>
+<td>CUDA 12.8 (2.10.0)</td>
+<td>Inferencia y Training</td>
+<td>FP32, FP16 (BF16 Ampere+)</td>
+<td><strong>Expected</strong></td>
+</tr>
+<tr>
+<td><strong>Multi-GPU</strong></td>
+<td>Varias NVIDIA</td>
+<td>Variable</td>
+<td>Runtime activo</td>
+<td>Training</td>
+<td>Según GPU activa</td>
+<td><strong>Expected</strong>; la VRAM <strong>no</strong> se suma</td>
+</tr>
+<tr>
+<td><strong>AMD / Intel / Integrada</strong></td>
+<td>RDNA / Arc / iGPU</td>
+<td>N/A</td>
+<td>Ninguno en Windows local</td>
+<td><strong>Unsupported</strong> local</td>
+<td>N/A</td>
+<td><strong>Unsupported</strong>; usa <a href="../cloud/">Cloud</a> o DirectML</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="comprobar-gpu-en-windows-y-diagnosticar-errores">Comprobar GPU en Windows y diagnosticar errores</h3>
+<ol>
+<li>
+<p>Pulsa Ctrl + Shift + Esc → <strong>Rendimiento → GPU</strong> (o
+vidia-smi).</p>
+</li>
+<li>
+<p>**
+o kernel image is available**: runtime CUDA incorrecto para tu arquitectura.</p>
+</li>
+<li>
+<p><strong>CUDA driver version is insufficient</strong>: actualiza el driver NVIDIA.</p>
+</li>
+<li>
+<p><strong>CUDA out of memory</strong>: reduce <strong>Batch Size</strong> o activa <strong>Split Audio</strong>.</p>
+</li>
+</ol>
 <h2 id="gtx-16">GTX 16</h2>
 <retype-table copy-text="| GPU | CUDA |
 | --- | --- |
@@ -913,7 +1040,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

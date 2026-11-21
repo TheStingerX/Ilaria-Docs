@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -245,7 +245,7 @@
 <h2 id="4-tips-for-using-onnx-in-real-time">4. Tips for using <code translate="no" v-pre>.onnx</code> in real-time</h2>
 <ul>
 <li><strong>Use <code translate="no" v-pre>FP32</code> on DirectML if you hit glitches:</strong> DirectML on AMD/Intel GPUs often fails or glitches with <code translate="no" v-pre>FP16</code>; switch precision to <code translate="no" v-pre>FP32</code> if audio breaks up.</li>
-<li><strong>Disable Windows HAGS:</strong> Turn off <strong>Hardware-Accelerated GPU Scheduling</strong> in Windows Graphics Settings and restart your PC to avoid robotic stuttering in live voice changers.</li>
+<li><strong>Test Windows HAGS only if needed:</strong> <strong>Hardware-Accelerated GPU Scheduling (HAGS)</strong> is not harmful by default, but on some setups with heavy background GPU load you can test toggling it off in Windows Graphics Settings (restart, compare before/after, and restore if unchanged).</li>
 <li><strong>Match <code translate="no" v-pre>48000 Hz</code> everywhere:</strong> Set your microphone, headphones, and <code translate="no" v-pre>VB-CABLE</code> endpoints to <code translate="no" v-pre>48000 Hz</code> in Windows Sound Control Panel (<code translate="no" v-pre>mmsys.cpl</code>) to prevent <code translate="no" v-pre>PortAudioError</code> or pitch drift.</li>
 </ul>
 
@@ -282,7 +282,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T00:30:44.000Z">21/11/2026 · 01:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -20,5 +20,5 @@ Indossa sempre le **cuffie** durante la conversione live. Usare le casse fa rien
 
 ## 3. Soluzioni rapide
 
-- **Latenza alta o scatti robotici**: disattiva **Pianificazione GPU con accelerazione hardware (HAGS)** nelle Impostazioni grafiche di Windows e riavvia, chiudi giochi/schede browser pesanti sulla GPU e aumenta il Chunk di uno step.
+- **Latenza alta o scatti robotici**: chiudi giochi o schede pesanti sulla GPU, alza Chunk di un passo e, se persiste, prova a disattivare **Hardware-accelerated GPU Scheduling (HAGS)** (riavvia, confronta prima/dopo e riattivalo se non migliora).
 - **Errore PortAudio / dispositivo**: imposta tutti i dispositivi audio allo stesso sample rate (`48000 Hz`) nelle Impostazioni audio di Windows e chiudi le app che bloccano il dispositivo in modalità esclusiva.

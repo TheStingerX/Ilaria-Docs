@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612432600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614447409">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612432600" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614447409" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612432600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614447409" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -231,7 +231,7 @@
 <li>Testez plus d&#x27;un seul mot. Incluez un discours calme, une phrase forte et une courte pause. Écoutez les coupures, les dérives ou les problèmes sous la même charge de travail que celle que vous prévoyez d&#x27;utiliser en direct.</li>
 </ol>
 <p>Évitez d&#x27;écouter via des haut-parleurs à proximité d&#x27;un microphone actif. Les écouteurs vous aident à identifier un problème de routage sans renvoyer la sortie vers l’entrée.</p>
-<span id="send-converted-audio-to-another-app" class="docs-anchor"></span><h2 id="envoyer-laudio-converti-vers-une-autre-application">Envoyer l&#x27;audio converti vers une autre application</h2>
+<span id="understand-device-roles-and-audio-backends" class="docs-anchor"></span><h2 id="envoyer-laudio-converti-vers-une-autre-application">Envoyer l&#x27;audio converti vers une autre application</h2>
 <p>Un périphérique audio virtuel fournit un point de terminaison de lecture pour le convertisseur et un point de terminaison d&#x27;enregistrement correspondant pour l&#x27;application de réception. Les noms des points de terminaison dépendent du pilote. Par exemple, un câble virtuel peut appeler son point final de lecture « Entrée » et son point final d&#x27;enregistrement « Sortie » car les instructions utilisent la perspective du câble.</p>
 <div id="envoyer-laudio-converti-vers-une-autre-application-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">Physical microphone → RVC converter → virtual playback endpoint
@@ -239,7 +239,7 @@
                               matching recording endpoint → call or stream</code></pre>
 </doc-codeblock></div>
 <p>Sélectionnez le point final d&#x27;enregistrement correspondant comme microphone dans l&#x27;application de réception et effectuez-y un court enregistrement test. Si votre moniteur local sonne correctement mais que l&#x27;enregistrement ne fonctionne pas, vérifiez l&#x27;entrée de destination et supprimez toute source de microphone en double. Si vous surveillez l&#x27;audio converti, utilisez une sortie casque séparée. Évitez de renvoyer l&#x27;intégralité de votre mixage de bureau ou l&#x27;audio de l&#x27;application de réception vers le convertisseur.</p>
-<span id="tune-latency-without-losing-stability" class="docs-anchor"></span><h2 id="ajustez-la-latence-sans-perdre-la-stabilité">Ajustez la latence sans perdre la stabilité</h2>
+<h2 id="ajustez-la-latence-sans-perdre-la-stabilité">Ajustez la latence sans perdre la stabilité</h2>
 <p>Le délai de bout en bout inclut les tampons de périphérique, la conversion, le routage virtuel et tout traitement dans la destination. Un chiffre de temps de traitement dans le convertisseur ne mesure qu&#x27;une partie de ce chemin. Capturez un test local du micro sec et de l&#x27;itinéraire converti si vous devez mesurer le délai entre eux.</p>
 <retype-table copy-text="| Contrôle | Réglage pratique |
 | --- | --- |
@@ -287,7 +287,7 @@
 </div>
 </retype-table>
 <p>Commencez par les paramètres par défaut de l&#x27;application et modifiez un paramètre à la fois. Si un jeu ou un autre programme gourmand en GPU partage la machine, répétez le test pendant son exécution. Conservez un préréglage fonctionnel afin de pouvoir le restaurer avant de le mettre en ligne. <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py">Interface graphique principale en temps réel</a></p>
-<span id="troubleshoot-by-where-the-fault-appears" class="docs-anchor"></span><h2 id="dépannage-selon-lendroit-où-le-défaut-apparaît">Dépannage selon l&#x27;endroit où le défaut apparaît</h2>
+<span id="app-specific-setup-discord-obs-games-calls-recording" class="docs-anchor"></span><h2 id="dépannage-selon-lendroit-où-le-défaut-apparaît">Dépannage selon l&#x27;endroit où le défaut apparaît</h2>
 <retype-table copy-text="| Symptôme | Vérifiez d'abord |
 | --- | --- |
  | Ni le compteur du convertisseur ni un enregistrement de micro sec ne répondent | Vérifiez le périphérique d’entrée du système d’exploitation et l’autorisation du microphone. |
@@ -334,8 +334,54 @@
 </div>
 </retype-table>
 <p><a href="../rvc-fundamentals/">Fondamentaux du RVC</a> · <a href="../troubleshooting/">Dépannage</a></p>
-<h2 id="rvc-blue">RVC Blue</h2>
+<span id="send-converted-audio-to-another-app" class="docs-anchor"></span><h2 id="rvc-blue">RVC Blue</h2>
 <p>Conversion de voix en temps réel sous Windows. <a href="../ilaria-rvc/rvc-blue/installation/">Installation et configuration</a>.</p>
+<span id="tune-latency-without-losing-stability" class="docs-anchor"></span><h2 id="rôles-des-périphériques-et-backends-audio">Rôles des périphériques et backends audio</h2>
+<retype-table copy-text="| Terme | Rôle |
+| --- | --- |
+| **Input Device** | Votre micro physique entrant dans le convertisseur. |
+| **Output Device** | Destination de la voix convertie (lecture du câble virtuel pour Discord/OBS/jeux, ou casque). |
+| **Monitor Device** | Sortie optionnelle pour vous entendre au casque pendant que **Output Device** alimente le câble virtuel. |
+| **Virtual Cable Input** *(Lecture)* | Périphérique de lecture (Line 1 / CABLE Input). À définir comme **Output Device**. |
+| **Virtual Cable Output** *(Enregistrement)* | Périphérique d'enregistrement (Line 1 / CABLE Output). À choisir comme **Micro** dans Discord/OBS/jeux. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Terme</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input Device</strong></td>
+<td>Votre micro physique entrant dans le convertisseur.</td>
+</tr>
+<tr>
+<td><strong>Output Device</strong></td>
+<td>Destination de la voix convertie (lecture du câble virtuel pour Discord/OBS/jeux, ou casque).</td>
+</tr>
+<tr>
+<td><strong>Monitor Device</strong></td>
+<td>Sortie optionnelle pour vous entendre au casque pendant que <strong>Output Device</strong> alimente le câble virtuel.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Input</strong> <em>(Lecture)</em></td>
+<td>Périphérique de lecture (Line 1 / CABLE Input). À définir comme <strong>Output Device</strong>.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Output</strong> <em>(Enregistrement)</em></td>
+<td>Périphérique d&#x27;enregistrement (Line 1 / CABLE Output). À choisir comme <strong>Micro</strong> dans Discord/OBS/jeux.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<ul>
+<li><strong>Micros USB / Interfaces XLR / WASAPI / ASIO :</strong> Réglez tout sur 48000 Hz ; commencez en <strong>WASAPI Shared</strong>, ou utilisez <strong>WASAPI Exclusive</strong> / <strong>ASIO</strong> si pris en charge.</li>
+<li><strong>Discord, OBS et Jeux :</strong> Désactivez Krisp/suppression d&#x27;écho si la voix est coupée ; plafonnez les FPS en jeu pour garder de la marge GPU.</li>
+<li><strong>Latence de traitement vs latence totale :</strong> Le <strong>GPU Delay</strong> ne mesure que le calcul GPU par bloc ; la <strong>latence de bout en bout</strong> inclut micro, <strong>Block Size</strong>, câble virtuel et tampons de destination.</li>
+</ul>
 
                 
                 <!-- Required only on API pages -->
@@ -370,7 +416,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

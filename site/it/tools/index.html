@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612412882">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612412882" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -383,10 +383,124 @@
 <li>Usa lo stesso pitch shift e disattiva gli effetti vocali opzionali per il primo confronto. Giudica le parole chiare, l&#x27;intonazione stabile e le pause naturali prima di regolare il suono.</li>
 <li>Per l&#x27;utilizzo dal vivo, esegui il gioco, la chiamata o l&#x27;app di streaming che usi normalmente e registra l&#x27;output instradato per almeno un minuto. Ascolta eventuali lacune, tagli netti e audio ritardato prima di ridurre il buffer.</li>
 </ol>
-<h2 id="replay">Replay</h2>
+<span id="extended-platform-format-license--maintenance-matrix" class="docs-anchor"></span><h2 id="replay">Replay</h2>
 <p><a href="https://www.weights.com/replay">Sito ufficiale</a> · <a href="https://archive.org/details/replay-8.7.0-installers">Internet Archive</a></p>
 <p>Dopo la chiusura di Weights.gg, Replay non riceve più supporto né aggiornamenti. La <a href="https://www.weights.com/replay">pagina ufficiale di Replay</a> potrebbe essere rimossa in qualsiasi momento. Internet Archive conserva gli installer storici di Replay 8.7.0. L’uso di Replay è sconsigliato per nuove installazioni. Con la chiusura di Weights, è probabile che l&#x27;installer archiviato non riesca a scaricare i file necessari e che l&#x27;installazione non vada a buon fine.</p>
 <p><a href="https://archive.org/details/replay-8.7.0-installers">Installer archiviati · Replay 8.7.0</a></p>
+<span id="replay" class="docs-anchor"></span><h2 id="matrice-estesa-piattaforme-formati-licenze-e-stato">Matrice estesa: Piattaforme, Formati, Licenze e Stato</h2>
+<blockquote>
+<p><strong>Dichiarato vs. Testato:</strong> Solo <strong>Ilaria RVC</strong> (verificata su RTX 4070) ha note di verifica diretta; le capacità delle altre app riflettono la documentazione ufficiale dei rispettivi progetti a novembre 2026.</p>
+</blockquote>
+<retype-table copy-text="| App | OS | GPU / CPU | Formati | TTS | Stato e Licenza | Facilità |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sì (Kokoro / Edge) | **Attivo** (MIT) | Facile (ZIP portatile) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | No | **Beta** (2.0.0 Beta 3) | Facile |
+| **Applio** | Windows, Linux, macOS | NVIDIA, AMD (doc.), MPS, CPU | .pth, .index, .onnx | Sì | **Attivo** (MIT) | Facile–Media |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | No | **Attivo** (MIT) | Media |
+| **Okada TGR / Deiteris** | Windows, Linux, macOS | NVIDIA CUDA, DirectML, CPU | .pth, .onnx | No | **Fork attivi** | Media |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | .pth, .index | No | **Upstream lento** (MIT) | Media |
+| **RVC Blue** | Windows | NVIDIA CUDA (12.8 / 11.8) | .pth, .index | No | **Attivo** | Facile |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
+| **RVC GUI / Replay** | Windows / Legacy | NVIDIA / Legacy | .pth | No | **Archiviato / Dismesso** | Legacy |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>App</th>
+<th>OS</th>
+<th>GPU / CPU</th>
+<th>Formati</th>
+<th>TTS</th>
+<th>Stato e Licenza</th>
+<th>Facilità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ilaria RVC</strong></td>
+<td>Windows, Linux (Cloud)</td>
+<td>NVIDIA CUDA (12.8 / 12.6)</td>
+<td>.pth, .index, .safetensors</td>
+<td>Sì (Kokoro / Edge)</td>
+<td><strong>Attivo</strong> (MIT)</td>
+<td>Facile (ZIP portatile)</td>
+</tr>
+<tr>
+<td><strong>Vonovox</strong></td>
+<td>Windows</td>
+<td>NVIDIA CUDA</td>
+<td>RVC v2 .pth, .index</td>
+<td>No</td>
+<td><strong>Beta</strong> (2.0.0 Beta 3)</td>
+<td>Facile</td>
+</tr>
+<tr>
+<td><strong>Applio</strong></td>
+<td>Windows, Linux, macOS</td>
+<td>NVIDIA, AMD (doc.), MPS, CPU</td>
+<td>.pth, .index, .onnx</td>
+<td>Sì</td>
+<td><strong>Attivo</strong> (MIT)</td>
+<td>Facile–Media</td>
+</tr>
+<tr>
+<td><strong>w-okada VCClient</strong></td>
+<td>Windows, macOS, Linux</td>
+<td>NVIDIA, DirectML, MPS, CPU</td>
+<td>.pth, .onnx</td>
+<td>No</td>
+<td><strong>Attivo</strong> (MIT)</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>Okada TGR / Deiteris</strong></td>
+<td>Windows, Linux, macOS</td>
+<td>NVIDIA CUDA, DirectML, CPU</td>
+<td>.pth, .onnx</td>
+<td>No</td>
+<td><strong>Fork attivi</strong></td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>RVC WebUI (Mainline)</strong></td>
+<td>Windows, Linux</td>
+<td>NVIDIA CUDA, CPU / DirectML</td>
+<td>.pth, .index</td>
+<td>No</td>
+<td><strong>Upstream lento</strong> (MIT)</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>RVC Blue</strong></td>
+<td>Windows</td>
+<td>NVIDIA CUDA (12.8 / 11.8)</td>
+<td>.pth, .index</td>
+<td>No</td>
+<td><strong>Attivo</strong></td>
+<td>Facile</td>
+</tr>
+<tr>
+<td><strong>Redpanda-vc</strong></td>
+<td>Windows, Linux</td>
+<td>NVIDIA CUDA (Beatrice CPU)</td>
+<td>RVC, Beatrice, Rectified Flow</td>
+<td>No</td>
+<td><strong>Fork attivo</strong></td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>RVC GUI / Replay</strong></td>
+<td>Windows / Legacy</td>
+<td>NVIDIA / Legacy</td>
+<td>.pth</td>
+<td>No</td>
+<td><strong>Archiviato / Dismesso</strong></td>
+<td>Legacy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 
                 
                 <!-- Required only on API pages -->
@@ -421,7 +535,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

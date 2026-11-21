@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612412882">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612412882" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -231,7 +231,7 @@
 <li>Prova per più di una singola parola. Includere un discorso tranquillo, una frase ad alta voce e una breve pausa. Ascolta eventuali interruzioni, deviazioni o anomalie con lo stesso carico di lavoro che prevedi di utilizzare dal vivo.</li>
 </ol>
 <p>Evitare l&#x27;ascolto attraverso gli altoparlanti vicino a un microfono attivo. Le cuffie ti aiutano a identificare un problema di routing senza reinserire l&#x27;uscita nell&#x27;ingresso.</p>
-<span id="send-converted-audio-to-another-app" class="docs-anchor"></span><h2 id="invia-laudio-convertito-a-unaltra-app">Invia l&#x27;audio convertito a un&#x27;altra app</h2>
+<span id="understand-device-roles-and-audio-backends" class="docs-anchor"></span><h2 id="invia-laudio-convertito-a-unaltra-app">Invia l&#x27;audio convertito a un&#x27;altra app</h2>
 <p>Un dispositivo audio virtuale fornisce un endpoint di riproduzione per il convertitore e un endpoint di registrazione corrispondente per l&#x27;app ricevente. I nomi degli endpoint dipendono dal driver. Ad esempio, un cavo virtuale può chiamare il suo endpoint di riproduzione &quot;Input&quot; e il suo endpoint di registrazione &quot;Output&quot; perché le istruzioni utilizzano la prospettiva del cavo.</p>
 <div id="invia-laudio-convertito-a-unaltra-app-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">Physical microphone → RVC converter → virtual playback endpoint
@@ -239,7 +239,7 @@
                               matching recording endpoint → call or stream</code></pre>
 </doc-codeblock></div>
 <p>Seleziona l&#x27;endpoint di registrazione corrispondente come microfono nell&#x27;app ricevente ed effettua lì una breve registrazione di prova. Se il monitor locale suona correttamente ma la registrazione no, verifica l&#x27;input di destinazione e rimuovi qualsiasi sorgente microfonica duplicata. Se monitori l&#x27;audio convertito, utilizza un&#x27;uscita per cuffie separata. Evita di reinstradare l&#x27;intero mix desktop o l&#x27;audio dell&#x27;app ricevente nel convertitore.</p>
-<span id="tune-latency-without-losing-stability" class="docs-anchor"></span><h2 id="ottimizza-la-latenza-senza-perdere-stabilità">Ottimizza la latenza senza perdere stabilità</h2>
+<h2 id="ottimizza-la-latenza-senza-perdere-stabilità">Ottimizza la latenza senza perdere stabilità</h2>
 <p>Il ritardo end-to-end include buffer del dispositivo, conversione, routing virtuale e qualsiasi elaborazione nella destinazione. Una cifra del tempo di elaborazione nel convertitore misura solo una parte di quel percorso. Cattura un test locale sia del microfono asciutto che del percorso convertito se hai bisogno di misurare il ritardo tra di loro.</p>
 <retype-table copy-text="| Controllo | Regolazione pratica |
 | --- | --- |
@@ -287,7 +287,7 @@
 </div>
 </retype-table>
 <p>Inizia con le impostazioni predefinite dell&#x27;app e modifica un&#x27;impostazione alla volta. Se un gioco o un altro programma con uso intensivo della GPU condivide la macchina, ripeti il ​​test mentre è in esecuzione. Mantieni una preimpostazione funzionante in modo da poterla ripristinare prima di andare in diretta. <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py">GUI principale in tempo reale</a></p>
-<span id="troubleshoot-by-where-the-fault-appears" class="docs-anchor"></span><h2 id="risolvi-il-problema-in-base-al-punto-in-cui-appare-lerrore">Risolvi il problema in base al punto in cui appare l&#x27;errore</h2>
+<span id="app-specific-setup-discord-obs-games-calls-recording" class="docs-anchor"></span><h2 id="risolvi-il-problema-in-base-al-punto-in-cui-appare-lerrore">Risolvi il problema in base al punto in cui appare l&#x27;errore</h2>
 <retype-table copy-text="| Sintomo | Controlla prima |
 | --- | --- |
  | Né il misuratore del convertitore né una registrazione con microfono a secco rispondono | Controlla il dispositivo di input del sistema operativo e l'autorizzazione del microfono. |
@@ -334,8 +334,54 @@
 </div>
 </retype-table>
 <p><a href="../rvc-fundamentals/">Fondamenti di RVC</a> · <a href="../troubleshooting/">Risoluzione dei problemi</a></p>
-<h2 id="rvc-blue">RVC Blue</h2>
+<span id="send-converted-audio-to-another-app" class="docs-anchor"></span><h2 id="rvc-blue">RVC Blue</h2>
 <p>Conversione vocale in tempo reale su Windows. <a href="../ilaria-rvc/rvc-blue/installation/">Installazione e configurazione</a>.</p>
+<span id="tune-latency-without-losing-stability" class="docs-anchor"></span><h2 id="ruoli-dei-dispositivi-e-backend-audio">Ruoli dei dispositivi e backend audio</h2>
+<retype-table copy-text="| Termine | Cosa indica |
+| --- | --- |
+| **Input Device** | Il microfono fisico (o interfaccia audio) che invia la voce al convertitore. |
+| **Output Device** | Dove va la voce convertita (endpoint di riproduzione del cavo virtuale per Discord/OBS/giochi, o cuffie per test locale). |
+| **Monitor Device** | Seconda uscita opzionale per riascoltarti in cuffia mentre **Output Device** alimenta il cavo virtuale. |
+| **Virtual Cable Input** *(Riproduzione)* | Voce sotto Riproduzione Windows (Line 1 su VAC Lite / CABLE Input su VB-CABLE). Usala come **Output Device**. |
+| **Virtual Cable Output** *(Registrazione)* | Voce sotto Registrazione Windows (Line 1 / CABLE Output). Usala come **Microfono** in Discord, OBS o giochi. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Termine</th>
+<th>Cosa indica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input Device</strong></td>
+<td>Il microfono fisico (o interfaccia audio) che invia la voce al convertitore.</td>
+</tr>
+<tr>
+<td><strong>Output Device</strong></td>
+<td>Dove va la voce convertita (endpoint di riproduzione del cavo virtuale per Discord/OBS/giochi, o cuffie per test locale).</td>
+</tr>
+<tr>
+<td><strong>Monitor Device</strong></td>
+<td>Seconda uscita opzionale per riascoltarti in cuffia mentre <strong>Output Device</strong> alimenta il cavo virtuale.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Input</strong> <em>(Riproduzione)</em></td>
+<td>Voce sotto Riproduzione Windows (Line 1 su VAC Lite / CABLE Input su VB-CABLE). Usala come <strong>Output Device</strong>.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Output</strong> <em>(Registrazione)</em></td>
+<td>Voce sotto Registrazione Windows (Line 1 / CABLE Output). Usala come <strong>Microfono</strong> in Discord, OBS o giochi.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<ul>
+<li><strong>Microfoni USB / Interfacce XLR:</strong> Imposta 48000 Hz su tutti i dispositivi; usa <strong>WASAPI Shared</strong> per compatibilità con i cavi virtuali, <strong>WASAPI Exclusive</strong> per minor overhead quando supportato, oppure <strong>ASIO</strong> su interfacce dedicate (es. RVC Blue / w-okada).</li>
+<li><strong>Discord, OBS e Giochi:</strong> Su Discord disattiva Krisp, Cancellazione eco e sensibilità automatica se tagliano le parole; su OBS aggiungi una sola sorgente <strong>Cattura audio in ingresso</strong> sul cavo virtuale; nei giochi limita gli FPS per lasciare margine alla GPU.</li>
+<li><strong>Latenza di elaborazione vs. latenza end-to-end:</strong> Il <strong>GPU Delay</strong> misura solo il tempo GPU per blocco; la <strong>latenza totale</strong> include microfono, <strong>Block Size</strong>, crossfade, cavo virtuale e buffer di Discord/OBS/gioco.</li>
+</ul>
 
                 
                 <!-- Required only on API pages -->
@@ -370,7 +416,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

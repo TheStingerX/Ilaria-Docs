@@ -28,7 +28,7 @@ El ZIP está cifrado con **AES-256**, por lo que el Explorador de Windows no pue
 
 1. Abre la carpeta extraída y ejecuta `YuneVoix.exe`.
 2. Como el programa aún no está firmado digitalmente, Windows SmartScreen puede mostrar *"Windows protegió su PC"*. Haz clic en **Más información → Ejecutar de todas formas**.
-   - Si tu antivirus pone algún archivo en cuarentena, añade la carpeta `YuneVoix` como exclusión.
+   - Si tu antivirus marca algún archivo, verifica que el archivo provenga de la release oficial de YuneVoix, revisa **Seguridad de Windows → Historial de protección** y evita desactivar el antivirus o excluir carpetas completas.
 3. **Espera la preparación inicial del motor**:
    - **NVIDIA**: unos minutos en el primer arranque.
    - **AMD**: desde la v0.7.1 usa **DirectML** en la tarjeta dedicada por defecto. Solo si cambias `Settings → General → "AMD graphics engine"` a **MIGraphX (experimental)** la primera preparación puede tardar **10–30 minutos** (Windows también puede descargar AMD MIGraphX por Windows Update).

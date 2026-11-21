@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -179,6 +179,13 @@
 <p>Run Ilaria RVC in a browser with a GPU supplied by the cloud platform. Choose a notebook below. Enable an NVIDIA accelerator before running the first cell.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>Prepare one short clean WAV and a compatible inference model. For training, keep the original dataset and a few separate test clips on your own computer. The notebook runs on a remote Linux machine.</p>
+<h3 id="credits-free-tier-and-gpu-availability">Credits, free tier, and GPU availability</h3>
+<p>Lightning AI uses a <strong>credits-based billing model</strong> (<code translate="no" v-pre>1 credit = $1 USD</code>, billed per second of GPU compute; see <a href="https://lightning.ai/pricing">Lightning AI Pricing</a>):</p>
+<ul>
+<li><strong>Free tier:</strong> Includes <strong>one free 4-CPU Studio</strong> (up to 4 continuous hours before restart) and <strong>10 GB of free storage</strong> (storage above 10 GB is billed monthly).</li>
+<li><strong>Starter credits vs. paid plans:</strong> New accounts typically receive initial starter credits after sign-up/verification (not renewing monthly free GPU hours). Paid <strong>Pro</strong> subscriptions provide a monthly credit allotment.</li>
+<li><strong>Check your balance and GPUs:</strong> Open your Studio dashboard / billing panel to check your remaining credit balance before starting a GPU instance, and remember that specific GPU types (such as T4, L4, or L40) are subject to regional/account availability. Do dependency setup on the free CPU Studio first, then switch to GPU only when ready to run inference or training.</li>
+</ul>
 <h2 id="run-on-lightning-ai-studio">Run on Lightning AI Studio</h2>
 <ol>
 <li>Create a GPU Studio, upload the notebook and open it in JupyterLab.</li>
@@ -309,7 +316,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

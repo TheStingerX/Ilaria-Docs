@@ -69,3 +69,16 @@ Comece com os padrões do aplicativo e altere uma configuração de cada vez. Se
 ## RVC Blue
 
 Conversão de voz em tempo real no Windows. [Instalação e configuração](../other-rvcs/rvc-blue/installation.md).
+## Funções dos dispositivos e backends de áudio
+
+| Termo | O que é |
+| --- | --- |
+| **Input Device** | O teu microfone físico que entra no conversor. |
+| **Output Device** | Destino da voz convertida (reprodução do cabo virtual para Discord/OBS/jogos, ou auscultadores). |
+| **Monitor Device** | Saída opcional para te ouvires nos auscultadores enquanto **Output Device** alimenta o cabo virtual. |
+| **Virtual Cable Input** *(Reprodução)* | Aparece em Reprodução (Line 1 / CABLE Input). Define como **Output Device**. |
+| **Virtual Cable Output** *(Gravação)* | Aparece em Gravação (Line 1 / CABLE Output). Escolhe como **Microfone** no Discord, OBS ou jogos. |
+
+- **Microfones USB / Interfaces XLR / WASAPI / ASIO:** Alinha tudo a 48000 Hz; usa **WASAPI Shared** por compatibilidade, **WASAPI Exclusive** ou **ASIO** quando suportado.
+- **Discord, OBS e Jogos:** Desativa Krisp/cancelamento de eco no Discord se cortar palavras; limita os FPS nos jogos para deixar margem na GPU.
+- **Latência de processamento vs. latência total:** O **GPU Delay** mede apenas o tempo GPU por bloco; a **latência ponta a ponta** soma microfone, **Block Size**, cabo virtual e buffers de destino.

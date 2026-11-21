@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612442521">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614457516">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Ilaria RVC in der Cloud">
-    <meta name="description" content="Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.">
+    <meta name="description" content="Vergleiche Kaggle, Google Colab und Lightning AI Studio, um Ilaria RVC im Browser ohne lokale kompatible NVIDIA-GPU zu nutzen.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612442521" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614457516" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:description" content="Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.">
+    <meta property="og:description" content="Vergleiche Kaggle, Google Colab und Lightning AI Studio, um Ilaria RVC im Browser ohne lokale kompatible NVIDIA-GPU zu nutzen.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
-    <meta name="twitter:description" content="Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.">
+    <meta name="twitter:description" content="Vergleiche Kaggle, Google Colab und Lightning AI Studio, um Ilaria RVC im Browser ohne lokale kompatible NVIDIA-GPU zu nutzen.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/cloud/">
@@ -175,9 +175,96 @@
 
                 <!-- Page content  -->
 <span id="ilaria-rvc-in-the-cloud" class="docs-anchor"></span><h1 id="ilaria-rvc-in-der-cloud">Ilaria RVC in der Cloud</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.</div>
-<p>Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.</p>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Vergleiche Kaggle, Google Colab und Lightning AI Studio, um Ilaria RVC im Browser ohne lokale kompatible NVIDIA-GPU zu nutzen.</div>
+<p>Nutze Ilaria RVC im Browser mit einer Cloud-GPU. Wähle unten ein Notebook und aktiviere einen NVIDIA-Beschleuniger vor der ersten Zelle.</p>
 <p><a href="../kaggle/">Kaggle</a> · <a href="../colab/">Google Colab</a> · <a href="../lightning-ai/">Lightning AI Studio</a></p>
+<span id="compare-cloud-platforms" class="docs-anchor"></span><h2 id="cloud-plattformen-im-vergleich">Cloud-Plattformen im Vergleich</h2>
+<retype-table copy-text="| Merkmal | Kaggle | Google Colab | Lightning AI Studio |
+| --- | --- | --- | --- |
+| **GPU-Verfügbarkeit** | Kostenloses Wochenkontingent (z. B. **T4 x2**, je nach Kaggle-Limit) | Gratis-Tarif (dynamisch, ohne Garantie) oder bezahlt (**Pro / Pro+ / Pay-As-You-Go** über Compute Units) | Kostenloses 4-CPU-Studio; GPUs sekundengenau über Start- oder Kauf-Credits |
+| **Kosten &amp; Credits** | Kostenlos im Wochenkontingent (Telefon-Verifizierung nötig) | Gratis oder Compute Units (siehe [Colab FAQ](https://research.google.com/colaboratory/faq.html)) | `1 Credit = $1 USD` pro Sekunde; siehe [Lightning AI Preise](https://lightning.ai/pricing) |
+| **Einschränkungen** | **Internet** aktivieren; Notebooks privat halten | [Unzulässige Aktivitäten](https://research.google.com/colaboratory/faq.html#disallowed-activities) verbieten öffentliches Web-Hosting &amp; Proxies | Telefon-Verifizierung dauert 2–3 Werktage; GPU-Verfügbarkeit variiert |
+| **Persistenz** | Sitzungsbasiert; Auto-Export nach `ilaria-shared/models` | Temporär; Checkpoints auf **Google Drive** sichern | Persistentes **Teamspace Drive** (**10 GB frei**) |
+| **Sitzungsdauer** | Leerlauf-Timeouts; Commits verbrauchen Kontingent | Leerlauf-Timeouts &amp; Laufzeitlimits | Gratis-CPU-Studio bis zu 4 Std. am Stück vor Neustart |
+| **Training &amp; Inferenz** | Beides (T4 nutzt FP16) | Beides (je nach GPU) | Beides |
+| **Export** | ZIP `EXPORT = True` + **FileBrowser** | ZIP `EXPORT = True` + Google Drive | Teamspace Drive oder ZIP `EXPORT = True` |
+| **Privatsphäre** | Notebook **privat** halten (gibt WebUI/FileBrowser-Passwörter aus) | Notebooks privat halten | Studio &amp; Port Viewer privat halten |
+| **Einrichtung** | Mittel | Einfach | Mittel |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Kaggle</th>
+<th>Google Colab</th>
+<th>Lightning AI Studio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPU-Verfügbarkeit</strong></td>
+<td>Kostenloses Wochenkontingent (z. B. <strong>T4 x2</strong>, je nach Kaggle-Limit)</td>
+<td>Gratis-Tarif (dynamisch, ohne Garantie) oder bezahlt (<strong>Pro / Pro+ / Pay-As-You-Go</strong> über Compute Units)</td>
+<td>Kostenloses 4-CPU-Studio; GPUs sekundengenau über Start- oder Kauf-Credits</td>
+</tr>
+<tr>
+<td><strong>Kosten &amp; Credits</strong></td>
+<td>Kostenlos im Wochenkontingent (Telefon-Verifizierung nötig)</td>
+<td>Gratis oder Compute Units (siehe <a href="https://research.google.com/colaboratory/faq.html">Colab FAQ</a>)</td>
+<td><code translate="no" v-pre>1 Credit = $1 USD</code> pro Sekunde; siehe <a href="https://lightning.ai/pricing">Lightning AI Preise</a></td>
+</tr>
+<tr>
+<td><strong>Einschränkungen</strong></td>
+<td><strong>Internet</strong> aktivieren; Notebooks privat halten</td>
+<td><a href="https://research.google.com/colaboratory/faq.html#disallowed-activities">Unzulässige Aktivitäten</a> verbieten öffentliches Web-Hosting &amp; Proxies</td>
+<td>Telefon-Verifizierung dauert 2–3 Werktage; GPU-Verfügbarkeit variiert</td>
+</tr>
+<tr>
+<td><strong>Persistenz</strong></td>
+<td>Sitzungsbasiert; Auto-Export nach <code translate="no" v-pre>ilaria-shared/models</code></td>
+<td>Temporär; Checkpoints auf <strong>Google Drive</strong> sichern</td>
+<td>Persistentes <strong>Teamspace Drive</strong> (<strong>10 GB frei</strong>)</td>
+</tr>
+<tr>
+<td><strong>Sitzungsdauer</strong></td>
+<td>Leerlauf-Timeouts; Commits verbrauchen Kontingent</td>
+<td>Leerlauf-Timeouts &amp; Laufzeitlimits</td>
+<td>Gratis-CPU-Studio bis zu 4 Std. am Stück vor Neustart</td>
+</tr>
+<tr>
+<td><strong>Training &amp; Inferenz</strong></td>
+<td>Beides (T4 nutzt FP16)</td>
+<td>Beides (je nach GPU)</td>
+<td>Beides</td>
+</tr>
+<tr>
+<td><strong>Export</strong></td>
+<td>ZIP <code translate="no" v-pre>EXPORT = True</code> + <strong>FileBrowser</strong></td>
+<td>ZIP <code translate="no" v-pre>EXPORT = True</code> + Google Drive</td>
+<td>Teamspace Drive oder ZIP <code translate="no" v-pre>EXPORT = True</code></td>
+</tr>
+<tr>
+<td><strong>Privatsphäre</strong></td>
+<td>Notebook <strong>privat</strong> halten (gibt WebUI/FileBrowser-Passwörter aus)</td>
+<td>Notebooks privat halten</td>
+<td>Studio &amp; Port Viewer privat halten</td>
+</tr>
+<tr>
+<td><strong>Einrichtung</strong></td>
+<td>Mittel</td>
+<td>Einfach</td>
+<td>Mittel</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="which-service-should-you-choose" class="docs-anchor"></span><h2 id="welchen-dienst-wählen">Welchen Dienst wählen?</h2>
+<ul>
+<li><strong>Kostenlose GPU für Training/Tests:</strong> Starte mit <strong><a href="../kaggle/">Kaggle</a></strong>.</li>
+<li><strong>Bezahltes Colab oder Google Drive:</strong> Nutze <strong><a href="../colab/">Google Colab</a></strong>.</li>
+<li><strong>Dauerhafter Speicher zwischen Sitzungen:</strong> Nutze <strong><a href="../lightning-ai/">Lightning AI Studio</a></strong>.</li>
+</ul>
 
                 
                 <!-- Required only on API pages -->
@@ -212,7 +299,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

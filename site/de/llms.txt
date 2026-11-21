@@ -16,6 +16,9 @@
 - [Wählen Sie eine RVC-App](https://docs.ilariarvc.shop/de/reference/tools.md): Vergleichen Sie kompatible Apps für Live-Sprachkonvertierung, Dateikonvertierung und Schulung.
 - [RVC Fehlerbehebung](https://docs.ilariarvc.shop/de/reference/troubleshooting.md): Schritt-für-Schritt-RVC-Fehlerbehebung für Einsteiger und Profis: Windows/Startfehler, GPU/CUDA/DirectML, Modelle, Training, Live-Mikrofon und Cloud-Notebooks.
 - [Glossar](https://docs.ilariarvc.shop/de/reference/glossary.md): Siehe RVC-Grundlagen, Modelle und Dateien und Schulung] für diese Begriffe im Kontext.
+- [Sicherheit, Datenschutz & Modell-Lizenzen](https://docs.ilariarvc.shop/de/reference/safety-privacy-licensing.md): Praxisleitfaden zu Modellsicherheit (.pth vs .safetensors), Stimm-Einwilligung, Lizenzen, Cloud-Notebook-Sicherheit und Schutz von Zugangsdaten.
+- [GPU-Leistung & Fehlerbehebung](https://docs.ilariarvc.shop/de/reference/gpu-performance.md): Übergreifender Leitfaden zu GPU-Auslastung, VRAM, Power-Limits, Thermal Throttling, CUDA/CPU-Engpässen und Gaming-Konflikten in RVC-Apps.
+- [Benchmarks & Leistungsvergleich](https://docs.ilariarvc.shop/de/reference/benchmarking.md): So misst du RVC-Trainingsgeschwindigkeit, Echtzeitfaktor, GPU Delay, End-to-End-Latenz, VRAM und Throttling mit wiederholbaren A/B-Tests.
 - [Konvertieren Sie eine Aufnahme mit Ilaria RVC](https://docs.ilariarvc.shop/de/conversion/voice-conversion.md): Die Sprachkonvertierung beginnt mit einer Aufführung.
 - [Tonhöhe und Audioqualität einstellen](https://docs.ilariarvc.shop/de/conversion/audio-quality.md): Wählen Sie einen kurzen Auszug aus, der das Problem enthält. Führen Sie eine Referenzkonvertierung durch und vergleichen Sie diese mit jeweils einer geänderten Einstellung.
 - [Text to Speech und RVC](https://docs.ilariarvc.shop/de/conversion/text-to-speech.md): Text to Speech (TTS) generiert eine Quellaufzeichnung aus den von Ihnen eingegebenen Wörtern. RVC wendet dann ein separates Sprachmodell auf diese Aufnahme an.
@@ -39,7 +42,7 @@
 
 ### Cloud
 
-- [Ilaria RVC in der Cloud](https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/cloud.md): Wähle eine Plattform, um Ilaria RVC im Browser zu nutzen.
+- [Ilaria RVC in der Cloud](https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/cloud.md): Vergleiche Kaggle, Google Colab und Lightning AI Studio, um Ilaria RVC im Browser ohne lokale kompatible NVIDIA-GPU zu nutzen.
 - [Kaggle](https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/kaggle.md): Klicken Sie im Editor auf Alle ausführen. Sie können die vier Codezellen auch einzeln von oben nach unten ausführen.
 - [Google Colab](https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/colab.md): Bereite eine kurze, saubere WAV-Datei, ein passendes Inferenzmodell und bei Bedarf eine Sicherung des Trainingsdatensatzes vor.
 - [Lightning AI Studio](https://docs.ilariarvc.shop/de/ilaria-rvc/cloud/lightning-ai.md): Bereite eine kurze, saubere WAV-Datei, ein passendes Inferenzmodell und bei Bedarf eine Sicherung des Trainingsdatensatzes vor.
@@ -56,16 +59,16 @@
 - [Datasets, Dataset Checker & Audio Analyzer](https://docs.ilariarvc.shop/de/ilaria-rvc/train/datasets.md): Dein Dataset ist der wichtigste Faktor dafür, wie natürlich, sauber und ausdrucksstark dein RVC-Stimmenmodell klingt.
 - [Training und Kontrollpunkte](https://docs.ilariarvc.shop/de/ilaria-rvc/train/training-workflow.md): Wählen Sie einen Datensatz und wählen Sie eine kompatible RVC-Architektur, Abtastrate, Tonhöhenführung, Einbetter und Generator/Diskriminator-Vorzüge.
 - [Embedder und Pretrains](https://docs.ilariarvc.shop/de/ilaria-rvc/train/embedders.md): Öffnen Sie Embedder-Einstellungen unter Audioverarbeitung. Liest gespeicherte Modellmetadaten automatisch und verwendet ContentVec, wenn kein Einbetter aufgezeichnet ist.
-- [Trainingskontrollen und Arbeitsablauf](https://docs.ilariarvc.shop/de/ilaria-rvc/train/training-controls.md): Version 2.1.0 bietet 32-, 40- und 48-kHz-Einstellungen mit verfügbaren Kombinationen, die vom Vocoder bestimmt werden.
+- [Trainingskontrollen und Arbeitsablauf](https://docs.ilariarvc.shop/de/ilaria-rvc/train/training-controls.md): Version 2.4.7 bietet 32-, 40- und 48-kHz-Einstellungen mit verfügbaren Kombinationen, die vom Vocoder bestimmt werden.
 - [Warteschlange, Dashboard und Warnungen](https://docs.ilariarvc.shop/de/ilaria-rvc/train/queue-and-dashboard.md): Konfigurieren Sie das Experiment im Training, bestätigen Sie seinen Datensatz und Modellnamen und fügen Sie es zur Trainingswarteschlange hinzu.
 - [Jede Trainingssteuerung erklärt](https://docs.ilariarvc.shop/de/ilaria-rvc/train/training-buttons.md): Training erstellt aus Aufnahmen ein neues Sprachmodell.
 
 ### Other
 
-- [Modellbibliothek und Zusammenführung](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/model-library.md): Öffnen Sie Andere und importieren Sie ein unterstütztes lokales Modell oder verwenden Sie die Download-Steuerung. Halten Sie einen Prüfpunkt und seinen eigenen Index zusammen.
+- [Modellbibliothek und Fusion](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/model-library.md): Importiere, prüfe und verwalte RVC-.pth-, .index-, .safetensors-Dateien, Embedder und Voice-Blender-Mischungen in Ilaria RVC.
 - [Voice Blender (Modelle mischen)](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/voice-blender.md): In Ilaria RVC findest du die Voice-Blender-Funktion im Tab Other unter Merge models.
 - [Safetensors ↔ PTH Konverter](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/safetensors-converter.md): Einfacher, ausführlicher Guide zum Safetensors- und PTH-Konverter unter Other in Ilaria RVC, inklusive Erhalt der RVC-Metadaten und Move .pth to models.
-- [Audioanalysator](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/audio-analyzer.md): Öffnen Sie Andere → Audioanalysator. Fügen Sie bis zu acht Audiodateien zum Vergleichen hinzu.
+- [Audio Analyzer](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/audio-analyzer.md): Öffne Other → Audio Analyzer in Ilaria RVC, um bis zu acht Audiodateien per Wellenform, Spektrogramm, Durchschnittsspektrum, Pitch und Pegeltabellen zu vergleichen.
 - [Jedes andere Bedienfeld erklärt](https://docs.ilariarvc.shop/de/ilaria-rvc/manage/other-buttons.md): Verwenden Sie Andere, um Dateien zu verwalten, Modelle zu prüfen oder zu kombinieren, Audio zu überprüfen und die App zu warten.
 
 ## Other RVCs
@@ -155,6 +158,7 @@
 - [Ultimate Vocal Remover (UVR5)](https://docs.ilariarvc.shop/de/non-rvc/uvr5/overview.md): UVR5 (Ultimate Vocal Remover v5 GUI) ist eine kostenlose Open-Source-Desktop-App zur KI-gestützten Audiotrennung.
 - [UVR5 herunterladen und installieren](https://docs.ilariarvc.shop/de/non-rvc/uvr5/installation.md): Die offiziellen Windows- und macOS-Pakete bringen eine isolierte Python- und PyTorch-Umgebung mit, sodass du Python nicht separat installieren musst.
 - [UVR5-Anleitung & empfohlene Modelle](https://docs.ilariarvc.shop/de/non-rvc/uvr5/usage-and-models.md): Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum Trennen von Vocals, Entfernen von Harmonien/Backing Vocals, Hall/Echo und Rauschen zu wählen (inklusive der empfohlenen Setup-Modelle).
+- [Ultimate Vocal Remover 6 (UVR6): Vorbereitungsguide](https://docs.ilariarvc.shop/de/non-rvc/uvr5/uvr6-preparation.md): Vorbereitender Überblick zu Ultimate Vocal Remover 6 (UVR6), offiziell für Windows am 11. Dezember 2026 angekündigt.
 
 ### MVSep
 

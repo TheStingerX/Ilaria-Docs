@@ -16,7 +16,7 @@
 ## 2. Erstellen Sie eine bearbeitbare Kopie und schalten Sie die GPU ein.
 
 1. Öffnen Sie das [veröffentlichte Notizbuch](https://www.kaggle.com/code/ilarialopez/ilaria-rvc). Melden Sie sich an, wenn Sie dazu aufgefordert werden. Verwenden Sie **Kopieren & Bearbeiten** oder die entsprechende Kopieraktion, um Ihre eigene bearbeitbare Version zu öffnen.
-2. Wenn Sie stattdessen von GitHub aus starten, laden Sie die Rohdatei `Ilaria-RVC-2.1-Kaggle.ipynb` herunter, erstellen Sie ein Notizbuch in Kaggle und importieren Sie die Datei über den Notizbuch-Editor. Öffnen Sie das resultierende Notebook auf Kaggle, anstatt es auf Ihrem eigenen Computer auszuführen.
+2. Wenn Sie stattdessen von GitHub aus starten, laden Sie die Rohdatei `Ilaria-RVC-Kaggle.ipynb` herunter, erstellen Sie ein Notizbuch in Kaggle und importieren Sie die Datei über den Notizbuch-Editor. Öffnen Sie das resultierende Notebook auf Kaggle, anstatt es auf Ihrem eigenen Computer auszuführen.
 3. Öffnen Sie die Sitzungseinstellungen im Editor. Wählen Sie für **Beschleuniger** eine verfügbare **GPU**-Option aus. Wenn Kaggle nach der Änderung zum Neustart der Sitzung auffordert, akzeptieren Sie dies, bevor Sie Dateien hinzufügen oder einen Lauf starten.
 4. Aktivieren Sie **Internet** in denselben Sitzungseinstellungen. Das Notebook benötigt eine Verbindung, um den Code, die Abhängigkeiten und Gewichtungen herunterzuladen und dann seinen Gradio-Link zu öffnen.
 5. Wenn eine der Einstellungen nicht verfügbar ist, lesen Sie die Erklärung von Kaggle. Überprüfen Sie die Berechtigung Ihres Kontos und die aktuelle Verfügbarkeit des Accelerators. Versuchen Sie es erneut, wenn Sie beide Einstellungen aktivieren können.

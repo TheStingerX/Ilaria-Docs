@@ -96,3 +96,30 @@ In Ilaria RVC, recent releases use the model library for inference exports and a
 | A usable model has no index | Check whether index generation was skipped or failed. Export and test the checkpoint independently, then build its index from the matching experiment if needed. |
 
 Keep the first failing message and the configuration associated with the run. For more checks, see [Troubleshooting](../reference/troubleshooting.md).
+
+## Indicative Training Profiles (Adapt to Your Data & Hardware)
+
+These three presets are **indicative starting points**, not universal rules. Always adjust **Batch Size** to fit your VRAM and judge checkpoints by listening to the same held-out test clips.
+
+### Beginner Training (Safe Baseline)
+
+- **Best for:** First voice model, 5–15 minutes of clean single-speaker audio, 6–8 GB VRAM GPUs.
+- **Settings:** RVC **v2** · **40 kHz** (or `32 kHz` for RefineGAN) · Pitch Guidance **ON** (`rmvpe`) · Embedder `contentvec` · Stock/verified HiFi-GAN pretrain · **Batch Size `4–8`** · **Epochs `200`** (save every `25–50` epochs) · Precision **FP32** (or **BF16** on RTX 30/40/50) · GPU Caching **OFF** · Workers `2` · Fused AdamW **OFF**.
+- **Why:** Prioritizes stability and avoids out-of-memory errors or early overfitting while producing multiple checkpoints to compare.
+
+### Intermediate Training (Balanced Quality & Speed)
+
+- **Best for:** 15–30 minutes of cleaned speech/singing, 8–12 GB VRAM GPUs.
+- **Settings:** RVC **v2** · **40 kHz** or **48 kHz** (if source bandwidth reaches >20 kHz) · `rmvpe` · `contentvec` or `klm-vocal-contentvec` / `spin-v2` (matched to pretrain) · **Batch Size `8–12`** · **Epochs `250–350`** (or equivalent **Total Steps**) · Save every `25–50` epochs · Precision **BF16** (RTX 30/40/50) or **FP16** (T4/RTX 20) · Workers `4`, Prefetch `4–8` · Build **FAISS `Auto` index** after choosing the best checkpoint.
+- **Why:** Uses faster mixed precision and larger batches while keeping regular checkpoints and held-out listening previews.
+
+### Advanced Training & Optimization
+
+- **Best for:** Large or curated multi-emotion/singing datasets, 12–24 GB+ VRAM, custom pretrains.
+- **Settings:** RVC **v2** · Matched rate (`32/40/48 kHz`) & vocoder (`HiFi-GAN`, `MRF HiFi-GAN`, or `RefineGAN` at `32 kHz` in Ilaria RVC) · Custom/matched G/D pretrain & embedder · **Batch Size `12–16+`** · **Total Steps** target (for consistent gradient updates regardless of dataset size) · **GPU Caching ON** (only if VRAM comfortably fits the dataset; benchmark epoch time first) · **Fused AdamW ON** (test in a fresh run) · **Training Queue** for overnight A/B runs · **TensorBoard** monitoring + **Audio Analyzer** comparison.
+- **Learning rate:** Most RVC WebUIs (including Ilaria RVC) use the standard RVC v2 optimizer schedule (`1e-4` base); only change learning rate in frontends that expose it if you understand how it scales with batch size.
+
+## How to Spot Underfitting vs. Overfitting by Ear
+
+1. **Underfitting (too early):** The output still sounds mostly like the input speaker, misses target timbre on sustained vowels, or loses character on high/low notes. *Fix:* Continue training from the latest `G_*.pth`/`D_*.pth` checkpoint.
+2. **Overfitting (too late):** The voice sounds robotic/metallic on unfamiliar words, reproduces dataset room noise or breath artifacts, or sounds great *only* on phrases similar to the training set. *Fix:* Roll back to an earlier checkpoint (`50–100` epochs earlier) and inspect the dataset in [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).

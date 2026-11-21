@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612452243">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614468104">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Analisador de Áudio">
-    <meta name="description" content="Abra Outro → Analisador de Áudio. Adicione até oito arquivos de áudio para comparar.">
+    <meta name="title" content="Audio Analyzer">
+    <meta name="description" content="Abre Other → Audio Analyzer no Ilaria RVC para comparar até oito ficheiros de áudio com forma de onda, espectrograma, espectro médio, pitch e tabelas de nível.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/audio-analyzer/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/pt/ilaria-rvc/audio-analyzer/">
-    <meta property="og:title" content="Analisador de Áudio">
+    <meta property="og:title" content="Audio Analyzer">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/pt/ilaria-rvc/audio-analyzer/">
-    <meta name="twitter:title" content="Analisador de Áudio">
+    <meta name="twitter:title" content="Audio Analyzer">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/manage/audio-analyzer.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612452243" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614468104" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612452243" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612452243" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="pt_PT">
-    <meta property="og:description" content="Abra Outro → Analisador de Áudio. Adicione até oito arquivos de áudio para comparar.">
+    <meta property="og:description" content="Abre Other → Audio Analyzer no Ilaria RVC para comparar até oito ficheiros de áudio com forma de onda, espectrograma, espectro médio, pitch e tabelas de nível.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
-    <meta name="twitter:description" content="Abra Outro → Analisador de Áudio. Adicione até oito arquivos de áudio para comparar.">
+    <meta name="twitter:description" content="Abre Other → Audio Analyzer no Ilaria RVC para comparar até oito ficheiros de áudio com forma de onda, espectrograma, espectro médio, pitch e tabelas de nível.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/audio-analyzer/">
@@ -174,52 +174,69 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="audio-analyzer" class="docs-anchor"></span><h1 id="analisador-de-áudio">Analisador de Áudio</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Abra Outro → Analisador de Áudio. Adicione até oito arquivos de áudio para comparar.</div>
-<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)</a></p>
-<p>Abra <strong>Outro → Analisador de Áudio</strong>. Adicione até oito arquivos de áudio para comparar. Um conjunto útil contém a entrada original, uma conversão de linha de base e uma ou duas variantes feitas com uma configuração alterada.</p>
-<retype-table copy-text="| Visualizar | Pergunta para responder |
-| --- | --- |
- | Forma de onda | Onde estão os picos altos, passagens silenciosas ou junções abruptas? |
- | Espectrograma | Quais frequências estão presentes no momento em que um artefato é iniciado? |
- | Espectro médio | Alguma versão apresenta desequilíbrio de frequência persistente? |
- | Estimativa de afinação | O F0 convertido segue o contorno pretendido em passagens sonoras? |
- | Tabelas de nível e silêncio | Você está comparando volumes semelhantes e usando a mesma definição de silêncio? |">
+<h1 id="audio-analyzer">Audio Analyzer</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Abre Other → Audio Analyzer no Ilaria RVC para comparar até oito ficheiros de áudio com forma de onda, espectrograma, espectro médio, pitch e tabelas de nível.</div>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Descarregar Ilaria RVC 2.4.7 para Windows (ZIP)</a></p>
+<p>Abre <strong>Other → Audio Analyzer</strong> e adiciona até oito ficheiros de áudio (original, conversão base e variantes com uma única definição alterada).</p>
+<span id="what-each-view-measures" class="docs-anchor"></span><h2 id="o-que-cada-vista-mede">O que cada vista mede</h2>
+<retype-table copy-text="| Vista | O que mostra diretamente | Pergunta a responder |
+| --- | --- | --- |
+| **Waveform** | Amplitude no tempo | Onde estão picos, clipping plano, silêncios ou cortes? |
+| **Spectrogram** | Energia por frequência no tempo | Que frequências surgem quando um artefacto começa? |
+| **Average spectrum** | Equilíbrio médio de frequências | Uma versão tem ressonâncias ou desequilíbrio persistente? |
+| **Pitch estimation** | Contorno F0 estimado | O tom segue a melodia sem saltos de oitava? |
+| **Level &amp; silence tables** | Níveis medidos e silêncios | Estás a comparar no mesmo volume e limiar de silêncio? |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>Visualizar</th>
-<th>Pergunta para responder</th>
+<th>Vista</th>
+<th>O que mostra diretamente</th>
+<th>Pergunta a responder</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Forma de onda</td>
-<td>Onde estão os picos altos, passagens silenciosas ou junções abruptas?</td>
+<td><strong>Waveform</strong></td>
+<td>Amplitude no tempo</td>
+<td>Onde estão picos, clipping plano, silêncios ou cortes?</td>
 </tr>
 <tr>
-<td>Espectrograma</td>
-<td>Quais frequências estão presentes no momento em que um artefato é iniciado?</td>
+<td><strong>Spectrogram</strong></td>
+<td>Energia por frequência no tempo</td>
+<td>Que frequências surgem quando um artefacto começa?</td>
 </tr>
 <tr>
-<td>Espectro médio</td>
-<td>Alguma versão apresenta desequilíbrio de frequência persistente?</td>
+<td><strong>Average spectrum</strong></td>
+<td>Equilíbrio médio de frequências</td>
+<td>Uma versão tem ressonâncias ou desequilíbrio persistente?</td>
 </tr>
 <tr>
-<td>Estimativa de afinação</td>
-<td>O F0 convertido segue o contorno pretendido em passagens sonoras?</td>
+<td><strong>Pitch estimation</strong></td>
+<td>Contorno F0 estimado</td>
+<td>O tom segue a melodia sem saltos de oitava?</td>
 </tr>
 <tr>
-<td>Tabelas de nível e silêncio</td>
-<td>Você está comparando volumes semelhantes e usando a mesma definição de silêncio?</td>
+<td><strong>Level &amp; silence tables</strong></td>
+<td>Níveis medidos e silêncios</td>
+<td>Estás a comparar no mesmo volume e limiar de silêncio?</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<p>Escolha um intervalo de tempo e visualização do canal. Use a mesma janela FFT, escala de frequência e limite de silêncio nas comparações. Uma janela FFT maior melhora a resolução de frequência e suaviza eventos rápidos no tempo. Ouça a região selecionada no player antes de decidir se uma diferença visível é um problema.</p>
-<p>Exporte CSV ou JSON para medições, ou um ZIP com gráficos para revisão posterior. Se você quiser diagnosticar um clipe de conjunto de dados com ruído, verifique primeiro a origem não processada e compare o mesmo intervalo na exportação. Quando os resultados do tom parecerem estranhos em respirações ou consoantes surdas, ouça o áudio antes de interpretar a estimativa.</p>
+<blockquote>
+<p><strong>O que mede vs. o que sugere:</strong> O Audio Analyzer mede níveis, silêncios, espectro e F0 estimado, mas <strong>não</strong> avalia sozinho a naturalidade vocal. <strong>Ouve sempre o excerto</strong> no leitor antes de tirar conclusões.</p>
+</blockquote>
+<span id="practical-examples-what-to-look-for" class="docs-anchor"></span><h2 id="exemplos-práticos">Exemplos práticos</h2>
+<ul>
+<li><strong>Clipping:</strong> Picos achatados no topo da <strong>Waveform</strong>; reduz o ganho antes de treinar ou converter.</li>
+<li><strong>Ruído de fundo:</strong> Faixa horizontal constante no <strong>Spectrogram</strong> durante pausas; limpa com UVR5 ou MVSep.</li>
+<li><strong>Silêncios longos / volume:</strong> Confirma nas <strong>Level &amp; silence tables</strong>.</li>
+<li><strong>Reverberação e distorção:</strong> Caudas esbatidas após as palavras no <strong>Spectrogram</strong>.</li>
+<li><strong>Consoantes surdas (<code translate="no" v-pre>s</code>, <code translate="no" v-pre>f</code>, <code translate="no" v-pre>t</code>):</strong> Saltos de F0 em respirações são normais.</li>
+</ul>
+<p>Exporta <strong>CSV</strong>, <strong>JSON</strong> ou um <strong>ZIP com gráficos</strong> mantendo a mesma <strong>FFT window</strong>.</p>
 
                 
                 <!-- Required only on API pages -->
@@ -254,7 +271,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -287,6 +304,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Analisador de Áudio", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/manage/audio-analyzer.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Audio Analyzer", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/manage/audio-analyzer.md" }</script>
 </body>
 </html>

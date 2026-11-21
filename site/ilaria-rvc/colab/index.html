@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -179,6 +179,14 @@
 <p>Run Ilaria RVC in a browser with a GPU supplied by the cloud platform. Choose a notebook below. Enable an NVIDIA accelerator before running the first cell.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>Prepare one short clean WAV and a compatible inference model. For training, keep the original dataset and a few separate test clips on your own computer. The notebook runs on a remote Linux machine.</p>
+<h3 id="google-colab-limits-compute-units-and-policies">Google Colab limits, compute units, and policies</h3>
+<p>Before starting a long run, understand how <a href="https://research.google.com/colaboratory/faq.html">Google Colab</a> manages resources:</p>
+<ul>
+<li><strong>Free tier vs. Paid plans (Compute Units):</strong> Colab&#x27;s free tier offers GPUs when available, but runtime length, idle timeouts, and GPU type (such as T4) are dynamic and never guaranteed. Paid tiers (<strong>Colab Pro</strong>, <strong>Pro+</strong>, and <strong>Pay As You Go</strong>) use <strong>compute units</strong> consumed dynamically based on the GPU/TPU you select; when your compute unit balance runs out, the account reverts to free-tier limits.</li>
+<li><strong>Disallowed activities &amp; WebUI restrictions:</strong> Google&#x27;s <a href="https://research.google.com/colaboratory/faq.html#disallowed-activities">Disallowed Activities policy</a> prohibits hosting files, serving public web applications unrelated to interactive computing, running remote proxies, bypassing safety/access limits, using multiple accounts to evade quotas, or creating deepfakes. While interactive Gradio notebooks are not blanket-banned in every scenario, running persistent public WebUI tunnels on the free tier frequently triggers runtime disconnections or policy warnings.</li>
+<li><strong>Disconnections, saving, and privacy:</strong> Colab can disconnect idle or long-running sessions and wipe local VM storage. Export your results (<code translate="no" v-pre>EXPORT = True</code>) or sync important checkpoints to Google Drive regularly, and never upload confidential audio or credentials to public/shared notebooks.</li>
+<li><strong>Alternatives:</strong> If Colab disconnects or lacks GPU availability, use <a href="../kaggle/">Kaggle</a> (free weekly GPU quota after phone verification) or <a href="../lightning-ai/">Lightning AI Studio</a>.</li>
+</ul>
 <h2 id="run-on-google-colab">Run on Google Colab</h2>
 <ol>
 <li>Open in Colab and select a GPU runtime.</li>
@@ -309,7 +317,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

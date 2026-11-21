@@ -20,5 +20,5 @@ Always wear **headphones** during live conversion. Using speakers feeds the conv
 
 ## 3. Common fixes
 
-- **High latency or robotic stutter**: disable **Hardware-accelerated GPU Scheduling (HAGS)** in Windows Graphics Settings and restart, close GPU-heavy games/browser tabs, and raise Chunk one step.
+- **High latency or robotic stutter**: close GPU-heavy games/browser tabs, raise Chunk one step, and optionally test disabling **Hardware-accelerated GPU Scheduling (HAGS)** in Windows Graphics Settings (restart and compare before/after; re-enable HAGS if it makes no difference).
 - **PortAudio / device error**: match all audio devices to the same sample rate (`48000 Hz`) in Windows Sound settings and close apps holding exclusive device control.

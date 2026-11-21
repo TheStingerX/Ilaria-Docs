@@ -24,6 +24,14 @@ Open **Task Manager → Performance → GPU** and read the exact model name. Com
 
 If you have more than one GPU, read the launcher log to see which runtime actually started. The CUDA 12.6 path described above applies when all NVIDIA GPUs in the PC are from the older families.
 
+### Why You Should Not Manually Upgrade PyTorch
+
+Ilaria RVC bundles a tested, pinned combination of **PyTorch (`2.10.0`)**, **CUDA (`12.8` or `12.6`)**, `torchaudio`, `torchvision`, `faiss`, and audio dependencies. Do **not** manually run `pip install --upgrade torch` or replace CUDA wheels inside the portable runtime:
+
+- Upgrading PyTorch alone can break binary compatibility with `torchaudio`, `fairseq`, `onnxruntime`, or compiled C++/CUDA extensions.
+- Newer PyTorch/CUDA releases can drop support for older GPU architectures (such as Maxwell, Pascal, or Volta) or introduce `UnpicklingError` / tensor API changes.
+- If a newer runtime is needed, wait for an official Ilaria RVC release or updater package instead of modifying the bundled environment manually.
+
 ## Check that the app started correctly
 
 1. Run `RUN_ILARIA_RVC.bat` from the extracted folder. Wait for the interface to open. If the legacy runtime is downloading, check `cu126-runtime-install.log` for progress.

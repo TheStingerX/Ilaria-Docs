@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612442521">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614457516">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612442521" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614457516" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614457516" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -284,7 +284,7 @@
 <retype-table copy-text="| Problem oder Fehler | Was das bedeutet (einfach erklärt) | So behebst du es |
 | --- | --- | --- |
 | **Schwarzes Konsolenfenster öffnet und schließt sofort** | Du hast aus einer ZIP-Vorschau gestartet oder Python hatte direkt einen Fehler. | 1. Rechtsklick auf die `.zip` und zuerst alles entpacken.&lt;br&gt;2. In Ilaria RVC starte `RUN_ILARIA_RVC_LOGS.bat`, damit das Fenster offen bleibt und den Fehler anzeigt. |
-| **Antivirus / Windows Defender löscht `.bat`, `.exe` oder `.dll`** | Sicherheitssoftware stuft portable KI-Skripte fälschlich als verdächtig ein. | Öffne **Windows-Sicherheit → Viren- &amp; Bedrohungsschutz → Schutzverlauf**, stelle die Datei wieder her und füge deinen RVC-Ordner (z. B. `C:\RVC`) zu den **Ausschlüssen** hinzu. |
+| **Antivirus / Windows Defender meldet `.bat`, `.exe` oder `.dll`** | Portable KI-Pakete enthalten oft unsignierte Starter oder Python/PyTorch-Binärdateien, die Fehlalarme auslösen können. | 1. **Deaktiviere niemals global das Antivirenprogramm** und schließe keine ganzen Ordner pauschal aus.&lt;br&gt;2. Prüfe die offizielle Quelle (GitHub Releases / Hugging Face) sowie SHA-256-Hash oder Signatur.&lt;br&gt;3. Öffne **Windows-Sicherheit → Viren- &amp; Bedrohungsschutz → Schutzverlauf** (14 Tage Aufbewahrung).&lt;br&gt;4. Lade im Zweifel sauber von der offiziellen Quelle neu herunter; bei unbekannten Dateien **sofort stoppen** und Hilfe fragen. |
 | `WinError 10048` / `Address already in use` / Port belegt | Eine andere Kopie von RVC oder ein anderes Programm nutzt bereits diesen Port (`6969` oder `7865`). | Schließe alle offenen schwarzen Konsolenfenster (oder beende `python.exe` im **Task-Manager**) und starte die App einmal neu. |
 | `[WinError 3]` / `[WinError 206]` (Pfad nicht gefunden / zu lang) | Windows streikt bei Pfaden über 260 Zeichen oder mit Leerzeichen, Umlauten oder Sonderzeichen (`()`, `[]`). | Verschiebe App und Audios in einen kurzen Pfad wie `C:\RVC\`. Benenne Ordner und `.wav`-Dateien nur mit Buchstaben, Zahlen und `_`. |
 | `[WinError 2]` (beim Laden/Exportieren von Audio) | `ffmpeg.exe` oder `ffprobe.exe` (das Tool zum Lesen von Audiodateien) fehlt. | Prüfe, ob `ffmpeg.exe` im App-Ordner liegt (ZIP ggf. neu entpacken, falls Defender es entfernt hat). Bei manueller Python-Installation FFmpeg installieren, zum `PATH` hinzufügen und Terminal neu starten. |
@@ -310,9 +310,9 @@
 <td>1. Rechtsklick auf die <code translate="no" v-pre>.zip</code> und zuerst alles entpacken.<br>2. In Ilaria RVC starte <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code>, damit das Fenster offen bleibt und den Fehler anzeigt.</td>
 </tr>
 <tr>
-<td><strong>Antivirus / Windows Defender löscht <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code> oder <code translate="no" v-pre>.dll</code></strong></td>
-<td>Sicherheitssoftware stuft portable KI-Skripte fälschlich als verdächtig ein.</td>
-<td>Öffne <strong>Windows-Sicherheit → Viren- &amp; Bedrohungsschutz → Schutzverlauf</strong>, stelle die Datei wieder her und füge deinen RVC-Ordner (z. B. <code translate="no" v-pre>C:\RVC</code>) zu den <strong>Ausschlüssen</strong> hinzu.</td>
+<td><strong>Antivirus / Windows Defender meldet <code translate="no" v-pre>.bat</code>, <code translate="no" v-pre>.exe</code> oder <code translate="no" v-pre>.dll</code></strong></td>
+<td>Portable KI-Pakete enthalten oft unsignierte Starter oder Python/PyTorch-Binärdateien, die Fehlalarme auslösen können.</td>
+<td>1. <strong>Deaktiviere niemals global das Antivirenprogramm</strong> und schließe keine ganzen Ordner pauschal aus.<br>2. Prüfe die offizielle Quelle (GitHub Releases / Hugging Face) sowie SHA-256-Hash oder Signatur.<br>3. Öffne <strong>Windows-Sicherheit → Viren- &amp; Bedrohungsschutz → Schutzverlauf</strong> (14 Tage Aufbewahrung).<br>4. Lade im Zweifel sauber von der offiziellen Quelle neu herunter; bei unbekannten Dateien <strong>sofort stoppen</strong> und Hilfe fragen.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>WinError 10048</code> / <code translate="no" v-pre>Address already in use</code> / Port belegt</td>
@@ -367,7 +367,7 @@
 <retype-table copy-text="| Problem oder Fehler | Was das bedeutet (einfach erklärt) | So behebst du es |
 | --- | --- | --- |
 | **Alles läuft extrem langsam (CPU statt GPU)** | Die App erkennt deine Grafikkarte nicht oder du nutzt ein NVIDIA-Paket auf einer AMD/Intel-GPU. | 1. NVIDIA-Nutzer: Treiber prüfen und sicherstellen, dass nicht die integrierte Grafik genutzt wird.&lt;br&gt;2. AMD/Intel-Nutzer: Standard-CUDA-Builds nutzen deine GPU nicht. Nutze einen **DirectML**-Build (YuneVoix, Deiteris DirectML, Mainline DirectML) oder ein Cloud-Notebook. |
-| **PC ruckelt, VRAM läuft in RAM über oder Live-Stimme klingt robotisch** | Eine Windows-Funktion namens **HAGS** (Hardwarebeschleunigte GPU-Planung) stört die VRAM-Zuweisung von KI-Apps. | Gehe zu **Windows-Einstellungen → System → Bildschirm → Grafik → Erweiterte Grafikeinstellungen**, schalte **Hardwarebeschleunigte GPU-Planung** auf **AUS** und **starte den PC neu**. |
+| **PC ruckelt, VRAM voll oder Live-Stimme stottert (Windows 10/11)** | **HAGS** (Hardware-Accelerated GPU Scheduling) verwaltet die GPU-Speicherwarteschlange; meist unproblematisch, kann bei manchen KI+Gaming-Setups aber zu Konflikten führen. | HAGS ist **nicht** grundsätzlich schädlich. Teste das Deaktivieren nur bei unerklärlichem Stottern unter **Windows-Einstellungen → System → Anzeige → Grafik**, starte neu und vergleiche vorher/nachher; ohne Vorteil wieder aktivieren. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (Konvertierung) | Grafikspeicher ist voll, weil der Track zu lang ist oder ein Spiel/Browser VRAM verbraucht. | Aktiviere **Split Audio** für lange Tracks, schließe Spiele und schwere Browser-Tabs (oder deaktiviere Browser-Hardwarebeschleunigung) und schalte Extra-Effekte aus. |
 | `CUDA out of memory` / `torch.cuda.OutOfMemoryError` (Training) | Die **Batch Size** ist zu groß für deinen Grafikspeicher. | Senke **Batch Size** schrittweise (von `8` auf `4`, `2` oder `1`). Deaktiviere &quot;Cache dataset in GPU/VRAM&quot; und schließe Live Voice Changer vor dem Training. |
 | `Torch not compiled with CUDA enabled` / `no kernel image is available` | Die CUDA-Version der App passt nicht zu deiner NVIDIA-Generation (z. B. neue RTX 50 vs ältere GTX 10). | Nutze den passenden Build: **Ilaria RVC** enthält **CUDA 12.8** für GTX 16 / RTX 20-50 und lädt automatisch **CUDA 12.6** (`runtime-cu126`) für Maxwell/Pascal/Volta. |
@@ -391,9 +391,9 @@
 <td>1. NVIDIA-Nutzer: Treiber prüfen und sicherstellen, dass nicht die integrierte Grafik genutzt wird.<br>2. AMD/Intel-Nutzer: Standard-CUDA-Builds nutzen deine GPU nicht. Nutze einen <strong>DirectML</strong>-Build (YuneVoix, Deiteris DirectML, Mainline DirectML) oder ein Cloud-Notebook.</td>
 </tr>
 <tr>
-<td><strong>PC ruckelt, VRAM läuft in RAM über oder Live-Stimme klingt robotisch</strong></td>
-<td>Eine Windows-Funktion namens <strong>HAGS</strong> (Hardwarebeschleunigte GPU-Planung) stört die VRAM-Zuweisung von KI-Apps.</td>
-<td>Gehe zu <strong>Windows-Einstellungen → System → Bildschirm → Grafik → Erweiterte Grafikeinstellungen</strong>, schalte <strong>Hardwarebeschleunigte GPU-Planung</strong> auf <strong>AUS</strong> und <strong>starte den PC neu</strong>.</td>
+<td><strong>PC ruckelt, VRAM voll oder Live-Stimme stottert (Windows 10/11)</strong></td>
+<td><strong>HAGS</strong> (Hardware-Accelerated GPU Scheduling) verwaltet die GPU-Speicherwarteschlange; meist unproblematisch, kann bei manchen KI+Gaming-Setups aber zu Konflikten führen.</td>
+<td>HAGS ist <strong>nicht</strong> grundsätzlich schädlich. Teste das Deaktivieren nur bei unerklärlichem Stottern unter <strong>Windows-Einstellungen → System → Anzeige → Grafik</strong>, starte neu und vergleiche vorher/nachher; ohne Vorteil wieder aktivieren.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>CUDA out of memory</code> / <code translate="no" v-pre>torch.cuda.OutOfMemoryError</code> (Konvertierung)</td>
@@ -574,7 +574,7 @@
 | --- | --- | --- |
 | **In Discord oder im Spiel hört niemand die veränderte Stimme** | Die Ziel-App nutzt noch dein echtes Mikrofon statt des virtuellen Kabels oder der Voice Changer läuft nicht. | 1. Installiere **VB-CABLE** und starte den PC neu.&lt;br&gt;2. Im Voice Changer: **Input** = physisches Mikrofon, **Output** = `CABLE Input (VB-Audio Virtual Cable)`.&lt;br&gt;3. In **Discord / Spiel**: **Eingabegerät** = `CABLE Output (VB-Audio Virtual Cable)`. |
 | `PortAudioError` / `Invalid sample rate` / Gerät startet nicht | Mikrofon, Kopfhörer und VB-CABLE laufen mit verschiedenen Abtastraten (`44100 Hz` vs `48000 Hz`) oder im Exklusiv-Modus. | Öffne die **Windows-Sound-Systemsteuerung (`mmsys.cpl`)**, gehe unter **Eigenschaften → Erweitert** für Mikrofon, Kopfhörer, `CABLE Input` und `CABLE Output`, stelle **alle auf 48000 Hz**, entferne den Haken bei **Anwendungen die alleinige Kontrolle erlauben** und starte die App neu. |
-| **Ruckler, Knacken oder starke Verzögerung** | Deine GPU braucht pro Audio-Block länger als die Blockdauer selbst. | 1. Erhöhe **Chunk Size** leicht.&lt;br&gt;2. Nutze **RMVPE** oder **FCPE** für Pitch.&lt;br&gt;3. Deaktiviere **HAGS** in Windows.&lt;br&gt;4. Begrenze Spiel-FPS oder schließe schwere GPU-Apps. |
+| **Stottern, Knacken oder hohe Sprachverzögerung** | Die GPU braucht pro Audioblock länger als dessen Dauer. | 1. **Chunk Size** leicht erhöhen.&lt;br&gt;2. **RMVPE** oder **FCPE** nutzen (nie `crepe` full live).&lt;br&gt;3. Spiel-FPS begrenzen.&lt;br&gt;4. Optional **HAGS** testweise umschalten (Vorher/Nachher-Vergleich). |
 | **Echo oder man hört sich doppelt** | Du nutzt Lautsprecher (Mikrofon nimmt sie auf) oder zwei Programme geben dein Mikro gleichzeitig aus. | Trage immer **Kopfhörer**. Schalte **&quot;Dieses Gerät als Wiedergabequelle verwenden&quot;** in Windows-Aufnahme **AUS** und aktiviere Monitor nur im Voice Changer, wenn nötig. |
 | **Discord schneidet Atemzüge oder Wortenden ab** | Discords Rauschunterdrückung hält leise Stimmenden für Hintergrundlärm. | Deaktiviere in Discord unter **Sprache &amp; Video** die **Krisp-Rauschunterdrückung**, **Echounterdrückung** und **Eingangsempfindlichkeit automatisch bestimmen** (Regler manuell setzen). Senke zudem VAD / Noise Gate im Voice Changer. |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -598,9 +598,9 @@
 <td>Öffne die <strong>Windows-Sound-Systemsteuerung (<code translate="no" v-pre>mmsys.cpl</code>)</strong>, gehe unter <strong>Eigenschaften → Erweitert</strong> für Mikrofon, Kopfhörer, <code translate="no" v-pre>CABLE Input</code> und <code translate="no" v-pre>CABLE Output</code>, stelle <strong>alle auf 48000 Hz</strong>, entferne den Haken bei <strong>Anwendungen die alleinige Kontrolle erlauben</strong> und starte die App neu.</td>
 </tr>
 <tr>
-<td><strong>Ruckler, Knacken oder starke Verzögerung</strong></td>
-<td>Deine GPU braucht pro Audio-Block länger als die Blockdauer selbst.</td>
-<td>1. Erhöhe <strong>Chunk Size</strong> leicht.<br>2. Nutze <strong>RMVPE</strong> oder <strong>FCPE</strong> für Pitch.<br>3. Deaktiviere <strong>HAGS</strong> in Windows.<br>4. Begrenze Spiel-FPS oder schließe schwere GPU-Apps.</td>
+<td><strong>Stottern, Knacken oder hohe Sprachverzögerung</strong></td>
+<td>Die GPU braucht pro Audioblock länger als dessen Dauer.</td>
+<td>1. <strong>Chunk Size</strong> leicht erhöhen.<br>2. <strong>RMVPE</strong> oder <strong>FCPE</strong> nutzen (nie <code translate="no" v-pre>crepe</code> full live).<br>3. Spiel-FPS begrenzen.<br>4. Optional <strong>HAGS</strong> testweise umschalten (Vorher/Nachher-Vergleich).</td>
 </tr>
 <tr>
 <td><strong>Echo oder man hört sich doppelt</strong></td>
@@ -700,7 +700,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

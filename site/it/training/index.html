@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612412882">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848612412882" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848612412882" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -357,6 +357,26 @@
 </div>
 </retype-table>
 <p>Conserva il primo messaggio di errore e la configurazione associata alla corsa. Per ulteriori controlli, vedere <a href="../troubleshooting/">Risoluzione dei problemi</a>.</p>
+<span id="indicative-training-profiles-adapt-to-your-data--hardware" class="docs-anchor"></span><h2 id="profili-indicativi-di-training-da-adattare-a-dati-e-hardware">Profili indicativi di training (da adattare a dati e hardware)</h2>
+<p>Questi tre profili sono <strong>punti di partenza indicativi</strong>, non regole fisse. Adatta sempre <strong>Batch Size</strong> alla VRAM e scegli il checkpoint migliore all&#x27;ascolto.</p>
+<ul>
+<li>
+<p><strong>Beginner Training:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> (32 kHz per RefineGAN) ·
+mvpe · contentvec · pretrain HiFi-GAN standard · <strong>Batch Size 4–8</strong> · <strong>Epochs 200</strong> (salvataggio ogni 25–50) · <strong>FP32</strong> (o <strong>BF16</strong> su RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers 2 · Fused AdamW <strong>OFF</strong>.</p>
+</li>
+<li>
+<p><strong>Intermediate Training:</strong> RVC <strong>v2</strong> · <strong>40/48 kHz</strong> ·
+mvpe · contentvec / klm-vocal-contentvec / spin-v2 (abbinato al pretrain) · <strong>Batch Size 8–12</strong> · <strong>Epochs 250–350</strong> · <strong>BF16</strong> (RTX 30/40/50) o <strong>FP16</strong> (T4/RTX 20) · Workers 4, Prefetch 4–8 · Indice <strong>FAISS Auto</strong>.</p>
+</li>
+<li>
+<p><strong>Advanced Training &amp; Optimization:</strong> Dataset curati, 12–24 GB+ VRAM · <strong>Total Steps</strong> · MRF HiFi-GAN / RefineGAN (32 kHz) · <strong>Batch Size 12–16+</strong> · <strong>GPU Caching ON</strong> (solo se entra in VRAM) · <strong>Fused AdamW ON</strong> · <strong>Training Queue</strong> + <strong>TensorBoard</strong> + <a href="../ilaria-rvc/audio-analyzer/">Audio Analyzer</a>. Il learning rate (1e-4 base) di norma non va modificato.</p>
+</li>
+</ul>
+<h2 id="riconoscere-underfitting-vs-overfitting-allascolto">Riconoscere Underfitting vs. Overfitting all&#x27;ascolto</h2>
+<ol>
+<li><strong>Underfitting (troppo presto):</strong> La voce somiglia ancora troppo all&#x27;originale o perde carattere su note alte/basse → continua da G_<em>.pth/D_</em>.pth.</li>
+<li><strong>Overfitting (troppo tardi):</strong> Suona robotica su frasi nuove o riproduce fruscio del dataset → torna a un checkpoint precedente (50–100 epoche prima).</li>
+</ol>
 
                 
                 <!-- Required only on API pages -->
@@ -384,7 +404,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
