@@ -70,3 +70,5 @@ Para Vonovox, comece com o modo compartilhado WASAPI, quando disponível. Use 48
 | As sílabas desaparecem quando você sussurra ou canta. | Teste com detecção de atividade de voz e supressão de ruído desativadas, uma de cada vez. |
 
 Ajuste **Tamanho do bloco** depois que a rota completa funcionar. Abaixe um passo e repita a mesma frase. Se você receber cliques ou palavras faltantes, restaure o último valor limpo. Deixe o lookahead e outros efeitos em seus padrões até que você tenha uma linha de base estável.
+
+> **Opcional:** Notas picos de GPU Delay numa placa NVIDIA compatível? Consulta [Otimização avançada de desempenho: NVIDIA GPU Clock Locking](advanced-performance-optimization.md).

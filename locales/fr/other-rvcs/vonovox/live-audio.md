@@ -70,3 +70,5 @@ Pour Vonovox, commencez par le mode partagé WASAPI lorsqu'il est disponible. Ut
 | Les syllabes disparaissent lorsque vous chuchotez ou chantez | Testez avec la détection d'activité vocale et la suppression du bruit désactivées une à la fois. |
 
 Ajustez la **Taille du bloc** une fois l'itinéraire complet terminé. Abaissez-le d'un cran et répétez la même phrase. Si vous obtenez des clics ou des mots manquants, restaurez la dernière valeur propre. Laissez l’anticipation et les autres effets à leurs valeurs par défaut jusqu’à ce que vous disposiez d’une ligne de base stable.
+
+> **Facultatif :** Vous observez des pics de GPU Delay sur une carte NVIDIA compatible ? Consultez [Optimisation avancée des performances : NVIDIA GPU Clock Locking](advanced-performance-optimization.md).
