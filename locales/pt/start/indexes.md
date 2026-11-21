@@ -2,7 +2,7 @@
 label: "🗂️ Arquivos Index (.index)"
 order: 87
 permalink: /indexes/
-description: "Guia completo de arquivos .index no RVC (Feature Retrieval): diferença entre added_*.index e trained_*.index, como ajustar o Index Rate e como recriar um índice."
+description: "Guia completo de arquivos .index no RVC (Feature Retrieval): diferença entre arquivos added e trained, como ajustar o Index Rate e como recriar um índice."
 ---
 # Arquivos Index do RVC e Feature Retrieval (`.index`)
 

@@ -2,7 +2,7 @@
 label: "🧠 PTH files (.pth)"
 order: 88
 permalink: /pth/
-description: "Complete guide to RVC .pth voice model files: exported voice models vs raw G_*/D_* checkpoints, FP16 vs FP32 sizes, compatibility rules, and common errors."
+description: "Complete guide to RVC .pth voice model files: exported voice models vs raw G and D checkpoints, FP16 vs FP32 sizes, compatibility rules, and common errors."
 ---
 # RVC PTH Files (`.pth`)
 
