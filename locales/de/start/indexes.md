@@ -48,12 +48,14 @@ Wenn du ein Modell teilst oder exportierst (z. B. mit **Export model ZIP** in Il
 
 Der Regler **Index Rate** (manchmal *Search Feature Ratio* oder *Retrieval Ratio*) steuert, wie stark die `.index`-Datenbank das Ergebnis an die exakten Aufnahmen des Trainings-Datasets zieht:
 
-| Index Rate | Wirkung auf die Stimme | Bester Einsatzbereich |
+| Index Rate | Wirkung auf die Stimme | Wann nutzen (Ausgangspunkte) |
 | --- | --- | --- |
-| **`0.0` (Aus)** | 100 % `.pth`-Gewichte, 0 % `.index`. | Sauberste Aussprache, geringste CPU-Last, idealer Startwert für Tests, Live Voice Changer und gemischte Modelle. |
-| **`0.25 - 0.50`** | Fügt dezente Stimmtextur hinzu, erhält aber deine Aussprache und dein Tempo. | **Sprache**, **Fremdsprachen-Konvertierung** (z. B. Deutsch auf einem englischen/japanischen Modell) oder leicht verrauschte Datasets. |
-| **`0.60 - 0.75`** | Starke Ähnlichkeit und Natürlichkeit, ohne die Eingabe zu überdecken. | **Empfohlener Standard** für sauberen Gesang und Sprache in derselben Sprache. |
-| **`0.85 - 1.00`** | Maximales Retrieval; zwingt Merkmale maximal nah an das Dataset. | Nur für makellose Studio-Datasets in derselben Sprache. Hohes Risiko für nuschelige Wörter oder Dataset-Rauschen. |
+| **`0.0` (Aus)** | Kein FAISS-Abruf: behält `100 %` der Merkmale des Eingabe-Audios, nur über die `.pth`-Gewichte umgewandelt (`retrieved * 0 + original * 1`). | Nützliche Diagnose-Basis ohne FAISS-Abruf, geringste CPU-Last und gemischte Modelle. |
+| **`0.25 - 0.50`** | Leichte Mischung Richtung Index (`25 % - 50 %` abgerufene, `50 % - 75 %` originale Merkmale), erhält Aussprache und Tempo. | **Sprache**, **Fremdsprachen-Konvertierung** (z. B. Deutsch auf einem englischen/japanischen Modell) oder leicht verrauschte Datasets. |
+| **`0.60 - 0.75`** | Stärkere Mischung Richtung Index (`60 % - 75 %` abgerufene Merkmale) für größere Stimmähnlichkeit. | Üblicher Startwert für sauberen Gesang und Sprache in derselben Sprache. |
+| **`0.85 - 1.00`** | Maximales Retrieval (`85 % - 100 %` abgerufene Merkmale); zieht Merkmale maximal nah an die Dataset-Vektoren. | Nur für makellose Studio-Datasets in derselben Sprache. Hohes Risiko für nuschelige Wörter oder Dataset-Artefakte. |
+
+Hinweis: In Ilaria RVC lautet die tatsächliche Formel bei der Inferenz `features = retrieved_features * index_rate + original_features * (1 - index_rate)`. Die `.pth`-Gewichte werden immer genutzt; `Index Rate = 0` schaltet nur die FAISS-Indexsuche ab.
 
 ---
 
@@ -61,7 +63,7 @@ Der Regler **Index Rate** (manchmal *Search Feature Ratio* oder *Retrieval Ratio
 
 Ein höherer Wert Richtung `1.0` macht eine Stimme **nicht** automatisch besser. Senke **Index Rate** auf `0.2 - 0.4` (oder `0`), sobald du merkst:
 
-1. **Hintergrundrauschen, Knistern oder Hall kehrt zurück:** Da `.index` direkt aus den Trainingsaufnahmen schöpft, wird jedes Rauschen oder jeder Raumhall des Datasets wieder beigemischt.
+1. **Hintergrundrauschen, Knistern oder Hall kehrt zurück:** Eine `.index`-Datei speichert **extrahierte Merkmalsvektoren**, keine rohen Audioaufnahmen. Enthielt das Dataset jedoch Hintergrundgeräusche oder Hall, können abgerufene Nachbarvektoren diese Eigenschaften wieder in die Ausgabe einbringen.
 2. **Verschluckte Wörter oder fremder Akzent:** Sprichst du eine andere Sprache als im Dataset, drückt ein hoher Index Rate fremde Vokale und Konsonanten auf deine Stimme.
 3. **Gemischte Modelle (Voice Blender):** Das Mischen zweier `.pth`-Modelle im [Voice Blender](../ilaria-rvc/manage/voice-blender.md) erzeugt **keine** neue `.index`. Teste gemischte Modelle immer zuerst mit `Index Rate = 0`.
 4. **Ruckler im Live Voice Changer:** Das Durchsuchen eines großen FAISS-Index pro Audio-Chunk kostet CPU-Leistung. Niedrigeres oder deaktiviertes `Index Rate` senkt Latenz und Aussetzer.

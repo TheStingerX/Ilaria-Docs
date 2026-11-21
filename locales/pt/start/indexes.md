@@ -48,12 +48,14 @@ Ao exportar ou compartilhar um modelo (por exemplo com **Export model ZIP** no I
 
 O controle **Index Rate** (às vezes chamado de *Search Feature Ratio* ou *Retrieval Ratio*) define o quanto o banco `.index` puxa o áudio convertido para os trechos exatos do dataset de treino:
 
-| Index Rate | Efeito na voz | Melhor uso |
+| Index Rate | Efeito na voz | Quando usar (pontos de partida) |
 | --- | --- | --- |
-| **`0.0` (Desligado)** | 100% pesos `.pth`, 0% `.index`. | Pronúncia mais limpa, menor uso de CPU, melhor base para testes, voice changers ao vivo e modelos mesclados. |
-| **`0.25 - 0.50`** | Adiciona textura natural da voz mantendo intactos sua pronúncia e ritmo. | **Fala**, **conversão entre idiomas** (ex. português em modelo inglês/japonês) ou datasets com leve ruído. |
-| **`0.60 - 0.75`** | Forte semelhança e realismo sem abafar seu áudio de entrada. | **Padrão recomendado** para canto limpo e locuções no mesmo idioma. |
-| **`0.85 - 1.00`** | Recuperação máxima; força as características o mais perto possível do dataset. | Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou ruído do dataset. |
+| **`0.0` (Desligado)** | Sem busca FAISS: mantém `100%` das características do áudio de entrada, convertidas apenas pelos pesos `.pth` (`retrieved * 0 + original * 1`). | Base diagnóstica útil sem busca FAISS, menor uso de CPU e modelos mesclados. |
+| **`0.25 - 0.50`** | Mistura leve para o índice (`25% - 50%` características recuperadas, `50% - 75%` originais), mantendo pronúncia e ritmo. | **Fala**, **conversão entre idiomas** (ex. português em modelo inglês/japonês) ou datasets com leve ruído. |
+| **`0.60 - 0.75`** | Mistura mais forte para o índice (`60% - 75%` características recuperadas) para maior semelhança de timbre. | Ponto de partida comum para canto limpo e locuções no mesmo idioma. |
+| **`0.85 - 1.00`** | Recuperação máxima (`85% - 100%` características recuperadas); aproxima ao máximo dos vetores do dataset. | Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou artefatos do dataset. |
+
+Nota: no Ilaria RVC a fórmula real na inferência é `features = retrieved_features * index_rate + original_features * (1 - index_rate)`. Os pesos `.pth` sempre são usados para gerar a voz; `Index Rate = 0` apenas desativa a busca no índice FAISS.
 
 ---
 
@@ -61,7 +63,7 @@ O controle **Index Rate** (às vezes chamado de *Search Feature Ratio* ou *Retri
 
 Subir o **Index Rate** até `1.0` **não** melhora a voz automaticamente. Abaixe para `0.2 - 0.4` (ou `0`) sempre que notar:
 
-1. **Chiado de fundo, estalos ou eco da sala voltando:** Como o `.index` puxa direto das gravações de treino, qualquer ruído ou reverberação do dataset volta na sua saída.
+1. **Chiado de fundo, estalos ou eco da sala voltando:** Um arquivo `.index` guarda **vetores de características extraídos**, não gravações de áudio brutas. Ainda assim, se o dataset tinha ruído ou reverberação, vetores próximos recuperados do índice podem trazer essas características para a conversão.
 2. **Palavras emboladas ou sotaque estranho:** Se você fala outro idioma além do usado no dataset, um Index Rate alto tenta forçar vogais e consoantes estrangeiras na sua fala.
 3. **Vozes mescladas (Voice Blender):** Mesclar dois `.pth` no [Voice Blender](../ilaria-rvc/manage/voice-blender.md) **não** cria um novo `.index`. Teste sempre modelos mesclados em `Index Rate = 0` primeiro.
 4. **Engasgos no Voice Changer ao vivo:** Pesquisar um índice FAISS grande a cada bloco de áudio pesa na CPU. Abaixar ou zerar `Index Rate` reduz latência e cortes.
