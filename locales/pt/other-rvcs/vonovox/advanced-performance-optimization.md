@@ -193,21 +193,20 @@ exit /b %EXIT_CODE%
 ::PS Write-Host "Querying official supported Graphics clocks for GPU $gpuId..."
 ::PS $supOut = & $nvsmi -i $gpuId -q -d SUPPORTED_CLOCKS 2>&1
 ::PS if ($LASTEXITCODE -ne 0) {
-::PS     Write-Host "[STOPPED] nvidia-smi could not query SUPPORTED_CLOCKS for GPU $gpuId."
+::PS     Write-Host "[STOPPED] Supported Graphics clocks could not be verified on this GPU (exit code $LASTEXITCODE). This does not necessarily mean GPU Clock Locking is unsupported. No changes were made."
 ::PS     $supOut | ForEach-Object { Write-Host $_ }
-::PS     Write-Host 'Your GPU or driver may not support clock locking. No changes were made.'
 ::PS     exit 1
 ::PS }
 ::PS
-::PS $graphicsClocks = [System.Collections.Generic.SortedSet[int]]::new()
+::PS $graphicsClocks = New-Object 'System.Collections.Generic.SortedSet[int]'
 ::PS foreach ($line in $supOut) {
 ::PS     if ($line -match '^\s*Graphics\s*:\s*(\d+)\s*MHz\s*$') {
 ::PS         [void]$graphicsClocks.Add([int]$Matches[1])
 ::PS     }
 ::PS }
 ::PS if ($graphicsClocks.Count -eq 0) {
-::PS     Write-Host "[STOPPED] No verified Graphics clocks could be parsed for GPU $gpuId."
-::PS     Write-Host 'Your GPU/driver returned N/A, Not Supported, or an unrecognized format. No changes were made.'
+::PS     Write-Host '[STOPPED] Supported Graphics clocks could not be verified on this GPU. This does not necessarily mean GPU Clock Locking is unsupported. No changes were made.'
+::PS     Write-Host 'Possible reasons: driver does not expose the clock table, unrecognized output format, query unsupported, or GPU-specific limitations.'
 ::PS     exit 1
 ::PS }
 ::PS
@@ -239,18 +238,19 @@ exit /b %EXIT_CODE%
 ::PS if ($LASTEXITCODE -ne 0) {
 ::PS     Write-Host "[ERROR] nvidia-smi -lgc failed for GPU $gpuId (exit code $LASTEXITCODE):"
 ::PS     $lgcOut | ForEach-Object { Write-Host $_ }
-::PS     Write-Host 'No automatic reset was run so any pre-existing configuration is preserved.'
-::PS     Write-Host "If you want to reset manually, run: nvidia-smi -i $gpuId -rgc"
+::PS     Write-Host 'No automatic reset was performed. Check your current GPU clock configuration before proceeding.'
+::PS     Write-Host "Check current clock: nvidia-smi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits"
+::PS     Write-Host "Manual reset command: nvidia-smi -i $gpuId -rgc"
 ::PS     exit 1
 ::PS }
 ::PS
 ::PS Write-Host "[ACCEPTED] Driver accepted -lgc $targetMhz,$targetMhz on GPU $gpuId."
-::PS $clkOut = & $nvsmi -i $gpuId -q -d CLOCK 2>&1
-::PS $observed = ($clkOut | Where-Object { $_ -match '^\s*Graphics\s*:\s*\d+\s*MHz' } | Select-Object -First 1)
-::PS if ($observed) {
-::PS     Write-Host ('Actually observed right now: ' + $observed.Trim())
+::PS $obsOut = (& $nvsmi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits 2>&1 | Out-String).Trim()
+::PS [int]$obsMhz = 0
+::PS if (($LASTEXITCODE -eq 0) -and ($obsOut -match '^\d+$') -and ([int]::TryParse($obsOut, [ref]$obsMhz)) -and ($obsMhz -gt 0)) {
+::PS     Write-Host "Actually observed Graphics clock right now: $obsMhz MHz"
 ::PS } else {
-::PS     Write-Host 'Could not read current observed Graphics clock via -q -d CLOCK.'
+::PS     Write-Host "[INFO] Command was accepted, but live clock telemetry could not be verified (returned: '$obsOut')."
 ::PS }
 ::PS Write-Host 'Note: Thermal, power, or firmware limits can still affect live clocks under load.'
 ::PS Write-Host "When finished, run Reset-GPU-Clocks.bat or: nvidia-smi -i $gpuId -rgc"
@@ -331,10 +331,12 @@ exit /b %EXIT_CODE%
 ::PS }
 ::PS
 ::PS Write-Host "[DONE] Reset command accepted for GPU $gpuId."
-::PS $clkOut = & $nvsmi -i $gpuId -q -d CLOCK 2>&1
-::PS $observed = ($clkOut | Where-Object { $_ -match '^\s*Graphics\s*:\s*\d+\s*MHz' } | Select-Object -First 1)
-::PS if ($observed) {
-::PS     Write-Host ('Actually observed right now: ' + $observed.Trim())
+::PS $obsOut = (& $nvsmi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits 2>&1 | Out-String).Trim()
+::PS [int]$obsMhz = 0
+::PS if (($LASTEXITCODE -eq 0) -and ($obsOut -match '^\d+$') -and ([int]::TryParse($obsOut, [ref]$obsMhz)) -and ($obsMhz -gt 0)) {
+::PS     Write-Host "Actually observed Graphics clock right now: $obsMhz MHz"
+::PS } else {
+::PS     Write-Host "[INFO] Reset was accepted, but live clock telemetry could not be verified (returned: '$obsOut')."
 ::PS }
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
