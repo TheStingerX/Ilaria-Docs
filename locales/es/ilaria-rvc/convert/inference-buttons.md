@@ -8,7 +8,7 @@ description: "La inferencia utiliza una voz entrenada para convertir una grabaci
 
 # Explicación de cada control de inferencia
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La inferencia utiliza una voz entrenada para convertir una grabación. Para una primera prueba, cargue un WAV breve y limpio, seleccione una voz, deje el tono en cero y mantenga desactivadas las funciones opcionales. Compare la entrada y la salida antes de cambiar un valor.
 

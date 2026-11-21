@@ -7,7 +7,7 @@ description: "O seu dataset é o fator mais importante para definir o quão natu
 ---
 # Datasets, Dataset Checker e Audio Analyzer
 
-[Baixar Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Baixar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 O seu dataset é o fator mais importante para definir o quão natural, limpa e expressiva será a voz do seu modelo RVC. Nem as melhores configurações de treino conseguem corrigir gravações com ruído, eco ou distorção.
 

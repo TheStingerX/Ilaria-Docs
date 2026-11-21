@@ -7,7 +7,7 @@ description: "Verwenden Sie Inferenz → TTS, um geschriebenen Text in eine Aufz
 ---
 # Text-zu-Sprache
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Verwenden Sie **Inferenz → TTS**, um geschriebenen Text in eine Aufzeichnung umzuwandeln. Sie können die generierte Sprache direkt anhören oder mit einem RVC-Modell konvertieren. Die beiden Stufen erfüllen unterschiedliche Aufgaben: Die Sprachmaschine entscheidet über die Aussprache und das Tempo des Skripts, während RVC den Sprachcharakter der Aufnahme ändert. Wenn im ersten Ergebnis ein Name falsch ausgesprochen wird, korrigieren Sie das Skript oder die Quellstimme, bevor Sie RVC optimieren.
 

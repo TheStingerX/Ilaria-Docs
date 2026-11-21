@@ -7,7 +7,7 @@ description: "Dein Dataset ist der wichtigste Faktor dafür, wie natürlich, sau
 ---
 # Datasets, Dataset Checker & Audio Analyzer
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Dein Dataset ist der wichtigste Faktor dafür, wie natürlich, sauber und ausdrucksstark dein RVC-Stimmenmodell klingt. Selbst die besten Trainingseinstellungen können verrauschte, hallige oder übersteuerte Quellaufnahmen nicht retten.
 

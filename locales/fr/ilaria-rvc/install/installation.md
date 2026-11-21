@@ -9,7 +9,7 @@ description: "Téléchargez la version NVIDIA prise en charge à partir de Huggi
 
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Installez le package Windows
 
@@ -39,14 +39,14 @@ Si vous disposez de plusieurs GPU, lisez le journal du lanceur pour voir quel ru
 
 Les tests de calcul et de rétropropagation ainsi que le chargement de ContentVec ont été vérifiés sur une RTX 4070. La compatibilité sur d'autres cartes est attendue de par leur architecture et leur sélection d'exécution, et n'a pas été garantie modèle par modèle.
 
-## Passer à la 2.4.0
+## Passer à la 2.4.7
 
-Téléchargez le ZIP complet, extrayez-le dans un nouveau dossier et lancez `RUN_ILARIA_RVC.bat`.
+Téléchargez le ZIP complet (`ILARIA_RVC-2.4.7.zip`), extrayez-le dans un nouveau dossier et lancez `RUN_ILARIA_RVC.bat`.
 
 Gardez l’ancienne installation comme sauvegarde. Copiez les modèles dans models/, les jeux de données dans app/datasets/ et les expériences dans app/logs/. La mise à jour intégrée de la 2.3.0 utilise l’ancienne structure.
 
 [GPU compatibles](gpu-compatibility.md)
 
-### Mettre à jour depuis la 2.4.0
+### Mettre à jour depuis 2.4.2 - 2.4.6
 
-Installez et lancez la 2.4.0. Ouvrez **Other → Update Ilaria RVC** et installez les mises à jour incrémentales jusqu'à la **2.4.6** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6`).
+Si vous utilisez déjà une version de **2.4.2** à **2.4.6**, ouvrez **Other → Update Ilaria RVC → Check for updates** et choisissez **Download and restart**. Depuis **2.4.0** ou **2.4.1**, mettez d'abord à jour vers **2.4.2** ou extrayez le ZIP complet de **2.4.7**.

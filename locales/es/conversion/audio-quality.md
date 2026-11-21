@@ -6,7 +6,7 @@ description: "Elija un breve extracto que contenga el problema. Realice una conv
 ---
 # Sintonice el tono y la calidad de audio
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Elija un breve extracto que contenga el problema. Realice una conversión de referencia y compárela con una configuración modificada a la vez. Escuche a niveles similares para que un resultado más alto no gane la comparación solo por volumen. Para la música, compare primero la voz convertida sola y luego en la mezcla.
 

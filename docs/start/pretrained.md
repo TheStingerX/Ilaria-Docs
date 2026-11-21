@@ -53,8 +53,8 @@ If any of these settings do not match the pretrained pair, training will either 
 | **KLM-X** | `32 kHz` | HiFi-GAN | Not specified | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 | **Legacy Core V1.5** *(removed in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(removed by author)* |
-| **Legacy Core V1.5v2** *(removed in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(removed by author)* |
-| **Legacy Core V1.6** *(removed)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(removed by author)* |
+| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) ([G](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/G_LegacyCore1.5v2.pth?download=true), [D](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/D_LegacyCore1.5v2.pth?download=true)) |
+| **Legacy Core V1.6** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) ([G](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/D_LegacyCoreOld.pth?download=true), [D](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/G_LegacyCoreOld.pth?download=true) *(G/D filenames swapped)*) |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Not specified | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Not specified | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -79,7 +79,9 @@ If any of these settings do not match the pretrained pair, training will either 
 
 !!!note
 **Note on Legacy Core (`V1.5`, `V1.5v2`, and `V1.6`):**
-The **Legacy Core** pretrained models (`lyery/mode4` and `lyery/test`) were **removed by their author** and are no longer available for download (they were also removed from Ilaria RVC's downloader in `2.4.4`). Their entries above are kept **for informational purposes only**; only weights you already downloaded previously can still be used for training.
+- **Legacy Core V1.5** (`lyery/mode4`) remains **removed by its author** (removed from Ilaria RVC's downloader in `2.4.4`); only previously downloaded weights can still be used.
+- **Legacy Core V1.5v2** and **Legacy Core V1.6** (`32 kHz`) are available again with the original author's consent via [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) and were restored in Ilaria RVC `2.4.7`.
+- **Important for Legacy Core V1.6**: in the reupload repository, the **G** and **D** filenames are **swapped** (`D_LegacyCoreOld.pth` is **G**, and `G_LegacyCoreOld.pth` is **D**). Make sure you load each file in the right slot.
 !!!
 
 > **Compatibility note**: In Ilaria RVC, RefineGAN training is supported specifically at `32 kHz` with RVC v2 and pitch guidance. Choosing a `40 kHz` or `44.1 kHz` RefineGAN pretrain while setting training to `32 kHz` will fail or produce broken output.

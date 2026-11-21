@@ -7,7 +7,7 @@ description: "Votre dataset est le facteur le plus déterminant pour le naturel,
 ---
 # Datasets, Dataset Checker et Audio Analyzer
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Votre dataset est le facteur le plus déterminant pour le naturel, la propreté et l'expressivité de votre modèle RVC. Même les meilleurs réglages d'entraînement ne peuvent pas rattraper des enregistrements bruités, réverbérants ou saturés.
 

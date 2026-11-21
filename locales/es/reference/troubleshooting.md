@@ -6,7 +6,7 @@ description: "Solución de problemas RVC paso a paso para principiantes y expert
 ---
 # Solución de problemas de RVC
 
-[Descargar Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descargar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 !!!tip
 **¿Eres nuevo en RVC? Sigue estas 4 reglas antes que nada:**

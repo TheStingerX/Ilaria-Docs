@@ -32,7 +32,7 @@ También puedes usar Ilaria RVC en Kaggle con su GPU remota, incluso si tu orden
 
 Ilaria RVC es una aplicación de Windows para convertir grabaciones y entrenar modelos de voz. Su interfaz se abre en un navegador y el motor de conversión se ejecuta en su computadora. El paquete de Windows está diseñado para GPU NVIDIA.
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Explorar demostraciones de voz](https://ilariarvc.shop/en/demos/) · [Leer el registro de cambios](ilaria-rvc/install/version-history.md)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Explorar demostraciones de voz](https://ilariarvc.shop/en/demos/) · [Leer el registro de cambios](ilaria-rvc/install/version-history.md)
 
 </div>
 
@@ -83,6 +83,6 @@ Utilice la navegación para encontrar guías de configuración, conversión, cap
 ## Algunas curiosidades sobre el sitio e Ilaria
 
 - **Nacido de la experiencia real:** Ilaria (`TheStingerX` / `thestingerx` en Discord) escribió y amplió estas guías directamente mientras desarrollaba **Ilaria RVC**, entrenaba modelos de voz (como *Itaila*) y probaba entornos reales en Windows, Kaggle, Google Colab y Lightning AI.
-- **De la `1.1 Beta` a la `2.4.6`:** Ilaria RVC empezó como una interfaz personalizada para Windows y evolucionó hasta soportar **NVIDIA RTX serie 50 (Blackwell)** con CUDA 12.8, **entrenamiento nativo en BF16**, **Kokoro v1.0 TTS**, conversión **Safetensors ↔ PTH** y catálogos integrados.
+- **De la `1.1 Beta` a la `2.4.7`:** Ilaria RVC empezó como una interfaz personalizada para Windows y evolucionó hasta soportar **NVIDIA RTX serie 50 (Blackwell)** con CUDA 12.8, **entrenamiento nativo en BF16**, **Kokoro v1.0 TTS**, conversión **Safetensors ↔ PTH** y catálogos integrados.
 - **Mucho más que una app:** Con el tiempo, **Ilaria Docs** creció hasta cubrir **11 aplicaciones y forks de RVC** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI y RVC Model Merger) además de herramientas **Non-RVC** como **YuneVoix**, **Causal Voice Changer**, **UVR5** y **MVSep**.
 - **Sincronizado en 6 idiomas:** Cada página del sitio se mantiene 1:1 en inglés, italiano, español, francés, alemán y portugués.

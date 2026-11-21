@@ -7,7 +7,7 @@ description: "In Ilaria RVC, la funzione Voice Blender si trova nella scheda Oth
 ---
 # Voice Blender (Fusione Modelli)
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 In **Ilaria RVC**, la funzione Voice Blender si trova nella scheda **Other** sotto **Merge models**. Permette di fondere i pesi di due modelli vocali `.pth` compatibili per creare una nuova voce ibrida senza dover allenare un modello da zero.
 

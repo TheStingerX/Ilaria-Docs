@@ -7,7 +7,7 @@ description: "Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se 
 ---
 # Panoramica di Ilaria RVC
 
-[Scarica Ilaria RVC 2.4.2 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.2 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. [Ilaria RVC on Kaggle](cloud/kaggle.md)
 

@@ -6,7 +6,7 @@ description: "Texto para fala (TTS) gera uma gravação de origem a partir das p
 ---
 # Texto para fala e RVC
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Texto para fala (TTS) gera uma gravação de origem a partir das palavras que você digita. O RVC então aplica um modelo de voz separado a essa gravação. A voz TTS fornece pronúncia, sotaque, timing e a maior parte da expressão. O modelo alvo muda a forma como esse desempenho soa.
 

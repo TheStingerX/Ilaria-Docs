@@ -7,7 +7,7 @@ description: "Start with Pitch 0, a short dry WAV and one known-good model. Chan
 ---
 # Logs and recovery
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **RMVPE · 2.4.2** · Fixes RMVPE inference when CUDA cuDNN rejects a GRU operation. RMVPE uses contiguous input and retries that GRU on the CPU if cuDNN returns `CUDNN_STATUS_NOT_SUPPORTED`. Requires 2.4.0 or later. Open **Other → Update Ilaria RVC** to install 2.4.2.
 

@@ -8,7 +8,7 @@ description: "A inferência usa uma voz treinada para converter uma gravação."
 
 # Todos os controles de inferência explicados
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 A inferência usa uma voz treinada para converter uma gravação. Para um primeiro teste, carregue um WAV curto e limpo, selecione uma voz, deixe o Pitch em zero e mantenha os recursos opcionais desativados. Compare a entrada e a saída antes de alterar um valor.
 

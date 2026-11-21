@@ -32,7 +32,7 @@ Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si 
 
 Ilaria RVC est une application Windows permettant de convertir des enregistrements et de former des modèles vocaux. Son interface s'ouvre dans un navigateur et le moteur de conversion s'exécute sur votre ordinateur. Le package Windows est conçu pour les GPU NVIDIA.
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Parcourir les démos vocales](https://ilariarvc.shop/en/demos/) · [Lire le journal des modifications](ilaria-rvc/install/version-history.md)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Parcourir les démos vocales](https://ilariarvc.shop/en/demos/) · [Lire le journal des modifications](ilaria-rvc/install/version-history.md)
 
 </div>
 
@@ -83,6 +83,6 @@ Utilisez la navigation pour trouver des guides de configuration, de conversion, 
 ## Quelques anecdotes sur le site et sur Ilaria
 
 - **Né de l'expérience pratique :** Ilaria (`TheStingerX` / `thestingerx` sur Discord) a rédigé et enrichi ces guides directement en développant **Ilaria RVC**, en entraînant des modèles vocaux (comme *Itaila*) et en testant des configurations réelles sous Windows, Kaggle, Google Colab et Lightning AI.
-- **De la `1.1 Beta` à la `2.4.6` :** Parti d'une interface Windows personnalisée, Ilaria RVC prend désormais en charge les **NVIDIA RTX série 50 (Blackwell)** avec CUDA 12.8, l'**entraînement natif en BF16**, **Kokoro v1.0 TTS**, la conversion **Safetensors ↔ PTH** et des catalogues intégrés.
+- **De la `1.1 Beta` à la `2.4.7` :** Parti d'une interface Windows personnalisée, Ilaria RVC prend désormais en charge les **NVIDIA RTX série 50 (Blackwell)** avec CUDA 12.8, l'**entraînement natif en BF16**, **Kokoro v1.0 TTS**, la conversion **Safetensors ↔ PTH** et des catalogues intégrés.
 - **Bien plus qu'une seule appli :** Avec le temps, **Ilaria Docs** est devenu un portail complet couvrant **11 applications et forks RVC** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI et RVC Model Merger) ainsi que des outils **Non-RVC** comme **YuneVoix**, **Causal Voice Changer**, **UVR5** et **MVSep**.
 - **Synchronisé en 6 langues :** Chaque page du site est maintenue en parité 1:1 en anglais, italien, espagnol, français, allemand et portugais.

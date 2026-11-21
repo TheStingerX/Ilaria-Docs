@@ -7,7 +7,7 @@ description: "La versione 2.1.0 offre impostazioni a 32, 40 e 48 kHz con combina
 ---
 # Controlli e flusso di lavoro dell'addestramento
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Controlli di addestramento](training-buttons.md)
 

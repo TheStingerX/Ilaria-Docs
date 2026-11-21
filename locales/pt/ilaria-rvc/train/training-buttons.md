@@ -8,7 +8,7 @@ description: "O treinamento cria um novo modelo de voz a partir de gravações."
 
 # Todos os controles de treinamento explicados
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 O treinamento cria um novo modelo de voz a partir de gravações. Para um primeiro experimento, use um nome exclusivo, um pequeno conjunto de dados limpo e um par pré-treinado compatível. Mantenha uma gravação fora do conjunto de dados para poder ouvir o modelo em um clipe que ele nunca viu. Comece com o [fluxo de trabalho de treinamento](training-workflow.md) se quiser que as etapas estejam em ordem.
 

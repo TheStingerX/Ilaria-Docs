@@ -8,7 +8,7 @@ description: "Verwenden Sie Andere, um Dateien zu verwalten, Modelle zu prüfen 
 
 # Jedes andere Bedienfeld erklärt
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Verwenden Sie **Andere**, um Dateien zu verwalten, Modelle zu prüfen oder zu kombinieren, Audio zu überprüfen und die App zu warten. Entscheiden Sie zunächst, ob Sie ein Inferenzmodell, einen Content-Encoder oder ein G/D-Trainingspaar benötigen. Sie gehören zu verschiedenen Teilen von RVC.
 

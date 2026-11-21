@@ -6,7 +6,7 @@ description: "Ogni clip insegna al modello qualcosa sulla sua voce di destinazio
 ---
 # Prepara un set di dati vocale
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Ogni clip insegna al modello qualcosa sulla sua voce di destinazione. Prima dell'addestramento, decidi quali parti di quella voce vuoi che il modello gestisca, quindi conserva le registrazioni che dimostrano chiaramente quelle parti. Inizia con il materiale che sei autorizzato a utilizzare per la formazione e conserva una copia separata dei file originali.
 

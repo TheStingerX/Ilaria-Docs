@@ -9,7 +9,7 @@ description: "Laden Sie den unterstützten NVIDIA-Build von Hugging Face] herunt
 
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Installieren Sie das Windows-Paket
 
@@ -39,14 +39,14 @@ Wenn Sie mehr als eine GPU haben, lesen Sie das Launcher-Protokoll, um zu sehen,
 
 Die Rechen- und Backpropagation-Tests sowie das Laden von ContentVec wurden auf einer RTX 4070 überprüft. Die Kompatibilität mit anderen Karten wird von deren Architektur und Laufzeitauswahl erwartet und kann nicht von Modell zu Modell garantiert werden.
 
-## Update auf 2.4.0
+## Update auf 2.4.7
 
-Lade das vollständige ZIP herunter, entpacke es in einen neuen Ordner und starte `RUN_ILARIA_RVC.bat`.
+Lade das vollständige ZIP (`ILARIA_RVC-2.4.7.zip`) herunter, entpacke es in einen neuen Ordner und starte `RUN_ILARIA_RVC.bat`.
 
 Behalte die alte Installation als Sicherung. Kopiere Modelle nach models/, Datensätze nach app/datasets/ und vollständige Experimente nach app/logs/. Der Updater von 2.3.0 verwendet die alte Struktur.
 
 [Kompatible GPUs](gpu-compatibility.md)
 
-### Update von 2.4.0
+### Update von 2.4.2 - 2.4.6
 
-Installiere und starte zuerst 2.4.0. Öffne **Other → Update Ilaria RVC** und installiere die schrittweisen Updates bis **2.4.6** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6`).
+Wenn du bereits **2.4.2** bis **2.4.6** verwendest, öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. Von **2.4.0** oder **2.4.1** aktualisiere zuerst auf **2.4.2** oder entpacke das vollständige **2.4.7**-ZIP.
