@@ -43,7 +43,7 @@ Wenn du eine rohe `G_*.pth` nach `models/` kopierst und Audio konvertierst, stü
 ## 3. Dateigröße (`FP16` vs. `FP32`) & Formate (`.pth` vs. `.safetensors` / `.onnx`)
 
 - **Warum ist eine `.pth` ~50 MB groß und eine andere ~105 MB?**
-  Der Unterschied ist die **Präzision**: Eine in `FP16` exportierte `.pth` ist rund halb so groß wie `FP32` (siehe [Präzision](precision.md)). Auf modernen NVIDIA-CUDA-GPUs klingen beide praktisch identisch, während `FP32` auch auf älteren GTX 10, DirectML und CPU läuft.
+  Der Unterschied liegt meist in der Export-Präzision des Modells (siehe [Präzision](precision.md)). `FP16` speichert Gewichte mit 16 statt 32 Bit und halbiert die Dateigröße gegenüber `FP32` bei gleicher Architektur um rund 50 %. Beide liefern nahezu identische Audioqualität, und auf unterstützten NVIDIA-GPUs kann `FP16`-Inferenz zudem schneller laufen. Wichtig: Die Export-Präzision ist unabhängig von der Inferenz-Präzision. Die meisten RVC-Apps laden ein `FP16`-Modell und wandeln die Gewichte auf älteren NVIDIA-GPUs, DirectML oder CPU automatisch in `FP32` um, sodass ein `FP32`-Export dort nicht zwingend nötig ist.
 - **`.pth` vs. `.safetensors`:**
   `.pth` nutzt Pythons `pickle`-Format (weshalb PyTorch `2.6+` `weights_only=True` erzwingt), während `.safetensors` Gewichte ohne ausführbaren Code speichert. In **Ilaria RVC 2.4.5+** kannst du über den [Safetensors ↔ PTH Konverter](../ilaria-rvc/manage/safetensors-converter.md) zwischen beiden umwandeln.
 - **`.pth` vs. `.onnx`:**

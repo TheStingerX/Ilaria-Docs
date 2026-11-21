@@ -71,3 +71,18 @@ Si la aplicación no se inicia, mantenga el registro abierto y busque el primer 
  | Corregir un error o recuperar una instalación | [Solución de problemas](reference/troubleshooting.md) |
 
 Utilice la navegación para encontrar guías de configuración, conversión, capacitación y solución de problemas para Ilaria RVC y otras aplicaciones RVC.
+
+
+---
+
+## La documentación en cifras
+
+- **Páginas totales:** **88** páginas (`87` guías + Inicio)
+- **Total de páginas en los 6 idiomas (`en`, `it`, `es`, `fr`, `de`, `pt`):** **528** páginas (`88 x 6`)
+
+## Algunas curiosidades sobre el sitio e Ilaria
+
+- **Nacido de la experiencia real:** Ilaria (`TheStingerX` / `thestingerx` en Discord) escribió y amplió estas guías directamente mientras desarrollaba **Ilaria RVC**, entrenaba modelos de voz (como *Itaila*) y probaba entornos reales en Windows, Kaggle, Google Colab y Lightning AI.
+- **De la `1.1 Beta` a la `2.4.6`:** Ilaria RVC empezó como una interfaz personalizada para Windows y evolucionó hasta soportar **NVIDIA RTX serie 50 (Blackwell)** con CUDA 12.8, **entrenamiento nativo en BF16**, **Kokoro v1.0 TTS**, conversión **Safetensors ↔ PTH** y catálogos integrados.
+- **Mucho más que una app:** Con el tiempo, **Ilaria Docs** creció hasta cubrir **11 aplicaciones y forks de RVC** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI y RVC Model Merger) además de herramientas **Non-RVC** como **YuneVoix**, **Causal Voice Changer**, **UVR5** y **MVSep**.
+- **Sincronizado en 6 idiomas:** Cada página del sitio se mantiene 1:1 en inglés, italiano, español, francés, alemán y portugués.
