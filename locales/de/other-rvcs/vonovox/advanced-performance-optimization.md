@@ -124,7 +124,11 @@ Immer nach dem Test ausführen; ein Windows-Neustart setzt `-lgc` ebenfalls zur�
 
 ## 9. Ein-Klick-Verwaltung (BAT-Dateien)
 
-### Lock-GPU-Clocks.bat
+<details>
+<summary><strong>Hier klicken zum Ausklappen: Ein-Klick-BAT-Skripte (Lock-GPU-Clocks.bat &amp; Reset-GPU-Clocks.bat)</strong></summary>
+
+<details>
+<summary><strong>Klicken zum Ausklappen, um den vollständigen Code von Lock-GPU-Clocks.bat anzuzeigen</strong></summary>
 
 ```bat
 @echo off
@@ -257,7 +261,10 @@ exit /b %EXIT_CODE%
 ::PS exit 0
 ```
 
-### Reset-GPU-Clocks.bat
+</details>
+
+<details>
+<summary><strong>Klicken zum Ausklappen, um den vollständigen Code von Reset-GPU-Clocks.bat anzuzeigen</strong></summary>
 
 ```bat
 @echo off
@@ -341,6 +348,10 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
+
+</details>
+
+</details>
 
 Im Editor unter **Datei → Speichern unter...** den Dateityp auf **Alle Dateien (`*.*`)** stellen (damit kein `.bat.txt` entsteht) und per Rechtsklick **Als Administrator ausführen**.
 
