@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612122824">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612442521">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848612122824" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848612442521" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848612122824" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848612122824" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848612122824" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848612442521" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848612442521" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -308,10 +308,9 @@
 <p>Immer nach dem Test ausführen; ein Windows-Neustart setzt <code translate="no" v-pre>-lgc</code> ebenfalls zurück.</p>
 <hr>
 <span id="6-choosing-an-appropriate-frequency" class="docs-anchor"></span><h2 id="9-ein-klick-verwaltung-bat-dateien">9. Ein-Klick-Verwaltung (BAT-Dateien)</h2>
-<doc-panel id="stronghier-klicken-zum-ausklappen-ein-klick-bat-skripte-lock-gpu-clocksbat--reset-gpu-clocksbatstrong" collapsed>
-    <template #title><strong>Hier klicken zum Ausklappen: Ein-Klick-BAT-Skripte (Lock-GPU-Clocks.bat &amp; Reset-GPU-Clocks.bat)</strong></template>
-<details>
-<summary><strong>Klicken zum Ausklappen, um den vollständigen Code von Lock-GPU-Clocks.bat anzuzeigen</strong></summary>
+<h3 id="lock-gpu-clocksbat">Lock-GPU-Clocks.bat</h3>
+<doc-panel id="strongklicken-zum-ausklappen-um-den-vollständigen-code-von-lock-gpu-clocksbat-anzuzeigenstrong" collapsed>
+    <template #title><strong>Klicken zum Ausklappen, um den vollständigen Code von Lock-GPU-Clocks.bat anzuzeigen</strong></template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
 setlocal EnableExtensions
@@ -443,6 +442,7 @@ exit /b %EXIT_CODE%
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
 </doc-panel>
+<span id="verify-the-clock-lock-was-accepted-vs-actually-observed" class="docs-anchor"></span><h3 id="reset-gpu-clocksbat">Reset-GPU-Clocks.bat</h3>
 <doc-panel id="strongklicken-zum-ausklappen-um-den-vollständigen-code-von-reset-gpu-clocksbat-anzuzeigenstrong" collapsed>
     <template #title><strong>Klicken zum Ausklappen, um den vollständigen Code von Reset-GPU-Clocks.bat anzuzeigen</strong></template>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -528,10 +528,9 @@ exit /b %EXIT_CODE%
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-</details>
 <p>Im Editor unter <strong>Datei → Speichern unter...</strong> den Dateityp auf <strong>Alle Dateien (<code translate="no" v-pre>*.*</code>)</strong> stellen (damit kein <code translate="no" v-pre>.bat.txt</code> entsteht) und per Rechtsklick <strong>Als Administrator ausführen</strong>.</p>
 <hr>
-<span id="7-applying-gpu-clock-lock" class="docs-anchor"></span><h2 id="10-wirkung-prüfen-ab-test">10. Wirkung prüfen (A/B-Test)</h2>
+<span id="8-restoring-default-settings" class="docs-anchor"></span><h2 id="10-wirkung-prüfen-ab-test">10. Wirkung prüfen (A/B-Test)</h2>
 <p>Ein 3-5-Minuten-Test dient nur als Vorabcheck; für eine verlässliche Bewertung führe einen <strong>A/B-Vergleich über mindestens 10-15 Minuten</strong> pro Durchgang durch (1. <code translate="no" v-pre>-rgc</code> ausführen, 2. Vonovox stabilisieren, 3. Test A 10-15 Min, 4. Verifizierten <code translate="no" v-pre>Graphics</code>-Takt setzen, 5. Test B 10-15 Min bei identischem Modell, F0, Block Size, Audiogeräten und GPU-Last, 6. Bei Unklarheit wiederholen oder mit <code translate="no" v-pre>-rgc</code> zurücksetzen):</p>
 <retype-table copy-text="| Messwert | Test A: Standard (10-15 Min) | Test B: Fixiert (10-15 Min) |
 | --- | --- | --- |
@@ -599,13 +598,13 @@ exit /b %EXIT_CODE%
 </retype-table>
 <p>Ohne klaren Vorteil sofort mit <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> zurücksetzen.</p>
 <hr>
-<h2 id="11-risiken-grenzen-und-vorsichtsmaßnahmen">11. Risiken, Grenzen und Vorsichtsmaßnahmen</h2>
+<span id="9-one-click-gpu-clock-management-bat-scripts" class="docs-anchor"></span><h2 id="11-risiken-grenzen-und-vorsichtsmaßnahmen">11. Risiken, Grenzen und Vorsichtsmaßnahmen</h2>
 <p>Mehr Wärme, Lüftergeräusch, Stromverbrauch, kürzere Akkulaufzeit, mögliches Throttling und Konflikte mit MSI Afterburner/OEM-Tools. Niemals VBIOS, Spannungen oder Schutzfunktionen verändern.</p>
 <hr>
-<span id="8-restoring-default-settings" class="docs-anchor"></span><h2 id="12-hinweis-gpu-speichertakt--lmc">12. Hinweis: GPU-Speichertakt (<code translate="no" v-pre>-lmc</code>)</h2>
+<h2 id="12-hinweis-gpu-speichertakt--lmc">12. Hinweis: GPU-Speichertakt (<code translate="no" v-pre>-lmc</code>)</h2>
 <p><code translate="no" v-pre>-lmc</code> / <code translate="no" v-pre>-rmc</code> sperrt den VRAM-Takt und wird mangels Nutzen nicht für Vonovox empfohlen.</p>
 <hr>
-<span id="9-one-click-gpu-clock-management-bat-scripts" class="docs-anchor"></span><h2 id="13-alternativen">13. Alternativen</h2>
+<h2 id="13-alternativen">13. Alternativen</h2>
 <p><strong>NVIDIA Systemsteuerung → Energieverwaltungsmodus → Maximale Leistung bevorzugen</strong> (nicht identisch mit <code translate="no" v-pre>--lgc</code>), <strong>Block Size</strong> erhöhen, <code translate="no" v-pre>48 kHz</code> und WASAPI in <a href="../live-audio/">Vonovox einrichten</a> prüfen, Spiel-FPS begrenzen und Kühlung prüfen.</p>
 <hr>
 <h2 id="14-fehlerbehebung">14. Fehlerbehebung</h2>
@@ -748,7 +747,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T21:33:19.000Z">21/11/2026 · 22:33</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

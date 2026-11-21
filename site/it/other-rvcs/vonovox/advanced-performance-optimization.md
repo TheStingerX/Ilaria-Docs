@@ -263,8 +263,7 @@ Questi due script Windows utilizzano PowerShell integrato in Windows (nessun sof
 - `Lock-GPU-Clocks.bat` estrae **solo** le frequenze `Graphics` da `SUPPORTED_CLOCKS` (ignorando `Memory`), rifiuta valori arbitrari (come `50000`) e **non sceglie mai automaticamente** il massimo.
 - In caso di errore di `-lgc`, **non** esegue automaticamente `-rgc`, mostra il codice di errore NVIDIA e indica come verificare i clock attuali; inoltre usa `--query-gpu=clocks.gr` per distinguere tra comando accettato e frequenza realmente osservata.
 
-<details>
-<summary><strong>Clicca qui per espandere: Script BAT con un clic (Lock-GPU-Clocks.bat e Reset-GPU-Clocks.bat)</strong></summary>
+### Lock-GPU-Clocks.bat
 
 <details>
 <summary><strong>Clicca per espandere e rivelare il codice completo di Lock-GPU-Clocks.bat</strong></summary>
@@ -402,6 +401,8 @@ exit /b %EXIT_CODE%
 
 </details>
 
+### Reset-GPU-Clocks.bat
+
 <details>
 <summary><strong>Clicca per espandere e rivelare il codice completo di Reset-GPU-Clocks.bat</strong></summary>
 
@@ -487,8 +488,6 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
-
-</details>
 
 </details>
 

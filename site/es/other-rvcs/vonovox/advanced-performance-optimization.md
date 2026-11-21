@@ -188,8 +188,7 @@ nvidia-smi -i 0 -rgc
 
 Ambos scripts usan PowerShell integrado en Windows (sin software externo), interfaz CMD en inglés, comprobación de administrador independiente de `net session`, validación del índice GPU con `nvidia-smi -L`, análisis estricto de `Graphics` en `SUPPORTED_CLOCKS` (rechazando valores arbitrarios como `50000` y sin seleccionar nunca el máximo), y **sin** ejecutar `-rgc` automáticamente si `-lgc` falla para preservar la configuración previa.
 
-<details>
-<summary><strong>Haz clic aquí para expandir: Scripts BAT en un clic (Lock-GPU-Clocks.bat y Reset-GPU-Clocks.bat)</strong></summary>
+### Lock-GPU-Clocks.bat
 
 <details>
 <summary><strong>Haz clic para expandir y revelar el código completo de Lock-GPU-Clocks.bat</strong></summary>
@@ -327,6 +326,8 @@ exit /b %EXIT_CODE%
 
 </details>
 
+### Reset-GPU-Clocks.bat
+
 <details>
 <summary><strong>Haz clic para expandir y revelar el código completo de Reset-GPU-Clocks.bat</strong></summary>
 
@@ -412,8 +413,6 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
-
-</details>
 
 </details>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612083374">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612402655">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,12 +35,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848612083374" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848612402655" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848612083374" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848612083374" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848612083374" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848612402655" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848612402655" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -477,10 +477,9 @@ This prints a numbered list such as <code translate="no" v-pre>GPU 0: NVIDIA GeF
 <li><strong>Strict input &amp; frequency validation:</strong> <code translate="no" v-pre>Lock-GPU-Clocks.bat</code> checks administrator privileges independently of the Windows <code translate="no" v-pre>Server</code> service, verifies that your chosen GPU index exists in <code translate="no" v-pre>nvidia-smi -L</code>, parses <strong>only</strong> <code translate="no" v-pre>Graphics</code> clocks from <code translate="no" v-pre>SUPPORTED_CLOCKS</code> (ignoring <code translate="no" v-pre>Memory</code> clocks), rejects arbitrary or unverified numbers (like <code translate="no" v-pre>50000</code>), and <strong>never</strong> auto-selects the maximum clock.</li>
 <li><strong>Safe error handling:</strong> If <code translate="no" v-pre>-lgc</code> fails, the script does <strong>not</strong> run <code translate="no" v-pre>-rgc</code> automatically, displays the NVIDIA exit code, and tells you how to inspect your current clocks before proceeding. It also uses structured <code translate="no" v-pre>nvidia-smi --query-gpu=clocks.gr</code> telemetry to distinguish between driver acceptance and the actually observed clock.</li>
 </ul>
-<doc-panel id="strongclick-here-to-expand-one-click-bat-scripts-lock-gpu-clocksbat--reset-gpu-clocksbatstrong" collapsed>
-    <template #title><strong>Click here to expand: One-Click BAT Scripts (Lock-GPU-Clocks.bat &amp; Reset-GPU-Clocks.bat)</strong></template>
-<details>
-<summary><strong>Click to expand and reveal the full Lock-GPU-Clocks.bat code</strong></summary>
+<h3 id="lock-gpu-clocksbat">Lock-GPU-Clocks.bat</h3>
+<doc-panel id="strongclick-to-expand-and-reveal-the-full-lock-gpu-clocksbat-codestrong" collapsed>
+    <template #title><strong>Click to expand and reveal the full Lock-GPU-Clocks.bat code</strong></template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
 setlocal EnableExtensions
@@ -612,6 +611,7 @@ exit /b %EXIT_CODE%
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
 </doc-panel>
+<h3 id="reset-gpu-clocksbat">Reset-GPU-Clocks.bat</h3>
 <doc-panel id="strongclick-to-expand-and-reveal-the-full-reset-gpu-clocksbat-codestrong" collapsed>
     <template #title><strong>Click to expand and reveal the full Reset-GPU-Clocks.bat code</strong></template>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -697,7 +697,6 @@ exit /b %EXIT_CODE%
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-</details>
 <h3 id="how-to-create-and-run-the-bat-files-safely">How to create and run the <code translate="no" v-pre>.bat</code> files safely</h3>
 <ol>
 <li>Open <strong>Notepad</strong> (search <code translate="no" v-pre>notepad</code> in the Start menu).</li>
@@ -1055,7 +1054,7 @@ Skip GPU Clock Locking completely and use the safer <doc-anchor-trigger to="#13-
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T21:33:19.000Z">21/11/2026 · 22:33</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
