@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535350238">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535725767">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Archivos PTH de RVC (.pth)">
-    <meta name="description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G_/D_, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
+    <meta name="description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G y D, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/pth/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848535350238" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848535725767" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535350238" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535725767" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535350238" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535725767" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G_/D_, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
+    <meta property="og:description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G y D, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G_/D_, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
+    <meta name="twitter:description" content="Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G y D, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/pth/">
@@ -175,7 +175,7 @@
 
                 <!-- Page content  -->
 <span id="rvc-pth-files-pth" class="docs-anchor"></span><h1 id="archivos-pth-de-rvc-pth">Archivos PTH de RVC (<code translate="no" v-pre>.pth</code>)</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G_&lt;em&gt;/D_&lt;/em&gt;, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G y D, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes.</div>
 <p>Cuando descargas, entrenas o compartes una voz RVC, el <strong>archivo <code translate="no" v-pre>.pth</code></strong> es el archivo más importante de todos. Mientras que el <a href="../indexes/">archivo <code translate="no" v-pre>.index</code></a> es opcional, el <code translate="no" v-pre>.pth</code> es <strong>obligatorio</strong>: sin él, RVC no puede convertir ninguna voz.</p>
 <p>Esta guía explica qué contiene un <code translate="no" v-pre>.pth</code>, la diferencia clave entre un modelo exportado y los checkpoints crudos de entrenamiento (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>), por qué cambia su tamaño y cómo arreglar los errores más comunes.</p>
 <hr>
@@ -335,7 +335,7 @@ El entrenamiento e inferencia RVC estándar usan <code translate="no" v-pre>.pth
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T00:11:15.000Z">21/11/2026 · 01:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

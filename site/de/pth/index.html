@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535360927">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535741777">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="RVC PTH-Dateien (.pth)">
-    <meta name="description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+    <meta name="description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G- und D-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/de/pth/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848535360927" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848535741777" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535360927" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535741777" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535360927" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535741777" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+    <meta property="og:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G- und D-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
-    <meta name="twitter:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+    <meta name="twitter:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G- und D-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/pth/">
@@ -175,7 +175,7 @@
 
                 <!-- Page content  -->
 <span id="rvc-pth-files-pth" class="docs-anchor"></span><h1 id="rvc-pth-dateien-pth">RVC PTH-Dateien (<code translate="no" v-pre>.pth</code>)</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_&lt;em&gt;/D_&lt;/em&gt;-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G- und D-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.</div>
 <p>Wenn du eine RVC-Stimme herunterlädst, trainierst oder teilst, ist die <strong><code translate="no" v-pre>.pth</code>-Datei</strong> die wichtigste Datei überhaupt. Während eine <a href="../indexes/"><code translate="no" v-pre>.index</code>-Datei</a> optional ist, ist die <code translate="no" v-pre>.pth</code>-Datei <strong>zwingend nötig</strong>: Ohne sie kann RVC keine Stimme konvertieren.</p>
 <p>Dieser Guide erklärt, was in einer <code translate="no" v-pre>.pth</code>-Datei steckt, den entscheidenden Unterschied zwischen einem exportierten Stimmmodell und rohen Trainings-Checkpoints (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>), warum Dateigrößen variieren und wie du typische Fehler löst.</p>
 <hr>
@@ -335,7 +335,7 @@ Standard-Training und Inferenz in RVC nutzen <code translate="no" v-pre>.pth</co
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T00:11:15.000Z">21/11/2026 · 01:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
