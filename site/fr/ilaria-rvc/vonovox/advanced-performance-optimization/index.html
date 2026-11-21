@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848611487583">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848612112878">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848611487583" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848612112878" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848611487583" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848612112878" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848611487583" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848611487583" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848612112878" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848612112878" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -309,8 +309,11 @@
 <p>Exécutez toujours cette commande après vos tests ou en cas d&#x27;absence de gain. Le verrouillage est temporaire et disparaît au redémarrage de Windows.</p>
 <hr>
 <span id="6-choosing-an-appropriate-frequency" class="docs-anchor"></span><h2 id="9-gestion-en-un-clic-scripts-bat">9. Gestion en un clic (scripts BAT)</h2>
-<h3 id="lock-gpu-clocksbat">Lock-GPU-Clocks.bat</h3>
-<div id="lock-gpu-clocksbat-code-1" class="codeblock-wrapper"><doc-codeblock>
+<doc-panel id="strongcliquez-ici-pour-développer--scripts-bat-en-un-clic-lock-gpu-clocksbat-et-reset-gpu-clocksbatstrong" collapsed>
+    <template #title><strong>Cliquez ici pour développer : Scripts BAT en un clic (Lock-GPU-Clocks.bat et Reset-GPU-Clocks.bat)</strong></template>
+<details>
+<summary><strong>Cliquez pour développer et révéler le code complet de Lock-GPU-Clocks.bat</strong></summary>
+<div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
 setlocal EnableExtensions
 title Vonovox Helper - Lock NVIDIA GPU Clocks
@@ -440,8 +443,10 @@ exit /b %EXIT_CODE%
 ::PS Write-Host &quot;When finished, run Reset-GPU-Clocks.bat or: nvidia-smi -i $gpuId -rgc&quot;
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
-<span id="verify-the-clock-lock-was-accepted-vs-actually-observed" class="docs-anchor"></span><h3 id="reset-gpu-clocksbat">Reset-GPU-Clocks.bat</h3>
-<div id="reset-gpu-clocksbat-code-1" class="codeblock-wrapper"><doc-codeblock>
+</doc-panel>
+<doc-panel id="strongcliquez-pour-développer-et-révéler-le-code-complet-de-reset-gpu-clocksbatstrong" collapsed>
+    <template #title><strong>Cliquez pour développer et révéler le code complet de Reset-GPU-Clocks.bat</strong></template>
+<div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
 setlocal EnableExtensions
 title Vonovox Helper - Reset NVIDIA GPU Clocks
@@ -523,9 +528,11 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0</code></pre>
 </doc-codeblock></div>
+</doc-panel>
+</details>
 <p>Dans le Bloc-notes : <strong>Fichier → Enregistrer sous...</strong>, choisissez <strong>Type : Tous les fichiers (<code translate="no" v-pre>*.*</code>)</strong> pour éviter <code translate="no" v-pre>.bat.txt</code>, puis clic droit → <strong>Exécuter en tant qu&#x27;administrateur</strong>.</p>
 <hr>
-<span id="8-restoring-default-settings" class="docs-anchor"></span><h2 id="10-tester-si-cela-aide-vraiment-test-ab">10. Tester si cela aide vraiment (Test A/B)</h2>
+<span id="7-applying-gpu-clock-lock" class="docs-anchor"></span><h2 id="10-tester-si-cela-aide-vraiment-test-ab">10. Tester si cela aide vraiment (Test A/B)</h2>
 <p>Un test rapide de 3-5 minutes peut servir de contrôle préliminaire, mais pour évaluer un vrai gain, faites un comparatif <strong>A/B d&#x27;au moins 10-15 minutes</strong> par phase (1. Rétablissez <code translate="no" v-pre>-rgc</code>, 2. Stabilisez Vonovox, 3. Test A 10-15 min, 4. Appliquez un palier <code translate="no" v-pre>Graphics</code> vérifié, 5. Test B 10-15 min à modèle, F0, Block Size, audio et charge GPU identiques, 6. Répétez si incertain ou rétablissez <code translate="no" v-pre>-rgc</code>) :</p>
 <retype-table copy-text="| Mesure | Test A : Par défaut (10-15 min) | Test B : Verrouillé (10-15 min) |
 | --- | --- | --- |
@@ -593,13 +600,13 @@ exit /b %EXIT_CODE%
 </retype-table>
 <p>Si les résultats sont identiques ou pires, rétablissez immédiatement avec <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code>.</p>
 <hr>
-<span id="9-one-click-gpu-clock-management-bat-scripts" class="docs-anchor"></span><h2 id="11-risques-limites-et-précautions">11. Risques, limites et précautions</h2>
+<h2 id="11-risques-limites-et-précautions">11. Risques, limites et précautions</h2>
 <p>Plus de chaleur, de bruit de ventilateur, de consommation et moins d&#x27;autonomie sur portable ; risques de throttling et conflits possibles avec MSI Afterburner/logiciels OEM. Ne modifiez jamais VBIOS, tensions ou protections thermiques.</p>
 <hr>
-<h2 id="12-note-avancée--verrouillage-mémoire-gpu--lmc">12. Note avancée : verrouillage mémoire GPU (<code translate="no" v-pre>-lmc</code>)</h2>
+<span id="8-restoring-default-settings" class="docs-anchor"></span><h2 id="12-note-avancée--verrouillage-mémoire-gpu--lmc">12. Note avancée : verrouillage mémoire GPU (<code translate="no" v-pre>-lmc</code>)</h2>
 <p><code translate="no" v-pre>nvidia-smi -i 0 -lmc</code> / <code translate="no" v-pre>-rmc</code> verrouille la VRAM. Non recommandé pour Vonovox faute de preuves de gain.</p>
 <hr>
-<h2 id="13-alternatives">13. Alternatives</h2>
+<span id="9-one-click-gpu-clock-management-bat-scripts" class="docs-anchor"></span><h2 id="13-alternatives">13. Alternatives</h2>
 <p>Utilisez le <strong>Panneau de configuration NVIDIA → Mode de gestion de l&#x27;alimentation → Privilégier les performances maximales</strong> (non équivalent à <code translate="no" v-pre>--lgc</code>), augmentez <strong>Block Size</strong>, vérifiez le <code translate="no" v-pre>48 kHz</code> dans <a href="../live-audio/">Configurer et régler Vonovox</a>, limitez les FPS en jeu et contrôlez le refroidissement.</p>
 <hr>
 <h2 id="14-dépannage">14. Dépannage</h2>
@@ -742,7 +749,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T21:17:14.000Z">21/11/2026 · 22:17</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T21:33:19.000Z">21/11/2026 · 22:33</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

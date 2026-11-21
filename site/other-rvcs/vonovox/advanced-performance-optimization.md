@@ -268,7 +268,11 @@ These two Windows `.bat` scripts use built-in Windows PowerShell (no external so
 - **Strict input & frequency validation:** `Lock-GPU-Clocks.bat` checks administrator privileges independently of the Windows `Server` service, verifies that your chosen GPU index exists in `nvidia-smi -L`, parses **only** `Graphics` clocks from `SUPPORTED_CLOCKS` (ignoring `Memory` clocks), rejects arbitrary or unverified numbers (like `50000`), and **never** auto-selects the maximum clock.
 - **Safe error handling:** If `-lgc` fails, the script does **not** run `-rgc` automatically, displays the NVIDIA exit code, and tells you how to inspect your current clocks before proceeding. It also uses structured `nvidia-smi --query-gpu=clocks.gr` telemetry to distinguish between driver acceptance and the actually observed clock.
 
-### Lock-GPU-Clocks.bat
+<details>
+<summary><strong>Click here to expand: One-Click BAT Scripts (Lock-GPU-Clocks.bat &amp; Reset-GPU-Clocks.bat)</strong></summary>
+
+<details>
+<summary><strong>Click to expand and reveal the full Lock-GPU-Clocks.bat code</strong></summary>
 
 ```bat
 @echo off
@@ -401,7 +405,10 @@ exit /b %EXIT_CODE%
 ::PS exit 0
 ```
 
-### Reset-GPU-Clocks.bat
+</details>
+
+<details>
+<summary><strong>Click to expand and reveal the full Reset-GPU-Clocks.bat code</strong></summary>
 
 ```bat
 @echo off
@@ -485,6 +492,10 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
+
+</details>
+
+</details>
 
 ### How to create and run the `.bat` files safely
 

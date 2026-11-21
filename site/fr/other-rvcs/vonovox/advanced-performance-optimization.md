@@ -118,7 +118,11 @@ Exécutez toujours cette commande après vos tests ou en cas d'absence de gain. 
 
 ## 9. Gestion en un clic (scripts BAT)
 
-### Lock-GPU-Clocks.bat
+<details>
+<summary><strong>Cliquez ici pour développer : Scripts BAT en un clic (Lock-GPU-Clocks.bat et Reset-GPU-Clocks.bat)</strong></summary>
+
+<details>
+<summary><strong>Cliquez pour développer et révéler le code complet de Lock-GPU-Clocks.bat</strong></summary>
 
 ```bat
 @echo off
@@ -251,7 +255,10 @@ exit /b %EXIT_CODE%
 ::PS exit 0
 ```
 
-### Reset-GPU-Clocks.bat
+</details>
+
+<details>
+<summary><strong>Cliquez pour développer et révéler le code complet de Reset-GPU-Clocks.bat</strong></summary>
 
 ```bat
 @echo off
@@ -335,6 +342,10 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
+
+</details>
+
+</details>
 
 Dans le Bloc-notes : **Fichier → Enregistrer sous...**, choisissez **Type : Tous les fichiers (`*.*`)** pour éviter `.bat.txt`, puis clic droit → **Exécuter en tant qu'administrateur**.
 
