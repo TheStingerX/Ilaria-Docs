@@ -15,11 +15,11 @@ Si votre ordinateur ne possède pas de GPU local compatible, vous pouvez exécut
 
 ## 1. Choisir un fournisseur cloud
 
-| Plateforme | GPU et quota | Stockage | Idéal pour |
+| Plateforme | GPU et quota | Stockage | Tunnels disponibles |
 | --- | --- | --- | --- |
-| **Google Colab** | Offre payante requise pour les Web UI | Temporaire (par session) | Démarrage rapide pour Colab Pro / Pay-As-You-Go |
-| **Kaggle** | Quota GPU hebdomadaire gratuit (**T4 x2**) | Session + persistance optionnelle | Meilleure option gratuite après vérification téléphonique |
-| **Lightning.AI** | Crédits GPU mensuels gratuits (T4 / L4 / L40) | Persistant (**Teamspace Drive**) | Garder modèles et réglages d'une session à l'autre |
+| **Google Colab** | Offre payante requise pour les Web UI | Temporaire (par session) | Ngrok |
+| **Kaggle** | Quota GPU hebdomadaire gratuit (**T4 x2**) | Session + persistance optionnelle | Ngrok |
+| **Lightning.AI** | Crédits mensuels gratuits (75h T4 16Go / 31h L4 24Go / 15h L40 48Go) | Persistant (**Teamspace Drive**) | Port Viewer (recommandé), sélecteur de tunnel |
 
 ## 2. Configurer un câble audio virtuel (Discord, OBS, jeux)
 

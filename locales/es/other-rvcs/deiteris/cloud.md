@@ -15,11 +15,11 @@ Si tu ordenador no tiene una GPU local compatible, puedes ejecutar **Deiteris w-
 
 ## 1. Elige un proveedor en la nube
 
-| Plataforma | GPU y cuota | Almacenamiento | Ideal para |
+| Plataforma | GPU y cuota | Almacenamiento | Túneles disponibles |
 | --- | --- | --- | --- |
-| **Google Colab** | Plan de pago requerido para Web UIs | Temporal (por sesión) | Configuración rápida para usuarios de Colab Pro / Pay-As-You-Go |
-| **Kaggle** | Cuota semanal gratuita de GPU (**T4 x2**) | Sesión + persistencia opcional | Mejor opción gratuita tras verificación telefónica |
-| **Lightning.AI** | Créditos mensuales gratuitos (T4 / L4 / L40) | Persistente (**Teamspace Drive**) | Conservar modelos y ajustes entre sesiones |
+| **Google Colab** | Plan de pago requerido para Web UIs | Temporal (por sesión) | Ngrok |
+| **Kaggle** | Cuota semanal gratuita de GPU (**T4 x2**) | Sesión + persistencia opcional | Ngrok |
+| **Lightning.AI** | Créditos mensuales gratuitos (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistente (**Teamspace Drive**) | Port Viewer (recomendado), selector de túnel |
 
 ## 2. Configura un cable de audio virtual (Discord, OBS o juegos)
 

@@ -15,11 +15,11 @@ If your computer does not have a compatible NVIDIA, AMD, or Intel GPU, you can r
 
 ## 1. Choose a cloud provider
 
-| Platform | GPU & Quota | Storage | Best for |
+| Platform | GPU & Quota | Storage | Tunnels available |
 | --- | --- | --- | --- |
-| **Google Colab** | Paid tier required for Web UIs | Temporary (per session) | Quickest setup if you already have Colab Pro/Pay-As-You-Go |
-| **Kaggle** | Free weekly GPU quota (**T4 x2**) | Session + optional persistence | Best free alternative when you verify your account by phone |
-| **Lightning.AI** | Free monthly GPU credits (T4 / L4 / L40) | Persistent (**Teamspace Drive**) | Keeping your models and setup saved between sessions |
+| **Google Colab** | Paid tier required for Web UIs | Temporary (per session) | Ngrok |
+| **Kaggle** | Free weekly GPU quota (**T4 x2**) | Session + optional persistence | Ngrok |
+| **Lightning.AI** | Free monthly credits (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistent (**Teamspace Drive**) | Port Viewer (recommended), Tunnel selector |
 
 ## 2. Set up a Virtual Audio Cable (for Discord, OBS, or games)
 

@@ -15,11 +15,11 @@ Wenn dein Computer keine kompatible NVIDIA-, AMD- oder Intel-GPU besitzt, kannst
 
 ## 1. Cloud-Anbieter auswählen
 
-| Plattform | GPU & Kontingent | Speicher | Am besten für |
+| Plattform | GPU & Kontingent | Speicher | Verfügbare Tunnel |
 | --- | --- | --- | --- |
-| **Google Colab** | Bezahlter Tarif für Web-UIs nötig | Temporär (pro Sitzung) | Schneller Einstieg mit Colab Pro / Pay-As-You-Go |
-| **Kaggle** | Kostenloses Wochenkontingent (**T4 x2**) | Sitzung + optionale Persistenz | Beste kostenlose Option nach Telefon-Verifizierung |
-| **Lightning.AI** | Kostenlose Monats-Credits (T4 / L4 / L40) | Persistent (**Teamspace Drive**) | Modelle und Einstellungen dauerhaft behalten |
+| **Google Colab** | Bezahlter Tarif für Web-UIs nötig | Temporär (pro Sitzung) | Ngrok |
+| **Kaggle** | Kostenloses Wochenkontingent (**T4 x2**) | Sitzung + optionale Persistenz | Ngrok |
+| **Lightning.AI** | Kostenlose Monats-Credits (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistent (**Teamspace Drive**) | Port Viewer (empfohlen), Tunnel-Auswahl |
 
 ## 2. Virtuelles Audiokabel einrichten (Discord, OBS, Spiele)
 

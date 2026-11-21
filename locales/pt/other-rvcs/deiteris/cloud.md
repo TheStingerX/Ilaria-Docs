@@ -15,11 +15,11 @@ Se o teu computador não tiver uma GPU local compatível, podes executar o **Dei
 
 ## 1. Escolher um serviço na nuvem
 
-| Plataforma | GPU e quota | Armazenamento | Ideal para |
+| Plataforma | GPU e quota | Armazenamento | Túneis disponíveis |
 | --- | --- | --- | --- |
-| **Google Colab** | Plano pago necessário para Web UIs | Temporário (por sessão) | Arranque rápido para utilizadores Colab Pro / Pay-As-You-Go |
-| **Kaggle** | Quota semanal gratuita de GPU (**T4 x2**) | Sessão + persistência opcional | Melhor opção gratuita após verificação telefónica |
-| **Lightning.AI** | Créditos mensais gratuitos (T4 / L4 / L40) | Persistente (**Teamspace Drive**) | Manter modelos e definições entre sessões |
+| **Google Colab** | Plano pago necessário para Web UIs | Temporário (por sessão) | Ngrok |
+| **Kaggle** | Quota semanal gratuita de GPU (**T4 x2**) | Sessão + persistência opcional | Ngrok |
+| **Lightning.AI** | Créditos mensais gratuitos (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistente (**Teamspace Drive**) | Port Viewer (recomendado), seletor de túnel |
 
 ## 2. Configurar um cabo de áudio virtual (Discord, OBS, jogos)
 

@@ -15,11 +15,11 @@ If your computer does not have a supported local GPU, you can run **Deiteris w-o
 
 ## 1. Choose a cloud provider
 
-| Platform | GPU & Quota | Storage | Best for |
+| Platform | GPU & Quota | Storage | Tunnels available |
 | --- | --- | --- | --- |
-| **Google Colab** | Paid tier required for Web UIs | Temporary (per session) | Fast setup for Colab Pro / Pay-As-You-Go users |
-| **Kaggle** | Free weekly GPU quota (**T4 x2**) | Session + optional persistence | Best free option after phone verification |
-| **Lightning.AI** | Free monthly GPU credits (T4 / L4 / L40) | Persistent (**Teamspace Drive**) | Keeping models and settings saved across sessions |
+| **Google Colab** | Paid tier required for Web UIs | Temporary (per session) | Ngrok |
+| **Kaggle** | Free weekly GPU quota (**T4 x2**) | Session + optional persistence | Ngrok |
+| **Lightning.AI** | Free monthly credits (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistent (**Teamspace Drive**) | Port Viewer (recommended), Tunnel selector |
 
 ## 2. Set up a Virtual Audio Cable (for Discord, OBS, or games)
 

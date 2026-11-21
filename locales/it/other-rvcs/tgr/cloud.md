@@ -15,11 +15,11 @@ Se il tuo computer non ha una GPU NVIDIA, AMD o Intel compatibile, puoi eseguire
 
 ## 1. Scegli il servizio cloud
 
-| Piattaforma | GPU e quota | Archiviazione | Ideale per |
+| Piattaforma | GPU e quota | Archiviazione | Tunnel disponibili |
 | --- | --- | --- | --- |
-| **Google Colab** | Piano a pagamento richiesto per le Web UI | Temporanea (per sessione) | Configurazione rapida se hai già Colab Pro o Pay-As-You-Go |
-| **Kaggle** | Quota GPU settimanale gratuita (**T4 x2**) | Sessione + persistenza opzionale | Migliore alternativa gratuita dopo verifica telefonica |
-| **Lightning.AI** | Crediti GPU mensili gratuiti (T4 / L4 / L40) | Persistente (**Teamspace Drive**) | Mantenere modelli e impostazioni salvati tra le sessioni |
+| **Google Colab** | Piano a pagamento richiesto per le Web UI | Temporanea (per sessione) | Ngrok |
+| **Kaggle** | Quota GPU settimanale gratuita (**T4 x2**) | Sessione + persistenza opzionale | Ngrok |
+| **Lightning.AI** | Crediti mensili gratuiti (75h T4 16GB / 31h L4 24GB / 15h L40 48GB) | Persistente (**Teamspace Drive**) | Port Viewer (consigliato), selettore tunnel |
 
 ## 2. Configura un cavo audio virtuale (per Discord, OBS o giochi)
 
