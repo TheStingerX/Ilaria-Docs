@@ -2,7 +2,7 @@
 label: "🧠 Archivos PTH (.pth)"
 order: 88
 permalink: /pth/
-description: "Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G_*/D_*, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes."
+description: "Guía completa de archivos .pth en RVC: modelos exportados vs checkpoints G y D, tamaños FP16 vs FP32, reglas de compatibilidad y errores comunes."
 ---
 # Archivos PTH de RVC (`.pth`)
 
