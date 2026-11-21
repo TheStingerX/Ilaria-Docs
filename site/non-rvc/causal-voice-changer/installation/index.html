@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848536830784">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848540777247">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848536830784" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848540777247" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848536830784" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848540777247" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848536830784" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848540777247" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -235,11 +235,12 @@
 </ul>
 <p>If auto-detection picks the wrong backend, set the <code translate="no" v-pre>CAUSALVC_GPU</code> environment variable before running the launcher:</p>
 <ul>
-<li><code translate="no" v-pre>CAUSALVC_GPU=cuda</code></li>
-<li><code translate="no" v-pre>CAUSALVC_GPU=rocm</code></li>
-<li><code translate="no" v-pre>CAUSALVC_GPU=rocm-rdna2</code></li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=cuda</code> (NVIDIA GTX 16 / RTX 20-50 series, CUDA 13)</li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=cuda-pascal</code> (Older NVIDIA GTX 900/10, TITAN X/Xp/V, Quadro M/P, CUDA 12.6; or run <code translate="no" v-pre>run-realtime-gtx10.bat</code> / <code translate="no" v-pre>run-training-gtx10.bat</code>)</li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=rocm</code> (AMD Radeon RX 7000/9000, PRO W7000, Ryzen AI)</li>
+<li><code translate="no" v-pre>CAUSALVC_GPU=rocm-rdna2</code> (AMD Radeon RX 6000 / PRO W6000)</li>
 </ul>
-<p><em>(If running <code translate="no" v-pre>uv</code> commands manually on Windows, pass <code translate="no" v-pre>--extra cuda</code>, <code translate="no" v-pre>--extra rocm</code>, or <code translate="no" v-pre>--extra rocm-rdna2</code>.)</em></p>
+<p><em>(If running <code translate="no" v-pre>uv</code> commands manually on Windows, pass <code translate="no" v-pre>--extra cuda</code>, <code translate="no" v-pre>--extra cuda-pascal</code>, <code translate="no" v-pre>--extra rocm</code>, or <code translate="no" v-pre>--extra rocm-rdna2</code>.)</em></p>
 <h2 id="4-updating-cvc">4. Updating CVC</h2>
 <p>Starting in <strong>v0.3.1</strong>, CVC includes a <strong>built-in updater</strong> directly in the app. Automatic update checks run by default and can be turned off on the <strong>About</strong> page. Existing installs also upgrade <code translate="no" v-pre>weights/causalvc-base/</code> automatically on the next launch or voice build.</p>
 <p>When updating manually or from source:</p>
@@ -281,7 +282,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T20:12:33.000Z">20/11/2026 · 21:12</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T01:43:37.000Z">21/11/2026 · 02:43</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

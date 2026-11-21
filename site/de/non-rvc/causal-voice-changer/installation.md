@@ -46,11 +46,12 @@ Unter Windows erkennt `scripts/gpu-extra.ps1` deine GPU automatisch:
 - **Ältere AMD Radeons**: laufen auf der **CPU** (stelle im Live-Betrieb **Chunk** auf `60 ms` oder höher).
 
 Falls die automatische Erkennung das falsche Backend wählt, setze vor dem Start `CAUSALVC_GPU`:
-- `CAUSALVC_GPU=cuda`
+- `CAUSALVC_GPU=cuda` (NVIDIA GTX 16 / RTX 20-50, CUDA 13)
+- `CAUSALVC_GPU=cuda-pascal` (NVIDIA GTX 900/10, TITAN X/Xp/V, Quadro M/P, CUDA 12.6; un-realtime-gtx10.bat / un-training-gtx10.bat)
 - `CAUSALVC_GPU=rocm`
 - `CAUSALVC_GPU=rocm-rdna2`
 
-*(Bei manuellen `uv`-Befehlen unter Windows `--extra cuda`, `--extra rocm` oder `--extra rocm-rdna2` anhängen.)*
+*(Bei manuellen `uv`-Befehlen unter Windows `--extra cuda`, `--extra cuda-pascal`, `--extra rocm` oder `--extra rocm-rdna2` anhängen.)*
 
 ## 4. CVC aktualisieren
 

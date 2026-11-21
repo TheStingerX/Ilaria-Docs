@@ -2,6 +2,19 @@
 
 [GitHub Releases](https://github.com/mojowozo/Causal-Voice-Changer/releases)
 
+## v0.3.3.1 (2026-11-21)
+
+- **Older NVIDIA GPU support:** Added support for older NVIDIA cards dropped by CUDA 13 (GeForce GTX 900/10 series, TITAN X/Xp/V, Quadro M/P) using the CUDA 12.6 PyTorch build (`cuda-pascal` / `run-realtime-gtx10.bat` / `run-training-gtx10.bat`).
+
+---
+
+## v0.3.3 (2026-11-21)
+
+- **Realtime stability:** Improved realtime performance so a glottal period cannot exceed the `10 ms` causal period and cause audio degradation (requires no model rebuilds).
+- **Windows & updater fixes:** Fixed window transparency on Windows and fixed a bug where the app could try to use the old engine after an update.
+
+---
+
 ## v0.3.2 (2026-11-20)
 
 - Minor release improving overall sound quality in both training and real-time inference.

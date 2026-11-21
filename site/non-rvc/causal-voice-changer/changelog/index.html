@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848536830784">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848540777247">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Causal Voice Changer Changelog">
-    <meta name="description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.2, covering the 100 Hz v4 base, built-in updater, and GPU fixes.">
+    <meta name="description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.3.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/non-rvc/causal-voice-changer/changelog/">
@@ -35,23 +35,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848536830784" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848540777247" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848536830784" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848540777247" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848536830784" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848540777247" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.2, covering the 100 Hz v4 base, built-in updater, and GPU fixes.">
+    <meta property="og:description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.3.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
-    <meta name="twitter:description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.2, covering the 100 Hz v4 base, built-in updater, and GPU fixes.">
+    <meta name="twitter:description" content="Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.3.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/causal-voice-changer/changelog/">
@@ -174,8 +174,19 @@
 
                 <!-- Page content  -->
 <h1 id="causal-voice-changer-changelog">Causal Voice Changer Changelog</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.2, covering the 100 Hz v4 base, built-in updater, and GPU fixes.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.3.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes.</div>
 <p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases">GitHub Releases</a></p>
+<h2 id="v0331-2026-11-21">v0.3.3.1 (2026-11-21)</h2>
+<ul>
+<li><strong>Older NVIDIA GPU support:</strong> Added support for older NVIDIA cards dropped by CUDA 13 (GeForce GTX 900/10 series, TITAN X/Xp/V, Quadro M/P) using the CUDA 12.6 PyTorch build (<code translate="no" v-pre>cuda-pascal</code> / <code translate="no" v-pre>run-realtime-gtx10.bat</code> / <code translate="no" v-pre>run-training-gtx10.bat</code>).</li>
+</ul>
+<hr>
+<h2 id="v033-2026-11-21">v0.3.3 (2026-11-21)</h2>
+<ul>
+<li><strong>Realtime stability:</strong> Improved realtime performance so a glottal period cannot exceed the <code translate="no" v-pre>10 ms</code> causal period and cause audio degradation (requires no model rebuilds).</li>
+<li><strong>Windows &amp; updater fixes:</strong> Fixed window transparency on Windows and fixed a bug where the app could try to use the old engine after an update.</li>
+</ul>
+<hr>
 <h2 id="v032-2026-11-20">v0.3.2 (2026-11-20)</h2>
 <ul>
 <li>Minor release improving overall sound quality in both training and real-time inference.</li>
@@ -247,10 +258,10 @@
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/uvr5/overview/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/causal-voice-changer/gpu-compatibility/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Overview &amp; Requirements</span>
+                                <span class="block mt-1">Compatible GP​Us</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -262,7 +273,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T20:08:34.000Z">20/11/2026 · 21:08</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T01:43:37.000Z">21/11/2026 · 02:43</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
