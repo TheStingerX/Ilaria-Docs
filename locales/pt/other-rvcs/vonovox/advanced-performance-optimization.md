@@ -124,8 +124,7 @@ Executa sempre ao terminar os testes; reiniciar o Windows também repõe os cloc
 
 ## 9. Gestão com um clique (ficheiros BAT)
 
-<details>
-<summary><strong>Clica aqui para expandir: Scripts BAT num clique (Lock-GPU-Clocks.bat e Reset-GPU-Clocks.bat)</strong></summary>
+### Lock-GPU-Clocks.bat
 
 <details>
 <summary><strong>Clica para expandir e revelar o código completo de Lock-GPU-Clocks.bat</strong></summary>
@@ -263,6 +262,8 @@ exit /b %EXIT_CODE%
 
 </details>
 
+### Reset-GPU-Clocks.bat
+
 <details>
 <summary><strong>Clica para expandir e revelar o código completo de Reset-GPU-Clocks.bat</strong></summary>
 
@@ -348,8 +349,6 @@ exit /b %EXIT_CODE%
 ::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
 ::PS exit 0
 ```
-
-</details>
 
 </details>
 
