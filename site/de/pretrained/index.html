@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848534119612">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848534617257">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848534119612" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848534617257" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848534119612" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848534617257" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848534119612" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848534617257" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -216,38 +216,42 @@
 | --- | --- | --- | --- | --- |
 | **Stock RVC v2 (Standard)** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | **Empfohlen (Stock RVC)** |
 | **AnimePretrain** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
+| **BlackTone** *(Standard / Large)* | `32 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
 | **DMR v2** | `32 kHz` | HiFi-GAN | Nicht angegeben | [ourbz/DMR-V2-ReUpload](https://huggingface.co/ourbz/DMR-V2-ReUpload) |
 | **GuideVocalPretrain** | `48 kHz` | HiFi-GAN | Nicht angegeben | [Essid/GuideVocalPretrain](https://huggingface.co/Essid/GuideVocalPretrain) |
 | **IMA** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Loren85/IMA-TEST-V1](https://huggingface.co/Loren85/IMA-TEST-V1) |
 | **Itaila** | `32 kHz` | HiFi-GAN | `contentvec` | [TheStinger/itaila](https://huggingface.co/TheStinger/itaila) |
-| **KLM - BeatzForge V2 / BeatMaster** | `32 kHz`, `48 kHz` | HiFi-GAN / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
+| **KLM - BeatzForge** *(V1 / V2)* | `32 kHz`, `48 kHz` | HiFi-GAN / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
+| **KLM BeatMaster V1** | `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
 | **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG), [KLM4](https://huggingface.co/SeoulStreamingStation/KLM4), [KLM4.1](https://huggingface.co/SeoulStreamingStation/KLM4.1), [KLM4.2](https://huggingface.co/SeoulStreamingStation/KLM4.2), [KLM43](https://huggingface.co/SeoulStreamingStation/KLM43) |
 | **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz`, `40 kHz` | MRF HiFi-GAN / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(Kompatibilität variiert)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | RefineGAN | Nicht angegeben | [SeoulStreamingStation/KLM5](https://huggingface.co/SeoulStreamingStation/KLM5) |
 | **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM6_Experimental](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
-| **KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel), [RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model), [KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
-| **KLM KpopUniverse (I / II) &amp; BlackTone** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse), [BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
+| **KLM 9 HFG** | `32 kHz` | HiFi-GAN | Nicht angegeben | [SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel) |
+| **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
+| **KLM-X** | `32 kHz` | HiFi-GAN | Nicht angegeben | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
+| **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 | **Legacy Core V1.5** *(entfernt in 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(vom Autor entfernt)* |
 | **Legacy Core V1.5v2** *(entfernt in 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(vom Autor entfernt)* |
 | **Legacy Core V1.6** *(entfernt)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(vom Autor entfernt)* |
-| **Mandagues V2** | `40 kHz` | HiFi-GAN | Nicht angegeben | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
+| **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | HiFi-GAN | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nezox** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
-| **Ov2Super** | `32 kHz` | Nicht angegeben | Nicht angegeben | [poiqazwsx/Ov2Super32kfix](https://huggingface.co/poiqazwsx/Ov2Super32kfix) |
+| **Ov2Super** | `32 kHz` | HiFi-GAN | `contentvec` | [poiqazwsx/Ov2Super32kfix](https://huggingface.co/poiqazwsx/Ov2Super32kfix) |
 | **PaBP** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Razer112/pabp-v.5](https://huggingface.co/Razer112/pabp-v.5) |
-| **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | Nicht angegeben | [SimplCup/RefGanVCTKV2](https://huggingface.co/SimplCup/RefGanVCTKV2) |
+| **RefGanVCTKV2** | `32 kHz`, `40 kHz` | RefineGAN | `contentvec` | [SimplCup/RefGanVCTKV2](https://huggingface.co/SimplCup/RefGanVCTKV2) |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | RefineGAN | `contentvec` / `spin-v2` | [Aznamir/RefineGAN](https://huggingface.co/Aznamir/RefineGAN) |
-| **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | Nicht angegeben | [SimplCup/RefineGanVCTKV1](https://huggingface.co/SimplCup/RefineGanVCTKV1) |
+| **RefineGanVCTKV1** | `44.1 kHz` | RefineGAN | `contentvec` | [SimplCup/RefineGanVCTKV1](https://huggingface.co/SimplCup/RefineGanVCTKV1) |
 | **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Nicht angegeben | Nicht angegeben | [MUSTAR/Rigel-rvc-base-pretrained-model](https://huggingface.co/MUSTAR/Rigel-rvc-base-pretrained-model) |
 | **RIN_E3** | `40 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
-| **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | Nicht angegeben | [Sztef/SingerPreTrained](https://huggingface.co/Sztef/SingerPreTrained) |
+| **SingerPreTrain** *(Updated)* | `32 kHz` | HiFi-GAN | `contentvec` | [Sztef/SingerPreTrained](https://huggingface.co/Sztef/SingerPreTrained) |
 | **Snowie** | `40 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Snowie V2** | `40 kHz`, `48 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Snowie V3.1** | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **Snowie × RIN** | `40 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
-| **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | Nicht angegeben | [blaise-tk/TITAN](https://huggingface.co/blaise-tk/TITAN) |
+| **Titan** *(Medium)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN | `contentvec` | [blaise-tk/TITAN](https://huggingface.co/blaise-tk/TITAN) |
 | **UKA** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Plasmati/Pretrains](https://huggingface.co/Plasmati/Pretrains) |
 | **UKR** | `32 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **VocalCore** &amp; **VocalCore Try3b** | `48 kHz` | HiFi-GAN | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |">
@@ -278,6 +282,13 @@
 <td><a href="https://huggingface.co/Politrees/RVC_resources">Politrees/RVC_resources</a></td>
 </tr>
 <tr>
+<td><strong>BlackTone</strong> <em>(Standard / Large)</em></td>
+<td><code translate="no" v-pre>32 kHz</code></td>
+<td>Nicht angegeben</td>
+<td>Nicht angegeben</td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained">SeoulStreamingStation/BlackTone_RVC_Pretrained</a></td>
+</tr>
+<tr>
 <td><strong>DMR v2</strong></td>
 <td><code translate="no" v-pre>32 kHz</code></td>
 <td>HiFi-GAN</td>
@@ -306,9 +317,16 @@
 <td><a href="https://huggingface.co/TheStinger/itaila">TheStinger/itaila</a></td>
 </tr>
 <tr>
-<td><strong>KLM - BeatzForge V2 / BeatMaster</strong></td>
+<td><strong>KLM - BeatzForge</strong> <em>(V1 / V2)</em></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
 <td>HiFi-GAN / Nicht angegeben</td>
+<td>Nicht angegeben</td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER">SeoulStreamingStation/KLM_BEATMASTER</a></td>
+</tr>
+<tr>
+<td><strong>KLM BeatMaster V1</strong></td>
+<td><code translate="no" v-pre>48 kHz</code></td>
+<td>Nicht angegeben</td>
 <td>Nicht angegeben</td>
 <td><a href="https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER">SeoulStreamingStation/KLM_BEATMASTER</a></td>
 </tr>
@@ -341,18 +359,32 @@
 <td><a href="https://huggingface.co/SeoulStreamingStation/KLM6_Experimental">SeoulStreamingStation/KLM6_Experimental</a></td>
 </tr>
 <tr>
-<td><strong>KLM 9 HFG / KLM-X / KLM-HF Trainer / RVC OG</strong></td>
-<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
-<td>HiFi-GAN / Nicht angegeben</td>
+<td><strong>KLM 9 HFG</strong></td>
+<td><code translate="no" v-pre>32 kHz</code></td>
+<td>HiFi-GAN</td>
 <td>Nicht angegeben</td>
-<td><a href="https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel">SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel</a>, <a href="https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model">RVC_KLM-X-10_Pretrained-Model</a>, <a href="https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer">KLM_RVC_KLM-HF_Trainer</a></td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel">SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel</a></td>
 </tr>
 <tr>
-<td><strong>KLM KpopUniverse (I / II) &amp; BlackTone</strong></td>
+<td><strong>KLM-HF Trainer</strong></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
 <td>Nicht angegeben</td>
 <td>Nicht angegeben</td>
-<td><a href="https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse">SeoulStreamingStation/KLM_KpopUniverse</a>, <a href="https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained">BlackTone_RVC_Pretrained</a></td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer">SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer</a></td>
+</tr>
+<tr>
+<td><strong>KLM-X</strong></td>
+<td><code translate="no" v-pre>32 kHz</code></td>
+<td>HiFi-GAN</td>
+<td>Nicht angegeben</td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model">SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model</a></td>
+</tr>
+<tr>
+<td><strong>KLM KpopUniverse (I / II)</strong></td>
+<td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
+<td>Nicht angegeben</td>
+<td>Nicht angegeben</td>
+<td><a href="https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse">SeoulStreamingStation/KLM_KpopUniverse</a></td>
 </tr>
 <tr>
 <td><strong>Legacy Core V1.5</strong> <em>(entfernt in 2.4.4)</em></td>
@@ -379,7 +411,7 @@
 <td><strong>Mandagues V2</strong></td>
 <td><code translate="no" v-pre>40 kHz</code></td>
 <td>HiFi-GAN</td>
-<td>Nicht angegeben</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/juaow/mandaguesv2">juaow/mandaguesv2</a></td>
 </tr>
 <tr>
@@ -413,8 +445,8 @@
 <tr>
 <td><strong>Ov2Super</strong></td>
 <td><code translate="no" v-pre>32 kHz</code></td>
-<td>Nicht angegeben</td>
-<td>Nicht angegeben</td>
+<td>HiFi-GAN</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/poiqazwsx/Ov2Super32kfix">poiqazwsx/Ov2Super32kfix</a></td>
 </tr>
 <tr>
@@ -428,7 +460,7 @@
 <td><strong>RefGanVCTKV2</strong></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code></td>
 <td>RefineGAN</td>
-<td>Nicht angegeben</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/SimplCup/RefGanVCTKV2">SimplCup/RefGanVCTKV2</a></td>
 </tr>
 <tr>
@@ -442,7 +474,7 @@
 <td><strong>RefineGanVCTKV1</strong></td>
 <td><code translate="no" v-pre>44.1 kHz</code></td>
 <td>RefineGAN</td>
-<td>Nicht angegeben</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/SimplCup/RefineGanVCTKV1">SimplCup/RefineGanVCTKV1</a></td>
 </tr>
 <tr>
@@ -463,7 +495,7 @@
 <td><strong>SingerPreTrain</strong> <em>(Updated)</em></td>
 <td><code translate="no" v-pre>32 kHz</code></td>
 <td>HiFi-GAN</td>
-<td>Nicht angegeben</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/Sztef/SingerPreTrained">Sztef/SingerPreTrained</a></td>
 </tr>
 <tr>
@@ -498,7 +530,7 @@
 <td><strong>Titan</strong> <em>(Medium)</em></td>
 <td><code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>48 kHz</code></td>
 <td>HiFi-GAN</td>
-<td>Nicht angegeben</td>
+<td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/blaise-tk/TITAN">blaise-tk/TITAN</a></td>
 </tr>
 <tr>
@@ -582,7 +614,7 @@ Die <strong>Legacy Core</strong>-Pretrained-Modelle (<code translate="no" v-pre>
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T23:52:14.000Z">21/11/2026 · 00:52</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T23:59:42.000Z">21/11/2026 · 00:59</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
