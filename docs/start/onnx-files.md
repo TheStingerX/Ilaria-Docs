@@ -47,5 +47,5 @@ Most RVC voices on the internet are shared as `.pth` files rather than `.onnx`. 
 ## 4. Tips for using `.onnx` in real-time
 
 - **Use `FP32` on DirectML if you hit glitches:** DirectML on AMD/Intel GPUs often fails or glitches with `FP16`; switch precision to `FP32` if audio breaks up.
-- **Disable Windows HAGS:** Turn off **Hardware-Accelerated GPU Scheduling** in Windows Graphics Settings and restart your PC to avoid robotic stuttering in live voice changers.
+- **Test Windows HAGS only if needed:** **Hardware-Accelerated GPU Scheduling (HAGS)** is not harmful by default, but on some setups with heavy background GPU load you can test toggling it off in Windows Graphics Settings (restart, compare before/after, and restore if unchanged).
 - **Match `48000 Hz` everywhere:** Set your microphone, headphones, and `VB-CABLE` endpoints to `48000 Hz` in Windows Sound Control Panel (`mmsys.cpl`) to prevent `PortAudioError` or pitch drift.

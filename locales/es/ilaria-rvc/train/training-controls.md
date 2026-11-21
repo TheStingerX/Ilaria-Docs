@@ -3,7 +3,7 @@ label: "Controles de entrenamiento y flujo de trabajo"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes."
+description: "La versión 2.4.7 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes."
 ---
 # Controles de entrenamiento y flujo de trabajo
 
@@ -28,7 +28,7 @@ description: "La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con co
 
 ## Arquitectura y performance
 
-La versión 2.1.0 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes. Verifique el par compatible antes del preprocesamiento. La guía de tono controla si las características F0 condicionan el modelo. Configure subprocesos de CPU para la máquina y seleccione una GPU NVIDIA compatible para el entrenamiento. FP32 es el valor predeterminado en la interfaz de usuario marcada. FP16 puede reducir la presión de la memoria en el hardware compatible. El tamaño del lote controla cuántas muestras se procesan juntas. Si se agota la VRAM, reduzca el lote y desactive el almacenamiento en caché opcional.
+La versión 2.4.7 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes. Verifique el par compatible antes del preprocesamiento. La guía de tono controla si las características F0 condicionan el modelo. Configure subprocesos de CPU para la máquina y seleccione una GPU NVIDIA compatible para el entrenamiento. FP32 es el valor predeterminado en la interfaz de usuario marcada. FP16 puede reducir la presión de la memoria en el hardware compatible. El tamaño del lote controla cuántas muestras se procesan juntas. Si se agota la VRAM, reduzca el lote y desactive el almacenamiento en caché opcional.
 
 **Archivos de entrenamiento silenciosos** controla cuántos ejemplos silenciosos incluye la aplicación. Compare las mismas pausas prolongadas al evaluar un cambio.
 

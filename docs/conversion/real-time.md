@@ -33,6 +33,30 @@ See the [RVC tools directory](../reference/tools.md) for downloads and hardware 
 
 Avoid listening through speakers near an active microphone. Headphones help you identify a routing issue without feeding the output back into the input.
 
+## Understand device roles and audio backends
+
+Before wiring any app, know what each endpoint does:
+
+| Term | What it is |
+| --- | --- |
+| **Input Device** | Your physical microphone (or audio interface channel) feeding raw voice into the voice changer. |
+| **Output Device** | Where the converted voice goes (your **virtual cable playback endpoint** for Discord/OBS/games, or headphones for a local test). |
+| **Monitor Device** | Optional second output so you can hear your own converted voice in headphones while **Output Device** feeds a virtual cable. |
+| **Virtual Cable Input** *(Playback side)* | Appears under Windows Playback (e.g. `Line 1` in VAC Lite or `CABLE Input` in VB-CABLE). Set this as the voice changer's **Output Device**. |
+| **Virtual Cable Output** *(Recording side)* | Appears under Windows Recording (e.g. `Line 1` in VAC Lite or `CABLE Output` in VB-CABLE). Select this as the **Microphone** in Discord, OBS, or games. |
+
+### USB microphones, audio interfaces, and backends
+
+- **USB microphones:** Plug directly into a rear motherboard USB port (avoid unpowered hubs), set Windows format to **48000 Hz**, and disable USB selective suspend if the mic drops out.
+- **Audio interfaces (XLR):** Use **ASIO** when supported by your voice changer (such as RVC Blue or w-okada) for lower driver buffer latency, or **WASAPI** when routing to standard Windows virtual cables.
+- **WASAPI Shared vs. WASAPI Exclusive:** **WASAPI Shared** is the safest starting point because Windows and virtual cables can share `48000 Hz` streams cleanly. **WASAPI Exclusive** bypasses the Windows mixer for lower driver latency when supported, but locks the device so other apps cannot share it.
+
+## App-specific setup (Discord, OBS, games, calls, recording)
+
+- **Discord / calling apps:** Set **Input Device** to your virtual cable recording endpoint (`Line 1` / `CABLE Output`), set **Output Device** to your headphones, and turn **OFF** Krisp, Echo Cancellation, and automatic input sensitivity if Discord clips breaths or word endings.
+- **OBS Studio & local recording:** Add an **Audio Input Capture** source pointing to the virtual cable recording endpoint, mute any separate raw microphone source, and record a local test clip to check sync and levels.
+- **Games:** Select the virtual cable recording endpoint as your in-game mic (or set it as Windows Default Communication Recording Device). Always cap in-game FPS or leave GPU headroom so the game does not starve the voice changer.
+
 ## Send converted audio to another app
 
 A virtual audio device provides a playback endpoint for the converter and a corresponding recording endpoint for the receiving app. Endpoint names depend on the driver. For example, a virtual cable may call its playback endpoint “Input” and its recording endpoint “Output” because the instructions use the cable's perspective.
@@ -47,7 +71,7 @@ Select the matching recording endpoint as the microphone in the receiving app an
 
 ## Tune latency without losing stability
 
-End-to-end delay includes device buffers, conversion, virtual routing and any processing in the destination. A processing-time figure in the converter measures only part of that path. Capture a local test of both the dry mic and the converted route if you need to measure the delay between them.
+**Processing latency vs. total end-to-end latency:** The **GPU Delay** / inference time shown inside your voice changer is **only** how long the GPU takes to convert one chunk. **Total end-to-end latency** adds microphone input buffering, **Block Size / Chunk Size**, crossfade/context overhead, virtual cable buffering, and Discord/OBS/game audio buffers. Do not confuse a low GPU Delay (e.g. `15 ms`) with total round-trip latency.
 
 | Control | Practical adjustment |
 | --- | --- |
@@ -64,11 +88,13 @@ Start with the app defaults and change one setting at a time. If a game or anoth
 
 | Symptom | Check first |
 | --- | --- |
-| Neither the converter meter nor a dry mic recording responds | Check the operating system input device and microphone permission. |
-| Dry mic works, but converted output is silent | Confirm the stream started, the model loaded and the converter selected the correct output. Check the input threshold. |
-| The local monitor works, but the call receives the original voice | Select the virtual recording endpoint as the call microphone and disable any separate physical-mic source in that app. |
-| You hear two versions of the voice | Mute duplicate input routes and verify the headphone monitor is separate from the virtual route. |
-| Audio crackles only under load | Return to the last stable chunk size, reduce competing workloads and retest. |
+| Neither the converter meter nor a dry mic recording responds | Check Windows mic permission, physical mute switch, and Input Device selection. |
+| Dry mic works, but converted output is silent | Confirm the stream started, the model loaded, and Output Device is set correctly. Lower VAD/silence threshold. |
+| The local monitor works, but the call receives the original voice | Select the virtual recording endpoint (`CABLE Output` / `Line 1`) as the call mic and disable any separate raw-mic source. |
+| Double monitoring / echo / feedback loop | Never use speakers near a live mic. Turn off Windows **"Listen to this device"** if the app already monitors, and never route desktop/call audio into the virtual cable. |
+| Crackling, stuttering, or buffer underruns | Align **all** endpoints (Mic, Headphones, Cable Input/Output) to **48000 Hz** (`mmsys.cpl`), raise **Block/Chunk Size** one step, and check for CPU overload. |
+| Robot voice or broken syllables | Pitch extractor is too heavy (`crepe` full) -> switch to **RMVPE** or **FCPE**, or lower **Index Ratio**. |
+| High **GPU Delay** or crackling only while gaming | **GPU saturation**: cap in-game FPS, lower heavy GPU settings, or raise **Block Size**. |
 | A model works in file conversion but fails live | Check the live client's edition, architecture and embedder support. Test a model listed as compatible in that client before changing audio devices. |
 
 [RVC fundamentals](../start/rvc-fundamentals.md) · [Troubleshooting](../reference/troubleshooting.md)

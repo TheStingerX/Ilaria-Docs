@@ -19,7 +19,7 @@ Lorsque votre PC ne dispose pas d'un GPU local compatible, vous pouvez exécuter
 | --- | --- | --- | --- |
 | **Google Colab** | Offre payante requise pour les Web UI | Synchronisation Google Drive | Gradio, Ngrok, LocalTunnel |
 | **Kaggle** | Quota GPU hebdomadaire gratuit (**T4 x2**) | Session + persistance optionnelle | Ngrok, Gradio + LocalTunnel, LocalTunnel, Horizon |
-| **Lightning.AI** | Crédits mensuels gratuits (75h T4 16Go / 31h L4 24Go / 15h L40 48Go) | Persistant (**Teamspace Drive**) | Gradio, Port Viewer (`6969`), Ngrok, Cloudflare, LocalTunnel, Horizon |
+| **Lightning.AI** | Par crédits (`1 crédit = $1 USD` par seconde ; Studio 4-CPU gratuit + crédits de départ ; voir [Tarifs](https://lightning.ai/pricing)) | Persistant (**Teamspace Drive**, 10 Go gratuits) | Gradio, Port Viewer (`6969`), Ngrok, Cloudflare, LocalTunnel, Horizon |
 
 ## 2. Option A : Google Colab Web UI
 

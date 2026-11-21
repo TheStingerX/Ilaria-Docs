@@ -102,3 +102,15 @@ In Ilaria RVC, le versioni recenti utilizzano la libreria dei modelli per le esp
  | Un modello utilizzabile non ha indice | Controlla se la generazione dell'indice è stata saltata o fallita. Esporta e testa il checkpoint in modo indipendente, quindi crea il relativo indice dall'esperimento corrispondente, se necessario. |
 
 Conserva il primo messaggio di errore e la configurazione associata alla corsa. Per ulteriori controlli, vedere [Risoluzione dei problemi](../reference/troubleshooting.md).
+## Profili indicativi di training (da adattare a dati e hardware)
+
+Questi tre profili sono **punti di partenza indicativi**, non regole fisse. Adatta sempre **Batch Size** alla VRAM e scegli il checkpoint migliore all'ascolto.
+
+- **Beginner Training:** RVC **v2** · **40 kHz** (32 kHz per RefineGAN) · mvpe · contentvec · pretrain HiFi-GAN standard · **Batch Size 4–8** · **Epochs 200** (salvataggio ogni 25–50) · **FP32** (o **BF16** su RTX 30/40/50) · GPU Caching **OFF** · Workers 2 · Fused AdamW **OFF**.
+- **Intermediate Training:** RVC **v2** · **40/48 kHz** · mvpe · contentvec / klm-vocal-contentvec / spin-v2 (abbinato al pretrain) · **Batch Size 8–12** · **Epochs 250–350** · **BF16** (RTX 30/40/50) o **FP16** (T4/RTX 20) · Workers 4, Prefetch 4–8 · Indice **FAISS Auto**.
+- **Advanced Training & Optimization:** Dataset curati, 12–24 GB+ VRAM · **Total Steps** · MRF HiFi-GAN / RefineGAN (32 kHz) · **Batch Size 12–16+** · **GPU Caching ON** (solo se entra in VRAM) · **Fused AdamW ON** · **Training Queue** + **TensorBoard** + [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md). Il learning rate (1e-4 base) di norma non va modificato.
+
+## Riconoscere Underfitting vs. Overfitting all'ascolto
+
+1. **Underfitting (troppo presto):** La voce somiglia ancora troppo all'originale o perde carattere su note alte/basse → continua da G_*.pth/D_*.pth.
+2. **Overfitting (troppo tardi):** Suona robotica su frasi nuove o riproduce fruscio del dataset → torna a un checkpoint precedente (50–100 epoche prima).

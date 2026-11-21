@@ -17,7 +17,28 @@ PyTorch 2.10.0 with CUDA 12.8 is included and ready for RTX 50 with a compatible
 
 ## Validation
 
-Compute, backpropagation and ContentVec loading were tested on an RTX 4070. For other GPUs, the table shows expected compatibility based on architecture. Compatibility with individual cards is unverified and cannot be guaranteed.
+Compute, backpropagation and ContentVec loading were tested on an **RTX 4070**. For other GPUs, the tables below show **Expected** compatibility based on architecture and CUDA runtime selection. Compatibility with individual cards is not guaranteed model by model.
+
+### Architecture & Runtime Overview
+
+| GPU Family | Architecture | Compute Capability | Expected Runtime | Training & Inference | Precision | Limitations & Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| **RTX 40 series** (e.g. RTX 4070) | Ada Lovelace | `8.9` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16`, `BF16` | **Tested** (RTX 4070); other models **Expected** |
+| **RTX 50 series** | Blackwell | `12.0` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16`, `BF16` | **Expected** (requires compatible NVIDIA driver) |
+| **RTX 30 series** | Ampere | `8.6` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16`, `BF16` | **Expected**; lower-VRAM cards (e.g. 6–8 GB) need smaller batch sizes |
+| **RTX 20 series** | Turing | `7.5` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16` | **Expected**; no native `BF16` |
+| **GTX 16 series** | Turing (no Tensor) | `7.5` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32` (safer; `FP16` varies) | **Expected**; `FP16` can be slower or error on some GTX 16 cards |
+| **Maxwell / Pascal / Volta** (GTX 900/10, Titan V) | `5.x` / `6.x` / `7.0` | `5.0`–`7.0` | Auto `runtime-cu126` (CUDA 12.6) | Inference & Training | `FP32` | **Expected**; first launch downloads `runtime-cu126`; GTX 10-series often fail with `FP16` |
+| **Workstation / Datacenter** (Quadro RTX, RTX A-series, T4, L4) | Turing / Ampere / Ada | `7.5`–`8.9` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16` (`BF16` on Ampere+) | **Expected**; T4 in Kaggle defaults to `FP16` |
+| **Multi-GPU systems** | Mixed or matched NVIDIA | Varies | Matched to lowest/active set | Training (DDP in Kaggle/supported setups) | Matches active GPUs | **Expected**; two GPUs do **not** combine into one larger VRAM pool |
+| **AMD / Intel / Integrated** | RDNA / Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../../ilaria-rvc/cloud/cloud.md) or DirectML apps |
+
+### Check Your GPU Model & Diagnose Errors on Windows
+
+1. Press `Ctrl + Shift + Esc` → **Performance → GPU** (or run `nvidia-smi` in Command Prompt) to read your exact GPU name, VRAM, and driver version.
+2. **`no kernel image is available`**: The CUDA build does not match your GPU architecture (e.g., Maxwell/Pascal needing `runtime-cu126`).
+3. **`CUDA driver version is insufficient`**: Update your NVIDIA driver via the NVIDIA App or official website, then restart.
+4. **`CUDA out of memory`**: Your GPU VRAM is full; lower **Batch Size**, disable dataset GPU caching, or enable **Split Audio** during inference.
 
 ## Models
 

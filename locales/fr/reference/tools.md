@@ -97,3 +97,15 @@ Redpanda-vc est un fork d'Applio dont l'interface en temps réel prend en charge
 Depuis la fermeture de Weights.gg, Replay ne reçoit plus de support ni de mises à jour. La [page officielle de Replay](https://www.weights.com/replay) peut disparaître à tout moment. Internet Archive conserve les installateurs de Replay 8.7.0. Replay est déconseillé pour une nouvelle installation. Depuis la fermeture de Weights, le programme d'installation archivé risque de ne plus pouvoir télécharger les fichiers nécessaires et de ne pas terminer l'installation.
 
 [Installateurs archivés · Replay 8.7.0](https://archive.org/details/replay-8.7.0-installers)
+## Matrice étendue : Plateformes, Formats, Licences et Statut
+
+> **Déclaré vs Testé :** Seul **Ilaria RVC** (vérifié sur RTX 4070) dispose d'une vérification directe ; les autres lignes reflètent la documentation officielle de chaque projet en novembre 2026.
+
+| App | OS | GPU / CPU | Formats | TTS | Statut & Licence | Facilité |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Oui | **Actif** (MIT) | Facile |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | Non | **Bêta** (2.0.0 Beta 3) | Facile |
+| **Applio** | Windows, Linux, macOS | NVIDIA, AMD, MPS, CPU | .pth, .index, .onnx | Oui | **Actif** (MIT) | Facile–Moyenne |
+| **w-okada / TGR / Deiteris** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | Non | **Actifs** | Moyenne |
+| **RVC WebUI / RVC Blue / Redpanda-vc** | Windows, Linux | NVIDIA CUDA (DirectML/CPU var.) | .pth, .index | Non | **Actifs / Upstream** | Facile–Moyenne |
+| **RVC GUI / Replay** | Windows / Legacy | Legacy | .pth | Non | **Archivé / Arrêté** | Legacy |

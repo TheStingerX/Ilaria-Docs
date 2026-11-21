@@ -1,20 +1,37 @@
 ---
-label: "Biblioteca de modelos e mesclagem"
+label: "Biblioteca de modelos e fusão"
 icon: ":card_index_dividers:"
 order: 93
 permalink: /ilaria-rvc/model-library/
-description: "Abra Outro e importe um modelo local compatível ou use o controle de download. Mantenha um ponto de verificação e seu próprio índice juntos."
+description: "Importa, inspeciona e gere ficheiros RVC .pth, .index, .safetensors, embedders e misturas do Voice Blender no Ilaria RVC."
 ---
-# Biblioteca de modelos e mesclagem
+# Biblioteca de modelos e fusão
 
-[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
+[Descarregar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
-[Painéis de Other](other-buttons.md)
+[Outros painéis](other-buttons.md)
 
-## Importar e inspecionar
+## Matriz de compatibilidade de formatos
 
-Abra **Outro** e importe um modelo local compatível ou use o controle de download. Mantenha um ponto de verificação e seu próprio índice juntos. Atualize a lista de inferência e confirme a voz pretendida antes de testar. Use **Informações do modelo** para inspecionar a taxa de amostragem, a arquitetura e a precisão armazenadas no arquivo.
+| Ficheiro / Recurso | Finalidade | Operações compatíveis no Ilaria RVC | Guia |
+| --- | --- | --- | --- |
+| **`.pth` de inferência** | Conversão vocal | Inferência simples/lote, Voice Blender, Safetensors | [Ficheiros `.pth`](../../start/pth-files.md) |
+| **Checkpoints (`G_*.pth` / `D_*.pth`)** | Retomar treino | Apenas retoma de treino RVC v2 (não usar em Inferência) | [Procedimento de treino](../train/training-workflow.md) |
+| **Índice (`added_*.index`)** | Recuperação opcional | Inferência (junto com o `.pth` correspondente) | [Ficheiros Index](../../start/indexes.md) |
+| **Modelos `.onnx`** | Motores ONNX em tempo real | Para clientes externos DirectML (AMD/Intel) | [Ficheiros `.onnx`](../../start/onnx-files.md) |
+| **`.safetensors`** | Armazenamento seguro | Converter com **Safetensors Converter** | [Conversor Safetensors](safetensors-converter.md) |
+| **Embedders** | Extração de características | Inferência e Treino | [Embedders](../../start/embedders.md) |
+| **Pretrained G/D** | Pesos base | Apenas Treino RVC | [Modelos pretrained](../../start/pretrained.md) |
+| **Voice Blender** | Mistura de vozes | Funde dois `.pth` de inferência compatíveis | [Voice Blender](voice-blender.md) |
 
-## Mesclar vozes compatíveis
+> **Porque um checkpoint de treino NÃO é um modelo de inferência:** `G_*.pth` e `D_*.pth` em `app/logs/` guardam o estado do otimizador; usa sempre o `.pth` exportado para inferência (~40–110 MB) em `models/`.
 
-Escolha dois pontos de verificação de inferência e execute a verificação de compatibilidade primeiro. Use a proporção de mistura para definir quanto peso cada um contribui. Salve com um novo nome e teste o resultado com a recuperação desabilitada. Um índice existente pertence ao modelo e aos recursos para os quais foi criado.
+## Importar, inspecionar e segurança
+
+1. Abre **Other → Import local models** (ou descarrega por URL).
+2. Mantém `.pth` e `added_*.index` juntos, atualiza a lista e verifica **Model information**.
+3. **Segurança:** Ficheiros `.pth` usam `pickle`; descarrega apenas de fontes fidedignas ou usa `.safetensors`.
+
+## Fundir vozes compatíveis
+
+Escolhe dois `.pth` de **inferência** compatíveis no [Voice Blender](voice-blender.md) e testa com `Index Ratio = 0`.

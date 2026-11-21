@@ -3,7 +3,7 @@ label: "Controles e fluxo de trabalho de treinamento"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "A versão 2.1.0 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes."
+description: "A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes."
 ---
 # Controles e fluxo de trabalho de treinamento
 
@@ -28,7 +28,7 @@ description: "A versão 2.1.0 oferece configurações de 32, 40 e 48 kHz com com
 
 ## Arquitetura e performance
 
-A versão 2.1.0 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes. Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.
+A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes. Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.
 
 **Arquivos de treinamento silenciosos** controla quantos exemplos silenciosos o aplicativo inclui. Compare as mesmas pausas prolongadas ao avaliar uma mudança.
 

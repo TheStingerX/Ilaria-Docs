@@ -102,3 +102,13 @@ In Ilaria RVC verwenden aktuelle Versionen die Modellbibliothek für Inferenzexp
  | Ein verwendbares Modell hat keinen Index | Überprüfen Sie, ob die Indexgenerierung übersprungen wurde oder fehlgeschlagen ist. Exportieren und testen Sie den Prüfpunkt unabhängig und erstellen Sie dann bei Bedarf seinen Index aus dem passenden Experiment. |
 
 Behalten Sie die erste Fehlermeldung und die mit dem Lauf verknüpfte Konfiguration bei. Weitere Überprüfungen finden Sie unter [Fehlerbehebung](../reference/troubleshooting.md).
+## Richtwerte für Trainingsprofile (an Daten & Hardware anpassen)
+
+- **Beginner Training:** RVC **v2** · **40 kHz** (32 kHz bei RefineGAN) · mvpe · contentvec · **Batch Size 4–8** · **Epochs 200** (Speichern alle 25–50) · **FP32** (oder **BF16** auf RTX 30/40/50) · GPU Caching **OFF** · Workers 2.
+- **Intermediate Training:** RVC **v2** · **40/48 kHz** · mvpe · **Batch Size 8–12** · **Epochs 250–350** · **BF16** / **FP16** · Workers 4, Prefetch 4–8 · **FAISS Auto**-Index.
+- **Advanced Training & Optimization:** Kuratierte Datasets, 12–24 GB+ VRAM · **Total Steps** · **Batch Size 12–16+** · **GPU Caching ON** (nur wenn VRAM reicht) · **Fused AdamW ON** · **Training Queue** + **TensorBoard** + [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
+
+## Underfitting vs. Overfitting per Gehör erkennen
+
+1. **Underfitting:** Klingt noch zu stark nach der Ausgangsstimme → Training ab G_*.pth/D_*.pth fortsetzen.
+2. **Overfitting:** Klingt bei neuen Sätzen metallisch oder übernimmt Rauschen → 50–100 Epochen zurückgehen.

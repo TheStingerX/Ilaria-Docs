@@ -21,6 +21,30 @@ Le prove di calcolo, retropropagazione e caricamento di ContentVec sono state es
 
 ## Modelli
 
+
+### Panoramica Architetture e Runtime
+
+| Famiglia GPU | Architettura | Compute Capability | Runtime atteso | Training e Inferenza | Precisione | Stato e limiti |
+| --- | --- | --- | --- | --- | --- | --- |
+| **RTX 40** (es. RTX 4070) | Ada Lovelace | 8.9 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32, FP16, BF16 | **Tested** (RTX 4070); altri modelli **Expected** |
+| **RTX 50** | Blackwell | 12.0 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32, FP16, BF16 | **Expected** (richiede driver NVIDIA compatibile) |
+| **RTX 30** | Ampere | 8.6 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32, FP16, BF16 | **Expected**; schede 6–8 GB richiedono batch ridotti |
+| **RTX 20** | Turing | 7.5 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32, FP16 | **Expected**; niente BF16 nativo |
+| **GTX 16** | Turing | 7.5 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32 (consigliato) | **Expected**; FP16 può dare errori o rallentamenti |
+| **Maxwell / Pascal / Volta** (GTX 900/10, Titan V) | 5.x/6.x/7.0 | 5.0–7.0 | Auto untime-cu126 (CUDA 12.6) | Inferenza e Training | FP32 | **Expected**; primo avvio scarica untime-cu126 |
+| **Workstation / Datacenter** (Quadro, RTX A, T4, L4) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferenza e Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
+| **Multi-GPU** | NVIDIA multiple | Variabile | Runtime attivo | Training | Come GPU attive | **Expected**; le VRAM **non** si sommano |
+| **AMD / Intel / Integrata** | RDNA / Arc / iGPU | N/A | Nessuno in Windows locale | **Unsupported** in locale | N/A | **Unsupported**; usa [Cloud](../../ilaria-rvc/cloud/cloud.md) o app DirectML |
+
+### Controllare il modello GPU su Windows e diagnosticare errori
+
+1. Premi Ctrl + Maiusc + Esc → **Prestazioni → GPU** (o 
+vidia-smi in CMD) per vedere modello, VRAM e driver.
+2. **
+o kernel image is available**: build CUDA incompatibile con l'architettura (es. GTX 10 senza untime-cu126).
+3. **CUDA driver version is insufficient**: aggiorna i driver NVIDIA e riavvia.
+4. **CUDA out of memory**: riduci **Batch Size**, disattiva la cache GPU o attiva **Split Audio**.
+
 ## GTX 16
 
 | GPU | CUDA |

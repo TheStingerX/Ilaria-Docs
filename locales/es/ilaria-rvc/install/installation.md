@@ -31,6 +31,15 @@ Abra **Administrador de tareas → Rendimiento → GPU** y lea el nombre exacto 
 
 Si tiene más de una GPU, lea el registro del iniciador para ver qué tiempo de ejecución se inició realmente. La ruta CUDA 12.6 descrita anteriormente se aplica cuando todas las GPU NVIDIA en la PC son de familias más antiguas.
 
+
+### Por qué no debes actualizar PyTorch manualmente
+
+Ilaria RVC incluye una combinación probada de **PyTorch (2.10.0)**, **CUDA (12.8 o 12.6)**, 	orchaudio, 	orchvision, aiss y dependencias de audio. **No** ejecutes pip install --upgrade torch manualmente:
+
+- Actualizar PyTorch por tu cuenta puede romper 	orchaudio, airseq, onnxruntime o extensiones compiladas.
+- Versiones más nuevas pueden eliminar soporte para GPUs antiguas (Maxwell, Pascal, Volta) o causar UnpicklingError.
+- Espera siempre una actualización oficial de Ilaria RVC en lugar de modificar el runtime portátil.
+
 ## Comprueba que la aplicación se inició correctamente
 
 1. Ejecute `RUN_ILARIA_RVC.bat` desde la carpeta extraída. Espere a que se abra la interfaz. Si se está descargando el tiempo de ejecución heredado, marque `cu126-runtime-install.log` para ver el progreso.
