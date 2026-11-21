@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618092665">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620487617">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848618092665" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848620487617" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848620487617" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848620487617" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -201,6 +201,12 @@
 <li><strong>Áudio fonte e vocais isolados:</strong> O RVC espera uma voz única, seca e limpa. Ferramentas como <a href="../non-rvc/uvr5/overview/">UVR5</a> ou <a href="../non-rvc/mvsep/overview/">MVSep</a> ajudam a separar vocais de bases instrumentais, e modelos especializados tratam remoção de ruído, reverberação, sibilância ou restauração conforme o modelo usado (nenhuma ferramenta remove todo tipo de ruído ou eco).</li>
 <li><strong>Fala vs. canto:</strong> A fala costuma tolerar pequenos ajustes de <strong>Pitch</strong>, enquanto o canto sobre uma faixa instrumental normalmente mantém <strong>Pitch</strong> em <code translate="no" v-pre>0</code> para permanecer no tom do acompanhamento (uma transposição diferente de oitava pode ser apropriada se o tom do acompanhamento também mudar).</li>
 <li><strong>Compatibilidade de modelo e embedder:</strong> Deixe <strong>Embedder Model</strong> em <code translate="no" v-pre>Auto (model default)</code>, a menos que tenha treinado ou baixado um modelo que exija um codificador específico (<code translate="no" v-pre>contentvec</code>, <code translate="no" v-pre>spin-v2</code>, <code translate="no" v-pre>klm-vocal-contentvec</code>, etc.). Usar um embedder incompatível pode gerar erro ou degradar a conversão e quebrar a correspondência do índice.</li>
+<li><strong>Modelos sem guia de pitch (<code translate="no" v-pre>if_f0 == 0</code>) vs. modelos guiados por pitch (<code translate="no" v-pre>if_f0 == 1</code>):</strong>
+<ul>
+<li><strong>Modelos sem guia de pitch (<code translate="no" v-pre>if_f0 == 0</code>):</strong> Pulam a extração F0 (<code translate="no" v-pre>pitch</code> e <code translate="no" v-pre>pitchf</code> não são passados ao gerador <code translate="no" v-pre>.pth</code>). Sem condicionamento F0, <strong>Pitch</strong>, <strong>Pitch Extraction</strong>, <strong>RMVPE High Register</strong>, <strong>Autotune</strong>, <strong>Proposed Pitch</strong> e <strong>Protect</strong> (oculto na interface quando <code translate="no" v-pre>if_f0 == 0</code>) não se aplicam. <strong>Embedder</strong>, <strong>Index Ratio</strong>, <strong>Formant Shifting</strong>, <strong>Volume Envelope</strong>, <strong>Clean Audio</strong> e <strong>Post-Process</strong> (incluindo <strong>Post-Process → Pitch Shift</strong>) continuam funcionando normalmente.</li>
+<li><strong>Modelos guiados por pitch (<code translate="no" v-pre>if_f0 == 1</code>):</strong> Extraem um contorno F0 da entrada em <code translate="no" v-pre>16 kHz</code> e o passam ao gerador <code translate="no" v-pre>.pth</code> junto com as características de conteúdo. <strong>Pitch Extraction</strong>, <strong>Pitch</strong>, <strong>RMVPE High Register</strong>, <strong>Autotune</strong>, <strong>Proposed Pitch</strong> e <strong>Protect</strong> (quando <code translate="no" v-pre>Index Ratio &gt; 0</code> e <code translate="no" v-pre>protect &lt; 0.5</code>) ficam ativos, tornando esses modelos adequados para canto e fala com controle de afinação.</li>
+</ul>
+</li>
 <li><strong>Índice opcional e exportação sem perdas:</strong> Mantenha <strong>Index Ratio</strong> em <code translate="no" v-pre>0</code> na base e depois teste seu <code translate="no" v-pre>added_*.index</code> correspondente se desejar. Use <code translate="no" v-pre>wav</code> ou <code translate="no" v-pre>flac</code> para exportações sem perdas; <code translate="no" v-pre>flac</code> reduz o tamanho do arquivo sem compressão com perdas. <code translate="no" v-pre>mp3</code>, <code translate="no" v-pre>ogg</code> e <code translate="no" v-pre>m4a</code> usam codificação com perdas no exportador atual do Ilaria RVC, e o formato de exportação nunca adiciona detalhes que o modelo não produziu.</li>
 </ul>
 <hr>
@@ -481,7 +487,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T23:39:14.000Z">22/11/2026 · 00:39</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

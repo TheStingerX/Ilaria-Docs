@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618084971">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620476991">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848618084971" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848620476991" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618084971" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848620476991" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618084971" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848620476991" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -201,6 +201,12 @@
 <li><strong>Quell-Audio &amp; isolierte Vocals:</strong> RVC erwartet eine einzelne, trockene, saubere Stimme. Werkzeuge wie <a href="../non-rvc/uvr5/overview/">UVR5</a> oder <a href="../non-rvc/mvsep/overview/">MVSep</a> helfen beim Trennen von Vocals und Begleitmusik, und spezialisierte Modelle übernehmen je nach Modell Entrauschen, Enthallen, De-Essing oder Audiorestauration (kein einzelnes Tool entfernt jede Art von Rauschen oder Hall).</li>
 <li><strong>Sprache vs. Gesang:</strong> Sprache verträgt oft kleine <strong>Pitch</strong>-Anpassungen, während Gesang über ein Instrumental meist <strong>Pitch = 0</strong> beibehält, um in der Tonart des Playbacks zu bleiben (eine Transposition abweichend von der Oktave kann sinnvoll sein, wenn sich auch die Tonart der Begleitung ändert).</li>
 <li><strong>Modell- &amp; Embedder-Kompatibilität:</strong> Belasse <strong>Embedder Model</strong> auf <code translate="no" v-pre>Auto (model default)</code>, außer du hast gezielt ein Modell trainiert oder geladen, das einen bestimmten Encoder verlangt (<code translate="no" v-pre>contentvec</code>, <code translate="no" v-pre>spin-v2</code>, <code translate="no" v-pre>klm-vocal-contentvec</code> usw.). Ein inkompatibler Embedder kann einen Fehler auslösen oder die Konvertierung verschlechtern und den Index-Abgleich stören.</li>
+<li><strong>Modelle ohne Pitch-Führung (<code translate="no" v-pre>if_f0 == 0</code>) vs. F0-geführte Modelle (<code translate="no" v-pre>if_f0 == 1</code>):</strong>
+<ul>
+<li><strong>Modelle ohne Pitch-Führung (<code translate="no" v-pre>if_f0 == 0</code>):</strong> Überspringen die F0-Extraktion (<code translate="no" v-pre>pitch</code> und <code translate="no" v-pre>pitchf</code> werden nicht an den <code translate="no" v-pre>.pth</code>-Generator übergeben). Ohne F0-Steuerung greifen <strong>Pitch</strong>, <strong>Pitch Extraction</strong>, <strong>RMVPE High Register</strong>, <strong>Autotune</strong>, <strong>Proposed Pitch</strong> und <strong>Protect</strong> (in der Oberfläche ausgeblendet, wenn <code translate="no" v-pre>if_f0 == 0</code>) nicht. <strong>Embedder</strong>, <strong>Index Ratio</strong>, <strong>Formant Shifting</strong>, <strong>Volume Envelope</strong>, <strong>Clean Audio</strong> und <strong>Post-Process</strong> (einschließlich <strong>Post-Process → Pitch Shift</strong>) laufen weiterhin normal.</li>
+<li><strong>F0-geführte Modelle (<code translate="no" v-pre>if_f0 == 1</code>):</strong> Extrahieren eine F0-Kontur aus dem <code translate="no" v-pre>16 kHz</code>-Eingangssignal und übergeben sie zusammen mit den Inhaltsmerkmalen an den <code translate="no" v-pre>.pth</code>-Generator. <strong>Pitch Extraction</strong>, <strong>Pitch</strong>, <strong>RMVPE High Register</strong>, <strong>Autotune</strong>, <strong>Proposed Pitch</strong> und <strong>Protect</strong> (bei <code translate="no" v-pre>Index Ratio &gt; 0</code> und <code translate="no" v-pre>protect &lt; 0.5</code>) sind aktiv, wodurch sich diese Modelle für Gesang und tonhöhengesteuerte Sprache eignen.</li>
+</ul>
+</li>
 <li><strong>Optionaler Index &amp; verlustfreier Export:</strong> Belasse <strong>Index Ratio</strong> für die Basis auf <code translate="no" v-pre>0</code> und teste bei Bedarf anschließend deine passende <code translate="no" v-pre>added_*.index</code>. Nutze <code translate="no" v-pre>wav</code> oder <code translate="no" v-pre>flac</code> für verlustfreie Exporte; <code translate="no" v-pre>flac</code> verkleinert die Dateigröße ohne verlustbehaftete Kompression. <code translate="no" v-pre>mp3</code>, <code translate="no" v-pre>ogg</code> und <code translate="no" v-pre>m4a</code> nutzen im aktuellen Ilaria-RVC-Exporter verlustbehaftete Kodierung, und das Exportformat fügt niemals Details hinzu, die das Modell nicht erzeugt hat.</li>
 </ul>
 <hr>
@@ -481,7 +487,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T23:39:14.000Z">22/11/2026 · 00:39</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
