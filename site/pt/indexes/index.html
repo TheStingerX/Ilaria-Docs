@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614468104">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618092665">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614468104" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618092665" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -242,51 +242,52 @@ Um modelo <code translate="no" v-pre>.pth</code> funciona perfeitamente <strong>
 <hr>
 <span id="3-how-to-tune-index-rate-0-to-10" class="docs-anchor"></span><h2 id="3-como-ajustar-o-index-rate-de-0-a-10">3. Como ajustar o <code translate="no" v-pre>Index Rate</code> (de <code translate="no" v-pre>0</code> a <code translate="no" v-pre>1.0</code>)</h2>
 <p>O controle <strong>Index Rate</strong> (às vezes chamado de <em>Search Feature Ratio</em> ou <em>Retrieval Ratio</em>) define o quanto o banco <code translate="no" v-pre>.index</code> puxa o áudio convertido para os trechos exatos do dataset de treino:</p>
-<retype-table copy-text="| Index Rate | Efeito na voz | Melhor uso |
+<retype-table copy-text="| Index Rate | Efeito na voz | Quando usar (pontos de partida) |
 | --- | --- | --- |
-| **`0.0` (Desligado)** | 100% pesos `.pth`, 0% `.index`. | Pronúncia mais limpa, menor uso de CPU, melhor base para testes, voice changers ao vivo e modelos mesclados. |
-| **`0.25 - 0.50`** | Adiciona textura natural da voz mantendo intactos sua pronúncia e ritmo. | **Fala**, **conversão entre idiomas** (ex. português em modelo inglês/japonês) ou datasets com leve ruído. |
-| **`0.60 - 0.75`** | Forte semelhança e realismo sem abafar seu áudio de entrada. | **Padrão recomendado** para canto limpo e locuções no mesmo idioma. |
-| **`0.85 - 1.00`** | Recuperação máxima; força as características o mais perto possível do dataset. | Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou ruído do dataset. |">
+| **`0.0` (Desligado)** | Sem busca FAISS: mantém `100%` das características do áudio de entrada, convertidas apenas pelos pesos `.pth` (`retrieved * 0 + original * 1`). | Base diagnóstica útil sem busca FAISS, menor uso de CPU e modelos mesclados. |
+| **`0.25 - 0.50`** | Mistura leve para o índice (`25% - 50%` características recuperadas, `50% - 75%` originais), mantendo pronúncia e ritmo. | **Fala**, **conversão entre idiomas** (ex. português em modelo inglês/japonês) ou datasets com leve ruído. |
+| **`0.60 - 0.75`** | Mistura mais forte para o índice (`60% - 75%` características recuperadas) para maior semelhança de timbre. | Ponto de partida comum para canto limpo e locuções no mesmo idioma. |
+| **`0.85 - 1.00`** | Recuperação máxima (`85% - 100%` características recuperadas); aproxima ao máximo dos vetores do dataset. | Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou artefatos do dataset. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
 <th>Index Rate</th>
 <th>Efeito na voz</th>
-<th>Melhor uso</th>
+<th>Quando usar (pontos de partida)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong><code translate="no" v-pre>0.0</code> (Desligado)</strong></td>
-<td>100% pesos <code translate="no" v-pre>.pth</code>, 0% <code translate="no" v-pre>.index</code>.</td>
-<td>Pronúncia mais limpa, menor uso de CPU, melhor base para testes, voice changers ao vivo e modelos mesclados.</td>
+<td>Sem busca FAISS: mantém <code translate="no" v-pre>100%</code> das características do áudio de entrada, convertidas apenas pelos pesos <code translate="no" v-pre>.pth</code> (<code translate="no" v-pre>retrieved * 0 + original * 1</code>).</td>
+<td>Base diagnóstica útil sem busca FAISS, menor uso de CPU e modelos mesclados.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.25 - 0.50</code></strong></td>
-<td>Adiciona textura natural da voz mantendo intactos sua pronúncia e ritmo.</td>
+<td>Mistura leve para o índice (<code translate="no" v-pre>25% - 50%</code> características recuperadas, <code translate="no" v-pre>50% - 75%</code> originais), mantendo pronúncia e ritmo.</td>
 <td><strong>Fala</strong>, <strong>conversão entre idiomas</strong> (ex. português em modelo inglês/japonês) ou datasets com leve ruído.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.60 - 0.75</code></strong></td>
-<td>Forte semelhança e realismo sem abafar seu áudio de entrada.</td>
-<td><strong>Padrão recomendado</strong> para canto limpo e locuções no mesmo idioma.</td>
+<td>Mistura mais forte para o índice (<code translate="no" v-pre>60% - 75%</code> características recuperadas) para maior semelhança de timbre.</td>
+<td>Ponto de partida comum para canto limpo e locuções no mesmo idioma.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.85 - 1.00</code></strong></td>
-<td>Recuperação máxima; força as características o mais perto possível do dataset.</td>
-<td>Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou ruído do dataset.</td>
+<td>Recuperação máxima (<code translate="no" v-pre>85% - 100%</code> características recuperadas); aproxima ao máximo dos vetores do dataset.</td>
+<td>Só para datasets de estúdio impecáveis no mesmo idioma. Alto risco de palavras emboladas ou artefatos do dataset.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
+<p>Nota: no Ilaria RVC a fórmula real na inferência é <code translate="no" v-pre>features = retrieved_features * index_rate + original_features * (1 - index_rate)</code>. Os pesos <code translate="no" v-pre>.pth</code> sempre são usados para gerar a voz; <code translate="no" v-pre>Index Rate = 0</code> apenas desativa a busca no índice FAISS.</p>
 <hr>
 <span id="4-when-you-should-lower-or-disable-index-rate" class="docs-anchor"></span><h2 id="4-quando-você-deve-baixar-ou-desligar-o-index-rate">4. Quando você deve baixar ou desligar o <code translate="no" v-pre>Index Rate</code></h2>
 <p>Subir o <strong>Index Rate</strong> até <code translate="no" v-pre>1.0</code> <strong>não</strong> melhora a voz automaticamente. Abaixe para <code translate="no" v-pre>0.2 - 0.4</code> (ou <code translate="no" v-pre>0</code>) sempre que notar:</p>
 <ol>
-<li><strong>Chiado de fundo, estalos ou eco da sala voltando:</strong> Como o <code translate="no" v-pre>.index</code> puxa direto das gravações de treino, qualquer ruído ou reverberação do dataset volta na sua saída.</li>
+<li><strong>Chiado de fundo, estalos ou eco da sala voltando:</strong> Um arquivo <code translate="no" v-pre>.index</code> guarda <strong>vetores de características extraídos</strong>, não gravações de áudio brutas. Ainda assim, se o dataset tinha ruído ou reverberação, vetores próximos recuperados do índice podem trazer essas características para a conversão.</li>
 <li><strong>Palavras emboladas ou sotaque estranho:</strong> Se você fala outro idioma além do usado no dataset, um Index Rate alto tenta forçar vogais e consoantes estrangeiras na sua fala.</li>
 <li><strong>Vozes mescladas (Voice Blender):</strong> Mesclar dois <code translate="no" v-pre>.pth</code> no <a href="../ilaria-rvc/voice-blender/">Voice Blender</a> <strong>não</strong> cria um novo <code translate="no" v-pre>.index</code>. Teste sempre modelos mesclados em <code translate="no" v-pre>Index Rate = 0</code> primeiro.</li>
 <li><strong>Engasgos no Voice Changer ao vivo:</strong> Pesquisar um índice FAISS grande a cada bloco de áudio pesa na CPU. Abaixar ou zerar <code translate="no" v-pre>Index Rate</code> reduz latência e cortes.</li>
@@ -347,7 +348,7 @@ Um modelo <code translate="no" v-pre>.pth</code> funciona perfeitamente <strong>
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

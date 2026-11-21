@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618062064">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618062064" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618062064" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618062064" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -242,51 +242,52 @@ Un modello <code translate="no" v-pre>.pth</code> funziona benissimo anche <stro
 <hr>
 <span id="3-how-to-tune-index-rate-0-to-10" class="docs-anchor"></span><h2 id="3-come-regolare-index-rate-da-0-a-10">3. Come regolare <code translate="no" v-pre>Index Rate</code> (da <code translate="no" v-pre>0</code> a <code translate="no" v-pre>1.0</code>)</h2>
 <p>Lo slider <strong>Index Rate</strong> (a volte chiamato <em>Search Feature Ratio</em> o <em>Retrieval Ratio</em>) decide con quanta forza il database <code translate="no" v-pre>.index</code> spinge la voce convertita verso i frammenti reali del dataset di training:</p>
-<retype-table copy-text="| Index Rate | Effetto sulla voce | Quando usarlo |
+<retype-table copy-text="| Index Rate | Effetto sulla voce | Quando usarlo (punti di partenza) |
 | --- | --- | --- |
-| **`0.0` (Spento)** | 100% pesi `.pth`, 0% `.index`. | Pronuncia più pulita, minor carico CPU, miglior punto di partenza per troubleshooting, voice changer live e modelli fusi. |
-| **`0.25 - 0.50`** | Aggiunge sfumature naturali della voce mantenendo intatti la tua pronuncia e il tuo ritmo. | **Parlato**, **conversione tra lingue diverse** (es. parlato italiano su modello inglese/giapponese), o modelli allenati su dataset leggermente rumorosi. |
-| **`0.60 - 0.75`** | Forte somiglianza e realismo senza soffocare l'audio di ingresso. | **Default consigliato** per canto pulito e doppiaggi nella stessa lingua. |
-| **`0.85 - 1.00`** | Retrieval massimo; forza le feature il più vicino possibile alle clip del dataset. | Solo per dataset da studio pulitissimi nella stessa lingua. Rischio alto di parole mangiate o ritorno di fruscio del dataset. |">
+| **`0.0` (Spento)** | Nessun recupero FAISS: mantiene il `100%` delle feature estratte dall'audio in ingresso, convertite solo dai pesi del `.pth` (`retrieved * 0 + original * 1`). | Baseline diagnostica utile senza retrieval FAISS, minor carico CPU e modelli fusi. |
+| **`0.25 - 0.50`** | Miscela leggera verso l'indice (`25% - 50%` feature recuperate, `50% - 75%` originali) che mantiene intatti pronuncia e ritmo. | **Parlato**, **conversione tra lingue diverse** (es. parlato italiano su modello inglese/giapponese), o modelli allenati su dataset leggermente rumorosi. |
+| **`0.60 - 0.75`** | Miscela più forte verso l'indice (`60% - 75%` feature recuperate) per maggiore somiglianza timbrica. | Punto di partenza tipico per canto pulito e doppiaggi nella stessa lingua. |
+| **`0.85 - 1.00`** | Retrieval massimo (`85% - 100%` feature recuperate); forza le feature il più vicino possibile ai vettori del dataset. | Solo per dataset da studio pulitissimi nella stessa lingua. Rischio alto di parole mangiate o ritorno di artefatti del dataset. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
 <th>Index Rate</th>
 <th>Effetto sulla voce</th>
-<th>Quando usarlo</th>
+<th>Quando usarlo (punti di partenza)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong><code translate="no" v-pre>0.0</code> (Spento)</strong></td>
-<td>100% pesi <code translate="no" v-pre>.pth</code>, 0% <code translate="no" v-pre>.index</code>.</td>
-<td>Pronuncia più pulita, minor carico CPU, miglior punto di partenza per troubleshooting, voice changer live e modelli fusi.</td>
+<td>Nessun recupero FAISS: mantiene il <code translate="no" v-pre>100%</code> delle feature estratte dall&#x27;audio in ingresso, convertite solo dai pesi del <code translate="no" v-pre>.pth</code> (<code translate="no" v-pre>retrieved * 0 + original * 1</code>).</td>
+<td>Baseline diagnostica utile senza retrieval FAISS, minor carico CPU e modelli fusi.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.25 - 0.50</code></strong></td>
-<td>Aggiunge sfumature naturali della voce mantenendo intatti la tua pronuncia e il tuo ritmo.</td>
+<td>Miscela leggera verso l&#x27;indice (<code translate="no" v-pre>25% - 50%</code> feature recuperate, <code translate="no" v-pre>50% - 75%</code> originali) che mantiene intatti pronuncia e ritmo.</td>
 <td><strong>Parlato</strong>, <strong>conversione tra lingue diverse</strong> (es. parlato italiano su modello inglese/giapponese), o modelli allenati su dataset leggermente rumorosi.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.60 - 0.75</code></strong></td>
-<td>Forte somiglianza e realismo senza soffocare l&#x27;audio di ingresso.</td>
-<td><strong>Default consigliato</strong> per canto pulito e doppiaggi nella stessa lingua.</td>
+<td>Miscela più forte verso l&#x27;indice (<code translate="no" v-pre>60% - 75%</code> feature recuperate) per maggiore somiglianza timbrica.</td>
+<td>Punto di partenza tipico per canto pulito e doppiaggi nella stessa lingua.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.85 - 1.00</code></strong></td>
-<td>Retrieval massimo; forza le feature il più vicino possibile alle clip del dataset.</td>
-<td>Solo per dataset da studio pulitissimi nella stessa lingua. Rischio alto di parole mangiate o ritorno di fruscio del dataset.</td>
+<td>Retrieval massimo (<code translate="no" v-pre>85% - 100%</code> feature recuperate); forza le feature il più vicino possibile ai vettori del dataset.</td>
+<td>Solo per dataset da studio pulitissimi nella stessa lingua. Rischio alto di parole mangiate o ritorno di artefatti del dataset.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
+<p>Nota: in Ilaria RVC la formula effettiva nell&#x27;inferenza è <code translate="no" v-pre>features = retrieved_features * index_rate + original_features * (1 - index_rate)</code>. I pesi <code translate="no" v-pre>.pth</code> vengono sempre usati per generare l&#x27;audio; <code translate="no" v-pre>Index Rate = 0</code> disattiva soltanto la ricerca nell&#x27;indice FAISS.</p>
 <hr>
 <span id="4-when-you-should-lower-or-disable-index-rate" class="docs-anchor"></span><h2 id="4-quando-conviene-abbassare-o-spegnere-index-rate">4. Quando conviene abbassare o spegnere <code translate="no" v-pre>Index Rate</code></h2>
 <p>Alzare <strong>Index Rate</strong> verso <code translate="no" v-pre>1.0</code> <strong>non</strong> migliora automaticamente la voce. Abbassalo a <code translate="no" v-pre>0.2 - 0.4</code> (oppure <code translate="no" v-pre>0</code>) ogni volta che noti:</p>
 <ol>
-<li><strong>Fruscio di fondo, crepitii o eco della stanza:</strong> Siccome l&#x27;<code translate="no" v-pre>.index</code> pesca direttamente dalle registrazioni del dataset, eventuale rumore di fondo o riverbero del dataset rientra nella tua conversione.</li>
+<li><strong>Fruscio di fondo, crepitii o eco della stanza:</strong> Un file <code translate="no" v-pre>.index</code> contiene <strong>vettori di feature estratti</strong>, non registrazioni audio grezze. Tuttavia, se il dataset conteneva rumore di fondo o riverbero, i vettori vicini estratti dall&#x27;indice possono trasportare quelle caratteristiche nella conversione.</li>
 <li><strong>Parole storpiate o accento strano:</strong> Se parli in una lingua diversa da quella del dataset, un Index Rate alto cerca di forzare le vocali e consonanti dell&#x27;altra lingua sulle tue parole.</li>
 <li><strong>Voci fuse con Voice Blender:</strong> Fondere due <code translate="no" v-pre>.pth</code> nel <a href="../ilaria-rvc/voice-blender/">Voice Blender</a> <strong>non</strong> crea un nuovo <code translate="no" v-pre>.index</code>. Testa sempre i modelli fusi a <code translate="no" v-pre>Index Rate = 0</code> per primi.</li>
 <li><strong>Scatti nel Voice Changer Live:</strong> Cercare dentro un grande indice FAISS a ogni chunk aggiunge lavoro alla CPU. Abbassare o azzerare <code translate="no" v-pre>Index Rate</code> riduce latenza e micro-scatti.</li>
@@ -347,7 +348,7 @@ Un modello <code translate="no" v-pre>.pth</code> funziona benissimo anche <stro
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

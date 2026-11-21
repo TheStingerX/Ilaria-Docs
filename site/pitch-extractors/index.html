@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618054113">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618054113" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618054113" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618054113" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -193,12 +193,15 @@ Unlike embedders, <strong>pitch extractors do not lock you into one choice</stro
         </div>
     </div>
 </div>
-<h2 id="quick-recommendation">Quick recommendation</h2>
+<h2 id="availability-in-ilaria-rvc">Availability in Ilaria RVC</h2>
 <ul>
-<li><strong>Best overall (Training &amp; Conversion):</strong> <code translate="no" v-pre>rmvpe</code> or <code translate="no" v-pre>rmvpe_gpu</code> (if you have an NVIDIA GPU).</li>
-<li><strong>Best for Live / Real-time Voice Changers:</strong> <code translate="no" v-pre>fcpe</code> (fastest latency) or <code translate="no" v-pre>rmvpe</code> (best quality if your GPU keeps up).</li>
-<li><strong>Avoid for general use:</strong> <code translate="no" v-pre>pm</code>, <code translate="no" v-pre>dio</code>, and <code translate="no" v-pre>harvest</code> are legacy CPU methods that sound noticeably worse or run much slower than <code translate="no" v-pre>rmvpe</code> and <code translate="no" v-pre>fcpe</code>.</li>
+<li><strong>Single &amp; Batch Inference (CUDA):</strong> <code translate="no" v-pre>rmvpe</code> (default), <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code>, <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>parselmouth</code>, <code translate="no" v-pre>harvest</code>, <code translate="no" v-pre>crepe</code>. <em>(On DirectML builds: <code translate="no" v-pre>pm</code>, <code translate="no" v-pre>harvest</code>, <code translate="no" v-pre>rmvpe</code>, <code translate="no" v-pre>fcpe</code>.)</em></li>
+<li><strong>Training feature extraction only:</strong> <code translate="no" v-pre>rmvpe_gpu</code> (with <code translate="no" v-pre>gpus_rmvpe</code> multi-process GPU selection) and <code translate="no" v-pre>dio</code> are available during <strong>Training</strong> feature extraction, not as separate buttons in Inference.</li>
+<li><strong>Other RVC forks:</strong> Tools like Applio or Deiteris may also expose <code translate="no" v-pre>hybrid[...]</code> or ONNX pitch variants.</li>
 </ul>
+<blockquote>
+<p><strong>No universal &quot;best&quot; or &quot;fastest&quot;:</strong> Results vary by voice, hardware, and backend. Start with <code translate="no" v-pre>rmvpe</code> and compare <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code>, or <code translate="no" v-pre>crepe</code> on the same audio if you hear octave jumps or timing issues.</p>
+</blockquote>
 <hr>
 <h2 id="all-known-pitch-extractors-compared">All known Pitch Extractors compared</h2>
 <retype-table copy-text="| Pitch Extractor | Type | Speed | Quality &amp; Best Use Case | Notes |
@@ -300,12 +303,7 @@ Unlike embedders, <strong>pitch extractors do not lock you into one choice</stro
 </div>
 </retype-table>
 <h2 id="rmvpe-vs-rmvpe_gpu-what-is-the-difference"><code translate="no" v-pre>rmvpe</code> vs <code translate="no" v-pre>rmvpe_gpu</code>: what is the difference?</h2>
-<p>In apps like <strong>Ilaria RVC</strong> and <strong>RVC Mainline</strong>, you will often see both <code translate="no" v-pre>rmvpe</code> and <code translate="no" v-pre>rmvpe_gpu</code>:</p>
-<ul>
-<li><strong><code translate="no" v-pre>rmvpe</code></strong> may run on CPU or follow the app&#x27;s default device scheduling, which uses less VRAM but can bottleneck on long files or big datasets.</li>
-<li><strong><code translate="no" v-pre>rmvpe_gpu</code></strong> explicitly runs the RMVPE model on your <strong>CUDA GPU</strong>, delivering identical pitch quality at much higher speed during dataset feature extraction and offline conversion.</li>
-<li>If <code translate="no" v-pre>rmvpe_gpu</code> triggers <code translate="no" v-pre>CUDA out of memory</code> on a low-VRAM card (4 GB or less), switch back to <code translate="no" v-pre>rmvpe</code> or <code translate="no" v-pre>fcpe</code>.</li>
-</ul>
+<p>In <strong>Ilaria RVC</strong> and <strong>RVC Mainline</strong>, <code translate="no" v-pre>rmvpe_gpu</code> is a <strong>Training feature extraction</strong> option (allowing multi-GPU worker assignment via <code translate="no" v-pre>gpus_rmvpe</code>), whereas <strong>Single &amp; Batch Inference</strong> expose <code translate="no" v-pre>rmvpe</code> directly (running on your configured inference device). If <code translate="no" v-pre>rmvpe_gpu</code> triggers <code translate="no" v-pre>CUDA out of memory</code> during dataset feature extraction on a low-VRAM card, switch to <code translate="no" v-pre>rmvpe</code> or <code translate="no" v-pre>fcpe</code>.</p>
 <h2 id="choosing-the-right-method-for-your-task">Choosing the right method for your task</h2>
 <ol>
 <li><strong>Preparing / Training a new model:</strong> Use <strong><code translate="no" v-pre>rmvpe_gpu</code></strong> (if you have an NVIDIA GPU with 6+ GB VRAM) or <strong><code translate="no" v-pre>rmvpe</code></strong>. Clean dataset F0 tracking prevents pitch glitches in the trained voice.</li>
@@ -346,7 +344,7 @@ Unlike embedders, <strong>pitch extractors do not lock you into one choice</stro
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

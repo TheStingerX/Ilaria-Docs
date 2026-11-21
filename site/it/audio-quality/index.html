@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614426736">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618062064">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Ottimizza l'intonazione e la qualità audio">
-    <meta name="description" content="Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta.">
+    <meta name="title" content="Migliorare la Qualità Audio dell'Inferenza RVC">
+    <meta name="description" content="Guida verificata sul codice per migliorare la qualità audio dell'inferenza RVC in Ilaria RVC: baseline diagnostica, pitch, metodi F0, Index Ratio, Protect, Formant Shifting, Volume Envelope e Post-Process.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/audio-quality/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/it/audio-quality/">
-    <meta property="og:title" content="Ottimizza l'intonazione e la qualità audio">
+    <meta property="og:title" content="Migliorare la Qualità Audio dell'Inferenza RVC">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/audio-quality/">
-    <meta name="twitter:title" content="Ottimizza l'intonazione e la qualità audio">
+    <meta name="twitter:title" content="Migliorare la Qualità Audio dell'Inferenza RVC">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/conversion/audio-quality.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614426736" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618062064" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618062064" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614426736" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618062064" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta.">
+    <meta property="og:description" content="Guida verificata sul codice per migliorare la qualità audio dell'inferenza RVC in Ilaria RVC: baseline diagnostica, pitch, metodi F0, Index Ratio, Protect, Formant Shifting, Volume Envelope e Post-Process.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta.">
+    <meta name="twitter:description" content="Guida verificata sul codice per migliorare la qualità audio dell'inferenza RVC in Ilaria RVC: baseline diagnostica, pitch, metodi F0, Index Ratio, Protect, Formant Shifting, Volume Envelope e Post-Process.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/audio-quality/">
@@ -174,93 +174,279 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="tune-pitch-and-audio-quality" class="docs-anchor"></span><h1 id="ottimizza-lintonazione-e-la-qualità-audio">Ottimizza l&#x27;intonazione e la qualità audio</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un'impostazione modificata alla volta.</div>
+<span id="improve-rvc-inference-audio-quality" class="docs-anchor"></span><h1 id="migliorare-la-qualità-audio-dellinferenza-rvc">Migliorare la Qualità Audio dell&#x27;Inferenza RVC</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Guida verificata sul codice per migliorare la qualità audio dell'inferenza RVC in Ilaria RVC: baseline diagnostica, pitch, metodi F0, Index Ratio, Protect, Formant Shifting, Volume Envelope e Post-Process.</div>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Scarica Ilaria RVC 2.4.7 per Windows (ZIP)</a></p>
-<p>Scegli un breve brano che contenga il problema. Effettua una conversione di riferimento e confrontala con un&#x27;impostazione modificata alla volta. Ascolta a livelli simili, quindi un risultato più forte non vince il confronto solo in base al volume. Per la musica, confronta prima la voce convertita da sola e poi nel mix.</p>
-<span id="pitch-range-and-resonance" class="docs-anchor"></span><h2 id="intonazione-estensione-e-risonanza">Intonazione, estensione e risonanza</h2>
-<p>L&#x27;altezza misura quanto è alto o basso un suono espresso. <strong>F0</strong>, o frequenza fondamentale, è la parte periodica del segnale da cui un estrattore di tono stima il contorno. Un modello guidato dall&#x27;intonazione utilizza quel contorno quando sintetizza l&#x27;output.</p>
-<p><strong>Intonazione</strong> sposta il contorno di semitoni. I valori positivi lo aumentano e i valori negativi lo abbassano. Ogni ottava ha 12 semitoni. Ad esempio, applicando <code translate="no" v-pre>+12</code> a una nota sonora a 220 Hz si ottengono 440 Hz. Un&#x27;impostazione pari a zero mantiene il riferimento dell&#x27;intonazione dalla registrazione.</p>
-<p>Per il parlato, inizia da zero. Se la clip si trova molto al di fuori dell&#x27;intervallo confortevole del modello target o sembra tesa, confrontala con un piccolo spostamento verso l&#x27;alto o verso il basso. Per cantare su uno strumento esistente, confronta prima lo zero. Uno spostamento che cambia la tonalità della voce può scontrarsi con la base musicale. Gli spostamenti di ottava mantengono i nomi delle note, sebbene il modello debba comunque gestire l&#x27;intervallo risultante. Confronta le note esposte più basse e più alte prima di impegnarti in un&#x27;intera canzone.</p>
-<p>Le <strong>formanti</strong> descrivono risonanze che aiutano a distinguere le vocali e il carattere della voce. Utilizzare l&#x27;elaborazione della formante solo dopo che il contorno dell&#x27;altezza funziona. Intonazione e risonanza possono richiedere regolazioni diverse. Nelle build sia con l&#x27;inferenza del tono che con l&#x27;effetto pitch-shift, il primo modifica il tono estratto prima della sintesi e il secondo agisce sull&#x27;audio risultante.</p>
-<span id="compare-pitch-extractors" class="docs-anchor"></span><h2 id="confronta-gli-estrattori-di-tono">Confronta gli estrattori di tono</h2>
-<p>Inizia con <strong>RMVPE</strong>, il valore predefinito per l&#x27;attuale inferenza di Ilaria RVC. Se il passo è instabile, prova un altro estrattore disponibile nella tua build, come <strong>FCPE</strong> o <strong>Swift</strong>. Mantieni lo stesso input, pitch shift, rapporto di indice e formato di output per ogni esecuzione.</p>
+<p>Nella conversione vocale RVC, la <strong>qualità audio</strong> dipende da due metà che lavorano insieme: la <strong>registrazione sorgente</strong> in ingresso e il <strong>modello + impostazioni di inferenza</strong> applicati. Nei modelli RVC con guida F0, la conversione sintetizza il timbro della voce target utilizzando il contorno F0 estratto dalla registrazione sorgente; la voce target non impone automaticamente il proprio registro di pitch (il risultato dipende comunque dal dataset e dai limiti del modello). RVC <strong>non può</strong> riparare clipping, musica di sottofondo pesante, eco della stanza o dizione impastata già presenti nel file di ingresso.</p>
+<span id="start-with-a-concrete-diagnostic-baseline" class="docs-anchor"></span><h2 id="parti-da-una-baseline-diagnostica-concreta">Parti da una baseline diagnostica concreta</h2>
+<p>Prima di modificare gli slider avanzati, esegui un passaggio pulito in <strong>Ilaria RVC</strong> per capire come si comporta il generatore <code translate="no" v-pre>.pth</code> da solo sul tuo audio sorgente:</p>
+<ol>
+<li>Apri la scheda <strong>Inference</strong>.</li>
+<li>Seleziona la voce target in <strong>Voice Model</strong> (clicca <strong>Refresh</strong> se l&#x27;hai appena aggiunta).</li>
+<li>Resta nella sottoscheda <strong>Single Inference</strong>.</li>
+<li>Carica la registrazione in <strong>Audio to convert</strong>. <em>(Un estratto breve aiuta a isolare più rapidamente un punto preciso, ma le clip brevi non sono mai obbligatorie.)</em></li>
+<li>Imposta <strong>Pitch</strong> su <code translate="no" v-pre>0</code>.</li>
+<li>Sotto <strong>Inference Settings</strong>, seleziona <strong>RMVPE</strong> in <strong>Pitch Extraction</strong>.</li>
+<li>Imposta <strong>Index Ratio</strong> su <code translate="no" v-pre>0</code> (disattiva il retrieval delle feature FAISS così ascolti il generatore <code translate="no" v-pre>.pth</code> senza miscelazione con l&#x27;indice).</li>
+<li>Lascia disattivate (<strong>OFF</strong>) tutte le caselle opzionali di <strong>Audio Processing</strong> (<strong>Split Audio</strong>, <strong>Autotune</strong>, <strong>Proposed Pitch</strong>, <strong>Clean Audio</strong>, <strong>Formant Shifting</strong>, <strong>Post-Process</strong>) e <strong>RMVPE High Register</strong>.</li>
+<li>Clicca <strong>Convert</strong>.</li>
+<li>Ascolta <strong>Output Audio</strong> e leggi <strong>Output Log</strong> per stato della conversione, tempi di esecuzione e dettagli disponibili su indice o embedder. Questi messaggi non confermano necessariamente che il retrieval FAISS sia riuscito (un indice può essere selezionato e segnalato come abilitato nelle impostazioni anche se il caricamento FAISS fallisce o viene saltato, e <code translate="no" v-pre>Embedder</code> può non essere stampato esplicitamente quando è selezionato <code translate="no" v-pre>Auto (model default)</code>). Controlla la diagnostica in console se il caricamento dell&#x27;indice fallisce o il risultato è inatteso.</li>
+</ol>
+<blockquote>
+<p><strong>Solo baseline diagnostica:</strong> Questa configurazione iniziale serve a isolare ciò che fa il generatore <code translate="no" v-pre>.pth</code> senza retrieval FAISS o post-processing; non è una garanzia di qualità finale ottimale. Modifica un solo controllo alla volta partendo da questa baseline e confronta a volume d&#x27;ascolto equivalente.</p>
+</blockquote>
+<hr>
+<span id="a-getting-a-clean-conversion" class="docs-anchor"></span><h2 id="a-ottenere-una-conversione-pulita">A. Ottenere una conversione pulita</h2>
 <ul>
-<li>Per una nota tenuta, ascolta l&#x27;improvviso raddoppio o dimezzamento dell&#x27;altezza. Se più estrattori falliscono contemporaneamente, controlla la presenza di un altro cantante, di uno strumento nella radice vocale o di un grave ritaglio.</li>
-<li>Per un parlato tranquillo, assicurati che l&#x27;input contenga una vocale chiara. Aumentando il livello di una clip che contiene principalmente rumore può renderne più difficile la diagnosi.</li>
-<li>Per un batch di grandi dimensioni, confrontare prima un estratto dalle voci di origine più basse e quelle più alte. Confronta il tempo di elaborazione con lo stesso file e le stesse impostazioni sulla macchina prevista.</li>
+<li><strong>Audio sorgente e voci isolate:</strong> RVC richiede una singola voce asciutta e pulita. Strumenti come <a href="../non-rvc/uvr5/overview/">UVR5</a> o <a href="../non-rvc/mvsep/overview/">MVSep</a> possono aiutare a separare la voce dalla base musicale, e modelli dedicati affrontano compiti specifici come denoising, dereverberation, de-essing o audio restoration in base al modello usato (nessuno strumento elimina qualsiasi tipo di rumore o riverbero).</li>
+<li><strong>Parlato vs. canto:</strong> Il parlato tollera spesso piccoli aggiustamenti di <strong>Pitch</strong>, mentre il canto su una base strumentale mantiene di norma <strong>Pitch</strong> su <code translate="no" v-pre>0</code> per restare nella tonalità della base (una trasposizione diversa dall&#x27;ottava può essere appropriata se viene cambiata anche la tonalità dell&#x27;accompagnamento).</li>
+<li><strong>Compatibilità modello ed embedder:</strong> Lascia <strong>Embedder Model</strong> su <code translate="no" v-pre>Auto (model default)</code> a meno che tu non abbia addestrato o scaricato un modello che richiede un encoder specifico (<code translate="no" v-pre>contentvec</code>, <code translate="no" v-pre>spin-v2</code>, <code translate="no" v-pre>klm-vocal-contentvec</code>, ecc.). Usare un embedder incompatibile può generare un errore o degradare la conversione e compromettere la corrispondenza con l&#x27;indice.</li>
+<li><strong>Indice opzionale ed esportazione lossless:</strong> Mantieni <strong>Index Ratio</strong> su <code translate="no" v-pre>0</code> per la baseline, poi prova l&#x27;<code translate="no" v-pre>added_*.index</code> corrispondente se desiderato. Usa <code translate="no" v-pre>wav</code> o <code translate="no" v-pre>flac</code> per esportazioni lossless; <code translate="no" v-pre>flac</code> riduce la dimensione del file senza compressione audio con perdita. <code translate="no" v-pre>mp3</code>, <code translate="no" v-pre>ogg</code> e <code translate="no" v-pre>m4a</code> usano codifica lossy nell&#x27;attuale esportatore di Ilaria RVC, e il formato di esportazione non aggiunge dettagli che il modello non ha prodotto.</li>
 </ul>
-<p>L&#x27;estrazione della presentazione e l&#x27;estrazione del contenuto sono fasi separate. La modifica dell&#x27;estrattore F0 stima un profilo di intonazione diverso dallo stesso audio. L&#x27;embedder di contenuto deve ancora corrispondere al modello.</p>
-<span id="make-targeted-adjustments" class="docs-anchor"></span><h2 id="apporta-modifiche-mirate">Apporta modifiche mirate</h2>
-<retype-table copy-text="| Se senti | Prova prima | Cosa ascoltare |
-| --- | --- | --- |
- | Una nota salta, trilla o scompare | Confronta un secondo estrattore F0 supportato sullo stesso brano. | Note sostenute che seguono la sorgente senza improvvisi salti di ottava. |
- | Il timbro target è debole | Verificare il modello, l'embedder e l'indice corrispondente. Confronta l'indice disabilitato con un piccolo aumento del **Rapporto indice**. | Un tono più riconoscibile con parole ancora comprensibili. |
- | Le parole diventano sfocate dopo aver aumentato il recupero | Abbassa il **Rapporto indice** e riproduci le stesse consonanti. | Le sillabe diventano più chiare senza perdere il carattere che desideri. |
-| Respiri o consonanti dal suono metallico | Prova lo stesso modello con più registrazioni pulite. Se il difetto persiste, controlla il dataset per clipping, denoising eccessivo o pochi esempi puliti di respiri e consonanti. Correggi il dataset e riaddestra il modello. Pulire l’audio in ingresso durante l’inferenza non elimina gli artefatti appresi dal modello. | Respiri e consonanti come `s` e `f` chiari, senza ronzii metallici. |
- | Il volume diminuisce all'interno di una frase | Confronta una diversa impostazione di **Inviluppo volume**. Controlla la sorgente per un gate, quindi prova **Dividi audio** se il problema si verifica solo su clip lunghi. | Terminazioni di parole coerenti senza dover deglutire pause naturali. |
- | Una voce elaborata suona fragile | Disattiva la pulizia, la correzione automatica dell'intonazione e gli effetti di output. Aggiungili nuovamente individualmente dopo una conversione pulita. | Meno artefatti sulle sibilanti e sulle vocali sostenute. |
- | I picchi di uscita sono distorti | Controlla eventuali ritagli sulla forma d'onda originale o convertita. Ridurre il guadagno non necessario e confrontare prima di limitare. | Picchi puliti e nessun crepitio sulle sillabe forti. |">
+<hr>
+<span id="b-fixing-pitch-and-singing-problems" class="docs-anchor"></span><h2 id="b-risolvere-problemi-di-pitch-e-canto">B. Risolvere problemi di pitch e canto</h2>
+<ul>
+<li><strong>Pitch (Semitoni):</strong> Pitch modifica il contorno F0 estratto in semitoni (<code translate="no" v-pre>-24</code> a <code translate="no" v-pre>+24</code>; <code translate="no" v-pre>12</code> semitoni = 1 ottava). A <code translate="no" v-pre>0</code>, la conversione guidata dal pitch segue l&#x27;intonazione sorgente senza trasposizioni aggiuntive. Scegli un valore diverso solo quando serve per la resa target o l&#x27;arrangiamento musicale (nel canto, una trasposizione diversa dall&#x27;ottava può essere appropriata se viene cambiata anche la tonalità dell&#x27;accompagnamento). Non esiste uno spostamento di pitch universale per convertire tra tipi di voce diversi. Richiede un modello guidato dal pitch (<code translate="no" v-pre>if_f0 == 1</code>).</li>
+<li><strong>Pitch Extraction (F0) in Ilaria RVC:</strong> Stima la frequenza fondamentale (F0) dall&#x27;ingresso a <code translate="no" v-pre>16 kHz</code> prima della sintesi (operazione distinta dal Pitch Shifting).
+<ul>
+<li><strong>Inferenza Singola e Batch (CUDA):</strong> <code translate="no" v-pre>rmvpe</code> (predefinito), <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code>, <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>parselmouth</code>, <code translate="no" v-pre>harvest</code>, <code translate="no" v-pre>crepe</code>. <em>(Su build DirectML: <code translate="no" v-pre>pm</code>, <code translate="no" v-pre>harvest</code>, <code translate="no" v-pre>rmvpe</code>, <code translate="no" v-pre>fcpe</code>.)</em></li>
+<li><strong>Solo estrazione feature in Training:</strong> Include <code translate="no" v-pre>rmvpe_gpu</code> (e <code translate="no" v-pre>dio</code>); <code translate="no" v-pre>rmvpe_gpu</code> <strong>non</strong> è un pulsante separato in Inferenza.</li>
+<li><em>Nota:</em> Se <code translate="no" v-pre>rmvpe</code> produce un salto d&#x27;ottava su una nota precisa, prova <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code> o <code translate="no" v-pre>crepe</code> sullo stesso passaggio anziché dare per scontato che un metodo sia universalmente &quot;migliore&quot; o più rapido per ogni voce.</li>
+</ul>
+</li>
+<li><strong>RMVPE High Register</strong> <em>(visibile solo quando è selezionato <code translate="no" v-pre>rmvpe</code>)</em>:
+<ul>
+<li><strong>Enable high register:</strong> Abilita la correzione secondaria degli errori d&#x27;ottava per note cantate molto acute. <strong>Non</strong> lasciarlo attivo di default per parlato normale o canto nel registro medio.</li>
+<li><strong>Mode (<code translate="no" v-pre>true_pitch</code> / <code translate="no" v-pre>fold</code>):</strong> <code translate="no" v-pre>true_pitch</code> mantiene la F0 corretta fino a <strong>Maximum F0 (Hz)</strong> (<code translate="no" v-pre>1000–2000</code>, default <code translate="no" v-pre>1250</code>); <code translate="no" v-pre>fold</code> mantiene le note corrette un&#x27;ottava sotto.</li>
+<li><strong>Advanced (<code translate="no" v-pre>Activation threshold</code> <code translate="no" v-pre>800–1500</code> Hz default <code translate="no" v-pre>1040</code>, <code translate="no" v-pre>Sensitivity</code>, <code translate="no" v-pre>Minimum note duration</code> <code translate="no" v-pre>0–300</code> ms default <code translate="no" v-pre>60</code>):</strong> Regola quando interviene la correzione del registro acuto.</li>
+<li><strong>Preview original and corrected F0:</strong> Traccia i primi 30 secondi di F0 stimata vs. corretta senza eseguire la conversione vocale completa. Un grafico più pulito aiuta a diagnosticare salti d&#x27;ottava, ma non garantisce automaticamente un audio migliore all&#x27;ascolto.</li>
+</ul>
+</li>
+<li><strong>Autotune e Autotune Strength (<code translate="no" v-pre>0–1</code>, default <code translate="no" v-pre>1.0</code>):</strong> Aggancia i frame F0 sonori alla nota cromatica temperata più vicina (<code translate="no" v-pre>G1</code>–<code translate="no" v-pre>C6</code>), scalato da <strong>Autotune Strength</strong>. Poiché attira verso <em>ogni</em> semitono cromatico (non c&#x27;è <strong>alcun</strong> selettore di tonalità o scala in Ilaria RVC), una forza elevata può appiattire vibrato naturale e glissati espressivi.</li>
+<li><strong>Proposed Pitch e Target Pitch (Hz) (<code translate="no" v-pre>50–1200</code>, default <code translate="no" v-pre>155</code>):</strong> Calcola la mediana dei frame F0 sonori interpolati sull&#x27;audio sorgente e aggiunge un offset automatico in semitoni (<code translate="no" v-pre>-12</code> a <code translate="no" v-pre>+12</code>) verso <strong>Target Pitch (Hz)</strong> sommato allo slider <strong>Pitch</strong>. Utile come test rapido di trasposizione, anche se il pitch matematicamente centrato non è sempre la scelta musicale o vocale migliore. Sia <strong>Autotune</strong> che <strong>Proposed Pitch</strong> richiedono un modello guidato dal pitch (<code translate="no" v-pre>if_f0 == 1</code>).</li>
+</ul>
+<hr>
+<span id="c-fixing-voice-identity-and-timbre" class="docs-anchor"></span><h2 id="c-risolvere-identità-vocale-e-timbro">C. Risolvere identità vocale e timbro</h2>
+<ul>
+<li><strong>Content Embedder vs. Voice Generator (<code translate="no" v-pre>.pth</code>):</strong> Il generatore <code translate="no" v-pre>.pth</code> addestrato produce la voce target, mentre il content embedder (predefinito <code translate="no" v-pre>Auto (model default)</code>, tipicamente <code translate="no" v-pre>contentvec</code>) estrae le feature del parlato dalla registrazione sorgente. L&#x27;embedder è progettato per ridurre le informazioni sull&#x27;identità del parlante sorgente, pur non essendo necessariamente del tutto indipendente dal parlante, e non definisce l&#x27;identità della voce target. Usa l&#x27;embedder atteso dal modello per preservare la compatibilità ed evitare artefatti di conversione. Gli embedder HuBERT Base cinese, giapponese, coreano e portoghese richiedono un modello <strong>RVC v2</strong>.</li>
+<li>
+<p><strong>Come funziona davvero <code translate="no" v-pre>Index Ratio</code> (<code translate="no" v-pre>0–1</code>, default <code translate="no" v-pre>0</code>):</strong> Un generatore <code translate="no" v-pre>.pth</code> viene <strong>sempre</strong> usato indipendentemente da Index Ratio. Quando un database FAISS <code translate="no" v-pre>added_*.index</code> è caricato e <code translate="no" v-pre>Index Ratio &gt; 0</code>, RVC cerca gli 8 vettori di feature più vicini nell&#x27;indice e li miscela con le feature estratte dal tuo ingresso <em>prima</em> del generatore <code translate="no" v-pre>.pth</code>:
+<code translate="no" v-pre>features = retrieved_features * index_rate + original_features * (1 - index_rate)</code></p>
+<ul>
+<li><strong><code translate="no" v-pre>Index Ratio = 0</code></strong> disabilita il retrieval FAISS (<code translate="no" v-pre>original_features</code> soltanto) mentre il generatore <code translate="no" v-pre>.pth</code> resta attivo, fornendo una baseline diagnostica utile senza retrieval di feature FAISS.</li>
+<li><strong>Indice selezionato vs. Retrieval applicato:</strong> Selezionare un file <code translate="no" v-pre>.index</code> e impostare <code translate="no" v-pre>Index Ratio &gt; 0</code> fa riportare <code translate="no" v-pre>Voice index setting: enabled</code> in <strong>Output Log</strong>, ma se il file manca o <code translate="no" v-pre>faiss.read_index()</code> fallisce, il backend prosegue senza retrieval.</li>
+<li><strong>Alzare Index Ratio</strong> avvicina le feature ai vettori memorizzati nell&#x27;indice. Un indice corretto può migliorare alcune conversioni, ma può anche peggiorarle (ad esempio dizione ovattata o artefatti del dataset) in base all&#x27;audio e al modello. Nessun valore singolo garantisce una pronuncia migliore.</li>
+</ul>
+</li>
+<li><strong>Formant Shifting (<code translate="no" v-pre>apply_formant_shift</code>, <code translate="no" v-pre>0.7–1.4</code>, default <code translate="no" v-pre>1.0</code>):</strong> Usa Praat/Parselmouth (<code translate="no" v-pre>Change gender</code>) <strong>prima</strong> della sintesi RVC sull&#x27;ingresso a <code translate="no" v-pre>16 kHz</code> per spostare le risonanze del tratto vocale. <code translate="no" v-pre>1.0</code> è neutro; valori sotto <code translate="no" v-pre>1.0</code> mirano a scurire/approfondire la risonanza vocalica, mentre valori sopra <code translate="no" v-pre>1.0</code> mirano a schiarirla. L&#x27;algoritmo mira a preservare pitch e durata, ma possono comunque comparire artefatti, specie con valori estremi. <strong>Formant Shifting</strong> non equivale a cambiare <strong>Pitch</strong> né a <strong>Post-Process → Pitch Shift</strong> (che sposta il pitch in uscita dopo RVC).</li>
+</ul>
+<hr>
+<span id="d-fixing-consonants-and-breathing" class="docs-anchor"></span><h2 id="d-risolvere-consonanti-e-respiri">D. Risolvere consonanti e respiri</h2>
+<ul>
+<li><strong>Come funziona <code translate="no" v-pre>Protect clear consonants and breathing sounds</code> (<code translate="no" v-pre>0–0.5</code>, default <code translate="no" v-pre>0.33</code>):</strong>
+<ul>
+<li>Nella pipeline di inferenza (<code translate="no" v-pre>vc()</code>), quando <code translate="no" v-pre>protect &lt; 0.5</code> <strong>e</strong> il modello usa la guida F0 (<code translate="no" v-pre>if_f0 == 1</code>), RVC salva una copia delle feature originali non miscelate (<code translate="no" v-pre>feats0</code>) <em>prima</em> del retrieval FAISS.</li>
+<li>Dopo il retrieval, i frame non sonori / a F0 bassa (<code translate="no" v-pre>pitchf &lt; 1</code>) vengono miscelati indietro verso <code translate="no" v-pre>feats0</code>: valori più bassi avvicinano i frame non sonori a <code translate="no" v-pre>feats0</code>, mentre <strong><code translate="no" v-pre>0.5</code> disattiva la protezione</strong>.</li>
+<li><strong>Limitazione critica:</strong> Poiché <code translate="no" v-pre>Protect</code> miscela verso <code translate="no" v-pre>feats0</code> (le feature pre-retrieval), <strong>quando <code translate="no" v-pre>Index Ratio = 0</code>, <code translate="no" v-pre>feats</code> e <code translate="no" v-pre>feats0</code> sono identici</strong>, quindi cambiare <code translate="no" v-pre>Protect</code> produce poca o nessuna differenza. Inoltre <code translate="no" v-pre>Protect</code> non è un denoiser né un filtro di restauro audio e non può riparare consonanti già clippate o distorte nella sorgente o nel modello.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<span id="e-fixing-volume-noise-and-distortion" class="docs-anchor"></span><h2 id="e-risolvere-volume-rumore-e-distorsione">E. Risolvere volume, rumore e distorsione</h2>
+<ul>
+<li><strong>Volume Envelope (<code translate="no" v-pre>0=Input source volume, 1=Normalized Output</code>, default <code translate="no" v-pre>0.25</code>):</strong> Usa <code translate="no" v-pre>change_rms()</code> per miscelare l&#x27;inviluppo di ampiezza RMS dell&#x27;audio in ingresso (<code translate="no" v-pre>1 - rate</code>) con l&#x27;inviluppo RMS dell&#x27;uscita RVC (<code translate="no" v-pre>rate</code>).
+<ul>
+<li><code translate="no" v-pre>0</code> fa seguire all&#x27;audio convertito l&#x27;<strong>inviluppo RMS dell&#x27;audio sorgente</strong>.</li>
+<li><code translate="no" v-pre>1</code> mantiene l&#x27;<strong>inviluppo RMS proprio del generatore RVC</strong>.</li>
+<li>Nota: Nonostante l&#x27;etichetta dell&#x27;interfaccia, <code translate="no" v-pre>1</code> <strong>non</strong> normalizza a un target LUFS fisso e <strong>non</strong> è un compressore o un limiter. Regolare <code translate="no" v-pre>Volume Envelope</code> modifica l&#x27;adattamento dinamico del livello, utile quando pause silenziose o sbalzi di livello causano effetti di pumping.</li>
+</ul>
+</li>
+<li><strong>Clean Audio e Clean Strength (<code translate="no" v-pre>0–1</code>, default <code translate="no" v-pre>0.5</code>):</strong> Esegue <code translate="no" v-pre>noisereduce</code> <strong>dopo</strong> la conversione RVC sull&#x27;audio convertito, con <strong>Clean Strength</strong> a controllare l&#x27;intensità della riduzione. In base alla registrazione e al rumore presente, una riduzione troppo aggressiva può alterare consonanti, respiri e dettagli vocali; non esiste una soglia universalmente corretta. <code translate="no" v-pre>Clean Audio</code> è una riduzione del rumore post-processing, non un restauro audio: non può riparare il clipping né correggere un modello addestrato male.</li>
+<li><strong>Post-Process Effects</strong> <em>(applicati dopo la conversione tramite FFmpeg/librosa; lasciali OFF per i test di baseline)</em>:
+<ul>
+<li><code translate="no" v-pre>Pitch Shift (-12..+12)</code>: Shift del pitch post-RVC tramite librosa (altera l&#x27;audio già sintetizzato anziché il contorno F0 di RVC).</li>
+<li><code translate="no" v-pre>Limiter (-24..0 dBFS, default -6)</code> e <code translate="no" v-pre>Gain (-24..+24 dB)</code>: Nell&#x27;attuale catena di filtri FFmpeg (<code translate="no" v-pre>ilaria_inference_effects.py</code>), <strong>Limiter</strong> viene inserito <strong>prima</strong> di <strong>Gain</strong> quando entrambi sono attivi. Poiché <code translate="no" v-pre>Gain</code> viene applicato dopo <code translate="no" v-pre>Limiter</code>, un <code translate="no" v-pre>Gain</code> positivo può riportare i picchi in clipping; <code translate="no" v-pre>Limiter</code> non garantisce un&#x27;uscita finale priva di clipping se seguito da <code translate="no" v-pre>Gain</code> positivo.</li>
+<li>Effetti creativi/di utilità: <code translate="no" v-pre>Reverb</code>, <code translate="no" v-pre>Distortion</code>, <code translate="no" v-pre>Chorus</code>, <code translate="no" v-pre>Bitcrush</code>, <code translate="no" v-pre>Clipping</code>, <code translate="no" v-pre>Compressor</code>, <code translate="no" v-pre>Delay</code>.</li>
+</ul>
+</li>
+<li><strong>Resampling (<code translate="no" v-pre>0–48000</code>, <code translate="no" v-pre>0=none</code>) e Export Format:</strong> Lascia <code translate="no" v-pre>0</code> per mantenere la frequenza di campionamento nativa del modello (<code translate="no" v-pre>32k</code>/<code translate="no" v-pre>40k</code>/<code translate="no" v-pre>48k</code>). Imposta <code translate="no" v-pre>44100</code> o <code translate="no" v-pre>48000</code> solo se la tua DAW o il progetto richiedono una frequenza specifica (il resampling cambia la frequenza di campionamento, non la qualità intrinseca della sintesi). Usa <code translate="no" v-pre>wav</code> o <code translate="no" v-pre>flac</code> per esportazioni lossless durante i controlli qualità.</li>
+</ul>
+<hr>
+<span id="f-long-recordings-and-batch-inference" class="docs-anchor"></span><h2 id="f-registrazioni-lunghe-e-batch-inference">F. Registrazioni lunghe e Batch Inference</h2>
+<ul>
+<li><strong>Split Audio:</strong> Richiama <code translate="no" v-pre>silence_split_points()</code> per inserire punti di taglio allineati ai frame nelle pause silenziose mantenendo i normali tagli RVC per file lunghi (<code translate="no" v-pre>opt_ts</code>). Questo modifica la dimensione dei segmenti passati alla sintesi e può alterare il comportamento nei punti di giunzione. <strong>Non</strong> evita necessariamente il caricamento completo dell&#x27;audio in memoria, <strong>non</strong> elimina tutte le cause di uso eccessivo della memoria e <strong>non</strong> è una soluzione per volume, distorsione o qualità vocale.</li>
+<li><strong>Single vs. Batch Inference:</strong> Entrambe le schede espongono gli stessi controlli principali (<code translate="no" v-pre>Pitch</code>, <code translate="no" v-pre>Pitch Extraction</code>, <code translate="no" v-pre>Index Ratio</code>, <code translate="no" v-pre>Resampling</code>, <code translate="no" v-pre>Volume Envelope</code>, <code translate="no" v-pre>Protect</code>, <code translate="no" v-pre>Export Format</code>, <code translate="no" v-pre>Audio Processing</code>, <code translate="no" v-pre>Embedder Settings</code> e <code translate="no" v-pre>RMVPE High Register</code>). Usa <strong>Single Inference</strong> per calibrare le impostazioni su un singolo file con ascolto immediato; usa <strong>Batch Inference</strong> (<code translate="no" v-pre>InferOutput/</code> o cartella scelta) una volta verificate le impostazioni per convertire più file in un solo passaggio.</li>
+</ul>
+<hr>
+<span id="diagnostic-troubleshooting-matrix" class="docs-anchor"></span><h2 id="matrice-diagnostica-di-risoluzione-problemi">Matrice Diagnostica di Risoluzione Problemi</h2>
+<retype-table copy-text="| Sintomo | Possibili cause | Controlla prima | Regolazione da provare | Risultato atteso | Se non funziona |
+| --- | --- | --- | --- | --- | --- |
+| **Voce troppo acuta / troppo brillante** | **Pitch** alzato troppo, offset **Proposed Pitch**, **Formant Ratio** alto o modello allenato su registro più acuto | Controlla **Pitch**, **Proposed Pitch** e **Formant Shifting** | Imposta **Pitch** su `0` (o abbassa se serve) e disattiva **Proposed Pitch** e **Formant Shifting** | F0 segue la sorgente senza spinte verso l'alto | Distingui altezza F0 da risonanza: prova una piccola riduzione di **Formant Ratio** sotto `1.0` (esempio facoltativo: `0.9`) o verifica i limiti del modello |
+| **Voce troppo profonda / ovattata** | **Pitch** abbassato troppo, **Formant Ratio &lt; 1.0** o incompatibilità modello/indice | Controlla **Pitch**, **Formant Shifting** e **Index Ratio** | Imposta **Pitch** su `0` (o alza se serve) e disattiva **Formant Shifting** | Presenza medio-alta più chiara senza spostamenti verso il basso | Prova **Index Ratio = 0** per isolare la chiarezza del `.pth`, o un piccolo aumento di **Formant Ratio** sopra `1.0` (esempio facoltativo: `1.1`) |
+| **Timbro metallico / fragile** | **Index Ratio** eccessivo o incompatibile, **Clean Audio** o **Autotune** | Controlla **Audio Processing** attivi e **Output Log** | Imposta **Index Ratio = 0**, disattiva **Clean Audio** e **Autotune** | Isola il timbro base del `.pth` | Prova un altro estrattore F0 (`fcpe`, `swift`, `beatrice` o `crepe`) |
+| **Identità vocale target debole** | Modello `.pth` errato, incompatibilità embedder, indice mancante/incompatibile, limiti sorgente o training | Verifica **Voice Model**, **Embedder Model**, qualità sorgente e stato indice in console/log | Conferma il `.pth` corretto e il relativo `added_*.index` (prova `Index Ratio &gt; 0` se compatibile) | Timbro target più definito se modello e indice combaciano | Controlla `Model information` per compatibilità embedder e prova su una registrazione asciutta più pulita |
+| **Troppo simile al parlante sorgente** | Incompatibilità modello/embedder, leakage del parlante o ampio divario di estensione vocale | Confronta registrazione sorgente con embedder atteso ed estensione del modello | Imposta **Embedder Model** su `Auto (model default)` e prova un `added_*.index` compatibile se disponibile | Maggiore separazione dal parlante sorgente | Regola **Pitch** solo se necessario per l'esecuzione target o prova un altro modello |
+| **Consonanti impastate / rovinate** | **Index Ratio** eccessivo o incompatibile, **Protect** disattivato (`0.5`) o dizione sorgente poco chiara | Controlla **Index Ratio** e **Protect** (`0.5` = off; default `0.33`) | Abbassa **Index Ratio** (o prova `0`) e imposta **Protect** sotto `0.5` quando usi un indice su modello F0 | Preserva meglio le feature non sonore sorgente (`feats0`) durante il blending | Verifica la dizione dell'audio sorgente asciutto; `Protect` non ripara consonanti già impastate o clippate |
+| **Sibilanti aspre (`s`/`sc`)** | Microfono sorgente brillante, **Formant Ratio** alto o distorsione **Post-Process** | Ascolta l'audio sorgente asciutto in Audio Analyzer | Disattiva **Formant Shifting** e **Post-Process**; prova **Index Ratio = 0** | Transienti `s`/`sc` più morbidi | Applica de-essing alla registrazione sorgente asciutta prima di RVC |
+| **Respiri distorti o assenti** | Gate/rumore nella sorgente, limiti del modello, **Volume Envelope** o **Clean Audio** post-conversione | Confronta i respiri sorgente con l'audio convertito | Disattiva **Clean Audio** e prova **Volume Envelope** (es. `0` vs `0.25` default) | I respiri seguono più fedelmente la dinamica sorgente | Abbassa **Index Ratio** (o imposta `0`) se il retrieval preleva frame rumorosi |
+| **Salti d'ottava sulle note tenute** | Tracker F0 ingannato da armoniche o note molto acute | Controlla forma d'onda/pitch in **Audio Analyzer** | Alterna **RMVPE** / **FCPE** / **Swift** / **CREPE**, o prova **RMVPE High Register** | Tracciamento F0 più stabile sulle note tenute | Controlla lo stem sorgente per residui strumentali o armonie |
+| **Vibrato innaturale / glissati piatti** | **Autotune** attivo su canto espressivo | Controlla **Audio Processing → Autotune** | Disattiva **Autotune** o riduci **Autotune Strength** (esempio facoltativo: `0.3`) | Ritornano vibrato naturale e glissati | Confronta la fluidità F0 di **RMVPE** vs **CREPE** |
+| **Pitch instabile / oscillante** | Sorgente rumorosa/riverberante o tracciamento `parselmouth`/`harvest` | Ascolta lo stem sorgente isolato | Applica separazione/denoising/dereverberation prima di RVC e usa **RMVPE** | Contorno F0 più stabile | Aumenta `filter_radius` (`&gt;= 3`) se usi specificamente `harvest` |
+| **Voce robotica / da vocoder** | **Embedder** errato, mismatch `v1`/`v2` (che può anche bloccare la conversione con errore) o gravi errori F0 | Controlla **Output Log** e console per avvisi embedder/F0 | Imposta **Embedder Model** su `Auto (model default)` e verifica **RMVPE** | Sintesi vocale naturale | Prova su una registrazione sorgente asciutta e più pulita |
+| **Fruscio di fondo / artefatti di denoising** | **Clean Audio** troppo intenso o registrazione sorgente rumorosa | Confronta con **Clean Audio** OFF | Disattiva **Clean Audio** o riduci **Clean Strength** | Meno artefatti acquosi di denoising | Applica denoising/dereverberation dedicato *prima* di RVC |
+| **Clipping / distorsione aspra** | Clipping già nell'audio sorgente, in inferenza, **Gain** positivo (anche dopo **Limiter**), FX **Distortion/Clipping** o in export | Verifica dove compare la distorsione (sorgente vs. output in **Audio Analyzer**) | Disattiva **Post-Process** (specie **Gain** positivo dopo **Limiter**) | Elimina il clipping post-RVC | Abbassare il volume su un file già clippato **non** ricostruisce i campioni mancanti; registra di nuovo o usa una sorgente pulita |
+| **Volume irregolare / effetto pumping** | **Volume Envelope** non adatto alla dinamica sorgente | Confronta **Volume Envelope** `0` vs `0.25` (default) vs `1.0` | Sposta **Volume Envelope** verso `0` (RMS sorgente) o `1.0` (RMS modello) | Livello delle frasi più uniforme | Applica **Compressor** / **Limiter** leggeri (senza **Gain** positivo dopo) solo se necessario |
+| **Errori di resampling / export / batch** | Frequenza `Resampling` non valida, FFmpeg mancante (per `mp3`/`ogg`/`m4a`) o percorso cartella errato | Leggi il messaggio esatto in **Output Log** e console | Imposta `Resampling = 0`, esporta `wav` o `flac`, usa percorsi ASCII semplici | Esportazione lossless pulita | Avvia `RUN_ILARIA_RVC_LOGS.bat` per ispezionare il traceback completo |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>Se senti</th>
-<th>Prova prima</th>
-<th>Cosa ascoltare</th>
+<th>Sintomo</th>
+<th>Possibili cause</th>
+<th>Controlla prima</th>
+<th>Regolazione da provare</th>
+<th>Risultato atteso</th>
+<th>Se non funziona</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Una nota salta, trilla o scompare</td>
-<td>Confronta un secondo estrattore F0 supportato sullo stesso brano.</td>
-<td>Note sostenute che seguono la sorgente senza improvvisi salti di ottava.</td>
+<td><strong>Voce troppo acuta / troppo brillante</strong></td>
+<td><strong>Pitch</strong> alzato troppo, offset <strong>Proposed Pitch</strong>, <strong>Formant Ratio</strong> alto o modello allenato su registro più acuto</td>
+<td>Controlla <strong>Pitch</strong>, <strong>Proposed Pitch</strong> e <strong>Formant Shifting</strong></td>
+<td>Imposta <strong>Pitch</strong> su <code translate="no" v-pre>0</code> (o abbassa se serve) e disattiva <strong>Proposed Pitch</strong> e <strong>Formant Shifting</strong></td>
+<td>F0 segue la sorgente senza spinte verso l&#x27;alto</td>
+<td>Distingui altezza F0 da risonanza: prova una piccola riduzione di <strong>Formant Ratio</strong> sotto <code translate="no" v-pre>1.0</code> (esempio facoltativo: <code translate="no" v-pre>0.9</code>) o verifica i limiti del modello</td>
 </tr>
 <tr>
-<td>Il timbro target è debole</td>
-<td>Verificare il modello, l&#x27;embedder e l&#x27;indice corrispondente. Confronta l&#x27;indice disabilitato con un piccolo aumento del <strong>Rapporto indice</strong>.</td>
-<td>Un tono più riconoscibile con parole ancora comprensibili.</td>
+<td><strong>Voce troppo profonda / ovattata</strong></td>
+<td><strong>Pitch</strong> abbassato troppo, <strong>Formant Ratio &lt; 1.0</strong> o incompatibilità modello/indice</td>
+<td>Controlla <strong>Pitch</strong>, <strong>Formant Shifting</strong> e <strong>Index Ratio</strong></td>
+<td>Imposta <strong>Pitch</strong> su <code translate="no" v-pre>0</code> (o alza se serve) e disattiva <strong>Formant Shifting</strong></td>
+<td>Presenza medio-alta più chiara senza spostamenti verso il basso</td>
+<td>Prova <strong>Index Ratio = 0</strong> per isolare la chiarezza del <code translate="no" v-pre>.pth</code>, o un piccolo aumento di <strong>Formant Ratio</strong> sopra <code translate="no" v-pre>1.0</code> (esempio facoltativo: <code translate="no" v-pre>1.1</code>)</td>
 </tr>
 <tr>
-<td>Le parole diventano sfocate dopo aver aumentato il recupero</td>
-<td>Abbassa il <strong>Rapporto indice</strong> e riproduci le stesse consonanti.</td>
-<td>Le sillabe diventano più chiare senza perdere il carattere che desideri.</td>
+<td><strong>Timbro metallico / fragile</strong></td>
+<td><strong>Index Ratio</strong> eccessivo o incompatibile, <strong>Clean Audio</strong> o <strong>Autotune</strong></td>
+<td>Controlla <strong>Audio Processing</strong> attivi e <strong>Output Log</strong></td>
+<td>Imposta <strong>Index Ratio = 0</strong>, disattiva <strong>Clean Audio</strong> e <strong>Autotune</strong></td>
+<td>Isola il timbro base del <code translate="no" v-pre>.pth</code></td>
+<td>Prova un altro estrattore F0 (<code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code> o <code translate="no" v-pre>crepe</code>)</td>
 </tr>
 <tr>
-<td>Respiri o consonanti dal suono metallico</td>
-<td>Prova lo stesso modello con più registrazioni pulite. Se il difetto persiste, controlla il dataset per clipping, denoising eccessivo o pochi esempi puliti di respiri e consonanti. Correggi il dataset e riaddestra il modello. Pulire l’audio in ingresso durante l’inferenza non elimina gli artefatti appresi dal modello.</td>
-<td>Respiri e consonanti come <code translate="no" v-pre>s</code> e <code translate="no" v-pre>f</code> chiari, senza ronzii metallici.</td>
+<td><strong>Identità vocale target debole</strong></td>
+<td>Modello <code translate="no" v-pre>.pth</code> errato, incompatibilità embedder, indice mancante/incompatibile, limiti sorgente o training</td>
+<td>Verifica <strong>Voice Model</strong>, <strong>Embedder Model</strong>, qualità sorgente e stato indice in console/log</td>
+<td>Conferma il <code translate="no" v-pre>.pth</code> corretto e il relativo <code translate="no" v-pre>added_*.index</code> (prova <code translate="no" v-pre>Index Ratio &gt; 0</code> se compatibile)</td>
+<td>Timbro target più definito se modello e indice combaciano</td>
+<td>Controlla <code translate="no" v-pre>Model information</code> per compatibilità embedder e prova su una registrazione asciutta più pulita</td>
 </tr>
 <tr>
-<td>Il volume diminuisce all&#x27;interno di una frase</td>
-<td>Confronta una diversa impostazione di <strong>Inviluppo volume</strong>. Controlla la sorgente per un gate, quindi prova <strong>Dividi audio</strong> se il problema si verifica solo su clip lunghi.</td>
-<td>Terminazioni di parole coerenti senza dover deglutire pause naturali.</td>
+<td><strong>Troppo simile al parlante sorgente</strong></td>
+<td>Incompatibilità modello/embedder, leakage del parlante o ampio divario di estensione vocale</td>
+<td>Confronta registrazione sorgente con embedder atteso ed estensione del modello</td>
+<td>Imposta <strong>Embedder Model</strong> su <code translate="no" v-pre>Auto (model default)</code> e prova un <code translate="no" v-pre>added_*.index</code> compatibile se disponibile</td>
+<td>Maggiore separazione dal parlante sorgente</td>
+<td>Regola <strong>Pitch</strong> solo se necessario per l&#x27;esecuzione target o prova un altro modello</td>
 </tr>
 <tr>
-<td>Una voce elaborata suona fragile</td>
-<td>Disattiva la pulizia, la correzione automatica dell&#x27;intonazione e gli effetti di output. Aggiungili nuovamente individualmente dopo una conversione pulita.</td>
-<td>Meno artefatti sulle sibilanti e sulle vocali sostenute.</td>
+<td><strong>Consonanti impastate / rovinate</strong></td>
+<td><strong>Index Ratio</strong> eccessivo o incompatibile, <strong>Protect</strong> disattivato (<code translate="no" v-pre>0.5</code>) o dizione sorgente poco chiara</td>
+<td>Controlla <strong>Index Ratio</strong> e <strong>Protect</strong> (<code translate="no" v-pre>0.5</code> = off; default <code translate="no" v-pre>0.33</code>)</td>
+<td>Abbassa <strong>Index Ratio</strong> (o prova <code translate="no" v-pre>0</code>) e imposta <strong>Protect</strong> sotto <code translate="no" v-pre>0.5</code> quando usi un indice su modello F0</td>
+<td>Preserva meglio le feature non sonore sorgente (<code translate="no" v-pre>feats0</code>) durante il blending</td>
+<td>Verifica la dizione dell&#x27;audio sorgente asciutto; <code translate="no" v-pre>Protect</code> non ripara consonanti già impastate o clippate</td>
 </tr>
 <tr>
-<td>I picchi di uscita sono distorti</td>
-<td>Controlla eventuali ritagli sulla forma d&#x27;onda originale o convertita. Ridurre il guadagno non necessario e confrontare prima di limitare.</td>
-<td>Picchi puliti e nessun crepitio sulle sillabe forti.</td>
+<td><strong>Sibilanti aspre (<code translate="no" v-pre>s</code>/<code translate="no" v-pre>sc</code>)</strong></td>
+<td>Microfono sorgente brillante, <strong>Formant Ratio</strong> alto o distorsione <strong>Post-Process</strong></td>
+<td>Ascolta l&#x27;audio sorgente asciutto in Audio Analyzer</td>
+<td>Disattiva <strong>Formant Shifting</strong> e <strong>Post-Process</strong>; prova <strong>Index Ratio = 0</strong></td>
+<td>Transienti <code translate="no" v-pre>s</code>/<code translate="no" v-pre>sc</code> più morbidi</td>
+<td>Applica de-essing alla registrazione sorgente asciutta prima di RVC</td>
+</tr>
+<tr>
+<td><strong>Respiri distorti o assenti</strong></td>
+<td>Gate/rumore nella sorgente, limiti del modello, <strong>Volume Envelope</strong> o <strong>Clean Audio</strong> post-conversione</td>
+<td>Confronta i respiri sorgente con l&#x27;audio convertito</td>
+<td>Disattiva <strong>Clean Audio</strong> e prova <strong>Volume Envelope</strong> (es. <code translate="no" v-pre>0</code> vs <code translate="no" v-pre>0.25</code> default)</td>
+<td>I respiri seguono più fedelmente la dinamica sorgente</td>
+<td>Abbassa <strong>Index Ratio</strong> (o imposta <code translate="no" v-pre>0</code>) se il retrieval preleva frame rumorosi</td>
+</tr>
+<tr>
+<td><strong>Salti d&#x27;ottava sulle note tenute</strong></td>
+<td>Tracker F0 ingannato da armoniche o note molto acute</td>
+<td>Controlla forma d&#x27;onda/pitch in <strong>Audio Analyzer</strong></td>
+<td>Alterna <strong>RMVPE</strong> / <strong>FCPE</strong> / <strong>Swift</strong> / <strong>CREPE</strong>, o prova <strong>RMVPE High Register</strong></td>
+<td>Tracciamento F0 più stabile sulle note tenute</td>
+<td>Controlla lo stem sorgente per residui strumentali o armonie</td>
+</tr>
+<tr>
+<td><strong>Vibrato innaturale / glissati piatti</strong></td>
+<td><strong>Autotune</strong> attivo su canto espressivo</td>
+<td>Controlla <strong>Audio Processing → Autotune</strong></td>
+<td>Disattiva <strong>Autotune</strong> o riduci <strong>Autotune Strength</strong> (esempio facoltativo: <code translate="no" v-pre>0.3</code>)</td>
+<td>Ritornano vibrato naturale e glissati</td>
+<td>Confronta la fluidità F0 di <strong>RMVPE</strong> vs <strong>CREPE</strong></td>
+</tr>
+<tr>
+<td><strong>Pitch instabile / oscillante</strong></td>
+<td>Sorgente rumorosa/riverberante o tracciamento <code translate="no" v-pre>parselmouth</code>/<code translate="no" v-pre>harvest</code></td>
+<td>Ascolta lo stem sorgente isolato</td>
+<td>Applica separazione/denoising/dereverberation prima di RVC e usa <strong>RMVPE</strong></td>
+<td>Contorno F0 più stabile</td>
+<td>Aumenta <code translate="no" v-pre>filter_radius</code> (<code translate="no" v-pre>&gt;= 3</code>) se usi specificamente <code translate="no" v-pre>harvest</code></td>
+</tr>
+<tr>
+<td><strong>Voce robotica / da vocoder</strong></td>
+<td><strong>Embedder</strong> errato, mismatch <code translate="no" v-pre>v1</code>/<code translate="no" v-pre>v2</code> (che può anche bloccare la conversione con errore) o gravi errori F0</td>
+<td>Controlla <strong>Output Log</strong> e console per avvisi embedder/F0</td>
+<td>Imposta <strong>Embedder Model</strong> su <code translate="no" v-pre>Auto (model default)</code> e verifica <strong>RMVPE</strong></td>
+<td>Sintesi vocale naturale</td>
+<td>Prova su una registrazione sorgente asciutta e più pulita</td>
+</tr>
+<tr>
+<td><strong>Fruscio di fondo / artefatti di denoising</strong></td>
+<td><strong>Clean Audio</strong> troppo intenso o registrazione sorgente rumorosa</td>
+<td>Confronta con <strong>Clean Audio</strong> OFF</td>
+<td>Disattiva <strong>Clean Audio</strong> o riduci <strong>Clean Strength</strong></td>
+<td>Meno artefatti acquosi di denoising</td>
+<td>Applica denoising/dereverberation dedicato <em>prima</em> di RVC</td>
+</tr>
+<tr>
+<td><strong>Clipping / distorsione aspra</strong></td>
+<td>Clipping già nell&#x27;audio sorgente, in inferenza, <strong>Gain</strong> positivo (anche dopo <strong>Limiter</strong>), FX <strong>Distortion/Clipping</strong> o in export</td>
+<td>Verifica dove compare la distorsione (sorgente vs. output in <strong>Audio Analyzer</strong>)</td>
+<td>Disattiva <strong>Post-Process</strong> (specie <strong>Gain</strong> positivo dopo <strong>Limiter</strong>)</td>
+<td>Elimina il clipping post-RVC</td>
+<td>Abbassare il volume su un file già clippato <strong>non</strong> ricostruisce i campioni mancanti; registra di nuovo o usa una sorgente pulita</td>
+</tr>
+<tr>
+<td><strong>Volume irregolare / effetto pumping</strong></td>
+<td><strong>Volume Envelope</strong> non adatto alla dinamica sorgente</td>
+<td>Confronta <strong>Volume Envelope</strong> <code translate="no" v-pre>0</code> vs <code translate="no" v-pre>0.25</code> (default) vs <code translate="no" v-pre>1.0</code></td>
+<td>Sposta <strong>Volume Envelope</strong> verso <code translate="no" v-pre>0</code> (RMS sorgente) o <code translate="no" v-pre>1.0</code> (RMS modello)</td>
+<td>Livello delle frasi più uniforme</td>
+<td>Applica <strong>Compressor</strong> / <strong>Limiter</strong> leggeri (senza <strong>Gain</strong> positivo dopo) solo se necessario</td>
+</tr>
+<tr>
+<td><strong>Errori di resampling / export / batch</strong></td>
+<td>Frequenza <code translate="no" v-pre>Resampling</code> non valida, FFmpeg mancante (per <code translate="no" v-pre>mp3</code>/<code translate="no" v-pre>ogg</code>/<code translate="no" v-pre>m4a</code>) o percorso cartella errato</td>
+<td>Leggi il messaggio esatto in <strong>Output Log</strong> e console</td>
+<td>Imposta <code translate="no" v-pre>Resampling = 0</code>, esporta <code translate="no" v-pre>wav</code> o <code translate="no" v-pre>flac</code>, usa percorsi ASCII semplici</td>
+<td>Esportazione lossless pulita</td>
+<td>Avvia <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code> per ispezionare il traceback completo</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<p>Evitare di cambiare l’embedder per inseguire un suono. Deve corrispondere alla rappresentazione della feature su cui è stato addestrato il modello. <strong>Rapporto indice</strong> unisce le funzionalità recuperate da un indice di addestramento corrispondente nella conversione. Non fornisce un aumento di qualità generico. Una fusione elevata può rendere la pronuncia meno distinta, soprattutto su una fonte sconosciuta.</p>
-<p>Nel motore di file di Applio, un&#x27;impostazione <strong>Inviluppo volume</strong> più vicina allo zero segue più da vicino la dinamica della sorgente. Per <strong>Proteggi consonanti senza voce</strong>, i valori inferiori a 0,5 rafforzano la protezione e 0,5 la disabilita in quel motore. Controlla il tooltip e le note di rilascio della tua app prima di trasferire quei numeri a un altro fork.</p>
-<span id="diagnose-by-ear-and-with-the-analyzer" class="docs-anchor"></span><h2 id="diagnosi-a-orecchio-e-con-lanalizzatore">Diagnosi a orecchio e con l&#x27;analizzatore</h2>
-<ol>
-<li>Segna il timestamp del problema. Controlla se appare nella sorgente, nella voce separata o solo nel risultato convertito.</li>
-<li>Se è nel sorgente, correggi prima l&#x27;input. Confronta una ripresa alternativa prima di utilizzare un denoising pesante. Abbassando il volume di una registrazione interrotta non è possibile ripristinare i picchi mancanti.</li>
-<li>Se appare nella conversione, confronta gli effetti disattivati, l&#x27;indice disattivato e un estrattore di tono compatibile in passaggi separati. Verificare l&#x27;embedder e il pacchetto del modello prima di presumere che il checkpoint sia scadente.</li>
-<li>Utilizza l&#x27;<strong>Audio Analyser</strong> di Ilaria RVC, ove disponibile, per confrontare forme d&#x27;onda, stime dell&#x27;intonazione, spettri e livelli. Una trama del tono può indicarti un salto sospetto e l&#x27;audio sorgente ti dice se faceva parte della performance.</li>
-<li>Confermare il miglioramento su un secondo estratto. Mantieni l&#x27;impostazione solo se funziona con il materiale che intendi esportare.</li>
-</ol>
-<p>Per cantare, prova respiri, consonanti, vibrato e note trattenute. Per quanto riguarda il parlato, prova le frasi a voce bassa e alta e almeno una frase con consonanti acute. Se l&#x27;output continua a fallire, invia un breve esempio consentito e le tue impostazioni con un <a href="../troubleshooting/">rapporto di risoluzione dei problemi</a>.</p>
+<span id="related-guides" class="docs-anchor"></span><h2 id="guide-correlate">Guide correlate</h2>
+<ul>
+<li><a href="../ilaria-rvc/inference/">Inferenza singola e batch</a> · <a href="../ilaria-rvc/inference-buttons/">Controlli di inferenza</a> · <a href="../ilaria-rvc/advanced-inference/">Inferenza avanzata</a></li>
+<li><a href="../indexes/">File index (.index)</a> · <a href="../pitch-extractors/">Pitch extractor</a> · <a href="../embedders/">Embedder</a> · <a href="../ilaria-rvc/audio-analyzer/">Audio Analyzer</a></li>
+</ul>
 
                 
                 <!-- Required only on API pages -->
@@ -295,7 +481,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -328,6 +514,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "🎚️ Intonazione e qualità audio", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/conversion/audio-quality.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🎚️ Pitch e qualità audio", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/conversion/audio-quality.md" }</script>
 </body>
 </html>

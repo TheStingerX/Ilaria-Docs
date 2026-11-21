@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614416812">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618054113">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614416812" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618054113" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618054113" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614416812" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618054113" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -240,42 +240,42 @@ An <code translate="no" v-pre>.pth</code> model works completely fine <strong>wi
 <p>If you share or export a model (for example using <strong>Export model ZIP</strong> in Ilaria RVC), always pair the <code translate="no" v-pre>.pth</code> with <strong><code translate="no" v-pre>added_*.index</code></strong>, never <code translate="no" v-pre>trained_*.index</code>.</p>
 <hr>
 <h2 id="3-how-to-tune-index-rate-0-to-10">3. How to tune <code translate="no" v-pre>Index Rate</code> (<code translate="no" v-pre>0</code> to <code translate="no" v-pre>1.0</code>)</h2>
-<p>The <strong>Index Rate</strong> slider (sometimes called <em>Search Feature Ratio</em> or <em>Retrieval Ratio</em>) controls how strongly the <code translate="no" v-pre>.index</code> database pulls the converted audio toward the exact frames of the training dataset:</p>
-<retype-table copy-text="| Index Rate | Effect on the voice | Best use case |
+<p>The <strong>Index Rate</strong> (or <strong>Index Ratio</strong>) slider controls how strongly retrieved FAISS feature vectors (<code translate="no" v-pre>retrieved_features</code>) are blended with your input&#x27;s extracted features (<code translate="no" v-pre>original_features</code>) <em>before</em> the <code translate="no" v-pre>.pth</code> generator runs (<code translate="no" v-pre>features = retrieved_features * index_rate + original_features * (1 - index_rate)</code>). The <code translate="no" v-pre>.pth</code> generator is <strong>always</strong> used regardless of Index Rate:</p>
+<retype-table copy-text="| Index Rate | Effect on features | Suggested starting point for testing |
 | --- | --- | --- |
-| **`0.0` (Off)** | 100% `.pth` weights, 0% `.index`. | Cleanest pronunciation, lowest CPU load, best starting baseline for troubleshooting, live voice changers, and merged models. |
-| **`0.25 - 0.50`** | Adds subtle speaker texture while keeping your original pronunciation and pacing intact. | **Speaking**, **cross-language conversion** (e.g. English input into a Japanese/Italian model), or models trained on slightly noisy datasets. |
-| **`0.60 - 0.75`** | Strong speaker likeness and realism without overpowering your input audio. | **Recommended default** for clean singing and same-language voiceovers. |
-| **`0.85 - 1.00`** | Maximum retrieval; forces features as close as possible to the dataset frames. | Only for studio-clean, same-language datasets when you want maximum timbre accuracy. High risk of slurred words or dataset noise. |">
+| **`0.0` (Off)** | `100%` original input features (`0%` FAISS retrieval); `.pth` still runs normally. | Useful diagnostic baseline without FAISS feature retrieval, lowest CPU load, and merged models. |
+| **`0.25 - 0.50`** | Light-to-moderate blend toward the index's acoustic feature vectors. | Starting range to test for speech or cross-language conversion. |
+| **`0.60 - 0.75`** | Stronger pull toward the index's feature vectors. | Starting range to test for clean, same-language singing when the index matches. |
+| **`0.85 - 1.00`** | Maximum retrieval weight; heavily replaces original features with index matches. | Test cautiously only on very clean matched datasets; higher risk of slurred consonants. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
 <th>Index Rate</th>
-<th>Effect on the voice</th>
-<th>Best use case</th>
+<th>Effect on features</th>
+<th>Suggested starting point for testing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong><code translate="no" v-pre>0.0</code> (Off)</strong></td>
-<td>100% <code translate="no" v-pre>.pth</code> weights, 0% <code translate="no" v-pre>.index</code>.</td>
-<td>Cleanest pronunciation, lowest CPU load, best starting baseline for troubleshooting, live voice changers, and merged models.</td>
+<td><code translate="no" v-pre>100%</code> original input features (<code translate="no" v-pre>0%</code> FAISS retrieval); <code translate="no" v-pre>.pth</code> still runs normally.</td>
+<td>Useful diagnostic baseline without FAISS feature retrieval, lowest CPU load, and merged models.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.25 - 0.50</code></strong></td>
-<td>Adds subtle speaker texture while keeping your original pronunciation and pacing intact.</td>
-<td><strong>Speaking</strong>, <strong>cross-language conversion</strong> (e.g. English input into a Japanese/Italian model), or models trained on slightly noisy datasets.</td>
+<td>Light-to-moderate blend toward the index&#x27;s acoustic feature vectors.</td>
+<td>Starting range to test for speech or cross-language conversion.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.60 - 0.75</code></strong></td>
-<td>Strong speaker likeness and realism without overpowering your input audio.</td>
-<td><strong>Recommended default</strong> for clean singing and same-language voiceovers.</td>
+<td>Stronger pull toward the index&#x27;s feature vectors.</td>
+<td>Starting range to test for clean, same-language singing when the index matches.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>0.85 - 1.00</code></strong></td>
-<td>Maximum retrieval; forces features as close as possible to the dataset frames.</td>
-<td>Only for studio-clean, same-language datasets when you want maximum timbre accuracy. High risk of slurred words or dataset noise.</td>
+<td>Maximum retrieval weight; heavily replaces original features with index matches.</td>
+<td>Test cautiously only on very clean matched datasets; higher risk of slurred consonants.</td>
 </tr>
 </tbody>
 </table>
@@ -285,7 +285,7 @@ An <code translate="no" v-pre>.pth</code> model works completely fine <strong>wi
 <h2 id="4-when-you-should-lower-or-disable-index-rate">4. When you should lower or disable <code translate="no" v-pre>Index Rate</code></h2>
 <p>Raising <strong>Index Rate</strong> toward <code translate="no" v-pre>1.0</code> does <strong>not</strong> automatically make a voice better. Lower it to <code translate="no" v-pre>0.2 - 0.4</code> (or <code translate="no" v-pre>0</code>) whenever you notice:</p>
 <ol>
-<li><strong>Background hiss, crackle, or room echo:</strong> Because <code translate="no" v-pre>.index</code> pulls features directly from the original training recordings, any static, room reverb, or mic noise in the dataset gets injected back into your output.</li>
+<li><strong>Noisy or reverberant training datasets:</strong> An <code translate="no" v-pre>.index</code> stores extracted <strong>feature vectors</strong>, not raw audio recordings (it does not inject raw audio waves directly), but a noisy or reverberant dataset distorts those feature vectors, which can degrade conversion quality at high Index Rates.</li>
 <li><strong>Garbled words or a strange accent:</strong> If you speak one language into a model trained on a different language, a high Index Rate tries to force foreign vowel/consonant habits onto your speech.</li>
 <li><strong>Blended / Merged voices:</strong> Merging two <code translate="no" v-pre>.pth</code> models in <a href="../ilaria-rvc/voice-blender/">Voice Blender</a> does <strong>not</strong> create a new <code translate="no" v-pre>.index</code>. Always test blended models at <code translate="no" v-pre>Index Rate = 0</code> first.</li>
 <li><strong>Live Voice Changer stutters:</strong> Searching a large FAISS index on every live audio chunk adds CPU work. Turning <code translate="no" v-pre>Index Rate</code> down or to <code translate="no" v-pre>0</code> reduces latency and CPU spikes.</li>
@@ -346,7 +346,7 @@ An <code translate="no" v-pre>.pth</code> model works completely fine <strong>wi
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

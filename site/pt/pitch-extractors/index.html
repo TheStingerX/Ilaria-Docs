@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848614468104">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848618092665">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848614468104" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848618092665" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848614468104" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848618092665" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -194,26 +194,27 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
         </div>
     </div>
 </div>
-<span id="quick-recommendation" class="docs-anchor"></span><h2 id="recomendação-rápida">Recomendação rápida</h2>
+<span id="availability-in-ilaria-rvc" class="docs-anchor"></span><h2 id="recomendação-rápida-específico-do-ilaria-rvc">Recomendação rápida (Específico do Ilaria RVC)</h2>
 <ul>
-<li><strong>Melhor opção geral (Treino e Conversão):</strong> <code translate="no" v-pre>rmvpe</code> ou <code translate="no" v-pre>rmvpe_gpu</code> (se você tiver GPU NVIDIA).</li>
-<li><strong>Melhor para Voice Changer ao vivo / Tempo real:</strong> <code translate="no" v-pre>fcpe</code> (menor latência) ou <code translate="no" v-pre>rmvpe</code> (melhor qualidade se sua GPU aguentar).</li>
-<li><strong>Evitar no uso normal:</strong> <code translate="no" v-pre>pm</code>, <code translate="no" v-pre>dio</code> e <code translate="no" v-pre>harvest</code> são métodos antigos em CPU que soam bem pior ou rodam muito mais devagar que <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>fcpe</code>.</li>
+<li><strong>Inferência Individual e em Lote (CUDA):</strong> O Ilaria RVC oferece <code translate="no" v-pre>rmvpe</code>, <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code>, <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>parselmouth</code>, <code translate="no" v-pre>harvest</code> e <code translate="no" v-pre>crepe</code>. <strong><code translate="no" v-pre>rmvpe</code></strong> é o ponto de partida padrão na interface.</li>
+<li><strong>Inferência DirectML (AMD / Intel):</strong> Apenas <code translate="no" v-pre>pm</code>, <code translate="no" v-pre>harvest</code>, <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>fcpe</code> são exibidos.</li>
+<li><strong>Extração de características no Treino:</strong> <code translate="no" v-pre>rmvpe_gpu</code> (junto com <code translate="no" v-pre>dio</code>) aparece na aba <strong>Training</strong> para o pré-processamento do dataset, não nos menus de Inferência.</li>
+<li><strong>Voice Changer ao vivo / Tempo real:</strong> <code translate="no" v-pre>fcpe</code> ou <code translate="no" v-pre>swift</code> oferecem rastreamento mais leve para reduzir estalos em baixa latência; nenhuma opção única é universalmente melhor para toda voz ou gravação.</li>
 </ul>
 <hr>
 <span id="all-known-pitch-extractors-compared" class="docs-anchor"></span><h2 id="todos-os-pitch-extractors-conhecidos-comparados">Todos os Pitch Extractors conhecidos comparados</h2>
 <retype-table copy-text="| Pitch Extractor | Tipo | Velocidade | Qualidade e melhor uso | Notas |
 | --- | --- | --- | --- | --- |
-| **`rmvpe`** | Rede neural | Rápido | **Melhor padrão geral** para fala, canto e extração F0 de dataset. | Lida com consoantes, respirações e leve eco bem melhor que métodos antigos. |
-| **`rmvpe_gpu`** | Rede neural (GPU CUDA) | **Muito rápido** | Mesma alta precisão do `rmvpe`, executado diretamente na sua GPU NVIDIA em vez da CPU. | Ideal no Ilaria RVC / RVC WebUI para faixas longas, lotes e pré-processamento rápido. Exige VRAM livre suficiente. |
-| **`fcpe`** | Rede neural | **Ultra rápido** | **Melhor para tempo real / ao vivo** e inferência de baixa latência. | Um pouco mais leve que o `rmvpe`; ótimo se o `rmvpe` causar cortes ao vivo. |
+| **`rmvpe`** | Rede neural | Rápido | **Padrão no Ilaria RVC** para fala, canto e extração F0. | Lida com consoantes, respirações e leve eco bem melhor que métodos clássicos. |
+| **`rmvpe_gpu`** | Rede neural (GPU CUDA) | **Muito rápido** | Mesma arquitetura RMVPE executada explicitamente na GPU NVIDIA durante o pré-processamento de **Treino**. | Exige VRAM livre suficiente; não aparece no seletor de Inferência Individual/Lote do Ilaria RVC. |
+| **`fcpe`** | Rede neural | **Ultra rápido** | **Opção rápida para tempo real** e inferência de baixa latência. | Um pouco mais leve que o `rmvpe`; ótimo se o `rmvpe` causar cortes ao vivo. |
 | **`crepe` / `crepe-full`** | Rede neural | Lento | Alta precisão em canto solo limpo e vibrato. | Bem mais pesado na GPU/CPU que o `rmvpe`. Geralmente lento demais para uso ao vivo. |
-| **`crepe-tiny`** | Rede neural (pequena) | Rápido | Versão leve do `crepe` para PCs antigos. | Menos preciso que `rmvpe` e `fcpe`; superado pelo `fcpe`. |
+| **`crepe-tiny`** | Rede neural (pequena) | Rápido | Versão leve do `crepe` para PCs antigos. | Menos preciso que `rmvpe` e `fcpe`. |
 | **`harvest`** | DSP clássico (WORLD) | Muito lento (CPU) | Método antigo para fala limpa. | Tende a dar saltos de oitava e som metálico em canto ou áudio com ruído. Costuma exigir `filter_radius`. |
 | **Parselmouth (`pm`)** | DSP clássico | Ultra rápido (CPU) | Prévias rápidas em PCs muito fracos sem GPU. | Perde fácil o rastreamento em canto, sussurros ou vozes sujas. |
-| **`dio`** | DSP clássico (WORLD) | Muito rápido (CPU) | Alternativa antiga rápida em CPU. | Menos preciso que `rmvpe` e `fcpe`; não recomendado para renderizações finais. |
+| **`dio`** | DSP clássico (WORLD) | Muito rápido (CPU) | Alternativa antiga rápida em CPU (usada principalmente na extração de treino). | Menos preciso que `rmvpe` e `fcpe`; não recomendado para renderizações finais. |
 | **`hybrid[...]`** | Métodos combinados | Lento | Mistura dois extratores (ex. `hybrid[rmvpe+fcpe]` ou `hybrid[crepe+rmvpe]`). | Disponível no Applio e alguns forks para suavizar saltos de oitava em canto difícil, mas roda mais devagar. |
-| **Variantes `swift` / `onnx`** | Leve / ONNX | Muito rápido | Extratores otimizados em forks recentes (como Applio ou Deiteris). | Úteis em CPU ou DirectML onde extratores PyTorch padrão são mais lentos. |">
+| **`swift` / `beatrice` / ONNX** | Leve / ONNX | Muito rápido | Extratores otimizados disponíveis no Ilaria RVC (CUDA) e forks recentes. | Úteis como alternativa leve ao `rmvpe` quando se busca menor carga ou rastreamento diferente em fala/canto. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -230,21 +231,21 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
 <td><strong><code translate="no" v-pre>rmvpe</code></strong></td>
 <td>Rede neural</td>
 <td>Rápido</td>
-<td><strong>Melhor padrão geral</strong> para fala, canto e extração F0 de dataset.</td>
-<td>Lida com consoantes, respirações e leve eco bem melhor que métodos antigos.</td>
+<td><strong>Padrão no Ilaria RVC</strong> para fala, canto e extração F0.</td>
+<td>Lida com consoantes, respirações e leve eco bem melhor que métodos clássicos.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>rmvpe_gpu</code></strong></td>
 <td>Rede neural (GPU CUDA)</td>
 <td><strong>Muito rápido</strong></td>
-<td>Mesma alta precisão do <code translate="no" v-pre>rmvpe</code>, executado diretamente na sua GPU NVIDIA em vez da CPU.</td>
-<td>Ideal no Ilaria RVC / RVC WebUI para faixas longas, lotes e pré-processamento rápido. Exige VRAM livre suficiente.</td>
+<td>Mesma arquitetura RMVPE executada explicitamente na GPU NVIDIA durante o pré-processamento de <strong>Treino</strong>.</td>
+<td>Exige VRAM livre suficiente; não aparece no seletor de Inferência Individual/Lote do Ilaria RVC.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>fcpe</code></strong></td>
 <td>Rede neural</td>
 <td><strong>Ultra rápido</strong></td>
-<td><strong>Melhor para tempo real / ao vivo</strong> e inferência de baixa latência.</td>
+<td><strong>Opção rápida para tempo real</strong> e inferência de baixa latência.</td>
 <td>Um pouco mais leve que o <code translate="no" v-pre>rmvpe</code>; ótimo se o <code translate="no" v-pre>rmvpe</code> causar cortes ao vivo.</td>
 </tr>
 <tr>
@@ -259,7 +260,7 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
 <td>Rede neural (pequena)</td>
 <td>Rápido</td>
 <td>Versão leve do <code translate="no" v-pre>crepe</code> para PCs antigos.</td>
-<td>Menos preciso que <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>fcpe</code>; superado pelo <code translate="no" v-pre>fcpe</code>.</td>
+<td>Menos preciso que <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>fcpe</code>.</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>harvest</code></strong></td>
@@ -279,7 +280,7 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
 <td><strong><code translate="no" v-pre>dio</code></strong></td>
 <td>DSP clássico (WORLD)</td>
 <td>Muito rápido (CPU)</td>
-<td>Alternativa antiga rápida em CPU.</td>
+<td>Alternativa antiga rápida em CPU (usada principalmente na extração de treino).</td>
 <td>Menos preciso que <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>fcpe</code>; não recomendado para renderizações finais.</td>
 </tr>
 <tr>
@@ -290,28 +291,28 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
 <td>Disponível no Applio e alguns forks para suavizar saltos de oitava em canto difícil, mas roda mais devagar.</td>
 </tr>
 <tr>
-<td><strong>Variantes <code translate="no" v-pre>swift</code> / <code translate="no" v-pre>onnx</code></strong></td>
+<td><strong><code translate="no" v-pre>swift</code> / <code translate="no" v-pre>beatrice</code> / ONNX</strong></td>
 <td>Leve / ONNX</td>
 <td>Muito rápido</td>
-<td>Extratores otimizados em forks recentes (como Applio ou Deiteris).</td>
-<td>Úteis em CPU ou DirectML onde extratores PyTorch padrão são mais lentos.</td>
+<td>Extratores otimizados disponíveis no Ilaria RVC (CUDA) e forks recentes.</td>
+<td>Úteis como alternativa leve ao <code translate="no" v-pre>rmvpe</code> quando se busca menor carga ou rastreamento diferente em fala/canto.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<span id="rmvpe-vs-rmvpe_gpu-what-is-the-difference" class="docs-anchor"></span><h2 id="rmvpe-vs-rmvpe_gpu-qual-é-a-diferença"><code translate="no" v-pre>rmvpe</code> vs <code translate="no" v-pre>rmvpe_gpu</code>: qual é a diferença?</h2>
-<p>Em apps como <strong>Ilaria RVC</strong> e <strong>RVC Mainline</strong>, você verá frequentemente <code translate="no" v-pre>rmvpe</code> e <code translate="no" v-pre>rmvpe_gpu</code>:</p>
+<span id="rmvpe-vs-rmvpe_gpu-what-is-the-difference" class="docs-anchor"></span><h2 id="rmvpe-vs-rmvpe_gpu-no-ilaria-rvc"><code translate="no" v-pre>rmvpe</code> vs <code translate="no" v-pre>rmvpe_gpu</code> no Ilaria RVC</h2>
+<p>No <strong>Ilaria RVC</strong>, os dois nomes pertencem a etapas diferentes:</p>
 <ul>
-<li><strong><code translate="no" v-pre>rmvpe</code></strong> pode rodar na CPU ou seguir o agendamento padrão do app, usando menos VRAM, mas podendo ficar lento em arquivos longos ou datasets grandes.</li>
-<li><strong><code translate="no" v-pre>rmvpe_gpu</code></strong> roda explicitamente o RMVPE na sua <strong>GPU CUDA</strong>, entregando exatamente a mesma qualidade de afinação com velocidade muito maior na extração F0 e conversão offline.</li>
-<li>Se <code translate="no" v-pre>rmvpe_gpu</code> der erro <code translate="no" v-pre>CUDA out of memory</code> em uma placa com pouca VRAM (4 GB ou menos), volte para <code translate="no" v-pre>rmvpe</code> ou <code translate="no" v-pre>fcpe</code>.</li>
+<li><strong><code translate="no" v-pre>rmvpe</code></strong> é a opção disponível em <strong>Single Inference</strong>, <strong>Batch Inference</strong> e <strong>Training</strong>.</li>
+<li><strong><code translate="no" v-pre>rmvpe_gpu</code></strong> é uma opção da aba <strong>Training</strong> que acelera a extração F0 do dataset na GPU CUDA.</li>
+<li>Se <code translate="no" v-pre>rmvpe_gpu</code> durante o treino der erro <code translate="no" v-pre>CUDA out of memory</code> em uma placa com pouca VRAM (4 GB ou menos), mude para <code translate="no" v-pre>rmvpe</code> ou <code translate="no" v-pre>dio</code>.</li>
 </ul>
 <span id="choosing-the-right-method-for-your-task" class="docs-anchor"></span><h2 id="qual-escolher-para-sua-tarefa">Qual escolher para sua tarefa</h2>
 <ol>
 <li><strong>Preparar / Treinar um novo modelo:</strong> Use <strong><code translate="no" v-pre>rmvpe_gpu</code></strong> (se tiver GPU NVIDIA com 6+ GB de VRAM) ou <strong><code translate="no" v-pre>rmvpe</code></strong>. Um rastreamento F0 limpo evita falhas de afinação na voz treinada.</li>
-<li><strong>Converter músicas ou locuções offline:</strong> Comece com <strong><code translate="no" v-pre>rmvpe</code></strong> ou <strong><code translate="no" v-pre>rmvpe_gpu</code></strong>. Só teste <code translate="no" v-pre>crepe-full</code> ou <code translate="no" v-pre>hybrid</code> se uma nota aguda específica der salto de oitava.</li>
-<li><strong>Microfone ao vivo / Discord:</strong> Comece com <strong><code translate="no" v-pre>fcpe</code></strong> para menor atraso, ou <strong><code translate="no" v-pre>rmvpe</code></strong> se sua GPU segurar seu chunk size sem estalos.</li>
+<li><strong>Converter músicas ou locuções offline:</strong> Comece com <strong><code translate="no" v-pre>rmvpe</code></strong> (padrão do Ilaria RVC). Teste <code translate="no" v-pre>fcpe</code>, <code translate="no" v-pre>swift</code>, <code translate="no" v-pre>beatrice</code> ou <code translate="no" v-pre>crepe</code> se notar saltos de oitava ou instabilidade em alguma nota.</li>
+<li><strong>Microfone ao vivo / Discord:</strong> Comece com <strong><code translate="no" v-pre>fcpe</code></strong> ou <strong><code translate="no" v-pre>rmvpe</code></strong>, conforme o que sua GPU segurar sem estalos no seu chunk size.</li>
 </ol>
 
                 
@@ -347,7 +348,7 @@ Diferente dos embedders, <strong>os pitch extractors não prendem você a uma ú
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T23:11:06.000Z">22/11/2026 · 00:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -9,11 +9,13 @@ While an [embedder](embedders.md) reads *what words and phonemes* are being spok
 Unlike embedders, **pitch extractors do not lock you into one choice**. Even if a model was trained using `rmvpe` for dataset preprocessing, you can use any available pitch extractor during inference and live voice changing without breaking compatibility.
 !!!
 
-## Quick recommendation
+## Availability in Ilaria RVC
 
-- **Best overall (Training & Conversion):** `rmvpe` or `rmvpe_gpu` (if you have an NVIDIA GPU).
-- **Best for Live / Real-time Voice Changers:** `fcpe` (fastest latency) or `rmvpe` (best quality if your GPU keeps up).
-- **Avoid for general use:** `pm`, `dio`, and `harvest` are legacy CPU methods that sound noticeably worse or run much slower than `rmvpe` and `fcpe`.
+- **Single & Batch Inference (CUDA):** `rmvpe` (default), `swift`, `beatrice`, `fcpe`, `parselmouth`, `harvest`, `crepe`. *(On DirectML builds: `pm`, `harvest`, `rmvpe`, `fcpe`.)*
+- **Training feature extraction only:** `rmvpe_gpu` (with `gpus_rmvpe` multi-process GPU selection) and `dio` are available during **Training** feature extraction, not as separate buttons in Inference.
+- **Other RVC forks:** Tools like Applio or Deiteris may also expose `hybrid[...]` or ONNX pitch variants.
+
+> **No universal "best" or "fastest":** Results vary by voice, hardware, and backend. Start with `rmvpe` and compare `fcpe`, `swift`, `beatrice`, or `crepe` on the same audio if you hear octave jumps or timing issues.
 
 ---
 
@@ -34,10 +36,7 @@ Unlike embedders, **pitch extractors do not lock you into one choice**. Even if 
 
 ## `rmvpe` vs `rmvpe_gpu`: what is the difference?
 
-In apps like **Ilaria RVC** and **RVC Mainline**, you will often see both `rmvpe` and `rmvpe_gpu`:
-- **`rmvpe`** may run on CPU or follow the app's default device scheduling, which uses less VRAM but can bottleneck on long files or big datasets.
-- **`rmvpe_gpu`** explicitly runs the RMVPE model on your **CUDA GPU**, delivering identical pitch quality at much higher speed during dataset feature extraction and offline conversion.
-- If `rmvpe_gpu` triggers `CUDA out of memory` on a low-VRAM card (4 GB or less), switch back to `rmvpe` or `fcpe`.
+In **Ilaria RVC** and **RVC Mainline**, `rmvpe_gpu` is a **Training feature extraction** option (allowing multi-GPU worker assignment via `gpus_rmvpe`), whereas **Single & Batch Inference** expose `rmvpe` directly (running on your configured inference device). If `rmvpe_gpu` triggers `CUDA out of memory` during dataset feature extraction on a low-VRAM card, switch to `rmvpe` or `fcpe`.
 
 ## Choosing the right method for your task
 
