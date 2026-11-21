@@ -12,6 +12,7 @@
 - [Precision Training & Inference (FP16, FP32, BF16)](https://docs.ilariarvc.shop/start/precision.md): Beginner-friendly guide to RVC precision modes (FP16, FP32, and BF16): what they mean, GPU compatibility, training vs inference, and how to avoid NaN or HalfTensor errors.
 - [RVC PTH Files (.pth)](https://docs.ilariarvc.shop/start/pth-files.md): Complete guide to RVC .pth voice model files: exported voice models vs raw G and D checkpoints, FP16 vs FP32 sizes, compatibility rules, and common errors.
 - [RVC Index Files & Feature Retrieval (.index)](https://docs.ilariarvc.shop/start/indexes.md): Complete guide to RVC .index files (Feature Retrieval): added vs trained index files, how to tune Index Rate, and how to rebuild a missing index.
+- [RVC ONNX Files (.onnx)](https://docs.ilariarvc.shop/start/onnx-files.md): Complete guide to RVC .onnx model files: why they are usually used for real-time voice changing on AMD and Intel GPUs via DirectML, and how they compare to .pth.
 - [Choose an RVC app](https://docs.ilariarvc.shop/reference/tools.md): Compare compatible apps for live voice conversion, file conversion, and training.
 - [Troubleshooting RVC](https://docs.ilariarvc.shop/reference/troubleshooting.md): Step-by-step RVC troubleshooting for beginners and advanced users: Windows/launcher errors, GPU/CUDA/DirectML, models, training, live mic, and cloud notebooks.
 - [Glossary](https://docs.ilariarvc.shop/reference/glossary.md): See RVC fundamentals, Models and files and Training for these terms in context.

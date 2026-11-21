@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535725767">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848536850774">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848535725767" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848536850774" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535725767" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848536850774" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535725767" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848536850774" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -234,7 +234,7 @@
 <ul>
 <li>
 <p><strong>¿Por qué un <code translate="no" v-pre>.pth</code> pesa ~50 MB y otro ~105 MB?</strong>
-La diferencia es la <strong>Precisión</strong>: un <code translate="no" v-pre>.pth</code> exportado en <code translate="no" v-pre>FP16</code> ocupa cerca de la mitad que uno en <code translate="no" v-pre>FP32</code> (ver <a href="../precision/">Precisión</a>). En GPUs NVIDIA CUDA modernas suenan prácticamente igual, mientras que <code translate="no" v-pre>FP32</code> asegura compatibilidad con tarjetas GTX 10, DirectML y CPU.</p>
+La diferencia suele ser la precisión de exportación del modelo (ver <a href="../precision/">Precisión</a>). <code translate="no" v-pre>FP16</code> guarda los pesos usando 16 bits en lugar de 32, reduciendo el tamaño cerca de un 50% respecto a <code translate="no" v-pre>FP32</code> para la misma arquitectura. Ambos ofrecen una calidad de audio prácticamente idéntica y, en GPUs NVIDIA compatibles, la inferencia en <code translate="no" v-pre>FP16</code> también mejora el rendimiento. Un detalle clave es que la precisión de exportación es independiente de la precisión de inferencia: la mayoría de aplicaciones RVC cargan un modelo <code translate="no" v-pre>FP16</code> y convierten automáticamente sus pesos a <code translate="no" v-pre>FP32</code> en GPUs NVIDIA antiguas, DirectML o CPU, por lo que no hace falta un <code translate="no" v-pre>.pth</code> exportado en <code translate="no" v-pre>FP32</code> para compatibilidad si la app soporta conversión automática.</p>
 </li>
 <li>
 <p><strong><code translate="no" v-pre>.pth</code> vs <code translate="no" v-pre>.safetensors</code>:</strong>
@@ -335,7 +335,7 @@ El entrenamiento e inferencia RVC estándar usan <code translate="no" v-pre>.pth
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T00:18:50.000Z">21/11/2026 · 01:18</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T00:28:12.000Z">21/11/2026 · 01:28</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
