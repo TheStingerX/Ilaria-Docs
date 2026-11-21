@@ -6,7 +6,7 @@ description: "Retrieval-based voice conversion (RVC) takes a vocal recording and
 ---
 # RVC fundamentals
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Retrieval-based voice conversion (RVC) takes a vocal recording and synthesizes a version with the character of a trained voice. The recording supplies the performance, including the words, rhythm and much of the pitch contour. The model determines how that performance is rendered. For a spoken line, record the pronunciation and delivery you want to hear in the result. A pitch adjustment changes the register without translating or rewriting the line.
 

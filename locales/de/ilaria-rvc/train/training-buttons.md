@@ -8,7 +8,7 @@ description: "Training erstellt aus Aufnahmen ein neues Sprachmodell."
 
 # Jede Trainingssteuerung erklärt
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Training erstellt aus Aufnahmen ein neues Sprachmodell. Verwenden Sie für ein erstes Experiment einen eindeutigen Namen, einen kleinen sauberen Datensatz und ein kompatibles vorab trainiertes Paar. Halten Sie eine Aufnahme aus dem Datensatz heraus, damit Sie das Modell in einem Clip anhören können, den es noch nie gesehen hat. Beginnen Sie mit dem [Trainingsworkflow](training-workflow.md), wenn Sie die Schritte in der richtigen Reihenfolge ausführen möchten.
 

@@ -8,7 +8,7 @@ description: "Usa Altro per gestire file, ispezionare o combinare modelli, rived
 
 # Spiegazione di tutti gli altri pannelli
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Usa **Altro** per gestire file, ispezionare o combinare modelli, rivedere l'audio e gestire l'app. Inizia decidendo se hai bisogno di un modello di inferenza, di un codificatore di contenuti o di una coppia di addestramento G/D. Appartengono a diverse parti di RVC.
 

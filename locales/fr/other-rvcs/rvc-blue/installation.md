@@ -1,5 +1,5 @@
 ---
-label: "Installez et utilisez RVC Blue"
+label: "Installer et utiliser RVC Blue"
 icon: ":studio_microphone:"
 order: 99
 permalink: /ilaria-rvc/rvc-blue/installation/
@@ -9,37 +9,91 @@ description: "RVC Blue est un changeur de voix de bureau Windows basé sur l'int
 
 [GitHub](https://github.com/niel-blue/RVC-Realtime-GUI) · [Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI)
 
-RVC Blue est un changeur de voix de bureau Windows basé sur l'interface graphique en temps réel de RVC WebUI (Mainline - Original RVC). Il convertit le microphone, le fichier audio et l'audio des applications Windows prises en charge en temps réel. Les modèles sont formés dans une application distincte. L'entrée de fichier passe par le moteur live et peut être enregistrée au format WAV.
+**RVC Blue (RVC-Realtime-GUI)** est un client de bureau Windows dédié à la conversion vocale RVC en temps réel à faible latence. Basé sur l'interface temps réel de RVC WebUI, il intègre les optimisations récentes d'inférence en direct, le **CUDA Graph warm-up** (pour réduire la charge GPU en continu) et les correctifs de réduction de bruit en entrée et sortie.
 
-## Installez le package Windows
+- **Inférence uniquement** : RVC Blue n'entraîne pas de modèles. Entraînez votre voix dans **Ilaria RVC** (ou un autre outil) puis importez ici les fichiers `.pth` et `.index` exportés pour l'inférence.
+- **Trois sources d'entrée** : **Microphone** en direct, **Fichier audio** (via FFmpeg intégré) et **Audio d'une application Windows** (capture par processus).
+- **Voix incluse** : livré avec **Sakura**, un modèle de voix naturelle du quotidien (usage commercial autorisé) pour tester immédiatement.
 
-1. Vérifiez le modèle de votre GPU NVIDIA dans **Task Manager → Performance**. Ouvrez [Téléchargements RVC Blue](https://huggingface.co/niel-blue/RVC-Realtime-GUI) et choisissez le package correspondant à votre matériel. Le projet fournit un package **CUDA 12.8** standard, incluant la prise en charge de Blackwell, et un package de compatibilité **CUDA 11.8**. Utilisez un pilote compatible avec la version sélectionnée.
-2. Extrayez l'intégralité de l'archive dans un dossier local accessible en écriture. Python, PyTorch, FFmpeg et les ressources d'inférence requises sont fournis avec le package.
-3. Pour CUDA 12.8, exécutez `RVC-Realtime-GUI-CUDA128.bat` à partir de ce dossier. Pour CUDA 11.8, utilisez son lanceur fourni. Attendez le premier démarrage pour terminer le chargement du runtime GPU.
-4. Commencez par la voix incluse ou mettez votre propre inférence `.pth` et son index correspondant dans un dossier par modèle sous `models/`. Par exemple, placez `MyVoice.pth` et `added_MyVoice.index` à l'intérieur de `models/MyVoice/`. Le nom du dossier apparaît dans la liste des modèles. Actualisez ou rouvrez l'application après avoir ajouté un modèle.
+## 1. Choisir une version et installer
 
-## Testez la voix localement
+Chaque archive Hugging Face est autonome et inclut l'environnement Python, PyTorch/CUDA, FFmpeg, les fichiers HuBERT/RMVPE/FCPE et le jeu de modèles de base. Vous n'avez pas besoin d'installer Python, CUDA Toolkit ou FFmpeg séparément.
 
-Choisissez votre microphone physique comme entrée. Sélectionnez des écouteurs à surveiller, choisissez une voix et cliquez sur **Démarrer**. Dites une courte phrase et faites une pause. Conservez les paramètres de tampon et de pitch par défaut pour le premier test. L'application permet des périphériques d'entrée, de sortie et de surveillance indépendants. Commencez par WASAPI si vous n'utilisez pas de matériel ASIO. Si vous utilisez ASIO natif, commencez par le tampon recommandé par le pilote.
+| Version | Lanceur | Matériel NVIDIA visé |
+| --- | --- | --- |
+| **CUDA 12.8** *(Standard)* | `RVC-Realtime-GUI-CUDA128.bat` | GPU NVIDIA récents, y compris la série RTX 50 (Blackwell) |
+| **CUDA 11.8** *(Compatibilité)* | Lanceur CUDA 11.8 inclus | GPU NVIDIA plus anciens ou systèmes sous pilote/environnement CUDA 11.8 |
 
-## Acheminer l'audio vers un jeu ou un appel
+1. Vérifiez le modèle de votre GPU NVIDIA dans **Gestionnaire des tâches → Performances → GPU**.
+2. Ouvrez [RVC Blue sur Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI) et téléchargez le paquet adapté.
+3. Extrayez toute l'archive dans un **dossier local court et accessible en écriture**, comme `C:\RVC-Realtime-GUI`. Ne le lancez pas depuis l'intérieur du ZIP et évitez `Program Files` ou les dossiers synchronisés OneDrive.
+4. Lancez `RVC-Realtime-GUI-CUDA128.bat` (ou le lanceur CUDA 11.8).
+5. **Attendez la fin du premier démarrage** : le premier lancement est plus long le temps d'initialiser les ressources d'inférence, le runtime CUDA et le CUDA Graph warm-up. Attendez l'ouverture de la fenêtre avant de croire à un blocage.
 
-Choisissez le point final de lecture du câble virtuel comme sortie du convertisseur. Dans l'application de destination, sélectionnez le point de terminaison d'enregistrement comme microphone. Gardez la lecture du jeu ou des appels sur vos écouteurs. **VAC Lite** et **VB-CABLE** sont des options. Vérifiez les noms des appareils dans la [procédure pas à pas du câble virtuel](../vonovox/live-audio.md). Effectuez un court enregistrement local dans la destination avant de rejoindre un appel.
+## 2. Ajouter vos modèles vocaux
 
-## Utiliser un fichier ou une autre application comme entrée
+Créez un sous-dossier par voix dans `models/` à l'intérieur du dossier extrait :
 
-Pour un fichier audio, sélectionnez le mode d'entrée du fichier et testez un court WAV. Choisissez un périphérique de sortie et de surveillance avant de commencer. Utilisez les commandes d'enregistrement pour enregistrer la sortie WAV. L'application expose également des options pour enregistrer l'entrée et la sortie indépendamment ou dans une mise en page combinée.
+```text
+models/
+  MyVoice/
+    MyVoice.pth
+    added_MyVoice.index
+    preview.png
+```
 
-Dans les versions qui incluent la capture d'application, basculez la source d'entrée sur une application, actualisez la liste et sélectionnez l'application qui lit l'audio. Cela utilise la capture audio par processus Windows. La sortie ASIO directe peut contourner le chemin de capture. L'audio de l'application d'origine reste audible sauf si vous ajustez sa lecture séparément.
+- **Nom du dossier** : affiché comme nom du modèle dans la galerie.
+- **Fichier modèle requis** : utilisez un **`.pth` d'inférence**, pas un point de sauvegarde d'entraînement (`G_*.pth` / `D_*.pth`).
+- **Index et aperçu facultatifs** : placez le fichier `added_*.index` correspondant et une image `.png`, `.jpg` ou `.jpeg` dans le même dossier pour afficher automatiquement une miniature.
+- **Recharger** : cliquez sur **Reload** dans l'application (ou redémarrez RVC Blue) après avoir ajouté ou remplacé un modèle. Les réglages généraux par modèle sont enregistrés automatiquement.
 
-## Dépanner le premier test
+## 3. Configurer l'audio et faire un test local
 
-| Symptôme | Que vérifier |
+RVC Blue permet de choisir **Input** (entrée), **Output** (sortie) et **Monitor** (retour casque) séparément :
+
+- **Input** : votre microphone physique (ou un fichier audio / une application Windows).
+- **Output** : destination de la voix convertie (votre casque pour tester, ou un câble virtuel pour les appels et jeux).
+- **Monitor** : seconde sortie facultative pour vous entendre pendant que **Output** envoie le son vers Discord ou OBS.
+
+### WASAPI vs ASIO
+
+- **Sans interface ASIO** : commencez avec **WASAPI**.
+- **Avec ASIO natif** : RVC Blue démarre avec la taille de tampon recommandée par le pilote. Vous pouvez aussi combiner entrée/retour ASIO avec une sortie WASAPI, ou utiliser des paires de canaux distinctes sur le même pilote ASIO.
+
+### Premier test local
+
+1. Sélectionnez votre microphone physique dans **Input**.
+2. Sélectionnez votre casque dans **Output** (laissez **Monitor** désactivé pour l'instant afin d'éviter une double voix).
+3. Choisissez **Sakura** (ou votre modèle) et gardez le tampon et la hauteur par défaut.
+4. Cliquez sur **Start**, prononcez une courte phrase et faites une pause pour vérifier la latence, la clarté et le bruit.
+
+## 4. Envoyer l'audio vers Discord, OBS ou un jeu
+
+Pour utiliser votre voix convertie dans une autre application, passez par un câble audio virtuel (**VAC Lite** ou **VB-CABLE**) :
+
+1. Réglez **Output** dans RVC Blue sur le périphérique de lecture du câble virtuel (par exemple `CABLE Input` ou `Line 1`).
+2. Réglez éventuellement **Monitor** sur votre casque si vous souhaitez vous entendre.
+3. Dans Discord, OBS ou votre jeu, sélectionnez le périphérique d'enregistrement du câble virtuel (par exemple `CABLE Output` ou `Line 1`) comme **Microphone**.
+4. Gardez le son du jeu ou de l'appel sur votre casque.
+5. Enregistrez un court essai dans l'application cible avant de rejoindre un appel.
+
+Pour installer le câble virtuel et identifier les noms de périphériques, consultez le [guide du câble virtuel](../vonovox/live-audio.md).
+
+## 5. Entrée fichier, capture d'application et enregistrement WAV
+
+- **Entrée par fichier audio** : passez la source sur **File**, choisissez un court extrait WAV ou audio (décodé via FFmpeg intégré) et vérifiez **Output** et **Monitor** avant de cliquer sur **Start**. Le routage sortie/retour est conservé entre les essais.
+- **Capture d'application Windows** : passez la source sur **Application**, cliquez sur **Refresh** et sélectionnez une application en cours d'exécution. La capture utilise l'audio par processus de Windows. Les applications déjà détectées sont mémorisées et se reconnectent au redémarrage. L'audio passant directement par ASIO hors du circuit Windows standard peut ne pas être capturé, et le son d'origine de l'application **n'est pas coupé automatiquement** (coupez ou baissez son volume séparément si besoin).
+- **Enregistrement WAV** : les contrôles intégrés permettent d'enregistrer en WAV **l'entrée/sortie séparées**, **le mix** ou **les canaux G/D séparés**.
+
+## 6. Dépannage rapide
+
+| Symptôme | Quoi vérifier |
 | --- | --- |
-| Le programme se ferme au démarrage | Exécutez le lanceur fourni à partir de son dossier extrait et lisez la première erreur. Vérifiez la version CUDA et le pilote NVIDIA sélectionnés. |
-| Une nouvelle voix n'apparaît pas | Vérifiez le dossier par modèle et actualisez la liste des modèles. Utilisez une exportation d'inférence plutôt qu'un point de contrôle de formation. |
-| Les écouteurs fonctionnent mais Discord ou le jeu est silencieux | Sélectionnez le point de terminaison d'enregistrement du câble virtuel dans la destination. Vérifiez la sortie du convertisseur séparément. |
-| Vous entendez deux voix | Vérifiez si l'application d'origine est toujours audible ou si deux voies de surveillance sont actives. |
-| L'audio se coupe sous charge | Restaurez le tampon par défaut ou augmentez-le légèrement. Répétez le test pendant que l'autre application est en cours d'exécution. |
+| L'app semble figée au premier lancement | Attendez 1 à 2 minutes pour l'initialisation CUDA et le CUDA Graph warm-up. |
+| Le programme se ferme immédiatement au démarrage | Lancez le `.bat` depuis le dossier extrait (ex. `C:\RVC-Realtime-GUI`) et lisez l'erreur console. Vérifiez que votre pilote NVIDIA correspond à CUDA 12.8 ou 11.8. |
+| Une nouvelle voix n'apparaît pas | Vérifiez que le modèle est dans `models/<NomVoix>/` et qu'il s'agit d'un `.pth` d'inférence (pas un checkpoint d'entraînement), puis cliquez sur **Reload**. |
+| Le casque fonctionne mais Discord ou le jeu reste muet | Vérifiez que **Output** pointe vers la lecture du câble virtuel et que Discord/le jeu utilise son périphérique d'enregistrement comme micro. |
+| Vous entendez deux voix | Désactivez **Monitor** si **Output** est déjà sur votre casque, ou coupez le son de l'application source lors d'une capture d'application. |
+| Le son craque ou coupe sous charge | Remettez le tampon par défaut ou augmentez-le légèrement, puis retestez avec le jeu ou l'appel ouvert. |
 
-[Source du projet et notes de version](https://github.com/niel-blue/RVC-Realtime-GUI/tree/main)
+[Code source et notes de version](https://github.com/niel-blue/RVC-Realtime-GUI/tree/main)

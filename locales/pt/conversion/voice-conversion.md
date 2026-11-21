@@ -6,7 +6,7 @@ description: "A conversão de voz começa com uma performance. A saída geralmen
 ---
 # Converta uma gravação com Ilaria RVC
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 A conversão de voz começa com uma performance. A saída geralmente segue as palavras originais, o tempo, a articulação e o contorno do tom enquanto altera o som da voz. As decisões sobre a entrega ainda começam com a gravação original. Para um cover cantado, planeje converter um vocal principal isolado e depois mixar o vocal convertido com o instrumental.
 

@@ -6,7 +6,7 @@ description: "La synthèse vocale (TTS) génère un enregistrement source à par
 ---
 # Synthèse vocale et RVC
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La synthèse vocale (TTS) génère un enregistrement source à partir des mots que vous tapez. RVC applique ensuite un modèle vocal distinct à cet enregistrement. La voix TTS fournit la prononciation, l'accent, le timing et la majeure partie de l'expression. Le modèle cible modifie le son de cette performance.
 

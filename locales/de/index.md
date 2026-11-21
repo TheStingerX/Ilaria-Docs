@@ -32,7 +32,7 @@ Du kannst Ilaria RVC auch auf Kaggle mit einer entfernten GPU nutzen, selbst wen
 
 Ilaria RVC ist eine Windows-Anwendung zum Konvertieren von Aufnahmen und zum Trainieren von Sprachmodellen. Die Benutzeroberfläche wird in einem Browser geöffnet und die Konvertierungs-Engine wird auf Ihrem Computer ausgeführt. Das Windows-Paket wurde für NVIDIA-GPUs erstellt.
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Sprachdemos durchsuchen](https://ilariarvc.shop/en/demos/) · [Änderungsprotokoll lesen](ilaria-rvc/install/version-history.md)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Sprachdemos durchsuchen](https://ilariarvc.shop/en/demos/) · [Änderungsprotokoll lesen](ilaria-rvc/install/version-history.md)
 
 </div>
 
@@ -77,12 +77,12 @@ Verwenden Sie die Navigation, um Anleitungen zur Einrichtung, Umrüstung, Schulu
 
 ## Die Dokumentation in Zahlen
 
-- **Seiten insgesamt:** **88** Seiten (`87` Anleitungen + Startseite)
-- **Gesamtzahl über alle 6 Sprachen (`en`, `it`, `es`, `fr`, `de`, `pt`):** **528** Seiten (`88 x 6`)
+- **Seiten insgesamt:** **92** Seiten (`91` Anleitungen + Startseite)
+- **Gesamtzahl über alle 6 Sprachen (`en`, `it`, `es`, `fr`, `de`, `pt`):** **552** Seiten (`92 x 6`)
 
 ## Kleine Fakten über die Website und Ilaria
 
 - **Aus echter Praxis entstanden:** Ilaria (`TheStingerX` / `thestingerx` auf Discord) hat diese Guides direkt beim Entwickeln von **Ilaria RVC**, beim Trainieren eigener Stimmmodelle (wie *Itaila*) und beim Testen auf Windows, Kaggle, Google Colab und Lightning AI aufgebaut.
-- **Von `1.1 Beta` bis `2.4.6`:** Ilaria RVC startete als gestaltete Windows-Oberfläche und unterstützt heute **NVIDIA RTX 50-Serie (Blackwell)** mit CUDA 12.8, **natives BF16-Training**, **Kokoro v1.0 TTS**, **Safetensors ↔ PTH**-Konvertierung sowie integrierte Modellkataloge.
+- **Von `1.1 Beta` bis `2.4.7`:** Ilaria RVC startete als gestaltete Windows-Oberfläche und unterstützt heute **NVIDIA RTX 50-Serie (Blackwell)** mit CUDA 12.8, **natives BF16-Training**, **Kokoro v1.0 TTS**, **Safetensors ↔ PTH**-Konvertierung sowie integrierte Modellkataloge.
 - **Mehr als nur eine App:** Mit der Zeit wuchs **Ilaria Docs** zu einem umfassenden Hub für **11 RVC-Apps und Forks** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI und RVC Model Merger) plus **Non-RVC**-Tools wie **YuneVoix**, **Causal Voice Changer**, **UVR5** und **MVSep**.
 - **In 6 Sprachen synchronisiert:** Jede einzelne Seite wird 1:1 auf Englisch, Italienisch, Spanisch, Französisch, Deutsch und Portugiesisch gepflegt.

@@ -6,7 +6,7 @@ description: "L'addestramento apprende una voce di destinazione da una raccolta 
 ---
 # Addestra un modello vocale RVC
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 L'addestramento apprende una voce di destinazione da una raccolta audio preparata. Utilizza questa guida quando desideri creare un modello da registrazioni tue o autorizzate. Se disponi già di un modello di inferenza, consulta [Modelli e file RVC](../start/models.md) per iniziare a utilizzarlo.
 

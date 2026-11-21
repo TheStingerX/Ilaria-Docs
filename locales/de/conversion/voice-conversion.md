@@ -6,7 +6,7 @@ description: "Die Sprachkonvertierung beginnt mit einer Aufführung."
 ---
 # Konvertieren Sie eine Aufnahme mit Ilaria RVC
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Die Sprachkonvertierung beginnt mit einer Aufführung. Die Ausgabe folgt normalerweise den Quellwörtern, dem Timing, der Artikulation und der Tonhöhenkontur und verändert gleichzeitig den Klang der Stimme. Entscheidungen über die Auslieferung beginnen immer noch mit der Originalaufnahme. Planen Sie für ein gesungenes Cover, einen isolierten Hauptgesang umzuwandeln und den umgewandelten Gesang anschließend mit dem Instrumental zu mischen.
 

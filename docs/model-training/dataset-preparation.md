@@ -6,7 +6,7 @@ description: "Every clip teaches the model something about its target voice."
 ---
 # Prepare a voice dataset
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Every clip teaches the model something about its target voice. Before training, decide which parts of that voice you want the model to handle, then keep recordings that demonstrate those parts clearly. Start with material you have permission to use for training, and keep a separate copy of the original files.
 

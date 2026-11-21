@@ -7,7 +7,7 @@ description: "In Ilaria RVC findest du die Voice-Blender-Funktion im Tab Other u
 ---
 # Voice Blender (Modelle mischen)
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 In **Ilaria RVC** findest du die Voice-Blender-Funktion im Tab **Other** unter **Merge models**. Damit kannst du die Gewichte zweier kompatibler `.pth`-Stimmenmodelle zu einer neuen Hybrid-Stimme kombinieren, ohne ein Modell komplett neu trainieren zu müssen.
 

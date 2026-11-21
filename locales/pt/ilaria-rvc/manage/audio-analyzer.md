@@ -7,7 +7,7 @@ description: "Abra Outro → Analisador de Áudio. Adicione até oito arquivos d
 ---
 # Analisador de Áudio
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Abra **Outro → Analisador de Áudio**. Adicione até oito arquivos de áudio para comparar. Um conjunto útil contém a entrada original, uma conversão de linha de base e uma ou duas variantes feitas com uma configuração alterada.
 

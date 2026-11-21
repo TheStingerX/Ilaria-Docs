@@ -7,7 +7,7 @@ description: "Use Inferência → TTS para transformar texto escrito em uma grav
 ---
 # Texto para fala
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Use **Inferência → TTS** para transformar texto escrito em uma gravação. Você pode ouvir a fala gerada diretamente ou convertê-la com um modelo RVC. Os dois estágios realizam trabalhos diferentes: o mecanismo de fala decide como o roteiro é pronunciado e o ritmo, enquanto o RVC altera o caráter da voz da gravação. Se um nome for pronunciado incorretamente no primeiro resultado, corrija o script ou a voz de origem antes de ajustar o RVC.
 

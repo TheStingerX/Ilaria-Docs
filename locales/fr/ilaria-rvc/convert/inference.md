@@ -7,7 +7,7 @@ description: "Ouvrez Single Inference, choisissez une voix et chargez un clip co
 ---
 # Inférence unique et par lots
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Commandes d’inférence](inference-buttons.md)
 

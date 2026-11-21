@@ -6,7 +6,7 @@ description: "Voice conversion starts with a performance. The output usually fol
 ---
 # Convert a recording with Ilaria RVC
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Voice conversion starts with a performance. The output usually follows the source words, timing, articulation, and pitch contour while changing the sound of the voice. Decisions about delivery still start with the original recording. For a sung cover, plan to convert an isolated lead vocal and mix the converted vocal with the instrumental afterward.
 

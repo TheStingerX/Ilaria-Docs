@@ -7,7 +7,7 @@ description: "Beginnen Sie mit Pitch 0, einem kurzen trockenen WAV und einem bek
 ---
 # Protokolle und Wiederherstellung
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **RMVPE · 2.4.2** · Behebt einen RMVPE-Inferenzfehler, wenn cuDNN eine GRU-Operation ablehnt. RMVPE verwendet zusammenhängende Eingaben und wiederholt die GRU auf der CPU, falls cuDNN `CUDNN_STATUS_NOT_SUPPORTED` meldet. Erfordert Version 2.4.0 oder neuer. Installiere 2.4.2 über **Other → Update Ilaria RVC**.
 

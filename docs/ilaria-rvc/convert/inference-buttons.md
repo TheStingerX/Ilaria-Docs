@@ -8,7 +8,7 @@ description: "Inference uses a trained voice to convert a recording. For a first
 
 # Every Inference control explained
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Inference uses a trained voice to convert a recording. For a first test, upload a short clean WAV, select a voice, leave Pitch at zero and keep optional features off. Compare the input and output before changing one value.
 

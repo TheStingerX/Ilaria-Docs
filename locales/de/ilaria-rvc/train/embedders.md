@@ -7,13 +7,15 @@ description: "Öffnen Sie Embedder-Einstellungen unter Audioverarbeitung. Liest 
 ---
 # Embedder und Pretrains
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **Neuerungen in 2.3.0** · Portuguese HuBERT Base ist optional für die Inferenz. Beim RVC-v2-Training kannst du einen eigenen HuBERT-Embedder hochladen und speichern. Seine Konfiguration bleibt im exportierten Modell erhalten.
 
 > **2.4.0** · Unter Windows liegen App und Laufzeit in app/ und Stimmmodelle in models/ im Hauptordner. Neu sind Colab, Lightning AI Studio, Hinweise zu optionalen Embeddern und Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). pip wurde repariert und pywin32 ist enthalten.
 
 > **2.4.6** · Ergänzt **KLM Vocal ContentVec** (`klm-vocal-contentvec`) als optionalen Download für Inferenz und RVC-v2-Training sowie **43 geprüfte KLM-G/D-Paare** in **Recommended pretraineds** (Kompatibilität variiert je Paar). Hinweis: Die Lyery-Legacy-Core-Downloads wurden in 2.4.4 entfernt, nachdem die Quelldateien offline genommen wurden.
+
+> **2.4.7** · Autorisierte Downloads für **Legacy Core 1.5 V2** und **Legacy Core 1.6** (32 kHz) wiederhergestellt und Wiederherstellung nach unterbrochenen Updates verbessert.
 
 ## Inferenz-Embedder
 

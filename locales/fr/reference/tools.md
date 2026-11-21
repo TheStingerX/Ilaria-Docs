@@ -7,7 +7,7 @@ description: "Comparez les applications compatibles pour la conversion vocale en
 
 # Choisissez une application RVC
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/cloud/kaggle.md)
 
@@ -18,7 +18,7 @@ Commencez par ce que vous voulez faire. Un **changeur de voix en direct** traite
 ///region app-comparison
 | Application | Training | Inférence (fichiers) | Realtime | Liens du projet |
 | --- | --- | --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Oui · Hérité de RVC WebUI (Mainline - Original RVC), sans mises à jour futures | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Non | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Oui | Oui | Oui · Lanceur séparé | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
 | [Applio](../other-rvcs/applio/installation.md) | Oui | Oui | Oui | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
 | [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) |

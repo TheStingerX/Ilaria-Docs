@@ -7,7 +7,7 @@ description: "Open Inference Settings, select rmvpe, expand RMVPE High Register 
 ---
 # Processing and export
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **What’s new in 2.3.0** · [RMVPE High Register](#rmvpe-high-register)
 

@@ -6,7 +6,7 @@ description: "Wählen Sie einen kurzen Auszug aus, der das Problem enthält. Fü
 ---
 # Tonhöhe und Audioqualität einstellen
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Wählen Sie einen kurzen Auszug aus, der das Problem enthält. Führen Sie eine Referenzkonvertierung durch und vergleichen Sie diese mit jeweils einer geänderten Einstellung. Hören Sie bei ähnlichen Lautstärken, sodass ein lauteres Ergebnis den Vergleich nicht allein aufgrund der Lautstärke gewinnt. Vergleichen Sie bei Musik zunächst den umgewandelten Gesang einzeln und dann im Mix.
 

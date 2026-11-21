@@ -6,7 +6,7 @@ description: "Dépannage RVC étape par étape pour débutants et experts : erre
 ---
 # Dépannage RVC
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 !!!tip
 **Nouveau sur RVC ? Suivez ces 4 règles avant toute chose :**

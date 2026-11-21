@@ -7,7 +7,7 @@ description: "Ouvrez Autre et importez un modèle local pris en charge ou utilis
 ---
 # Bibliothèque de modèles et fusion
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Panneaux de Other](other-buttons.md)
 

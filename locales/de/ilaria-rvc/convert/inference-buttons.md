@@ -8,7 +8,7 @@ description: "Inferenz verwendet eine geschulte Stimme, um eine Aufnahme zu konv
 
 # Erklärung aller Inferenzsteuerung
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Inferenz verwendet eine geschulte Stimme, um eine Aufnahme zu konvertieren. Laden Sie für einen ersten Test eine kurze, saubere WAV-Datei hoch, wählen Sie eine Stimme aus, lassen Sie die Tonhöhe auf Null und deaktivieren Sie optionale Funktionen. Vergleichen Sie Eingabe und Ausgabe, bevor Sie einen Wert ändern.
 

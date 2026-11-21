@@ -7,7 +7,7 @@ description: "Apri Single Inference, scegli una voce e carica una breve clip asc
 ---
 # Inferenza singola e batch
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Controlli di inferenza](inference-buttons.md)
 

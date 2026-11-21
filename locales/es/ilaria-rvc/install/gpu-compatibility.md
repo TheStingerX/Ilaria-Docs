@@ -7,7 +7,7 @@ description: "El ZIP de Windows pesa unos 5,00 GB. Extráelo y ejecuta RUN_ILARI
 ---
 # GPU compatibles
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Windows
 

@@ -6,7 +6,7 @@ description: "La conversión de voz comienza con una actuación."
 ---
 # Convierte una grabación con Ilaria RVC
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La conversión de voz comienza con una actuación. La salida generalmente sigue las palabras fuente, el tiempo, la articulación y el contorno del tono mientras cambia el sonido de la voz. Las decisiones sobre la entrega aún comienzan con la grabación original. Para una versión cantada, planea convertir una voz principal aislada y luego mezclar la voz convertida con la instrumental.
 

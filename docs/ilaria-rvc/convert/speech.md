@@ -7,7 +7,7 @@ description: "Use Inference → TTS to turn written text into a recording. You c
 ---
 # Text to speech
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Use **Inference → TTS** to turn written text into a recording. You can listen to the generated speech directly or convert it with an RVC model. The two stages do different jobs: the speech engine decides how the script is pronounced and paced, while RVC changes the voice character of the recording. If a name is mispronounced in the first result, fix the script or source voice before tuning RVC.
 

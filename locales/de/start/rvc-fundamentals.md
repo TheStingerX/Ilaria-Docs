@@ -6,7 +6,7 @@ description: "Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesang
 ---
 # RVC-Grundlagen
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesangsaufnahme und synthetisiert eine Version mit dem Charakter einer trainierten Stimme. Die Aufnahme liefert die Darbietung, einschließlich der Worte, des Rhythmus und eines Großteils der Tonhöhenkontur. Das Modell bestimmt, wie diese Leistung erbracht wird. Notieren Sie für eine gesprochene Zeile die Aussprache und den Vortrag, die Sie im Ergebnis hören möchten. Eine Tonhöhenanpassung ändert das Register, ohne die Zeile zu übersetzen oder neu zu schreiben.
 

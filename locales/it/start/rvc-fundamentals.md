@@ -6,7 +6,7 @@ description: "La conversione vocale basata sul recupero (RVC) prende una registr
 ---
 # Fondamenti di RVC
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La conversione vocale basata sul recupero (RVC) prende una registrazione vocale e sintetizza una versione con il carattere di una voce addestrata. La registrazione fornisce l'esecuzione, comprese le parole, il ritmo e gran parte del contorno dell'intonazione. Il modello determina il modo in cui viene resa la prestazione. Per una frase parlata, registra la pronuncia e la pronuncia che desideri ascoltare nel risultato. Una regolazione del tono cambia il registro senza tradurre o riscrivere la linea.
 

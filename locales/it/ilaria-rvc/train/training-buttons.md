@@ -8,7 +8,7 @@ description: "L'allenamento crea un nuovo modello vocale dalle registrazioni."
 
 # Spiegazione di tutti i controlli di allenamento
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 L'allenamento crea un nuovo modello vocale dalle registrazioni. Per un primo esperimento, utilizza un nome univoco, un piccolo set di dati pulito e una coppia preaddestrata compatibile. Conserva una registrazione fuori dal set di dati in modo da poter ascoltare il modello in una clip che non ha mai visto. Inizia con il [flusso di lavoro della addestramento](training-workflow.md) se desideri che i passaggi siano in ordine.
 
