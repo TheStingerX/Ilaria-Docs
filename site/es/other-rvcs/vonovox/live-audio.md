@@ -63,3 +63,5 @@ Para Vonovox, comience con el modo compartido WASAPI cuando esté disponible. Ut
 | Las sílabas desaparecen cuando susurras o cantas | Prueba con la detección de actividad de voz y la supresión de ruido desactivadas una a la vez. |
 
 Ajuste el **Tamaño del bloque** después de que funcione la ruta completa. Bájalo un paso y repite la misma frase. Si recibe clics o faltan palabras, restaure el último valor limpio. Deje los efectos de anticipación y otros efectos en sus valores predeterminados hasta que tenga una línea de base estable.
+
+> **Opcional:** ¿Notas picos de GPU Delay en una tarjeta NVIDIA compatible? Consulta [Optimización avanzada de rendimiento: NVIDIA GPU Clock Locking](advanced-performance-optimization.md).

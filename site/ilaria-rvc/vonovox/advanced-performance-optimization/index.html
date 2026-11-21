@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848611469169">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Advanced Performance Optimization: NVIDIA GPU Clock Locking">
+    <meta name="description" content="Optional NVIDIA GPU Clock Locking guide to test whether locking supported graphics clocks improves Vonovox latency stability on Windows.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <meta property="og:title" content="Advanced Performance Optimization: NVIDIA GPU Clock Locking">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <meta name="twitter:title" content="Advanced Performance Optimization: NVIDIA GPU Clock Locking">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/other-rvcs/vonovox/advanced-performance-optimization.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848611469169" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848611469169" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848611469169" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848611469169" defer></script>
+
+    <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="Optional NVIDIA GPU Clock Locking guide to test whether locking supported graphics clocks improves Vonovox latency stability on Windows.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
+    <meta name="twitter:description" content="Optional NVIDIA GPU Clock Locking guide to test whether locking supported graphics clocks improves Vonovox latency stability on Windows.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/vonovox/advanced-performance-optimization/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/vonovox/advanced-performance-optimization/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/en/">Website</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Language: English"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg><span class="docs-language-name">English</span></summary><div><a href="/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="en" hreflang="en" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/vonovox/advanced-performance-optimization/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/en/">Website</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="advanced-performance-optimization-nvidia-gpu-clock-locking">Advanced Performance Optimization: NVIDIA GPU Clock Locking</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Optional NVIDIA GPU Clock Locking guide to test whether locking supported graphics clocks improves Vonovox latency stability on Windows.</div>
+<blockquote>
+<p><strong>Optional optimization:</strong> This guide is <strong>100% optional</strong> and is <strong>never required</strong> to install or use Vonovox. Always complete <a href="../installation/">Install Vonovox</a> and <a href="../live-audio/">Route and tune Vonovox</a> before testing advanced GPU settings.</p>
+</blockquote>
+<p><strong>Core principle:</strong> GPU Clock Locking is an optional advanced optimization that may improve Vonovox&#x27;s real-time processing stability on supported NVIDIA GPUs. Always use supported clock frequencies, test the results on your own hardware, and restore default clocks if no measurable benefit is observed.</p>
+<blockquote>
+<p><strong>Quick Reset (Run anytime to restore defaults):</strong> Open Command Prompt as Administrator and run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> (replace <code translate="no" v-pre>0</code> with your GPU index if you have multiple GPUs). You can also reboot Windows to return to dynamic clock management.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><doc-anchor-trigger to="#quick-path-for-experienced-users">Quick Path for Experienced Users</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1-what-gpu-clock-locking-is-beginner-introduction">1. What GPU Clock Locking Is (Beginner Introduction)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2-how-gpu-clocks-affect-vonovox">2. How GPU Clocks Affect Vonovox</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3-nvidia-compatibility--error-messages">3. NVIDIA Compatibility &amp; Error Messages</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4-beginner-setup-windows-10--windows-11">4. Beginner Setup: Windows 10 &amp; Windows 11</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#5-finding-your-gpus-supported-clocks">5. Finding Your GPU&#x27;s Supported Clocks</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#6-choosing-an-appropriate-frequency">6. Choosing an Appropriate Frequency</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#7-applying-gpu-clock-lock">7. Applying GPU Clock Lock</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#8-restoring-default-settings">8. Restoring Default Settings</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#9-one-click-gpu-clock-management-bat-scripts">9. One-Click GPU Clock Management (BAT Scripts)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#10-how-to-test-whether-it-actually-helps">10. How to Test Whether It Actually Helps</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#11-risks-limitations-and-precautions">11. Risks, Limitations, and Precautions</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-advanced-note-gpu-memory-clock-locking--lmc">12. Advanced Note: GPU Memory Clock Locking (-lmc)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">13. Alternatives When Clock Locking Does Not Help</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#14-troubleshooting">14. Troubleshooting</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#15-frequently-asked-questions-faq">15. Frequently Asked Questions (FAQ)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#16-official-references">16. Official References</doc-anchor-trigger></li>
+</ul>
+<hr>
+<h2 id="quick-path-for-experienced-users">Quick Path for Experienced Users</h2>
+<p>If you already know how to use an elevated Command Prompt and <code translate="no" v-pre>nvidia-smi</code>:</p>
+<ol>
+<li>List GPUs and confirm your target index (<code translate="no" v-pre>0</code> in single-GPU systems):
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -L</code></pre>
+</doc-codeblock></div>
+</li>
+<li>Query supported graphics clocks on that GPU:
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS</code></pre>
+</doc-codeblock></div>
+</li>
+<li>Lock to a <strong>verified supported</strong> graphics clock from the output (<code translate="no" v-pre>1800</code> below is only an illustrative placeholder):
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lgc 1800,1800</code></pre>
+</doc-codeblock></div>
+</li>
+<li>Verify live clocks while Vonovox is running:
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d CLOCK</code></pre>
+</doc-codeblock></div>
+</li>
+<li>Run an <doc-anchor-trigger to="#10-how-to-test-whether-it-actually-helps">A/B test in Vonovox</doc-anchor-trigger>. When finished, or if there is no improvement, restore dynamic clocks immediately:
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -rgc</code></pre>
+</doc-codeblock></div>
+</li>
+</ol>
+<hr>
+<h2 id="1-what-gpu-clock-locking-is-beginner-introduction">1. What GPU Clock Locking Is (Beginner Introduction)</h2>
+<ol>
+<li><strong>What a GPU frequency (clock speed) is:</strong> Inside your NVIDIA graphics card, the main processor (the GPU core) performs millions of small math calculations every second. Its <strong>clock frequency</strong> is how many calculation cycles it completes per second.</li>
+<li><strong>What MHz means:</strong> <strong>MHz</strong> stands for <strong>megahertz</strong> (1 million cycles per second). For example, <code translate="no" v-pre>1500 MHz</code> means 1.5 billion cycles per second, and <code translate="no" v-pre>1800 MHz</code> means 1.8 billion cycles per second.</li>
+<li><strong>How NVIDIA dynamic clocks work:</strong> Modern NVIDIA GPUs do not run at one fixed speed. When your PC is idle on the desktop, the GPU drops to a low speed (for example <code translate="no" v-pre>210 MHz</code> or <code translate="no" v-pre>300 MHz</code>) to save electricity, stay quiet, and stay cool. When heavy work starts, it raises the speed.</li>
+<li><strong>What NVIDIA GPU Boost is:</strong> <strong>NVIDIA GPU Boost</strong> is the built-in automatic system that constantly adjusts your GPU&#x27;s frequency up and down based on workload, temperature, power limits, and voltage headroom.</li>
+<li><strong>Why clocks fluctuate during Vonovox:</strong> Real-time voice conversion processes audio in discrete chunks (the exact chunk duration depends on your <strong>Block Size</strong> and audio settings) rather than a continuous heavy 3D render. Between chunks, the GPU may briefly see low load and drop its clock speed, then ramp back up on the next chunk.</li>
+<li><strong>What locking a clock means:</strong> <strong>GPU Clock Locking</strong> (<code translate="no" v-pre>nvidia-smi -lgc</code>) tells the NVIDIA driver to keep the GPU core inside a specific supported frequency range (or at one supported frequency, when min and max are equal) instead of letting it drop down and ramp up constantly. Think of it like <strong>cruise control on a highway</strong>: the car holds a steady speed instead of slowing down and accelerating over and over.</li>
+<li><strong>GPU Clock Locking vs. Overclocking:</strong>
+<ul>
+<li><strong>Overclocking</strong> pushes a GPU <em>beyond</em> its factory-rated limits or alters voltages/power curves to chase higher peak speed.</li>
+<li><strong>GPU Clock Locking</strong> only picks a frequency that NVIDIA already built into your card&#x27;s official supported clock table. It does <strong>not</strong> raise voltage, unlock power limits, or force unsupported speeds.</li>
+</ul>
+</li>
+<li><strong>Why a stable clock can help real-time audio:</strong> If your GPU takes <code translate="no" v-pre>8 ms</code> to process an audio block at a higher clock, and <code translate="no" v-pre>18 ms</code> when it temporarily downclocks, that sudden jump can cause uneven processing times. Holding a steady supported clock can make block processing times more consistent.</li>
+<li><strong>Why the maximum clock is not always best:</strong> Running at the absolute highest supported MHz increases heat, fan noise, and power draw. If your GPU hits its temperature or power limit, it will automatically <strong>throttle</strong> (force its own speed down), creating worse stutters than a moderate, steady clock.</li>
+</ol>
+<hr>
+<h2 id="2-how-gpu-clocks-affect-vonovox">2. How GPU Clocks Affect Vonovox</h2>
+<p>Vonovox processes live microphone audio through <strong>CUDA</strong> on your NVIDIA GPU. Every audio chunk (determined by <strong>Block Size</strong>) must finish processing before the next chunk arrives.</p>
+<ul>
+<li><strong>GPU Delay &amp; processing time variance:</strong> In Vonovox, <strong>GPU Delay</strong> shows how long the GPU takes to convert each chunk. If GPU clocks bounce between idle and boost states, GPU Delay can spike unexpectedly.</li>
+<li><strong>Audio crackling, popping, and stuttering:</strong> If even one audio chunk finishes late because the GPU was still ramping up its clock, the audio buffer runs dry and you hear a click, pop, or robotic stutter.</li>
+<li><strong>Buffer Size and Block Size:</strong> Larger <strong>Block Size</strong> values give the GPU more breathing room at the cost of higher overall latency. Smaller <strong>Block Size</strong> values feel more responsive but are much more sensitive to sudden GPU Delay spikes.</li>
+<li><strong>WASAPI and WASAPI Exclusive Mode:</strong> <strong>WASAPI</strong> (Windows Audio Session API) handles audio routing between your mic, Vonovox, and your virtual cable. <strong>WASAPI Exclusive Mode</strong> (when supported by your device and app) can reduce Windows mixer overhead, while shared mode offers broader compatibility. Neither fixes a GPU that is late delivering converted audio, and GPU Clock Locking does not fix Windows audio driver/sample-rate mismatches.</li>
+<li><strong>Vonovox + gaming simultaneously:</strong> When you play a 3D game and run Vonovox at the same time, both compete for the same GPU. If the game saturates <strong>95-100% of GPU compute</strong>, Vonovox waits in line regardless of clock locking. In that case, lowering in-game graphics/FPS caps or raising Vonovox&#x27;s <strong>Block Size</strong> helps far more than locking clocks.</li>
+<li><strong>GPU vs. CPU or audio driver issues:</strong> Audio glitches can also come from CPU overload, mismatched <code translate="no" v-pre>48 kHz</code> sample rates, USB mic power saving, or virtual cable misconfiguration. GPU Clock Locking only targets GPU frequency transitions.</li>
+</ul>
+<retype-table copy-text="| Possible benefits (not guaranteed) | What GPU Clock Locking does NOT guarantee |
+| --- | --- |
+| More predictable GPU clock behavior during bursty audio loads | Faster overall voice conversion speed |
+| Fewer sudden GPU Delay spikes on some desktop/laptop setups | Elimination of all crackling, popping, or dropouts |
+| Easier A/B troubleshooting when isolating latency jitter | Better voice quality, timbre, or pitch accuracy |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Possible benefits (not guaranteed)</th>
+<th>What GPU Clock Locking does NOT guarantee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>More predictable GPU clock behavior during bursty audio loads</td>
+<td>Faster overall voice conversion speed</td>
+</tr>
+<tr>
+<td>Fewer sudden GPU Delay spikes on some desktop/laptop setups</td>
+<td>Elimination of all crackling, popping, or dropouts</td>
+</tr>
+<tr>
+<td>Easier A/B troubleshooting when isolating latency jitter</td>
+<td>Better voice quality, timbre, or pitch accuracy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<hr>
+<h2 id="3-nvidia-compatibility--error-messages">3. NVIDIA Compatibility &amp; Error Messages</h2>
+<p>Having <code translate="no" v-pre>nvidia-smi</code> installed does <strong>not</strong> guarantee that <code translate="no" v-pre>--lgc</code> (Lock Graphics Clocks) is supported on your hardware and driver combination.</p>
+<ul>
+<li><strong>Desktop GeForce GPUs:</strong> Many modern desktop GeForce cards support <code translate="no" v-pre>--lgc</code> on recent drivers, though exact clock granularity and behavior depend on architecture and driver version.</li>
+<li><strong>Laptop NVIDIA GPUs:</strong> Many laptops restrict clock locking in firmware/BIOS, power management, or Optimus/hybrid graphics paths. Even when <code translate="no" v-pre>--lgc</code> is accepted, laptop thermal and power limits frequently override the requested clock.</li>
+<li><strong>Workstation / Datacenter GPUs (Quadro, RTX A-series, Tesla, L4/T4):</strong> Broadly support <code translate="no" v-pre>nvidia-smi</code> clock controls on standard enterprise/studio drivers.</li>
+<li><strong>Older hardware generations &amp; drivers:</strong> Older architectures (such as Maxwell/Pascal or legacy drivers) may return <code translate="no" v-pre>Not Supported</code> for <code translate="no" v-pre>--lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code>. Do not assume every GTX or RTX card supports clock locking.</li>
+</ul>
+<h3 id="common-messages-and-what-they-mean">Common messages and what they mean</h3>
+<retype-table copy-text="| Message | Meaning | Safe solution |
+| --- | --- | --- |
+| `Not Supported` | Your GPU model, laptop firmware, or current driver does not allow `--lgc` or `SUPPORTED_CLOCKS` queries. | Do not force it. Skip clock locking and use the [alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Insufficient Permissions` | Command Prompt was opened normally instead of **Run as administrator**. | Close CMD, search `cmd` in Start, right-click **Command Prompt**, and choose **Run as administrator**. |
+| `Invalid Argument` | The MHz values you entered are not valid, not formatted as `min,max`, or outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and pick an exact value listed under **Graphics**. |
+| `NVIDIA-SMI has failed` | The NVIDIA driver is not responding, no NVIDIA GPU is active, or the card is asleep in hybrid laptop mode. | Make sure the NVIDIA GPU is enabled in Device Manager and not disabled by a laptop eco/battery mode. |
+| `'nvidia-smi' is not recognized` | `nvidia-smi.exe` is not in Windows' `PATH` variable (common on some setups). | Run it using its full path (see [Section 4](#4-beginner-setup-windows-10--windows-11)) without reinstalling drivers. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Message</th>
+<th>Meaning</th>
+<th>Safe solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>Not Supported</code></td>
+<td>Your GPU model, laptop firmware, or current driver does not allow <code translate="no" v-pre>--lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code> queries.</td>
+<td>Do not force it. Skip clock locking and use the <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">alternatives</doc-anchor-trigger>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Insufficient Permissions</code></td>
+<td>Command Prompt was opened normally instead of <strong>Run as administrator</strong>.</td>
+<td>Close CMD, search <code translate="no" v-pre>cmd</code> in Start, right-click <strong>Command Prompt</strong>, and choose <strong>Run as administrator</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Invalid Argument</code></td>
+<td>The MHz values you entered are not valid, not formatted as <code translate="no" v-pre>min,max</code>, or outside supported clocks.</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS</code> and pick an exact value listed under <strong>Graphics</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>NVIDIA-SMI has failed</code></td>
+<td>The NVIDIA driver is not responding, no NVIDIA GPU is active, or the card is asleep in hybrid laptop mode.</td>
+<td>Make sure the NVIDIA GPU is enabled in Device Manager and not disabled by a laptop eco/battery mode.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>'nvidia-smi' is not recognized</code></td>
+<td><code translate="no" v-pre>nvidia-smi.exe</code> is not in Windows&#x27; <code translate="no" v-pre>PATH</code> variable (common on some setups).</td>
+<td>Run it using its full path (see <doc-anchor-trigger to="#4-beginner-setup-windows-10--windows-11">Section 4</doc-anchor-trigger>) without reinstalling drivers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<hr>
+<h2 id="4-beginner-setup-windows-10--windows-11">4. Beginner Setup: Windows 10 &amp; Windows 11</h2>
+<p>Follow these exact steps if you have never used Command Prompt (<code translate="no" v-pre>cmd</code>) before:</p>
+<ol>
+<li><strong>Verify you have an NVIDIA GPU:</strong> Press <code translate="no" v-pre>Ctrl + Shift + Esc</code> to open <strong>Task Manager</strong>, click <strong>Performance</strong>, and look for an <strong>NVIDIA</strong> GPU in the left list. (If you only see AMD or Intel, this guide does not apply to your PC.)</li>
+<li><strong>Open the Start menu:</strong> Press the <strong>Windows key</strong> on your keyboard (or click the Start icon on the taskbar).</li>
+<li><strong>Search for <code translate="no" v-pre>cmd</code>:</strong> Type <code translate="no" v-pre>cmd</code> (do not press Enter yet).</li>
+<li><strong>Run as administrator:</strong> Right-click <strong>Command Prompt</strong> in the search results and click <strong>Run as administrator</strong>. Click <strong>Yes</strong> if Windows asks for permission.</li>
+<li><strong>Understand what running a command means:</strong> A black window opens with a blinking cursor. Typing a line of text and pressing <strong>Enter</strong> asks Windows to run that tool and print the result below.</li>
+<li><strong>Copy and paste a command:</strong> Copy a command from this guide, click inside the black Command Prompt window, and <strong>right-click</strong> (or press <code translate="no" v-pre>Ctrl + V</code>) to paste it.</li>
+<li><strong>Press Enter:</strong> Wait a moment for the output to appear.</li>
+<li><strong>Check basic GPU status:</strong> Run:
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi</code></pre>
+</doc-codeblock></div>
+You should see a table showing your driver version, GPU name, temperature, memory usage, and power draw.</li>
+<li><strong>Identify the right GPU in multi-GPU systems:</strong> If you have more than one NVIDIA GPU, run:
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -L</code></pre>
+</doc-codeblock></div>
+This prints a numbered list such as <code translate="no" v-pre>GPU 0: NVIDIA GeForce ...</code> and <code translate="no" v-pre>GPU 1: ...</code>. Replace <code translate="no" v-pre>0</code> in <code translate="no" v-pre>-i 0</code> with the number of the GPU that Vonovox uses.</li>
+</ol>
+<h3 id="if-nvidia-smi-is-not-recognized">If <code translate="no" v-pre>'nvidia-smi' is not recognized</code></h3>
+<p>You do <strong>not</strong> need to reinstall your NVIDIA driver. Windows simply does not know which folder holds <code translate="no" v-pre>nvidia-smi.exe</code>. Try running it from the standard Windows folders:</p>
+<div id="if-nvidia-smi-is-not-recognized-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">&quot;C:\Windows\System32\nvidia-smi.exe&quot;</code></pre>
+</doc-codeblock></div>
+<p>If that says not found, try the legacy NVIDIA folder:</p>
+<div id="if-nvidia-smi-is-not-recognized-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">&quot;C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe&quot;</code></pre>
+</doc-codeblock></div>
+<p>Whichever path works, use that path in place of <code translate="no" v-pre>nvidia-smi</code> (or let the <doc-anchor-trigger to="#9-one-click-gpu-clock-management-bat-scripts">BAT scripts in Section 9</doc-anchor-trigger> find it automatically).</p>
+<hr>
+<h2 id="5-finding-your-gpus-supported-clocks">5. Finding Your GPU&#x27;s Supported Clocks</h2>
+<p>Never guess a frequency. Always ask your GPU for its official list first:</p>
+<div id="5-finding-your-gpus-supported-clocks-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong><code translate="no" v-pre>-i 0</code></strong>: Selects GPU index <code translate="no" v-pre>0</code> (change <code translate="no" v-pre>0</code> if <code translate="no" v-pre>nvidia-smi -L</code> showed a different index for your target GPU).</li>
+<li><strong><code translate="no" v-pre>-q -d SUPPORTED_CLOCKS</code></strong>: Queries the official table of <strong>Memory</strong> and <strong>Graphics</strong> clock speeds supported by your GPU and driver.</li>
+</ul>
+<h3 id="how-to-read-the-output">How to read the output</h3>
+<p>The output groups supported <strong>Graphics</strong> (GPU core) frequencies under <strong>Memory</strong> frequencies, similar to this layout:</p>
+<div id="how-to-read-the-output-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Supported Clocks
+    Memory                        : XXXX MHz
+        Graphics                  : YYYY MHz
+        Graphics                  : ZZZZ MHz</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong>Memory</strong> clocks are for VRAM (video memory). <strong>Do not lock memory clocks</strong> in the standard Vonovox procedure.</li>
+<li><strong>Graphics</strong> clocks are your <strong>GPU core</strong> frequencies. These are the values you use with <code translate="no" v-pre>-lgc</code>.</li>
+<li><strong>Confirm your value is listed:</strong> Only pick a number that appears verbatim next to <code translate="no" v-pre>Graphics :</code> in your output.</li>
+<li><strong>If it prints <code translate="no" v-pre>N/A</code> or <code translate="no" v-pre>Not Supported</code>:</strong> Your GPU/driver combination does not expose supported clocks via NVML. Do not try to force random numbers; proceed to <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">Alternatives</doc-anchor-trigger>.</li>
+</ul>
+<blockquote>
+<p><strong>Do NOT enter arbitrary high values (such as <code translate="no" v-pre>50000</code> MHz):</strong> According to NVIDIA documentation, some devices and drivers may snap or round a requested clock to the nearest supported frequency, while out-of-range requests can fail with <code translate="no" v-pre>Invalid Argument</code> or be rejected altogether. Never enter arbitrary numbers to rely on driver rounding. Always use an exact <code translate="no" v-pre>Graphics</code> value printed by <code translate="no" v-pre>SUPPORTED_CLOCKS</code>.</p>
+</blockquote>
+<hr>
+<h2 id="6-choosing-an-appropriate-frequency">6. Choosing an Appropriate Frequency</h2>
+<p>There is <strong>no single &quot;best MHz&quot;</strong> for every GPU model, PC case, or room temperature. Follow this safe selection process:</p>
+<ol>
+<li><strong>Observe your GPU&#x27;s normal clocks first:</strong> Open Vonovox, start live conversion, and run <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> in CMD to see what Graphics MHz your card naturally uses.</li>
+<li><strong>Check <code translate="no" v-pre>SUPPORTED_CLOCKS</code>:</strong> Pick a value from your <code translate="no" v-pre>Graphics</code> list that sits comfortably around or slightly below your typical boost range.</li>
+<li><strong>Do not automatically choose the maximum:</strong> The highest listed clock draws the most power and generates the most heat. A slightly lower supported clock often stays cooler and avoids throttling.</li>
+<li><strong>Watch temperatures and power draw:</strong> Keep an eye on <code translate="no" v-pre>nvidia-smi</code> while testing. If temperatures climb rapidly or fans run at full blast, pick a lower supported clock.</li>
+<li><strong>Check for thermal or power throttling:</strong> Run <code translate="no" v-pre>nvidia-smi -i 0 -q -d PERFORMANCE</code> during load to see if <code translate="no" v-pre>SW Thermal Slowdown</code> or <code translate="no" v-pre>HW Thermal Slowdown</code> becomes <code translate="no" v-pre>Active</code>.</li>
+<li><strong>Test 2-3 supported values if needed:</strong> Compare them using the <doc-anchor-trigger to="#10-how-to-test-whether-it-actually-helps">A/B test</doc-anchor-trigger>.</li>
+<li><strong>Keep it only if it helps:</strong> If you do not see measurably steadier <strong>GPU Delay</strong> or cleaner audio, reset to defaults.</li>
+</ol>
+<hr>
+<h2 id="7-applying-gpu-clock-lock">7. Applying GPU Clock Lock</h2>
+<p>To lock the GPU core clock, use <code translate="no" v-pre>-lgc min,max</code>.</p>
+<blockquote>
+<p><strong>Illustrative example only:</strong> In the commands below, <code translate="no" v-pre>1800</code> MHz is <strong>purely a demonstration value</strong>. Replace <code translate="no" v-pre>1800</code> with an exact <code translate="no" v-pre>Graphics</code> frequency from <strong>your own</strong> <code translate="no" v-pre>SUPPORTED_CLOCKS</code> output.</p>
+</blockquote>
+<p><strong>Lock to a single supported clock (min and max equal):</strong></p>
+<div id="7-applying-gpu-clock-lock-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lgc 1800,1800</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong><code translate="no" v-pre>-i 0</code></strong>: Target GPU index <code translate="no" v-pre>0</code>.</li>
+<li><strong><code translate="no" v-pre>-lgc</code></strong>: Lock Graphics Clocks.</li>
+<li><strong><code translate="no" v-pre>1800,1800</code></strong>: Minimum and maximum graphics clock in MHz (must be separated by a comma, with no spaces).</li>
+</ul>
+<p><strong>Example with a range (different min and max):</strong></p>
+<div id="7-applying-gpu-clock-lock-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lgc 1500,1800</code></pre>
+</doc-codeblock></div>
+<p>This allows NVIDIA GPU Boost to move between two supported frequencies (<code translate="no" v-pre>1500</code> and <code translate="no" v-pre>1800</code> MHz in this illustrative example) while preventing the card from dropping to deep idle clocks between audio chunks.</p>
+<h3 id="verify-the-clock-lock-was-accepted-vs-actually-observed">Verify the clock lock was accepted vs. actually observed</h3>
+<p>It is important to distinguish between:</p>
+<ul>
+<li><strong>Requested frequency:</strong> The MHz value you passed to <code translate="no" v-pre>-lgc</code>.</li>
+<li><strong>Configured range (<code translate="no" v-pre>min,max</code>):</strong> The bounds accepted by the driver (note that some drivers/devices may snap to the nearest supported clock).</li>
+<li><strong>Actually observed frequency:</strong> The real clock your GPU runs at under load.</li>
+</ul>
+<p>After running <code translate="no" v-pre>-lgc</code>, CMD only confirms that the driver accepted the request. Acceptance does <strong>not</strong> guarantee the GPU will stay locked at that exact MHz. To check the <strong>actually observed live clock</strong> while Vonovox is converting audio, run:</p>
+<div id="verify-the-clock-lock-was-accepted-vs-actually-observed-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d CLOCK</code></pre>
+</doc-codeblock></div>
+<p>Or watch it update every second (press <code translate="no" v-pre>Ctrl + C</code> to stop watching):</p>
+<div id="verify-the-clock-lock-was-accepted-vs-actually-observed-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d CLOCK -l 1</code></pre>
+</doc-codeblock></div>
+<p>Look at <strong>Clocks → Graphics</strong> in the output. <strong>Thermal limits, power limits, and driver or laptop firmware restrictions</strong> can still prevent the GPU from holding the exact requested MHz, and <code translate="no" v-pre>--lgc</code> does not always keep a perfectly fixed frequency under all conditions.</p>
+<hr>
+<h2 id="8-restoring-default-settings">8. Restoring Default Settings</h2>
+<p>Always restore dynamic clock management when you finish testing, when you close Vonovox, or if you see no benefit (replace <code translate="no" v-pre>0</code> with the GPU index you configured if you have multiple GPUs):</p>
+<div id="8-restoring-default-settings-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -rgc</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong>What it does:</strong> <code translate="no" v-pre>-rgc</code> (<strong>Reset Graphics Clocks</strong>) removes the clock lock and hands control back to NVIDIA GPU Boost.</li>
+<li><strong>Why restore defaults:</strong> Dynamic clocks keep your GPU cooler, quieter, and more power-efficient during normal desktop use, video playback, and gaming.</li>
+<li><strong>How to verify restoration:</strong> Run <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> while idle on the desktop; after a few seconds, the <strong>Graphics</strong> clock should drop back down to low idle speeds.</li>
+<li><strong>Reboots and driver resets:</strong> <code translate="no" v-pre>nvidia-smi -lgc</code> is <strong>not permanent</strong>. Rebooting Windows or restarting the graphics driver normally resets clocks to default automatically.</li>
+<li><strong>If <code translate="no" v-pre>-rgc</code> returns an error:</strong> <code translate="no" v-pre>-rgc</code> is not guaranteed to succeed if the NVIDIA driver itself is in an error state. Ensure CMD is running <strong>as administrator</strong>, confirm the <code translate="no" v-pre>-i</code> GPU index matches <code translate="no" v-pre>nvidia-smi -L</code>, or <strong>reboot Windows</strong> to restore dynamic clocks.</li>
+</ul>
+<hr>
+<h2 id="9-one-click-gpu-clock-management-bat-scripts">9. One-Click GPU Clock Management (BAT Scripts)</h2>
+<p>These two Windows <code translate="no" v-pre>.bat</code> scripts use built-in Windows PowerShell (no external software required) to automate the safe workflow above:</p>
+<ul>
+<li><strong>What the scripts do:</strong> <code translate="no" v-pre>Lock-GPU-Clocks.bat</code> temporarily locks <strong>only</strong> your NVIDIA GPU&#x27;s core <strong>Graphics</strong> clock until you reset it or reboot. <code translate="no" v-pre>Reset-GPU-Clocks.bat</code> removes that lock and returns control to NVIDIA GPU Boost.</li>
+<li><strong>No risky changes:</strong> Neither script overclocks, touches voltages, modifies power limits, disables Windows security features, or makes permanent system changes.</li>
+<li><strong>Strict input &amp; frequency validation:</strong> <code translate="no" v-pre>Lock-GPU-Clocks.bat</code> checks administrator privileges independently of the Windows <code translate="no" v-pre>Server</code> service, verifies that your chosen GPU index exists in <code translate="no" v-pre>nvidia-smi -L</code>, parses <strong>only</strong> <code translate="no" v-pre>Graphics</code> clocks from <code translate="no" v-pre>SUPPORTED_CLOCKS</code> (ignoring <code translate="no" v-pre>Memory</code> clocks), rejects arbitrary or unverified numbers (like <code translate="no" v-pre>50000</code>), and <strong>never</strong> auto-selects the maximum clock.</li>
+<li><strong>Safe error handling:</strong> If <code translate="no" v-pre>-lgc</code> fails, the script does <strong>not</strong> run <code translate="no" v-pre>-rgc</code> automatically, displays the NVIDIA exit code, and tells you how to inspect your current clocks before proceeding. It also uses structured <code translate="no" v-pre>nvidia-smi --query-gpu=clocks.gr</code> telemetry to distinguish between driver acceptance and the actually observed clock.</li>
+</ul>
+<h3 id="lock-gpu-clocksbat">Lock-GPU-Clocks.bat</h3>
+<div id="lock-gpu-clocksbat-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
+setlocal EnableExtensions
+title Vonovox Helper - Lock NVIDIA GPU Clocks
+set &quot;BAT_PATH=%~f0&quot;
+powershell.exe -NoProfile -Command &quot;$code = (Get-Content -LiteralPath $env:BAT_PATH | Where-Object { $_ -match '^::PS ' } | ForEach-Object { $_.Substring(5) }) -join [Environment]::NewLine; &amp; ([ScriptBlock]::Create($code)); exit $LASTEXITCODE&quot;
+set &quot;EXIT_CODE=%ERRORLEVEL%&quot;
+echo.
+pause
+exit /b %EXIT_CODE%
+
+::PS Write-Host '============================================================'
+::PS Write-Host '  Vonovox Optional Helper: Lock NVIDIA GPU Core Clocks'
+::PS Write-Host '  No overclocking, no voltage changes, temporary until reboot'
+::PS Write-Host '============================================================'
+::PS Write-Host ''
+::PS
+::PS $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+::PS if (-not $isAdmin) {
+::PS     Write-Host '[ERROR] Administrator privileges are required.'
+::PS     Write-Host 'How to fix: Right-click Lock-GPU-Clocks.bat and choose &quot;Run as administrator&quot;.'
+::PS     exit 1
+::PS }
+::PS
+::PS $nvsmi = $null
+::PS $cmd = Get-Command nvidia-smi -ErrorAction SilentlyContinue
+::PS if ($cmd) { $nvsmi = $cmd.Source }
+::PS elseif (Test-Path -LiteralPath 'C:\Windows\System32\nvidia-smi.exe') { $nvsmi = 'C:\Windows\System32\nvidia-smi.exe' }
+::PS elseif (Test-Path -LiteralPath 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe') { $nvsmi = 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe' }
+::PS if (-not $nvsmi) {
+::PS     Write-Host '[ERROR] nvidia-smi.exe was not found on this system.'
+::PS     Write-Host 'Make sure you have an NVIDIA GPU with official drivers installed.'
+::PS     exit 1
+::PS }
+::PS
+::PS $gpuList = &amp; $nvsmi -L 2&gt;&amp;1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host '[ERROR] Could not query NVIDIA GPUs:'
+::PS     $gpuList | ForEach-Object { Write-Host $_ }
+::PS     exit 1
+::PS }
+::PS
+::PS $validGpus = [System.Collections.Generic.HashSet[string]]::new()
+::PS Write-Host 'Detected NVIDIA GPUs:'
+::PS foreach ($line in $gpuList) {
+::PS     Write-Host &quot;  $line&quot;
+::PS     if ($line -match '^GPU\s+(\d+)\s*:') { [void]$validGpus.Add($Matches[1]) }
+::PS }
+::PS if ($validGpus.Count -eq 0) {
+::PS     Write-Host '[ERROR] No valid NVIDIA GPU indices were detected. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS $defaultGpu = if ($validGpus.Contains('0') -and $validGpus.Count -eq 1) { '0' } else { $null }
+::PS $gpuPrompt = if ($defaultGpu) { 'Enter GPU index to configure [default: 0]' } else { 'Enter GPU index to configure (e.g. 0)' }
+::PS $gpuId = (Read-Host $gpuPrompt).Trim()
+::PS if ([string]::IsNullOrWhiteSpace($gpuId) -and $defaultGpu) { $gpuId = $defaultGpu }
+::PS if (($gpuId -notmatch '^\d+$') -or (-not $validGpus.Contains($gpuId))) {
+::PS     Write-Host '[ERROR] Invalid or non-existent GPU index. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host &quot;Querying official supported Graphics clocks for GPU $gpuId...&quot;
+::PS $supOut = &amp; $nvsmi -i $gpuId -q -d SUPPORTED_CLOCKS 2&gt;&amp;1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host &quot;[STOPPED] Supported Graphics clocks could not be verified on this GPU (exit code $LASTEXITCODE). This does not necessarily mean GPU Clock Locking is unsupported. No changes were made.&quot;
+::PS     $supOut | ForEach-Object { Write-Host $_ }
+::PS     exit 1
+::PS }
+::PS
+::PS $graphicsClocks = New-Object 'System.Collections.Generic.SortedSet[int]'
+::PS foreach ($line in $supOut) {
+::PS     if ($line -match '^\s*Graphics\s*:\s*(\d+)\s*MHz\s*$') {
+::PS         [void]$graphicsClocks.Add([int]$Matches[1])
+::PS     }
+::PS }
+::PS if ($graphicsClocks.Count -eq 0) {
+::PS     Write-Host '[STOPPED] Supported Graphics clocks could not be verified on this GPU. This does not necessarily mean GPU Clock Locking is unsupported. No changes were made.'
+::PS     Write-Host 'Possible reasons: driver does not expose the clock table, unrecognized output format, query unsupported, or GPU-specific limitations.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host '------------------------------------------------------------'
+::PS Write-Host &quot;Verified supported Graphics clocks (MHz) for GPU ${gpuId}:&quot;
+::PS Write-Host ('  ' + ($graphicsClocks -join ', '))
+::PS Write-Host '------------------------------------------------------------'
+::PS Write-Host 'IMPORTANT:'
+::PS Write-Host ' - Enter ONLY one exact number from the Graphics list above.'
+::PS Write-Host ' - Do NOT pick the highest value blindly; test moderate clocks first.'
+::PS Write-Host ' - Arbitrary values (like 50000) will be rejected.'
+::PS Write-Host ''
+::PS
+::PS $targetRaw = (Read-Host 'Enter a supported Graphics clock in MHz (or press Enter to cancel)').Trim()
+::PS if ([string]::IsNullOrWhiteSpace($targetRaw)) {
+::PS     Write-Host 'Cancelled. No changes were made.'
+::PS     exit 0
+::PS }
+::PS
+::PS [int]$targetMhz = 0
+::PS if (($targetRaw -notmatch '^\d+$') -or (-not [int]::TryParse($targetRaw, [ref]$targetMhz)) -or ($targetMhz -le 0) -or (-not $graphicsClocks.Contains($targetMhz))) {
+::PS     Write-Host '[ERROR] Invalid or unsupported Graphics clock value. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host &quot;Applying temporary Graphics clock lock ($targetMhz,$targetMhz MHz) to GPU $gpuId...&quot;
+::PS $lgcOut = &amp; $nvsmi -i $gpuId -lgc &quot;$targetMhz,$targetMhz&quot; 2&gt;&amp;1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host &quot;[ERROR] nvidia-smi -lgc failed for GPU $gpuId (exit code $LASTEXITCODE):&quot;
+::PS     $lgcOut | ForEach-Object { Write-Host $_ }
+::PS     Write-Host 'No automatic reset was performed. Check your current GPU clock configuration before proceeding.'
+::PS     Write-Host &quot;Check current clock: nvidia-smi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits&quot;
+::PS     Write-Host &quot;Manual reset command: nvidia-smi -i $gpuId -rgc&quot;
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host &quot;[ACCEPTED] Driver accepted -lgc $targetMhz,$targetMhz on GPU $gpuId.&quot;
+::PS $obsOut = (&amp; $nvsmi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits 2&gt;&amp;1 | Out-String).Trim()
+::PS [int]$obsMhz = 0
+::PS if (($LASTEXITCODE -eq 0) -and ($obsOut -match '^\d+$') -and ([int]::TryParse($obsOut, [ref]$obsMhz)) -and ($obsMhz -gt 0)) {
+::PS     Write-Host &quot;Actually observed Graphics clock right now: $obsMhz MHz&quot;
+::PS } else {
+::PS     Write-Host &quot;[INFO] Command was accepted, but live clock telemetry could not be verified (returned: '$obsOut').&quot;
+::PS }
+::PS Write-Host 'Note: Thermal, power, or firmware limits can still affect live clocks under load.'
+::PS Write-Host &quot;When finished, run Reset-GPU-Clocks.bat or: nvidia-smi -i $gpuId -rgc&quot;
+::PS exit 0</code></pre>
+</doc-codeblock></div>
+<h3 id="reset-gpu-clocksbat">Reset-GPU-Clocks.bat</h3>
+<div id="reset-gpu-clocksbat-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">@echo off
+setlocal EnableExtensions
+title Vonovox Helper - Reset NVIDIA GPU Clocks
+set &quot;BAT_PATH=%~f0&quot;
+powershell.exe -NoProfile -Command &quot;$code = (Get-Content -LiteralPath $env:BAT_PATH | Where-Object { $_ -match '^::PS ' } | ForEach-Object { $_.Substring(5) }) -join [Environment]::NewLine; &amp; ([ScriptBlock]::Create($code)); exit $LASTEXITCODE&quot;
+set &quot;EXIT_CODE=%ERRORLEVEL%&quot;
+echo.
+pause
+exit /b %EXIT_CODE%
+
+::PS Write-Host '============================================================'
+::PS Write-Host '  Vonovox Optional Helper: Reset NVIDIA GPU Clocks to Default'
+::PS Write-Host '============================================================'
+::PS Write-Host ''
+::PS
+::PS $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+::PS if (-not $isAdmin) {
+::PS     Write-Host '[ERROR] Administrator privileges are required.'
+::PS     Write-Host 'How to fix: Right-click Reset-GPU-Clocks.bat and choose &quot;Run as administrator&quot;.'
+::PS     exit 1
+::PS }
+::PS
+::PS $nvsmi = $null
+::PS $cmd = Get-Command nvidia-smi -ErrorAction SilentlyContinue
+::PS if ($cmd) { $nvsmi = $cmd.Source }
+::PS elseif (Test-Path -LiteralPath 'C:\Windows\System32\nvidia-smi.exe') { $nvsmi = 'C:\Windows\System32\nvidia-smi.exe' }
+::PS elseif (Test-Path -LiteralPath 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe') { $nvsmi = 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe' }
+::PS if (-not $nvsmi) {
+::PS     Write-Host '[ERROR] nvidia-smi.exe was not found on this system.'
+::PS     exit 1
+::PS }
+::PS
+::PS $gpuList = &amp; $nvsmi -L 2&gt;&amp;1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host '[ERROR] Could not query NVIDIA GPUs:'
+::PS     $gpuList | ForEach-Object { Write-Host $_ }
+::PS     exit 1
+::PS }
+::PS
+::PS $validGpus = [System.Collections.Generic.HashSet[string]]::new()
+::PS Write-Host 'Detected NVIDIA GPUs:'
+::PS foreach ($line in $gpuList) {
+::PS     Write-Host &quot;  $line&quot;
+::PS     if ($line -match '^GPU\s+(\d+)\s*:') { [void]$validGpus.Add($Matches[1]) }
+::PS }
+::PS if ($validGpus.Count -eq 0) {
+::PS     Write-Host '[ERROR] No valid NVIDIA GPU indices were detected.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS $defaultGpu = if ($validGpus.Contains('0') -and $validGpus.Count -eq 1) { '0' } else { $null }
+::PS $gpuPrompt = if ($defaultGpu) { 'Enter GPU index to reset [default: 0]' } else { 'Enter GPU index to reset (e.g. 0)' }
+::PS $gpuId = (Read-Host $gpuPrompt).Trim()
+::PS if ([string]::IsNullOrWhiteSpace($gpuId) -and $defaultGpu) { $gpuId = $defaultGpu }
+::PS if (($gpuId -notmatch '^\d+$') -or (-not $validGpus.Contains($gpuId))) {
+::PS     Write-Host '[ERROR] Invalid or non-existent GPU index. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host &quot;Restoring dynamic GPU clocks on GPU $gpuId...&quot;
+::PS $rgcOut = &amp; $nvsmi -i $gpuId -rgc 2&gt;&amp;1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host &quot;[ERROR] nvidia-smi -rgc failed for GPU $gpuId (exit code $LASTEXITCODE):&quot;
+::PS     $rgcOut | ForEach-Object { Write-Host $_ }
+::PS     Write-Host 'If the driver is unresponsive, reboot Windows to restore default dynamic clocks.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host &quot;[DONE] Reset command accepted for GPU $gpuId.&quot;
+::PS $obsOut = (&amp; $nvsmi -i $gpuId --query-gpu=clocks.gr --format=csv,noheader,nounits 2&gt;&amp;1 | Out-String).Trim()
+::PS [int]$obsMhz = 0
+::PS if (($LASTEXITCODE -eq 0) -and ($obsOut -match '^\d+$') -and ([int]::TryParse($obsOut, [ref]$obsMhz)) -and ($obsMhz -gt 0)) {
+::PS     Write-Host &quot;Actually observed Graphics clock right now: $obsMhz MHz&quot;
+::PS } else {
+::PS     Write-Host &quot;[INFO] Reset was accepted, but live clock telemetry could not be verified (returned: '$obsOut').&quot;
+::PS }
+::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
+::PS exit 0</code></pre>
+</doc-codeblock></div>
+<h3 id="how-to-create-and-run-the-bat-files-safely">How to create and run the <code translate="no" v-pre>.bat</code> files safely</h3>
+<ol>
+<li>Open <strong>Notepad</strong> (search <code translate="no" v-pre>notepad</code> in the Start menu).</li>
+<li>Copy one of the complete scripts above and paste it into Notepad.</li>
+<li>Click <strong>File → Save As...</strong>.</li>
+<li>At the bottom, change <strong>Save as type</strong> from <code translate="no" v-pre>Text Documents (*.txt)</code> to <strong>All Files (<code translate="no" v-pre>*.*</code>)</strong>.</li>
+<li>Name the file <code translate="no" v-pre>Lock-GPU-Clocks.bat</code> (or <code translate="no" v-pre>Reset-GPU-Clocks.bat</code>) and save it to an easy-to-find folder such as your Desktop. <em>(Changing <strong>Save as type</strong> to <strong>All Files</strong> prevents Windows from accidentally naming it <code translate="no" v-pre>Lock-GPU-Clocks.bat.txt</code>.)</em></li>
+<li>Right-click the saved <code translate="no" v-pre>.bat</code> file and select <strong>Run as administrator</strong>.</li>
+<li>Read the output carefully:
+<ul>
+<li><code translate="no" v-pre>[ACCEPTED]</code> / <code translate="no" v-pre>[DONE]</code> means <code translate="no" v-pre>nvidia-smi</code> accepted the command and shows the <strong>observed</strong> Graphics clock right afterward.</li>
+<li><code translate="no" v-pre>[ERROR]</code> or <code translate="no" v-pre>[STOPPED]</code> explains what failed and confirms no unverified clock was applied. If your GPU shows <code translate="no" v-pre>Not Supported</code> or cannot be parsed, skip this optimization.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="10-how-to-test-whether-it-actually-helps">10. How to Test Whether It Actually Helps</h2>
+<p>Do not assume clock locking helped just because you see a higher MHz number. A higher frequency does <strong>not</strong> automatically mean better audio performance. Run a structured <strong>A/B comparison</strong> on your own PC:</p>
+<ul>
+<li><strong>Preliminary check (optional, 3-5 minutes):</strong> Quick sanity check to see if the locked clock runs cool and triggers no audio glitches.</li>
+<li><strong>Full A/B benchmark (recommended, at least 10-15 minutes per pass):</strong>
+<ol>
+<li><strong>Restore default clocks</strong> (<code translate="no" v-pre>nvidia-smi -i 0 -rgc</code>, replacing <code translate="no" v-pre>0</code> with your GPU index).</li>
+<li><strong>Start Vonovox</strong> and let your system and background load stabilize for a minute.</li>
+<li><strong>Run Test A (Default GPU Clocks)</strong> for at least <strong>10-15 minutes</strong> and record all metrics below.</li>
+<li><strong>Apply one verified supported Graphics clock</strong> (<code translate="no" v-pre>Lock-GPU-Clocks.bat</code> or <code translate="no" v-pre>-lgc</code>).</li>
+<li><strong>Run Test B (Locked GPU Clocks)</strong> for at least <strong>10-15 minutes</strong> under the exact same conditions.</li>
+<li><strong>Compare Test A vs. Test B</strong> using the table below.</li>
+<li><strong>Repeat the test</strong> if the results are close or inconclusive.</li>
+<li><strong>Restore default clocks</strong> (<code translate="no" v-pre>-rgc</code>) when finished or whenever no clear benefit is shown.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Keep all of these identical between Test A and Test B:</strong></p>
+<ul>
+<li>RVC voice model</li>
+<li>F0 Method</li>
+<li>Block Size</li>
+<li>Input, Output, and Monitor audio devices</li>
+<li>Audio backend (e.g., WASAPI shared / exclusive)</li>
+<li>Concurrent GPU workloads (same game open or same idle desktop) and operating conditions</li>
+</ul>
+<h3 id="fillable-comparison-table">Fillable comparison table</h3>
+<retype-table copy-text="| Metric to record | Test A: Default Clocks (10-15 min) | Test B: Locked Clocks (10-15 min) |
+| --- | --- | --- |
+| Average **GPU Delay** (ms) | `____ ms` | `____ ms` |
+| **GPU Delay** spikes (highest seen) | `____ ms` | `____ ms` |
+| Processing time variability (steady vs. jumpy) | `____________` | `____________` |
+| Audio crackling / dropouts | `Yes / No (count)` | `Yes / No (count)` |
+| GPU temperature (°C) | `____ °C` | `____ °C` |
+| GPU power draw (W) | `____ W` | `____ W` |
+| Actually observed Graphics clock (`-q -d CLOCK`) | `____ MHz` | `____ MHz` |
+| Throttling status (`-q -d PERFORMANCE`) | `None / Thermal / Power` | `None / Thermal / Power` |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Metric to record</th>
+<th>Test A: Default Clocks (10-15 min)</th>
+<th>Test B: Locked Clocks (10-15 min)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average <strong>GPU Delay</strong> (ms)</td>
+<td><code translate="no" v-pre>____ ms</code></td>
+<td><code translate="no" v-pre>____ ms</code></td>
+</tr>
+<tr>
+<td><strong>GPU Delay</strong> spikes (highest seen)</td>
+<td><code translate="no" v-pre>____ ms</code></td>
+<td><code translate="no" v-pre>____ ms</code></td>
+</tr>
+<tr>
+<td>Processing time variability (steady vs. jumpy)</td>
+<td><code translate="no" v-pre>____________</code></td>
+<td><code translate="no" v-pre>____________</code></td>
+</tr>
+<tr>
+<td>Audio crackling / dropouts</td>
+<td><code translate="no" v-pre>Yes / No (count)</code></td>
+<td><code translate="no" v-pre>Yes / No (count)</code></td>
+</tr>
+<tr>
+<td>GPU temperature (°C)</td>
+<td><code translate="no" v-pre>____ °C</code></td>
+<td><code translate="no" v-pre>____ °C</code></td>
+</tr>
+<tr>
+<td>GPU power draw (W)</td>
+<td><code translate="no" v-pre>____ W</code></td>
+<td><code translate="no" v-pre>____ W</code></td>
+</tr>
+<tr>
+<td>Actually observed Graphics clock (<code translate="no" v-pre>-q -d CLOCK</code>)</td>
+<td><code translate="no" v-pre>____ MHz</code></td>
+<td><code translate="no" v-pre>____ MHz</code></td>
+</tr>
+<tr>
+<td>Throttling status (<code translate="no" v-pre>-q -d PERFORMANCE</code>)</td>
+<td><code translate="no" v-pre>None / Thermal / Power</code></td>
+<td><code translate="no" v-pre>None / Thermal / Power</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="interpreting-your-results">Interpreting your results</h3>
+<ul>
+<li><strong>Keep it</strong> only if Test B shows measurably steadier <strong>GPU Delay</strong> and fewer audio glitches <em>without</em> overheating or throttling.</li>
+<li><strong>Restore defaults (<code translate="no" v-pre>nvidia-smi -i 0 -rgc</code>)</strong> if Test B feels identical, runs hotter for no real audio gain, or performs worse.</li>
+</ul>
+<hr>
+<h2 id="11-risks-limitations-and-precautions">11. Risks, Limitations, and Precautions</h2>
+<p>Locking within NVIDIA&#x27;s supported clocks is <strong>not</strong> overclocking, but it still has trade-offs:</p>
+<ul>
+<li><strong>Higher temperatures and fan noise:</strong> Holding higher clocks at idle or light load generates extra heat and keeps fans spinning faster.</li>
+<li><strong>Higher power draw and shorter laptop battery life:</strong> A locked graphics clock can limit or reduce how often your GPU drops into low-power idle states, which can increase idle power draw and drain laptop batteries faster.</li>
+<li><strong>Thermal throttling or power throttling:</strong> If a locked clock pushes your cooling or power budget too hard, the GPU will throttle itself down anyway, sometimes causing worse stutters.</li>
+<li><strong>Limited compatibility and third-party tool conflicts:</strong> Tools like MSI Afterburner, Armoury Crate, or OEM laptop control centers may override or conflict with <code translate="no" v-pre>nvidia-smi</code> clock settings.</li>
+<li><strong>Do not modify BIOS, voltages, or thermal protections:</strong> Never flash custom VBIOS files, disable thermal limits, or force overvolting for voice conversion.</li>
+</ul>
+<hr>
+<h2 id="12-advanced-note-gpu-memory-clock-locking--lmc">12. Advanced Note: GPU Memory Clock Locking (<code translate="no" v-pre>-lmc</code>)</h2>
+<p><code translate="no" v-pre>nvidia-smi</code> also provides memory clock commands:</p>
+<div id="12-advanced-note-gpu-memory-clock-locking--lmc-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lmc &lt;min,max&gt;
+nvidia-smi -i 0 -rmc</code></pre>
+</doc-codeblock></div>
+<p><code translate="no" v-pre>-lmc</code> locks <strong>VRAM (memory) frequency</strong>, whereas <code translate="no" v-pre>-lgc</code> locks <strong>GPU core (graphics) frequency</strong>. Memory clock locking is <strong>not</strong> part of the standard Vonovox workflow because there is insufficient evidence that locking VRAM clocks improves live RVC audio performance, and keeping VRAM at high clocks continuously increases idle heat and power draw.</p>
+<hr>
+<h2 id="13-alternatives-when-clock-locking-does-not-help">13. Alternatives When Clock Locking Does Not Help</h2>
+<p>If <code translate="no" v-pre>--lgc</code> returns <code translate="no" v-pre>Not Supported</code> or does not improve your audio, try these safer, often more effective steps:</p>
+<ol>
+<li><strong>NVIDIA Control Panel → Power Management Mode:</strong> Set <strong>Power management mode</strong> to <strong>Prefer maximum performance</strong> for the Vonovox executable (<code translate="no" v-pre>Manage 3D settings → Program Settings</code>). Note: this is <strong>not</strong> the same as <code translate="no" v-pre>-lgc</code> and does not guarantee fixed clocks across all CUDA workloads, but it can reduce aggressive downclocking on some systems.</li>
+<li><strong>Verify Vonovox uses your NVIDIA GPU:</strong> On laptops with hybrid graphics, make sure Vonovox runs on the NVIDIA GPU rather than integrated graphics.</li>
+<li><strong>Adjust Block Size in Vonovox:</strong> Increasing <strong>Block Size</strong> by one step is the most reliable way to eliminate crackling when the GPU is busy.</li>
+<li><strong>Match <code translate="no" v-pre>48 kHz</code> audio formats &amp; WASAPI setup:</strong> Follow <a href="../live-audio/">Route and tune Vonovox</a> to align sample rates and avoid duplicate monitoring.</li>
+<li><strong>Reduce competing GPU workloads:</strong> Cap in-game frame rates or lower heavy GPU settings when running Vonovox alongside games.</li>
+<li><strong>Check drivers &amp; cooling:</strong> Update to a clean Studio/Game Ready driver and clear dust from laptop/PC vents if thermal throttling occurs.</li>
+</ol>
+<hr>
+<h2 id="14-troubleshooting">14. Troubleshooting</h2>
+<retype-table copy-text="| Symptom | Possible Cause | Recommended Solution |
+| --- | --- | --- |
+| `'nvidia-smi' is not recognized` | `nvidia-smi.exe` is not in `PATH`. | Run `&quot;C:\Windows\System32\nvidia-smi.exe&quot;` or `&quot;C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe&quot;`, or use the `.bat` scripts above. |
+| NVIDIA detects no GPU / `NVIDIA-SMI has failed` | No NVIDIA GPU present, GPU disabled, or laptop hybrid GPU asleep. | Check **Task Manager → Performance**, enable the NVIDIA adapter in Device Manager, and plug in laptop AC power. |
+| `Insufficient Permissions` | CMD was not opened as Administrator. | Right-click **Command Prompt** (or the `.bat` file) and select **Run as administrator**. |
+| `Not Supported` when running `--lgc` | GPU architecture, laptop firmware, or driver does not allow clock locking. | Leave clocks on default and use the [Alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Invalid Argument` | Syntax error or frequency outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and enter an exact `Graphics` value with `min,max` format. |
+| Displayed clock does not match requested MHz | Power limit, thermal limit, or driver constraint is capping the GPU. | Test a slightly lower supported clock or check `nvidia-smi -i 0 -q -d PERFORMANCE`. |
+| Clock drops under load | Thermal throttling or laptop power limit reached. | Lower the locked clock, improve cooling, or restore defaults with `-rgc`. |
+| Temperatures rise too high | High clock locked continuously without adequate cooling. | Run `nvidia-smi -i 0 -rgc` immediately and use a lower clock or dynamic defaults. |
+| Vonovox shows no improvement | Bottleneck is Block Size, CPU, WASAPI, or overall GPU saturation rather than clock ramping. | Run `nvidia-smi -i 0 -rgc` and tune **Block Size** and audio routing in [Route and tune Vonovox](live-audio.md). |
+| Vonovox gets worse after locking | Locked clock is too low for the workload or too high (causing thermal throttling). | Run `nvidia-smi -i 0 -rgc` to restore dynamic clocks, then test a different supported value or stay on defaults. |
+| GPU behaves differently with a game open | Game uses most of the GPU compute/power budget. | Cap game FPS, lower GPU-heavy settings, or raise Vonovox **Block Size**. |
+| Reset command (`-rgc`) fails | Missing admin rights, wrong `-i` index, or driver glitch. | Run CMD as administrator with the right `-i` index, or reboot Windows. |
+| Unsure which MHz value to pick | Haven't checked baseline clocks under load yet. | Run `nvidia-smi -i 0 -q -d CLOCK` while using Vonovox normally, then pick a supported value near that range. |
+| Laptop limits clocks automatically | Laptop OEM power profile / battery / firmware cap. | Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of `--lgc`. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Recommended Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>'nvidia-smi' is not recognized</code></td>
+<td><code translate="no" v-pre>nvidia-smi.exe</code> is not in <code translate="no" v-pre>PATH</code>.</td>
+<td>Run <code translate="no" v-pre>&quot;C:\Windows\System32\nvidia-smi.exe&quot;</code> or <code translate="no" v-pre>&quot;C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe&quot;</code>, or use the <code translate="no" v-pre>.bat</code> scripts above.</td>
+</tr>
+<tr>
+<td>NVIDIA detects no GPU / <code translate="no" v-pre>NVIDIA-SMI has failed</code></td>
+<td>No NVIDIA GPU present, GPU disabled, or laptop hybrid GPU asleep.</td>
+<td>Check <strong>Task Manager → Performance</strong>, enable the NVIDIA adapter in Device Manager, and plug in laptop AC power.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Insufficient Permissions</code></td>
+<td>CMD was not opened as Administrator.</td>
+<td>Right-click <strong>Command Prompt</strong> (or the <code translate="no" v-pre>.bat</code> file) and select <strong>Run as administrator</strong>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Not Supported</code> when running <code translate="no" v-pre>--lgc</code></td>
+<td>GPU architecture, laptop firmware, or driver does not allow clock locking.</td>
+<td>Leave clocks on default and use the <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">Alternatives</doc-anchor-trigger>.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Invalid Argument</code></td>
+<td>Syntax error or frequency outside supported clocks.</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS</code> and enter an exact <code translate="no" v-pre>Graphics</code> value with <code translate="no" v-pre>min,max</code> format.</td>
+</tr>
+<tr>
+<td>Displayed clock does not match requested MHz</td>
+<td>Power limit, thermal limit, or driver constraint is capping the GPU.</td>
+<td>Test a slightly lower supported clock or check <code translate="no" v-pre>nvidia-smi -i 0 -q -d PERFORMANCE</code>.</td>
+</tr>
+<tr>
+<td>Clock drops under load</td>
+<td>Thermal throttling or laptop power limit reached.</td>
+<td>Lower the locked clock, improve cooling, or restore defaults with <code translate="no" v-pre>-rgc</code>.</td>
+</tr>
+<tr>
+<td>Temperatures rise too high</td>
+<td>High clock locked continuously without adequate cooling.</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> immediately and use a lower clock or dynamic defaults.</td>
+</tr>
+<tr>
+<td>Vonovox shows no improvement</td>
+<td>Bottleneck is Block Size, CPU, WASAPI, or overall GPU saturation rather than clock ramping.</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> and tune <strong>Block Size</strong> and audio routing in <a href="../live-audio/">Route and tune Vonovox</a>.</td>
+</tr>
+<tr>
+<td>Vonovox gets worse after locking</td>
+<td>Locked clock is too low for the workload or too high (causing thermal throttling).</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> to restore dynamic clocks, then test a different supported value or stay on defaults.</td>
+</tr>
+<tr>
+<td>GPU behaves differently with a game open</td>
+<td>Game uses most of the GPU compute/power budget.</td>
+<td>Cap game FPS, lower GPU-heavy settings, or raise Vonovox <strong>Block Size</strong>.</td>
+</tr>
+<tr>
+<td>Reset command (<code translate="no" v-pre>-rgc</code>) fails</td>
+<td>Missing admin rights, wrong <code translate="no" v-pre>-i</code> index, or driver glitch.</td>
+<td>Run CMD as administrator with the right <code translate="no" v-pre>-i</code> index, or reboot Windows.</td>
+</tr>
+<tr>
+<td>Unsure which MHz value to pick</td>
+<td>Haven&#x27;t checked baseline clocks under load yet.</td>
+<td>Run <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> while using Vonovox normally, then pick a supported value near that range.</td>
+</tr>
+<tr>
+<td>Laptop limits clocks automatically</td>
+<td>Laptop OEM power profile / battery / firmware cap.</td>
+<td>Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of <code translate="no" v-pre>--lgc</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<hr>
+<h2 id="15-frequently-asked-questions-faq">15. Frequently Asked Questions (FAQ)</h2>
+<ol>
+<li>
+<p><strong>Is GPU Clock Locking safe?</strong>
+Yes, when you only use official frequencies from <code translate="no" v-pre>SUPPORTED_CLOCKS</code> and monitor temperatures. It does not change voltages or bypass hardware thermal protections.</p>
+</li>
+<li>
+<p><strong>Is this overclocking?</strong>
+No. Overclocking pushes hardware beyond factory limits. Clock locking only selects frequencies already defined by NVIDIA in your card&#x27;s supported table.</p>
+</li>
+<li>
+<p><strong>Will this increase my FPS in games?</strong>
+Usually no, and it is not meant for that. If a locked clock is lower than your normal boost clock, gaming FPS may even drop slightly.</p>
+</li>
+<li>
+<p><strong>Will it improve Vonovox voice quality?</strong>
+No. Voice quality depends on your model, microphone, pitch/F0 extractor, and audio routing, not GPU clock locking.</p>
+</li>
+<li>
+<p><strong>Will it reduce latency?</strong>
+It does not lower minimum latency below what your GPU can already compute, though it may reduce sudden <strong>latency spikes</strong> caused by clock ramping on some setups.</p>
+</li>
+<li>
+<p><strong>Does it work on laptops?</strong>
+Sometimes, but many laptops restrict <code translate="no" v-pre>--lgc</code> in firmware or hit thermal/power limits quickly. Always keep laptops plugged into AC power when testing.</p>
+</li>
+<li>
+<p><strong>Does it work on every NVIDIA GPU?</strong>
+No. Support depends on the GPU generation, board/laptop firmware, and driver version.</p>
+</li>
+<li>
+<p><strong>Should I always select the maximum clock?</strong>
+No. Maximum clocks create maximum heat and noise and can trigger thermal throttling. Moderate supported clocks are often more stable.</p>
+</li>
+<li>
+<p><strong>Can I use <code translate="no" v-pre>50000</code> MHz?</strong>
+No. Never enter arbitrary numbers. Out-of-range values can fail with <code translate="no" v-pre>Invalid Argument</code> and are not guaranteed to clamp safely.</p>
+</li>
+<li>
+<p><strong>Does it work with RTX GPUs?</strong>
+Many desktop RTX cards support <code translate="no" v-pre>--lgc</code> on modern drivers, while some laptops or specific configurations may return <code translate="no" v-pre>Not Supported</code>. Test with <code translate="no" v-pre>SUPPORTED_CLOCKS</code> first.</p>
+</li>
+<li>
+<p><strong>Do I need to apply it every time?</strong>
+Yes, if you decide to keep using it, because <code translate="no" v-pre>nvidia-smi</code> clock locks reset on reboot or driver restart.</p>
+</li>
+<li>
+<p><strong>Will the settings survive a reboot?</strong>
+No. Rebooting Windows automatically clears <code translate="no" v-pre>-lgc</code> and returns your GPU to normal dynamic clocks.</p>
+</li>
+<li>
+<p><strong>Can I use Vonovox while gaming?</strong>
+Yes, provided your GPU has enough headroom for both. If the game hits 95-100% GPU load, cap FPS or increase Vonovox <strong>Block Size</strong>.</p>
+</li>
+<li>
+<p><strong>What happens if my GPU overheats?</strong>
+NVIDIA&#x27;s hardware thermal protection will automatically throttle the card down (or shut down in extreme cases). If temps climb too high, run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> immediately.</p>
+</li>
+<li>
+<p><strong>How do I restore everything to normal?</strong>
+Run <code translate="no" v-pre>nvidia-smi -i 0 -rgc</code> as Administrator, run <code translate="no" v-pre>Reset-GPU-Clocks.bat</code>, or reboot Windows.</p>
+</li>
+<li>
+<p><strong>Should I lock the VRAM clock too (<code translate="no" v-pre>-lmc</code>)?</strong>
+No. There is no solid evidence that locking memory clocks helps Vonovox, and it increases idle heat and power draw.</p>
+</li>
+<li>
+<p><strong>What should I do if I see <code translate="no" v-pre>Not Supported</code>?</strong>
+Skip GPU Clock Locking completely and use the safer <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">Alternatives</doc-anchor-trigger> such as <strong>Block Size</strong> tuning and NVIDIA Control Panel power settings.</p>
+</li>
+</ol>
+<hr>
+<h2 id="16-official-references">16. Official References</h2>
+<ul>
+<li><a href="https://docs.nvidia.com/deploy/nvidia-smi/index.html">NVIDIA System Management Interface (nvidia-smi) Documentation</a></li>
+<li><a href="https://docs.nvidia.com/deploy/nvml-api/latest/api/group__nvmlDeviceCommands.html">NVIDIA NVML API Reference: Device Commands</a></li>
+<li><a href="https://docs.nvidia.com/deeplearning/tensorrt/latest/performance/benchmarking.html">NVIDIA TensorRT Benchmarking &amp; Clock Locking Best Practices</a></li>
+<li><a href="https://github.com/dr87/Vonovox">Vonovox Project Repository</a></li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/vonovox/live-audio/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Route and tune Vonovox</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/applio/installation/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Install Applio</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T21:17:14.000Z">21/11/2026 · 22:17</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Advanced Performance Optimization", level: 3, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/vonovox/advanced-performance-optimization.md" }</script>
+</body>
+</html>

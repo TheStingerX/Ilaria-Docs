@@ -63,3 +63,5 @@ For Vonovox, start with WASAPI shared mode where available. Use 48 kHz on the mi
 | Syllables disappear when you whisper or sing | Test with voice activity detection and noise suppression disabled one at a time. |
 
 Tune **Block Size** after the complete route works. Lower it one step and repeat the same phrase. If you get clicks or missing words, restore the last clean value. Leave lookahead and other effects at their defaults until you have a stable baseline.
+
+> **Optional:** Experiencing GPU Delay spikes on a supported NVIDIA card? See [Advanced Performance Optimization: NVIDIA GPU Clock Locking](advanced-performance-optimization.md).

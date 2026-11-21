@@ -63,3 +63,5 @@ Per Vonovox, iniziare con la modalità condivisa WASAPI, ove disponibile. Utiliz
 | Le sillabe scompaiono quando sussurri o canti | Test con rilevamento dell'attività vocale e soppressione del rumore disabilitati uno alla volta. |
 
 Ottimizza **Dimensione blocco** una volta completato il percorso completo. Abbassalo di un passo e ripeti la stessa frase. Se ricevi clic o parole mancanti, ripristina l'ultimo valore pulito. Lascia il lookahead e gli altri effetti sui valori predefiniti finché non avrai una prova di riferimento stabile.
+
+> **Facoltativo:** Hai picchi di GPU Delay su una scheda NVIDIA compatibile? Consulta [Ottimizzazione prestazioni avanzata: NVIDIA GPU Clock Locking](advanced-performance-optimization.md).

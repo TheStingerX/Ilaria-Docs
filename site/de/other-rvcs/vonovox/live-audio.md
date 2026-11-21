@@ -63,3 +63,5 @@ Beginnen Sie für Vonovox mit dem WASAPI-Freigabemodus, sofern verfügbar. Verwe
 | Silben verschwinden, wenn Sie flüstern oder singen. | Testen Sie mit jeweils deaktivierter Sprachaktivitätserkennung und Geräuschunterdrückung. |
 
 Passen Sie die **Blockgröße** an, nachdem die gesamte Route funktioniert. Senken Sie es um eine Stufe und wiederholen Sie den gleichen Satz. Wenn Sie Klicks oder fehlende Wörter erhalten, stellen Sie den letzten sauberen Wert wieder her. Lassen Sie Lookahead und andere Effekte auf ihren Standardwerten, bis Sie eine stabile Grundlinie haben.
+
+> **Optional:** Treten auf einer unterstützten NVIDIA-Karte GPU-Delay-Spitzen auf? Siehe [Erweiterte Leistungsoptimierung: NVIDIA GPU Clock Locking](advanced-performance-optimization.md).
