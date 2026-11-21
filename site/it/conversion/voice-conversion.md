@@ -1,6 +1,6 @@
 # Converti una registrazione con Ilaria RVC
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La conversione vocale inizia con una performance. L'output solitamente segue le parole sorgente, il tempo, l'articolazione e il contorno dell'intonazione mentre cambia il suono della voce. Le decisioni sulla consegna iniziano comunque con la registrazione originale. Per una cover cantata, pianifica di convertire una voce solista isolata e successivamente mixare la voce convertita con quella strumentale.
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848540796335">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848607489158">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848540796335" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848607489158" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848540796335" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848607489158" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848540796335" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848607489158" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -177,7 +177,7 @@
 <span id="installation-and-updates" class="docs-anchor"></span><h1 id="instalación-y-actualizaciones">Instalación y actualizaciones</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Descargue la compilación de NVIDIA compatible desde Hugging Face. Extraiga todo el archivo en una carpeta local grabable y ejecute RUN_ILARIA_RVC.bat allí.</div>
 <p><a href="https://github.com/TheStingerX/Ilaria-RVC">GitHub</a> · <a href="https://huggingface.co/TheStinger/Ilaria_RVC">Hugging Face</a></p>
-<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true">Descarga Ilaria RVC 2.4.0 para Windows (ZIP)</a></p>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Descarga Ilaria RVC 2.4.7 para Windows (ZIP)</a></p>
 <span id="install-the-windows-package" class="docs-anchor"></span><h2 id="instalar-el-paquete-de-windows">Instalar el paquete de Windows</h2>
 <p>Descargue la compilación de NVIDIA compatible desde <a href="https://huggingface.co/TheStinger/Ilaria_RVC">Hugging Face</a>. Extraiga todo el archivo en una carpeta local grabable y ejecute <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code> allí. El iniciador y el tiempo de ejecución incluido deben permanecer juntos. Si no se abre ninguna pestaña del navegador, intente con <code translate="no" v-pre>http://127.0.0.1:6969</code> en la misma PC.</p>
 <span id="before-the-first-launch" class="docs-anchor"></span><h2 id="antes-del-primer-lanzamiento">Antes del primer lanzamiento</h2>
@@ -226,12 +226,12 @@
 <li>Una vez que se abra la interfaz, convierta un WAV corto y limpio con un modelo de inferencia compatible conocido. Verifique el resultado antes de ejecutar un lote grande o comenzar a entrenar. Consulte <a href="../inference/">Inferencia única y por lotes</a>.</li>
 </ol>
 <p>Las pruebas de cómputo y retropropagación y la carga de ContentVec se verificaron en un RTX 4070. Se espera compatibilidad con otras tarjetas a partir de su arquitectura y selección de tiempo de ejecución, y no se ha garantizado modelo por modelo.</p>
-<span id="upgrade-to-240" class="docs-anchor"></span><h2 id="actualiza-a-la-240">Actualiza a la 2.4.0</h2>
-<p>Descarga el ZIP completo, extráelo en una carpeta nueva y ejecuta <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>.</p>
+<span id="upgrade-to-247" class="docs-anchor"></span><h2 id="actualiza-a-la-247">Actualiza a la 2.4.7</h2>
+<p>Descarga el ZIP completo (<code translate="no" v-pre>ILARIA_RVC-2.4.7.zip</code>), extráelo en una carpeta nueva y ejecuta <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>.</p>
 <p>Conserva la instalación anterior como copia de seguridad. Copia modelos a models/, datos a app/datasets/ y experimentos completos a app/logs/. El actualizador de la 2.3.0 usa la estructura anterior.</p>
 <p><a href="../gpu-compatibility/">GPU compatibles</a></p>
-<span id="update-from-240" class="docs-anchor"></span><h3 id="actualizar-desde-la-240">Actualizar desde la 2.4.0</h3>
-<p>Instala e inicia primero la 2.4.0. Abre <strong>Other → Update Ilaria RVC</strong> e instala las actualizaciones incrementales hasta la <strong>2.4.6</strong> (<code translate="no" v-pre>2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6</code>).</p>
+<span id="update-from-242---246" class="docs-anchor"></span><h3 id="actualizar-desde-242---246">Actualizar desde 2.4.2 - 2.4.6</h3>
+<p>Si ya usas una versión entre <strong>2.4.2</strong> y <strong>2.4.6</strong>, abre <strong>Other → Update Ilaria RVC → Check for updates</strong> y elige <strong>Download and restart</strong>. Desde <strong>2.4.0</strong> o <strong>2.4.1</strong>, actualiza primero a <strong>2.4.2</strong> o extrae el ZIP completo de <strong>2.4.7</strong>.</p>
 
                 
                 <!-- Required only on API pages -->
@@ -266,7 +266,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-20T23:24:10.000Z">21/11/2026 · 00:24</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

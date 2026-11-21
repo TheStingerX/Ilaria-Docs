@@ -1,6 +1,6 @@
 # Every Other panel explained
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Use **Other** to manage files, inspect or combine models, review audio and maintain the app. Start by deciding whether you need an inference model, a content encoder or a G/D training pair. They belong to different parts of RVC.
 

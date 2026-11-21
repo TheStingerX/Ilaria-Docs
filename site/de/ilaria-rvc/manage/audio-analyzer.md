@@ -1,6 +1,6 @@
 # Audioanalysator
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Öffnen Sie **Andere → Audioanalysator**. Fügen Sie bis zu acht Audiodateien zum Vergleichen hinzu. Ein nützlicher Satz enthält die ursprüngliche Eingabe, eine Basiskonvertierung und eine oder zwei Varianten, die mit einer geänderten Einstellung erstellt wurden.
 

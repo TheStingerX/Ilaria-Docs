@@ -1,6 +1,6 @@
 # Sintesi vocale
 
-[Scarica Ilaria RVC 2.4.0 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Usa **Inferenza → TTS** per trasformare il testo scritto in una registrazione. Puoi ascoltare direttamente il discorso generato o convertirlo con un modello RVC. Le due fasi svolgono compiti diversi: il motore vocale decide come pronunciare e ritmo la sceneggiatura, mentre RVC modifica il carattere vocale della registrazione. Se un nome viene pronunciato male nel primo risultato, correggi lo script o la voce di partenza prima di sintonizzare RVC.
 

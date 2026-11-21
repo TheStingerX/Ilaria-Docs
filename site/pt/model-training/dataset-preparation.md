@@ -1,6 +1,6 @@
 # Prepare um conjunto de dados de voz
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Cada clipe ensina ao modelo algo sobre sua voz alvo. Antes do treinamento, decida quais partes da voz você deseja que o modelo administre e, em seguida, mantenha gravações que demonstrem essas partes claramente. Comece com o material que você tem permissão para usar no treinamento e mantenha uma cópia separada dos arquivos originais.
 

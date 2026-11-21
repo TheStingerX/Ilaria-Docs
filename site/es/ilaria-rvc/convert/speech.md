@@ -1,6 +1,6 @@
 # Texto a voz
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Utilice **Inferencia → TTS** para convertir el texto escrito en una grabación. Puedes escuchar el discurso generado directamente o convertirlo con un modelo RVC. Las dos etapas realizan trabajos diferentes: el motor de voz decide cómo se pronuncia y el ritmo del guión, mientras que RVC cambia el carácter de la voz de la grabación. Si un nombre se pronuncia mal en el primer resultado, corrija el guión o la voz de origen antes de ajustar RVC.
 

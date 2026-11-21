@@ -2,7 +2,7 @@
 
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Install the Windows package
 
@@ -32,14 +32,14 @@ If you have more than one GPU, read the launcher log to see which runtime actual
 
 The compute and backpropagation tests and ContentVec loading were verified on an RTX 4070. Compatibility on other cards is expected from their architecture and runtime selection, and has not been guaranteed model by model.
 
-## Upgrade to 2.4.0
+## Upgrade to 2.4.7
 
-Download the full ZIP, extract it into a new folder and run `RUN_ILARIA_RVC.bat`.
+Download the full ZIP (`ILARIA_RVC-2.4.7.zip`), extract it into a new folder, and run `RUN_ILARIA_RVC.bat`.
 
 Keep the old installation as a backup. Copy voice models to the new models/ folder, datasets to app/datasets/ and complete training experiments to app/logs/. The 2.3.0 updater uses the old layout, so install from the full archive.
 
 [Compatible GPUs](gpu-compatibility.md)
 
-### Update from 2.4.0
+### Update from 2.4.2 - 2.4.6
 
-Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install the incremental updates up to **2.4.6** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6`).
+If you already run **2.4.2** through **2.4.6**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. From **2.4.0** or **2.4.1**, update to **2.4.2** first or extract the full **2.4.7** ZIP.

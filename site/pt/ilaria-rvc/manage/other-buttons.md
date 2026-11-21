@@ -1,6 +1,6 @@
 # Todos os outros painéis explicados
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Use **Outros** para gerenciar arquivos, inspecionar ou combinar modelos, revisar áudio e manter o aplicativo. Comece decidindo se você precisa de um modelo de inferência, um codificador de conteúdo ou um par de treinamento G/D. Eles pertencem a diferentes partes do RVC.
 

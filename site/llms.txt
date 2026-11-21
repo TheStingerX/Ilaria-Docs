@@ -35,7 +35,7 @@
 - [Files, source setup and maintenance](https://docs.ilariarvc.shop/ilaria-rvc/install/source-layout.md): An inference export can be used for conversion.
 - [System Requirements for Ilaria RVC](https://docs.ilariarvc.shop/ilaria-rvc/install/requirements.md): Ilaria RVC runs locally on your PC using PyTorch 2.10.0 and NVIDIA CUDA.
 - [Compatible GPUs](https://docs.ilariarvc.shop/ilaria-rvc/install/gpu-compatibility.md): The Windows ZIP is about 5.00 GB. Extract it to a new folder and run RUN_ILARIA_RVC.bat, or RUN_ILARIA_RVC_LOGS.bat for logs. ContentVec and RMVPE are included.
-- [Version history and release differences](https://docs.ilariarvc.shop/ilaria-rvc/install/version-history.md): The latest Windows release is 2.4.6. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the release notes.
+- [Version history and release differences](https://docs.ilariarvc.shop/ilaria-rvc/install/version-history.md): The latest Windows release is 2.4.7. Check your installed version under Other → Update Ilaria RVC. Use All changes so far there to browse the release notes.
 
 ### Cloud
 
@@ -85,6 +85,7 @@
 - [Train, evaluate and export a voice in Applio](https://docs.ilariarvc.shop/other-rvcs/applio/training.md): A first run proves that your recordings, configuration and hardware can produce an export you can convert with. Work on copied recordings you have permission to use.
 - [Use Applio with a microphone](https://docs.ilariarvc.shop/other-rvcs/applio/realtime.md): Prove that your model works with one recorded clip before setting up live audio. Use headphones for monitoring so the microphone cannot re-capture the speakers.
 - [Turn a short script into converted speech](https://docs.ilariarvc.shop/other-rvcs/applio/tts.md): Applio uses an online Edge TTS voice to read your text and an RVC model to change the generated voice.
+- [Applio Realtime on Cloud](https://docs.ilariarvc.shop/other-rvcs/applio/cloud.md): Run Applio and its Realtime tab in the cloud using Google Colab, Kaggle, or Lightning.AI when your PC lacks a supported GPU.
 
 ### RVC WebUI (Mainline - Original RVC)
 
@@ -102,11 +103,13 @@
 
 - [Install Okada TG Developed Fork](https://docs.ilariarvc.shop/other-rvcs/tgr/installation.md): TG Developed Fork (TGR) comes from the Deiteris branch of the w-okada family. The publisher documents this fork as RVC-only.
 - [Set up live audio in Okada TG Developed Fork](https://docs.ilariarvc.shop/other-rvcs/tgr/live-audio.md): Use a compatible RVC inference checkpoint and a working microphone. First prove that the converted signal reaches your headphones.
+- [Okada TG Developed Fork on Cloud](https://docs.ilariarvc.shop/other-rvcs/tgr/cloud.md): Run Okada TG Developed Fork in the cloud using Google Colab, Kaggle, or Lightning.AI when your PC lacks a supported local GPU.
 
 ### Deiteris w-okada Fork
 
 - [Install Deiteris w-okada Fork](https://docs.ilariarvc.shop/other-rvcs/deiteris/installation.md): Deiteris w-okada Fork is a popular community-maintained fork of w-okada/voice-changer (VCClient) focused on lower latency, cleaner audio, stability fixes, and updated backends for modern NVIDIA (CUDA), AMD/Intel (DirectML), and Apple Silicon hardware.
 - [Route and tune Deiteris w-okada Fork](https://docs.ilariarvc.shop/other-rvcs/deiteris/live-audio.md): Always wear headphones during live conversion. Using speakers feeds the converted voice back into your microphone and creates echo and feedback loops.
+- [Deiteris w-okada Fork on Cloud](https://docs.ilariarvc.shop/other-rvcs/deiteris/cloud.md): Run Deiteris w-okada Fork in the cloud using Google Colab, Kaggle, or Lightning.AI when your PC lacks a supported local GPU.
 
 ### RVC GUI
 

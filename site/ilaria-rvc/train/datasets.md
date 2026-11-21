@@ -1,6 +1,6 @@
 # Datasets, Dataset Checker & Audio Analyzer
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Your dataset is the single biggest factor deciding how natural, clean, and expressive your RVC voice model will sound. Even the best training settings cannot fix noisy, reverberant, or distorted source recordings.
 

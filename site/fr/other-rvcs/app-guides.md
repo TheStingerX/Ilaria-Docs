@@ -47,7 +47,7 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 
 | Application | Training | Inférence (fichiers) | Realtime | Liens du projet |
 | --- | --- | --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Oui · Hérité de RVC WebUI (Mainline - Original RVC), sans mises à jour futures | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
+| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Non | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Oui | Oui | Oui · Lanceur séparé | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
 | [Applio](../other-rvcs/applio/installation.md) | Oui | Oui | Oui | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
 | [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) |

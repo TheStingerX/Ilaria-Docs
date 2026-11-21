@@ -1,6 +1,6 @@
 # Datasets, Dataset Checker y Audio Analyzer
 
-[Descargar Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descargar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Tu dataset es el factor más importante para decidir qué tan natural, limpia y expresiva sonará tu voz RVC. Ni siquiera los mejores ajustes de entrenamiento pueden arreglar grabaciones ruidosas, con eco o distorsionadas.
 

@@ -28,7 +28,7 @@ You can also run Ilaria RVC on Kaggle using its remote GPU. This option works ev
 
 Ilaria RVC is a Windows application for converting recordings and training voice models. Its interface opens in a browser and the conversion engine runs on your computer. The Windows package is built for NVIDIA GPUs.
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Browse voice demos](https://ilariarvc.shop/en/demos/) · [Read the changelog](ilaria-rvc/install/version-history.md)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Browse voice demos](https://ilariarvc.shop/en/demos/) · [Read the changelog](ilaria-rvc/install/version-history.md)
 
 </div>
 
@@ -72,12 +72,12 @@ Use the navigation to find setup, conversion, training, and troubleshooting guid
 
 ## Documentation at a glance
 
-- **Pages in total:** **88** pages (`87` guides + Home)
-- **Total pages across all 6 languages (`en`, `it`, `es`, `fr`, `de`, `pt`):** **528** pages (`88 x 6`)
+- **Pages in total:** **92** pages (`91` guides + Home)
+- **Total pages across all 6 languages (`en`, `it`, `es`, `fr`, `de`, `pt`):** **552** pages (`92 x 6`)
 
 ## A few fun facts about the site and Ilaria
 
 - **Born from real troubleshooting:** Ilaria (`TheStingerX` / `thestingerx` on Discord) wrote and expanded these docs directly while building **Ilaria RVC**, training models (such as *Itaila*), and testing real setups on Windows, Kaggle, Google Colab, and Lightning AI.
-- **From `1.1 Beta` to `2.4.6`:** Ilaria RVC started as a themed Windows WebUI and evolved to support **NVIDIA RTX 50 series (Blackwell)** on CUDA 12.8, **native BF16 training**, **Kokoro v1.0 TTS**, **Safetensors ↔ PTH** conversion, and built-in model/pretrain catalogs.
+- **From `1.1 Beta` to `2.4.7`:** Ilaria RVC started as a themed Windows WebUI and evolved to support **NVIDIA RTX 50 series (Blackwell)** on CUDA 12.8, **native BF16 training**, **Kokoro v1.0 TTS**, **Safetensors ↔ PTH** conversion, and built-in model/pretrain catalogs.
 - **More than one app:** Over time, **Ilaria Docs** grew into a full voice-conversion hub covering **11 RVC apps and forks** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI, and RVC Model Merger) plus **Non-RVC** tools like **YuneVoix**, **Causal Voice Changer**, **UVR5**, and **MVSep**.
 - **Synchronized in 6 languages:** Every single guide on this site is maintained 1:1 across English, Italian, Spanish, French, German, and Portuguese.

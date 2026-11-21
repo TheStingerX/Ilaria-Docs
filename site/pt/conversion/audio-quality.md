@@ -1,6 +1,6 @@
 # Ajuste o tom e a qualidade do áudio
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Escolha um pequeno trecho que contenha o problema. Faça uma conversão de referência e compare-a com uma configuração alterada de cada vez. Ouça em níveis semelhantes para que um resultado mais alto não vença a comparação apenas pelo volume. Para música, compare primeiro o vocal convertido sozinho e depois na mixagem.
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848540786833">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848607479484">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848540786833" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848607479484" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848540786833" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848607479484" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848540786833" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848607479484" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -177,29 +177,108 @@
 <h1 id="rvc-blue-rvc-realtime-gui">RVC Blue (RVC-Realtime-GUI)</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">RVC Blue è un cambia voce desktop Windows basato sulla GUI in tempo reale di RVC WebUI (Mainline - Original RVC).</div>
 <p><a href="https://github.com/niel-blue/RVC-Realtime-GUI">GitHub</a> · <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">Hugging Face</a></p>
-<p>RVC Blue è un cambia voce desktop Windows basato sulla GUI in tempo reale di RVC WebUI (Mainline - Original RVC). Converte microfono, file audio e audio delle applicazioni Windows supportate in tempo reale. I modelli vengono addestrati in un&#x27;applicazione separata. L&#x27;input del file passa attraverso il motore live e può essere registrato in WAV.</p>
-<span id="install-the-windows-package" class="docs-anchor"></span><h2 id="installa-il-pacchetto-windows">Installa il pacchetto Windows</h2>
+<p><strong>RVC Blue (RVC-Realtime-GUI)</strong> è un client desktop Windows per la conversione vocale RVC in tempo reale a bassa latenza. Basato sulla GUI realtime di RVC WebUI, integra le ottimizzazioni recenti dell&#x27;inferenza dal vivo, il <strong>CUDA Graph warm-up</strong> (per ridurre l&#x27;overhead della GPU a regime) e i fix alla riduzione rumore su ingresso e uscita.</p>
+<ul>
+<li><strong>Solo inferenza</strong>: RVC Blue non addestra modelli. Addestra la voce su <strong>Ilaria RVC</strong> (o un altro trainer) e importa qui i file <code translate="no" v-pre>.pth</code> e <code translate="no" v-pre>.index</code> esportati per l&#x27;inferenza.</li>
+<li><strong>Tre sorgenti di ingresso</strong>: <strong>Microfono</strong> dal vivo, <strong>File audio</strong> (tramite FFmpeg incluso) e <strong>Audio di un&#x27;applicazione Windows</strong> (cattura per processo).</li>
+<li><strong>Voce inclusa</strong>: include il modello <strong>Sakura</strong>, una voce naturale di uso quotidiano (uso commerciale consentito) per provare subito l&#x27;app.</li>
+</ul>
+<span id="1-choose-a-build-and-install" class="docs-anchor"></span><h2 id="1-scegli-la-build-e-installa">1. Scegli la build e installa</h2>
+<p>Ogni pacchetto su Hugging Face è autonomo e include runtime Python, PyTorch/CUDA, FFmpeg, asset HuBERT/RMVPE/FCPE e il set di modelli di base. Non serve installare separatamente Python, CUDA Toolkit o FFmpeg.</p>
+<retype-table copy-text="| Build | Launcher | Hardware NVIDIA consigliato |
+| --- | --- | --- |
+| **CUDA 12.8** *(Standard)* | `RVC-Realtime-GUI-CUDA128.bat` | GPU NVIDIA attuali, inclusa serie RTX 50 (Blackwell) |
+| **CUDA 11.8** *(Compatibilità)* | Launcher CUDA 11.8 incluso | GPU NVIDIA più datate o sistemi con ambiente/driver CUDA 11.8 |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Build</th>
+<th>Launcher</th>
+<th>Hardware NVIDIA consigliato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CUDA 12.8</strong> <em>(Standard)</em></td>
+<td><code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code></td>
+<td>GPU NVIDIA attuali, inclusa serie RTX 50 (Blackwell)</td>
+</tr>
+<tr>
+<td><strong>CUDA 11.8</strong> <em>(Compatibilità)</em></td>
+<td>Launcher CUDA 11.8 incluso</td>
+<td>GPU NVIDIA più datate o sistemi con ambiente/driver CUDA 11.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 <ol>
-<li>Controlla il modello della tua GPU NVIDIA in <strong>Task Manager → Prestazioni</strong>. Apri <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">RVC Blue downloads</a> e scegli il pacchetto per il tuo hardware. Il progetto fornisce un pacchetto standard <strong>CUDA 12.8</strong>, incluso il supporto Blackwell, e un pacchetto di compatibilità <strong>CUDA 11.8</strong>. Utilizza un driver compatibile con la build selezionata.</li>
-<li>Estrai l&#x27;intero archivio in una cartella locale scrivibile. Python, PyTorch, FFmpeg e le risorse di inferenza richieste vengono fornite con il pacchetto.</li>
-<li>Per CUDA 12.8, esegui <code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code> da quella cartella. Per CUDA 11.8, utilizzare il launcher in bundle. Attendi il primo avvio per completare il caricamento del runtime della GPU.</li>
-<li>Inizia con la voce inclusa o inserisci la tua inferenza <code translate="no" v-pre>.pth</code> e il relativo indice corrispondente in una cartella per modello sotto <code translate="no" v-pre>models/</code>. Ad esempio, posiziona <code translate="no" v-pre>MyVoice.pth</code> e <code translate="no" v-pre>added_MyVoice.index</code> all&#x27;interno di <code translate="no" v-pre>models/MyVoice/</code>. Il nome della cartella viene visualizzato nell&#x27;elenco dei modelli. Aggiorna o riapri l&#x27;app dopo aver aggiunto un modello.</li>
+<li>Controlla il modello della tua GPU NVIDIA in <strong>Gestione attività → Prestazioni → GPU</strong>.</li>
+<li>Apri <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">RVC Blue su Hugging Face</a> e scarica il pacchetto adatto.</li>
+<li>Estrai l&#x27;intero archivio in una <strong>cartella locale breve e scrivibile</strong>, ad esempio <code translate="no" v-pre>C:\RVC-Realtime-GUI</code>. Non avviare l&#x27;app da dentro lo ZIP ed evita <code translate="no" v-pre>Programmi</code> o cartelle sincronizzate con OneDrive.</li>
+<li>Avvia <code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code> (oppure il launcher CUDA 11.8).</li>
+<li><strong>Attendi il completamento del primo avvio</strong>: la prima apertura richiede più tempo per inizializzare asset di inferenza, runtime CUDA e warm-up CUDA Graph. Aspetta che compaia la finestra prima di pensare che si sia bloccato.</li>
 </ol>
-<span id="test-the-voice-locally" class="docs-anchor"></span><h2 id="testa-la-voce-localmente">Testa la voce localmente</h2>
-<p>Scegli il tuo microfono fisico come ingresso. Seleziona le cuffie per il monitoraggio, scegli una voce e fai clic su <strong>Avvia</strong>. Pronuncia una breve frase e fai una pausa. Mantieni le impostazioni predefinite di buffer e tono per il primo test. L&#x27;app consente dispositivi di input, output e monitoraggio indipendenti. Inizia con WASAPI se non usi hardware ASIO. Se utilizzi ASIO nativo, inizia con il buffer consigliato dal driver.</p>
-<span id="route-audio-to-a-game-or-call" class="docs-anchor"></span><h2 id="indirizza-laudio-a-un-gioco-o-a-una-chiamata">Indirizza l&#x27;audio a un gioco o a una chiamata</h2>
-<p>Scegli l&#x27;endpoint di riproduzione del cavo virtuale come uscita del convertitore. Nell&#x27;app di destinazione, seleziona l&#x27;endpoint di registrazione come microfono. Mantieni la riproduzione del gioco o della chiamata sulle cuffie. <strong>VAC Lite</strong> e <strong>VB-CABLE</strong> sono opzioni. Controlla i nomi dei dispositivi nella <a href="../../vonovox/live-audio/">procedura dettagliata del cavo virtuale</a>. Effettua una breve registrazione locale nella destinazione prima di partecipare a una chiamata.</p>
-<span id="use-a-file-or-another-application-as-input" class="docs-anchor"></span><h2 id="utilizza-un-file-o-unaltra-applicazione-come-input">Utilizza un file o un&#x27;altra applicazione come input</h2>
-<p>Per un file audio, seleziona la modalità di input file e prova un breve WAV. Scegli un dispositivo di output e monitor prima di iniziare. Utilizza i controlli di registrazione per salvare l&#x27;output WAV. L&#x27;app espone anche opzioni per registrare l&#x27;input e l&#x27;output in modo indipendente o in un layout combinato.</p>
-<p>Nelle build che includono l&#x27;acquisizione dell&#x27;applicazione, cambia la sorgente di input in un&#x27;applicazione, aggiorna l&#x27;elenco e seleziona l&#x27;app che sta riproducendo l&#x27;audio. Utilizza l&#x27;acquisizione audio per processo di Windows. L&#x27;uscita ASIO diretta può ignorare il percorso di acquisizione. L&#x27;audio dell&#x27;applicazione originale rimane udibile a meno che non si regoli la riproduzione separatamente.</p>
-<span id="troubleshoot-the-first-test" class="docs-anchor"></span><h2 id="risolvi-i-problemi-con-il-primo-test">Risolvi i problemi con il primo test</h2>
+<span id="2-add-your-voice-models" class="docs-anchor"></span><h2 id="2-aggiungi-i-tuoi-modelli-vocali">2. Aggiungi i tuoi modelli vocali</h2>
+<p>Crea una sottocartella per ogni voce dentro <code translate="no" v-pre>models/</code> nella cartella estratta di RVC Blue:</p>
+<div id="2-aggiungi-i-tuoi-modelli-vocali-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">models/
+  MyVoice/
+    MyVoice.pth
+    added_MyVoice.index
+    preview.png</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong>Nome della cartella</strong>: è il nome mostrato nella galleria dei modelli.</li>
+<li><strong>File modello richiesto</strong>: usa un <strong><code translate="no" v-pre>.pth</code> di inferenza</strong>, non un checkpoint di training (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>).</li>
+<li><strong>Index e anteprima opzionali</strong>: inserisci nella stessa cartella il relativo file <code translate="no" v-pre>added_*.index</code> e un&#x27;immagine <code translate="no" v-pre>.png</code>, <code translate="no" v-pre>.jpg</code> o <code translate="no" v-pre>.jpeg</code> per mostrare automaticamente l&#x27;anteprima.</li>
+<li><strong>Ricarica</strong>: clicca su <strong>Reload</strong> nell&#x27;app (o riavvia RVC Blue) dopo aver aggiunto o sostituito un modello. Le impostazioni generali per modello vengono salvate automaticamente.</li>
+</ul>
+<span id="3-configure-audio-devices-and-test-locally" class="docs-anchor"></span><h2 id="3-configura-i-dispositivi-audio-e-fai-un-test-locale">3. Configura i dispositivi audio e fai un test locale</h2>
+<p>RVC Blue permette di scegliere <strong>Input</strong> (ingresso), <strong>Output</strong> (uscita) e <strong>Monitor</strong> in modo indipendente:</p>
+<ul>
+<li><strong>Input</strong>: il microfono fisico (oppure un file audio o un&#x27;applicazione Windows).</li>
+<li><strong>Output</strong>: dove viene inviata la voce convertita (le cuffie per il test locale, oppure un cavo virtuale per chiamate e giochi).</li>
+<li><strong>Monitor</strong>: seconda uscita opzionale per riascoltarti mentre <strong>Output</strong> invia l&#x27;audio a Discord o OBS.</li>
+</ul>
+<h3 id="wasapi-vs-asio">WASAPI vs ASIO</h3>
+<ul>
+<li><strong>Senza scheda audio ASIO</strong>: inizia con <strong>WASAPI</strong>.</li>
+<li><strong>Con driver ASIO nativo</strong>: RVC Blue parte con la dimensione del buffer consigliata dal driver. Puoi anche combinare ingresso/monitor ASIO con uscita WASAPI, oppure usare coppie di canali diverse sullo stesso driver ASIO.</li>
+</ul>
+<span id="first-local-test" class="docs-anchor"></span><h3 id="primo-test-in-locale">Primo test in locale</h3>
+<ol>
+<li>Imposta <strong>Input</strong> sul tuo microfono fisico.</li>
+<li>Imposta <strong>Output</strong> sulle tue cuffie (lascia <strong>Monitor</strong> spento per ora, così eviti di sentire la voce doppia).</li>
+<li>Seleziona <strong>Sakura</strong> (o il tuo modello) e lascia buffer e pitch ai valori predefiniti.</li>
+<li>Premi <strong>Start</strong>, pronuncia una breve frase e fai una pausa per verificare latenza, chiarezza ed eventuali rumori di fondo.</li>
+</ol>
+<span id="4-route-audio-to-discord-obs-or-a-game" class="docs-anchor"></span><h2 id="4-invia-laudio-a-discord-obs-o-a-un-gioco">4. Invia l&#x27;audio a Discord, OBS o a un gioco</h2>
+<p>Per usare la voce convertita in un&#x27;altra app, collega RVC Blue tramite un cavo audio virtuale (<strong>VAC Lite</strong> o <strong>VB-CABLE</strong>):</p>
+<ol>
+<li>Imposta <strong>Output</strong> di RVC Blue sul dispositivo di riproduzione del cavo virtuale (es. <code translate="no" v-pre>CABLE Input</code> o <code translate="no" v-pre>Line 1</code>).</li>
+<li>Se vuoi riascoltarti, imposta <strong>Monitor</strong> di RVC Blue sulle tue cuffie.</li>
+<li>In Discord, OBS o nel gioco, seleziona il dispositivo di registrazione del cavo virtuale (es. <code translate="no" v-pre>CABLE Output</code> o <code translate="no" v-pre>Line 1</code>) come <strong>Microfono</strong>.</li>
+<li>Mantieni l&#x27;audio di gioco o chiamata sulle tue cuffie.</li>
+<li>Fai una breve registrazione di prova nell&#x27;app di destinazione prima di entrare in chiamata.</li>
+</ol>
+<p>Per installazione e nomi dei dispositivi del cavo virtuale, consulta la <a href="../../vonovox/live-audio/">guida al cavo virtuale</a>.</p>
+<span id="5-file-input-application-capture-and-wav-recording" class="docs-anchor"></span><h2 id="5-input-da-file-cattura-applicazioni-e-registrazione-wav">5. Input da file, cattura applicazioni e registrazione WAV</h2>
+<ul>
+<li><strong>Input da file audio</strong>: imposta la sorgente su <strong>File</strong>, scegli un breve file WAV o audio (decodificato con FFmpeg incluso) e verifica i dispositivi <strong>Output</strong> e <strong>Monitor</strong> prima di premere <strong>Start</strong>. Le impostazioni di uscita e monitor vengono mantenute tra una prova e l&#x27;altra.</li>
+<li><strong>Cattura audio da applicazione Windows</strong>: imposta la sorgente su <strong>Application</strong>, clicca su <strong>Refresh</strong> e seleziona un&#x27;app in esecuzione. Usa la cattura per processo di Windows. Le app già rilevate restano memorizzate e si riconnettono al riavvio. L&#x27;audio inviato direttamente via ASIO fuori dal normale percorso Windows potrebbe non essere catturato e l&#x27;audio originale dell&#x27;app <strong>non viene silenziato automaticamente</strong> (abbassalo o silenzialo a parte se non vuoi sentirlo).</li>
+<li><strong>Registrazione WAV</strong>: i controlli integrati consentono di salvare file WAV con <strong>input/output separati</strong>, <strong>mixati</strong> oppure su <strong>canali L/R separati</strong>.</li>
+</ul>
+<span id="6-troubleshoot-common-issues" class="docs-anchor"></span><h2 id="6-risoluzione-dei-problemi-comuni">6. Risoluzione dei problemi comuni</h2>
 <retype-table copy-text="| Sintomo | Cosa controllare |
 | --- | --- |
-| Il programma si chiude all'avvio | Esegui il launcher in bundle dalla cartella estratta e leggi il primo errore. Controlla la build CUDA selezionata e il driver NVIDIA. |
-| Non appare una nuova voce | Verifica la cartella per modello e aggiorna l'elenco dei modelli. Utilizza un'esportazione di inferenza anziché un checkpoint di formazione. |
-| Le cuffie funzionano ma Discord o il gioco sono silenziosi | Seleziona l'endpoint di registrazione via cavo virtuale nella destinazione. Controllare separatamente l'uscita del convertitore. |
-| Si sentono due voci | Controlla se l'app originale è ancora udibile o se sono attivi due percorsi di monitoraggio. |
-| L'audio si interrompe sotto carico | Ripristina il buffer predefinito o aumentalo leggermente. Ripeti il ​​test mentre l'altra app è in esecuzione. |">
+| L'app sembra bloccata al primo avvio | Attendi 1-2 minuti per l'inizializzazione iniziale del runtime CUDA e del warm-up CUDA Graph. |
+| Il programma si chiude subito all'avvio | Avvia il file `.bat` dalla cartella estratta (es. `C:\RVC-Realtime-GUI`) e leggi l'errore in console. Verifica che i driver NVIDIA siano compatibili con CUDA 12.8 o 11.8. |
+| Una nuova voce non compare | Controlla che il modello sia in `models/&lt;NomeVoce&gt;/` e sia un `.pth` di inferenza (non un checkpoint di training), poi clicca su **Reload**. |
+| In cuffia funziona, ma Discord o il gioco non ricevono audio | Verifica che **Output** in RVC Blue sia il dispositivo di riproduzione del cavo virtuale e che Discord/gioco usi il corrispondente dispositivo di registrazione come microfono. |
+| Si sentono due voci | Disattiva **Monitor** se **Output** è già sulle cuffie, oppure silenzia l'app sorgente quando usi la cattura applicazioni. |
+| L'audio scoppietta o si interrompe sotto carico | Ripristina il buffer predefinito o aumentalo leggermente, poi riprova con gioco o chiamata aperti. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -210,24 +289,28 @@
 </thead>
 <tbody>
 <tr>
-<td>Il programma si chiude all&#x27;avvio</td>
-<td>Esegui il launcher in bundle dalla cartella estratta e leggi il primo errore. Controlla la build CUDA selezionata e il driver NVIDIA.</td>
+<td>L&#x27;app sembra bloccata al primo avvio</td>
+<td>Attendi 1-2 minuti per l&#x27;inizializzazione iniziale del runtime CUDA e del warm-up CUDA Graph.</td>
 </tr>
 <tr>
-<td>Non appare una nuova voce</td>
-<td>Verifica la cartella per modello e aggiorna l&#x27;elenco dei modelli. Utilizza un&#x27;esportazione di inferenza anziché un checkpoint di formazione.</td>
+<td>Il programma si chiude subito all&#x27;avvio</td>
+<td>Avvia il file <code translate="no" v-pre>.bat</code> dalla cartella estratta (es. <code translate="no" v-pre>C:\RVC-Realtime-GUI</code>) e leggi l&#x27;errore in console. Verifica che i driver NVIDIA siano compatibili con CUDA 12.8 o 11.8.</td>
 </tr>
 <tr>
-<td>Le cuffie funzionano ma Discord o il gioco sono silenziosi</td>
-<td>Seleziona l&#x27;endpoint di registrazione via cavo virtuale nella destinazione. Controllare separatamente l&#x27;uscita del convertitore.</td>
+<td>Una nuova voce non compare</td>
+<td>Controlla che il modello sia in <code translate="no" v-pre>models/&lt;NomeVoce&gt;/</code> e sia un <code translate="no" v-pre>.pth</code> di inferenza (non un checkpoint di training), poi clicca su <strong>Reload</strong>.</td>
+</tr>
+<tr>
+<td>In cuffia funziona, ma Discord o il gioco non ricevono audio</td>
+<td>Verifica che <strong>Output</strong> in RVC Blue sia il dispositivo di riproduzione del cavo virtuale e che Discord/gioco usi il corrispondente dispositivo di registrazione come microfono.</td>
 </tr>
 <tr>
 <td>Si sentono due voci</td>
-<td>Controlla se l&#x27;app originale è ancora udibile o se sono attivi due percorsi di monitoraggio.</td>
+<td>Disattiva <strong>Monitor</strong> se <strong>Output</strong> è già sulle cuffie, oppure silenzia l&#x27;app sorgente quando usi la cattura applicazioni.</td>
 </tr>
 <tr>
-<td>L&#x27;audio si interrompe sotto carico</td>
-<td>Ripristina il buffer predefinito o aumentalo leggermente. Ripeti il ​​test mentre l&#x27;altra app è in esecuzione.</td>
+<td>L&#x27;audio scoppietta o si interrompe sotto carico</td>
+<td>Ripristina il buffer predefinito o aumentalo leggermente, poi riprova con gioco o chiamata aperti.</td>
 </tr>
 </tbody>
 </table>
@@ -268,7 +351,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:04:05.000Z">21/11/2026 · 21:04</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

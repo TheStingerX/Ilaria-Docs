@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848540815228">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848607508322">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="RVC Blue (RVC-Realtime-GUI)">
-    <meta name="description" content="RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
+    <meta name="description" content="RVC Blue ist ein Windows-Desktop-Voice-Changer, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/de/ilaria-rvc/rvc-blue/installation/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848540815228" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848607508322" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848540815228" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848607508322" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848540815228" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848607508322" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:description" content="RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
+    <meta property="og:description" content="RVC Blue ist ein Windows-Desktop-Voice-Changer, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
-    <meta name="twitter:description" content="RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
+    <meta name="twitter:description" content="RVC Blue ist ein Windows-Desktop-Voice-Changer, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/rvc-blue/installation/">
@@ -175,65 +175,148 @@
 
                 <!-- Page content  -->
 <h1 id="rvc-blue-rvc-realtime-gui">RVC Blue (RVC-Realtime-GUI)</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">RVC Blue ist ein Windows-Desktop-Voice-Changer, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert.</div>
 <p><a href="https://github.com/niel-blue/RVC-Realtime-GUI">GitHub</a> · <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">Hugging Face</a></p>
-<p>RVC Blue ist ein Windows-Desktop-Sprachwechsler, der auf der Echtzeit-GUI von RVC WebUI (Mainline - Original RVC) basiert. Es konvertiert Mikrofon, Audiodatei und unterstütztes Windows-Anwendungsaudio in Echtzeit. Modelle werden in einer separaten Anwendung trainiert. Die Dateieingabe erfolgt über die Live-Engine und kann im WAV-Format aufgezeichnet werden.</p>
-<span id="install-the-windows-package" class="docs-anchor"></span><h2 id="installieren-sie-das-windows-paket">Installieren Sie das Windows-Paket</h2>
-<ol>
-<li>Überprüfen Sie das Modell Ihrer NVIDIA-GPU unter <strong>Task-Manager → Leistung</strong>. Öffnen Sie <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">RVC Blue Downloads</a> und wählen Sie das Paket für Ihre Hardware aus. Das Projekt bietet ein Standardpaket <strong>CUDA 12.8</strong>, einschließlich Blackwell-Unterstützung, und ein Kompatibilitätspaket <strong>CUDA 11.8</strong>. Verwenden Sie einen Treiber, der mit dem ausgewählten Build kompatibel ist.</li>
-<li>Extrahieren Sie das gesamte Archiv in einen beschreibbaren lokalen Ordner. Python, PyTorch, FFmpeg und die erforderlichen Inferenzressourcen sind im Paket enthalten.</li>
-<li>Führen Sie für CUDA 12.8 <code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code> aus diesem Ordner aus. Verwenden Sie für CUDA 11.8 den mitgelieferten Launcher. Warten Sie, bis der erste Start das Laden der GPU-Laufzeit abgeschlossen hat.</li>
-<li>Beginnen Sie mit der enthaltenen Stimme oder legen Sie Ihre eigene Schlussfolgerung <code translate="no" v-pre>.pth</code> und den zugehörigen Index in einem modellspezifischen Ordner unter <code translate="no" v-pre>models/</code> ab. Platzieren Sie beispielsweise <code translate="no" v-pre>MyVoice.pth</code> und <code translate="no" v-pre>added_MyVoice.index</code> innerhalb von <code translate="no" v-pre>models/MyVoice/</code>. Der Ordnername erscheint in der Modellliste. Aktualisieren Sie die App oder öffnen Sie sie erneut, nachdem Sie ein Modell hinzugefügt haben.</li>
-</ol>
-<span id="test-the-voice-locally" class="docs-anchor"></span><h2 id="testen-sie-die-stimme-lokal">Testen Sie die Stimme lokal</h2>
-<p>Wählen Sie Ihr physisches Mikrofon als Eingang. Wählen Sie Kopfhörer zur Überwachung aus, wählen Sie eine Stimme und klicken Sie auf <strong>Start</strong>. Sprechen Sie einen kurzen Satz und halten Sie inne. Behalten Sie die Standardeinstellungen für Puffer und Tonhöhe für den ersten Test bei. Die App ermöglicht unabhängige Eingabe-, Ausgabe- und Überwachungsgeräte. Beginnen Sie mit WASAPI, wenn Sie keine ASIO-Hardware verwenden. Wenn Sie natives ASIO verwenden, beginnen Sie mit dem vom Treiber empfohlenen Puffer.</p>
-<span id="route-audio-to-a-game-or-call" class="docs-anchor"></span><h2 id="leiten-sie-audio-zu-einem-spiel-oder-anruf-weiter">Leiten Sie Audio zu einem Spiel oder Anruf weiter</h2>
-<p>Wählen Sie den virtuellen Kabelwiedergabeendpunkt als Konverterausgang. Wählen Sie in der Ziel-App den Aufnahmeendpunkt als Mikrofon aus. Behalten Sie die Spiel- oder Anrufwiedergabe auf Ihren Kopfhörern bei. <strong>VAC Lite</strong> und <strong>VB-CABLE</strong> sind Optionen. Überprüfen Sie die Gerätenamen in der <a href="../../vonovox/live-audio/">Komplettlösung für virtuelle Kabel</a>. Machen Sie eine kurze lokale Aufnahme am Zielort, bevor Sie an einem Anruf teilnehmen.</p>
-<span id="use-a-file-or-another-application-as-input" class="docs-anchor"></span><h2 id="verwenden-sie-eine-datei-oder-eine-andere-anwendung-als-eingabe">Verwenden Sie eine Datei oder eine andere Anwendung als Eingabe.</h2>
-<p>Wählen Sie für eine Audiodatei den Dateieingabemodus und testen Sie eine kurze WAV-Datei. Wählen Sie vor dem Start ein Ausgabe- und Überwachungsgerät. Verwenden Sie die Aufnahmesteuerung, um die WAV-Ausgabe zu speichern. Die App bietet außerdem Optionen zum unabhängigen Aufzeichnen der Eingabe und Ausgabe oder in einem kombinierten Layout.</p>
-<p>Wechseln Sie in Builds, die Anwendungserfassung beinhalten, die Eingabequelle zu einer Anwendung, aktualisieren Sie die Liste und wählen Sie die App aus, die Audio abspielt. Dabei wird die prozessbezogene Audioerfassung von Windows verwendet. Die direkte ASIO-Ausgabe kann den Aufnahmepfad umgehen. Der ursprüngliche Anwendungston bleibt hörbar, es sei denn, Sie passen die Wiedergabe separat an.</p>
-<span id="troubleshoot-the-first-test" class="docs-anchor"></span><h2 id="fehlerbehebung-beim-ersten-test">Fehlerbehebung beim ersten Test</h2>
-<retype-table copy-text="| Symptom | Was zu überprüfen ist |
-| --- | --- |
-| Das Programm wird beim Start geschlossen | Führen Sie den mitgelieferten Launcher aus seinem extrahierten Ordner aus und lesen Sie den ersten Fehler. Überprüfen Sie den ausgewählten CUDA-Build und NVIDIA-Treiber. |
-| Es erscheint keine neue Stimme. | Überprüfen Sie den Ordner pro Modell und aktualisieren Sie die Modellliste. Verwenden Sie einen Inferenzexport anstelle eines Trainingsprüfpunkts. |
-| Kopfhörer funktionieren, aber Discord oder das Spiel ist stumm. | Wählen Sie den virtuellen Kabelaufzeichnungsendpunkt im Ziel aus. Überprüfen Sie den Wandlerausgang separat. |
-| Du hörst zwei Stimmen | Prüfen Sie, ob die Original-App noch hörbar ist oder ob zwei Überwachungsrouten aktiv sind. |
-| Audio wird unter Last unterbrochen. | Stellen Sie den Standardpuffer wieder her oder erhöhen Sie ihn leicht. Wiederholen Sie den Test, während die andere App ausgeführt wird. |">
+<p><strong>RVC Blue (RVC-Realtime-GUI)</strong> ist ein Windows-Desktop-Client für RVC-Stimmkonvertierung in Echtzeit mit niedriger Latenz. Basierend auf der Echtzeit-GUI von RVC WebUI integriert er aktuelle Echtzeit-Optimierungen, <strong>CUDA Graph Warm-up</strong> (geringere GPU-Dauerlast) sowie Korrekturen zur Rauschunterdrückung bei Ein- und Ausgang.</p>
+<ul>
+<li><strong>Nur Inferenz</strong>: RVC Blue trainiert keine Modelle. Trainiere deine Stimme in <strong>Ilaria RVC</strong> (oder einem anderen Trainer) und importiere hier die exportierten Inferenz-Dateien <code translate="no" v-pre>.pth</code> und <code translate="no" v-pre>.index</code>.</li>
+<li><strong>Drei Eingabequellen</strong>: Live-<strong>Mikrofon</strong>, <strong>Audiodatei</strong> (über integriertes FFmpeg) und <strong>Windows-Anwendungsaudio</strong> (Prozess-Erfassung).</li>
+<li><strong>Enthaltenes Modell</strong>: <strong>Sakura</strong>, eine natürliche Alltagsstimme (kommerzielle Nutzung erlaubt), ist direkt zum Testen enthalten.</li>
+</ul>
+<span id="1-choose-a-build-and-install" class="docs-anchor"></span><h2 id="1-build-auswählen-und-installieren">1. Build auswählen und installieren</h2>
+<p>Jedes Paket auf Hugging Face ist eigenständig und enthält Python-Runtime, PyTorch/CUDA, FFmpeg, HuBERT/RMVPE/FCPE-Dateien sowie das Basismodell-Set. Python, CUDA Toolkit oder FFmpeg müssen nicht separat installiert werden.</p>
+<retype-table copy-text="| Build | Starter | Gedachte NVIDIA-Hardware |
+| --- | --- | --- |
+| **CUDA 12.8** *(Standard)* | `RVC-Realtime-GUI-CUDA128.bat` | Aktuelle NVIDIA-GPUs inklusive RTX-50-Serie (Blackwell) |
+| **CUDA 11.8** *(Kompatibilität)* | Integrierter CUDA-11.8-Starter | Ältere NVIDIA-GPUs oder Systeme mit CUDA-11.8-Treiber/-Umgebung |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>Symptom</th>
-<th>Was zu überprüfen ist</th>
+<th>Build</th>
+<th>Starter</th>
+<th>Gedachte NVIDIA-Hardware</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Das Programm wird beim Start geschlossen</td>
-<td>Führen Sie den mitgelieferten Launcher aus seinem extrahierten Ordner aus und lesen Sie den ersten Fehler. Überprüfen Sie den ausgewählten CUDA-Build und NVIDIA-Treiber.</td>
+<td><strong>CUDA 12.8</strong> <em>(Standard)</em></td>
+<td><code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code></td>
+<td>Aktuelle NVIDIA-GPUs inklusive RTX-50-Serie (Blackwell)</td>
 </tr>
 <tr>
-<td>Es erscheint keine neue Stimme.</td>
-<td>Überprüfen Sie den Ordner pro Modell und aktualisieren Sie die Modellliste. Verwenden Sie einen Inferenzexport anstelle eines Trainingsprüfpunkts.</td>
-</tr>
-<tr>
-<td>Kopfhörer funktionieren, aber Discord oder das Spiel ist stumm.</td>
-<td>Wählen Sie den virtuellen Kabelaufzeichnungsendpunkt im Ziel aus. Überprüfen Sie den Wandlerausgang separat.</td>
-</tr>
-<tr>
-<td>Du hörst zwei Stimmen</td>
-<td>Prüfen Sie, ob die Original-App noch hörbar ist oder ob zwei Überwachungsrouten aktiv sind.</td>
-</tr>
-<tr>
-<td>Audio wird unter Last unterbrochen.</td>
-<td>Stellen Sie den Standardpuffer wieder her oder erhöhen Sie ihn leicht. Wiederholen Sie den Test, während die andere App ausgeführt wird.</td>
+<td><strong>CUDA 11.8</strong> <em>(Kompatibilität)</em></td>
+<td>Integrierter CUDA-11.8-Starter</td>
+<td>Ältere NVIDIA-GPUs oder Systeme mit CUDA-11.8-Treiber/-Umgebung</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<p><a href="https://github.com/niel-blue/RVC-Realtime-GUI/tree/main">Projektquelle und Versionshinweise</a></p>
+<ol>
+<li>Prüfe dein NVIDIA-GPU-Modell unter <strong>Task-Manager → Leistung → GPU</strong>.</li>
+<li>Öffne <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">RVC Blue auf Hugging Face</a> und lade das passende Paket herunter.</li>
+<li>Entpacke das gesamte Archiv in einen <strong>kurzen, beschreibbaren lokalen Ordner</strong> wie <code translate="no" v-pre>C:\RVC-Realtime-GUI</code>. Starte es nicht aus dem ZIP heraus und vermeide <code translate="no" v-pre>Programme</code> oder OneDrive-Ordner.</li>
+<li>Starte <code translate="no" v-pre>RVC-Realtime-GUI-CUDA128.bat</code> (oder den CUDA-11.8-Starter).</li>
+<li><strong>Ersten Start abwarten</strong>: Beim ersten Öffnen dauert der Start länger, da Inferenz-Assets, CUDA-Runtime und CUDA Graph Warm-up geladen werden. Warte, bis sich das Fenster öffnet.</li>
+</ol>
+<span id="2-add-your-voice-models" class="docs-anchor"></span><h2 id="2-eigene-stimmmodelle-hinzufügen">2. Eigene Stimmmodelle hinzufügen</h2>
+<p>Erstelle pro Stimme einen Unterordner in <code translate="no" v-pre>models/</code> im entpackten Ordner:</p>
+<div id="2-eigene-stimmmodelle-hinzufügen-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">models/
+  MyVoice/
+    MyVoice.pth
+    added_MyVoice.index
+    preview.png</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><strong>Ordnername</strong>: wird als Modellname in der Galerie angezeigt.</li>
+<li><strong>Erforderliche Modelldatei</strong>: verwende ein <strong>Inferenz-<code translate="no" v-pre>.pth</code></strong>, keinen Trainings-Checkpoint (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>).</li>
+<li><strong>Optionaler Index &amp; Vorschau</strong>: lege die passende <code translate="no" v-pre>added_*.index</code>-Datei sowie optional ein <code translate="no" v-pre>.png</code>, <code translate="no" v-pre>.jpg</code> oder <code translate="no" v-pre>.jpeg</code> in denselben Ordner für ein automatisches Vorschaubild.</li>
+<li><strong>Neu laden</strong>: klicke nach dem Hinzufügen oder Ersetzen auf <strong>Reload</strong> (oder starte die App neu). Allgemeine Einstellungen pro Modell werden automatisch gespeichert.</li>
+</ul>
+<span id="3-configure-audio-devices-and-test-locally" class="docs-anchor"></span><h2 id="3-audiogeräte-einrichten-und-lokal-testen">3. Audiogeräte einrichten und lokal testen</h2>
+<p>RVC Blue erlaubt die getrennte Wahl von <strong>Input</strong> (Eingang), <strong>Output</strong> (Ausgang) und <strong>Monitor</strong>:</p>
+<ul>
+<li><strong>Input</strong>: dein physisches Mikrofon (oder eine Audiodatei / Windows-App).</li>
+<li><strong>Output</strong>: Ziel der konvertierten Stimme (Kopfhörer zum Testen oder virtuelles Kabel für Anrufe und Spiele).</li>
+<li><strong>Monitor</strong>: optionaler zweiter Ausgang zum Mithören, während <strong>Output</strong> an Discord oder OBS geht.</li>
+</ul>
+<h3 id="wasapi-vs-asio">WASAPI vs. ASIO</h3>
+<ul>
+<li><strong>Ohne ASIO-Interface</strong>: beginne mit <strong>WASAPI</strong>.</li>
+<li><strong>Mit nativem ASIO</strong>: RVC Blue startet mit der vom Treiber empfohlenen Puffergröße. Du kannst auch ASIO-Eingang/-Monitor mit WASAPI-Ausgang kombinieren oder getrennte Kanalpaare desselben ASIO-Treibers nutzen.</li>
+</ul>
+<span id="first-local-test" class="docs-anchor"></span><h3 id="erster-lokaler-test">Erster lokaler Test</h3>
+<ol>
+<li>Wähle dein physisches Mikrofon als <strong>Input</strong>.</li>
+<li>Wähle deine Kopfhörer als <strong>Output</strong> (lasse <strong>Monitor</strong> vorerst aus, um doppelte Stimmen zu vermeiden).</li>
+<li>Wähle <strong>Sakura</strong> (oder dein Modell) und belasse Puffer und Pitch zunächst auf Standard.</li>
+<li>Klicke auf <strong>Start</strong>, sprich einen kurzen Satz und mache eine Pause, um Latenz, Klarheit und Nebengeräusche zu prüfen.</li>
+</ol>
+<span id="4-route-audio-to-discord-obs-or-a-game" class="docs-anchor"></span><h2 id="4-audio-an-discord-obs-oder-ein-spiel-senden">4. Audio an Discord, OBS oder ein Spiel senden</h2>
+<p>Um die konvertierte Stimme in anderen Apps zu nutzen, verbinde RVC Blue über ein virtuelles Audiokabel (<strong>VAC Lite</strong> oder <strong>VB-CABLE</strong>):</p>
+<ol>
+<li>Setze <strong>Output</strong> in RVC Blue auf das Wiedergabegerät des virtuellen Kabels (z. B. <code translate="no" v-pre>CABLE Input</code> oder <code translate="no" v-pre>Line 1</code>).</li>
+<li>Setze optional <strong>Monitor</strong> auf deine Kopfhörer, falls du dich selbst hören möchtest.</li>
+<li>Wähle in Discord, OBS oder im Spiel das Aufnahmegerät des virtuellen Kabels (z. B. <code translate="no" v-pre>CABLE Output</code> oder <code translate="no" v-pre>Line 1</code>) als <strong>Mikrofon</strong>.</li>
+<li>Belasse Spiel- oder Anrufton auf deinen Kopfhörern.</li>
+<li>Nimm in der Ziel-App vor einem Live-Anruf einen kurzen Test auf.</li>
+</ol>
+<p>Details zur Einrichtung findest du in der <a href="../../vonovox/live-audio/">Anleitung für virtuelle Audiokabel</a>.</p>
+<span id="5-file-input-application-capture-and-wav-recording" class="docs-anchor"></span><h2 id="5-dateieingabe-app-aufnahme-und-wav-aufzeichnung">5. Dateieingabe, App-Aufnahme und WAV-Aufzeichnung</h2>
+<ul>
+<li><strong>Audiodatei als Eingang</strong>: stelle die Quelle auf <strong>File</strong>, wähle einen kurzen WAV-/Audioclip (dekodiert über integriertes FFmpeg) und prüfe <strong>Output</strong> und <strong>Monitor</strong>, bevor du <strong>Start</strong> drückst. Ausgangs- und Monitor-Einstellungen bleiben erhalten.</li>
+<li><strong>Windows-Anwendungsaufnahme</strong>: stelle die Quelle auf <strong>Application</strong>, klicke auf <strong>Refresh</strong> und wähle eine laufende App. Nutzt Windows-Per-Process-Audio-Capture. Erkannte Apps werden gemerkt und verbinden sich beim Neustart erneut. Direktes ASIO-Audio außerhalb des normalen Windows-Audios wird möglicherweise nicht erfasst, und der Originalton der App wird <strong>nicht automatisch stummgeschaltet</strong> (bei Bedarf separat leiser stellen oder muten).</li>
+<li><strong>WAV-Aufnahme</strong>: speichere über die Aufnahmesteuerung WAV-Dateien als <strong>getrennte Ein-/Ausgabe</strong>, <strong>Mix</strong> oder <strong>getrennte L/R-Spuren</strong>.</li>
+</ul>
+<span id="6-troubleshoot-common-issues" class="docs-anchor"></span><h2 id="6-häufige-probleme-lösen">6. Häufige Probleme lösen</h2>
+<retype-table copy-text="| Symptom | Was zu prüfen ist |
+| --- | --- |
+| App wirkt beim ersten Start eingefroren | Warte 1-2 Minuten auf die erste CUDA-Initialisierung und CUDA Graph Warm-up. |
+| Programm schließt sich sofort beim Start | Starte die `.bat`-Datei aus dem entpackten Ordner (z. B. `C:\RVC-Realtime-GUI`) und lies die Konsolenmeldung. Prüfe, ob der NVIDIA-Treiber zu CUDA 12.8 oder 11.8 passt. |
+| Neue Stimme erscheint nicht | Prüfe, ob das Modell in `models/&lt;Stimmname&gt;/` liegt und ein Inferenz-`.pth` ist (kein Trainings-Checkpoint), dann klicke auf **Reload**. |
+| Kopfhörer funktionieren, aber Discord/Spiel bleibt stumm | Prüfe, ob **Output** das Wiedergabegerät des virtuellen Kabels ist und Discord/Spiel das passende Aufnahmegerät als Mikrofon nutzt. |
+| Zwei Stimmen sind zu hören | Deaktiviere **Monitor**, wenn **Output** bereits auf den Kopfhörern liegt, oder schalte die Quell-App bei App-Aufnahme stumm. |
+| Audio knackt oder setzt unter Last aus | Stelle den Standardpuffer wieder her oder erhöhe ihn leicht und teste erneut, während Spiel oder Anruf läuft. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Was zu prüfen ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App wirkt beim ersten Start eingefroren</td>
+<td>Warte 1-2 Minuten auf die erste CUDA-Initialisierung und CUDA Graph Warm-up.</td>
+</tr>
+<tr>
+<td>Programm schließt sich sofort beim Start</td>
+<td>Starte die <code translate="no" v-pre>.bat</code>-Datei aus dem entpackten Ordner (z. B. <code translate="no" v-pre>C:\RVC-Realtime-GUI</code>) und lies die Konsolenmeldung. Prüfe, ob der NVIDIA-Treiber zu CUDA 12.8 oder 11.8 passt.</td>
+</tr>
+<tr>
+<td>Neue Stimme erscheint nicht</td>
+<td>Prüfe, ob das Modell in <code translate="no" v-pre>models/&lt;Stimmname&gt;/</code> liegt und ein Inferenz-<code translate="no" v-pre>.pth</code> ist (kein Trainings-Checkpoint), dann klicke auf <strong>Reload</strong>.</td>
+</tr>
+<tr>
+<td>Kopfhörer funktionieren, aber Discord/Spiel bleibt stumm</td>
+<td>Prüfe, ob <strong>Output</strong> das Wiedergabegerät des virtuellen Kabels ist und Discord/Spiel das passende Aufnahmegerät als Mikrofon nutzt.</td>
+</tr>
+<tr>
+<td>Zwei Stimmen sind zu hören</td>
+<td>Deaktiviere <strong>Monitor</strong>, wenn <strong>Output</strong> bereits auf den Kopfhörern liegt, oder schalte die Quell-App bei App-Aufnahme stumm.</td>
+</tr>
+<tr>
+<td>Audio knackt oder setzt unter Last aus</td>
+<td>Stelle den Standardpuffer wieder her oder erhöhe ihn leicht und teste erneut, während Spiel oder Anruf läuft.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><a href="https://github.com/niel-blue/RVC-Realtime-GUI/tree/main">Projektquelle und Release Notes</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -268,7 +351,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T20:04:05.000Z">21/11/2026 · 21:04</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -301,6 +384,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Installieren und verwenden Sie RVC Blue", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/rvc-blue/installation.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "RVC Blue installieren und nutzen", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/rvc-blue/installation.md" }</script>
 </body>
 </html>

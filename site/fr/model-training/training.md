@@ -1,6 +1,6 @@
 # Former un modèle vocal RVC
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 La formation apprend une voix cible à partir d'une collection audio préparée. Utilisez ce guide lorsque vous souhaitez créer un modèle à partir de vos propres enregistrements ou de ceux autorisés. Si vous disposez déjà d'un modèle d'inférence, consultez [Modèles et fichiers RVC](../start/models.md) pour commencer à l'utiliser.
 

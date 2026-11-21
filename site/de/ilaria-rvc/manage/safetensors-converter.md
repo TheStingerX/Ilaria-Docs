@@ -1,6 +1,6 @@
 # Safetensors ↔ PTH Konverter
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Ab **Ilaria RVC 2.4.5** bietet der Tab **Other** den Bereich **Convert model weights** einen eingebauten Konverter, um `.pth`-Stimmenmodelle in `.safetensors` umzuwandeln und `.safetensors` wieder zurück in `.pth`.
 

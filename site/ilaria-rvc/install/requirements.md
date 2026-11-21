@@ -1,6 +1,6 @@
 # System Requirements for Ilaria RVC
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true) · [Compatible GPUs](../install/gpu-compatibility.md) · [Cloud options](../cloud/cloud.md)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Compatible GPUs](../install/gpu-compatibility.md) · [Cloud options](../cloud/cloud.md)
 
 Ilaria RVC runs locally on your PC using **PyTorch 2.10.0** and **NVIDIA CUDA**. Because voice conversion (inference) and model training have very different hardware demands, check both tables below before installing.
 
@@ -41,7 +41,7 @@ Ilaria RVC is built for **NVIDIA GPUs**. Integrated Intel graphics, Intel Arc, a
 
 ### Disk space breakdown
 
-- **Download archive**: ~**5.00 GB** (`ILARIA_RVC-2.4.0.zip`). Keep room for both the ZIP and the extracted folder during installation.
+- **Download archive**: ~**5.00 GB** (`ILARIA_RVC-2.4.7.zip`). Keep room for both the ZIP and the extracted folder during installation.
 - **Extracted app**: ~**10–15 GB** (includes bundled PyTorch/CUDA runtime, **ContentVec**, and **RMVPE**).
 - **Extra space if needed**:
   - `runtime-cu126` (Maxwell/Pascal/Volta only): additional several GB downloaded on first launch.

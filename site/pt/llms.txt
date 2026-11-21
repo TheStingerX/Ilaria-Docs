@@ -35,7 +35,7 @@
 - [Arquivos, configuração e manutenção da fonte](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/source-layout.md): Uma exportação de inferência pode ser usada para conversão.
 - [Requisitos do sistema para o Ilaria RVC](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/requirements.md): O Ilaria RVC corre localmente no teu PC usando PyTorch 2.10.0 e NVIDIA CUDA.
 - [GPU compatíveis](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/gpu-compatibility.md): O ZIP do Windows ocupa cerca de 5,00 GB. Extrai-o e executa RUN_ILARIA_RVC.bat, ou RUN_ILARIA_RVC_LOGS.bat para ver os registos. ContentVec e RMVPE estão incluídos.
-- [Histórico de versões e diferenças de lançamento](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/version-history.md): A versão mais recente para Windows é a 2.4.6. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC.
+- [Histórico de versões e diferenças de lançamento](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/version-history.md): A versão mais recente para Windows é a 2.4.7. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC.
 
 ### Cloud
 
@@ -85,6 +85,7 @@
 - [Treine, avalie e exporte uma voz no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/applio/training.md): Uma primeira execução prova que suas gravações, configuração e hardware podem produzir uma exportação com a qual você pode converter.
 - [Use o Applio com um microfone](https://docs.ilariarvc.shop/pt/other-rvcs/applio/realtime.md): Prove que seu modelo funciona com um clipe gravado antes de configurar o áudio ao vivo.
 - [Transforme um script curto em fala convertida](https://docs.ilariarvc.shop/pt/other-rvcs/applio/tts.md): Applio usa uma voz Edge TTS online para ler seu texto e um modelo RVC para alterar a voz gerada. A voz de origem determina a pronúncia, o ritmo e o idioma que ela lê.
+- [Applio Realtime na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/applio/cloud.md): Executa o Applio e o separador Realtime na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver GPU compatível.
 
 ### RVC WebUI (Mainline - Original RVC)
 
@@ -102,11 +103,13 @@
 
 - [Instale o Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/installation.md): O TG Developed Fork (TGR) vem do ramo Deiteris da família w-okada. O editor documenta esta bifurcação como somente RVC.
 - [Configure o áudio ao vivo no Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/live-audio.md): Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido.
+- [Okada TG Developed Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/cloud.md): Executa o Okada TG Developed Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
 
 ### Deiteris w-okada Fork
 
 - [Instalar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/installation.md): Deiteris w-okada Fork é um fork popular mantido pela comunidade de w-okada/voice-changer (VCClient), focado em menor latência, áudio mais limpo, correções de estabilidade e backends atualizados para NVIDIA (CUDA), AMD/Intel (DirectML) e Apple Silicon.
 - [Encaminhar e afinar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/live-audio.md): Usa sempre auscultadores durante a conversão ao vivo. Com colunas, a voz convertida volta a entrar no microfone e gera eco e microfonia.
+- [Deiteris w-okada Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/cloud.md): Executa o Deiteris w-okada Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
 
 ### RVC GUI
 
@@ -119,7 +122,7 @@
 
 ### RVC Blue
 
-- [RVC Blue (RVC-Realtime-GUI)](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-blue/installation.md): RVC Blue é um trocador de voz para desktop do Windows baseado na GUI em tempo real da RVC WebUI (Mainline - Original RVC).
+- [RVC Blue (RVC-Realtime-GUI)](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-blue/installation.md): O RVC Blue é um alterador de voz para desktop Windows baseado na interface em tempo real do RVC WebUI (Mainline - Original RVC).
 
 ### RVC Model Merger
 

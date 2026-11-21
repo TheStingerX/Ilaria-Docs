@@ -1,6 +1,6 @@
 # Synthèse vocale
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Utilisez **Inférence → TTS** pour transformer un texte écrit en enregistrement. Vous pouvez écouter directement la parole générée ou la convertir avec un modèle RVC. Les deux étapes effectuent des tâches différentes : le moteur vocal décide de la manière dont le script est prononcé et rythmé, tandis que RVC modifie le caractère vocal de l'enregistrement. Si un nom est mal prononcé dans le premier résultat, corrigez le script ou la voix source avant de régler RVC.
 

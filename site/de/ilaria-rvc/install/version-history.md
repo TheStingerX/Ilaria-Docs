@@ -1,15 +1,16 @@
 # Versionsverlauf und Release-Unterschiede
 
-[Ilaria RVC 2.4.0 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Welche Version wird in dieser Dokumentation beschrieben?
 
-Die neueste Windows-Version ist **2.4.6**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
+Die neueste Windows-Version ist **2.4.7**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
 
 ## Alle Veröffentlichungen
 
  | Veröffentlichung | Highlights |
 | --- | --- |
+| 2.4.7 | Neues vollständiges Windows-Basispaket (`ILARIA_RVC-2.4.7.zip`). Stellt die autorisierten **Legacy Core 1.5 V2**- und **1.6**-Pretrained-Downloads bei `32 kHz` wieder her und verbessert die Wiederherstellung nach unterbrochenen Updates (geänderte Dateien bleiben in einem separaten Backup erhalten). Von **2.4.2 bis 2.4.6** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |
 | 2.4.6 | Fügt **KLM Vocal ContentVec** (`klm-vocal-contentvec`) als optionalen Download für Inferenz und RVC-v2-Training hinzu und ergänzt **43 geprüfte KLM-G/D-Paare** bei **Recommended pretrained models** mit Sample-Rates (Trainings-Kompatibilität variiert je Paar). Ab **2.4.5** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |
 | 2.4.5 | Fügt `.pth` ↔ `.safetensors`-Konvertierung unter **Other → Convert model weights** hinzu, inklusive Erhalt der RVC-Metadaten und **Move .pth to models**-Button. Verbessert die Inferenz-Meldung bei fehlender Stimmkonfiguration und installiert `safetensors` bei Erstnutzung automatisch. Ab **2.4.4** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |
 | 2.4.4 | Entfernt die sechs Legacy-Core-Pretrained-Downloads von Lyery, nachdem die Quelldateien entfernt wurden (bereits geladene Gewichte bleiben fürs Training nutzbar). Erfordert **2.4.2** oder neuer. |

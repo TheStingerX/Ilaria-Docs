@@ -1,6 +1,6 @@
 # Audio Analyzer
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Open **Other → Audio Analyzer**. Add up to eight audio files to compare. A useful set contains the original input, a baseline conversion and one or two variants made with one changed setting.
 

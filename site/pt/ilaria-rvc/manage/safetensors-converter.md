@@ -1,6 +1,6 @@
 # Conversor Safetensors ↔ PTH
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 A partir do **Ilaria RVC 2.4.5**, a aba **Other** traz **Convert model weights**, um conversor integrado para transformar modelos de voz `.pth` em `.safetensors` e arquivos `.safetensors` de volta em `.pth`.
 

@@ -1,6 +1,6 @@
 # Chaque contrôle d'inférence expliqué
 
-[Télécharger Ilaria RVC 2.4.0 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 L'inférence utilise une voix entraînée pour convertir un enregistrement. Pour un premier test, téléchargez un court WAV clair, sélectionnez une voix, laissez le Pitch à zéro et désactivez les fonctionnalités optionnelles. Comparez l'entrée et la sortie avant de modifier une valeur.
 

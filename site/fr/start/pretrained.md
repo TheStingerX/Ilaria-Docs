@@ -47,8 +47,8 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **KLM-X** | `32 kHz` | HiFi-GAN | Non spécifié | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 | **Legacy Core V1.5** *(retiré en 2.4.4)* | `32 kHz`, `40 kHz`, `48 kHz` | HiFi-GAN / RefineGAN 32k | `contentvec` / `spin-v2` 32k | `lyery/mode4` *(retiré par l'auteur)* |
-| **Legacy Core V1.5v2** *(retiré en 2.4.4)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery/test` *(retiré par l'auteur)* |
-| **Legacy Core V1.6** *(retiré)* | `32 kHz` | HiFi-GAN | `contentvec` | `lyery` *(retiré par l'auteur)* |
+| **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) ([G](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/G_LegacyCore1.5v2.pth?download=true), [D](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/D_LegacyCore1.5v2.pth?download=true)) |
+| **Legacy Core V1.6** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) ([G](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/D_LegacyCoreOld.pth?download=true), [D](https://huggingface.co/notiscBalbalEko/PretrainReupload/resolve/main/G_LegacyCoreOld.pth?download=true) *(noms G/D inversés)*) |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
 | **Nanashi Anime** *(Normal)* | `32 kHz` | HiFi-GAN | Non spécifié | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | HiFi-GAN | Non spécifié | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
@@ -75,5 +75,7 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 
 !!!note
 **Note sur Legacy Core (`V1.5`, `V1.5v2` et `V1.6`) :**
-Les modèles pretrained **Legacy Core** (`lyery/mode4` et `lyery/test`) ont été **retirés par leur auteur** et ne sont plus téléchargeables (retirés aussi du téléchargeur d'Ilaria RVC dans la `2.4.4`). Les lignes ci-dessus sont conservées **à titre purement informatif** ; seuls les poids déjà téléchargés auparavant restent utilisables pour l'entraînement.
+- **Legacy Core V1.5** (`lyery/mode4`) reste **retiré par son auteur** (retiré du téléchargeur d'Ilaria RVC dans la `2.4.4`) ; seuls les poids déjà téléchargés auparavant restent utilisables.
+- **Legacy Core V1.5v2** et **Legacy Core V1.6** (`32 kHz`) sont de nouveau disponibles avec l'accord de l'auteur d'origine via [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) et ont été restaurés dans Ilaria RVC `2.4.7`.
+- **Important pour Legacy Core V1.6** : dans le dépôt de reupload, les noms **G** et **D** sont **inversés** (`D_LegacyCoreOld.pth` est **G** et `G_LegacyCoreOld.pth` est **D**). Veillez à placer chaque fichier dans le bon emplacement.
 !!!

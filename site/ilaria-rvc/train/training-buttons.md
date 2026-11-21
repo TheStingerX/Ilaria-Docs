@@ -1,6 +1,6 @@
 # Every Training control explained
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Training creates a new voice model from recordings. For a first experiment, use a unique name, a small clean dataset and a compatible pretrained pair. Keep one recording out of the dataset so you can listen to the model on a clip it has never seen. Start with the [training workflow](training-workflow.md) if you want the steps in order.
 

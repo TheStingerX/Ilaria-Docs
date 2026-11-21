@@ -1,12 +1,14 @@
 # Incrustadores y preentrenamientos
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **Novedades de la 2.3.0** · Portuguese HuBERT Base es opcional en inferencia. En el entrenamiento RVC v2 puedes cargar y guardar un HuBERT personalizado. Su configuración se conserva en el modelo exportado.
 
 > **2.4.0** · Windows mueve la aplicación y el entorno a app/, y los modelos a models/ en la raíz. Añade Colab, Lightning AI Studio, ayuda para descargar embedders y Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). Se repara pip y se incluye pywin32.
 
 > **2.4.6** · Añade **KLM Vocal ContentVec** (`klm-vocal-contentvec`) como descarga opcional para Inferencia y Entrenamiento RVC v2, y añade **43 pares G/D KLM verificados** en **Recommended pretraineds** (la compatibilidad varía por par). Nota: las descargas Legacy Core de Lyery se retiraron en la 2.4.4 tras eliminarse los archivos originales.
+
+> **2.4.7** · Restauradas las descargas autorizadas de los pretrained **Legacy Core 1.5 V2** y **Legacy Core 1.6** a 32 kHz y mejorada la recuperación ante actualizaciones interrumpidas.
 
 ## Incrustadores de inferencia
 

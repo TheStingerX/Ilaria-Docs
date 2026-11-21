@@ -1,6 +1,6 @@
 # Logs e recuperação
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 > **RMVPE · 2.4.2** · Corrige a inferência de RMVPE quando o cuDNN rejeita uma operação GRU. O RMVPE usa uma entrada contígua e volta a executar essa GRU na CPU se o cuDNN devolver `CUDNN_STATUS_NOT_SUPPORTED`. Requer a versão 2.4.0 ou posterior. Instala a 2.4.2 em **Other → Update Ilaria RVC**.
 

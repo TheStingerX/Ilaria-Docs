@@ -1,6 +1,6 @@
 # Tune pitch and audio quality
 
-[Download Ilaria RVC 2.4.0 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Pick a short excerpt that contains the problem. Make a reference conversion and compare it with one changed setting at a time. Listen at similar levels so a louder result does not win the comparison by volume alone. For music, compare the converted vocal alone first and then in the mix.
 

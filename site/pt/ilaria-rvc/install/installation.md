@@ -2,7 +2,7 @@
 
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
-[Descarregar o Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Instale o pacote do Windows
 
@@ -32,14 +32,14 @@ Se você tiver mais de uma GPU, leia o log do inicializador para ver qual tempo 
 
 Os testes de computação e retropropagação e carregamento de ContentVec foram verificados em um RTX 4070. A compatibilidade com outras placas é esperada a partir de sua arquitetura e seleção de tempo de execução, e não foi garantida modelo por modelo.
 
-## Atualizar para a 2.4.0
+## Atualizar para a 2.4.7
 
-Descarrega o ZIP completo, extrai-o para uma pasta nova e executa `RUN_ILARIA_RVC.bat`.
+Descarrega o ZIP completo (`ILARIA_RVC-2.4.7.zip`), extrai-o para uma pasta nova e executa `RUN_ILARIA_RVC.bat`.
 
 Mantém a instalação anterior como cópia de segurança. Copia modelos para models/, dados para app/datasets/ e experiências completas para app/logs/. O atualizador da 2.3.0 usa a estrutura anterior.
 
 [GPU compatíveis](gpu-compatibility.md)
 
-### Atualizar a partir da 2.4.0
+### Atualizar a partir de 2.4.2 - 2.4.6
 
-Instala e inicia primeiro a 2.4.0. Abre **Other → Update Ilaria RVC** e instala as atualizações incrementais até à **2.4.6** (`2.4.1 → 2.4.2 → 2.4.3 → 2.4.4 → 2.4.5 → 2.4.6`).
+Se já usares uma versão entre **2.4.2** e **2.4.6**, abre **Other → Update Ilaria RVC → Check for updates** e escolhe **Download and restart**. A partir da **2.4.0** ou **2.4.1**, atualiza primeiro para **2.4.2** ou extrai o ZIP completo da **2.4.7**.

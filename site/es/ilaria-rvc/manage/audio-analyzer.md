@@ -1,6 +1,6 @@
 # Analizador de audio
 
-[Descarga Ilaria RVC 2.4.0 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.0/ILARIA_RVC-2.4.0.zip?download=true)
+[Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Abra **Otro → Analizador de audio**. Agregue hasta ocho archivos de audio para comparar. Un conjunto útil contiene la entrada original, una conversión de referencia y una o dos variantes realizadas con una configuración modificada.
 
