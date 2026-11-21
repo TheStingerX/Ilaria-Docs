@@ -68,7 +68,7 @@ Se sai già usare il Prompt dei comandi come amministratore e `nvidia-smi`:
 2. **Cosa significa MHz:** **MHz** significa **megahertz** (1 milione di cicli al secondo). Ad esempio, `1500 MHz` equivale a 1,5 miliardi di cicli al secondo, e `1800 MHz` a 1,8 miliardi di cicli al secondo.
 3. **Come funzionano le frequenze dinamiche NVIDIA:** Le GPU moderne non vanno a una velocità fissa. Quando sei sul desktop senza fare nulla, la GPU scende a frequenze basse (ad es. `210 MHz` o `300 MHz`) per consumare meno, restare fresca e silenziosa. Quando parte un carico pesante, accelera.
 4. **Cos'è NVIDIA GPU Boost:** **NVIDIA GPU Boost** è il sistema automatico integrato che alza e abbassa continuamente la frequenza della GPU in base a carico di lavoro, temperatura, limiti di potenza e tensione.
-5. **Perché le frequenze oscillano con Vonovox:** La conversione vocale dal vivo elabora piccoli pacchetti audio ogni pochi millisecondi (un lavoro CUDA leggero ma a raffiche rispetto a un gioco 3D). Tra un pacchetto e l'altro la GPU può vedere "basso carico", abbassare la frequenza e poi doverla rialzare subito al pacchetto successivo.
+5. **Perché le frequenze oscillano con Vonovox:** La conversione vocale dal vivo elabora l'audio in blocchi discreti (la cui durata dipende da **Block Size** e dalle impostazioni audio) invece che con un carico 3D continuo. Tra un blocco e l'altro la GPU può vedere "basso carico", abbassare la frequenza e poi doverla rialzare al blocco successivo.
 6. **Cosa significa bloccare una frequenza:** Il **GPU Clock Locking** (`nvidia-smi -lgc`) chiede al driver NVIDIA di mantenere il core GPU entro un intervallo supportato (o su un singolo valore supportato quando minimo e massimo coincidono). Pensa al **cruise control in autostrada**: l'auto mantiene una velocità costante invece di frenare e riaccelerare di continuo.
 7. **Differenza tra GPU Clock Locking e overclocking:**
    - L'**overclocking** spinge la scheda *oltre* i limiti di fabbrica o modifica tensioni e curve di potenza.
@@ -185,7 +185,7 @@ Supported Clocks
 - **Verifica esatta:** Scegli solo un numero presente esattamente accanto a `Graphics :` nel tuo terminale.
 - **Se mostra `N/A` o `Not Supported`:** La tua combinazione GPU/driver non espone i clock supportati. Non inserire valori casuali e passa alle [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta).
 
-> **Non inserire MAI valori arbitrari elevati (come `50000` MHz):** Richieste fuori intervallo possono fallire con `Invalid Argument` o comportarsi in modo imprevedibile, e non è garantito che il driver adatti automaticamente il valore al massimo supportato.
+> **Non inserire MAI valori arbitrari elevati (come `50000` MHz):** Secondo la documentazione NVIDIA, alcuni dispositivi e driver possono arrotondare una frequenza richiesta al valore supportato più vicino, mentre richieste fuori intervallo possono fallire con `Invalid Argument` o essere rifiutate. Non inserire mai numeri arbitrari per sfruttare l'arrotondamento del driver: usa sempre un valore `Graphics` esatto stampato da `SUPPORTED_CLOCKS`.
 
 ---
 
@@ -227,9 +227,9 @@ nvidia-smi -i 0 -lgc 1500,1800
 
 Consente a NVIDIA GPU Boost di muoversi tra due valori supportati (`1500` e `1800` MHz nell'esempio) impedendo alla GPU di scendere ai clock minimi di riposo tra un blocco audio e l'altro.
 
-### Verifica dell'applicazione
+### Verifica: comando accettato vs. frequenza effettivamente osservata
 
-Dopo `-lgc`, CMD conferma l'impostazione. Per vedere le **frequenze effettive** mentre usi Vonovox, esegui:
+Distingui sempre tra **frequenza richiesta**, **intervallo impostato (`min,max`)** e **frequenza effettivamente osservata** sotto carico. La conferma del comando `-lgc` significa solo che il driver ha accettato la richiesta, **non** che la GPU resterà fissa a quel valore in ogni situazione. Per vedere le **frequenze reali** mentre usi Vonovox, esegui:
 
 ```bat
 nvidia-smi -i 0 -q -d CLOCK
@@ -241,13 +241,13 @@ Oppure monitora ogni secondo (premi `Ctrl + C` per fermare):
 nvidia-smi -i 0 -q -d CLOCK -l 1
 ```
 
-Controlla **Clocks → Graphics**. Ricorda che **limiti di potenza, temperatura o hardware** possono comunque impedire alla GPU di mantenere esattamente la frequenza richiesta.
+Controlla **Clocks → Graphics**. **Limiti termici, limiti energetici e restrizioni di driver o firmware laptop** possono comunque impedire alla GPU di mantenere esattamente la frequenza richiesta.
 
 ---
 
 ## 8. Ripristino delle impostazioni originali
 
-Torna sempre alla gestione dinamica quando chiudi Vonovox, finisci i test o non vedi miglioramenti:
+Torna sempre alla gestione dinamica quando chiudi Vonovox, finisci i test o non vedi miglioramenti (sostituisci `0` con l'indice della GPU configurata se hai più schede):
 
 ```bat
 nvidia-smi -i 0 -rgc
@@ -257,129 +257,150 @@ nvidia-smi -i 0 -rgc
 - **Perché farlo:** Le frequenze dinamiche mantengono il PC più fresco, silenzioso ed efficiente su desktop, video e giochi.
 - **Come verificare:** Esegui `nvidia-smi -i 0 -q -d CLOCK` a riposo; dopo pochi secondi **Graphics** tornerà ai valori bassi di idle.
 - **Riavvio o reset driver:** Il blocco **non è permanente**; riavviando Windows o il driver video, i clock tornano dinamici da soli.
-- **Se il reset dà errore:** Assicurati che CMD sia **amministratore**, verifica l'indice `-i` con `nvidia-smi -L`, oppure **riavvia Windows**.
+- **Se il reset dà errore:** `-rgc` non è garantito in presenza di errori del driver stesso. Assicurati che CMD sia **amministratore**, verifica l'indice `-i` con `nvidia-smi -L`, oppure **riavvia Windows**.
 
 ---
 
 ## 9. Gestione con un clic (file BAT)
 
-Questi due script Windows automatizzano in sicurezza la procedura:
+Questi due script Windows utilizzano PowerShell integrato in Windows (nessun software esterno richiesto) per automatizzare in sicurezza la procedura:
 
-- Interfaccia CMD in inglese chiara e leggibile, con controllo privilegi amministrativi e percorso automatico di `nvidia-smi.exe`.
+- Interfaccia CMD in inglese chiara e leggibile, controllo privilegi amministrativi indipendente da `net session`, verifica dell'indice GPU tramite `nvidia-smi -L` e percorso automatico di `nvidia-smi.exe`.
 - Nessun overclock, nessuna modifica a voltaggi o limiti di potenza, nessuna modifica permanente al sistema.
-- `Lock-GPU-Clocks.bat` **non sceglie mai automaticamente** il massimo o valori non verificati: mostra le GPU, stampa `SUPPORTED_CLOCKS` e chiede a te di digitare un valore valido della lista.
+- `Lock-GPU-Clocks.bat` estrae **solo** le frequenze `Graphics` da `SUPPORTED_CLOCKS` (ignorando `Memory`), rifiuta valori arbitrari (come `50000`) e **non sceglie mai automaticamente** il massimo.
+- In caso di errore di `-lgc`, **non** esegue automaticamente `-rgc` così da preservare eventuali impostazioni preesistenti, e distingue tra comando accettato e frequenza realmente osservata con `-q -d CLOCK`.
 
 ### Lock-GPU-Clocks.bat
 
 ```bat
 @echo off
-setlocal EnableExtensions EnableDelayedExpansion
+setlocal EnableExtensions
 title Vonovox Helper - Lock NVIDIA GPU Clocks
-
-echo ============================================================
-echo   Vonovox Optional Helper: Lock NVIDIA GPU Core Clocks
-echo   No overclocking, no voltage changes, temporary until reboot
-echo ============================================================
-echo.
-
-:: Check Administrator privileges
-net session >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Administrator privileges are required.
-    echo Right-click this .bat file and choose "Run as administrator".
-    echo.
-    pause
-    exit /b 1
-)
-
-:: Locate nvidia-smi
-set "NVSMI=nvidia-smi"
-where nvidia-smi >nul 2>&1
-if errorlevel 1 (
-    if exist "C:\Windows\System32\nvidia-smi.exe" (
-        set "NVSMI=C:\Windows\System32\nvidia-smi.exe"
-    ) else if exist "C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe" (
-        set "NVSMI=C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe"
-    ) else (
-        echo [ERROR] nvidia-smi.exe was not found on this system.
-        echo Make sure you have an NVIDIA GPU with official drivers installed.
-        echo.
-        pause
-        exit /b 1
-    )
-)
-
-echo Detected NVIDIA GPUs:
-"%NVSMI%" -L
-if errorlevel 1 (
-    echo.
-    echo [ERROR] Could not query NVIDIA GPUs.
-    pause
-    exit /b 1
-)
-
-echo.
-set "GPU_ID=0"
-set /p "GPU_ID=Enter GPU index to configure [default: 0]: "
-if "%GPU_ID%"=="" set "GPU_ID=0"
-
-echo.
-echo Querying official supported clocks for GPU %GPU_ID%...
-echo Look for numbers listed next to "Graphics :" below.
-echo ------------------------------------------------------------
-"%NVSMI%" -i %GPU_ID% -q -d SUPPORTED_CLOCKS
-if errorlevel 1 (
-    echo.
-    echo [STOPPED] Could not retrieve SUPPORTED_CLOCKS for GPU %GPU_ID%.
-    echo Your GPU or driver may not support clock locking.
-    echo No changes were made.
-    echo.
-    pause
-    exit /b 1
-)
-
-echo ------------------------------------------------------------
-echo IMPORTANT:
-echo  - Pick ONLY a Graphics clock value shown above.
-echo  - Do NOT pick the highest value blindly; test moderate clocks first.
-echo  - Never enter arbitrary numbers like 50000.
-echo.
-set "TARGET_MHZ="
-set /p "TARGET_MHZ=Enter a supported Graphics clock in MHz (or press Enter to cancel): "
-if "%TARGET_MHZ%"=="" (
-    echo Cancelled. No changes were made.
-    pause
-    exit /b 0
-)
-
-:: Validate numeric input
-echo %TARGET_MHZ%| findstr /r "^[0-9][0-9]*$" >nul
-if errorlevel 1 (
-    echo [ERROR] "%TARGET_MHZ%" is not a valid whole number in MHz.
-    echo No changes were made.
-    pause
-    exit /b 1
-)
-
-echo.
-echo Applying temporary clock lock: %TARGET_MHZ%,%TARGET_MHZ% MHz on GPU %GPU_ID%...
-"%NVSMI%" -i %GPU_ID% -lgc %TARGET_MHZ%,%TARGET_MHZ%
-if errorlevel 1 (
-    echo.
-    echo [ERROR] Failed to apply clock lock.
-    echo The value may not be supported, or your GPU/driver restricts --lgc.
-    echo Attempting automatic reset to be safe...
-    "%NVSMI%" -i %GPU_ID% -rgc >nul 2>&1
-    pause
-    exit /b 1
-)
-
-echo.
-echo [SUCCESS] Clock lock applied to GPU %GPU_ID% (%TARGET_MHZ% MHz).
-echo Remember to run Reset-GPU-Clocks.bat (or nvidia-smi -i %GPU_ID% -rgc) when done!
+set "BAT_PATH=%~f0"
+powershell.exe -NoProfile -Command "$code = (Get-Content -LiteralPath $env:BAT_PATH | Where-Object { $_ -match '^::PS ' } | ForEach-Object { $_.Substring(5) }) -join [Environment]::NewLine; & ([ScriptBlock]::Create($code)); exit $LASTEXITCODE"
+set "EXIT_CODE=%ERRORLEVEL%"
 echo.
 pause
-exit /b 0
+exit /b %EXIT_CODE%
+
+::PS Write-Host '============================================================'
+::PS Write-Host '  Vonovox Optional Helper: Lock NVIDIA GPU Core Clocks'
+::PS Write-Host '  No overclocking, no voltage changes, temporary until reboot'
+::PS Write-Host '============================================================'
+::PS Write-Host ''
+::PS
+::PS $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+::PS if (-not $isAdmin) {
+::PS     Write-Host '[ERROR] Administrator privileges are required.'
+::PS     Write-Host 'How to fix: Right-click Lock-GPU-Clocks.bat and choose "Run as administrator".'
+::PS     exit 1
+::PS }
+::PS
+::PS $nvsmi = $null
+::PS $cmd = Get-Command nvidia-smi -ErrorAction SilentlyContinue
+::PS if ($cmd) { $nvsmi = $cmd.Source }
+::PS elseif (Test-Path -LiteralPath 'C:\Windows\System32\nvidia-smi.exe') { $nvsmi = 'C:\Windows\System32\nvidia-smi.exe' }
+::PS elseif (Test-Path -LiteralPath 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe') { $nvsmi = 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe' }
+::PS if (-not $nvsmi) {
+::PS     Write-Host '[ERROR] nvidia-smi.exe was not found on this system.'
+::PS     Write-Host 'Make sure you have an NVIDIA GPU with official drivers installed.'
+::PS     exit 1
+::PS }
+::PS
+::PS $gpuList = & $nvsmi -L 2>&1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host '[ERROR] Could not query NVIDIA GPUs:'
+::PS     $gpuList | ForEach-Object { Write-Host $_ }
+::PS     exit 1
+::PS }
+::PS
+::PS $validGpus = [System.Collections.Generic.HashSet[string]]::new()
+::PS Write-Host 'Detected NVIDIA GPUs:'
+::PS foreach ($line in $gpuList) {
+::PS     Write-Host "  $line"
+::PS     if ($line -match '^GPU\s+(\d+)\s*:') { [void]$validGpus.Add($Matches[1]) }
+::PS }
+::PS if ($validGpus.Count -eq 0) {
+::PS     Write-Host '[ERROR] No valid NVIDIA GPU indices were detected. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS $defaultGpu = if ($validGpus.Contains('0') -and $validGpus.Count -eq 1) { '0' } else { $null }
+::PS $gpuPrompt = if ($defaultGpu) { 'Enter GPU index to configure [default: 0]' } else { 'Enter GPU index to configure (e.g. 0)' }
+::PS $gpuId = (Read-Host $gpuPrompt).Trim()
+::PS if ([string]::IsNullOrWhiteSpace($gpuId) -and $defaultGpu) { $gpuId = $defaultGpu }
+::PS if (($gpuId -notmatch '^\d+$') -or (-not $validGpus.Contains($gpuId))) {
+::PS     Write-Host '[ERROR] Invalid or non-existent GPU index. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host "Querying official supported Graphics clocks for GPU $gpuId..."
+::PS $supOut = & $nvsmi -i $gpuId -q -d SUPPORTED_CLOCKS 2>&1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host "[STOPPED] nvidia-smi could not query SUPPORTED_CLOCKS for GPU $gpuId."
+::PS     $supOut | ForEach-Object { Write-Host $_ }
+::PS     Write-Host 'Your GPU or driver may not support clock locking. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS $graphicsClocks = [System.Collections.Generic.SortedSet[int]]::new()
+::PS foreach ($line in $supOut) {
+::PS     if ($line -match '^\s*Graphics\s*:\s*(\d+)\s*MHz\s*$') {
+::PS         [void]$graphicsClocks.Add([int]$Matches[1])
+::PS     }
+::PS }
+::PS if ($graphicsClocks.Count -eq 0) {
+::PS     Write-Host "[STOPPED] No verified Graphics clocks could be parsed for GPU $gpuId."
+::PS     Write-Host 'Your GPU/driver returned N/A, Not Supported, or an unrecognized format. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host '------------------------------------------------------------'
+::PS Write-Host "Verified supported Graphics clocks (MHz) for GPU ${gpuId}:"
+::PS Write-Host ('  ' + ($graphicsClocks -join ', '))
+::PS Write-Host '------------------------------------------------------------'
+::PS Write-Host 'IMPORTANT:'
+::PS Write-Host ' - Enter ONLY one exact number from the Graphics list above.'
+::PS Write-Host ' - Do NOT pick the highest value blindly; test moderate clocks first.'
+::PS Write-Host ' - Arbitrary values (like 50000) will be rejected.'
+::PS Write-Host ''
+::PS
+::PS $targetRaw = (Read-Host 'Enter a supported Graphics clock in MHz (or press Enter to cancel)').Trim()
+::PS if ([string]::IsNullOrWhiteSpace($targetRaw)) {
+::PS     Write-Host 'Cancelled. No changes were made.'
+::PS     exit 0
+::PS }
+::PS
+::PS [int]$targetMhz = 0
+::PS if (($targetRaw -notmatch '^\d+$') -or (-not [int]::TryParse($targetRaw, [ref]$targetMhz)) -or ($targetMhz -le 0) -or (-not $graphicsClocks.Contains($targetMhz))) {
+::PS     Write-Host '[ERROR] Invalid or unsupported Graphics clock value. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host "Applying temporary Graphics clock lock ($targetMhz,$targetMhz MHz) to GPU $gpuId..."
+::PS $lgcOut = & $nvsmi -i $gpuId -lgc "$targetMhz,$targetMhz" 2>&1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host "[ERROR] nvidia-smi -lgc failed for GPU $gpuId (exit code $LASTEXITCODE):"
+::PS     $lgcOut | ForEach-Object { Write-Host $_ }
+::PS     Write-Host 'No automatic reset was run so any pre-existing configuration is preserved.'
+::PS     Write-Host "If you want to reset manually, run: nvidia-smi -i $gpuId -rgc"
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host "[ACCEPTED] Driver accepted -lgc $targetMhz,$targetMhz on GPU $gpuId."
+::PS $clkOut = & $nvsmi -i $gpuId -q -d CLOCK 2>&1
+::PS $observed = ($clkOut | Where-Object { $_ -match '^\s*Graphics\s*:\s*\d+\s*MHz' } | Select-Object -First 1)
+::PS if ($observed) {
+::PS     Write-Host ('Actually observed right now: ' + $observed.Trim())
+::PS } else {
+::PS     Write-Host 'Could not read current observed Graphics clock via -q -d CLOCK.'
+::PS }
+::PS Write-Host 'Note: Thermal, power, or firmware limits can still affect live clocks under load.'
+::PS Write-Host "When finished, run Reset-GPU-Clocks.bat or: nvidia-smi -i $gpuId -rgc"
+::PS exit 0
 ```
 
 ### Reset-GPU-Clocks.bat
@@ -388,66 +409,81 @@ exit /b 0
 @echo off
 setlocal EnableExtensions
 title Vonovox Helper - Reset NVIDIA GPU Clocks
-
-echo ============================================================
-echo   Vonovox Optional Helper: Reset NVIDIA GPU Clocks to Default
-echo ============================================================
-echo.
-
-:: Check Administrator privileges
-net session >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Administrator privileges are required.
-    echo Right-click this .bat file and choose "Run as administrator".
-    echo.
-    pause
-    exit /b 1
-)
-
-:: Locate nvidia-smi
-set "NVSMI=nvidia-smi"
-where nvidia-smi >nul 2>&1
-if errorlevel 1 (
-    if exist "C:\Windows\System32\nvidia-smi.exe" (
-        set "NVSMI=C:\Windows\System32\nvidia-smi.exe"
-    ) else if exist "C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe" (
-        set "NVSMI=C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe"
-    ) else (
-        echo [ERROR] nvidia-smi.exe was not found on this system.
-        pause
-        exit /b 1
-    )
-)
-
-echo Detected NVIDIA GPUs:
-"%NVSMI%" -L
-if errorlevel 1 (
-    echo [ERROR] Could not query NVIDIA GPUs.
-    pause
-    exit /b 1
-)
-
-echo.
-set "GPU_ID=0"
-set /p "GPU_ID=Enter GPU index to reset [default: 0]: "
-if "%GPU_ID%"=="" set "GPU_ID=0"
-
-echo.
-echo Restoring dynamic GPU clocks on GPU %GPU_ID%...
-"%NVSMI%" -i %GPU_ID% -rgc
-if errorlevel 1 (
-    echo.
-    echo [ERROR] Failed to reset clocks via nvidia-smi.
-    echo You can reboot Windows to restore default dynamic GPU clocks.
-    pause
-    exit /b 1
-)
-
-echo.
-echo [SUCCESS] GPU %GPU_ID% has returned to default dynamic clock management.
+set "BAT_PATH=%~f0"
+powershell.exe -NoProfile -Command "$code = (Get-Content -LiteralPath $env:BAT_PATH | Where-Object { $_ -match '^::PS ' } | ForEach-Object { $_.Substring(5) }) -join [Environment]::NewLine; & ([ScriptBlock]::Create($code)); exit $LASTEXITCODE"
+set "EXIT_CODE=%ERRORLEVEL%"
 echo.
 pause
-exit /b 0
+exit /b %EXIT_CODE%
+
+::PS Write-Host '============================================================'
+::PS Write-Host '  Vonovox Optional Helper: Reset NVIDIA GPU Clocks to Default'
+::PS Write-Host '============================================================'
+::PS Write-Host ''
+::PS
+::PS $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+::PS if (-not $isAdmin) {
+::PS     Write-Host '[ERROR] Administrator privileges are required.'
+::PS     Write-Host 'How to fix: Right-click Reset-GPU-Clocks.bat and choose "Run as administrator".'
+::PS     exit 1
+::PS }
+::PS
+::PS $nvsmi = $null
+::PS $cmd = Get-Command nvidia-smi -ErrorAction SilentlyContinue
+::PS if ($cmd) { $nvsmi = $cmd.Source }
+::PS elseif (Test-Path -LiteralPath 'C:\Windows\System32\nvidia-smi.exe') { $nvsmi = 'C:\Windows\System32\nvidia-smi.exe' }
+::PS elseif (Test-Path -LiteralPath 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe') { $nvsmi = 'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe' }
+::PS if (-not $nvsmi) {
+::PS     Write-Host '[ERROR] nvidia-smi.exe was not found on this system.'
+::PS     exit 1
+::PS }
+::PS
+::PS $gpuList = & $nvsmi -L 2>&1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host '[ERROR] Could not query NVIDIA GPUs:'
+::PS     $gpuList | ForEach-Object { Write-Host $_ }
+::PS     exit 1
+::PS }
+::PS
+::PS $validGpus = [System.Collections.Generic.HashSet[string]]::new()
+::PS Write-Host 'Detected NVIDIA GPUs:'
+::PS foreach ($line in $gpuList) {
+::PS     Write-Host "  $line"
+::PS     if ($line -match '^GPU\s+(\d+)\s*:') { [void]$validGpus.Add($Matches[1]) }
+::PS }
+::PS if ($validGpus.Count -eq 0) {
+::PS     Write-Host '[ERROR] No valid NVIDIA GPU indices were detected.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS $defaultGpu = if ($validGpus.Contains('0') -and $validGpus.Count -eq 1) { '0' } else { $null }
+::PS $gpuPrompt = if ($defaultGpu) { 'Enter GPU index to reset [default: 0]' } else { 'Enter GPU index to reset (e.g. 0)' }
+::PS $gpuId = (Read-Host $gpuPrompt).Trim()
+::PS if ([string]::IsNullOrWhiteSpace($gpuId) -and $defaultGpu) { $gpuId = $defaultGpu }
+::PS if (($gpuId -notmatch '^\d+$') -or (-not $validGpus.Contains($gpuId))) {
+::PS     Write-Host '[ERROR] Invalid or non-existent GPU index. No changes were made.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host ''
+::PS Write-Host "Restoring dynamic GPU clocks on GPU $gpuId..."
+::PS $rgcOut = & $nvsmi -i $gpuId -rgc 2>&1
+::PS if ($LASTEXITCODE -ne 0) {
+::PS     Write-Host "[ERROR] nvidia-smi -rgc failed for GPU $gpuId (exit code $LASTEXITCODE):"
+::PS     $rgcOut | ForEach-Object { Write-Host $_ }
+::PS     Write-Host 'If the driver is unresponsive, reboot Windows to restore default dynamic clocks.'
+::PS     exit 1
+::PS }
+::PS
+::PS Write-Host "[DONE] Reset command accepted for GPU $gpuId."
+::PS $clkOut = & $nvsmi -i $gpuId -q -d CLOCK 2>&1
+::PS $observed = ($clkOut | Where-Object { $_ -match '^\s*Graphics\s*:\s*\d+\s*MHz' } | Select-Object -First 1)
+::PS if ($observed) {
+::PS     Write-Host ('Actually observed right now: ' + $observed.Trim())
+::PS }
+::PS Write-Host 'Dynamic clock management is active; clocks should drop to idle when unloaded.'
+::PS exit 0
 ```
 
 ### Come creare ed eseguire i file `.bat`
@@ -464,20 +500,27 @@ exit /b 0
 
 ## 10. Come verificare se migliora davvero (Test A/B)
 
-Non considerare un MHz più alto come prova di miglioramento. Fai un test **A/B** identico su tutto il resto:
+Non considerare un MHz più alto come prova di miglioramento. Esegui una prova **A/B** strutturata identica su tutto il resto:
 
-- **Test A (Default GPU Clocks):** Esegui prima `nvidia-smi -i 0 -rgc` e prova Vonovox per 3-5 minuti.
-- **Test B (Locked GPU Clocks):** Blocca una frequenza supportata mantenendo identici **modello vocale**, **F0 Method**, **Block Size**, **dispositivi audio**, **backend WASAPI** e **carico GPU** (stesso gioco aperto o desktop fermo).
+- **Verifica preliminare (opzionale, 3-5 minuti):** controllo rapido per verificare temperature e assenza di errori audio.
+- **Test A/B completo (consigliato, almeno 10-15 minuti per fase):**
+  1. Ripristina i clock predefiniti (`nvidia-smi -i 0 -rgc`).
+  2. Avvia Vonovox e stabilizza il carico del sistema.
+  3. Esegui il **Test A (Default GPU Clocks)** per almeno **10-15 minuti** e annota i valori.
+  4. Applica un clock `Graphics` supportato (`Lock-GPU-Clocks.bat` o `-lgc`).
+  5. Ripeti il **Test B (Locked GPU Clocks)** per almeno **10-15 minuti** mantenendo identici **modello RVC**, **F0 Method**, **Block Size**, **dispositivi audio**, **backend audio** e **carico GPU concorrente**.
+  6. Confronta i risultati e ripeti la prova se incerta; se non ci sono benefici, ripristina subito con `-rgc`.
 
-| Valore da annotare | Test A: Clock predefiniti | Test B: Clock bloccati |
+| Valore da annotare | Test A: Clock predefiniti (10-15 min) | Test B: Clock bloccati (10-15 min) |
 | --- | --- | --- |
 | **GPU Delay** medio (ms) | `____ ms` | `____ ms` |
 | Picchi di **GPU Delay** (massimo visto) | `____ ms` | `____ ms` |
-| Scoppiettii / tagli audio | `Sì / No (note)` | `Sì / No (note)` |
-| Temperatura GPU dopo 5 min (°C) | `____ °C` | `____ °C` |
-| Frequenza Graphics reale (`-q -d CLOCK`) | `____ MHz` | `____ MHz` |
+| Variabilità dei tempi di elaborazione | `____________` | `____________` |
+| Scoppiettii / tagli audio | `Sì / No (conteggio)` | `Sì / No (conteggio)` |
+| Temperatura GPU (°C) | `____ °C` | `____ °C` |
 | Consumo GPU (W) | `____ W` | `____ W` |
-| Stabilità dopo oltre 5 minuti | `Stabile / Throttling` | `Stabile / Throttling` |
+| Frequenza Graphics reale (`-q -d CLOCK`) | `____ MHz` | `____ MHz` |
+| Stato throttling (`-q -d PERFORMANCE`) | `Nessuno / Termico / Potenza` | `Nessuno / Termico / Potenza` |
 
 **Come interpretare i risultati:** Mantieni il blocco solo se il Test B riduce chiaramente i picchi di GPU Delay o gli scatti *senza* surriscaldare. Se i risultati sono uguali o peggiori, ripristina subito con `nvidia-smi -i 0 -rgc`.
 
