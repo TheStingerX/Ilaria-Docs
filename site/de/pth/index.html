@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/de">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848535360927">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="RVC PTH-Dateien (.pth)">
+    <meta name="description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/de/pth/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/de/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/de/pth/">
+    <meta property="og:title" content="RVC PTH-Dateien (.pth)">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/de/pth/">
+    <meta name="twitter:title" content="RVC PTH-Dateien (.pth)">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/de/start/pth-files.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848535360927" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848535360927" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848535360927" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <meta name="twitter:description" content="Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_/D_-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/pth/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/pth/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/pth/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/pth/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/pth/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/pth/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/pth/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/de/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Sprache: Deutsch"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg><span class="docs-language-name">Deutsch</span></summary><div><a href="/pth/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/pth/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/pth/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/pth/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/pth/" lang="de" hreflang="de" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/pth/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="rvc-pth-files-pth" class="docs-anchor"></span><h1 id="rvc-pth-dateien-pth">RVC PTH-Dateien (<code translate="no" v-pre>.pth</code>)</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ausführlicher Guide zu RVC-.pth-Dateien: exportierte Stimmmodelle vs. rohe G_&lt;em&gt;/D_&lt;/em&gt;-Checkpoints, FP16 vs. FP32 Dateigrößen, Kompatibilität und Fehlerbehebung.</div>
+<p>Wenn du eine RVC-Stimme herunterlädst, trainierst oder teilst, ist die <strong><code translate="no" v-pre>.pth</code>-Datei</strong> die wichtigste Datei überhaupt. Während eine <a href="../indexes/"><code translate="no" v-pre>.index</code>-Datei</a> optional ist, ist die <code translate="no" v-pre>.pth</code>-Datei <strong>zwingend nötig</strong>: Ohne sie kann RVC keine Stimme konvertieren.</p>
+<p>Dieser Guide erklärt, was in einer <code translate="no" v-pre>.pth</code>-Datei steckt, den entscheidenden Unterschied zwischen einem exportierten Stimmmodell und rohen Trainings-Checkpoints (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>), warum Dateigrößen variieren und wie du typische Fehler löst.</p>
+<hr>
+<span id="1-what-is-a-pth-file" class="docs-anchor"></span><h2 id="1-was-ist-eine-pth-datei">1. Was ist eine <code translate="no" v-pre>.pth</code>-Datei?</h2>
+<p>Eine <strong><code translate="no" v-pre>.pth</code>-Datei</strong> ist ein <strong>PyTorch-Checkpoint</strong>, der das trainierte neuronale Netz (den <strong>Generator</strong>) speichert, mit dem die Klangfarbe deiner Zielstimme erzeugt wird.</p>
+<p>In einer sauber exportierten RVC-Inferenz-<code translate="no" v-pre>.pth</code> stecken zwei Bestandteile:</p>
+<ol>
+<li><strong>Modellgewichte (<code translate="no" v-pre>weight</code>):</strong> Millionen während des Trainings gelernte Zahlen, die Stimmfarbe, Resonanz und Charakter bestimmen.</li>
+<li><strong>Stimmkonfiguration (<code translate="no" v-pre>config</code> und Metadaten):</strong> Beim Export gespeicherte Werte:
+<ul>
+<li><strong>Abtastrate (Sample Rate):</strong> <code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code> oder <code translate="no" v-pre>48 kHz</code> (<code translate="no" v-pre>44.1 kHz</code> bei bestimmten RefineGAN-Varianten).</li>
+<li><strong>RVC-Architektur:</strong> <code translate="no" v-pre>v1</code> (256-d) oder <code translate="no" v-pre>v2</code> (768-d).</li>
+<li><strong>Pitch Guidance (<code translate="no" v-pre>f0</code>):</strong> Aktiv (<code translate="no" v-pre>1</code>) oder deaktiviert (<code translate="no" v-pre>0</code>).</li>
+<li><strong>Vocoder:</strong> <code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> oder <code translate="no" v-pre>RefineGAN</code>.</li>
+<li><strong>Embedder:</strong> Zum Beispiel <code translate="no" v-pre>contentvec</code>, <code translate="no" v-pre>spin-v2</code> oder <code translate="no" v-pre>klm-vocal-contentvec</code>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<span id="2-exported-voice-pth-vs-raw-checkpoints-g_pth--d_pth" class="docs-anchor"></span><h2 id="2-exportierte-pth-vs-rohe-checkpoints-g_pth--d_pth">2. Exportierte <code translate="no" v-pre>.pth</code> vs. Rohe Checkpoints (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>)</h2>
+<p>Einer der häufigsten Anfängerfehler ist, die falsche <code translate="no" v-pre>.pth</code>-Datei aus <code translate="no" v-pre>logs/</code> zu nehmen:</p>
+<retype-table copy-text="| Dateityp | Typischer Ordner | Typische Größe | Wofür gedacht |
+| --- | --- | --- | --- |
+| **Exportierte Stimm-`.pth`** (z. B. `MeineStimme.pth`) | `models/` (Ilaria RVC 2.4.0+) oder `weights/` | **45 - 110 MB** (`fp16` vs `fp32`) | **Inferenz &amp; Teilen.** Enthält nur schlanke Generator-Gewichte + Stimmkonfiguration. |
+| **Rohe Generator- (`G_*.pth`) &amp; Diskriminator- (`D_*.pth`) Checkpoints** | `logs/&lt;Experimentname&gt;/` | **je 200+ MB** | **Nur fürs Weitertrainieren &amp; Pretrains.** Enthalten vollständigen Optimizer-Zustand. **Niemals** für Inferenz nach `models/` kopieren! |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Dateityp</th>
+<th>Typischer Ordner</th>
+<th>Typische Größe</th>
+<th>Wofür gedacht</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exportierte Stimm-<code translate="no" v-pre>.pth</code></strong> (z. B. <code translate="no" v-pre>MeineStimme.pth</code>)</td>
+<td><code translate="no" v-pre>models/</code> (Ilaria RVC 2.4.0+) oder <code translate="no" v-pre>weights/</code></td>
+<td><strong>45 - 110 MB</strong> (<code translate="no" v-pre>fp16</code> vs <code translate="no" v-pre>fp32</code>)</td>
+<td><strong>Inferenz &amp; Teilen.</strong> Enthält nur schlanke Generator-Gewichte + Stimmkonfiguration.</td>
+</tr>
+<tr>
+<td><strong>Rohe Generator- (<code translate="no" v-pre>G_*.pth</code>) &amp; Diskriminator- (<code translate="no" v-pre>D_*.pth</code>) Checkpoints</strong></td>
+<td><code translate="no" v-pre>logs/&lt;Experimentname&gt;/</code></td>
+<td><strong>je 200+ MB</strong></td>
+<td><strong>Nur fürs Weitertrainieren &amp; Pretrains.</strong> Enthalten vollständigen Optimizer-Zustand. <strong>Niemals</strong> für Inferenz nach <code translate="no" v-pre>models/</code> kopieren!</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Wenn du eine rohe <code translate="no" v-pre>G_*.pth</code> nach <code translate="no" v-pre>models/</code> kopierst und Audio konvertierst, stürzt RVC mit <code translate="no" v-pre>Missing key(s) in state_dict</code> ab oder meldet fehlende Stimmkonfiguration. Nutze immer die <strong>Export</strong>-Funktion deiner App.</p>
+<hr>
+<span id="3-file-size-fp16-vs-fp32--formats-pth-vs-safetensors--onnx" class="docs-anchor"></span><h2 id="3-dateigröße-fp16-vs-fp32--formate-pth-vs-safetensors--onnx">3. Dateigröße (<code translate="no" v-pre>FP16</code> vs. <code translate="no" v-pre>FP32</code>) &amp; Formate (<code translate="no" v-pre>.pth</code> vs. <code translate="no" v-pre>.safetensors</code> / <code translate="no" v-pre>.onnx</code>)</h2>
+<ul>
+<li>
+<p><strong>Warum ist eine <code translate="no" v-pre>.pth</code> ~50 MB groß und eine andere ~105 MB?</strong>
+Der Unterschied ist die <strong>Präzision</strong>: Eine in <code translate="no" v-pre>FP16</code> exportierte <code translate="no" v-pre>.pth</code> ist rund halb so groß wie <code translate="no" v-pre>FP32</code> (siehe <a href="../precision/">Präzision</a>). Auf modernen NVIDIA-CUDA-GPUs klingen beide praktisch identisch, während <code translate="no" v-pre>FP32</code> auch auf älteren GTX 10, DirectML und CPU läuft.</p>
+</li>
+<li>
+<p><strong><code translate="no" v-pre>.pth</code> vs. <code translate="no" v-pre>.safetensors</code>:</strong>
+<code translate="no" v-pre>.pth</code> nutzt Pythons <code translate="no" v-pre>pickle</code>-Format (weshalb PyTorch <code translate="no" v-pre>2.6+</code> <code translate="no" v-pre>weights_only=True</code> erzwingt), während <code translate="no" v-pre>.safetensors</code> Gewichte ohne ausführbaren Code speichert. In <strong>Ilaria RVC 2.4.5+</strong> kannst du über den <a href="../ilaria-rvc/safetensors-converter/">Safetensors ↔ PTH Konverter</a> zwischen beiden umwandeln.</p>
+</li>
+<li>
+<p><strong><code translate="no" v-pre>.pth</code> vs. <code translate="no" v-pre>.onnx</code>:</strong>
+Standard-Training und Inferenz in RVC nutzen <code translate="no" v-pre>.pth</code>. Einige Live-Voice-Changer (z. B. w-okada oder Deiteris DirectML) unterstützen auch <code translate="no" v-pre>.onnx</code>-Exporte für AMD/Intel-GPUs.</p>
+</li>
+</ul>
+<hr>
+<span id="4-compatibility-rules-why-a-pth-might-fail-or-sound-wrong" class="docs-anchor"></span><h2 id="4-kompatibilitätsregeln">4. Kompatibilitätsregeln</h2>
+<ol>
+<li><strong>Passender Embedder:</strong> Wurde eine <code translate="no" v-pre>.pth</code> mit <code translate="no" v-pre>contentvec</code> trainiert (Standard), konvertiere mit <code translate="no" v-pre>contentvec</code> (oder lasse Embedder auf <code translate="no" v-pre>Auto</code>). Falsche Embedder verzerren die Aussprache oder lassen deine eigene Stimme durchscheinen.</li>
+<li><strong>Unterstützter Vocoder:</strong> Prüfe, ob deine App den Vocoder der <code translate="no" v-pre>.pth</code> unterstützt. Modelle mit <code translate="no" v-pre>MRF HiFi-GAN</code> oder <code translate="no" v-pre>RefineGAN</code> brauchen eine aktuelle App (<strong>Ilaria RVC 2.3.0+</strong> oder <strong>Applio</strong>).</li>
+<li><strong><code translate="no" v-pre>UnpicklingError</code> unter PyTorch 2.6+:</strong> Ältere <code translate="no" v-pre>.pth</code>-Dateien oder ältere Apps können <code translate="no" v-pre>Weights only load failed</code> (<code translate="no" v-pre>fairseq.data.dictionary.Dictionary</code>) melden. Ein Update auf <strong>Ilaria RVC 2.4.0+</strong> oder aktuelles <strong>Applio</strong> behebt dies.</li>
+</ol>
+<hr>
+<span id="5-where-to-put-pth-files--how-to-inspect-them" class="docs-anchor"></span><h2 id="5-wo-pth-dateien-liegen--wie-du-sie-prüfst">5. Wo <code translate="no" v-pre>.pth</code>-Dateien liegen &amp; wie du sie prüfst</h2>
+<ul>
+<li><strong>Speicherort:</strong> In <strong>Ilaria RVC 2.4.0+</strong> entpacke zuerst eventuelle <code translate="no" v-pre>.zip</code>-Archive und lege die <code translate="no" v-pre>.pth</code> (samt passender <code translate="no" v-pre>added_*.index</code>) in den Hauptordner <strong><code translate="no" v-pre>models/</code></strong> (andere Apps nutzen <code translate="no" v-pre>assets/weights/</code> oder <code translate="no" v-pre>weights/</code>). Klicke in <strong>Inference</strong> auf <strong>Refresh</strong>.</li>
+<li><strong>Unbekannte <code translate="no" v-pre>.pth</code> prüfen:</strong> Öffne in Ilaria RVC <strong>Other → Model information</strong>, wähle die <code translate="no" v-pre>.pth</code> und klicke <strong>Read model information</strong>, um Abtastrate, RVC-Version, Vocoder, Embedder und Präzision auszulesen.</li>
+<li><strong>Stimme sauber teilen:</strong> Nutze <strong>Other → Export model ZIP</strong>, um <code translate="no" v-pre>.pth</code> und <code translate="no" v-pre>added_*.index</code> ohne Trainingslogs oder private Aufnahmen zu verpacken.</li>
+</ul>
+<hr>
+<span id="6-common-pth-errors--quick-fixes" class="docs-anchor"></span><h2 id="6-häufige-pth-fehler--schnelle-lösungen">6. Häufige <code translate="no" v-pre>.pth</code>-Fehler &amp; schnelle Lösungen</h2>
+<retype-table copy-text="| Fehler oder Symptom | Ursache | Lösung |
+| --- | --- | --- |
+| **Modell erscheint nicht in der Liste** | **Refresh** vergessen, `.pth` noch im `.zip` oder falscher Ordner. | `.zip` entpacken, `.pth` direkt nach `models/` (oder `weights/`) legen und **Refresh** klicken. |
+| `EOFError` / `invalid load key` / `File is not a zip archive` | Download abgebrochen oder HTML-Webseite statt Modell gespeichert. | Dateigröße prüfen: Eine echte `.pth` ist **40 - 110+ MB** groß, nicht wenige KB. Löschen und neu laden. |
+| `Missing key(s) in state_dict` / `Sizes of tensors must match` | Roher Trainings-Checkpoint `G_*.pth` statt exportierter `.pth` geladen. | Modell sauber exportieren statt `G_*.pth` aus `logs/` zu kopieren. |
+| `UnpicklingError` / `Weights only load failed` | PyTorch 2.6+ blockiert alte Pickle-Objekte in veralteter RVC-App. | Auf **Ilaria RVC 2.4.0+** oder das neueste **Applio** aktualisieren. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Fehler oder Symptom</th>
+<th>Ursache</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modell erscheint nicht in der Liste</strong></td>
+<td><strong>Refresh</strong> vergessen, <code translate="no" v-pre>.pth</code> noch im <code translate="no" v-pre>.zip</code> oder falscher Ordner.</td>
+<td><code translate="no" v-pre>.zip</code> entpacken, <code translate="no" v-pre>.pth</code> direkt nach <code translate="no" v-pre>models/</code> (oder <code translate="no" v-pre>weights/</code>) legen und <strong>Refresh</strong> klicken.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>EOFError</code> / <code translate="no" v-pre>invalid load key</code> / <code translate="no" v-pre>File is not a zip archive</code></td>
+<td>Download abgebrochen oder HTML-Webseite statt Modell gespeichert.</td>
+<td>Dateigröße prüfen: Eine echte <code translate="no" v-pre>.pth</code> ist <strong>40 - 110+ MB</strong> groß, nicht wenige KB. Löschen und neu laden.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Missing key(s) in state_dict</code> / <code translate="no" v-pre>Sizes of tensors must match</code></td>
+<td>Roher Trainings-Checkpoint <code translate="no" v-pre>G_*.pth</code> statt exportierter <code translate="no" v-pre>.pth</code> geladen.</td>
+<td>Modell sauber exportieren statt <code translate="no" v-pre>G_*.pth</code> aus <code translate="no" v-pre>logs/</code> zu kopieren.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>UnpicklingError</code> / <code translate="no" v-pre>Weights only load failed</code></td>
+<td>PyTorch 2.6+ blockiert alte Pickle-Objekte in veralteter RVC-App.</td>
+<td>Auf <strong>Ilaria RVC 2.4.0+</strong> oder das neueste <strong>Applio</strong> aktualisieren.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../precision/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">⚡ Pr&#228;zision</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../indexes/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#128450;️ Index-​Dateien (.​index)</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T00:11:15.000Z">21/11/2026 · 01:11</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🧠 PTH-Dateien (.pth)", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/start/pth-files.md" }</script>
+</body>
+</html>
