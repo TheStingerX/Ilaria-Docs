@@ -3,11 +3,24 @@ label: "Changelog"
 icon: ":memo:"
 order: 94
 permalink: /non-rvc/causal-voice-changer/changelog/
-description: "Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.2, con base 100 Hz v4, updater integrato e fix GPU."
+description: "Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.3.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime."
 ---
 # Changelog di Causal Voice Changer
 
 [Release su GitHub](https://github.com/mojowozo/Causal-Voice-Changer/releases)
+
+## v0.3.3.1 (21/11/2026)
+
+- **Supporto GPU NVIDIA datate:** Aggiunto il supporto per le schede NVIDIA precedenti escluse da CUDA 13 (serie GeForce GTX 900/10, TITAN X/Xp/V, Quadro M/P) tramite la build PyTorch CUDA 12.6 (`cuda-pascal` / `run-realtime-gtx10.bat` / `run-training-gtx10.bat`).
+
+---
+
+## v0.3.3 (21/11/2026)
+
+- **Stabilità realtime:** Migliorate le prestazioni in tempo reale in modo che il periodo glottale non superi il periodo causale (`10 ms`) causando degrado audio (non richiede di riallenare i modelli).
+- **Fix Windows e updater:** Risolto il problema della trasparenza su Windows e corretto un bug per cui, dopo un aggiornamento, l'app poteva tentare di usare il vecchio motore.
+
+---
 
 ## v0.3.2 (20/11/2026)
 

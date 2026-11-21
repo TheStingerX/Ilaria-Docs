@@ -53,11 +53,12 @@ En Windows, `scripts/gpu-extra.ps1` detecta tu GPU automáticamente:
 - **AMD Radeon antiguas**: funcionan en **CPU** (en tiempo real pon **Chunk** en `60 ms` o más).
 
 Si la detección automática elige el backend incorrecto, define la variable de entorno `CAUSALVC_GPU` antes de abrir el lanzador:
-- `CAUSALVC_GPU=cuda`
+- `CAUSALVC_GPU=cuda` (NVIDIA GTX 16 / RTX 20-50, CUDA 13)
+- `CAUSALVC_GPU=cuda-pascal` (NVIDIA GTX 900/10, TITAN X/Xp/V, Quadro M/P, CUDA 12.6; un-realtime-gtx10.bat / un-training-gtx10.bat)
 - `CAUSALVC_GPU=rocm`
 - `CAUSALVC_GPU=rocm-rdna2`
 
-*(Si ejecutas comandos `uv` manualmente en Windows, añade `--extra cuda`, `--extra rocm` o `--extra rocm-rdna2`.)*
+*(Si ejecutas comandos `uv` manualmente en Windows, añade `--extra cuda`, `--extra cuda-pascal`, `--extra rocm` o `--extra rocm-rdna2`.)*
 
 ## 4. Actualizar CVC
 
