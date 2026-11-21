@@ -77,7 +77,7 @@ Utilisez la navigation pour trouver des guides de configuration, de conversion, 
 
 ## La documentation en chiffres
 
-- **Total de pages (anglais / par langue) :** **88** pages (`87` guides + Accueil)
+- **Pages au total :** **88** pages (`87` guides + Accueil)
 - **Total de pages dans les 6 langues (`en`, `it`, `es`, `fr`, `de`, `pt`) :** **528** pages (`88 x 6`)
 
 ## Quelques anecdotes sur le site et sur Ilaria
