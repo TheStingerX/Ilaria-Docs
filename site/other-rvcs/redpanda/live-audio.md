@@ -44,4 +44,4 @@ If your playback path can target a virtual cable, choose the cable's playback en
 | Browser mic meter never moves | Confirm site permission, the selected physical device and whether another app has exclusive access. |
 | Only a game causes broken audio | Test while the game is running, give the conversion GPU some headroom, or choose another available GPU. |
 
-The browser stream attempts WebSocket transport and can fall back to HTTP streaming when needed. Establish a clean local result before investigating remote connection quality.
+The browser stream attempts WebSocket transport and can fall back to HTTP streaming when needed. Establish a clean local result before investigating remote connection quality. For how Redpanda-vc's realtime and training features compare to RVC Mainline, Applio, and Ilaria RVC, see [Redpanda-vc vs other RVC versions](differences.md).
