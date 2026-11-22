@@ -8,25 +8,6 @@ description: "This guide applies to the separate real-time GUI included in suppo
 
 # Use the RVC WebUI (Mainline - Original RVC) real-time voice changer
 
-> **Correct Audio Routing**
->
-> **1. Inside the Voice Changer (RVC WebUI Mainline)**
-> - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Your headphones or speakers.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
->
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
-
 This guide applies to the separate real-time GUI included in supported RVC WebUI (Mainline - Original RVC) builds. It can run a microphone through a model continuously while the WebUI is used for recordings and training. Start by listening directly through headphones, then send the processed audio to your other app.
 
 ## Open the interface and select your files
@@ -44,6 +25,25 @@ This guide applies to the separate real-time GUI included in supported RVC WebUI
 4. Stop the stream before changing audio devices or loading a different checkpoint. Restart and repeat the same listening test.
 
 ## Route RVC WebUI (Mainline - Original RVC) into a call or recorder
+
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 Set up a virtual cable or other pair of connected playback and recording devices. The playback end receives sound from RVC WebUI (Mainline - Original RVC). The recording end supplies that sound to your call or recorder.
 

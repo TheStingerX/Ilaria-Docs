@@ -7,25 +7,6 @@ description: "Use a compatible RVC inference checkpoint and a working microphone
 ---
 # Set up live audio in Okada TG Developed Fork
 
-> **Correct Audio Routing**
->
-> **1. Inside the Voice Changer (TGR)**
-> - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Your headphones or speakers.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
->
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones (via **Monitor**, if your build offers it) is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
-
 Use a compatible RVC inference checkpoint and a working microphone. First prove that the converted signal reaches your headphones. Then send that signal to another application and make a recording from the receiving end.
 
 ## Load an RVC voice
@@ -44,6 +25,25 @@ Use a compatible RVC inference checkpoint and a working microphone. First prove 
 5. If you hear a dry copy as well, turn off hardware sidetone or remove the other mic loop in the OS. Keep headphone levels moderate during tests.
 
 ## Connect a cable
+
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 TGR's publisher uses Virtual Audio Cable by Muzychenko for its Windows troubleshooting examples. This typically exposes matched playback and recording endpoints named **Line 1**. Other cable drivers use different labels. The signal must enter the playback endpoint and leave through the matching recording endpoint.
 

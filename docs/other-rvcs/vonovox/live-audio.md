@@ -7,25 +7,6 @@ description: "Use three endpoints: your physical microphone for input, a virtual
 ---
 # Route and tune Vonovox
 
-> **Correct Audio Routing**
->
-> **1. Inside the Voice Changer (Vonovox)**
-> - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Your headphones or speakers.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
->
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
-
 ## Set up the route
 
 Use three endpoints: your physical microphone for input, a virtual cable for the converted signal, and headphones for monitoring. A virtual cable has a playback side for the app that sends audio and a recording side for the app that receives it. Some drivers show the same line name on both sides.
@@ -51,6 +32,25 @@ The developer uses a 48 kHz audio route. If your mic and virtual driver expose t
 Keep lookahead at its preset for the first test. Change it only after finding a stable block size. Tune pitch and formant independently, pausing between changes so resulting artifacts are easier to isolate. When testing realtime file playback, check the active source in the UI before resuming microphone use. A playing file can temporarily replace the physical mic.
 
 ## Windows virtual cable guide
+
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 ### Choose VAC Lite or VB-CABLE
 

@@ -7,25 +7,6 @@ description: "Start with headphones and a single local audio path. When you hear
 ---
 # Convert your microphone in w-okada VCClient
 
-> **Correct Audio Routing**
->
-> **1. Inside the Voice Changer (w-okada VCClient)**
-> - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Your headphones or speakers.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
->
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones (via **Monitor**, if your build exposes it) is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
-
 Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder. This order lets you locate issues before adding the virtual cable.
 
 ## Add a model and hear the first result
@@ -44,6 +25,25 @@ Start with headphones and a single local audio path. When you hear a clean conve
 On one PC, test the simpler client path first. Switch to Server if your build exposes a separate monitor or the browser cannot select the desired output endpoint. In Server mode, choose the host API and device names offered by the server. If several entries share a name, try using the same audio API for input and output. Once the signal is stable, you can test alternatives for latency.
 
 ## Send conversion to Discord, OBS or another app
+
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 1. Install a virtual cable for your OS and reopen both applications so their device lists refresh. It should expose a playback endpoint and a corresponding recording endpoint.
 2. Set VCClient input to the physical microphone. Set the converter's output to the cable's **playback** endpoint. With VB-CABLE, this is commonly **CABLE Input**.

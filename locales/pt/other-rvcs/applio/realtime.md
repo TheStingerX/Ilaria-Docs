@@ -7,25 +7,6 @@ description: "Prove que seu modelo funciona com um clipe gravado antes de config
 ---
 # Use o Applio com um microfone
 
-> **Correct Audio Routing**
->
-> **1. Dentro do Voice Changer**
-> - **Input Device:** Seu microfone físico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. No Discord, Jogos, OBS ou outros aplicativos**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Seus fones de ouvido ou alto-falantes.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
->
-> - **VAC vs. VB-CABLE:** `Line 1` é o nome usado pelo **VAC (Virtual Audio Cable)**, não um nome universal para todos os cabos virtuais. Com **VB-CABLE**, defina a saída do Voice Changer como **`CABLE Input`** e a entrada do Discord / jogo como **`CABLE Output`**.
-> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
-
 Prove que seu modelo funciona com [um clipe gravado](inference.md) antes de configurar o áudio ao vivo. Use fones de ouvido para monitoramento para que o microfone não consiga capturar novamente os alto-falantes. Interrompa os trabalhos de treinamento ou conversão de arquivos que usam a mesma GPU.
 
 ## Ouça a voz convertida localmente
@@ -36,6 +17,25 @@ Prove que seu modelo funciona com [um clipe gravado](inference.md) antes de conf
 4. Diga “um, dois, três”, faça uma pausa e repita no seu nível normal de fala. Ouça a voz convertida, faltando sílabas ou cliques. Se você ouvir sua voz inalterada, verifique **Passthrough** e verifique se o microfone está monitorado em outro lugar.
 
 ## Direcione-o para seu aplicativo de bate-papo ou streaming.
+
+> **Correct Audio Routing**
+>
+> **1. Dentro do Voice Changer**
+> - **Input Device:** Seu microfone físico.
+> - **Output Device:** `Line 1` (VAC, recomendado) ou `CABLE Input` (VB-CABLE).
+>
+> **2. No Discord, Jogos, OBS ou outros aplicativos**
+> - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
+> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
+> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
 
 Assim que o teste do fone de ouvido funcionar, interrompa a transmissão e escolha um cabo de áudio virtual instalado ou dispositivo de sistema operacional equivalente. O cabo virtual possui um terminal que recebe a reprodução e outro que expõe esse sinal como entrada de gravação.
 

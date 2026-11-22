@@ -7,25 +7,6 @@ description: "Utilisez un point de contrôle d'inférence RVC compatible et un m
 ---
 # Configurer l'audio en direct dans Okada TG Developed Fork
 
-> **Correct Audio Routing**
->
-> **1. Dans le Voice Changer**
-> - **Input Device :** Votre microphone physique.
-> - **Output Device :** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Dans Discord, les jeux, OBS ou d'autres applications**
-> - **Input Device :** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device :** Vos écouteurs ou haut-parleurs.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
->
-> - **VAC vs. VB-CABLE :** `Line 1` est le nom utilisé par **VAC (Virtual Audio Cable)**, pas un nom universel pour tous les câbles virtuels. Avec **VB-CABLE**, réglez la sortie du Voice Changer sur **`CABLE Input`** et l'entrée de Discord / jeu sur **`CABLE Output`**.
-> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
-
 Utilisez un point de contrôle d'inférence RVC compatible et un microphone fonctionnel. Prouvez d’abord que le signal converti atteint vos écouteurs. Envoyez ensuite ce signal à une autre application et effectuez un enregistrement depuis le récepteur.
 
 ## Charger une voix RVC
@@ -44,6 +25,25 @@ Utilisez un point de contrôle d'inférence RVC compatible et un microphone fonc
 5. Si vous entendez également une copie sèche, désactivez l'effet local matériel ou supprimez l'autre boucle micro du système d'exploitation. Gardez les niveaux des écouteurs modérés pendant les tests.
 
 ## Connecter un câble
+
+> **Correct Audio Routing**
+>
+> **1. Dans le Voice Changer**
+> - **Input Device :** Votre microphone physique.
+> - **Output Device :** `Line 1` (VAC, recommandé) ou `CABLE Input` (VB-CABLE).
+>
+> **2. Dans Discord, les jeux, OBS ou d'autres applications**
+> - **Input Device :** `Line 1` (VAC, recommandé) ou `CABLE Output` (VB-CABLE).
+> - **Output Device :** Vos écouteurs ou haut-parleurs.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
+>
+> - **VAC vs. VB-CABLE :** **VAC** (`Line 1`) est toujours recommandé. Si vous avez aussi (ou uniquement) **VB-CABLE**, le voice changer envoie vers **`CABLE Input`** et Discord / les jeux écoutent **`CABLE Output`**.
+> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
 
 L'éditeur de TGR utilise Virtual Audio Cable de Muzychenko pour ses exemples de dépannage Windows. Cela expose généralement les points de terminaison de lecture et d'enregistrement correspondants nommés **Ligne 1**. D'autres pilotes de câble utilisent des étiquettes différentes. Le signal doit entrer dans le point final de lecture et sortir par le point final d’enregistrement correspondant.
 

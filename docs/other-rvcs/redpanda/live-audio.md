@@ -7,25 +7,6 @@ description: "The Windows desktop realtime launcher uses the devices exposed to 
 ---
 # Test live audio in Redpanda-vc
 
-> **Correct Audio Routing**
->
-> **1. Inside the Voice Changer (Redpanda-vc)**
-> - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Your headphones or speakers.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
->
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
-
 ## Choose desktop or browser
 
 The Windows desktop realtime launcher uses the devices exposed to that local process. The WebUI realtime tab captures microphone input through the browser and passes audio to the selected inference device. Use one path for your first test and leave the other closed to make feedback and competing jobs easier to diagnose.
@@ -40,6 +21,25 @@ The Windows desktop realtime launcher uses the devices exposed to that local pro
 In WebUI builds with **Inference Device**, **Automatic** assigns a new stream to an available device. Choose a specific GPU when comparing repeatable results or leaving a GPU free for another workload. A stream stays on its assigned device. Multiple GPUs can handle separate streams; changing the selector is not a way to combine their capacity into one stream. Beatrice uses a separate CPU path in the documented implementation.
 
 ## Route the signal after a clean test
+
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 If your playback path can target a virtual cable, choose the cable's playback endpoint there. In the receiving app, select the companion recording endpoint as the microphone. Keep the physical mic as the converter input and output from the call on headphones. In browser mode the playback destination can depend on browser and OS output settings. Verify the receiver with a local recording before judging the live stream in a call.
 

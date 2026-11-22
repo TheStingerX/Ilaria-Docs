@@ -7,25 +7,6 @@ description: "Beweisen Sie, dass Ihr Modell mit einem aufgenommenen Clip funktio
 ---
 # Verwenden Sie Applio mit einem Mikrofon
 
-> **Correct Audio Routing**
->
-> **1. Im Voice Changer**
-> - **Input Device:** Dein physisches Mikrofon.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
->
-> - **VAC vs. VB-CABLE:** `Line 1` ist der Name von **VAC (Virtual Audio Cable)**, kein universeller Name für alle virtuellen Kabel. Bei **VB-CABLE** wähle als Voice-Changer-Output **`CABLE Input`** und als Discord-/Spiel-Input **`CABLE Output`**.
-> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
-
 Beweisen Sie, dass Ihr Modell mit [einem aufgenommenen Clip](inference.md) funktioniert, bevor Sie Live-Audio einrichten. Verwenden Sie zur Überwachung Kopfhörer, damit das Mikrofon die Lautsprecher nicht wieder erfassen kann. Stoppen Sie Trainings- oder Dateikonvertierungsjobs, die dieselbe GPU verwenden.
 
 ## Hören Sie die konvertierte Stimme lokal.
@@ -36,6 +17,25 @@ Beweisen Sie, dass Ihr Modell mit [einem aufgenommenen Clip](inference.md) funkt
 4. Sagen Sie „eins, zwei, drei“, machen Sie eine Pause und wiederholen Sie den Vorgang dann in Ihrer normalen Sprechstufe. Achten Sie auf die umgewandelte Stimme, fehlende Silben oder Klickgeräusche. Wenn Sie Ihre unveränderte Stimme hören, aktivieren Sie **Passthrough** und prüfen Sie, ob das Mikrofon an anderer Stelle überwacht wird.
 
 ## Leiten Sie es zu Ihrem Chat oder Ihrer Streaming-App weiter.
+
+> **Correct Audio Routing**
+>
+> **1. Im Voice Changer**
+> - **Input Device:** Dein physisches Mikrofon.
+> - **Output Device:** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
+> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
+> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
 
 Sobald der Kopfhörertest funktioniert, stoppen Sie den Stream und wählen Sie ein installiertes virtuelles Audiokabel oder ein gleichwertiges Betriebssystemgerät. Das virtuelle Kabel verfügt über einen Endpunkt, der die Wiedergabe empfängt, und einen anderen, der dieses Signal als Aufnahmeeingang bereitstellt.
 

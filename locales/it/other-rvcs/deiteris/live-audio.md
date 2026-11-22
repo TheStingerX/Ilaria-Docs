@@ -7,28 +7,28 @@ description: "Indossa sempre le cuffie durante la conversione live. Usare le cas
 ---
 # Instrada e regola Deiteris w-okada Fork
 
+Indossa sempre le **cuffie** durante la conversione live. Usare le casse fa rientrare la voce convertita nel microfono generando eco e fischi.
+
+## 1. Configura i dispositivi audio
+
 > **Correct Audio Routing**
 >
 > **1. Nel Voice Changer**
 > - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
 >
 > **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
 > - **Output Device:** Le tue cuffie o altoparlanti.
 >
 > ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
 > ```
 >
 > L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
 >
-> - **VAC vs. VB-CABLE:** `Line 1` è il nome usato da **VAC (Virtual Audio Cable)**, non un nome universale per tutti i cavi virtuali. Con **VB-CABLE**, imposta Output del Voice Changer su **`CABLE Input`** e Input di Discord / gioco su **`CABLE Output`**.
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
 > - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
-Indossa sempre le **cuffie** durante la conversione live. Usare le casse fa rientrare la voce convertita nel microfono generando eco e fischi.
-
-## 1. Configura i dispositivi audio
 
 1. Imposta **Audio Input** sul tuo microfono fisico.
 2. Imposta **Audio Output** sulle tue cuffie per un primo test locale, oppure su **`CABLE Input`** (il dispositivo di riproduzione del cavo virtuale) quando instradi verso altre app.

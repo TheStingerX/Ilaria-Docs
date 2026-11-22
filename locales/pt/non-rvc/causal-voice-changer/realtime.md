@@ -7,25 +7,6 @@ description: "Depois de executares run-training pelo menos uma vez e teres uma v
 ---
 # Usar o CausalVC Realtime
 
-> **Correct Audio Routing**
->
-> **1. Dentro do Voice Changer**
-> - **Input Device:** Seu microfone físico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. No Discord, Jogos, OBS ou outros aplicativos**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Seus fones de ouvido ou alto-falantes.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
->
-> - **VAC vs. VB-CABLE:** `Line 1` é o nome usado pelo **VAC (Virtual Audio Cable)**, não um nome universal para todos os cabos virtuais. Com **VB-CABLE**, defina a saída do Voice Changer como **`CABLE Input`** e a entrada do Discord / jogo como **`CABLE Output`**.
-> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
-
 Depois de executares `run-training` pelo menos uma vez e teres uma voz `.cvc` pronta, inicia o alterador de voz ao vivo com:
 - **Windows**: `run-realtime.bat`
 - **Linux**: `run-realtime.sh` *(podes adicioná-lo ao menu de aplicações com `realtime/scripts/install-desktop-entry.sh`)*
@@ -42,6 +23,25 @@ Depois de executares `run-training` pelo menos uma vez e teres uma voz `.cvc` pr
    - Para usar o CVC no **Discord, OBS, VRChat ou jogos**, instala um cabo de áudio virtual (como o **VB-CABLE** no Windows), escolhe **`CABLE Input`** aqui e seleciona **`CABLE Output`** como microfone no Discord/OBS.
 4. **Monitor device** *(opcional)*: escolhe os teus **auscultadores** se quiseres ouvir a tua voz convertida, ou deixa em **Disabled**.
 5. *(Dica Linux)*: os dispositivos `[JACK]` oferecem a menor latência. Podes definir o período do PipeWire com `PIPEWIRE_QUANTUM`, ex. `128/48000`.
+
+> **Correct Audio Routing**
+>
+> **1. Dentro do Voice Changer**
+> - **Input Device:** Seu microfone físico.
+> - **Output Device:** `Line 1` (VAC, recomendado) ou `CABLE Input` (VB-CABLE).
+>
+> **2. No Discord, Jogos, OBS ou outros aplicativos**
+> - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
+> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
+> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
 
 ## 2. Escolher e afinar a voz (página `Model`)
 

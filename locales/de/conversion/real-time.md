@@ -6,25 +6,6 @@ description: "Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonve
 ---
 # Echtzeit-Sprachkonvertierung
 
-> **Correct Audio Routing**
->
-> **1. Im Voice Changer**
-> - **Input Device:** Dein physisches Mikrofon.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
->
-> - **VAC vs. VB-CABLE:** `Line 1` ist der Name von **VAC (Virtual Audio Cable)**, kein universeller Name für alle virtuellen Kabel. Bei **VB-CABLE** wähle als Voice-Changer-Output **`CABLE Input`** und als Discord-/Spiel-Input **`CABLE Output`**.
-> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
-
 Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonvertierung mehrere Takes rendern und vergleichen. In einem Live-Setup muss der Konverter jeden Audioblock schnell genug fertigstellen, um den Mikrofonstrom in Bewegung zu halten. Konfigurieren Sie zunächst ein zuverlässiges lokales Signal und verbinden Sie es dann mit einer Anruf-, Aufnahme- oder Streaming-Anwendung.
 
 ## Wählen Sie ein Tool für den Job.
@@ -51,6 +32,25 @@ Im [RVC-Tools-Verzeichnis](../reference/tools.md) finden Sie Downloads und Hardw
 Vermeiden Sie es, über Lautsprecher in der Nähe eines aktiven Mikrofons zu hören. Kopfhörer helfen Ihnen, ein Routing-Problem zu erkennen, ohne den Ausgang wieder in den Eingang einzuspeisen.
 
 ## Konvertiertes Audio an eine andere App senden
+
+> **Correct Audio Routing**
+>
+> **1. Im Voice Changer**
+> - **Input Device:** Dein physisches Mikrofon.
+> - **Output Device:** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
+> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
+> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
 
 Ein virtuelles Audiogerät stellt einen Wiedergabeendpunkt für den Konverter und einen entsprechenden Aufnahmeendpunkt für die empfangende App bereit. Endpunktnamen hängen vom Treiber ab. Beispielsweise kann ein virtuelles Kabel seinen Wiedergabeendpunkt „Eingabe“ und seinen Aufnahmeendpunkt „Ausgabe“ nennen, da die Anweisungen die Perspektive des Kabels verwenden.
 

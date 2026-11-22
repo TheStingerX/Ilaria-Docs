@@ -7,25 +7,6 @@ description: "Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die d
 ---
 # Testen Sie Live-Audio in Redpanda-vc
 
-> **Correct Audio Routing**
->
-> **1. Im Voice Changer**
-> - **Input Device:** Dein physisches Mikrofon.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
->
-> - **VAC vs. VB-CABLE:** `Line 1` ist der Name von **VAC (Virtual Audio Cable)**, kein universeller Name für alle virtuellen Kabel. Bei **VB-CABLE** wähle als Voice-Changer-Output **`CABLE Input`** und als Discord-/Spiel-Input **`CABLE Output`**.
-> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
-
 ## Wählen Sie Desktop oder Browser
 
 Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind. Die WebUI-Echtzeitregisterkarte erfasst Mikrofoneingaben über den Browser und leitet Audio an das ausgewählte Inferenzgerät weiter. Verwenden Sie einen Pfad für Ihren ersten Test und lassen Sie den anderen geschlossen, um die Diagnose von Rückmeldungen und Konkurrenzjobs zu erleichtern.
@@ -40,6 +21,25 @@ Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen 
 In WebUI-Builds mit **Inferenzgerät** weist **Automatisch** einem verfügbaren Gerät einen neuen Stream zu. Wählen Sie eine bestimmte GPU, wenn Sie wiederholbare Ergebnisse vergleichen oder eine GPU für eine andere Arbeitslast frei lassen möchten. Ein Stream bleibt auf dem ihm zugewiesenen Gerät. Mehrere GPUs können separate Streams verarbeiten; Das Ändern des Selektors ist keine Möglichkeit, ihre Kapazität in einem Stream zu kombinieren. Beatrice verwendet in der dokumentierten Implementierung einen separaten CPU-Pfad.
 
 ## Leiten Sie das Signal nach einem sauberen Test weiter
+
+> **Correct Audio Routing**
+>
+> **1. Im Voice Changer**
+> - **Input Device:** Dein physisches Mikrofon.
+> - **Output Device:** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
+> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
+> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
 
 Wenn Ihr Wiedergabepfad auf ein virtuelles Kabel abzielen kann, wählen Sie dort den Wiedergabeendpunkt des Kabels aus. Wählen Sie in der empfangenden App den Aufnahmeendpunkt des Begleiters als Mikrofon aus. Behalten Sie das physische Mikrofon als Konverter-Eingang und -Ausgang des Anrufs über Kopfhörer bei. Im Browsermodus kann das Wiedergabeziel von den Ausgabeeinstellungen des Browsers und des Betriebssystems abhängen. Überprüfen Sie den Empfänger anhand einer lokalen Aufzeichnung, bevor Sie den Live-Stream in einem Anruf beurteilen.
 
