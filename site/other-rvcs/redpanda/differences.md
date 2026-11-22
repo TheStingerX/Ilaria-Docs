@@ -53,11 +53,11 @@ Status labels below reflect static source-code inspection of each repository's `
 | **Voice inference (offline)** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Text-to-Speech (TTS)** | **No - verified** *(requires external TTS + RVC)* | **Yes** *(integrated `tabs/tts/` + CLI `rvc/lib/tools/tts.py`)* | **No - verified** *(Applio `tts` tab removed from `tabs/`)* | **Yes** *(integrated Kokoro, ElevenLabs, Windows TTS + RVC)* |
 | **Real-time conversion** | **Yes** | **Yes** | **Yes** | **No - verified** *(offline & batch only)* |
-| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** *(WebUI / Desktop)* | **Yes** (`run-realtime-gui.bat`, Windows launcher) | **No - verified** |
+| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **WebUI realtime; separate standalone desktop GUI not verified** | **Yes** (`run-realtime-gui.bat`, Windows launcher) | **No - verified** |
 | **Browser realtime** | **No - verified** | **Yes** (`tabs/realtime`) | **Yes** (WebSocket + HTTP fallback) | **No - verified** |
 | **Multi-GPU training** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Concurrent multi-GPU realtime** | **No - verified** | **Not verified** | **Yes** *(1 GPU per stream)* | **No - verified** |
-| **Multi-family model support** | **No - verified** *(RVC only)* | **Partial** *(RVC + Applio)* | **Yes** *(RVC + Rectified Flow + Beatrice)* | **No - verified** *(RVC only)* |
+| **Multi-family model support** | **No - verified** *(RVC only)* | **RVC family with additional vocoder options** *(hidden `Architecture` selector; not separate families like RF/Beatrice)* | **Yes** *(RVC + Rectified Flow + Beatrice)* | **No - verified** *(RVC only)* |
 | **Monitoring tools** | TensorBoard | TensorBoard | TensorBoard | TensorBoard + Audio Analyzer + Training Previews |
 
 ### Platform & Backend Support
@@ -68,7 +68,7 @@ Having a `.sh` launcher does **not** prove every feature is tested on Linux or m
 | --- | --- | --- | --- | --- |
 | **Windows launchers** | `go-webui.bat`, `go-realtime_gui.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-updater.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-realtime-gui.bat` | `RUN_ILARIA_RVC.bat`, `RUN_ILARIA_RVC_LOGS.bat` |
 | **Linux / macOS launchers** | Manual Python launch | `run-install.sh`, `run-applio.sh`, `run-tensorboard.sh` | `run-install.sh`, `run-applio.sh` *(no `.sh` for `realtime_gui.py`)* | Manual Python launch *(Windows-focused `.bat`)* |
-| **Compute backends in code** | CUDA / MPS / CPU | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime on CPU)* | CUDA / DirectML (AMD & Intel) / CPU |
+| **Compute backends in code** | **CUDA / DirectML / CPU** *(DirectML for inference via `--dml` / fallback; training uses CUDA or CPU)* | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime on CPU)* | CUDA / DirectML (AMD & Intel) / CPU |
 | **Cross-OS runtime status** | Not tested in this audit | Not tested in this audit | Not tested in this audit | Not tested in this audit |
 
 ---
@@ -138,7 +138,7 @@ Redpanda-vc includes a dedicated **Vocoder** training tab (`tabs/train/nsf_hifig
 
 | Real-Time Capability | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |
-| **Desktop Realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** | **Yes** (`run-realtime-gui.bat`, RVC + Beatrice + RF) | **No - verified** |
+| **Desktop Realtime GUI** | **Yes** (`realtime_gui.py`) | **WebUI realtime; separate standalone desktop GUI not verified** | **Yes** (`run-realtime-gui.bat`, RVC + Beatrice + RF) | **No - verified** |
 | **Browser WebUI Realtime** | **No - verified** | **Yes** (`tabs/realtime`) | **Yes** (binary WebSocket + HTTP streaming fallback) | **No - verified** |
 | **Multi-GPU Stream Assignment** | **No - verified** | **Not verified** | **Yes** (`Inference Device: Automatic` or specific GPU) | **No - verified** |
 
@@ -244,6 +244,6 @@ Combining **Generator EMA**, **step-interval RVC saving (`Save Every X Steps`)**
 Static source-code comparison verified on `main` branches on **2026-11-22**:
 
 - **Redpanda-vc** (commit [`55a3a80`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80), 2026-10-31): [Repository](https://github.com/redpanda343/Redpanda-vc) · [`tabs/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/train.py) · [`tabs/train/rvc.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/rvc.py) · [`rvc/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/rvc/train/train.py) · [`rectified_flow/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/rectified_flow) · [`beatrice/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/beatrice) · [`nsf_hifigan/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/nsf_hifigan) · [`tabs/inference/realtime.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/inference/realtime.py) · [`realtime_gui.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/realtime_gui.py)
-- **Applio** (commit [`445b0f6`](https://github.com/IAHispano/Applio/tree/445b0f6), 2026-11-19): [Repository](https://github.com/IAHispano/Applio) · [`tabs/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py) · [`rvc/infer/infer.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py) · [`core.py`](https://github.com/IAHispano/Applio/blob/445b0f6/core.py) · [`rvc/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py) · [`tabs/tts/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts) · [`tabs/realtime/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime)
-- **RVC Mainline** (commit [`81eed5e`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e), 2026-08-04): [Repository](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [`train/train.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py) · [`realtime_gui.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py)
+- **Applio** (commit [`445b0f6`](https://github.com/IAHispano/Applio/tree/445b0f6), 2026-11-19): [Repository](https://github.com/IAHispano/Applio) · [`tabs/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py) · [`rvc/infer/infer.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py) · [`core.py`](https://github.com/IAHispano/Applio/blob/445b0f6/core.py) · [`rvc/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py) · [`tabs/tts/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts) · [`tabs/realtime/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime) · [`rvc/realtime/`](https://github.com/IAHispano/Applio/tree/445b0f6/rvc/realtime)
+- **RVC Mainline** (commit [`81eed5e`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e), 2026-08-04): [Repository](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [`configs/config.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/configs/config.py) · [`train/train.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py) · [`realtime_gui.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py)
 - **Ilaria RVC** (commit [`a887ba5`](https://github.com/TheStingerX/Ilaria-RVC/tree/a887ba5), 2026-11-21): [Repository](https://github.com/TheStingerX/Ilaria-RVC) · [`app/ILARIA_RVC.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ILARIA_RVC.py) · [`app/infer/modules/train/train.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/infer/modules/train/train.py) · [`app/ilaria/ilaria_tts.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ilaria/ilaria_tts.py)

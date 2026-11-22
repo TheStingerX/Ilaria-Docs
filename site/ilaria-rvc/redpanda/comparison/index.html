@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848674090900">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848675736957">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848674090900" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848675736957" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848674090900" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848675736957" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848674090900" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848675736957" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -219,11 +219,11 @@
 | **Voice inference (offline)** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Text-to-Speech (TTS)** | **No - verified** *(requires external TTS + RVC)* | **Yes** *(integrated `tabs/tts/` + CLI `rvc/lib/tools/tts.py`)* | **No - verified** *(Applio `tts` tab removed from `tabs/`)* | **Yes** *(integrated Kokoro, ElevenLabs, Windows TTS + RVC)* |
 | **Real-time conversion** | **Yes** | **Yes** | **Yes** | **No - verified** *(offline &amp; batch only)* |
-| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** *(WebUI / Desktop)* | **Yes** (`run-realtime-gui.bat`, Windows launcher) | **No - verified** |
+| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **WebUI realtime; separate standalone desktop GUI not verified** | **Yes** (`run-realtime-gui.bat`, Windows launcher) | **No - verified** |
 | **Browser realtime** | **No - verified** | **Yes** (`tabs/realtime`) | **Yes** (WebSocket + HTTP fallback) | **No - verified** |
 | **Multi-GPU training** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Concurrent multi-GPU realtime** | **No - verified** | **Not verified** | **Yes** *(1 GPU per stream)* | **No - verified** |
-| **Multi-family model support** | **No - verified** *(RVC only)* | **Partial** *(RVC + Applio)* | **Yes** *(RVC + Rectified Flow + Beatrice)* | **No - verified** *(RVC only)* |
+| **Multi-family model support** | **No - verified** *(RVC only)* | **RVC family with additional vocoder options** *(hidden `Architecture` selector; not separate families like RF/Beatrice)* | **Yes** *(RVC + Rectified Flow + Beatrice)* | **No - verified** *(RVC only)* |
 | **Monitoring tools** | TensorBoard | TensorBoard | TensorBoard | TensorBoard + Audio Analyzer + Training Previews |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -415,7 +415,7 @@
 <tr>
 <td><strong>Desktop realtime GUI</strong></td>
 <td><strong>Yes</strong> (<code translate="no" v-pre>realtime_gui.py</code>)</td>
-<td><strong>Different implementation</strong> <em>(WebUI / Desktop)</em></td>
+<td><strong>WebUI realtime; separate standalone desktop GUI not verified</strong></td>
 <td><strong>Yes</strong> (<code translate="no" v-pre>run-realtime-gui.bat</code>, Windows launcher)</td>
 <td><strong>No - verified</strong></td>
 </tr>
@@ -443,7 +443,7 @@
 <tr>
 <td><strong>Multi-family model support</strong></td>
 <td><strong>No - verified</strong> <em>(RVC only)</em></td>
-<td><strong>Partial</strong> <em>(RVC + Applio)</em></td>
+<td><strong>RVC family with additional vocoder options</strong> <em>(hidden <code translate="no" v-pre>Architecture</code> selector; not separate families like RF/Beatrice)</em></td>
 <td><strong>Yes</strong> <em>(RVC + Rectified Flow + Beatrice)</em></td>
 <td><strong>No - verified</strong> <em>(RVC only)</em></td>
 </tr>
@@ -464,7 +464,7 @@
 | --- | --- | --- | --- | --- |
 | **Windows launchers** | `go-webui.bat`, `go-realtime_gui.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-updater.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-realtime-gui.bat` | `RUN_ILARIA_RVC.bat`, `RUN_ILARIA_RVC_LOGS.bat` |
 | **Linux / macOS launchers** | Manual Python launch | `run-install.sh`, `run-applio.sh`, `run-tensorboard.sh` | `run-install.sh`, `run-applio.sh` *(no `.sh` for `realtime_gui.py`)* | Manual Python launch *(Windows-focused `.bat`)* |
-| **Compute backends in code** | CUDA / MPS / CPU | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime on CPU)* | CUDA / DirectML (AMD &amp; Intel) / CPU |
+| **Compute backends in code** | **CUDA / DirectML / CPU** *(DirectML for inference via `--dml` / fallback; training uses CUDA or CPU)* | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime on CPU)* | CUDA / DirectML (AMD &amp; Intel) / CPU |
 | **Cross-OS runtime status** | Not tested in this audit | Not tested in this audit | Not tested in this audit | Not tested in this audit |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -494,7 +494,7 @@
 </tr>
 <tr>
 <td><strong>Compute backends in code</strong></td>
-<td>CUDA / MPS / CPU</td>
+<td><strong>CUDA / DirectML / CPU</strong> <em>(DirectML for inference via <code translate="no" v-pre>--dml</code> / fallback; training uses CUDA or CPU)</em></td>
 <td>CUDA / MPS / CPU</td>
 <td>CUDA / MPS / CPU <em>(Beatrice realtime on CPU)</em></td>
 <td>CUDA / DirectML (AMD &amp; Intel) / CPU</td>
@@ -561,7 +561,7 @@
 <h2 id="real-time-conversion-differences">Real-Time Conversion Differences</h2>
 <retype-table copy-text="| Real-Time Capability | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |
-| **Desktop Realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** | **Yes** (`run-realtime-gui.bat`, RVC + Beatrice + RF) | **No - verified** |
+| **Desktop Realtime GUI** | **Yes** (`realtime_gui.py`) | **WebUI realtime; separate standalone desktop GUI not verified** | **Yes** (`run-realtime-gui.bat`, RVC + Beatrice + RF) | **No - verified** |
 | **Browser WebUI Realtime** | **No - verified** | **Yes** (`tabs/realtime`) | **Yes** (binary WebSocket + HTTP streaming fallback) | **No - verified** |
 | **Multi-GPU Stream Assignment** | **No - verified** | **Not verified** | **Yes** (`Inference Device: Automatic` or specific GPU) | **No - verified** |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -579,7 +579,7 @@
 <tr>
 <td><strong>Desktop Realtime GUI</strong></td>
 <td><strong>Yes</strong> (<code translate="no" v-pre>realtime_gui.py</code>)</td>
-<td><strong>Different implementation</strong></td>
+<td><strong>WebUI realtime; separate standalone desktop GUI not verified</strong></td>
 <td><strong>Yes</strong> (<code translate="no" v-pre>run-realtime-gui.bat</code>, RVC + Beatrice + RF)</td>
 <td><strong>No - verified</strong></td>
 </tr>
@@ -765,8 +765,8 @@ Combining <strong>Generator EMA</strong>, <strong>step-interval RVC saving (<cod
 <p>Static source-code comparison verified on <code translate="no" v-pre>main</code> branches on <strong>2026-11-22</strong>:</p>
 <ul>
 <li><strong>Redpanda-vc</strong> (commit <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80"><code translate="no" v-pre>55a3a80</code></a>, 2026-10-31): <a href="https://github.com/redpanda343/Redpanda-vc">Repository</a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/train.py"><code translate="no" v-pre>tabs/train/train.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/rvc.py"><code translate="no" v-pre>tabs/train/rvc.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/rvc/train/train.py"><code translate="no" v-pre>rvc/train/train.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/rectified_flow"><code translate="no" v-pre>rectified_flow/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/beatrice"><code translate="no" v-pre>beatrice/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/nsf_hifigan"><code translate="no" v-pre>nsf_hifigan/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/inference/realtime.py"><code translate="no" v-pre>tabs/inference/realtime.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/realtime_gui.py"><code translate="no" v-pre>realtime_gui.py</code></a></li>
-<li><strong>Applio</strong> (commit <a href="https://github.com/IAHispano/Applio/tree/445b0f6"><code translate="no" v-pre>445b0f6</code></a>, 2026-11-19): <a href="https://github.com/IAHispano/Applio">Repository</a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py"><code translate="no" v-pre>tabs/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py"><code translate="no" v-pre>rvc/infer/infer.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/core.py"><code translate="no" v-pre>core.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py"><code translate="no" v-pre>rvc/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts"><code translate="no" v-pre>tabs/tts/</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime"><code translate="no" v-pre>tabs/realtime/</code></a></li>
-<li><strong>RVC Mainline</strong> (commit <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e"><code translate="no" v-pre>81eed5e</code></a>, 2026-08-04): <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">Repository</a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py"><code translate="no" v-pre>train/train.py</code></a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py"><code translate="no" v-pre>realtime_gui.py</code></a></li>
+<li><strong>Applio</strong> (commit <a href="https://github.com/IAHispano/Applio/tree/445b0f6"><code translate="no" v-pre>445b0f6</code></a>, 2026-11-19): <a href="https://github.com/IAHispano/Applio">Repository</a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py"><code translate="no" v-pre>tabs/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py"><code translate="no" v-pre>rvc/infer/infer.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/core.py"><code translate="no" v-pre>core.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py"><code translate="no" v-pre>rvc/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts"><code translate="no" v-pre>tabs/tts/</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime"><code translate="no" v-pre>tabs/realtime/</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/rvc/realtime"><code translate="no" v-pre>rvc/realtime/</code></a></li>
+<li><strong>RVC Mainline</strong> (commit <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e"><code translate="no" v-pre>81eed5e</code></a>, 2026-08-04): <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">Repository</a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/configs/config.py"><code translate="no" v-pre>configs/config.py</code></a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py"><code translate="no" v-pre>train/train.py</code></a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py"><code translate="no" v-pre>realtime_gui.py</code></a></li>
 <li><strong>Ilaria RVC</strong> (commit <a href="https://github.com/TheStingerX/Ilaria-RVC/tree/a887ba5"><code translate="no" v-pre>a887ba5</code></a>, 2026-11-21): <a href="https://github.com/TheStingerX/Ilaria-RVC">Repository</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ILARIA_RVC.py"><code translate="no" v-pre>app/ILARIA_RVC.py</code></a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/infer/modules/train/train.py"><code translate="no" v-pre>app/infer/modules/train/train.py</code></a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ilaria/ilaria_tts.py"><code translate="no" v-pre>app/ilaria/ilaria_tts.py</code></a></li>
 </ul>
 
@@ -803,7 +803,7 @@ Combining <strong>Generator EMA</strong>, <strong>step-interval RVC saving (<cod
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T14:46:44.000Z">22/11/2026 · 15:46</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T15:14:29.000Z">22/11/2026 · 16:14</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
