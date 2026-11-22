@@ -56,11 +56,11 @@
 
 ## 3. Compatibilité NVIDIA et messages d'erreur
 
-La présence de `nvidia-smi` ne garantit pas le support de `--lgc` (souvent restreint sur certains PC portables, anciens pilotes ou architectures).
+La présence de `nvidia-smi` ne garantit pas le support de `-lgc` (souvent restreint sur certains PC portables, anciens pilotes ou architectures).
 
 | Message | Signification | Solution |
 | --- | --- | --- |
-| `Not Supported` | GPU, BIOS portable ou pilote incompatible avec `--lgc`. | Laissez par défaut et utilisez les [Alternatives](#13-alternatives). |
+| `Not Supported` | GPU, BIOS portable ou pilote incompatible avec `-lgc`. | Laissez par défaut et utilisez les [Alternatives](#13-alternatives). |
 | `Insufficient Permissions` | Invite non ouverte en administrateur. | Clic droit → **Exécuter en tant qu'administrateur**. |
 | `Invalid Argument` | Syntaxe ou valeur hors `SUPPORTED_CLOCKS`. | Copiez une valeur exacte sous `Graphics :` au format `min,max`. |
 | `NVIDIA-SMI has failed` | Pilote inactif ou GPU en veille. | Activez la GPU et branchez le secteur sur PC portable. |
@@ -383,7 +383,7 @@ Plus de chaleur, de bruit de ventilateur, de consommation et moins d'autonomie s
 
 ## 13. Alternatives
 
-Utilisez le **Panneau de configuration NVIDIA → Mode de gestion de l'alimentation → Privilégier les performances maximales** (non équivalent à `--lgc`), augmentez **Block Size**, vérifiez le `48 kHz` dans [Configurer et régler Vonovox](live-audio.md), limitez les FPS en jeu et contrôlez le refroidissement.
+Utilisez le **Panneau de configuration NVIDIA → Mode de gestion de l'alimentation → Privilégier les performances maximales** (non équivalent à `-lgc`), augmentez **Block Size**, vérifiez le `48 kHz` dans [Configurer et régler Vonovox](live-audio.md), limitez les FPS en jeu et contrôlez le refroidissement.
 
 ---
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620476991">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624736792">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620476991" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624736792" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620476991" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624736792" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620476991" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620476991" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624736792" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624736792" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -229,10 +229,10 @@
 </ul>
 <hr>
 <span id="3-nvidia-compatibility--error-messages" class="docs-anchor"></span><h2 id="3-nvidia-kompatibilität-und-fehlermeldungen">3. NVIDIA-Kompatibilität und Fehlermeldungen</h2>
-<p><code translate="no" v-pre>nvidia-smi</code> allein garantiert kein <code translate="no" v-pre>--lgc</code> (viele Laptops, ältere Karten oder Treiber sperren es).</p>
+<p><code translate="no" v-pre>nvidia-smi</code> allein garantiert kein <code translate="no" v-pre>-lgc</code> (viele Laptops, ältere Karten oder Treiber sperren es).</p>
 <retype-table copy-text="| Meldung | Bedeutung | Lösung |
 | --- | --- | --- |
-| `Not Supported` | GPU, Laptop-BIOS oder Treiber erlaubt `--lgc` nicht. | Standard lassen und [Alternativen](#13-alternativen) nutzen. |
+| `Not Supported` | GPU, Laptop-BIOS oder Treiber erlaubt `-lgc` nicht. | Standard lassen und [Alternativen](#13-alternativen) nutzen. |
 | `Insufficient Permissions` | CMD nicht als Administrator gestartet. | Rechtsklick → **Als Administrator ausführen**. |
 | `Invalid Argument` | Ungültiger Wert oder falsches `min,max`-Format. | Exakten `Graphics`-Wert aus `SUPPORTED_CLOCKS` wählen. |
 | `NVIDIA-SMI has failed` | Treiber reagiert nicht oder Laptop-GPU schläft. | Geräte-Manager prüfen, Netzteil anschließen. |
@@ -249,7 +249,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>GPU, Laptop-BIOS oder Treiber erlaubt <code translate="no" v-pre>--lgc</code> nicht.</td>
+<td>GPU, Laptop-BIOS oder Treiber erlaubt <code translate="no" v-pre>-lgc</code> nicht.</td>
 <td>Standard lassen und <doc-anchor-trigger to="#13-alternativen">Alternativen</doc-anchor-trigger> nutzen.</td>
 </tr>
 <tr>
@@ -299,7 +299,7 @@
 <div id="7-gpu-clock-lock-anwenden-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lgc 1800,1800</code></pre>
 </doc-codeblock></div>
-<p>Bereichsbeispiel: <code translate="no" v-pre>nvidia-smi -i 0 -lgc 1500,1800</code>. Unterscheide zwischen angefordertem Takt und dem mit <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> (oder <code translate="no" v-pre>-l 1</code>) <strong>tatsächlich beobachteten Takt</strong>. Dass <code translate="no" v-pre>--lgc</code> akzeptiert wird, garantiert keinen dauerhaft fixierten Takt: Power-, Temperatur- oder Firmwarelimits können ihn begrenzen.</p>
+<p>Bereichsbeispiel: <code translate="no" v-pre>nvidia-smi -i 0 -lgc 1500,1800</code>. Unterscheide zwischen angefordertem Takt und dem mit <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> (oder <code translate="no" v-pre>-l 1</code>) <strong>tatsächlich beobachteten Takt</strong>. Dass <code translate="no" v-pre>-lgc</code> akzeptiert wird, garantiert keinen dauerhaft fixierten Takt: Power-, Temperatur- oder Firmwarelimits können ihn begrenzen.</p>
 <hr>
 <h2 id="8-standardwerte-wiederherstellen">8. Standardwerte wiederherstellen</h2>
 <div id="8-standardwerte-wiederherstellen-code-1" class="codeblock-wrapper"><doc-codeblock>
@@ -605,7 +605,7 @@ exit /b %EXIT_CODE%
 <p><code translate="no" v-pre>-lmc</code> / <code translate="no" v-pre>-rmc</code> sperrt den VRAM-Takt und wird mangels Nutzen nicht für Vonovox empfohlen.</p>
 <hr>
 <h2 id="13-alternativen">13. Alternativen</h2>
-<p><strong>NVIDIA Systemsteuerung → Energieverwaltungsmodus → Maximale Leistung bevorzugen</strong> (nicht identisch mit <code translate="no" v-pre>--lgc</code>), <strong>Block Size</strong> erhöhen, <code translate="no" v-pre>48 kHz</code> und WASAPI in <a href="../live-audio/">Vonovox einrichten</a> prüfen, Spiel-FPS begrenzen und Kühlung prüfen.</p>
+<p><strong>NVIDIA Systemsteuerung → Energieverwaltungsmodus → Maximale Leistung bevorzugen</strong> (nicht identisch mit <code translate="no" v-pre>-lgc</code>), <strong>Block Size</strong> erhöhen, <code translate="no" v-pre>48 kHz</code> und WASAPI in <a href="../live-audio/">Vonovox einrichten</a> prüfen, Spiel-FPS begrenzen und Kühlung prüfen.</p>
 <hr>
 <h2 id="14-fehlerbehebung">14. Fehlerbehebung</h2>
 <retype-table copy-text="| Symptom | Mögliche Ursache | Empfohlene Lösung |
@@ -613,7 +613,7 @@ exit /b %EXIT_CODE%
 | `nvidia-smi` nicht erkannt | Nicht im `PATH`. | Vollständigen Pfad oder BAT-Dateien nutzen. |
 | Keine GPU / `NVIDIA-SMI has failed` | GPU deaktiviert oder im Schlafmodus. | Geräte-Manager prüfen, Netzteil einstecken. |
 | `Insufficient Permissions` | Keine Admin-Rechte. | Als Administrator ausführen. |
-| `Not Supported` | Hardware/Treiber sperrt `--lgc`. | [Alternativen](#13-alternativen) nutzen. |
+| `Not Supported` | Hardware/Treiber sperrt `-lgc`. | [Alternativen](#13-alternativen) nutzen. |
 | `Invalid Argument` | Falsche Syntax oder MHz. | Exakten `Graphics`-Wert aus `SUPPORTED_CLOCKS` nutzen. |
 | Takt weicht ab / fällt | Power- oder Temperaturlimit. | Niedrigeren Takt testen oder `-rgc`. |
 | Hohe Temperaturen | Zu wenig Kühlung. | Sofort `nvidia-smi -i 0 -rgc` ausführen. |
@@ -647,7 +647,7 @@ exit /b %EXIT_CODE%
 </tr>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>Hardware/Treiber sperrt <code translate="no" v-pre>--lgc</code>.</td>
+<td>Hardware/Treiber sperrt <code translate="no" v-pre>-lgc</code>.</td>
 <td><doc-anchor-trigger to="#13-alternativen">Alternativen</doc-anchor-trigger> nutzen.</td>
 </tr>
 <tr>
@@ -747,7 +747,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -92,18 +92,18 @@ Vonovox elabora l'audio del microfono in tempo reale tramite **CUDA** sulla GPU 
 
 ## 3. Compatibilità NVIDIA e messaggi di errore
 
-Avere `nvidia-smi` funzionante **non garantisce** che il comando `--lgc` sia supportato dalla tua scheda o dal driver.
+Avere `nvidia-smi` funzionante **non garantisce** che il comando `-lgc` sia supportato dalla tua scheda o dal driver.
 
-- **GPU NVIDIA Desktop (GeForce):** Molte schede desktop recenti supportano `--lgc` sui driver attuali, ma comportamento e granularità dipendono dall'architettura.
-- **GPU NVIDIA Laptop:** Molti portatili bloccano `--lgc` a livello di firmware/BIOS o tramite gestione energetica/Optimus. Anche quando il comando viene accettato, i limiti termici o di potenza del portatile possono prevalere.
+- **GPU NVIDIA Desktop (GeForce):** Molte schede desktop recenti supportano `-lgc` sui driver attuali, ma comportamento e granularità dipendono dall'architettura.
+- **GPU NVIDIA Laptop:** Molti portatili bloccano `-lgc` a livello di firmware/BIOS o tramite gestione energetica/Optimus. Anche quando il comando viene accettato, i limiti termici o di potenza del portatile possono prevalere.
 - **GPU professionali e datacenter (Quadro, RTX A-series, Tesla, L4/T4):** Supportano ampiamente i comandi clock di `nvidia-smi`.
-- **Generazioni e driver meno recenti:** Architetture più vecchie o driver datati possono restituire `Not Supported`. Non dare per scontato che ogni GTX o RTX supporti `--lgc`.
+- **Generazioni e driver meno recenti:** Architetture più vecchie o driver datati possono restituire `Not Supported`. Non dare per scontato che ogni GTX o RTX supporti `-lgc`.
 
 ### Messaggi comuni e soluzioni sicure
 
 | Messaggio | Significato | Soluzione sicura |
 | --- | --- | --- |
-| `Not Supported` | La tua GPU, il firmware del laptop o il driver attuale non consente `--lgc` o `SUPPORTED_CLOCKS`. | Non forzare: lascia i clock dinamici e usa le [alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
+| `Not Supported` | La tua GPU, il firmware del laptop o il driver attuale non consente `-lgc` o `SUPPORTED_CLOCKS`. | Non forzare: lascia i clock dinamici e usa le [alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
 | `Insufficient Permissions` | Hai aperto CMD normalmente invece che come amministratore. | Chiudi CMD, cerca `cmd` in Start, tasto destro → **Esegui come amministratore**. |
 | `Invalid Argument` | I valori MHz inseriti non sono validi, non sono nel formato `min,max` o sono fuori lista. | Esegui `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` e copia un valore esatto sotto `Graphics :`. |
 | `NVIDIA-SMI has failed` | Driver NVIDIA non risponde, nessuna GPU attiva o GPU spenta in modalità risparmio laptop. | Verifica la GPU in Gestione dispositivi e collega il portatile alla presa elettrica. |
@@ -174,7 +174,7 @@ Supported Clocks
 ```
 
 - **Memory**: frequenze della memoria video (VRAM). **Non** bloccarle nella procedura standard.
-- **Graphics**: frequenze del **core grafico**. Sono i valori da usare con `--lgc`.
+- **Graphics**: frequenze del **core grafico**. Sono i valori da usare con `-lgc`.
 - **Verifica esatta:** Scegli solo un numero presente esattamente accanto a `Graphics :` nel tuo terminale.
 - **Se mostra `N/A` o `Not Supported`:** La tua combinazione GPU/driver non espone i clock supportati. Non inserire valori casuali e passa alle [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta).
 
@@ -567,7 +567,7 @@ Il GPU Clock Locking entro i limiti supportati non è overclocking, ma comporta 
 | `nvidia-smi` non riconosciuto | `nvidia-smi.exe` assente dal `PATH`. | Usa `"C:\Windows\System32\nvidia-smi.exe"` o `"C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe"`, oppure i file `.bat`. |
 | Nessuna GPU NVIDIA / `NVIDIA-SMI has failed` | GPU assente, disabilitata o addormentata su laptop. | Controlla **Gestione attività → Prestazioni**, Gestione dispositivi e collega l'alimentatore. |
 | `Insufficient Permissions` | CMD non aperto come amministratore. | Tasto destro su CMD o `.bat` → **Esegui come amministratore**. |
-| `Not Supported` con `--lgc` | GPU, BIOS laptop o driver non supporta il blocco. | Lascia i clock dinamici e usa le [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
+| `Not Supported` con `-lgc` | GPU, BIOS laptop o driver non supporta il blocco. | Lascia i clock dinamici e usa le [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
 | `Invalid Argument` | Sintassi errata o valore non presente in lista. | Esegui `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` e copia un valore `Graphics` nel formato `min,max`. |
 | La frequenza mostrata è diversa da quella richiesta | Limite di potenza, temperatura o driver. | Prova una frequenza supportata più bassa o controlla `nvidia-smi -i 0 -q -d PERFORMANCE`. |
 | Il clock cala sotto carico | Thermal throttling o limite di potenza laptop. | Abbassa la frequenza bloccata, migliora il raffreddamento o ripristina con `-rgc`. |

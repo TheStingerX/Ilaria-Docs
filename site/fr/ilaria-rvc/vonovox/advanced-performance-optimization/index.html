@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620466165">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624726540">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620466165" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624726540" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620466165" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624726540" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620466165" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620466165" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624726540" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624726540" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -229,10 +229,10 @@
 </ul>
 <hr>
 <span id="3-nvidia-compatibility--error-messages" class="docs-anchor"></span><h2 id="3-compatibilité-nvidia-et-messages-derreur">3. Compatibilité NVIDIA et messages d&#x27;erreur</h2>
-<p>La présence de <code translate="no" v-pre>nvidia-smi</code> ne garantit pas le support de <code translate="no" v-pre>--lgc</code> (souvent restreint sur certains PC portables, anciens pilotes ou architectures).</p>
+<p>La présence de <code translate="no" v-pre>nvidia-smi</code> ne garantit pas le support de <code translate="no" v-pre>-lgc</code> (souvent restreint sur certains PC portables, anciens pilotes ou architectures).</p>
 <retype-table copy-text="| Message | Signification | Solution |
 | --- | --- | --- |
-| `Not Supported` | GPU, BIOS portable ou pilote incompatible avec `--lgc`. | Laissez par défaut et utilisez les [Alternatives](#13-alternatives). |
+| `Not Supported` | GPU, BIOS portable ou pilote incompatible avec `-lgc`. | Laissez par défaut et utilisez les [Alternatives](#13-alternatives). |
 | `Insufficient Permissions` | Invite non ouverte en administrateur. | Clic droit → **Exécuter en tant qu'administrateur**. |
 | `Invalid Argument` | Syntaxe ou valeur hors `SUPPORTED_CLOCKS`. | Copiez une valeur exacte sous `Graphics :` au format `min,max`. |
 | `NVIDIA-SMI has failed` | Pilote inactif ou GPU en veille. | Activez la GPU et branchez le secteur sur PC portable. |
@@ -249,7 +249,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>GPU, BIOS portable ou pilote incompatible avec <code translate="no" v-pre>--lgc</code>.</td>
+<td>GPU, BIOS portable ou pilote incompatible avec <code translate="no" v-pre>-lgc</code>.</td>
 <td>Laissez par défaut et utilisez les <doc-anchor-trigger to="#13-alternatives">Alternatives</doc-anchor-trigger>.</td>
 </tr>
 <tr>
@@ -606,7 +606,7 @@ exit /b %EXIT_CODE%
 <p><code translate="no" v-pre>nvidia-smi -i 0 -lmc</code> / <code translate="no" v-pre>-rmc</code> verrouille la VRAM. Non recommandé pour Vonovox faute de preuves de gain.</p>
 <hr>
 <h2 id="13-alternatives">13. Alternatives</h2>
-<p>Utilisez le <strong>Panneau de configuration NVIDIA → Mode de gestion de l&#x27;alimentation → Privilégier les performances maximales</strong> (non équivalent à <code translate="no" v-pre>--lgc</code>), augmentez <strong>Block Size</strong>, vérifiez le <code translate="no" v-pre>48 kHz</code> dans <a href="../live-audio/">Configurer et régler Vonovox</a>, limitez les FPS en jeu et contrôlez le refroidissement.</p>
+<p>Utilisez le <strong>Panneau de configuration NVIDIA → Mode de gestion de l&#x27;alimentation → Privilégier les performances maximales</strong> (non équivalent à <code translate="no" v-pre>-lgc</code>), augmentez <strong>Block Size</strong>, vérifiez le <code translate="no" v-pre>48 kHz</code> dans <a href="../live-audio/">Configurer et régler Vonovox</a>, limitez les FPS en jeu et contrôlez le refroidissement.</p>
 <hr>
 <h2 id="14-dépannage">14. Dépannage</h2>
 <retype-table copy-text="| Symptôme | Cause possible | Solution |
@@ -748,7 +748,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

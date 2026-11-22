@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620487617">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624747161">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620487617" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624747161" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620487617" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624747161" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620487617" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620487617" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624747161" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624747161" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -229,10 +229,10 @@
 </ul>
 <hr>
 <span id="3-nvidia-compatibility--error-messages" class="docs-anchor"></span><h2 id="3-compatibilidade-nvidia-e-mensagens-de-erro">3. Compatibilidade NVIDIA e mensagens de erro</h2>
-<p>Ter <code translate="no" v-pre>nvidia-smi</code> instalado não garante suporte a <code translate="no" v-pre>--lgc</code> (muitos portáteis, drivers antigos ou certas arquiteturas bloqueiam-no).</p>
+<p>Ter <code translate="no" v-pre>nvidia-smi</code> instalado não garante suporte a <code translate="no" v-pre>-lgc</code> (muitos portáteis, drivers antigos ou certas arquiteturas bloqueiam-no).</p>
 <retype-table copy-text="| Mensagem | Significado | Solução |
 | --- | --- | --- |
-| `Not Supported` | GPU, BIOS do portátil ou driver não permite `--lgc`. | Deixa dinâmico e usa as [Alternativas](#13-alternativas). |
+| `Not Supported` | GPU, BIOS do portátil ou driver não permite `-lgc`. | Deixa dinâmico e usa as [Alternativas](#13-alternativas). |
 | `Insufficient Permissions` | CMD não aberto como administrador. | Botão direito → **Executar como administrador**. |
 | `Invalid Argument` | Sintaxe ou MHz fora de `SUPPORTED_CLOCKS`. | Copia um valor exato de `Graphics :` no formato `min,max`. |
 | `NVIDIA-SMI has failed` | Driver sem resposta ou GPU adormecida. | Verifica Gestor de Dispositivos e liga o carregador. |
@@ -249,7 +249,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>GPU, BIOS do portátil ou driver não permite <code translate="no" v-pre>--lgc</code>.</td>
+<td>GPU, BIOS do portátil ou driver não permite <code translate="no" v-pre>-lgc</code>.</td>
 <td>Deixa dinâmico e usa as <doc-anchor-trigger to="#13-alternativas">Alternativas</doc-anchor-trigger>.</td>
 </tr>
 <tr>
@@ -299,7 +299,7 @@
 <div id="7-aplicar-o-gpu-clock-lock-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -lgc 1800,1800</code></pre>
 </doc-codeblock></div>
-<p>Exemplo com intervalo: <code translate="no" v-pre>nvidia-smi -i 0 -lgc 1500,1800</code>. Distingue a frequência pedida da frequência <strong>realmente observada</strong> com <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> (ou <code translate="no" v-pre>-l 1</code>). A aceitação de <code translate="no" v-pre>--lgc</code> não garante um clock perfeitamente fixo: limites térmicos, energéticos ou de firmware podem limitá-lo.</p>
+<p>Exemplo com intervalo: <code translate="no" v-pre>nvidia-smi -i 0 -lgc 1500,1800</code>. Distingue a frequência pedida da frequência <strong>realmente observada</strong> com <code translate="no" v-pre>nvidia-smi -i 0 -q -d CLOCK</code> (ou <code translate="no" v-pre>-l 1</code>). A aceitação de <code translate="no" v-pre>-lgc</code> não garante um clock perfeitamente fixo: limites térmicos, energéticos ou de firmware podem limitá-lo.</p>
 <hr>
 <h2 id="8-repor-as-definições-originais">8. Repor as definições originais</h2>
 <div id="8-repor-as-definições-originais-code-1" class="codeblock-wrapper"><doc-codeblock>
@@ -605,7 +605,7 @@ exit /b %EXIT_CODE%
 <p><code translate="no" v-pre>-lmc</code> / <code translate="no" v-pre>-rmc</code> bloqueia a VRAM e não é recomendado para o Vonovox por falta de provas de benefício.</p>
 <hr>
 <h2 id="13-alternativas">13. Alternativas</h2>
-<p>Usa o <strong>Painel de Controlo NVIDIA → Modo de gestão de energia → Preferir desempenho máximo</strong> (não equivale a <code translate="no" v-pre>--lgc</code>), aumenta o <strong>Block Size</strong>, confirma <code translate="no" v-pre>48 kHz</code> e WASAPI em <a href="../live-audio/">Configurar e ajustar Vonovox</a>, limita FPS em jogos e verifica a refrigeração.</p>
+<p>Usa o <strong>Painel de Controlo NVIDIA → Modo de gestão de energia → Preferir desempenho máximo</strong> (não equivale a <code translate="no" v-pre>-lgc</code>), aumenta o <strong>Block Size</strong>, confirma <code translate="no" v-pre>48 kHz</code> e WASAPI em <a href="../live-audio/">Configurar e ajustar Vonovox</a>, limita FPS em jogos e verifica a refrigeração.</p>
 <hr>
 <h2 id="14-resolução-de-problemas">14. Resolução de problemas</h2>
 <retype-table copy-text="| Sintoma | Causa possível | Solução recomendada |
@@ -747,7 +747,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620455922">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624716392">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620455922" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624716392" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620455922" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624716392" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620455922" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620455922" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624716392" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624716392" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -290,16 +290,16 @@
 </retype-table>
 <hr>
 <span id="3-nvidia-compatibility--error-messages" class="docs-anchor"></span><h2 id="3-compatibilidad-nvidia-y-mensajes-de-error">3. Compatibilidad NVIDIA y mensajes de error</h2>
-<p>Que <code translate="no" v-pre>nvidia-smi</code> funcione <strong>no garantiza</strong> que <code translate="no" v-pre>--lgc</code> sea compatible con tu GPU o driver.</p>
+<p>Que <code translate="no" v-pre>nvidia-smi</code> funcione <strong>no garantiza</strong> que <code translate="no" v-pre>-lgc</code> sea compatible con tu GPU o driver.</p>
 <ul>
-<li><strong>GeForce de escritorio:</strong> Muchas tarjetas actuales soportan <code translate="no" v-pre>--lgc</code> con drivers recientes.</li>
-<li><strong>GPUs de portátil:</strong> Muchos portátiles bloquean <code translate="no" v-pre>--lgc</code> por firmware/BIOS o Optimus, o lo limitan por temperatura y energía.</li>
+<li><strong>GeForce de escritorio:</strong> Muchas tarjetas actuales soportan <code translate="no" v-pre>-lgc</code> con drivers recientes.</li>
+<li><strong>GPUs de portátil:</strong> Muchos portátiles bloquean <code translate="no" v-pre>-lgc</code> por firmware/BIOS o Optimus, o lo limitan por temperatura y energía.</li>
 <li><strong>GPUs profesionales/datacenter (Quadro, RTX A-series, Tesla, L4/T4):</strong> Suelen admitir control de reloj completo.</li>
 <li><strong>Generaciones/drivers antiguos:</strong> Pueden devolver <code translate="no" v-pre>Not Supported</code>. No asumas compatibilidad universal en todas las GTX o RTX.</li>
 </ul>
 <retype-table copy-text="| Mensaje | Significado | Solución segura |
 | --- | --- | --- |
-| `Not Supported` | Tu GPU, portátil o driver no permite `--lgc` o `SUPPORTED_CLOCKS`. | No lo fuerces; usa las [alternativas](#13-alternativas-cuando-el-clock-locking-no-ayuda). |
+| `Not Supported` | Tu GPU, portátil o driver no permite `-lgc` o `SUPPORTED_CLOCKS`. | No lo fuerces; usa las [alternativas](#13-alternativas-cuando-el-clock-locking-no-ayuda). |
 | `Insufficient Permissions` | CMD no se abrió como administrador. | Clic derecho en **Símbolo del sistema** → **Ejecutar como administrador**. |
 | `Invalid Argument` | Valores MHz inválidos o fuera de la lista soportada. | Consulta `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` y usa un valor `Graphics` exacto en formato `min,max`. |
 | `NVIDIA-SMI has failed` | Driver sin respuesta o GPU dormida en portátil. | Activa la GPU en Administrador de dispositivos y conecta el cargador. |
@@ -316,7 +316,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>Tu GPU, portátil o driver no permite <code translate="no" v-pre>--lgc</code> o <code translate="no" v-pre>SUPPORTED_CLOCKS</code>.</td>
+<td>Tu GPU, portátil o driver no permite <code translate="no" v-pre>-lgc</code> o <code translate="no" v-pre>SUPPORTED_CLOCKS</code>.</td>
 <td>No lo fuerces; usa las <doc-anchor-trigger to="#13-alternativas-cuando-el-clock-locking-no-ayuda">alternativas</doc-anchor-trigger>.</td>
 </tr>
 <tr>
@@ -365,7 +365,7 @@
 </doc-codeblock></div>
 <ul>
 <li><strong><code translate="no" v-pre>-i 0</code></strong>: Índice de GPU.</li>
-<li><strong><code translate="no" v-pre>Memory</code></strong> son relojes de VRAM (no los bloquees). <strong><code translate="no" v-pre>Graphics</code></strong> son los relojes del <strong>núcleo GPU</strong> para usar con <code translate="no" v-pre>--lgc</code>.</li>
+<li><strong><code translate="no" v-pre>Memory</code></strong> son relojes de VRAM (no los bloquees). <strong><code translate="no" v-pre>Graphics</code></strong> son los relojes del <strong>núcleo GPU</strong> para usar con <code translate="no" v-pre>-lgc</code>.</li>
 <li>Si muestra <code translate="no" v-pre>N/A</code> o <code translate="no" v-pre>Not Supported</code>, pasa a las <doc-anchor-trigger to="#13-alternativas-cuando-el-clock-locking-no-ayuda">alternativas</doc-anchor-trigger>.</li>
 </ul>
 <blockquote>
@@ -704,7 +704,7 @@ exit /b %EXIT_CODE%
 <hr>
 <h2 id="13-alternativas-cuando-el-clock-locking-no-ayuda">13. Alternativas cuando el Clock Locking no ayuda</h2>
 <ul>
-<li>En el <strong>Panel de control de NVIDIA</strong>, ajusta <strong>Modo de control de energía → Preferir rendimiento máximo</strong> para Vonovox (no equivale exactamente a <code translate="no" v-pre>--lgc</code>, pero puede ayudar).</li>
+<li>En el <strong>Panel de control de NVIDIA</strong>, ajusta <strong>Modo de control de energía → Preferir rendimiento máximo</strong> para Vonovox (no equivale exactamente a <code translate="no" v-pre>-lgc</code>, pero puede ayudar).</li>
 <li>Asegúrate de que Vonovox use la GPU NVIDIA, sube un paso <strong>Block Size</strong>, alinea todo a <code translate="no" v-pre>48 kHz</code> en <a href="../live-audio/">Configurar y ajustar Vonovox</a>, limita FPS en juegos y vigila la refrigeración.</li>
 </ul>
 <hr>
@@ -866,7 +866,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

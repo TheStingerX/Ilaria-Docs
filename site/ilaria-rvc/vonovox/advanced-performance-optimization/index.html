@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620434849">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624694847">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,12 +35,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620434849" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624694847" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620434849" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624694847" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620434849" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620434849" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624694847" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624694847" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -294,17 +294,17 @@
 </retype-table>
 <hr>
 <h2 id="3-nvidia-compatibility--error-messages">3. NVIDIA Compatibility &amp; Error Messages</h2>
-<p>Having <code translate="no" v-pre>nvidia-smi</code> installed does <strong>not</strong> guarantee that <code translate="no" v-pre>--lgc</code> (Lock Graphics Clocks) is supported on your hardware and driver combination.</p>
+<p>Having <code translate="no" v-pre>nvidia-smi</code> installed does <strong>not</strong> guarantee that <code translate="no" v-pre>-lgc</code> (Lock Graphics Clocks) is supported on your hardware and driver combination.</p>
 <ul>
-<li><strong>Desktop GeForce GPUs:</strong> Many modern desktop GeForce cards support <code translate="no" v-pre>--lgc</code> on recent drivers, though exact clock granularity and behavior depend on architecture and driver version.</li>
-<li><strong>Laptop NVIDIA GPUs:</strong> Many laptops restrict clock locking in firmware/BIOS, power management, or Optimus/hybrid graphics paths. Even when <code translate="no" v-pre>--lgc</code> is accepted, laptop thermal and power limits frequently override the requested clock.</li>
+<li><strong>Desktop GeForce GPUs:</strong> Many modern desktop GeForce cards support <code translate="no" v-pre>-lgc</code> on recent drivers, though exact clock granularity and behavior depend on architecture and driver version.</li>
+<li><strong>Laptop NVIDIA GPUs:</strong> Many laptops restrict clock locking in firmware/BIOS, power management, or Optimus/hybrid graphics paths. Even when <code translate="no" v-pre>-lgc</code> is accepted, laptop thermal and power limits frequently override the requested clock.</li>
 <li><strong>Workstation / Datacenter GPUs (Quadro, RTX A-series, Tesla, L4/T4):</strong> Broadly support <code translate="no" v-pre>nvidia-smi</code> clock controls on standard enterprise/studio drivers.</li>
-<li><strong>Older hardware generations &amp; drivers:</strong> Older architectures (such as Maxwell/Pascal or legacy drivers) may return <code translate="no" v-pre>Not Supported</code> for <code translate="no" v-pre>--lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code>. Do not assume every GTX or RTX card supports clock locking.</li>
+<li><strong>Older hardware generations &amp; drivers:</strong> Older architectures (such as Maxwell/Pascal or legacy drivers) may return <code translate="no" v-pre>Not Supported</code> for <code translate="no" v-pre>-lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code>. Do not assume every GTX or RTX card supports clock locking.</li>
 </ul>
 <h3 id="common-messages-and-what-they-mean">Common messages and what they mean</h3>
 <retype-table copy-text="| Message | Meaning | Safe solution |
 | --- | --- | --- |
-| `Not Supported` | Your GPU model, laptop firmware, or current driver does not allow `--lgc` or `SUPPORTED_CLOCKS` queries. | Do not force it. Skip clock locking and use the [alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Not Supported` | Your GPU model, laptop firmware, or current driver does not allow `-lgc` or `SUPPORTED_CLOCKS` queries. | Do not force it. Skip clock locking and use the [alternatives](#13-alternatives-when-clock-locking-does-not-help). |
 | `Insufficient Permissions` | Command Prompt was opened normally instead of **Run as administrator**. | Close CMD, search `cmd` in Start, right-click **Command Prompt**, and choose **Run as administrator**. |
 | `Invalid Argument` | The MHz values you entered are not valid, not formatted as `min,max`, or outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and pick an exact value listed under **Graphics**. |
 | `NVIDIA-SMI has failed` | The NVIDIA driver is not responding, no NVIDIA GPU is active, or the card is asleep in hybrid laptop mode. | Make sure the NVIDIA GPU is enabled in Device Manager and not disabled by a laptop eco/battery mode. |
@@ -321,7 +321,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>Your GPU model, laptop firmware, or current driver does not allow <code translate="no" v-pre>--lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code> queries.</td>
+<td>Your GPU model, laptop firmware, or current driver does not allow <code translate="no" v-pre>-lgc</code> or <code translate="no" v-pre>SUPPORTED_CLOCKS</code> queries.</td>
 <td>Do not force it. Skip clock locking and use the <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">alternatives</doc-anchor-trigger>.</td>
 </tr>
 <tr>
@@ -454,7 +454,7 @@ This prints a numbered list such as <code translate="no" v-pre>GPU 0: NVIDIA GeF
 <div id="verify-the-clock-lock-was-accepted-vs-actually-observed-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-batch"><code v-pre class="language-batch">nvidia-smi -i 0 -q -d CLOCK -l 1</code></pre>
 </doc-codeblock></div>
-<p>Look at <strong>Clocks → Graphics</strong> in the output. <strong>Thermal limits, power limits, and driver or laptop firmware restrictions</strong> can still prevent the GPU from holding the exact requested MHz, and <code translate="no" v-pre>--lgc</code> does not always keep a perfectly fixed frequency under all conditions.</p>
+<p>Look at <strong>Clocks → Graphics</strong> in the output. <strong>Thermal limits, power limits, and driver or laptop firmware restrictions</strong> can still prevent the GPU from holding the exact requested MHz, and <code translate="no" v-pre>-lgc</code> does not always keep a perfectly fixed frequency under all conditions.</p>
 <hr>
 <h2 id="8-restoring-default-settings">8. Restoring Default Settings</h2>
 <p>Always restore dynamic clock management when you finish testing, when you close Vonovox, or if you see no benefit (replace <code translate="no" v-pre>0</code> with the GPU index you configured if you have multiple GPUs):</p>
@@ -829,7 +829,7 @@ nvidia-smi -i 0 -rmc</code></pre>
 <p><code translate="no" v-pre>-lmc</code> locks <strong>VRAM (memory) frequency</strong>, whereas <code translate="no" v-pre>-lgc</code> locks <strong>GPU core (graphics) frequency</strong>. Memory clock locking is <strong>not</strong> part of the standard Vonovox workflow because there is insufficient evidence that locking VRAM clocks improves live RVC audio performance, and keeping VRAM at high clocks continuously increases idle heat and power draw.</p>
 <hr>
 <h2 id="13-alternatives-when-clock-locking-does-not-help">13. Alternatives When Clock Locking Does Not Help</h2>
-<p>If <code translate="no" v-pre>--lgc</code> returns <code translate="no" v-pre>Not Supported</code> or does not improve your audio, try these safer, often more effective steps:</p>
+<p>If <code translate="no" v-pre>-lgc</code> returns <code translate="no" v-pre>Not Supported</code> or does not improve your audio, try these safer, often more effective steps:</p>
 <ol>
 <li><strong>NVIDIA Control Panel → Power Management Mode:</strong> Set <strong>Power management mode</strong> to <strong>Prefer maximum performance</strong> for the Vonovox executable (<code translate="no" v-pre>Manage 3D settings → Program Settings</code>). Note: this is <strong>not</strong> the same as <code translate="no" v-pre>-lgc</code> and does not guarantee fixed clocks across all CUDA workloads, but it can reduce aggressive downclocking on some systems.</li>
 <li><strong>Verify Vonovox uses your NVIDIA GPU:</strong> On laptops with hybrid graphics, make sure Vonovox runs on the NVIDIA GPU rather than integrated graphics.</li>
@@ -845,7 +845,7 @@ nvidia-smi -i 0 -rmc</code></pre>
 | `'nvidia-smi' is not recognized` | `nvidia-smi.exe` is not in `PATH`. | Run `&quot;C:\Windows\System32\nvidia-smi.exe&quot;` or `&quot;C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe&quot;`, or use the `.bat` scripts above. |
 | NVIDIA detects no GPU / `NVIDIA-SMI has failed` | No NVIDIA GPU present, GPU disabled, or laptop hybrid GPU asleep. | Check **Task Manager → Performance**, enable the NVIDIA adapter in Device Manager, and plug in laptop AC power. |
 | `Insufficient Permissions` | CMD was not opened as Administrator. | Right-click **Command Prompt** (or the `.bat` file) and select **Run as administrator**. |
-| `Not Supported` when running `--lgc` | GPU architecture, laptop firmware, or driver does not allow clock locking. | Leave clocks on default and use the [Alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Not Supported` when running `-lgc` | GPU architecture, laptop firmware, or driver does not allow clock locking. | Leave clocks on default and use the [Alternatives](#13-alternatives-when-clock-locking-does-not-help). |
 | `Invalid Argument` | Syntax error or frequency outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and enter an exact `Graphics` value with `min,max` format. |
 | Displayed clock does not match requested MHz | Power limit, thermal limit, or driver constraint is capping the GPU. | Test a slightly lower supported clock or check `nvidia-smi -i 0 -q -d PERFORMANCE`. |
 | Clock drops under load | Thermal throttling or laptop power limit reached. | Lower the locked clock, improve cooling, or restore defaults with `-rgc`. |
@@ -855,7 +855,7 @@ nvidia-smi -i 0 -rmc</code></pre>
 | GPU behaves differently with a game open | Game uses most of the GPU compute/power budget. | Cap game FPS, lower GPU-heavy settings, or raise Vonovox **Block Size**. |
 | Reset command (`-rgc`) fails | Missing admin rights, wrong `-i` index, or driver glitch. | Run CMD as administrator with the right `-i` index, or reboot Windows. |
 | Unsure which MHz value to pick | Haven't checked baseline clocks under load yet. | Run `nvidia-smi -i 0 -q -d CLOCK` while using Vonovox normally, then pick a supported value near that range. |
-| Laptop limits clocks automatically | Laptop OEM power profile / battery / firmware cap. | Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of `--lgc`. |">
+| Laptop limits clocks automatically | Laptop OEM power profile / battery / firmware cap. | Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of `-lgc`. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -882,7 +882,7 @@ nvidia-smi -i 0 -rmc</code></pre>
 <td>Right-click <strong>Command Prompt</strong> (or the <code translate="no" v-pre>.bat</code> file) and select <strong>Run as administrator</strong>.</td>
 </tr>
 <tr>
-<td><code translate="no" v-pre>Not Supported</code> when running <code translate="no" v-pre>--lgc</code></td>
+<td><code translate="no" v-pre>Not Supported</code> when running <code translate="no" v-pre>-lgc</code></td>
 <td>GPU architecture, laptop firmware, or driver does not allow clock locking.</td>
 <td>Leave clocks on default and use the <doc-anchor-trigger to="#13-alternatives-when-clock-locking-does-not-help">Alternatives</doc-anchor-trigger>.</td>
 </tr>
@@ -934,7 +934,7 @@ nvidia-smi -i 0 -rmc</code></pre>
 <tr>
 <td>Laptop limits clocks automatically</td>
 <td>Laptop OEM power profile / battery / firmware cap.</td>
-<td>Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of <code translate="no" v-pre>--lgc</code>.</td>
+<td>Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of <code translate="no" v-pre>-lgc</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -965,7 +965,7 @@ It does not lower minimum latency below what your GPU can already compute, thoug
 </li>
 <li>
 <p><strong>Does it work on laptops?</strong>
-Sometimes, but many laptops restrict <code translate="no" v-pre>--lgc</code> in firmware or hit thermal/power limits quickly. Always keep laptops plugged into AC power when testing.</p>
+Sometimes, but many laptops restrict <code translate="no" v-pre>-lgc</code> in firmware or hit thermal/power limits quickly. Always keep laptops plugged into AC power when testing.</p>
 </li>
 <li>
 <p><strong>Does it work on every NVIDIA GPU?</strong>
@@ -981,7 +981,7 @@ No. Never enter arbitrary numbers. Out-of-range values can fail with <code trans
 </li>
 <li>
 <p><strong>Does it work with RTX GPUs?</strong>
-Many desktop RTX cards support <code translate="no" v-pre>--lgc</code> on modern drivers, while some laptops or specific configurations may return <code translate="no" v-pre>Not Supported</code>. Test with <code translate="no" v-pre>SUPPORTED_CLOCKS</code> first.</p>
+Many desktop RTX cards support <code translate="no" v-pre>-lgc</code> on modern drivers, while some laptops or specific configurations may return <code translate="no" v-pre>Not Supported</code>. Test with <code translate="no" v-pre>SUPPORTED_CLOCKS</code> first.</p>
 </li>
 <li>
 <p><strong>Do I need to apply it every time?</strong>
@@ -1054,7 +1054,7 @@ Skip GPU Clock Locking completely and use the safer <doc-anchor-trigger to="#13-
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

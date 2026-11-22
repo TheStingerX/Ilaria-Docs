@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848620445547">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848624706163">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848620445547" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848624706163" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848620445547" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848624706163" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848620445547" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848620445547" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848624706163" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848624706163" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -295,17 +295,17 @@
 </retype-table>
 <hr>
 <span id="3-nvidia-compatibility--error-messages" class="docs-anchor"></span><h2 id="3-compatibilità-nvidia-e-messaggi-di-errore">3. Compatibilità NVIDIA e messaggi di errore</h2>
-<p>Avere <code translate="no" v-pre>nvidia-smi</code> funzionante <strong>non garantisce</strong> che il comando <code translate="no" v-pre>--lgc</code> sia supportato dalla tua scheda o dal driver.</p>
+<p>Avere <code translate="no" v-pre>nvidia-smi</code> funzionante <strong>non garantisce</strong> che il comando <code translate="no" v-pre>-lgc</code> sia supportato dalla tua scheda o dal driver.</p>
 <ul>
-<li><strong>GPU NVIDIA Desktop (GeForce):</strong> Molte schede desktop recenti supportano <code translate="no" v-pre>--lgc</code> sui driver attuali, ma comportamento e granularità dipendono dall&#x27;architettura.</li>
-<li><strong>GPU NVIDIA Laptop:</strong> Molti portatili bloccano <code translate="no" v-pre>--lgc</code> a livello di firmware/BIOS o tramite gestione energetica/Optimus. Anche quando il comando viene accettato, i limiti termici o di potenza del portatile possono prevalere.</li>
+<li><strong>GPU NVIDIA Desktop (GeForce):</strong> Molte schede desktop recenti supportano <code translate="no" v-pre>-lgc</code> sui driver attuali, ma comportamento e granularità dipendono dall&#x27;architettura.</li>
+<li><strong>GPU NVIDIA Laptop:</strong> Molti portatili bloccano <code translate="no" v-pre>-lgc</code> a livello di firmware/BIOS o tramite gestione energetica/Optimus. Anche quando il comando viene accettato, i limiti termici o di potenza del portatile possono prevalere.</li>
 <li><strong>GPU professionali e datacenter (Quadro, RTX A-series, Tesla, L4/T4):</strong> Supportano ampiamente i comandi clock di <code translate="no" v-pre>nvidia-smi</code>.</li>
-<li><strong>Generazioni e driver meno recenti:</strong> Architetture più vecchie o driver datati possono restituire <code translate="no" v-pre>Not Supported</code>. Non dare per scontato che ogni GTX o RTX supporti <code translate="no" v-pre>--lgc</code>.</li>
+<li><strong>Generazioni e driver meno recenti:</strong> Architetture più vecchie o driver datati possono restituire <code translate="no" v-pre>Not Supported</code>. Non dare per scontato che ogni GTX o RTX supporti <code translate="no" v-pre>-lgc</code>.</li>
 </ul>
 <span id="common-messages-and-what-they-mean" class="docs-anchor"></span><h3 id="messaggi-comuni-e-soluzioni-sicure">Messaggi comuni e soluzioni sicure</h3>
 <retype-table copy-text="| Messaggio | Significato | Soluzione sicura |
 | --- | --- | --- |
-| `Not Supported` | La tua GPU, il firmware del laptop o il driver attuale non consente `--lgc` o `SUPPORTED_CLOCKS`. | Non forzare: lascia i clock dinamici e usa le [alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
+| `Not Supported` | La tua GPU, il firmware del laptop o il driver attuale non consente `-lgc` o `SUPPORTED_CLOCKS`. | Non forzare: lascia i clock dinamici e usa le [alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
 | `Insufficient Permissions` | Hai aperto CMD normalmente invece che come amministratore. | Chiudi CMD, cerca `cmd` in Start, tasto destro → **Esegui come amministratore**. |
 | `Invalid Argument` | I valori MHz inseriti non sono validi, non sono nel formato `min,max` o sono fuori lista. | Esegui `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` e copia un valore esatto sotto `Graphics :`. |
 | `NVIDIA-SMI has failed` | Driver NVIDIA non risponde, nessuna GPU attiva o GPU spenta in modalità risparmio laptop. | Verifica la GPU in Gestione dispositivi e collega il portatile alla presa elettrica. |
@@ -322,7 +322,7 @@
 <tbody>
 <tr>
 <td><code translate="no" v-pre>Not Supported</code></td>
-<td>La tua GPU, il firmware del laptop o il driver attuale non consente <code translate="no" v-pre>--lgc</code> o <code translate="no" v-pre>SUPPORTED_CLOCKS</code>.</td>
+<td>La tua GPU, il firmware del laptop o il driver attuale non consente <code translate="no" v-pre>-lgc</code> o <code translate="no" v-pre>SUPPORTED_CLOCKS</code>.</td>
 <td>Non forzare: lascia i clock dinamici e usa le <doc-anchor-trigger to="#13-alternative-quando-il-clock-locking-non-aiuta">alternative</doc-anchor-trigger>.</td>
 </tr>
 <tr>
@@ -401,7 +401,7 @@ Vedrai <code translate="no" v-pre>GPU 0: NVIDIA GeForce ...</code>, <code transl
 </doc-codeblock></div>
 <ul>
 <li><strong>Memory</strong>: frequenze della memoria video (VRAM). <strong>Non</strong> bloccarle nella procedura standard.</li>
-<li><strong>Graphics</strong>: frequenze del <strong>core grafico</strong>. Sono i valori da usare con <code translate="no" v-pre>--lgc</code>.</li>
+<li><strong>Graphics</strong>: frequenze del <strong>core grafico</strong>. Sono i valori da usare con <code translate="no" v-pre>-lgc</code>.</li>
 <li><strong>Verifica esatta:</strong> Scegli solo un numero presente esattamente accanto a <code translate="no" v-pre>Graphics :</code> nel tuo terminale.</li>
 <li><strong>Se mostra <code translate="no" v-pre>N/A</code> o <code translate="no" v-pre>Not Supported</code>:</strong> La tua combinazione GPU/driver non espone i clock supportati. Non inserire valori casuali e passa alle <doc-anchor-trigger to="#13-alternative-quando-il-clock-locking-non-aiuta">Alternative</doc-anchor-trigger>.</li>
 </ul>
@@ -813,7 +813,7 @@ exit /b %EXIT_CODE%
 | `nvidia-smi` non riconosciuto | `nvidia-smi.exe` assente dal `PATH`. | Usa `&quot;C:\Windows\System32\nvidia-smi.exe&quot;` o `&quot;C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe&quot;`, oppure i file `.bat`. |
 | Nessuna GPU NVIDIA / `NVIDIA-SMI has failed` | GPU assente, disabilitata o addormentata su laptop. | Controlla **Gestione attività → Prestazioni**, Gestione dispositivi e collega l'alimentatore. |
 | `Insufficient Permissions` | CMD non aperto come amministratore. | Tasto destro su CMD o `.bat` → **Esegui come amministratore**. |
-| `Not Supported` con `--lgc` | GPU, BIOS laptop o driver non supporta il blocco. | Lascia i clock dinamici e usa le [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
+| `Not Supported` con `-lgc` | GPU, BIOS laptop o driver non supporta il blocco. | Lascia i clock dinamici e usa le [Alternative](#13-alternative-quando-il-clock-locking-non-aiuta). |
 | `Invalid Argument` | Sintassi errata o valore non presente in lista. | Esegui `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` e copia un valore `Graphics` nel formato `min,max`. |
 | La frequenza mostrata è diversa da quella richiesta | Limite di potenza, temperatura o driver. | Prova una frequenza supportata più bassa o controlla `nvidia-smi -i 0 -q -d PERFORMANCE`. |
 | Il clock cala sotto carico | Thermal throttling o limite di potenza laptop. | Abbassa la frequenza bloccata, migliora il raffreddamento o ripristina con `-rgc`. |
@@ -850,7 +850,7 @@ exit /b %EXIT_CODE%
 <td>Tasto destro su CMD o <code translate="no" v-pre>.bat</code> → <strong>Esegui come amministratore</strong>.</td>
 </tr>
 <tr>
-<td><code translate="no" v-pre>Not Supported</code> con <code translate="no" v-pre>--lgc</code></td>
+<td><code translate="no" v-pre>Not Supported</code> con <code translate="no" v-pre>-lgc</code></td>
 <td>GPU, BIOS laptop o driver non supporta il blocco.</td>
 <td>Lascia i clock dinamici e usa le <doc-anchor-trigger to="#13-alternative-quando-il-clock-locking-non-aiuta">Alternative</doc-anchor-trigger>.</td>
 </tr>
@@ -971,7 +971,7 @@ exit /b %EXIT_CODE%
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T21:38:55.000Z">21/11/2026 · 22:38</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T01:03:41.000Z">22/11/2026 · 02:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

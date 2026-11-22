@@ -90,16 +90,16 @@ Vonovox procesa el micrófono mediante **CUDA**. Cada bloque de audio (**Block S
 
 ## 3. Compatibilidad NVIDIA y mensajes de error
 
-Que `nvidia-smi` funcione **no garantiza** que `--lgc` sea compatible con tu GPU o driver.
+Que `nvidia-smi` funcione **no garantiza** que `-lgc` sea compatible con tu GPU o driver.
 
-- **GeForce de escritorio:** Muchas tarjetas actuales soportan `--lgc` con drivers recientes.
-- **GPUs de portátil:** Muchos portátiles bloquean `--lgc` por firmware/BIOS o Optimus, o lo limitan por temperatura y energía.
+- **GeForce de escritorio:** Muchas tarjetas actuales soportan `-lgc` con drivers recientes.
+- **GPUs de portátil:** Muchos portátiles bloquean `-lgc` por firmware/BIOS o Optimus, o lo limitan por temperatura y energía.
 - **GPUs profesionales/datacenter (Quadro, RTX A-series, Tesla, L4/T4):** Suelen admitir control de reloj completo.
 - **Generaciones/drivers antiguos:** Pueden devolver `Not Supported`. No asumas compatibilidad universal en todas las GTX o RTX.
 
 | Mensaje | Significado | Solución segura |
 | --- | --- | --- |
-| `Not Supported` | Tu GPU, portátil o driver no permite `--lgc` o `SUPPORTED_CLOCKS`. | No lo fuerces; usa las [alternativas](#13-alternativas-cuando-el-clock-locking-no-ayuda). |
+| `Not Supported` | Tu GPU, portátil o driver no permite `-lgc` o `SUPPORTED_CLOCKS`. | No lo fuerces; usa las [alternativas](#13-alternativas-cuando-el-clock-locking-no-ayuda). |
 | `Insufficient Permissions` | CMD no se abrió como administrador. | Clic derecho en **Símbolo del sistema** → **Ejecutar como administrador**. |
 | `Invalid Argument` | Valores MHz inválidos o fuera de la lista soportada. | Consulta `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` y usa un valor `Graphics` exacto en formato `min,max`. |
 | `NVIDIA-SMI has failed` | Driver sin respuesta o GPU dormida en portátil. | Activa la GPU en Administrador de dispositivos y conecta el cargador. |
@@ -133,7 +133,7 @@ nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS
 ```
 
 - **`-i 0`**: Índice de GPU.
-- **`Memory`** son relojes de VRAM (no los bloquees). **`Graphics`** son los relojes del **núcleo GPU** para usar con `--lgc`.
+- **`Memory`** son relojes de VRAM (no los bloquees). **`Graphics`** son los relojes del **núcleo GPU** para usar con `-lgc`.
 - Si muestra `N/A` o `Not Supported`, pasa a las [alternativas](#13-alternativas-cuando-el-clock-locking-no-ayuda).
 
 > **No introduzcas nunca valores arbitrarios altos (como `50000` MHz):** Según la documentación de NVIDIA, algunos dispositivos y controladores pueden redondear una frecuencia solicitada al valor soportado más cercano, mientras que los valores fuera de rango pueden fallar con `Invalid Argument`. Nunca uses números arbitrarios esperando redondeo: elige siempre un valor `Graphics` exacto de `SUPPORTED_CLOCKS`.
@@ -453,7 +453,7 @@ Aunque no es overclocking, fijar relojes aumenta temperatura, consumo, ruido de 
 
 ## 13. Alternativas cuando el Clock Locking no ayuda
 
-- En el **Panel de control de NVIDIA**, ajusta **Modo de control de energía → Preferir rendimiento máximo** para Vonovox (no equivale exactamente a `--lgc`, pero puede ayudar).
+- En el **Panel de control de NVIDIA**, ajusta **Modo de control de energía → Preferir rendimiento máximo** para Vonovox (no equivale exactamente a `-lgc`, pero puede ayudar).
 - Asegúrate de que Vonovox use la GPU NVIDIA, sube un paso **Block Size**, alinea todo a `48 kHz` en [Configurar y ajustar Vonovox](live-audio.md), limita FPS en juegos y vigila la refrigeración.
 
 ---
