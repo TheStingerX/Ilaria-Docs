@@ -75,8 +75,8 @@ Mit Karaoke singst du einen Song selbst mit synchronisiertem Liedtext auf dem Bi
 | Einstellung (`Settings → Karaoke`) | Standard | Beeinflusst, was du beim Singen hörst | Beeinflusst das fertige gerenderte Cover |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Ja | Nein |
-| **Backing vocals** | `On` | Ja | Bleiben im Mix |
-| **Music volume** | `0 dB` | Ja | Mix-Referenz |
+| **Backing vocals** | `On` | Ja | Nein (das Cover behält Begleitgesang wie in Song Cover) |
+| **Music volume** | `0 dB` | Ja | Nein |
 | **Lyrics size** | `Normal` | Ja (Anzeige) | Nein |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | Nein | Ja |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | Nein | Ja |
@@ -97,9 +97,9 @@ Mit Karaoke singst du einen Song selbst mit synchronisiertem Liedtext auf dem Bi
 | **Aufgenommene Stimme zu leise** | Erhöhe die Windows-Mikrofonverstärkung Richtung `−6 dBFS`, aktiviere **Follow the original vocal's level** (`70%` Standard) und lasse **Make room for the vocal** aktiv. |
 | **Falsche Tonhöhe / schief** | Prüfe **Octave** (`Auto`, `−12`, `0` oder `+12`) und teste **Pull to the original melody** (`50-70%`) unter `Settings → Karaoke`. |
 | **Ruckeln während Karaoke** | Schließe andere GPU-lastige Apps, nutze **`Backing track`** (bereits bei PREPARE getrennt) oder prüfe die Audiopuffer-Einstellungen. |
-| **Musik zu laut / Stimme geht unter** | Erhöhe **Vocal level** (`+2 dB` Standard), lasse **Make room for the vocal** an oder senke **Music volume** beim Singen. |
+| **Musik zu laut / Stimme geht unter** | Erhöhe **Vocal level** (`+2 dB` Standard; `Settings → Song Cover` für Cover, `Settings → Karaoke` für Karaoke), lasse **Make room for the vocal** an oder senke **Music volume** beim Singen. |
 | **Atemzüge oder Flüstern fehlen im Cover** | Vergleiche **`WavLM+`** vs. **`Whisper`**, oder wechsle **Model method** auf **`FlowEdit 3+1`** unter `Settings → Song Cover`. |
-| **Zu viel Hall auf dem Cover-Gesang** | Senke **Reverb on the vocal** (`−17 dB` Standard) oder stelle ihn unter `Settings → Song Cover` auf keinen. |
+| **Zu viel Hall auf dem Cover-Gesang** | Senke **Reverb on the vocal** (`−17 dB` Standard) oder stelle ihn auf keinen - unter `Settings → Song Cover` für Cover, unter `Settings → Karaoke` für Karaoke. |
 | **Artefakte bei Stimmtrennung / Duette** | Lasse **Vocal separator** auf **`YUNE`** und **Vocals to convert** auf **`Lead vocal only`** (Duette mit zwei Hauptsängern können nicht automatisch auf eine einzelne Stimme isoliert werden). |
 
 Nächster Schritt: [Premium, Lizenz & Hilfe](premium-and-troubleshooting.md).

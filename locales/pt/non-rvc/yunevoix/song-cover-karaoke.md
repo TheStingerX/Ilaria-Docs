@@ -75,8 +75,8 @@ O Karaoke permite que você cante uma música com letras sincronizadas na tela, 
 | Configuração (`Settings → Karaoke`) | Padrão | Afeta o que você ouve cantando | Afeta o cover renderizado final |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Sim | Não |
-| **Backing vocals** | `On` | Sim | Mantidos no mix |
-| **Music volume** | `0 dB` | Sim | Referência de mix |
+| **Backing vocals** | `On` | Sim | Não (o cover mantém os backing vocals como em Song Cover) |
+| **Music volume** | `0 dB` | Sim | Não |
 | **Lyrics size** | `Normal` | Sim (exibição) | Não |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | Não | Sim |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | Não | Sim |
@@ -97,9 +97,9 @@ O Karaoke permite que você cante uma música com letras sincronizadas na tela, 
 | **Voz gravada baixa demais** | Aumente o ganho do microfone no Windows para perto de `−6 dBFS`, ative **Follow the original vocal's level** (`70%` padrão) e mantenha **Make room for the vocal** ativado. |
 | **Tom errado / desafinado** | Confira **Octave** (`Auto`, `−12`, `0` ou `+12`) e teste **Pull to the original melody** (`50-70%`) em `Settings → Karaoke`. |
 | **Engasgos durante o Karaoke** | Feche outros aplicativos pesados de GPU, use **`Backing track`** (já separado no PREPARE) ou verifique as configurações de buffer de áudio. |
-| **Música alta demais / voz encoberta** | Aumente **Vocal level** (`+2 dB` padrão), mantenha **Make room for the vocal** ativo ou abaixe **Music volume** enquanto canta. |
+| **Música alta demais / voz encoberta** | Aumente **Vocal level** (`+2 dB` padrão; `Settings → Song Cover` para covers, `Settings → Karaoke` para karaoke), mantenha **Make room for the vocal** ativo ou abaixe **Music volume** enquanto canta. |
 | **Respirações ou sussurros perdidos no cover** | Compare **`WavLM+`** vs. **`Whisper`**, ou mude **Model method** para **`FlowEdit 3+1`** em `Settings → Song Cover`. |
-| **Excesso de reverb no vocal do cover** | Abaixe **Reverb on the vocal** (`−17 dB` padrão) ou defina como nenhum em `Settings → Song Cover`. |
+| **Excesso de reverb no vocal do cover** | Abaixe **Reverb on the vocal** (`−17 dB` padrão) ou defina como nenhum - em `Settings → Song Cover` para covers, em `Settings → Karaoke` para karaoke. |
 | **Artefatos de separação vocal / duetos** | Mantenha **Vocal separator** em **`YUNE`** e **Vocals to convert** em **`Lead vocal only`** (duetos com dois cantores principais não permitem isolar automaticamente um único cantor). |
 
 Próximo passo: [Premium, Licença e Ajuda](premium-and-troubleshooting.md).

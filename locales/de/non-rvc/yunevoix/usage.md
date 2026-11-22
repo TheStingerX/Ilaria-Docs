@@ -76,7 +76,7 @@ Du kannst **Model method** unter **`Settings → Voice & Timbre`** (und separat 
 
 - Startet von **deiner eigenen Stimme** statt von Rauschen und ändert nur die Stimmidentität, um **Atemzüge, Flüstern, Lachen und Artikulation** besser zu erhalten (laut Angaben bei etwa **60%** der GPU-Zeit des Modells).
 - **LIVE-Voraussetzung:** Benötigt eine **5-20 Sekunden** lange Probe deiner eigenen normalen Sprache unter **`Settings → Voice & Timbre → "Sample of your voice…"`** (gespeichert als `my_voice.yvoice`).
-- **Automatischer Fallback:** Ohne diese Probe oder unter **AMD MIGraphX** fällt FlowEdit 3+1 automatisch auf **Learned 4 steps** zurück, und die LIVE-Statuszeile weist dich darauf hin.
+- **Automatischer Fallback:** Ohne diese Probe fällt FlowEdit 3+1 automatisch auf **Learned 4 steps** zurück, und die LIVE-Statuszeile weist dich darauf hin. Mit der experimentellen **AMD MIGraphX**-Engine laufen alle Modellmethoden als **Classic** (10 × Euler).
 - **Raum- & Mikrofon-Tipp:** Da FlowEdit mehr von deinem eigenen Timbre und Raumklang behält, helfen ein ruhiger Raum oder die Eingangsreinigung **`DF3`**, die Ausgabe sauber zu halten.
 
 ---

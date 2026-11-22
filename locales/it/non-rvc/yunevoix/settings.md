@@ -32,7 +32,7 @@ Questi controlli gestiscono pulizia ingresso, monitoraggio, volume d'uscita, buf
 | **Models folder** | Vuoto (`models` accanto a `.exe`) | Globale | Punta a una cartella personalizzata per modelli e voci. | Lascialo vuoto se non sposti `models` altrove. |
 | **Save diagnostic recordings** | `Off` | Diagnostica | Salva WAV di ciò che il motore ha ricevuto e prodotto (si ferma dopo 10 min; torna off al riavvio). | Attivalo **solo** per segnalare un problema; controlla l'audio per eventuali dati personali prima di inviarlo. |
 | **Restore default settings** | Pulsante azione | Globale | Ripristina tutte le impostazioni predefinite. | Le voci salvate e i dispositivi selezionati restano intatti. |
-| **AMD graphics engine** *(solo build AMD)* | `DirectML` | Dopo riavvio | Alterna tra **DirectML** (predefinito, GPU dedicata) e **MIGraphX** sperimentale. | Lascia su **DirectML** per `WavLM+` e `FlowEdit 3+1`. **MIGraphX** richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita `WavLM+` / `FlowEdit 3+1`. |
+| **AMD graphics engine** *(solo build AMD)* | `DirectML` | Dopo riavvio | Alterna tra **DirectML** (predefinito, GPU dedicata) e **MIGraphX** sperimentale. | Lascia su **DirectML** per `WavLM+` e `FlowEdit 3+1`. **MIGraphX** richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita `WavLM+`, `FlowEdit 3+1`, `Learned 4 steps` e le opzioni esclusive di Classic (tutto viene eseguito come Classic, 10 × Euler). |
 
 > **Pulizia vs. Volume vs. Limiter vs. Buffer:** *Input cleaning* rimuove il rumore di fondo prima che l'AI ascolti; *Output volume* cambia il volume; *Peak limiter* evita distorsioni improvvise; *Output buffer* scambia latenza per stabilità contro i crepitii.
 
@@ -48,7 +48,7 @@ Controlla quanto l'uscita segue il Voice Bank target rispetto alla tua voce, e q
 - **Model method** (`Classic` predefinito, **Al prossimo START**):
   - **`Classic`:** Comportamento delle versioni precedenti; abilita i quattro controlli solo-Classic qui sotto.
   - **`Learned 4 steps`:** Tarata per suonare come 10 steps usando circa il **40%** del tempo GPU del modello e meno memoria GPU (secondo lo sviluppatore).
-  - **`FlowEdit 3+1`:** Parte dalla tua voce (`Sample of your voice…`, 5–20 s) anziché dal rumore cambiando solo l'identità vocale, preservando meglio respiri, sussurri, risate e articolazione (circa **60%** del tempo GPU del modello). Ripiega su `Learned 4 steps` se manca il campione o su **AMD MIGraphX** (mostrato nella riga di stato LIVE).
+  - **`FlowEdit 3+1`:** Parte dalla tua voce (`Sample of your voice…`, 5–20 s) anziché dal rumore cambiando solo l'identità vocale, preservando meglio respiri, sussurri, risate e articolazione (circa **60%** del tempo GPU del modello). Ripiega su `Learned 4 steps` se manca il campione (mostrato nella riga di stato LIVE). Su **AMD MIGraphX** tutti i metodi del modello vengono eseguiti come `Classic` (10 × Euler).
 - **Controlli solo Classic** *(attivi solo con `Model method = Classic`)*:
   - **Model steps** (`10` predefinito): `8`, `6` (`≈ −0.75 GB` VRAM) o `4` (`≈ −1.1 GB` VRAM) girano più veloci con meno VRAM.
   - **Solver** (`Euler` predefinito): Con `4–6` steps scegli `DPM++ 2M`.
@@ -125,10 +125,12 @@ Tutti i controlli qui modellano il tono e puliscono le asprezze in **LIVE** (e v
 
 | Funzionalità | Solo Classic? | NVIDIA | AMD DirectML | AMD MIGraphX (Sperimentale) |
 | --- | --- | --- | --- | --- |
-| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sì** | Sì | Sì | Sì *(modalità Classic)* |
-| `Learned 4 steps` | No | Sì | Sì | Sì |
+| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sì** | Sì | Sì | **No** *(fisso 10 × Euler)* |
+| `Learned 4 steps` | No | Sì | Sì | **No** *(torna a Classic)* |
 | `WavLM+` | No | Sì | Sì | **No** *(non disponibile)* |
-| `FlowEdit 3+1` | No | Sì | Sì | **No** *(ripiega su `Learned 4 steps`)* |
+| `FlowEdit 3+1` | No | Sì | Sì | **No** *(torna a Classic)* |
+
+> Su AMD MIGraphX, YUNE esegue sempre il metodo Classic con 10 step Euler; `Learned 4 steps`, `FlowEdit 3+1` e le opzioni esclusive di Classic non sono disponibili lì.
 
 ### Differenze iniziali tra Parlato e Canto
 

@@ -75,8 +75,8 @@ Karaoke ti permette di cantare un brano in prima persona con testo sincronizzato
 | Impostazione (`Settings → Karaoke`) | Predefinito | Influisce su ciò che senti mentre canti | Influisce sulla cover renderizzata finale |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Sì | No |
-| **Backing vocals** | `On` | Sì | Mantenute nel mix |
-| **Music volume** | `0 dB` | Sì | Riferimento del mix |
+| **Backing vocals** | `On` | Sì | No (la cover mantiene i cori come in Song Cover) |
+| **Music volume** | `0 dB` | Sì | No |
 | **Lyrics size** | `Normal` | Sì (visualizzazione) | No |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | No | Sì |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | No | Sì |
@@ -97,9 +97,9 @@ Karaoke ti permette di cantare un brano in prima persona con testo sincronizzato
 | **Voce registrata troppo bassa** | Alza il guadagno del microfono in Windows verso `−6 dBFS`, attiva **Follow the original vocal's level** (`70%` predefinito) e mantieni attivo **Make room for the vocal**. |
 | **Tonalità errata / stonato** | Controlla **Octave** (`Auto`, `−12`, `0` o `+12`) e prova **Pull to the original melody** (`50-70%`) in `Settings → Karaoke`. |
 | **Scatti durante il Karaoke** | Chiudi le altre app che usano molto la GPU, usa **`Backing track`** (già separata in PREPARE) o controlla le impostazioni del buffer audio. |
-| **Musica troppo alta / voce coperta** | Alza **Vocal level** (`+2 dB` predefinito), mantieni attivo **Make room for the vocal** oppure abbassa **Music volume** mentre canti. |
+| **Musica troppo alta / voce coperta** | Alza **Vocal level** (`+2 dB` predefinito; `Settings → Song Cover` per le cover, `Settings → Karaoke` per il karaoke), mantieni attivo **Make room for the vocal** oppure abbassa **Music volume** mentre canti. |
 | **Respiri o sussurri persi nella cover** | Confronta **`WavLM+`** vs. **`Whisper`**, oppure imposta **Model method** su **`FlowEdit 3+1`** in `Settings → Song Cover`. |
-| **Troppo riverbero sulla voce della cover** | Abbassa **Reverb on the vocal** (`−17 dB` predefinito) o impostalo su nessuno in `Settings → Song Cover`. |
+| **Troppo riverbero sulla voce della cover** | Abbassa **Reverb on the vocal** (`−17 dB` predefinito) o impostalo su nessuno - in `Settings → Song Cover` per le cover, in `Settings → Karaoke` per il karaoke. |
 | **Artefatti di separazione vocale / duetti** | Lascia **Vocal separator** su **`YUNE`** e **Vocals to convert** su **`Lead vocal only`** (nei duetti con due voci principali non è possibile isolare automaticamente un solo cantante). |
 
 Prossimo passo: [Premium, Licenza e Aiuto](premium-and-troubleshooting.md).
