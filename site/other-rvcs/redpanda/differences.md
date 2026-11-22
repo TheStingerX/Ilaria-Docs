@@ -2,7 +2,7 @@
 
 [Set up Redpanda-vc](first-run.md) · [Train RVC models (EMA & Steps)](training.md) · [Test live audio](live-audio.md)
 
-This guide compares **Redpanda-vc** directly against **RVC Mainline**, **Applio**, and **Ilaria RVC** based on source-code inspection of each project's `main` branch.
+This guide compares **Redpanda-vc** directly against **RVC Mainline**, **Applio**, and **Ilaria RVC** based on static source-code inspection of each project's `main` branch (without running live audio benchmarks or cross-OS hardware tests).
 
 ---
 
@@ -12,21 +12,23 @@ If you are new to AI voice conversion, it helps to know that these programs are 
 
 - **RVC:** A family of voice conversion architectures and models (Retrieval-based Voice Conversion).
 - **RVC Mainline:** The original reference implementation (`RVC-Project/Retrieval-based-Voice-Conversion-WebUI`).
-- **Applio:** A widely used RVC application that expands the WebUI, vocoders, and tooling around RVC.
+- **Applio:** A widely used RVC application that expands the WebUI, vocoders, TTS, and tooling around RVC.
 - **Redpanda-vc:** A fork of **Applio** (`redpanda343/Redpanda-vc`) that adds Generator EMA, step-based RVC checkpoint saving, **Rectified Flow** training/inference, **Beatrice 2** training/realtime, and **dedicated Vocoder training**.
-- **Ilaria RVC:** A customized implementation built from RVC Mainline (`TheStingerX/Ilaria-RVC`) with its own inference pipeline, `Training Target: Steps`, RefineGAN/MRF HiFi-GAN support, Audio Analyzer, Voice Blender, and TTS tools.
+- **Ilaria RVC:** A customized implementation built from RVC Mainline (`TheStingerX/Ilaria-RVC`) with its own inference pipeline, `Training Target: Steps`, RefineGAN/MRF HiFi-GAN support in the UI, Audio Analyzer, Voice Blender, and TTS tools.
 
 A fork is **not** automatically better than the original in every area: each project trades simplicity, stability, model compatibility, and extra architectures differently.
+
+*(Quick terms for beginners: **Inference** means converting audio using an already-trained model; **CLI** means running commands in a terminal instead of clicking buttons in the **WebUI**; a **vocoder** turns acoustic features into an audible waveform; a **decoder** is the part of a program that knows how to read a specific model architecture.)*
 
 ---
 
 ## Feature Comparison Overview
 
-Status labels below reflect source-code inspection of each repository's `main` branch (commits listed in [Sources and Technical References](#sources-and-technical-references)):
+Status labels below reflect static source-code inspection of each repository's `main` branch (commits listed in [Sources and Technical References](#sources-and-technical-references)):
 
 | Feature | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |
-| **RVC V1** | **Yes** | **Different implementation** *(UI targets `RVC (V2)` and `Applio`)* | **Yes** | **Yes** |
+| **RVC V1** | **Yes** | **V1 inference supported; current training UI focuses on V2** | **Yes** | **Yes** |
 | **RVC V2** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **RVC training** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Epoch-based training** | **Yes** | **Yes** | **Different implementation** *(step-targeted)* | **Yes** |
@@ -41,23 +43,33 @@ Status labels below reflect source-code inspection of each repository's `main` b
 | **Dedicated vocoder training** | **No - verified** | **No - verified** | **Yes** (`tabs/train/nsf_hifigan.py`) | **No - verified** |
 | **HiFi-GAN** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **RefineGAN** | **No - verified** | **Yes** | **Yes** | **Yes** *(32 kHz v2 f0)* |
-| **MRF HiFi-GAN** | **No - verified** | **Yes** | **Yes** | **Yes** *(v2 f0)* |
+| **MRF HiFi-GAN** | **No - verified** | **Supported in code / CLI; not selectable in the standard training WebUI** | **Supported in code / CLI; not selectable in the standard training WebUI** | **Yes** *(selectable in training WebUI, v2 f0)* |
 | **Custom pretraineds** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **LR warmup** | **No - verified** | **No - verified** *(fixed schedule)* | **Yes** (`Warmup Steps`) | **No - verified** |
 | **LR scheduling** | **Different implementation** *(epoch exponential)* | **Different implementation** *(epoch exponential)* | **Yes** (`Exponential` / `Cosine`) | **Different implementation** *(epoch exponential)* |
 | **Batch control** | **Yes** (`batch_size`) | **Yes** (`batch_size`) | **Yes** (`Batch Size` + `Max Audio per Batch`) | **Yes** (`batch_size`) |
 | **VRAM optimization** | **Different implementation** *(FP16, GPU cache)* | **Yes** (`Checkpointing`, GPU cache) | **Yes** (`Checkpointing`, GPU cache) | **Different implementation** *(FP16/BF16, GPU cache)* |
-| **Feature extraction** | **Yes** | **Yes** | **Yes** | **Yes** |
-| **Pitch extraction (F0)** | **Yes** | **Yes** | **Yes** | **Yes** |
+| **Feature & Pitch extraction** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Voice inference (offline)** | **Yes** | **Yes** | **Yes** | **Yes** |
+| **Text-to-Speech (TTS)** | **No - verified** *(requires external TTS + RVC)* | **Yes** *(integrated `tabs/tts/` + CLI `rvc/lib/tools/tts.py`)* | **No - verified** *(Applio `tts` tab removed from `tabs/`)* | **Yes** *(integrated Kokoro, ElevenLabs, Windows TTS + RVC)* |
 | **Real-time conversion** | **Yes** | **Yes** | **Yes** | **No - verified** *(offline & batch only)* |
-| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** *(Desktop / WebUI)* | **Yes** (`run-realtime-gui.bat`) | **No - verified** |
+| **Desktop realtime GUI** | **Yes** (`realtime_gui.py`) | **Different implementation** *(WebUI / Desktop)* | **Yes** (`run-realtime-gui.bat`, Windows launcher) | **No - verified** |
 | **Browser realtime** | **No - verified** | **Yes** (`tabs/realtime`) | **Yes** (WebSocket + HTTP fallback) | **No - verified** |
 | **Multi-GPU training** | **Yes** | **Yes** | **Yes** | **Yes** |
 | **Concurrent multi-GPU realtime** | **No - verified** | **Not verified** | **Yes** *(1 GPU per stream)* | **No - verified** |
 | **Multi-family model support** | **No - verified** *(RVC only)* | **Partial** *(RVC + Applio)* | **Yes** *(RVC + Rectified Flow + Beatrice)* | **No - verified** *(RVC only)* |
-| **OS support** | Windows / Linux / macOS | Windows / Linux / macOS | Windows / Linux / macOS *(CUDA/MPS/CPU)* | Windows / Linux *(CUDA/DirectML/CPU)* |
-| **Monitoring tools** | TensorBoard | TensorBoard + Overtraining Detector | TensorBoard | TensorBoard + Audio Analyzer + Training Previews |
+| **Monitoring tools** | TensorBoard | TensorBoard | TensorBoard | TensorBoard + Audio Analyzer + Training Previews |
+
+### Platform & Backend Support
+
+Having a `.sh` launcher does **not** prove every feature is tested on Linux or macOS, so the table below separates launchers from backend code:
+
+| Platform / Backend | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
+| --- | --- | --- | --- | --- |
+| **Windows launchers** | `go-webui.bat`, `go-realtime_gui.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-updater.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-realtime-gui.bat` | `RUN_ILARIA_RVC.bat`, `RUN_ILARIA_RVC_LOGS.bat` |
+| **Linux / macOS launchers** | Manual Python launch | `run-install.sh`, `run-applio.sh`, `run-tensorboard.sh` | `run-install.sh`, `run-applio.sh` *(no `.sh` for `realtime_gui.py`)* | Manual Python launch *(Windows-focused `.bat`)* |
+| **Compute backends in code** | CUDA / MPS / CPU | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime on CPU)* | CUDA / DirectML (AMD & Intel) / CPU |
+| **Cross-OS runtime status** | Not tested in this audit | Not tested in this audit | Not tested in this audit | Not tested in this audit |
 
 ---
 
@@ -95,7 +107,7 @@ One of Redpanda-vc's biggest additions is **Rectified Flow** (`tabs/train/rectif
 - **Output & vocoder:** The flow model predicts mel-spectrogram representations, which a separate **vocoder** (such as `PC-NSF-HiFiGAN`, `NSF-HiFiGAN`, or `Vocos`) converts into an audio waveform.
 - **Training presets:** Includes `standard`, `meanflow` (MeanVC2-inspired), and `smaller` presets under `rectified_flow/presets/`.
 - **Realtime support:** Supported in Redpanda-vc's realtime GUI and WebUI realtime tab.
-- **Compatibility warning:** Even if an exported file uses `.pth`, a Rectified Flow model **is not an RVC V2 model** and will not load in RVC Mainline, Applio, Ilaria RVC, w-okada VCClient, or Vonovox unless a client explicitly implements that Rectified Flow decoder.
+- **Compatibility warning:** Even if an exported file uses `.pth`, a Rectified Flow model **is not an RVC V2 model** and will not load in standard RVC loaders unless a client explicitly implements that Rectified Flow decoder.
 
 *(No verified cross-architecture benchmarks exist in the repository proving Rectified Flow is universally faster, more natural, or higher quality than RVC.)*
 
@@ -118,7 +130,7 @@ Redpanda-vc includes a dedicated **Vocoder** training tab (`tabs/train/nsf_hifig
 - **Supported vocoders:** `PC-NSF-HiFiGAN`, `NSF-HiFiGAN`, and `Vocos` (24 kHz).
 - **Modes:** Train from scratch or fine-tune from a supported pretrained vocoder checkpoint (for example, `PC-NSF-HiFiGAN 2025.02` or `Vocos 24 kHz`).
 - **Acoustic model vs. vocoder:** An acoustic model (like Rectified Flow) predicts spectral features (mel-spectrograms); a vocoder turns those features into audible sound waves.
-- **Important limitation:** This tab is tightly paired with **Rectified Flow**'s mel configurations (`check_registry_vocoder` / `mel_mismatch` in `tabs/train/rectified_flow.py`). Selecting `HiFi-GAN`, `MRF HiFi-GAN`, or `RefineGAN` inside the **RVC** tab uses RVC's own integrated generator/vocoder architecture; you **cannot** arbitrarily plug a vocoder trained here into any standard RVC model.
+- **Important limitation:** This tab is tightly paired with **Rectified Flow**'s mel configurations (`check_registry_vocoder` / `mel_mismatch` in `tabs/train/rectified_flow.py`). Selecting `HiFi-GAN` or `RefineGAN` inside the **RVC** training WebUI uses RVC's own integrated generator/vocoder architecture; you **cannot** arbitrarily plug a vocoder trained here into any standard RVC model.
 
 ---
 
@@ -150,28 +162,28 @@ Beginners do **not** need to tune cosine schedules, warmup steps, or custom lear
 
 ## Model Compatibility: What Works Where?
 
-Having a `.pth` file extension does **not** mean two models are interchangeable. Different architectures require matching decoders and feature pipelines:
+Having a `.pth` file extension does **not** mean two models are interchangeable. Compatibility depends on architecture, checkpoint format, expected embedder, vocoder decoder, and matching FAISS index:
 
-| Model Type | Redpanda-vc | RVC Mainline | Applio | Ilaria RVC | Other Clients (Okada / Vonovox) |
+| Model Type | Redpanda-vc | RVC Mainline | Applio | Ilaria RVC | Other Compatible Clients |
 | --- | --- | --- | --- | --- | --- |
-| **RVC V1 (`.pth` inference)** | **Yes** | **Yes** | **Different implementation** *(V2/Applio focus)* | **Yes** | **Yes** *(standard V1 clients)* |
-| **RVC V2 HiFi-GAN (`.pth`)** | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
-| **RVC V2 RefineGAN (`.pth`)** | **Yes** | **No - verified** | **Yes** | **Yes** *(32 kHz)* | **No - verified** *(unless client adds RefineGAN)* |
-| **RVC V2 MRF HiFi-GAN (`.pth`)** | **Yes** | **No - verified** | **Yes** | **Yes** | **No - verified** *(unless client adds MRF)* |
-| **Rectified Flow (`.pth`)** | **Yes** | **No - verified** | **No - verified** | **No - verified** | **No - verified** |
-| **Beatrice 2 (model folder)** | **Yes** | **No - verified** | **No - verified** | **No - verified** | **Version-dependent** *(Beatrice clients/VST only)* |
-| **Custom Vocoder (`nsf_hifigan`)** | **Yes** *(for Rectified Flow)* | **No - verified** | **No - verified** | **No - verified** | **No - verified** |
+| **RVC V1 (`.pth` inference)** | **Yes** | **Yes** | **Inference supported; training UI focuses on V2** | **Yes** | **Supported by clients implementing this architecture** |
+| **RVC V2 HiFi-GAN (`.pth`)** | **Yes** | **Yes** | **Yes** | **Yes** | **Supported by clients implementing this architecture** |
+| **RVC V2 RefineGAN (`.pth`)** | **Yes** | **No - verified** | **Yes** | **Yes** *(32 kHz)* | **Requires compatible decoder** (**Version-dependent**) |
+| **RVC V2 MRF HiFi-GAN (`.pth`)** | **Yes** *(inference + CLI)* | **No - verified** | **Yes** *(inference + CLI)* | **Yes** *(UI + inference)* | **Requires compatible decoder** (**Version-dependent**) |
+| **Rectified Flow (`.pth`)** | **Yes** | **No - verified** | **No - verified** | **No - verified** | **Requires compatible decoder** *(not standard RVC V2)* |
+| **Beatrice 2 (model folder)** | **Yes** | **No - verified** | **No - verified** | **No - verified** | **Version-dependent** *(Beatrice loaders/VST only)* |
+| **Custom Vocoder (`nsf_hifigan`)** | **Yes** *(for Rectified Flow)* | **No - verified** | **No - verified** | **No - verified** | **Requires compatible decoder** |
 | **Training Checkpoints (`G_*`/`D_*`)** | **Yes** *(RVC)* | **Yes** *(RVC)* | **Yes** *(RVC)* | **Yes** *(RVC)* | **No - verified** *(training-only)* |
-| **FAISS `.index` files** | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Yes** *(RVC clients, matched embedder)* |
+| **FAISS `.index` files** | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Yes** *(matched embedder & dim)* | **Supported by RVC retrieval clients** *(matched embedder & dim)* |
 
 ---
 
 ## Which RVC Version Should You Choose?
 
 - **Choose RVC Mainline** if you want the original reference codebase and classic `realtime_gui.py` workflow.
-- **Choose Applio** if you want a full-featured RVC workspace with its standard epoch-based training, TTS, and overtraining detector.
-- **Choose Redpanda-vc** if you specifically want **Generator EMA**, **step-based checkpoint saving**, **Rectified Flow**, **Beatrice 2 training/realtime**, **custom vocoder training**, or **WebSocket/multi-stream realtime**.
-- **Choose Ilaria RVC** if you want an offline-focused RVC studio with `Training Target: Steps`, `Audio Analyzer`, `Voice Blender`, `RMVPE High Register`, and `Proposed Pitch`.
+- **Choose Applio** if you want a full-featured RVC workspace with epoch-based training and integrated **TTS**.
+- **Choose Redpanda-vc** if you specifically want **Generator EMA**, **step-based checkpoint saving**, **Rectified Flow**, **Beatrice 2 training/realtime**, **custom vocoder training**, or **WebSocket/multi-stream realtime** (note that Applio's `tts` tab is not present in Redpanda-vc).
+- **Choose Ilaria RVC** if you want an offline-focused RVC studio with `Training Target: Steps`, WebUI-selectable `MRF HiFi-GAN` / `RefineGAN`, integrated **TTS** (Kokoro, ElevenLabs, Windows), `Audio Analyzer`, `Voice Blender`, `RMVPE High Register`, and `Proposed Pitch`.
 
 ---
 
@@ -181,7 +193,7 @@ Having a `.pth` file extension does **not** mean two models are interchangeable.
 A separate project that copies an existing RVC codebase and modifies or adds features on top of it.
 
 **Is Redpanda-vc the same as Applio?**
-No. Redpanda-vc is forked from Applio, so it shares Applio's base UI, but adds Generator EMA, step-based saving, Rectified Flow, Beatrice 2, and vocoder training.
+No. Redpanda-vc is forked from Applio, so it shares Applio's base UI, but adds Generator EMA, step-based saving, Rectified Flow, Beatrice 2, and vocoder training, while omitting Applio's `tts` tab.
 
 **Does Redpanda-vc produce better RVC models?**
 Not automatically. Voice quality depends primarily on your dataset, preprocessing, and settings; EMA and extra schedules are tools to test, not guarantees.
@@ -208,10 +220,10 @@ A separate, CPU-friendly voice conversion architecture (from `beatrice-trainer`)
 It converts acoustic features (such as mel-spectrograms) into an audible audio waveform.
 
 **Can I use a Redpanda-vc model in another RVC program?**
-Standard **RVC V1 / V2 HiFi-GAN** models exported from Redpanda-vc work in other standard RVC clients; **Rectified Flow**, **Beatrice**, **RefineGAN**, and **MRF HiFi-GAN** require clients that support those specific architectures.
+Standard **RVC V1 / V2 HiFi-GAN** models exported from Redpanda-vc work in clients implementing those decoders; **Rectified Flow**, **Beatrice**, **RefineGAN**, and **MRF HiFi-GAN** require clients that explicitly support those decoders.
 
 **Can Redpanda-vc train normal RVC models?**
-Yes, under the **Train → RVC** tab.
+Yes, under the **Train → RVC** tab (`HiFi-GAN` and `RefineGAN` in the WebUI; `MRF HiFi-GAN` in code/CLI).
 
 **Does Redpanda-vc support realtime conversion?**
 Yes, both via the WebUI **Realtime** tab and `run-realtime-gui.bat`.
@@ -229,9 +241,9 @@ Combining **Generator EMA**, **step-interval RVC saving (`Save Every X Steps`)**
 
 ## Sources and Technical References
 
-Source-code comparison verified on `main` branches on **2026-11-22**:
+Static source-code comparison verified on `main` branches on **2026-11-22**:
 
-- **Redpanda-vc** (`55a3a80`, 2026-10-31): [Repository](https://github.com/redpanda343/Redpanda-vc) · [`tabs/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/main/tabs/train/train.py) · [`tabs/train/rvc.py`](https://github.com/redpanda343/Redpanda-vc/blob/main/tabs/train/rvc.py) · [`rvc/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/train.py) · [`rectified_flow/`](https://github.com/redpanda343/Redpanda-vc/tree/main/rectified_flow) · [`beatrice/`](https://github.com/redpanda343/Redpanda-vc/tree/main/beatrice) · [`nsf_hifigan/`](https://github.com/redpanda343/Redpanda-vc/tree/main/nsf_hifigan) · [`tabs/inference/realtime.py`](https://github.com/redpanda343/Redpanda-vc/blob/main/tabs/inference/realtime.py) · [`realtime_gui.py`](https://github.com/redpanda343/Redpanda-vc/blob/main/realtime_gui.py)
-- **Applio** (`445b0f6`, 2026-11-19): [Repository](https://github.com/IAHispano/Applio) · [`tabs/train/train.py`](https://github.com/IAHispano/Applio/blob/main/tabs/train/train.py) · [`rvc/train/train.py`](https://github.com/IAHispano/Applio/blob/main/rvc/train/train.py) · [`tabs/realtime/`](https://github.com/IAHispano/Applio/tree/main/tabs/realtime)
-- **RVC Mainline** (`81eed5e`, 2026-08-04): [Repository](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [`train/train.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/train/train.py) · [`realtime_gui.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
-- **Ilaria RVC** (`a887ba5`, 2026-11-21): [Repository](https://github.com/TheStingerX/Ilaria-RVC) · [`app/ILARIA_RVC.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/main/app/ILARIA_RVC.py) · [`app/infer/modules/train/train.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/main/app/infer/modules/train/train.py)
+- **Redpanda-vc** (commit [`55a3a80`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80), 2026-10-31): [Repository](https://github.com/redpanda343/Redpanda-vc) · [`tabs/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/train.py) · [`tabs/train/rvc.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/rvc.py) · [`rvc/train/train.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/rvc/train/train.py) · [`rectified_flow/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/rectified_flow) · [`beatrice/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/beatrice) · [`nsf_hifigan/`](https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/nsf_hifigan) · [`tabs/inference/realtime.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/inference/realtime.py) · [`realtime_gui.py`](https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/realtime_gui.py)
+- **Applio** (commit [`445b0f6`](https://github.com/IAHispano/Applio/tree/445b0f6), 2026-11-19): [Repository](https://github.com/IAHispano/Applio) · [`tabs/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py) · [`rvc/infer/infer.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py) · [`core.py`](https://github.com/IAHispano/Applio/blob/445b0f6/core.py) · [`rvc/train/train.py`](https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py) · [`tabs/tts/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts) · [`tabs/realtime/`](https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime)
+- **RVC Mainline** (commit [`81eed5e`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e), 2026-08-04): [Repository](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [`train/train.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py) · [`realtime_gui.py`](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py)
+- **Ilaria RVC** (commit [`a887ba5`](https://github.com/TheStingerX/Ilaria-RVC/tree/a887ba5), 2026-11-21): [Repository](https://github.com/TheStingerX/Ilaria-RVC) · [`app/ILARIA_RVC.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ILARIA_RVC.py) · [`app/infer/modules/train/train.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/infer/modules/train/train.py) · [`app/ilaria/ilaria_tts.py`](https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ilaria/ilaria_tts.py)
