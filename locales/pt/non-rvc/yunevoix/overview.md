@@ -1,63 +1,78 @@
 ---
-label: "Visão geral e requisitos"
+label: "Visão Geral e Requisitos"
 icon: ":book:"
 order: 99
-permalink: /non-rvc/yunevoix/overview/
-description: "YuneVoix é uma aplicação de conversão de voz por IA em tempo real para Windows, alimentada pelo motor YUNE."
+permalink: /pt/non-rvc/yunevoix/overview/
+description: "YuneVoix é um aplicativo de conversão de voz por IA em tempo real para Windows, impulsionado pelo motor YUNE."
 ---
 # YuneVoix (YUNE)
 
 [Hugging Face (Download)](https://huggingface.co/JohnBlvck/YUNE/tree/main) · [Ko-fi (Suporte e Premium)](https://ko-fi.com/yunevoix)
 
-YuneVoix é uma aplicação de conversão de voz por IA em tempo real para Windows, alimentada pelo motor **YUNE**. Tal como o RVC, transforma a tua voz na voz de outra pessoa - tanto para fala como para canto, ao vivo ou offline - mas **sem precisar de treinar um modelo de voz**. Tudo corre localmente na tua placa gráfica: sem nuvem, sem conta e o teu áudio nunca sai do teu PC.
+YuneVoix é um aplicativo de conversão de voz por IA em tempo real para Windows, impulsionado pelo motor **YUNE**. Assim como o RVC, ele transforma sua voz na de outra pessoa - tanto para fala quanto para canto, ao vivo ou offline - mas **sem treinar um modelo de voz individual**. Tudo roda localmente na sua própria placa de vídeo: sem nuvem, sem conta, e seu áudio nunca sai do seu PC.
+
+> **Mapa do guia:** [1. Visão Geral e Requisitos](overview.md) · [2. Instalar e Atualizar](installation.md) · [3. Voice Bank e Uso ao Vivo](usage.md) · [4. Configurações e Qualidade de Áudio](settings.md) · [5. Song Cover e Karaoke](song-cover-karaoke.md) · [6. Premium, Licença e Ajuda](premium-and-troubleshooting.md) · [7. Registro de Alterações](changelog.md)
 
 ## Como funciona
 
-Em vez de passar horas a treinar um modelo num conjunto de dados, o YUNE só precisa de uma pequena amostra de áudio de referência da voz alvo (cerca de **5–20 segundos**). Divide a tua voz entre *o que dizes* e *como o dizes*:
+Em vez de passar horas treinando um modelo em um conjunto de dados, o YUNE cria um perfil **Voice Bank** a partir de uma breve gravação de referência da voz de destino (**10-25 segundos**). *(Separadamente disso, o método LIVE **FlowEdit 3+1** também usa uma amostra de **5-20 segundos** da sua própria voz natural como ponto de partida - por exemplo, 15 segundos da voz de destino no Voice Bank vs. 10 segundos da sua própria fala natural em `Settings → Voice & Timbre → Sample of your voice…`.)*
 
-1. **Speech encoder**: capta as palavras, a articulação e o ritmo.
-2. **Pitch tracker**: acompanha a tua melodia e entoação.
-3. **Modelo diffusion-transformer**: reconstrói o áudio com o timbre da voz alvo a partir da gravação de referência.
-4. **Vocoder neural**: gera áudio full-band a **44,1 kHz**.
+De acordo com a documentação do desenvolvedor, o pipeline do YUNE divide sua voz em *o que você diz* e *como você diz*:
 
-No modo **LIVE**, o áudio é processado em pequenos blocos de cerca de **160 ms**, com um atraso total aproximado de **0,7 segundos** nas definições predefinidas.
+1. **Voice Bank e identidade do locutor:** Armazena um perfil vocal (`.yvoice`) a partir de uma gravação de destino de 10-25 segundos sem treinar uma rede neural separada do zero.
+2. **Motor de conteúdo (`Whisper` ou `WavLM+`):** Captura suas palavras, tempo e articulação.
+3. **Rastreamento de tom (pitch):** Segue sua melodia e entonação.
+4. **Conversão baseada em difusão:** Reconstrói o áudio no timbre do locutor de destino usando a referência do Voice Bank.
+5. **Vocoder neural (`PC-NSF`):** Gera áudio de banda completa a **44.1 kHz**.
+6. **Processamento de áudio:** Aplica limpeza de entrada, ferramentas de tom/autotune, EQ/filtros e efeitos.
+
+No modo **LIVE**, o áudio é processado em pequenos blocos de cerca de **160 ms**, com aproximadamente **0.7 segundos** de atraso total ponta a ponta nas configurações padrão (conforme informado pelo desenvolvedor).
 
 ## BASIC vs. PREMIUM
 
-| Funcionalidade | BASIC (Gratuito) | PREMIUM |
+| Recurso | BASIC (Gratuito) | PREMIUM |
 | --- | --- | --- |
-| **Alterador de voz LIVE** (fala e canto) | Incluído | Incluído |
-| **Voice Bank** (criar e partilhar vozes `.yvoice`) | Incluído | Incluído |
-| **Ferramentas de pitch** (shift, autotune, estabilizador, harmonia) | Incluído | Incluído |
-| **Carácter vocal e efeitos** | Incluído | Incluído |
+| **Modificador de voz LIVE** (fala e canto) | Incluído | Incluído |
+| **Voice Bank** (criar e compartilhar vozes `.yvoice`) | Incluído | Incluído |
+| **Ferramentas de tom** (deslocamento, autotune, estabilizador, harmonia) | Incluído | Incluído |
+| **Caráter vocal e efeitos de voz** | Incluído | Incluído |
 | **Limpeza de entrada** (remoção de ruído/cliques, speech gate) | Incluído | Incluído |
-| **Song Cover** (separar voz, converter e misturar) | - | Incluído |
-| **Karaoke** (cantar com letras no ecrã) | - | Incluído |
+| **Song Cover** (separar vocais, converter, remixar) | - | Incluído |
+| **Karaoke** (cantar junto com letras na tela) | - | Incluído |
 | **Licença offline** | Não necessária | `license.yvl` por PC |
 
-> **YuneVoix PREMIUM** está disponível para apoiantes no [Ko-fi](https://ko-fi.com/yunevoix). O acesso é tratado em privado por Ko-fi ou DM, e a licença funciona totalmente offline.
+> **YuneVoix PREMIUM** está disponível para apoiadores no [Ko-fi](https://ko-fi.com/yunevoix). O acesso é tratado de forma privada via Ko-fi ou DMs, e a licença funciona totalmente offline. Veja [Song Cover e Karaoke](song-cover-karaoke.md) e [Premium, Licença e Ajuda](premium-and-troubleshooting.md) para detalhes.
 
-## Funcionalidades principais
+## Recursos principais
 
-- **Alterador de voz LIVE**: entrada do microfone, voz convertida para qualquer dispositivo de áudio (Discord, OBS, jogos, VRChat). Funciona para falar e cantar, preservando respirações, sussurros e risos.
-- **Voice Bank**: cria uma nova voz a partir de 10–25 segundos de gravações limpas. O YuneVoix pode separar automaticamente a voz da música/ruído de fundo e remover reverberação.
-- **Ferramentas de pitch**: mudança de oitava manual ou automática, autotune com deteção de tonalidade, estabilizador suave de pitch, profundidade de vibrato e harmonia ao vivo (terças, quintas, oitavas).
-- **Carácter vocal**: controlos de intensidade do timbre, formante, calor e presença com predefinições.
-- **Limpeza de entrada**: remoção de ruído e cliques (`DF3` / `Gentle`), speech gate e monitorização de entrada/saída.
-- **Efeitos vocais**: de-esser, compressor, reverberação e limitador de picos.
-- **Opções de qualidade vs. velocidade**: dois motores de conteúdo (incluindo **WavLM+** em NVIDIA e AMD DirectML para preservar os teus risos, sussurros e respirações) e vários métodos de modelo. Os modos rápidos usam cerca de 40% do tempo de GPU, e o modo **FlowEdit 3+1** preserva melhor a tua respiração e articulação naturais.
-- **Song Cover e Karaoke (PREMIUM)**: re-canta músicas completas com separação vocal automática ou canta acompanhando as letras no ecrã.
-- **Interface em 6 idiomas**: Inglês, Alemão, Italiano, Espanhol, Polaco e Português.
+- **Modificador de voz LIVE**: microfone na entrada, voz convertida na saída para qualquer dispositivo de áudio (Discord, OBS, jogos, VRChat). Funciona para falar e cantar.
+- **Voice Bank**: crie um novo perfil `.yvoice` a partir de **10-25 segundos** de gravações limpas. O YuneVoix pode separar automaticamente a voz de música/ruído e remover reverberação.
+- **Três métodos de modelo** (segundo a documentação do desenvolvedor):
+  - **Classic:** Comportamento das versões anteriores com controles configuráveis de `Model steps`, `Solver` e guidance.
+  - **Learned 4 steps:** Ajustado para soar como Classic de 10 passos usando cerca de **40%** do tempo de GPU do modelo e menos memória de GPU.
+  - **FlowEdit 3+1:** Parte da sua própria voz de origem (amostra de 5-20 segundos da sua voz no LIVE; o vocal da música no Song Cover) em vez de ruído e busca preservar melhor respirações, sussurros, risadas e articulação (relatado em cerca de **60%** do tempo de GPU do modelo).
+- **Motores de conteúdo**: **Whisper** (padrão) e **WavLM+** (em NVIDIA e AMD DirectML, voltado para fala ao vivo mais clara e preservação de risadas, sussurros e respirações).
+- **Ferramentas de tom**: deslocamento de tom manual ou automático, autotune com detecção de tonalidade, estabilizador suave de tom, profundidade de vibrato e harmonia ao vivo (terças, quintas).
+- **Caráter vocal, EQ e efeitos**: força de timbre, formantes, calor, suavidade, presença, de-esser, EQ dinâmico, compressor, saturação, bitcrush, reverb e limitador de pico. Veja [Configurações e Qualidade de Áudio](settings.md).
+- **Song Cover e Karaoke (PREMIUM)**: regrave músicas completas com separação vocal automática ou cante junto com letras na tela.
+- **Seletor de idioma da interface**: inglês, alemão, italiano, espanhol, polonês e português.
 
 ## Requisitos do sistema
 
-O YuneVoix requer uma **GPU dedicada** e não funciona apenas com CPU. Gráficos Intel, macOS e Linux não são suportados.
+O YuneVoix exige uma **GPU dedicada** e não pode rodar apenas na CPU. Gráficos integrados/Arc da Intel, macOS e Linux não são suportados.
 
-| Componente | NVIDIA (Recomendado) | AMD (DirectML) |
+| Componente | NVIDIA (Recomendado) | AMD |
 | --- | --- | --- |
-| **SO** | Windows 10 / 11 64-bit | Windows 11 **24H2** ou mais recente (64-bit) |
-| **GPU** | 8 GB+ VRAM (**12 GB recomendados**), GeForce RTX recomendada | Radeon **série RX 7000** ou superior, 12 GB+ VRAM (**16 GB recomendados**) |
-| **Driver** | Driver NVIDIA atual | AMD Adrenalin **25.10.13.09** ou mais recente |
-| **Áudio** | Microfone + **auscultadores** (obrigatórios ao vivo) | Microfone + **auscultadores** (obrigatórios ao vivo) |
+| **SO** | Windows 10 / 11 64-bit | Windows 10 / 11 64-bit |
+| **GPU** | 8 GB+ VRAM (**12 GB recomendados**), GeForce RTX recomendada | Radeon **série RX 7000** ou mais recente, 12 GB+ VRAM (**16 GB recomendados**) |
+| **Driver** | Driver NVIDIA atual | Driver AMD Software: Adrenalin Edition atual |
+| **Áudio** | Microfone + **fones de ouvido** (obrigatório para uso ao vivo) | Microfone + **fones de ouvido** (obrigatório para uso ao vivo) |
 
-> **Nota NVIDIA vs. AMD**: desde a **v0.7.1**, o pacote AMD usa **DirectML** na placa dedicada por predefinição, e tanto o **`WavLM+`** como o **`FlowEdit 3+1`** também funcionam em AMD DirectML (em LIVE, covers e karaoke). Opcionalmente podes mudar `Settings → General → "AMD graphics engine"` para o motor experimental **MIGraphX** (após reiniciar; com MIGraphX, `WavLM+` e `FlowEdit 3+1` não ficam disponíveis e o Windows pode transferir o MIGraphX via Windows Update).
+> **Nota de rodapé (AMD):** Windows 11 24H2+ e Adrenalin 25.10.13.09+ são necessários apenas para o motor experimental **MIGraphX**, disponível em `Settings → General → "AMD graphics engine"`.
+
+### AMD DirectML vs. AMD MIGraphX
+
+- **AMD DirectML (Padrão na v0.7.1):** Integrado e usado por padrão na GPU AMD dedicada. Funciona imediatamente sem download do Windows Update nem compilação inicial de modelos, e oferece suporte tanto a **`WavLM+`** quanto a **`FlowEdit 3+1`** de acordo com a documentação do desenvolvedor.
+- **AMD MIGraphX (Experimental):** Precisa ser ativado explicitamente em `Settings → General → "AMD graphics engine"` e exige reinicialização. O Windows Update pode baixar componentes do MIGraphX, a preparação inicial de modelos pode levar **10-30 minutos**, e **`WavLM+`** e **`FlowEdit 3+1`** **não** ficam disponíveis no MIGraphX.
+
+Próximo passo: [Instalar e atualizar o YuneVoix](installation.md).
