@@ -68,8 +68,8 @@ Karaoke te permite cantar una canción tú mismo con letras sincronizadas en pan
 | Ajuste (`Settings → Karaoke`) | Predeterminado | Afecta a lo que oyes al cantar | Afecta a la cover renderizada final |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Sí | No |
-| **Backing vocals** | `On` | Sí | Se mantienen en la mezcla |
-| **Music volume** | `0 dB` | Sí | Referencia de mezcla |
+| **Backing vocals** | `On` | Sí | No (la cover mantiene las segundas voces como en Song Cover) |
+| **Music volume** | `0 dB` | Sí | No |
 | **Lyrics size** | `Normal` | Sí (visualización) | No |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | No | Sí |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | No | Sí |
@@ -90,9 +90,9 @@ Karaoke te permite cantar una canción tú mismo con letras sincronizadas en pan
 | **Voz grabada demasiado baja** | Sube la ganancia del micrófono en Windows hacia `−6 dBFS`, activa **Follow the original vocal's level** (`70%` por defecto) y mantén activo **Make room for the vocal**. |
 | **Tono incorrecto / desafinado** | Revisa **Octave** (`Auto`, `−12`, `0` o `+12`) y prueba **Pull to the original melody** (`50-70%`) en `Settings → Karaoke`. |
 | **Tirones durante el Karaoke** | Cierra otras apps que usen mucha GPU, usa **`Backing track`** (ya separada en PREPARE) o revisa los ajustes del búfer de audio. |
-| **Música muy alta / voz tapada** | Sube **Vocal level** (`+2 dB` por defecto), mantén activo **Make room for the vocal** o baja **Music volume** mientras cantas. |
+| **Música muy alta / voz tapada** | Sube **Vocal level** (`+2 dB` por defecto; `Settings → Song Cover` para covers, `Settings → Karaoke` para karaoke), mantén activo **Make room for the vocal** o baja **Music volume** mientras cantas. |
 | **Respiraciones o susurros perdidos en la cover** | Compara **`WavLM+`** frente a **`Whisper`**, o cambia **Model method** a **`FlowEdit 3+1`** en `Settings → Song Cover`. |
-| **Demasiada reverberación en la voz de la cover** | Baja **Reverb on the vocal** (`−17 dB` por defecto) o ponlo en ninguno en `Settings → Song Cover`. |
+| **Demasiada reverberación en la voz de la cover** | Baja **Reverb on the vocal** (`−17 dB` por defecto) o ponlo en ninguno - en `Settings → Song Cover` para covers, en `Settings → Karaoke` para karaoke. |
 | **Artefactos de separación vocal / duetos** | Mantén **Vocal separator** en **`YUNE`** y **Vocals to convert** en **`Lead vocal only`** (los duetos con dos cantantes principales no pueden aislar automáticamente a un solo cantante). |
 
 Siguiente paso: [Premium, Licencia y Ayuda](premium-and-troubleshooting.md).

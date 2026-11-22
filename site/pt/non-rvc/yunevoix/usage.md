@@ -69,7 +69,7 @@ Você pode escolher **Model method** em **`Settings → Voice & Timbre`** (e sep
 
 - Parte da **sua própria voz** em vez de ruído e muda apenas a identidade vocal, buscando preservar melhor **respirações, sussurros, risadas e articulação** (relatado em cerca de **60%** do tempo de GPU do modelo).
 - **Requisito no LIVE:** Precisa de uma amostra de **5-20 segundos** da sua própria fala normal selecionada em **`Settings → Voice & Timbre → "Sample of your voice…"`** (armazenada como `my_voice.yvoice`).
-- **Fallback automático:** Sem essa amostra, ou ao usar **AMD MIGraphX**, o FlowEdit 3+1 volta automaticamente para **Learned 4 steps** e a linha de status LIVE informa isso.
+- **Fallback automático:** Sem essa amostra, o FlowEdit 3+1 volta automaticamente para **Learned 4 steps** e a linha de status LIVE informa isso. Com o motor experimental **AMD MIGraphX**, todos os métodos de modelo rodam como **Classic** (10 × Euler).
 - **Dica de ambiente e microfone:** Como o FlowEdit preserva mais do seu próprio timbre e da acústica da sala, um ambiente silencioso ou a limpeza de entrada **`DF3`** ajuda a manter a saída limpa.
 
 ---

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678078043">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678877883">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,12 +36,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.848678078043" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848678877883" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678078043" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678078043" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=4.6.0.848678078043" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=4.6.0.848678877883" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -211,7 +211,7 @@
 | **Scatti mentre giochi** | Limita gli **FPS** del gioco e abbassa la grafica del gioco, imposta **Model method** su **`Learned 4 steps`**, riduci **Prompt length** e disattiva **Harmony**. |
 | **LIVE interrotto: &quot;the audio device stopped working&quot;** | Il microfono o l'uscita è stato scollegato o cambiato. Ricollegalo, clicca **Refresh devices** e premi **START**. |
 | **AMD: si chiude su START / `ShapeInferenceNotRegistered`** | Aggiorna alla **v0.7.1** (usa **DirectML** sulla GPU dedicata per impostazione predefinita, risolvendo sia i crash quando è presente una GPU integrata AMD sia `ShapeInferenceNotRegistered` quando la grafica integrata è disattivata). Controlla `check.txt` per la scheda/motore attivo e mantieni aggiornati i driver Adrenalin. |
-| **AMD: FlowEdit torna al fallback o WavLM+ non disponibile** | Controlla `Settings → General → &quot;AMD graphics engine&quot;`. Se hai attivato **MIGraphX** sperimentale, torna a **DirectML** e riavvia (`WavLM+` e `FlowEdit 3+1` non sono disponibili con MIGraphX). Assicurati anche che `Sample of your voice…` sia impostato per FlowEdit in LIVE. |
+| **AMD: FlowEdit torna al fallback o WavLM+ non disponibile** | Controlla `Settings → General → &quot;AMD graphics engine&quot;`. Se hai attivato **MIGraphX** sperimentale, torna a **DirectML** e riavvia (con MIGraphX, `WavLM+`, `FlowEdit 3+1` e `Learned 4 steps` non sono disponibili - tutto viene eseguito come Classic, 10 × Euler). Assicurati anche che `Sample of your voice…` sia impostato per FlowEdit in LIVE. |
 | **Esplora File di Windows dice che lo ZIP non è valido** | Usa **7-Zip** o **WinRAR** (ZIP crittografato AES-256) con password `yunevoix`. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -264,7 +264,7 @@
 </tr>
 <tr>
 <td><strong>AMD: FlowEdit torna al fallback o WavLM+ non disponibile</strong></td>
-<td>Controlla <code translate="no" v-pre>Settings → General → &quot;AMD graphics engine&quot;</code>. Se hai attivato <strong>MIGraphX</strong> sperimentale, torna a <strong>DirectML</strong> e riavvia (<code translate="no" v-pre>WavLM+</code> e <code translate="no" v-pre>FlowEdit 3+1</code> non sono disponibili con MIGraphX). Assicurati anche che <code translate="no" v-pre>Sample of your voice…</code> sia impostato per FlowEdit in LIVE.</td>
+<td>Controlla <code translate="no" v-pre>Settings → General → &quot;AMD graphics engine&quot;</code>. Se hai attivato <strong>MIGraphX</strong> sperimentale, torna a <strong>DirectML</strong> e riavvia (con MIGraphX, <code translate="no" v-pre>WavLM+</code>, <code translate="no" v-pre>FlowEdit 3+1</code> e <code translate="no" v-pre>Learned 4 steps</code> non sono disponibili - tutto viene eseguito come Classic, 10 × Euler). Assicurati anche che <code translate="no" v-pre>Sample of your voice…</code> sia impostato per FlowEdit in LIVE.</td>
 </tr>
 <tr>
 <td><strong>Esplora File di Windows dice che lo ZIP non è valido</strong></td>
@@ -329,7 +329,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -66,6 +66,6 @@ YuneVoix richiede una **GPU dedicata** e non può funzionare solo su CPU. Grafic
 ### AMD DirectML vs. AMD MIGraphX
 
 - **AMD DirectML (Predefinito nella v0.7.1):** Integrato e usato sulla GPU AMD dedicata per impostazione predefinita. Funziona subito senza download tramite Windows Update né compilazione iniziale dei modelli, e supporta sia **`WavLM+`** sia **`FlowEdit 3+1`** secondo la documentazione dello sviluppatore.
-- **AMD MIGraphX (Sperimentale):** Va attivato esplicitamente in `Settings → General → "AMD graphics engine"` e richiede un riavvio. Può comportare un download tramite Windows Update, la prima preparazione può richiedere **10–30 minuti**, e **`WavLM+`** e **`FlowEdit 3+1`** **non** sono disponibili sotto MIGraphX.
+- **AMD MIGraphX (Sperimentale):** Va attivato esplicitamente in `Settings → General → "AMD graphics engine"` e richiede un riavvio. Può comportare un download tramite Windows Update, la prima preparazione può richiedere **10–30 minuti**, e **`WavLM+`**, **`FlowEdit 3+1`** e **`Learned 4 steps`** **non** sono disponibili sotto MIGraphX (il modello gira sempre come Classic, 10 × Euler).
 
 Prossimo passo: [Installare e aggiornare YuneVoix](installation.md).

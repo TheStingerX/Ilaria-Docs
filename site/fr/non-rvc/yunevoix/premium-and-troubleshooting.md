@@ -42,7 +42,7 @@ Pour des tutoriels complets étape par étape et chaque réglage de Song Cover /
 | **Saccades en jeu** | Limitez les **FPS** du jeu et baissez les graphismes du jeu, réglez **Model method** sur **`Learned 4 steps`**, raccourcissez **Prompt length** et désactivez **Harmony**. |
 | **LIVE arrêté : "the audio device stopped working"** | Votre micro ou sortie a été débranché ou modifié. Rebranchez-le, cliquez sur **Refresh devices** et appuyez sur **START**. |
 | **AMD : se ferme au clic sur START / `ShapeInferenceNotRegistered`** | Passez à la **v0.7.1** (utilise **DirectML** sur le GPU dédié par défaut, corrigeant à la fois les plantages en présence d'un GPU intégré AMD et `ShapeInferenceNotRegistered` quand le GPU intégré est désactivé). Vérifiez `check.txt` pour la carte/moteur actif et gardez les pilotes Adrenalin à jour. |
-| **AMD : FlowEdit repasse en repli ou WavLM+ indisponible** | Vérifiez `Settings → General → "AMD graphics engine"`. Si vous avez activé le mode expérimental **MIGraphX**, revenez à **DirectML** et redémarrez (`WavLM+` et `FlowEdit 3+1` ne sont pas disponibles sous MIGraphX). Vérifiez aussi que `Sample of your voice…` est défini pour FlowEdit en LIVE. |
+| **AMD : FlowEdit repasse en repli ou WavLM+ indisponible** | Vérifiez `Settings → General → "AMD graphics engine"`. Si vous avez activé le mode expérimental **MIGraphX**, revenez à **DirectML** et redémarrez (sous MIGraphX, `WavLM+`, `FlowEdit 3+1` et `Learned 4 steps` ne sont pas disponibles - tout s'exécute en Classic, 10 × Euler). Vérifiez aussi que `Sample of your voice…` est défini pour FlowEdit en LIVE. |
 | **L'Explorateur Windows dit que le ZIP est invalide** | Utilisez **7-Zip** ou **WinRAR** (ZIP chiffré AES-256) avec le mot de passe `yunevoix`. |
 
 ---

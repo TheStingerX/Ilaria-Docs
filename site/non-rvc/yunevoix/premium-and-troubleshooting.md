@@ -42,7 +42,7 @@ For complete step-by-step tutorials and every Song Cover / Karaoke setting, see 
 | **Stuttering while gaming** | Cap the game's **FPS** and lower game graphics, set **Model method** to **`Learned 4 steps`**, shorten **Prompt length**, and turn off **Harmony**. |
 | **LIVE stopped: "the audio device stopped working"** | Your mic or output was unplugged or changed. Reconnect it, click **Refresh devices**, and press **START**. |
 | **AMD: closes on START / `ShapeInferenceNotRegistered`** | Update to **v0.7.1** (uses **DirectML** on the dedicated GPU by default, fixing both crashes when integrated AMD graphics are present and `ShapeInferenceNotRegistered` when integrated graphics are disabled). Check `check.txt` for active card/engine and keep Adrenalin drivers current. |
-| **AMD: FlowEdit falls back or WavLM+ unavailable** | Check `Settings → General → "AMD graphics engine"`. If you enabled experimental **MIGraphX**, switch back to **DirectML** and restart (`WavLM+` and `FlowEdit 3+1` are not available under MIGraphX). Also ensure `Sample of your voice…` is set for LIVE FlowEdit. |
+| **AMD: FlowEdit falls back or WavLM+ unavailable** | Check `Settings → General → "AMD graphics engine"`. If you enabled experimental **MIGraphX**, switch back to **DirectML** and restart (under MIGraphX, `WavLM+`, `FlowEdit 3+1`, and `Learned 4 steps` are not available - everything runs as Classic, 10 × Euler). Also ensure `Sample of your voice…` is set for LIVE FlowEdit. |
 | **Windows Explorer says ZIP is invalid** | Use **7-Zip** or **WinRAR** (AES-256 encrypted ZIP) with password `yunevoix`. |
 
 ---

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678084976">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678886406">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.848678084976" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848678886406" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678084976" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678886406" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678084976" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678886406" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -243,8 +243,8 @@
 <retype-table copy-text="| Ajuste (`Settings → Karaoke`) | Predeterminado | Afecta a lo que oyes al cantar | Afecta a la cover renderizada final |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Sí | No |
-| **Backing vocals** | `On` | Sí | Se mantienen en la mezcla |
-| **Music volume** | `0 dB` | Sí | Referencia de mezcla |
+| **Backing vocals** | `On` | Sí | No (la cover mantiene las segundas voces como en Song Cover) |
+| **Music volume** | `0 dB` | Sí | No |
 | **Lyrics size** | `Normal` | Sí (visualización) | No |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | No | Sí |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | No | Sí |
@@ -274,13 +274,13 @@
 <td><strong>Backing vocals</strong></td>
 <td><code translate="no" v-pre>On</code></td>
 <td>Sí</td>
-<td>Se mantienen en la mezcla</td>
+<td>No (la cover mantiene las segundas voces como en Song Cover)</td>
 </tr>
 <tr>
 <td><strong>Music volume</strong></td>
 <td><code translate="no" v-pre>0 dB</code></td>
 <td>Sí</td>
-<td>Referencia de mezcla</td>
+<td>No</td>
 </tr>
 <tr>
 <td><strong>Lyrics size</strong></td>
@@ -343,9 +343,9 @@
 | **Voz grabada demasiado baja** | Sube la ganancia del micrófono en Windows hacia `−6 dBFS`, activa **Follow the original vocal's level** (`70%` por defecto) y mantén activo **Make room for the vocal**. |
 | **Tono incorrecto / desafinado** | Revisa **Octave** (`Auto`, `−12`, `0` o `+12`) y prueba **Pull to the original melody** (`50-70%`) en `Settings → Karaoke`. |
 | **Tirones durante el Karaoke** | Cierra otras apps que usen mucha GPU, usa **`Backing track`** (ya separada en PREPARE) o revisa los ajustes del búfer de audio. |
-| **Música muy alta / voz tapada** | Sube **Vocal level** (`+2 dB` por defecto), mantén activo **Make room for the vocal** o baja **Music volume** mientras cantas. |
+| **Música muy alta / voz tapada** | Sube **Vocal level** (`+2 dB` por defecto; `Settings → Song Cover` para covers, `Settings → Karaoke` para karaoke), mantén activo **Make room for the vocal** o baja **Music volume** mientras cantas. |
 | **Respiraciones o susurros perdidos en la cover** | Compara **`WavLM+`** frente a **`Whisper`**, o cambia **Model method** a **`FlowEdit 3+1`** en `Settings → Song Cover`. |
-| **Demasiada reverberación en la voz de la cover** | Baja **Reverb on the vocal** (`−17 dB` por defecto) o ponlo en ninguno en `Settings → Song Cover`. |
+| **Demasiada reverberación en la voz de la cover** | Baja **Reverb on the vocal** (`−17 dB` por defecto) o ponlo en ninguno - en `Settings → Song Cover` para covers, en `Settings → Karaoke` para karaoke. |
 | **Artefactos de separación vocal / duetos** | Mantén **Vocal separator** en **`YUNE`** y **Vocals to convert** en **`Lead vocal only`** (los duetos con dos cantantes principales no pueden aislar automáticamente a un solo cantante). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -378,7 +378,7 @@
 </tr>
 <tr>
 <td><strong>Música muy alta / voz tapada</strong></td>
-<td>Sube <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> por defecto), mantén activo <strong>Make room for the vocal</strong> o baja <strong>Music volume</strong> mientras cantas.</td>
+<td>Sube <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> por defecto; <code translate="no" v-pre>Settings → Song Cover</code> para covers, <code translate="no" v-pre>Settings → Karaoke</code> para karaoke), mantén activo <strong>Make room for the vocal</strong> o baja <strong>Music volume</strong> mientras cantas.</td>
 </tr>
 <tr>
 <td><strong>Respiraciones o susurros perdidos en la cover</strong></td>
@@ -386,7 +386,7 @@
 </tr>
 <tr>
 <td><strong>Demasiada reverberación en la voz de la cover</strong></td>
-<td>Baja <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> por defecto) o ponlo en ninguno en <code translate="no" v-pre>Settings → Song Cover</code>.</td>
+<td>Baja <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> por defecto) o ponlo en ninguno - en <code translate="no" v-pre>Settings → Song Cover</code> para covers, en <code translate="no" v-pre>Settings → Karaoke</code> para karaoke.</td>
 </tr>
 <tr>
 <td><strong>Artefactos de separación vocal / duetos</strong></td>
@@ -431,7 +431,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

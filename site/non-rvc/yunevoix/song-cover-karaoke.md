@@ -68,8 +68,8 @@ Karaoke lets you sing a song yourself with synchronized on-screen lyrics, then c
 | Setting (`Settings → Karaoke`) | Default | Affects What You Hear While Singing | Affects Final Rendered Cover |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Yes | No |
-| **Backing vocals** | `On` | Yes | Kept in mix |
-| **Music volume** | `0 dB` | Yes | Mix reference |
+| **Backing vocals** | `On` | Yes | No (the cover keeps backing vocals as in Song Cover) |
+| **Music volume** | `0 dB` | Yes | No |
 | **Lyrics size** | `Normal` | Yes (display) | No |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | No | Yes |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | No | Yes |
@@ -90,9 +90,9 @@ Karaoke lets you sing a song yourself with synchronized on-screen lyrics, then c
 | **Recorded voice too quiet** | Raise Windows microphone gain toward `−6 dBFS`, enable **Follow the original vocal's level** (`70%` default), and keep **Make room for the vocal** enabled. |
 | **Wrong pitch / out of tune** | Check **Octave** (`Auto`, `−12`, `0`, or `+12`) and try **Pull to the original melody** (`50–70%`) in `Settings → Karaoke`. |
 | **Stuttering during Karaoke** | Close other GPU-heavy apps, use **`Backing track`** (already separated at PREPARE), or check audio buffer settings. |
-| **Music too loud / voice buried** | Raise **Vocal level** (`+2 dB` default), keep **Make room for the vocal** enabled, or lower **Music volume** while singing. |
+| **Music too loud / voice buried** | Raise **Vocal level** (`+2 dB` default; `Settings → Song Cover` for covers, `Settings → Karaoke` for karaoke), keep **Make room for the vocal** enabled, or lower **Music volume** while singing. |
 | **Breaths or whispers lost in cover** | Compare **`WavLM+`** vs. **`Whisper`**, or switch **Model method** to **`FlowEdit 3+1`** in `Settings → Song Cover`. |
-| **Too much reverb on cover vocal** | Lower **Reverb on the vocal** (`−17 dB` default) or set it to none in `Settings → Song Cover`. |
+| **Too much reverb on cover vocal** | Lower **Reverb on the vocal** (`−17 dB` default) or set it to none - in `Settings → Song Cover` for covers, in `Settings → Karaoke` for karaoke. |
 | **Vocal separation artifacts / duets** | Keep **Vocal separator** on **`YUNE`** and **Vocals to convert** on **`Lead vocal only`** (duets with two lead singers cannot isolate a single singer automatically). |
 
 Next step: [Premium, Licensing & Help](premium-and-troubleshooting.md).

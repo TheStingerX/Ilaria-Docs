@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678078043">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678877883">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848678078043" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848678877883" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678078043" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678078043" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -194,7 +194,7 @@
 | **Models folder** | Vuoto (`models` accanto a `.exe`) | Globale | Punta a una cartella personalizzata per modelli e voci. | Lascialo vuoto se non sposti `models` altrove. |
 | **Save diagnostic recordings** | `Off` | Diagnostica | Salva WAV di ciò che il motore ha ricevuto e prodotto (si ferma dopo 10 min; torna off al riavvio). | Attivalo **solo** per segnalare un problema; controlla l'audio per eventuali dati personali prima di inviarlo. |
 | **Restore default settings** | Pulsante azione | Globale | Ripristina tutte le impostazioni predefinite. | Le voci salvate e i dispositivi selezionati restano intatti. |
-| **AMD graphics engine** *(solo build AMD)* | `DirectML` | Dopo riavvio | Alterna tra **DirectML** (predefinito, GPU dedicata) e **MIGraphX** sperimentale. | Lascia su **DirectML** per `WavLM+` e `FlowEdit 3+1`. **MIGraphX** richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita `WavLM+` / `FlowEdit 3+1`. |">
+| **AMD graphics engine** *(solo build AMD)* | `DirectML` | Dopo riavvio | Alterna tra **DirectML** (predefinito, GPU dedicata) e **MIGraphX** sperimentale. | Lascia su **DirectML** per `WavLM+` e `FlowEdit 3+1`. **MIGraphX** richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita `WavLM+`, `FlowEdit 3+1`, `Learned 4 steps` e le opzioni esclusive di Classic (tutto viene eseguito come Classic, 10 × Euler). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -289,7 +289,7 @@
 <td><code translate="no" v-pre>DirectML</code></td>
 <td>Dopo riavvio</td>
 <td>Alterna tra <strong>DirectML</strong> (predefinito, GPU dedicata) e <strong>MIGraphX</strong> sperimentale.</td>
-<td>Lascia su <strong>DirectML</strong> per <code translate="no" v-pre>WavLM+</code> e <code translate="no" v-pre>FlowEdit 3+1</code>. <strong>MIGraphX</strong> richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita <code translate="no" v-pre>WavLM+</code> / <code translate="no" v-pre>FlowEdit 3+1</code>.</td>
+<td>Lascia su <strong>DirectML</strong> per <code translate="no" v-pre>WavLM+</code> e <code translate="no" v-pre>FlowEdit 3+1</code>. <strong>MIGraphX</strong> richiede Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min di compilazione iniziale e disabilita <code translate="no" v-pre>WavLM+</code>, <code translate="no" v-pre>FlowEdit 3+1</code>, <code translate="no" v-pre>Learned 4 steps</code> e le opzioni esclusive di Classic (tutto viene eseguito come Classic, 10 × Euler).</td>
 </tr>
 </tbody>
 </table>
@@ -309,7 +309,7 @@
 <ul>
 <li><strong><code translate="no" v-pre>Classic</code>:</strong> Comportamento delle versioni precedenti; abilita i quattro controlli solo-Classic qui sotto.</li>
 <li><strong><code translate="no" v-pre>Learned 4 steps</code>:</strong> Tarata per suonare come 10 steps usando circa il <strong>40%</strong> del tempo GPU del modello e meno memoria GPU (secondo lo sviluppatore).</li>
-<li><strong><code translate="no" v-pre>FlowEdit 3+1</code>:</strong> Parte dalla tua voce (<code translate="no" v-pre>Sample of your voice…</code>, 5–20 s) anziché dal rumore cambiando solo l&#x27;identità vocale, preservando meglio respiri, sussurri, risate e articolazione (circa <strong>60%</strong> del tempo GPU del modello). Ripiega su <code translate="no" v-pre>Learned 4 steps</code> se manca il campione o su <strong>AMD MIGraphX</strong> (mostrato nella riga di stato LIVE).</li>
+<li><strong><code translate="no" v-pre>FlowEdit 3+1</code>:</strong> Parte dalla tua voce (<code translate="no" v-pre>Sample of your voice…</code>, 5–20 s) anziché dal rumore cambiando solo l&#x27;identità vocale, preservando meglio respiri, sussurri, risate e articolazione (circa <strong>60%</strong> del tempo GPU del modello). Ripiega su <code translate="no" v-pre>Learned 4 steps</code> se manca il campione (mostrato nella riga di stato LIVE). Su <strong>AMD MIGraphX</strong> tutti i metodi del modello vengono eseguiti come <code translate="no" v-pre>Classic</code> (10 × Euler).</li>
 </ul>
 </li>
 <li><strong>Controlli solo Classic</strong> <em>(attivi solo con <code translate="no" v-pre>Model method = Classic</code>)</em>:
@@ -460,10 +460,10 @@
 <span id="classic-only-controls-vs-amd-backend-compatibility" class="docs-anchor"></span><h3 id="controlli-solo-classic-vs-compatibilità-backend-amd">Controlli solo Classic vs. Compatibilità backend AMD</h3>
 <retype-table copy-text="| Funzionalità | Solo Classic? | NVIDIA | AMD DirectML | AMD MIGraphX (Sperimentale) |
 | --- | --- | --- | --- | --- |
-| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sì** | Sì | Sì | Sì *(modalità Classic)* |
-| `Learned 4 steps` | No | Sì | Sì | Sì |
+| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sì** | Sì | Sì | **No** *(fisso 10 × Euler)* |
+| `Learned 4 steps` | No | Sì | Sì | **No** *(torna a Classic)* |
 | `WavLM+` | No | Sì | Sì | **No** *(non disponibile)* |
-| `FlowEdit 3+1` | No | Sì | Sì | **No** *(ripiega su `Learned 4 steps`)* |">
+| `FlowEdit 3+1` | No | Sì | Sì | **No** *(torna a Classic)* |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -481,14 +481,14 @@
 <td><strong>Sì</strong></td>
 <td>Sì</td>
 <td>Sì</td>
-<td>Sì <em>(modalità Classic)</em></td>
+<td><strong>No</strong> <em>(fisso 10 × Euler)</em></td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>Learned 4 steps</code></td>
 <td>No</td>
 <td>Sì</td>
 <td>Sì</td>
-<td>Sì</td>
+<td><strong>No</strong> <em>(torna a Classic)</em></td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>WavLM+</code></td>
@@ -502,12 +502,15 @@
 <td>No</td>
 <td>Sì</td>
 <td>Sì</td>
-<td><strong>No</strong> <em>(ripiega su <code translate="no" v-pre>Learned 4 steps</code>)</em></td>
+<td><strong>No</strong> <em>(torna a Classic)</em></td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
+<blockquote>
+<p>Su AMD MIGraphX, YUNE esegue sempre il metodo Classic con 10 step Euler; <code translate="no" v-pre>Learned 4 steps</code>, <code translate="no" v-pre>FlowEdit 3+1</code> e le opzioni esclusive di Classic non sono disponibili lì.</p>
+</blockquote>
 <span id="speech-vs-singing-starting-differences" class="docs-anchor"></span><h3 id="differenze-iniziali-tra-parlato-e-canto">Differenze iniziali tra Parlato e Canto</h3>
 <retype-table copy-text="| Impostazione | Parlato (Discord / Streaming) | Canto |
 | --- | --- | --- |
@@ -584,7 +587,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T15:48:37.000Z">22/11/2026 · 16:48</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -42,7 +42,7 @@ Para tutoriales completos paso a paso y cada ajuste de Song Cover / Karaoke, con
 | **Tirones al jugar** | Limita los **FPS** del juego y baja los gráficos del juego, pon **Model method** en **`Learned 4 steps`**, acorta **Prompt length** y desactiva **Harmony**. |
 | **LIVE detenido: "the audio device stopped working"** | Tu micro o salida se desconectó o cambió. Vuelve a conectarlo, haz clic en **Refresh devices** y pulsa **START**. |
 | **AMD: se cierra al pulsar START / `ShapeInferenceNotRegistered`** | Actualiza a la **v0.7.1** (usa **DirectML** en la GPU dedicada por defecto, corrigiendo tanto los cierres cuando hay gráfica integrada AMD como `ShapeInferenceNotRegistered` cuando la gráfica integrada está desactivada). Revisa `check.txt` para ver la tarjeta/motor activo y mantén actualizados los controladores Adrenalin. |
-| **AMD: FlowEdit vuelve al respaldo o WavLM+ no disponible** | Revisa `Settings → General → "AMD graphics engine"`. Si activaste el modo experimental **MIGraphX**, vuelve a **DirectML** y reinicia (`WavLM+` y `FlowEdit 3+1` no están disponibles bajo MIGraphX). Asegúrate también de tener `Sample of your voice…` configurado para FlowEdit en LIVE. |
+| **AMD: FlowEdit vuelve al respaldo o WavLM+ no disponible** | Revisa `Settings → General → "AMD graphics engine"`. Si activaste el modo experimental **MIGraphX**, vuelve a **DirectML** y reinicia (bajo MIGraphX, `WavLM+`, `FlowEdit 3+1` y `Learned 4 steps` no están disponibles - todo se ejecuta como Classic, 10 × Euler). Asegúrate también de tener `Sample of your voice…` configurado para FlowEdit en LIVE. |
 | **El Explorador de Windows dice que el ZIP no es válido** | Usa **7-Zip** o **WinRAR** (ZIP cifrado con AES-256) con la contraseña `yunevoix`. |
 
 ---

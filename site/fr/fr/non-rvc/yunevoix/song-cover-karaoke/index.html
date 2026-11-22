@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678091564">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678894716">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.848678091564" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848678894716" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678091564" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678894716" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678091564" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678894716" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -243,8 +243,8 @@
 <retype-table copy-text="| Paramètre (`Settings → Karaoke`) | Défaut | Affecte ce que vous entendez en chantant | Affecte la cover rendue finale |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Oui | Non |
-| **Backing vocals** | `On` | Oui | Conservées dans le mix |
-| **Music volume** | `0 dB` | Oui | Référence de mix |
+| **Backing vocals** | `On` | Oui | Non (la cover conserve les chœurs comme dans Song Cover) |
+| **Music volume** | `0 dB` | Oui | Non |
 | **Lyrics size** | `Normal` | Oui (affichage) | Non |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | Non | Oui |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | Non | Oui |
@@ -274,13 +274,13 @@
 <td><strong>Backing vocals</strong></td>
 <td><code translate="no" v-pre>On</code></td>
 <td>Oui</td>
-<td>Conservées dans le mix</td>
+<td>Non (la cover conserve les chœurs comme dans Song Cover)</td>
 </tr>
 <tr>
 <td><strong>Music volume</strong></td>
 <td><code translate="no" v-pre>0 dB</code></td>
 <td>Oui</td>
-<td>Référence de mix</td>
+<td>Non</td>
 </tr>
 <tr>
 <td><strong>Lyrics size</strong></td>
@@ -343,9 +343,9 @@
 | **Voix enregistrée trop faible** | Montez le gain micro Windows vers `−6 dBFS`, activez **Follow the original vocal's level** (`70%` par défaut) et gardez **Make room for the vocal** activé. |
 | **Mauvaise hauteur / faux** | Vérifiez **Octave** (`Auto`, `−12`, `0` ou `+12`) et essayez **Pull to the original melody** (`50-70%`) dans `Settings → Karaoke`. |
 | **Saccades pendant le Karaoke** | Fermez les autres applis gourmandes en GPU, utilisez **`Backing track`** (déjà séparé à PREPARE) ou vérifiez les réglages de tampon audio. |
-| **Musique trop forte / voix couverte** | Montez **Vocal level** (`+2 dB` par défaut), gardez **Make room for the vocal** activé ou baissez **Music volume** pendant le chant. |
+| **Musique trop forte / voix couverte** | Montez **Vocal level** (`+2 dB` par défaut ; `Settings → Song Cover` pour les covers, `Settings → Karaoke` pour le karaoke), gardez **Make room for the vocal** activé ou baissez **Music volume** pendant le chant. |
 | **Respirations ou chuchotements perdus dans la cover** | Comparez **`WavLM+`** et **`Whisper`**, ou passez **Model method** sur **`FlowEdit 3+1`** dans `Settings → Song Cover`. |
-| **Trop de réverbération sur la voix de cover** | Baissez **Reverb on the vocal** (`−17 dB` par défaut) ou réglez-le sur aucun dans `Settings → Song Cover`. |
+| **Trop de réverbération sur la voix de cover** | Baissez **Reverb on the vocal** (`−17 dB` par défaut) ou réglez-le sur aucun - dans `Settings → Song Cover` pour les covers, dans `Settings → Karaoke` pour le karaoke. |
 | **Artefacts de séparation vocale / duos** | Gardez **Vocal separator** sur **`YUNE`** et **Vocals to convert** sur **`Lead vocal only`** (les duos avec deux chanteurs principaux ne peuvent pas isoler automatiquement un seul chanteur). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -378,7 +378,7 @@
 </tr>
 <tr>
 <td><strong>Musique trop forte / voix couverte</strong></td>
-<td>Montez <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> par défaut), gardez <strong>Make room for the vocal</strong> activé ou baissez <strong>Music volume</strong> pendant le chant.</td>
+<td>Montez <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> par défaut ; <code translate="no" v-pre>Settings → Song Cover</code> pour les covers, <code translate="no" v-pre>Settings → Karaoke</code> pour le karaoke), gardez <strong>Make room for the vocal</strong> activé ou baissez <strong>Music volume</strong> pendant le chant.</td>
 </tr>
 <tr>
 <td><strong>Respirations ou chuchotements perdus dans la cover</strong></td>
@@ -386,7 +386,7 @@
 </tr>
 <tr>
 <td><strong>Trop de réverbération sur la voix de cover</strong></td>
-<td>Baissez <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> par défaut) ou réglez-le sur aucun dans <code translate="no" v-pre>Settings → Song Cover</code>.</td>
+<td>Baissez <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> par défaut) ou réglez-le sur aucun - dans <code translate="no" v-pre>Settings → Song Cover</code> pour les covers, dans <code translate="no" v-pre>Settings → Karaoke</code> pour le karaoke.</td>
 </tr>
 <tr>
 <td><strong>Artefacts de séparation vocale / duos</strong></td>
@@ -431,7 +431,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

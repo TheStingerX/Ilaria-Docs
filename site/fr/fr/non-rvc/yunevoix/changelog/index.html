@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678091564">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678894716">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.848678091564" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848678894716" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678091564" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678894716" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678091564" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678894716" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -179,7 +179,7 @@
 <h3 id="nouveautés">Nouveautés</h3>
 <ul>
 <li><strong>AMD</strong> : Windows 10 et les versions de Windows 11 antérieures à 24H2 sont de nouveau pris en charge (<code translate="no" v-pre>24H2</code> n&#x27;est requis que pour le moteur expérimental <strong>MIGraphX</strong>).</li>
-<li><strong>AMD</strong> : le moteur de contenu <strong><code translate="no" v-pre>WavLM+</code></strong> et la méthode de modèle <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong> fonctionnent désormais aussi sur les cartes AMD (<strong>DirectML</strong>) - en <strong>LIVE</strong>, <strong>covers</strong> et <strong>karaoke</strong>. Lorsque <strong>AMD MIGraphX</strong> est sélectionné, ils ne sont pas disponibles.</li>
+<li><strong>AMD</strong> : le moteur de contenu <strong><code translate="no" v-pre>WavLM+</code></strong> et la méthode de modèle <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong> fonctionnent désormais aussi sur les cartes AMD (<strong>DirectML</strong>) - en <strong>LIVE</strong>, <strong>covers</strong> et <strong>karaoke</strong>. Lorsque <strong>AMD MIGraphX</strong> est sélectionné, ils ne sont pas disponibles (avec MIGraphX, toutes les méthodes de modèle s&#x27;exécutent en Classic, 10 × Euler).</li>
 </ul>
 <hr>
 <h2 id="v070-2026-11-19">v0.7.0 (2026-11-19)</h2>
@@ -190,7 +190,7 @@
 <ul>
 <li><strong>Classic</strong> : comme auparavant (options d&#x27;étapes, solveur et guidance).</li>
 <li><strong>Learned 4 steps</strong> : calibré pour sonner comme 10 étapes tout en utilisant environ <strong>40%</strong> du temps GPU et moins de VRAM - idéal pour le jeu et les cartes plus lentes.</li>
-<li><strong>FlowEdit 3+1 (NVIDIA)</strong> <em>(AMD : depuis v0.7.1)</em> : part de votre propre voix au lieu du bruit et ne modifie que l&#x27;identité vocale, afin que respirations, chuchotements, rires et articulation passent bien mieux (environ <strong>60%</strong> du temps GPU du modèle). En <strong>LIVE</strong>, utilise votre échantillon vocal (<code translate="no" v-pre>Voice &amp; Timbre → &quot;Sample of your voice…&quot;</code> ; s&#x27;il a été défini dans une version précédente, resélectionnez-le une fois). Dans les covers et le karaoke, utilise la voix du morceau lui-même. Fonctionne avec <strong>Whisper</strong> comme avec <strong>WavLM+</strong>. Sans échantillon vocal ou sous AMD MIGraphX, FlowEdit repasse sur <strong>Learned 4 steps</strong> (indiqué dans la ligne d&#x27;état LIVE).</li>
+<li><strong>FlowEdit 3+1 (NVIDIA)</strong> <em>(AMD : depuis v0.7.1)</em> : part de votre propre voix au lieu du bruit et ne modifie que l&#x27;identité vocale, afin que respirations, chuchotements, rires et articulation passent bien mieux (environ <strong>60%</strong> du temps GPU du modèle). En <strong>LIVE</strong>, utilise votre échantillon vocal (<code translate="no" v-pre>Voice &amp; Timbre → &quot;Sample of your voice…&quot;</code> ; s&#x27;il a été défini dans une version précédente, resélectionnez-le une fois). Dans les covers et le karaoke, utilise la voix du morceau lui-même. Fonctionne avec <strong>Whisper</strong> comme avec <strong>WavLM+</strong>. Sans échantillon vocal, FlowEdit repasse sur <strong>Learned 4 steps</strong> (indiqué dans la ligne d&#x27;état LIVE) ; sous AMD MIGraphX toutes les méthodes de modèle s&#x27;exécutent en <strong>Classic</strong>.</li>
 </ul>
 </li>
 <li><strong>Karaoke (PREMIUM)</strong> : chantez vous-même un morceau avec paroles à l&#x27;écran - YUNE convertit votre chant dans la voix choisie et le mixe avec la musique. Les paroles sont alignées automatiquement (texte collé ou <code translate="no" v-pre>.lrc</code> ; japonais aussi en rōmaji).
@@ -288,7 +288,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

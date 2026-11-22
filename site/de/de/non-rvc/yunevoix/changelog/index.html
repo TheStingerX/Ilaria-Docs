@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678098258">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678903575">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.848678098258" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848678903575" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678098258" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848678903575" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678098258" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848678903575" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -179,7 +179,7 @@
 <h3 id="neu">Neu</h3>
 <ul>
 <li><strong>AMD</strong>: Windows 10 und Windows 11-Versionen vor 24H2 werden wieder unterstützt (<code translate="no" v-pre>24H2</code> wird nur für die experimentelle <strong>MIGraphX</strong>-Engine benötigt).</li>
-<li><strong>AMD</strong>: die Content-Engine <strong><code translate="no" v-pre>WavLM+</code></strong> und die Modellmethode <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong> funktionieren nun auch auf AMD-Karten (<strong>DirectML</strong>) - in <strong>LIVE</strong>, <strong>Covers</strong> und <strong>Karaoke</strong>. Wenn <strong>AMD MIGraphX</strong> gewählt ist, stehen sie nicht zur Verfügung.</li>
+<li><strong>AMD</strong>: die Content-Engine <strong><code translate="no" v-pre>WavLM+</code></strong> und die Modellmethode <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong> funktionieren nun auch auf AMD-Karten (<strong>DirectML</strong>) - in <strong>LIVE</strong>, <strong>Covers</strong> und <strong>Karaoke</strong>. Wenn <strong>AMD MIGraphX</strong> gewählt ist, stehen sie nicht zur Verfügung (mit MIGraphX laufen alle Modellmethoden als Classic, 10 × Euler).</li>
 </ul>
 <hr>
 <h2 id="v070-2026-11-19">v0.7.0 (2026-11-19)</h2>
@@ -190,7 +190,7 @@
 <ul>
 <li><strong>Classic</strong>: wie bisher (Optionen für Schritte, Solver und Guidance).</li>
 <li><strong>Learned 4 steps</strong>: abgestimmt auf den Klang von 10 Schritten bei etwa <strong>40%</strong> der GPU-Zeit und weniger VRAM - ideal fürs Spielen und langsamere Karten.</li>
-<li><strong>FlowEdit 3+1 (NVIDIA)</strong> <em>(AMD: seit v0.7.1)</em>: startet von deiner eigenen Stimme statt von Rauschen und ändert nur die Stimmidentität, sodass Atemzüge, Flüstern, Lachen und Artikulation deutlich besser durchkommen (etwa <strong>60%</strong> der GPU-Zeit des Modells). In <strong>LIVE</strong> nutzt es deine Stimmprobe (<code translate="no" v-pre>Voice &amp; Timbre → &quot;Sample of your voice…&quot;</code>; falls in einer früheren Version gesetzt, einmal neu auswählen). In Covers und Karaoke nutzt es den Gesang selbst. Funktioniert sowohl mit <strong>Whisper</strong> als auch mit <strong>WavLM+</strong>. Ohne Stimmprobe oder auf AMD MIGraphX fällt FlowEdit auf <strong>Learned 4 steps</strong> zurück (in der LIVE-Statuszeile angezeigt).</li>
+<li><strong>FlowEdit 3+1 (NVIDIA)</strong> <em>(AMD: seit v0.7.1)</em>: startet von deiner eigenen Stimme statt von Rauschen und ändert nur die Stimmidentität, sodass Atemzüge, Flüstern, Lachen und Artikulation deutlich besser durchkommen (etwa <strong>60%</strong> der GPU-Zeit des Modells). In <strong>LIVE</strong> nutzt es deine Stimmprobe (<code translate="no" v-pre>Voice &amp; Timbre → &quot;Sample of your voice…&quot;</code>; falls in einer früheren Version gesetzt, einmal neu auswählen). In Covers und Karaoke nutzt es den Gesang selbst. Funktioniert sowohl mit <strong>Whisper</strong> als auch mit <strong>WavLM+</strong>. Ohne Stimmprobe fällt FlowEdit auf <strong>Learned 4 steps</strong> zurück (in der LIVE-Statuszeile angezeigt); auf AMD MIGraphX laufen alle Modellmethoden als <strong>Classic</strong>.</li>
 </ul>
 </li>
 <li><strong>Karaoke (PREMIUM)</strong>: singe einen Song selbst mit Liedtext auf dem Bildschirm - YUNE wandelt deinen Gesang in die gewählte Stimme um und mischt ihn mit der Musik. Liedtexte werden automatisch abgeglichen (eingefügter Text oder <code translate="no" v-pre>.lrc</code>; Japanisch auch in Romaji).
@@ -288,7 +288,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -11,7 +11,7 @@
 ### Novo
 
 - **AMD**: Windows 10 e versões do Windows 11 anteriores à 24H2 voltam a ser suportados (`24H2` é necessário apenas para o motor experimental **MIGraphX**).
-- **AMD**: o motor de conteúdo **`WavLM+`** e o método de modelo **`FlowEdit 3+1`** agora também funcionam em placas AMD (**DirectML**) - no **LIVE**, **covers** e **karaoke**. Quando **AMD MIGraphX** está selecionado, eles não ficam disponíveis.
+- **AMD**: o motor de conteúdo **`WavLM+`** e o método de modelo **`FlowEdit 3+1`** agora também funcionam em placas AMD (**DirectML**) - no **LIVE**, **covers** e **karaoke**. Quando **AMD MIGraphX** está selecionado, eles não ficam disponíveis (com MIGraphX, todos os métodos de modelo rodam como Classic, 10 × Euler).
 
 ---
 
@@ -24,7 +24,7 @@
 - **Model method** (`Settings → Voice & Timbre`, e separadamente em `Settings → Song Cover` para covers e karaoke; aplica-se no próximo **START**):
   - **Classic**: igual a antes (opções de passos, solver e guidance).
   - **Learned 4 steps**: ajustado para soar como 10 passos usando cerca de **40%** do tempo de GPU e menos VRAM - ótimo para jogar e placas mais lentas.
-  - **FlowEdit 3+1 (NVIDIA)** *(AMD: desde a v0.7.1)*: parte da sua própria voz em vez de ruído e muda apenas a identidade vocal, de modo que respirações, sussurros, risadas e articulação passam muito melhor (cerca de **60%** do tempo de GPU do modelo). No **LIVE**, usa sua amostra de voz (`Voice & Timbre → "Sample of your voice…"`; se definida em versão anterior, selecione-a novamente uma vez). Em covers e karaoke, usa o próprio vocal. Funciona tanto com **Whisper** quanto com **WavLM+**. Sem amostra de voz ou no AMD MIGraphX, o FlowEdit volta para **Learned 4 steps** (exibido na linha de status LIVE).
+  - **FlowEdit 3+1 (NVIDIA)** *(AMD: desde a v0.7.1)*: parte da sua própria voz em vez de ruído e muda apenas a identidade vocal, de modo que respirações, sussurros, risadas e articulação passam muito melhor (cerca de **60%** do tempo de GPU do modelo). No **LIVE**, usa sua amostra de voz (`Voice & Timbre → "Sample of your voice…"`; se definida em versão anterior, selecione-a novamente uma vez). Em covers e karaoke, usa o próprio vocal. Funciona tanto com **Whisper** quanto com **WavLM+**. Sem amostra de voz, o FlowEdit volta para **Learned 4 steps** (exibido na linha de status LIVE); no AMD MIGraphX todos os métodos de modelo rodam como **Classic**.
 - **Karaoke (PREMIUM)**: cante você mesmo uma música com letras na tela - o YUNE converte seu canto na voz escolhida e o mixa com a música. As letras são sincronizadas automaticamente (texto colado ou `.lrc`; japonês também em romaji).
   - Cante junto com o instrumental (separado em **PREPARE**) ou com a música original (inicia em segundos; separada no primeiro render).
   - Rolagem suave com a linha atual centralizada; `Space` = pausar, `Esc` = parar (termina 5 s depois), `F11` = tela cheia, além de um medidor de microfone na janela de letras.

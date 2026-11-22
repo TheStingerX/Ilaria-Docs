@@ -25,7 +25,7 @@ Estos controles gestionan la limpieza de entrada, la monitorización, el nivel d
 | **Models folder** | Vacío (`models` junto al `.exe`) | Global | Apunta a una carpeta personalizada para modelos y voces. | Déjalo vacío salvo que guardes `models` en otra ruta. |
 | **Save diagnostic recordings** | `Off` | Diagnóstico | Guarda archivos WAV de lo que oyó y generó el motor (se detiene solo tras 10 min; vuelve a Off al reiniciar). | Actívalo **solo** al reportar un error; revisa las grabaciones por si contienen voz privada antes de compartirlas. |
 | **Restore default settings** | Botón de acción | Global | Restablece todos los ajustes a sus valores predeterminados. | Tus voces guardadas y dispositivos de audio seleccionados se conservan. |
-| **AMD graphics engine** *(solo compilación AMD)* | `DirectML` | Tras reiniciar | Cambia entre **DirectML** (predeterminado, GPU dedicada) y el experimental **MIGraphX**. | Déjalo en **DirectML** para usar `WavLM+` y `FlowEdit 3+1`. **MIGraphX** requiere Windows 11 24H2+, Adrenalin 25.10.13.09+, compilación inicial de 10-30 min y deshabilita `WavLM+` / `FlowEdit 3+1`. |
+| **AMD graphics engine** *(solo compilación AMD)* | `DirectML` | Tras reiniciar | Cambia entre **DirectML** (predeterminado, GPU dedicada) y el experimental **MIGraphX**. | Déjalo en **DirectML** para usar `WavLM+` y `FlowEdit 3+1`. **MIGraphX** requiere Windows 11 24H2+, Adrenalin 25.10.13.09+, compilación inicial de 10-30 min y deshabilita `WavLM+`, `FlowEdit 3+1`, `Learned 4 steps` y las opciones exclusivas de Classic (todo se ejecuta como Classic, 10 × Euler). |
 
 > **Limpieza vs. Volumen vs. Limitador vs. Búfer:** *Input cleaning* quita el ruido de fondo antes de que la IA te oiga; *Output volume* cambia el volumen; *Peak limiter* evita distorsiones repentinas; *Output buffer* intercambia latencia por estabilidad frente a chasquidos.
 
@@ -41,7 +41,7 @@ Controla cuánto se acerca la salida a la voz del Voice Bank frente a la tuya pr
 - **Model method** (`Classic` por defecto, **Al siguiente START**):
   - **`Classic`:** Comportamiento de versiones anteriores; habilita los cuatro controles exclusivos de Classic de abajo.
   - **`Learned 4 steps`:** Ajustado para sonar como 10 pasos mientras el modelo necesita alrededor del **40%** de su tiempo de GPU y menos memoria de GPU (según las notas del desarrollador).
-  - **`FlowEdit 3+1`:** Parte de tu propia voz (`Sample of your voice…`, 5-20 s) en lugar de ruido y cambia solo la identidad vocal, conservando mejor respiraciones, susurros, risas y articulación (alrededor del **60%** del tiempo de GPU del modelo). Vuelve a `Learned 4 steps` si no hay muestra o en **AMD MIGraphX** (se muestra en la línea de estado LIVE).
+  - **`FlowEdit 3+1`:** Parte de tu propia voz (`Sample of your voice…`, 5-20 s) en lugar de ruido y cambia solo la identidad vocal, conservando mejor respiraciones, susurros, risas y articulación (alrededor del **60%** del tiempo de GPU del modelo). Vuelve a `Learned 4 steps` si no hay muestra (se muestra en la línea de estado LIVE). En **AMD MIGraphX** todos los métodos del modelo se ejecutan como `Classic` (10 × Euler).
 - **Controles exclusivos de Classic** *(activos solo cuando `Model method = Classic`)*:
   - **Model steps** (`10` por defecto): `8`, `6` (`≈ −0.75 GB` VRAM) o `4` (`≈ −1.1 GB` VRAM) van más rápido con menos VRAM.
   - **Solver** (`Euler` por defecto): Cambia a `DPM++ 2M` al usar `4-6` pasos.
@@ -118,10 +118,12 @@ Todos estos controles moldean el tono y suavizan asperezas en **LIVE** (y se cop
 
 | Función | ¿Solo Classic? | NVIDIA | AMD DirectML | AMD MIGraphX (Experimental) |
 | --- | --- | --- | --- | --- |
-| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sí** | Sí | Sí | Sí *(modo Classic)* |
-| `Learned 4 steps` | No | Sí | Sí | Sí |
+| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Sí** | Sí | Sí | **No** *(fijo 10 × Euler)* |
+| `Learned 4 steps` | No | Sí | Sí | **No** *(vuelve a Classic)* |
 | `WavLM+` | No | Sí | Sí | **No** *(no disponible)* |
-| `FlowEdit 3+1` | No | Sí | Sí | **No** *(vuelve a `Learned 4 steps`)* |
+| `FlowEdit 3+1` | No | Sí | Sí | **No** *(vuelve a Classic)* |
+
+> En AMD MIGraphX, YUNE siempre ejecuta el método Classic con 10 pasos Euler; `Learned 4 steps`, `FlowEdit 3+1` y las opciones exclusivas de Classic no están disponibles allí.
 
 ### Diferencias Iniciales entre Hablar y Cantar
 

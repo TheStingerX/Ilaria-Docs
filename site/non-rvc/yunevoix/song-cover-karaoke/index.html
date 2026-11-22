@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678071207">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678869026">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848678071207" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848678869026" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678071207" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678869026" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678071207" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678869026" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -243,8 +243,8 @@
 <retype-table copy-text="| Setting (`Settings → Karaoke`) | Default | Affects What You Hear While Singing | Affects Final Rendered Cover |
 | --- | --- | --- | --- |
 | **Original vocal in headphones** | `20%` | Yes | No |
-| **Backing vocals** | `On` | Yes | Kept in mix |
-| **Music volume** | `0 dB` | Yes | Mix reference |
+| **Backing vocals** | `On` | Yes | No (the cover keeps backing vocals as in Song Cover) |
+| **Music volume** | `0 dB` | Yes | No |
 | **Lyrics size** | `Normal` | Yes (display) | No |
 | **Clean the recording** (`Off` / `DF3`) | `Off` | No | Yes |
 | **Content engine** (`Whisper` / `WavLM+`) | `Whisper` | No | Yes |
@@ -274,13 +274,13 @@
 <td><strong>Backing vocals</strong></td>
 <td><code translate="no" v-pre>On</code></td>
 <td>Yes</td>
-<td>Kept in mix</td>
+<td>No (the cover keeps backing vocals as in Song Cover)</td>
 </tr>
 <tr>
 <td><strong>Music volume</strong></td>
 <td><code translate="no" v-pre>0 dB</code></td>
 <td>Yes</td>
-<td>Mix reference</td>
+<td>No</td>
 </tr>
 <tr>
 <td><strong>Lyrics size</strong></td>
@@ -343,9 +343,9 @@
 | **Recorded voice too quiet** | Raise Windows microphone gain toward `−6 dBFS`, enable **Follow the original vocal's level** (`70%` default), and keep **Make room for the vocal** enabled. |
 | **Wrong pitch / out of tune** | Check **Octave** (`Auto`, `−12`, `0`, or `+12`) and try **Pull to the original melody** (`50–70%`) in `Settings → Karaoke`. |
 | **Stuttering during Karaoke** | Close other GPU-heavy apps, use **`Backing track`** (already separated at PREPARE), or check audio buffer settings. |
-| **Music too loud / voice buried** | Raise **Vocal level** (`+2 dB` default), keep **Make room for the vocal** enabled, or lower **Music volume** while singing. |
+| **Music too loud / voice buried** | Raise **Vocal level** (`+2 dB` default; `Settings → Song Cover` for covers, `Settings → Karaoke` for karaoke), keep **Make room for the vocal** enabled, or lower **Music volume** while singing. |
 | **Breaths or whispers lost in cover** | Compare **`WavLM+`** vs. **`Whisper`**, or switch **Model method** to **`FlowEdit 3+1`** in `Settings → Song Cover`. |
-| **Too much reverb on cover vocal** | Lower **Reverb on the vocal** (`−17 dB` default) or set it to none in `Settings → Song Cover`. |
+| **Too much reverb on cover vocal** | Lower **Reverb on the vocal** (`−17 dB` default) or set it to none - in `Settings → Song Cover` for covers, in `Settings → Karaoke` for karaoke. |
 | **Vocal separation artifacts / duets** | Keep **Vocal separator** on **`YUNE`** and **Vocals to convert** on **`Lead vocal only`** (duets with two lead singers cannot isolate a single singer automatically). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -378,7 +378,7 @@
 </tr>
 <tr>
 <td><strong>Music too loud / voice buried</strong></td>
-<td>Raise <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> default), keep <strong>Make room for the vocal</strong> enabled, or lower <strong>Music volume</strong> while singing.</td>
+<td>Raise <strong>Vocal level</strong> (<code translate="no" v-pre>+2 dB</code> default; <code translate="no" v-pre>Settings → Song Cover</code> for covers, <code translate="no" v-pre>Settings → Karaoke</code> for karaoke), keep <strong>Make room for the vocal</strong> enabled, or lower <strong>Music volume</strong> while singing.</td>
 </tr>
 <tr>
 <td><strong>Breaths or whispers lost in cover</strong></td>
@@ -386,7 +386,7 @@
 </tr>
 <tr>
 <td><strong>Too much reverb on cover vocal</strong></td>
-<td>Lower <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> default) or set it to none in <code translate="no" v-pre>Settings → Song Cover</code>.</td>
+<td>Lower <strong>Reverb on the vocal</strong> (<code translate="no" v-pre>−17 dB</code> default) or set it to none - in <code translate="no" v-pre>Settings → Song Cover</code> for covers, in <code translate="no" v-pre>Settings → Karaoke</code> for karaoke.</td>
 </tr>
 <tr>
 <td><strong>Vocal separation artifacts / duets</strong></td>
@@ -431,7 +431,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T16:06:40.000Z">22/11/2026 · 17:06</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

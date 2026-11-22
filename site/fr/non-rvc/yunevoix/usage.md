@@ -69,7 +69,7 @@ Vous pouvez choisir **Model method** dans **`Settings → Voice & Timbre`** (et 
 
 - Part de **votre propre voix** au lieu du bruit et ne modifie que l'identité vocale, afin de mieux préserver **respirations, chuchotements, rires et articulation** (environ **60%** du temps GPU du modèle selon les notes).
 - **Exigence en LIVE :** Nécessite un échantillon de **5-20 secondes** de votre propre parole naturelle sélectionné dans **`Settings → Voice & Timbre → "Sample of your voice…"`** (enregistré sous `my_voice.yvoice`).
-- **Repli automatique :** Sans cet échantillon, ou avec **AMD MIGraphX**, FlowEdit 3+1 repasse automatiquement sur **Learned 4 steps** et la ligne d'état LIVE vous l'indique.
+- **Repli automatique :** Sans cet échantillon, FlowEdit 3+1 repasse automatiquement sur **Learned 4 steps** et la ligne d'état LIVE vous l'indique. Avec le moteur expérimental **AMD MIGraphX**, toutes les méthodes de modèle s'exécutent en **Classic** (10 × Euler).
 - **Conseil pièce et micro :** Comme FlowEdit conserve davantage votre propre timbre et l'acoustique de la pièce, une pièce calme ou le nettoyage d'entrée **`DF3`** aide à garder un rendu propre.
 
 ---

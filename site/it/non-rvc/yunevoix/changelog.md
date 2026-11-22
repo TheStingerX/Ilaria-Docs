@@ -11,7 +11,7 @@
 ### Novità
 
 - **AMD**: Windows 10 e le versioni di Windows 11 precedenti alla 24H2 sono nuovamente supportate (`24H2` è necessaria solo per il motore sperimentale **MIGraphX**).
-- **AMD**: il motore di contenuto **`WavLM+`** e il metodo del modello **`FlowEdit 3+1`** ora funzionano anche su schede AMD (**DirectML**), in **LIVE**, **cover** e **karaoke**. Quando è selezionato **AMD MIGraphX**, non sono disponibili.
+- **AMD**: il motore di contenuto **`WavLM+`** e il metodo del modello **`FlowEdit 3+1`** ora funzionano anche su schede AMD (**DirectML**), in **LIVE**, **cover** e **karaoke**. Quando è selezionato **AMD MIGraphX**, non sono disponibili (con MIGraphX tutti i metodi del modello vengono eseguiti come Classic, 10 × Euler).
 
 ---
 
@@ -24,7 +24,7 @@
 - **Model method** (`Settings → Voice & Timbre`, e separatamente in `Settings → Song Cover` per cover e karaoke; si applica al prossimo **START**):
   - **Classic**: come in precedenza (opzioni di step, solver e guidance).
   - **Learned 4 steps**: calibrato per suonare come 10 step usando circa il **40%** del tempo GPU e meno VRAM, ideale per giocare e schede più lente.
-  - **FlowEdit 3+1 (NVIDIA)** *(AMD: dalla v0.7.1)*: parte dalla tua voce invece che dal rumore e cambia solo l'identità vocale, così respiri, sussurri, risate e articolazione passano molto meglio (circa il **60%** del tempo GPU del modello). In **LIVE**, usa il tuo campione vocale (`Voice & Timbre → "Sample of your voice…"`; se impostato in una versione precedente, riselezionalo una volta). In cover e karaoke usa la voce del brano stesso. Funziona sia con **Whisper** sia con **WavLM+**. Senza un campione vocale o su AMD MIGraphX, FlowEdit torna su **Learned 4 steps** (mostrato nella riga di stato LIVE).
+  - **FlowEdit 3+1 (NVIDIA)** *(AMD: dalla v0.7.1)*: parte dalla tua voce invece che dal rumore e cambia solo l'identità vocale, così respiri, sussurri, risate e articolazione passano molto meglio (circa il **60%** del tempo GPU del modello). In **LIVE**, usa il tuo campione vocale (`Voice & Timbre → "Sample of your voice…"`; se impostato in una versione precedente, riselezionalo una volta). In cover e karaoke usa la voce del brano stesso. Funziona sia con **Whisper** sia con **WavLM+**. Senza un campione vocale, FlowEdit torna su **Learned 4 steps** (mostrato nella riga di stato LIVE); su AMD MIGraphX tutti i metodi del modello vengono eseguiti come **Classic**.
 - **Karaoke (PREMIUM)**: canta un brano in prima persona con il testo su schermo: YUNE converte il tuo canto nella voce scelta e lo mixa con la musica. Il testo viene abbinato automaticamente (testo incollato o `.lrc`; giapponese anche in romaji).
   - Canta sulla base strumentale (separata in **PREPARE**) oppure sul brano originale (parte in pochi secondi; separato al primo render).
   - Scorrimento fluido con riga corrente centrata; `Space` = pausa, `Esc` = stop (termina 5 s dopo), `F11` = schermo intero, oltre a un misuratore microfono nella finestra del testo.

@@ -42,7 +42,7 @@ Per tutorial completi passo dopo passo e per tutte le impostazioni di Song Cover
 | **Scatti mentre giochi** | Limita gli **FPS** del gioco e abbassa la grafica del gioco, imposta **Model method** su **`Learned 4 steps`**, riduci **Prompt length** e disattiva **Harmony**. |
 | **LIVE interrotto: "the audio device stopped working"** | Il microfono o l'uscita è stato scollegato o cambiato. Ricollegalo, clicca **Refresh devices** e premi **START**. |
 | **AMD: si chiude su START / `ShapeInferenceNotRegistered`** | Aggiorna alla **v0.7.1** (usa **DirectML** sulla GPU dedicata per impostazione predefinita, risolvendo sia i crash quando è presente una GPU integrata AMD sia `ShapeInferenceNotRegistered` quando la grafica integrata è disattivata). Controlla `check.txt` per la scheda/motore attivo e mantieni aggiornati i driver Adrenalin. |
-| **AMD: FlowEdit torna al fallback o WavLM+ non disponibile** | Controlla `Settings → General → "AMD graphics engine"`. Se hai attivato **MIGraphX** sperimentale, torna a **DirectML** e riavvia (`WavLM+` e `FlowEdit 3+1` non sono disponibili con MIGraphX). Assicurati anche che `Sample of your voice…` sia impostato per FlowEdit in LIVE. |
+| **AMD: FlowEdit torna al fallback o WavLM+ non disponibile** | Controlla `Settings → General → "AMD graphics engine"`. Se hai attivato **MIGraphX** sperimentale, torna a **DirectML** e riavvia (con MIGraphX, `WavLM+`, `FlowEdit 3+1` e `Learned 4 steps` non sono disponibili - tutto viene eseguito come Classic, 10 × Euler). Assicurati anche che `Sample of your voice…` sia impostato per FlowEdit in LIVE. |
 | **Esplora File di Windows dice che lo ZIP non è valido** | Usa **7-Zip** o **WinRAR** (ZIP crittografato AES-256) con password `yunevoix`. |
 
 ---

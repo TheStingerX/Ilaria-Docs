@@ -25,7 +25,7 @@ These controls manage input cleanup, monitoring, output level, buffering, and AM
 | **Models folder** | Empty (`models` next to `.exe`) | Global | Points to a custom folder for models/voices. | Leave empty unless storing `models` elsewhere. |
 | **Save diagnostic recordings** | `Off` | Diagnostic | Saves WAV files of what the engine heard and produced (auto-stops after 10 min; resets to off on restart). | Turn on **only** when reporting a bug; check recordings for private speech before sharing. |
 | **Restore default settings** | Action button | Global | Resets all settings to defaults. | Your saved voices and selected audio devices stay intact. |
-| **AMD graphics engine** *(AMD build only)* | `DirectML` | After restart | Switches between **DirectML** (default, dedicated GPU) and experimental **MIGraphX**. | Leave on **DirectML** for `WavLM+` and `FlowEdit 3+1`. **MIGraphX** requires Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min first compile, and disables `WavLM+` / `FlowEdit 3+1`. |
+| **AMD graphics engine** *(AMD build only)* | `DirectML` | After restart | Switches between **DirectML** (default, dedicated GPU) and experimental **MIGraphX**. | Leave on **DirectML** for `WavLM+` and `FlowEdit 3+1`. **MIGraphX** requires Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min first compile, and disables `WavLM+`, `FlowEdit 3+1`, `Learned 4 steps` and the Classic-only options (everything runs as Classic, 10 × Euler). |
 
 > **Cleaning vs. Volume vs. Limiter vs. Buffer:** *Input cleaning* removes background noise before the AI hears you; *Output volume* changes loudness; *Peak limiter* prevents sudden distortion; *Output buffer* trades latency for stability against crackles.
 
@@ -41,7 +41,7 @@ Controls how closely the output matches the target Voice Bank vs. your own voice
 - **Model method** (`Classic` default, **At the next START**):
   - **`Classic`:** Earlier-version behavior; enables the four Classic-only controls below.
   - **`Learned 4 steps`:** Tuned to sound like 10 steps while the model needs about **40%** of its GPU time and less GPU memory (per developer notes).
-  - **`FlowEdit 3+1`:** Starts from your own voice (`Sample of your voice…`, 5–20 s) instead of noise and changes only voice identity, keeping breaths, whispers, laughter, and articulation better (about **60%** of model GPU time). Falls back to `Learned 4 steps` if no sample is set or on **AMD MIGraphX** (shown in LIVE status line).
+  - **`FlowEdit 3+1`:** Starts from your own voice (`Sample of your voice…`, 5–20 s) instead of noise and changes only voice identity, keeping breaths, whispers, laughter, and articulation better (about **60%** of model GPU time). Falls back to `Learned 4 steps` if no sample is set (shown in LIVE status line). On **AMD MIGraphX** all model methods run as `Classic` (10 × Euler).
 - **Classic-only controls** *(active only when `Model method = Classic`)*:
   - **Model steps** (`10` default): `8`, `6` (`≈ −0.75 GB` VRAM), or `4` (`≈ −1.1 GB` VRAM) run faster with less VRAM.
   - **Solver** (`Euler` default): Switch to `DPM++ 2M` when using `4–6` steps.
@@ -118,10 +118,12 @@ All controls here shape tone and clean up harshness in **LIVE** (and are copied 
 
 | Feature | Classic Only? | NVIDIA | AMD DirectML | AMD MIGraphX (Experimental) |
 | --- | --- | --- | --- | --- |
-| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Yes** | Yes | Yes | Yes *(Classic mode)* |
-| `Learned 4 steps` | No | Yes | Yes | Yes |
+| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Yes** | Yes | Yes | **No** *(fixed 10 × Euler)* |
+| `Learned 4 steps` | No | Yes | Yes | **No** *(falls back to Classic)* |
 | `WavLM+` | No | Yes | Yes | **No** *(unavailable)* |
-| `FlowEdit 3+1` | No | Yes | Yes | **No** *(falls back to `Learned 4 steps`)* |
+| `FlowEdit 3+1` | No | Yes | Yes | **No** *(falls back to Classic)* |
+
+> On AMD MIGraphX, YUNE always runs the Classic method with 10 Euler steps; `Learned 4 steps`, `FlowEdit 3+1`, and the Classic-only options are not available there.
 
 ### Speech vs. Singing Starting Differences
 
