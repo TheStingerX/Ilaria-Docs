@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/pt">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680909914">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Lightning AI Studio">
+    <meta name="description" content="Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/pt/pt/ilaria-rvc/lightning-ai/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/pt/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/pt/pt/ilaria-rvc/lightning-ai/">
+    <meta property="og:title" content="Lightning AI Studio">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/pt/pt/ilaria-rvc/lightning-ai/">
+    <meta name="twitter:title" content="Lightning AI Studio">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/cloud/lightning-ai.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848680909914" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:description" content="Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
+    <meta name="twitter:description" content="Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/pt/ilaria-rvc/lightning-ai/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/pt/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/pt/">Site</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Idioma: Português"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg><span class="docs-language-name">Português</span></summary><div><a href="/pt/pt/ilaria-rvc/lightning-ai/" lang="pt" hreflang="pt" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/pt/">Site</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="lightning-ai-studio">Lightning AI Studio</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.</div>
+<p><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb">Abrir o notebook · GitHub</a> · <a href="https://lightning.ai/">Lightning AI Studio</a></p>
+<p>Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.</p>
+<h2 id="antes-de-começar">Antes de começar</h2>
+<p>Prepare um WAV curto e limpo e um modelo de inferência compatível. Para treinamento, mantenha o dataset original e alguns clipes de teste separados no seu próprio computador. O notebook roda em uma máquina Linux remota.</p>
+<h3 id="créditos-plano-gratuito-e-disponibilidade-de-gpu">Créditos, plano gratuito e disponibilidade de GPU</h3>
+<p>O Lightning AI usa um <strong>modelo de cobrança baseado em créditos</strong> (<code translate="no" v-pre>1 crédito = $1 USD</code>, cobrado por segundo de computação GPU; veja <a href="https://lightning.ai/pricing">Preços do Lightning AI</a>):</p>
+<ul>
+<li><strong>Plano gratuito:</strong> Inclui <strong>um Studio gratuito de 4 CPUs</strong> (até 4 horas contínuas antes de reiniciar) e <strong>10 GB de armazenamento gratuito</strong> (armazenamento acima de 10 GB é cobrado mensalmente).</li>
+<li><strong>Créditos iniciais vs. planos pagos:</strong> Novas contas costumam receber créditos iniciais após cadastro/verificação (não são horas gratuitas de GPU renovadas mensalmente). Assinaturas pagas <strong>Pro</strong> fornecem uma cota mensal de créditos.</li>
+<li><strong>Verifique seu saldo e GPUs:</strong> Abra o painel do Studio / cobrança para conferir seu saldo restante de créditos antes de iniciar uma instância GPU, e lembre-se de que tipos específicos de GPU (como T4, L4 ou L40) estão sujeitos à disponibilidade regional e da conta. Faça primeiro a instalação de dependências no Studio CPU gratuito e mude para GPU apenas quando estiver pronto para rodar inferência ou treinamento.</li>
+</ul>
+<h2 id="executar-no-lightning-ai-studio">Executar no Lightning AI Studio</h2>
+<ol>
+<li>Crie um GPU Studio, envie o notebook e abra-o no JupyterLab.</li>
+<li>Execute as células 1-4 em ordem. Elas verificam a GPU, instalam dependências, baixam pesos base e iniciam a Web UI. Defina <code translate="no" v-pre>TRAINING_SAMPLE_RATES</code> como <code translate="no" v-pre>[]</code> apenas para inferência ou selecione as taxas de amostragem em que pretende treinar.</li>
+<li>Abra o <strong>Port viewer</strong> no seu Studio e selecione a porta exibida pela célula de inicialização (<code translate="no" v-pre>7865</code> por padrão). Mantenha a porta privada.</li>
+</ol>
+<h2 id="verifique-cada-célula-antes-de-continuar">Verifique cada célula antes de continuar</h2>
+<p>A verificação de GPU deve identificar um dispositivo NVIDIA. Se não identificar, troque o acelerador primeiro. Aguarde a instalação das dependências terminar antes de baixar os pesos. Defina <code translate="no" v-pre>TRAINING_SAMPLE_RATES = []</code> apenas para inferência. Para treinamento, escolha a taxa compatível com seu modelo e par de pré-treinados. Deixe <code translate="no" v-pre>DOWNLOAD_FCPE</code> ativado se pretende usar FCPE.</p>
+<h2 id="4-converta-uma-gravação">4. Converta uma gravação</h2>
+<ol>
+<li>Na aba do navegador Ilaria RVC, abra <strong>Outros → Importar modelos locais</strong>. Carrega o ficheiro do modelo de inferência (<code translate="no" v-pre>.pth</code>) e, se o tiveres, o índice opcional correspondente (<code translate="no" v-pre>.index</code>). Também podes carregar um ZIP compatível com estes ficheiros. Aguarde a conclusão da importação. Em alternativa, abre <strong>Other → Download models from Hugging Face, Google Drive or MEGA</strong>, cola uma ligação pública para um ZIP compatível, <code translate="no" v-pre>.pth</code> ou <code translate="no" v-pre>.index</code> e clica em <strong>Download and install model</strong>. Se o modelo e o índice opcional tiverem ligações diferentes, descarrega-os um de cada vez.</li>
+<li>Abra <strong>Inferência</strong>, atualize a lista de vozes se necessário, selecione a voz pretendida e vá para <strong>Inferência Única</strong>.</li>
+<li>Carregue o WAV curto. Comece em <strong>Pitch 0</strong> e <strong>Index Ratio 0</strong>. Deixe os efeitos opcionais desativados e use o incorporador esperado pelo modelo.</li>
+<li>Clique uma vez no controle de conversão e aguarde a saída. Reproduza o resultado e baixe-o do player, se disponível. Mantenha seu WAV de entrada para poder comparar a mesma frase mais tarde.</li>
+<li>Se desejar testar a recuperação, selecione o índice correspondente e tente um pequeno aumento a partir de zero. Se a saída falhar ou a voz ficar mais difícil de entender, retorne à linha de base e verifique o emparelhamento modelo-índice.</li>
+</ol>
+<p>Se a voz nunca aparecer, primeiro verifique o log de importação. Um ponto de verificação de treinamento salvo como um arquivo G ou D pertence a um experimento e precisa de uma exportação de inferência antes de poder ser selecionado aqui.</p>
+<h2 id="prepare-seu-conjunto-de-dados-e-planeje-uma-execução-de-treinamento">Prepare seu conjunto de dados e planeje uma execução de treinamento</h2>
+<h3 id="limpe-o-áudio-com-mvsep-somente-quando-necessário">Limpe o áudio com MVSEP somente quando necessário</h3>
+<p>Mantenha uma cópia intacta de suas gravações. Se já contiverem uma única voz limpa e seca, pule a separação. Use material que você tem permissão para enviar para <a href="https://mvsep.com/en/home">MVSEP</a> e para treinar. Para gravações confidenciais, limpe-as localmente.</p>
+<ol>
+<li><strong>Isole a voz.</strong> Carregue um pequeno exemplo e escolha uma opção de separação vocal. Baixe a haste vocal em WAV quando disponível. Reproduza-o com o original e ouça através de fones de ouvido músicas, outras vozes, sílabas cortadas e artefatos aquosos ou metálicos.</li>
+<li><strong>Remova os backing vocals somente se estiverem presentes.</strong> Para músicas com harmonias ou um refrão abaixo do alvo, use uma opção de separação lead-versus-backing na haste vocal. Mantenha a saída principal. Se os cantores ainda se sobrepuserem ou o solo tiver buracos, use uma seção limpa ou uma tomada diferente.</li>
+<li><strong>Reduza a reverberação apenas onde for audível.</strong> Se a voz tiver uma cauda de reverberação estéreo ampla, primeiro teste uma opção de desreverberação estéreo em uma cópia. Para reflexões restantes da sala, compare uma passagem de reverberação da sala. Você pode pular qualquer uma das etapas. Ouça consoantes truncadas e respirações em cada passagem.</li>
+<li><strong>Remova o eco somente se ele repetir a voz.</strong> Uma repetição audível atrasada solicita um breve teste separado. Mantenha o original ou substitua-o se a remoção remover palavras. Evite empilhar passes em áudio limpo.</li>
+<li><strong>Prepare os clipes finais.</strong> Corte ruídos inutilizáveis ​​e longas seções vazias em um editor como o Audacity, mantendo respirações úteis e frases naturais. Exporte WAVs limpos. Junte os arquivos aprovados em um ZIP e mantenha alguns clipes limpos fora dele para avaliação.</li>
+</ol>
+<p>Teste toda a cadeia de limpeza alguns segundos antes de tratar todo o conjunto de dados. Um modelo pode aprender artefatos deixados em seu áudio de treinamento. Verifique vários clipes de sessões diferentes antes de enviar.</p>
+<h3 id="limpe-um-conjunto-de-dados-localmente-com-ultimate-vocal-remover-uvr">Limpe um conjunto de dados localmente com Ultimate Vocal Remover (UVR)</h3>
+<p>UVR separa um arquivo de áudio em faixas chamadas stems. Use-o quando a voz alvo for misturada com música, efeitos sonoros ou outros vocais. Se você já possui uma gravação de voz limpa, mantenha a original. O UVR processa o áudio no seu computador após o download dos modelos necessários. Cloud executa o trabalho de treinamento RVC posterior separadamente.</p>
+<h4 id="instale-o-uvr-e-prepare-um-clipe-de-teste">Instale o UVR e prepare um clipe de teste</h4>
+<ol>
+<li>Baixe o instalador ou pacote para o seu sistema operacional em <a href="https://github.com/Anjok07/ultimatevocalremovergui/releases">Versões UVR</a>. Inicie o aplicativo de desktop após instalá-lo.</li>
+<li>Faça uma cópia de 15 a 30 segundos de um exemplo que contenha uma linha clara e uma seção onde a música se sobrepõe. Mantenha o original seguro.</li>
+<li>Clique em <strong>Selecionar entrada</strong> e escolha o clipe de teste. Use <strong>Select Output</strong> para escolher uma nova pasta gravável, como <code translate="no" v-pre>uvr-test</code>. Escolha <strong>WAV</strong> para o formato de saída.</li>
+<li>Selecione um <strong>Método de processo</strong> e um modelo que separe <strong>vocais</strong> de <strong>instrumental</strong>, por exemplo, um modelo de vocais em <strong>MDX-Net</strong>. Se a lista estiver vazia, abra as configurações <strong>Centro de download</strong>, selecione a família de modelos correspondente e baixe um modelo adequado. Volte para a janela principal e selecione-a.</li>
+<li>Habilite <strong>Conversão de GPU</strong> somente se a versão instalada reconhecer um dispositivo compatível. Se essa opção causar erro, desligue-a e teste na CPU. O processamento da CPU pode ser mais lento, então comece com um clipe curto.</li>
+</ol>
+<h4 id="separe-os-vocais-e-ouça">Separe os vocais e ouça</h4>
+<p>Clique em <strong>Iniciar processamento</strong>. Quando terminar, encontre a haste vocal na pasta de saída. Alguns modelos também escrevem uma haste instrumental. Toque o original e os vocais em volume semelhante. Verifique consoantes, respirações, notas retidas e seções onde o acompanhamento é alto. Se você ainda ouvir instrumentos ou a voz parecer aquosa ou metálica, compare outro modelo no mesmo clipe de teste antes de processar o conjunto de dados completo.</p>
+<p>Se você selecionou o radical errado, verifique os nomes dos arquivos ou ouça cada saída. Mantenha aquele que contém sua voz principal alvo.</p>
+<h4 id="limpe-os-problemas-restantes-um-de-cada-vez">Limpe os problemas restantes, um de cada vez.</h4>
+<retype-table copy-text="| O que resta | O que tentar em UVR |
+| --- | --- |
+| Backing vocals ou harmonias | Alimente a haste vocal isolada em um modelo destinado à separação de solo e apoio, se sua instalação oferecer uma. Mantenha a saída principal e verifique se o vocal alvo está completo. |
+| Reverberação entre frases | Experimente um modelo destinado à reverberação, se disponível. Compare o antes e o depois na mesma passagem. Mantenha a haste original se a reverberação danificar consoantes ou notas retidas. |
+| Repetições audíveis atrasadas | Teste um modelo de remoção de eco, se disponível. Se remover palavras ou distorcer a respiração, use outra tomada ou exclua a seção afetada. |
+| Zumbido ambiente, picos cortados ou outras vozes | Verifique o original. Se o tratamento continuar prejudicando a voz, substitua ou exclua o clipe. A separação não pode reconstruir picos perdidos no corte. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>O que resta</th>
+<th>O que tentar em UVR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backing vocals ou harmonias</td>
+<td>Alimente a haste vocal isolada em um modelo destinado à separação de solo e apoio, se sua instalação oferecer uma. Mantenha a saída principal e verifique se o vocal alvo está completo.</td>
+</tr>
+<tr>
+<td>Reverberação entre frases</td>
+<td>Experimente um modelo destinado à reverberação, se disponível. Compare o antes e o depois na mesma passagem. Mantenha a haste original se a reverberação danificar consoantes ou notas retidas.</td>
+</tr>
+<tr>
+<td>Repetições audíveis atrasadas</td>
+<td>Teste um modelo de remoção de eco, se disponível. Se remover palavras ou distorcer a respiração, use outra tomada ou exclua a seção afetada.</td>
+</tr>
+<tr>
+<td>Zumbido ambiente, picos cortados ou outras vozes</td>
+<td>Verifique o original. Se o tratamento continuar prejudicando a voz, substitua ou exclua o clipe. A separação não pode reconstruir picos perdidos no corte.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Processe o conjunto completo somente depois que uma breve comparação parecer correta. Use o Audacity ou outro editor para cortar material inutilizável. Mantenha pausas e respirações naturais, exporte os clipes aprovados como WAV e coloque apenas esses clipes no ZIP do conjunto de dados. Mantenha as hastes instrumentais e rejeitadas fora do ZIP. Em seguida, carregue-o em <strong>Training</strong> no Ilaria RVC e confirme <strong>Path to Dataset</strong> aponta para as gravações importadas.</p>
+<h2 id="5-treine-uma-voz-e-salve-seu-trabalho">5. Treine uma voz e salve seu trabalho</h2>
+<ol>
+<li>Em <strong>Treinamento</strong>, escolha um novo <strong>Nome do modelo</strong>. Importe seu áudio ou ZIP por meio dos controles de upload do conjunto de dados. Aguarde a conclusão da importação e confirme que <strong>Path to Dataset</strong> aponta para as gravações importadas.</li>
+<li>Execute o <strong>Dataset Checker</strong> e ouça quaisquer gravações suspeitas. Confirme se a arquitetura RVC V2, a taxa de amostragem, as configurações do incorporador e do pitch correspondem aos pré-treinamentos G/D selecionados, caso você os use. Comece com um tamanho de lote adequado à GPU alocada.</li>
+<li>Execute <strong>Dados do Processo</strong> e, em seguida, <strong>Extração de Recursos</strong>. Leia o status de cada um antes de continuar. Se alterar o conjunto de dados ou o codificador, prepare novos ficheiros para essa experiência antes do treino.</li>
+<li>Execute <strong>Train Pth</strong> com um primeiro alvo modesto e salve checkpoints periódicos. Mantenha um pequeno clipe de teste fora dos dados de treinamento. Compare os pontos de verificação exportados no mesmo clipe antes de iniciar uma execução mais longa.</li>
+<li>Crie o índice de recursos se precisar de recuperação e, em seguida, tente primeiro a exportação de inferência em <strong>Index Ratio 0</strong>. Para obter uma explicação detalhada de cada configuração, consulte <a href="../../../ilaria-rvc/training-controls/">Controles de treinamento e fluxo de trabalho</a>.</li>
+<li>Se você quiser parar no meio da execução, use <strong>Parar e salvar</strong> dentro do Ilaria RVC e espere até que o log confirme o salvamento. Baixe os resultados enquanto a sessão Cloud ainda está ativa.</li>
+</ol>
+<h2 id="exportar-e-parar">Exportar e parar</h2>
+<p>Defina <code translate="no" v-pre>EXPORT = True</code> e execute a célula de exportação. Ative <code translate="no" v-pre>INCLUDE_CHECKPOINTS</code> se precisar retomar o treinamento. Salve o ZIP localmente antes de encerrar a sessão e depois execute a célula de parada com <code translate="no" v-pre>STOP = True</code>.</p>
+<h2 id="se-a-inicialização-falhar">Se a inicialização falhar</h2>
+<p>Se a primeira célula não detectar a GPU, verifique seu acelerador e execute-a novamente. Se a interface não abrir, leia a saída da célula de inicialização, confirme que o servidor está pronto e reabra a visualização.</p>
+<h3 id="verifique-o-zip-de-saída">Verifique o ZIP de saída</h3>
+<p>Para inferência, confira seu WAV exportado e os arquivos do modelo. Para treinamento, ative <code translate="no" v-pre>INCLUDE_CHECKPOINTS</code> para incluir os logs do experimento e verifique o arquivo antes de fechar a sessão. Mantenha o dataset original separadamente.</p>
+<h2 id="recuperar-de-problemas-comuns">Recuperar de problemas comuns</h2>
+<p>Se a instalação falhar, leia o primeiro erro e execute novamente a célula com falha após corrigi-la. Se o aplicativo abrir mas seu modelo estiver ausente, verifique o log de importação e atualize a lista. Para erros de falta de memória (OOM), comece com um clipe mais curto ou reduza o batch size de treinamento. Se a Web UI fechar, reabra-a pela mesma célula de inicialização ou porta enquanto a sessão ainda estiver ativa.</p>
+<p><a href="../../../ilaria-rvc/cloud/">Ilaria RVC na nuvem</a></p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../pt/ilaria-rvc/colab/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Google Colab</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/inference/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Infer&#234;ncia &#250;nica e em lote</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T16:39:50.000Z">22/11/2026 · 17:39</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Lightning AI Studio", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/cloud/lightning-ai.md" }</script>
+</body>
+</html>

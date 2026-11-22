@@ -24,7 +24,7 @@ Um fork **não** é automaticamente melhor do que o original em todos os aspecto
 
 ## Visão geral comparativa de recursos
 
-Os rótulos abaixo refletem a inspeção estática do código-fonte no branch `main` de cada repositório (commits listados em [Fontes e referências técnicas](#fontes-e-referencias-tecnicas)):
+Os rótulos abaixo refletem a inspeção estática do código-fonte no branch `main` de cada repositório (commits listados em [Fontes e referências técnicas](#fontes-e-referências-técnicas)):
 
 | Recurso | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |

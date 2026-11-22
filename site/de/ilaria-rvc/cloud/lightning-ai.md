@@ -1,26 +1,30 @@
 # Lightning AI Studio
 
-[Notebook · GitHub](https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb) · [Lightning AI Studio](https://lightning.ai/)
+[Notebook öffnen · GitHub](https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb) · [Lightning AI Studio](https://lightning.ai/)
 
-## Vor dem Start
+Führe Ilaria RVC im Browser mit einer von der Cloud-Plattform bereitgestellten GPU aus. Wähle unten ein Notebook. Aktiviere vor dem Ausführen der ersten Zelle einen NVIDIA-Beschleuniger.
 
-Bereite eine kurze, saubere WAV-Datei, ein passendes Inferenzmodell und bei Bedarf eine Sicherung des Trainingsdatensatzes vor.
+## Bevor du startest
 
-1. Erstelle ein GPU-Studio und öffne das hochgeladene Notebook in JupyterLab.
-2. Führe die Zellen 1 bis 4 aus, um GPU, Abhängigkeiten und Modellgewichte einzurichten und die Oberfläche zu starten.
+Bereite eine kurze, saubere WAV-Datei und ein kompatibles Inferenzmodell vor. Für das Training bewahre das Original-Dataset und einige separate Testclips auf deinem eigenen Computer auf. Das Notebook läuft auf einer entfernten Linux-Maschine.
+
 ### Credits, Gratis-Tarif und GPU-Verfügbarkeit
 
-Lightning AI nutzt ein **Credit-System** (1 Credit =  USD pro Sekunde; siehe [Lightning AI Preise](https://lightning.ai/pricing)):
+Lightning AI nutzt ein **creditbasiertes Abrechnungsmodell** (`1 Credit = $1 USD`, sekundengenau für GPU-Rechenzeit abgerechnet; siehe [Lightning AI Preise](https://lightning.ai/pricing)):
 
-- **Gratis-Tarif:** Enthält **ein kostenloses 4-CPU-Studio** (bis zu 4 Std. am Stück vor Neustart) und **10 GB freien Speicher**.
-- **Startguthaben vs. Bezahl-Tarife:** Neue Konten erhalten meist Start-Credits nach Verifizierung (keine monatlich erneuerten Gratis-GPU-Stunden). **Pro**-Tarife enthalten monatliche Credits.
-- **Guthaben & GPUs prüfen:** Prüfe dein Guthaben im Studio-Dashboard und richte die Umgebung zuerst im kostenlosen CPU-Studio ein.
+- **Gratis-Tarif:** Enthält **ein kostenloses 4-CPU-Studio** (bis zu 4 Stunden am Stück vor einem Neustart) sowie **10 GB kostenlosen Speicher** (Speicher über 10 GB wird monatlich abgerechnet).
+- **Startguthaben vs. Bezahl-Tarife:** Neue Konten erhalten nach Registrierung/Verifizierung üblicherweise ein Startguthaben (keine monatlich erneuerten Gratis-GPU-Stunden). Bezahlte **Pro**-Abos bieten ein monatliches Credit-Kontingent.
+- **Guthaben und GPUs prüfen:** Öffne dein Studio-Dashboard bzw. Abrechnungspanel, um dein verbleibendes Credit-Guthaben vor dem Start einer GPU-Instanz zu prüfen, und bedenke, dass bestimmte GPU-Typen (wie T4, L4 oder L40) der regionalen und kontospezifischen Verfügbarkeit unterliegen. Führe die Einrichtung der Abhängigkeiten zuerst im kostenlosen CPU-Studio durch und wechsle erst dann zur GPU, wenn du bereit für Inferenz oder Training bist.
 
-3. Öffne in **Port viewer** den angezeigten Port (Standard 7865) und halte ihn privat.
+## Auf Lightning AI Studio ausführen
 
-## Zellen überprüfen
+1. Erstelle ein GPU Studio, lade das Notebook hoch und öffne es in JupyterLab.
+2. Führe die Zellen 1-4 der Reihe nach aus. Sie prüfen die GPU, installieren Abhängigkeiten, laden Basisgewichte herunter und starten die Web UI. Setze `TRAINING_SAMPLE_RATES` auf `[]` für reine Inferenz oder wähle die Abtastraten für dein geplantes Training.
+3. Öffne den **Port viewer** in deinem Studio und wähle den von der Startzelle ausgegebenen Port (`7865` standardmäßig). Halte den Port privat.
 
-Prüfe, ob die erste Zelle eine NVIDIA-GPU erkennt. Warte auf die Installation. Für reine Inferenz setze `TRAINING_SAMPLE_RATES = []`. Behalte `DOWNLOAD_FCPE` für FCPE bei.
+## Jede Zelle vor dem Fortfahren prüfen
+
+Die GPU-Prüfung muss ein NVIDIA-Gerät erkennen. Falls nicht, wechsle zuerst den Beschleuniger. Warte, bis die Installation der Abhängigkeiten abgeschlossen ist, bevor du Gewichte lädst. Setze `TRAINING_SAMPLE_RATES = []` für reine Inferenz. Für das Training wähle die Abtastrate passend zu Modell und Pretrained-Paar. Lasse `DOWNLOAD_FCPE` aktiviert, wenn du FCPE nutzen willst.
 
 ## 4. Konvertieren Sie eine Aufnahme
 
@@ -84,16 +88,20 @@ Verarbeiten Sie den vollständigen Satz erst, nachdem ein kurzer Vergleich richt
 5. Erstellen Sie den Feature-Index, wenn Sie einen Abruf benötigen, und versuchen Sie dann zunächst den Inferenzexport mit **Indexverhältnis 0**. Eine ausführliche Erläuterung der einzelnen Einstellungen finden Sie unter [Trainingssteuerung und Arbeitsablauf](../train/training-controls.md)“.
 6. Wenn Sie mitten im Lauf anhalten möchten, verwenden Sie **Stoppen und speichern** in Ilaria RVC und warten Sie, bis das Protokoll das Speichern bestätigt. Laden Sie die Ergebnisse herunter, während die Cloud-Sitzung noch aktiv ist.
 
-## Exportieren und beenden
+## Exportieren und stoppen
 
-Setze `EXPORT = True` und bei Bedarf `INCLUDE_CHECKPOINTS`. Lade das ZIP herunter, bevor du `STOP = True` ausführst.
+Setze `EXPORT = True` und führe die Export-Zelle aus. Aktiviere `INCLUDE_CHECKPOINTS`, wenn du das Training fortsetzen musst. Speichere das ZIP lokal, bevor du die Sitzung beendest, und führe dann die Stopp-Zelle mit `STOP = True` aus.
 
-### ZIP prüfen
+## Wenn der Start fehlschlägt
 
-Prüfe WAV und Modell im Export. Aktiviere `INCLUDE_CHECKPOINTS` zum Fortsetzen des Trainings und sichere den Originaldatensatz getrennt.
+Wenn die erste Zelle die GPU nicht erkennt, prüfe deinen Beschleuniger und führe sie erneut aus. Öffnet sich die Oberfläche nicht, lies die Ausgabe der Startzelle, bestätige dass der Server bereit ist und öffne die Ansicht neu.
 
-## Fehler beheben
+### Ausgabe-ZIP prüfen
 
-Lies die erste Fehlermeldung und wiederhole die Zelle nach der Korrektur. Fehlt das Modell, prüfe das Importprotokoll. Verkleinere bei GPU-Speichermangel den Batch.
+Prüfe bei Inferenz deine exportierte WAV-Datei und Modelldateien. Für das Training aktiviere `INCLUDE_CHECKPOINTS`, um die Experiment-Logs einzuschließen, und prüfe das Archiv vor dem Schließen der Sitzung. Bewahre das Original-Dataset getrennt auf.
+
+## Häufige Probleme beheben
+
+Schlägt die Installation fehl, lies den ersten Fehler und führe die fehlgeschlagene Zelle nach der Behebung erneut aus. Öffnet sich die App, aber dein Modell fehlt, prüfe das Import-Log und aktualisiere die Liste. Bei Fehlern wegen vollem Speicher (OOM) beginne mit einem kürzeren Clip oder senke die Trainings-Batch-Size. Schließt sich die Web UI, öffne sie über dieselbe Startzelle oder denselben Port erneut, solange die Sitzung noch aktiv ist.
 
 [Ilaria RVC in der Cloud](cloud.md)

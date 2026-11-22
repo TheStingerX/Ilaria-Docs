@@ -1,27 +1,30 @@
-# Audio Analyzer
+# Analisador de Áudio
 
-[Descarregar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
+[Baixar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
-Abre **Other → Audio Analyzer** e adiciona até oito ficheiros de áudio (original, conversão base e variantes com uma única definição alterada).
+Abra **Other → Audio Analyzer**. Adicione até oito arquivos de áudio para comparar. Um conjunto útil contém a entrada original, uma conversão de base e uma ou duas variantes feitas com apenas uma configuração alterada.
 
-## O que cada vista mede
+## O que cada visualização mede
 
-| Vista | O que mostra diretamente | Pergunta a responder |
+| Visualização | O que mostra diretamente | Pergunta a responder |
 | --- | --- | --- |
-| **Waveform** | Amplitude no tempo | Onde estão picos, clipping plano, silêncios ou cortes? |
-| **Spectrogram** | Energia por frequência no tempo | Que frequências surgem quando um artefacto começa? |
-| **Average spectrum** | Equilíbrio médio de frequências | Uma versão tem ressonâncias ou desequilíbrio persistente? |
-| **Pitch estimation** | Contorno F0 estimado | O tom segue a melodia sem saltos de oitava? |
-| **Level & silence tables** | Níveis medidos e silêncios | Estás a comparar no mesmo volume e limiar de silêncio? |
+| **Waveform** | Amplitude ao longo do tempo | Onde estão os picos altos, clipping achatado no topo, trechos silenciosos ou emendas bruscas? |
+| **Spectrogram** | Energia de frequência ao longo do tempo | Quais frequências estão presentes no momento exato em que um chiado, zumbido ou artefato começa? |
+| **Average spectrum** | Equilíbrio geral de frequências | Uma versão soa visivelmente mais brilhante, mais abafada ou tem uma ressonância persistente? |
+| **Pitch estimation** | Contorno F0 estimado em segmentos sonoros | O tom convertido segue a melodia/inflexão pretendida sem saltos de oitava? |
+| **Level & silence tables** | Níveis medidos de volume/pico e segmentos de silêncio | Você está comparando arquivos em volumes semelhantes e usando o mesmo limiar de silêncio? |
 
-> **O que mede vs. o que sugere:** O Audio Analyzer mede níveis, silêncios, espectro e F0 estimado, mas **não** avalia sozinho a naturalidade vocal. **Ouve sempre o excerto** no leitor antes de tirar conclusões.
+> **O que o Audio Analyzer mede vs. o que sugere:** O Audio Analyzer plota e mede diretamente níveis de sinal, intervalos de silêncio, energia espectral e contornos F0 estimados. Ele **não** diagnostica automaticamente um timbre vocal "bom" ou "ruim" sozinho. **Ouça sempre a região selecionada** no reprodutor integrado antes de tratar uma diferença visual como problema.
 
-## Exemplos práticos
+## Exemplos práticos: o que observar
 
-- **Clipping:** Picos achatados no topo da **Waveform**; reduz o ganho antes de treinar ou converter.
-- **Ruído de fundo:** Faixa horizontal constante no **Spectrogram** durante pausas; limpa com UVR5 ou MVSep.
-- **Silêncios longos / volume:** Confirma nas **Level & silence tables**.
-- **Reverberação e distorção:** Caudas esbatidas após as palavras no **Spectrogram**.
-- **Consoantes surdas (`s`, `f`, `t`):** Saltos de F0 em respirações são normais.
+- **Clipping:** Picos achatados no topo atingindo a amplitude máxima na **Waveform** (muitas vezes ouvido como estalo áspero). Abaixe o ganho de entrada ou normalize a fonte antes de treinar ou converter.
+- **Ruído de fundo / chiado:** Uma faixa horizontal constante ou piso claro nas frequências médias/altas no **Spectrogram** durante pausas. Limpe a fonte com UVR5 ou MVSep antes do treinamento.
+- **Silêncio excessivo ou lacunas mortas:** Trechos longos e planos na **Waveform** e altas taxas de silêncio nas **Level and silence tables**. Corte pausas longas em datasets para que o treino não desperdice passos com silêncio.
+- **Volume baixo demais / alto demais:** Amplitude de forma de onda muito fina (risco de amplificação ruidosa) ou picos próximos ao máximo. Confira as **Level and silence tables** para julgar comparações A/B em volume equiparado.
+- **Distorção e reverberação:** Caudas horizontais borradas se estendendo após o fim das palavras no **Spectrogram** indicam reverberação da sala; picos verticais duros ou harmônicos borrados sugerem distorção ou processamento excessivo.
+- **Verificação de qualidade do dataset:** Inspecione clipes brutos de origem *antes* de treinar, depois compare a mesma frase entre checkpoints. Quando a estimativa de tom parecer errática durante respirações ou consoantes surdas (`s`, `f`, `t`), ouça primeiro: sons surdos naturalmente não têm tom estável.
 
-Exporta **CSV**, **JSON** ou um **ZIP com gráficos** mantendo a mesma **FFT window**.
+## Dicas de comparação e exportações
+
+Escolha um intervalo de tempo e visualização de canal correspondentes, e mantenha a mesma **janela FFT**, escala de frequências e limiar de silêncio entre comparações. Uma janela FFT maior melhora o detalhe de frequência enquanto suaviza eventos rápidos no tempo. Exporte **CSV** ou **JSON** para medições numéricas, ou um **ZIP com gráficos** para revisão posterior.

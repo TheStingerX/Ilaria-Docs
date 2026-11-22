@@ -1,102 +1,115 @@
 # Conversione vocale in tempo reale
 
-Per una registrazione o una cover, la conversione dei file ti consente di renderizzare e confrontare diverse riprese. In una configurazione live, il convertitore deve completare ciascun blocco audio abbastanza velocemente da mantenere in movimento il flusso del microfono. Configura prima un segnale locale affidabile, quindi collegalo a un'applicazione di chiamata, registrazione o streaming.
+Per una registrazione o una cover, la conversione di file ti consente di eseguire il rendering e confrontare più riprese. In una configurazione dal vivo, il convertitore deve completare ogni blocco audio abbastanza rapidamente da mantenere fluido il flusso del microfono. Configura prima un segnale locale affidabile, poi collegalo a un'applicazione di chiamata, registrazione o streaming.
 
 ## Scegli uno strumento per il lavoro
 
-Consulta la [directory degli strumenti RVC](../reference/tools.md) per download e note hardware, incluso Vonovox per GPU NVIDIA.
+Consulta l'[elenco degli strumenti RVC](../reference/tools.md) per download e note hardware, incluso Vonovox per GPU NVIDIA.
 
- | Strumento | Da dove cominciare |
+| Strumento | Da dove iniziare |
 | --- | --- |
- | Vonovox | Un convertitore in tempo reale per i modelli RVC V2 su Windows con una GPU NVIDIA. Scarica una build per la tua GPU, carica il modello e testa il microfono tramite le cuffie prima di indirizzare il segnale convertito a un'altra app. [Download di Vonovox](https://huggingface.co/dr87/vonovox/tree/main) · [Documentazione del progetto](https://github.com/dr87/Vonovox) |
- | RVC WebUI (Mainline - Original RVC) | Il progetto upstream fornisce una WebUI di formazione e inferenza insieme a una GUI in tempo reale dedicata. Fai riferimento alle istruzioni di rilascio e di avvio per la piattaforma che utilizzi. |
- | Applio | Le sue interfacce Desktop e Gradio hanno i propri flussi di lavoro in tempo reale. Utilizza le istruzioni di configurazione per l'interfaccia e la versione che hai installato. |
- | w-okada VCClient | Un cambia voce per l'uso dal vivo. La disponibilità di RVC dipende dall'edizione e dalla piattaforma di rilascio. Controlla i modelli supportati prima di installare una build. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
- | Deiteris e Tg-Develop | Fork w-okada indipendenti con le proprie build e impostazioni. Controllare le note di rilascio del fork prima di applicare le istruzioni per un'altra edizione. [Repository Deiteris](https://github.com/deiteris/voice-changer) · [Repository Tg-Develop](https://github.com/tg-develop/voice-changer) |
+| Vonovox | Un convertitore in tempo reale per modelli RVC V2 su Windows con una GPU NVIDIA. Scarica una build per la tua GPU, carica il modello e testa il microfono in cuffia prima di instradare il segnale convertito verso un'altra app. [Download Vonovox](https://huggingface.co/dr87/vonovox/tree/main) · [Documentazione progetto](https://github.com/dr87/Vonovox) |
+| RVC WebUI (Mainline - Original RVC) | Il progetto originale offre una WebUI di training e inferenza insieme a una GUI dedicata per il tempo reale. Fai riferimento alle istruzioni di release e avvio per la piattaforma che usi. |
+| Applio | Le sue interfacce Desktop e Gradio hanno flussi dedicati per il tempo reale. Segui le istruzioni di configurazione per l'interfaccia e la versione installata. |
+| w-okada VCClient | Un voice changer per uso dal vivo. La disponibilità RVC dipende dall'edizione della release e dalla piattaforma. Controlla i modelli supportati prima di installare una build. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
+| Deiteris e Tg-Develop | Fork indipendenti di w-okada con build e impostazioni proprie. Controlla le note di release del fork prima di applicare istruzioni pensate per un'altra edizione. [Repository Deiteris](https://github.com/deiteris/voice-changer) · [Repository Tg-Develop](https://github.com/tg-develop/voice-changer) |
 
 ## Ascolta prima un segnale pulito
 
-1. Collega un microfono e le cuffie. Nel convertitore, seleziona il microfono fisico come ingresso e le cuffie come uscita.
-2. Carica un modello di inferenza compatibile noto e il relativo indice corrispondente se utilizzi il recupero. Una breve [conversione file](../start/getting-started.md) riuscita è un riferimento utile prima di testare il percorso live.
-3. Avvia lo streaming e parla a un livello normale. Controllare il misuratore d'ingresso o effettuare una registrazione asciutta. Ridurre il guadagno in ingresso se i picchi vengono tagliati prima della conversione.
-4. Verifica che il segnale delle cuffie cambi quando viene attivata la conversione. Se ascolti l'originale contemporaneamente, controlla il monitoraggio hardware diretto o un secondo percorso attraverso il sistema operativo.
-5. Prova per più di una singola parola. Includere un discorso tranquillo, una frase ad alta voce e una breve pausa. Ascolta eventuali interruzioni, deviazioni o anomalie con lo stesso carico di lavoro che prevedi di utilizzare dal vivo.
+1. Collega microfono e cuffie. Nel convertitore, seleziona il microfono fisico come ingresso e le cuffie come uscita.
+2. Carica un modello di inferenza compatibile e il relativo indice se usi il retrieval. Una breve [conversione di file](../start/getting-started.md) riuscita è un riferimento utile prima di provare il percorso dal vivo.
+3. Avvia il flusso e parla a volume normale. Controlla il misuratore in ingresso o registra una traccia pulita. Riduci il guadagno in ingresso se i picchi vanno in clipping prima della conversione.
+4. Verifica che il segnale in cuffia cambi quando attivi/disattivi la conversione. Se senti contemporaneamente la voce originale, controlla eventuale monitoraggio hardware diretto o un secondo percorso nel sistema operativo.
+5. Fai un test più lungo di una singola parola. Includi parlato a basso volume, una frase forte e una breve pausa. Ascolta eventuali tagli, derive o disturbi sotto lo stesso carico di lavoro che userai dal vivo.
 
-Evitare l'ascolto attraverso gli altoparlanti vicino a un microfono attivo. Le cuffie ti aiutano a identificare un problema di routing senza reinserire l'uscita nell'ingresso.
+Evita di ascoltare tramite altoparlanti vicino a un microfono attivo. Le cuffie ti aiutano a individuare problemi di instradamento senza rimandare l'uscita nell'ingresso.
+
+## Comprendi i ruoli dei dispositivi e i backend audio
+
+> **Instradamento Audio Corretto (Correct Audio Routing)**
+>
+> **1. Dentro il Voice Changer**
+> - **Dispositivo di Input:** Il tuo microfono fisico.
+> - **Dispositivo di Output:** `Line 1` (VAC, consigliato) oppure `CABLE Input` (VB-CABLE).
+>
+> **2. Dentro Discord, Giochi, OBS o Altre Applicazioni**
+> - **Dispositivo di Input:** `Line 1` (VAC, consigliato) oppure `CABLE Output` (VB-CABLE).
+> - **Dispositivo di Output:** Le tue cuffie (fortemente consigliate rispetto agli altoparlanti).
+>
+> ```text
+> Il tuo Microfono → Voice Changer → Line 1 (VAC) oppure CABLE Input/Output (VB-CABLE) → Discord / Gioco / OBS
+> ```
+>
+> L'audio proveniente da Discord, dal gioco o dalle altre app deve andare direttamente nelle tue **cuffie** (mai indietro nel cavo virtuale).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai installato anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ascoltano **`CABLE Output`**.
+> - **Altoparlanti e Rientro dalle Cuffie:** Evita di usare gli altoparlanti; l'audio dagli altoparlanti può rientrare nel microfono e causare doppio audio, eco o far convertire anche la voce di altre persone. Questo può succedere anche con le cuffie se il volume è troppo alto o se i padiglioni non sono chiusi e isolati abbastanza.
+> - **Monitoraggio:** Sentire la propria voce convertita in cuffia è una funzione opzionale separata da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
+
+Prima di collegare qualsiasi app, verifica cosa fa ciascun endpoint:
+
+| Termine | Cos'è |
+| --- | --- |
+| **Input Device** | Il tuo microfono fisico (o canale dell'interfaccia audio) che invia la voce grezza al voice changer. |
+| **Output Device** | Dove va la voce convertita (l'**endpoint di riproduzione del cavo virtuale** per Discord/OBS/giochi, oppure le cuffie per un test locale). |
+| **Monitor Device** | Seconda uscita opzionale per ascoltare la tua voce convertita in cuffia mentre l'**Output Device** alimenta un cavo virtuale. |
+| **Virtual Cable Input** *(lato Riproduzione)* | Compare in Riproduzione di Windows (es. `Line 1` in VAC Lite o `CABLE Input` in VB-CABLE). Impostalo come **Output Device** del voice changer. |
+| **Virtual Cable Output** *(lato Registrazione)* | Compare in Registrazione di Windows (es. `Line 1` in VAC Lite o `CABLE Output` in VB-CABLE). Selezionalo come **Microfono** in Discord, OBS o nei giochi. |
+
+### Microfoni USB, interfacce audio e backend
+
+- **Microfoni USB:** Collegali direttamente a una porta USB posteriore della scheda madre (evita hub non alimentati), imposta il formato Windows su **48000 Hz** e disattiva la sospensione selettiva USB se il microfono si disconnette.
+- **Interfacce audio (XLR):** Usa **ASIO** quando supportato dal voice changer (come RVC Blue o w-okada) per una latenza di buffer inferiore, oppure **WASAPI** per instradare verso i cavi virtuali standard di Windows.
+- **WASAPI Shared vs. WASAPI Exclusive:** **WASAPI Shared** è il punto di partenza più sicuro perché Windows e i cavi virtuali possono condividere flussi a `48000 Hz` senza problemi. **WASAPI Exclusive** aggira il mixer di Windows per ridurre la latenza del driver quando supportato, ma blocca il dispositivo impedendo ad altre app di condividerlo.
+
+## Configurazione specifica per app (Discord, OBS, giochi, chiamate, registrazione)
+
+- **Discord / app di chiamata:** Imposta **Input Device** sull'endpoint di registrazione del cavo virtuale (`Line 1` / `CABLE Output`), imposta **Output Device** sulle cuffie e disattiva (**OFF**) Krisp, cancellazione dell'eco e sensibilità automatica se Discord taglia respiri o finali di parola.
+- **OBS Studio e registrazione locale:** Aggiungi una sorgente **Cattura audio in entrata** collegata all'endpoint di registrazione del cavo virtuale, silenzia eventuali sorgenti separate del microfono grezzo e registra una breve clip di prova per verificare sincronia e livelli.
+- **Giochi:** Seleziona l'endpoint di registrazione del cavo virtuale come microfono nel gioco (o impostalo come dispositivo di comunicazione predefinito in Windows). Limita sempre gli FPS nel gioco o lascia margine GPU affinché il gioco non saturi il voice changer.
 
 ## Invia l'audio convertito a un'altra app
 
-> **Correct Audio Routing**
->
-> **1. Nel Voice Changer**
-> - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
->
-> **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
-> - **Output Device:** Le tue cuffie (fortemente consigliate rispetto agli altoparlanti).
->
-> ```text
-> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
-> ```
->
-> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
->
-> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
-> - **Altoparlanti e rientro dalle cuffie:** Evita gli altoparlanti: il suono può rientrare nel microfono generando audio doppio, eco o facendo convertire anche le voci degli altri presenti in chiamata. Può succedere persino con le cuffie se il volume è troppo alto o se i padiglioni non sono abbastanza chiusi e isolati.
-> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
-Un dispositivo audio virtuale fornisce un endpoint di riproduzione per il convertitore e un endpoint di registrazione corrispondente per l'app ricevente. I nomi degli endpoint dipendono dal driver. Ad esempio, un cavo virtuale può chiamare il suo endpoint di riproduzione "Input" e il suo endpoint di registrazione "Output" perché le istruzioni utilizzano la prospettiva del cavo.
+Un dispositivo audio virtuale fornisce un endpoint di riproduzione per il convertitore e un corrispondente endpoint di registrazione per l'app ricevente. I nomi degli endpoint dipendono dal driver. Ad esempio, un cavo virtuale può chiamare il proprio endpoint di riproduzione "Input" e quello di registrazione "Output" perché le istruzioni adottano la prospettiva del cavo.
 
 ```text
-Physical microphone → RVC converter → virtual playback endpoint
-                                           ↓
-                              matching recording endpoint → call or stream
+Microfono fisico → Convertitore RVC → endpoint virtuale di riproduzione
+                                               ↓
+                                endpoint di registrazione corrispondente → chiamata o stream
 ```
 
-Seleziona l'endpoint di registrazione corrispondente come microfono nell'app ricevente ed effettua lì una breve registrazione di prova. Se il monitor locale suona correttamente ma la registrazione no, verifica l'input di destinazione e rimuovi qualsiasi sorgente microfonica duplicata. Se monitori l'audio convertito, utilizza un'uscita per cuffie separata. Evita di reinstradare l'intero mix desktop o l'audio dell'app ricevente nel convertitore.
+Seleziona l'endpoint di registrazione corrispondente come microfono nell'app ricevente ed esegui lì una breve registrazione di prova. Se il monitor locale suona bene ma la registrazione no, verifica l'ingresso di destinazione e rimuovi eventuali sorgenti microfoniche duplicate. Se monitori l'audio convertito, usa un'uscita cuffie separata. Evita di instradare l'intero mix desktop o l'audio dell'app ricevente di nuovo dentro il convertitore.
 
 ## Ottimizza la latenza senza perdere stabilità
 
-Il ritardo end-to-end include buffer del dispositivo, conversione, routing virtuale e qualsiasi elaborazione nella destinazione. Una cifra del tempo di elaborazione nel convertitore misura solo una parte di quel percorso. Cattura un test locale sia del microfono asciutto che del percorso convertito se hai bisogno di misurare il ritardo tra di loro.
+**Latenza di elaborazione vs. latenza totale end-to-end:** Il **GPU Delay** / tempo di inferenza mostrato nel voice changer indica **solo** quanto impiega la GPU a convertire un blocco. La **latenza totale end-to-end** somma buffer di ingresso del microfono, **Block Size / Chunk Size**, overhead di crossfade/contesto, buffer del cavo virtuale e buffer audio di Discord/OBS/gioco. Non confondere un GPU Delay basso (es. `15 ms`) con la latenza totale di andata e ritorno.
 
- | Controllo | Regolazione pratica |
+| Controllo | Regolazione pratica |
 | --- | --- |
- | Dimensione del blocco o dimensione del blocco | Aumentala se la voce si interrompe sotto carico. Una volta stabile, prova un'impostazione più piccola e mantienila solo se il parlato normale rimane pulito. I blocchi più piccoli lasciano meno tempo per completare l'elaborazione. |
- | Dissolvenza incrociata | Aumenta con cautela se senti giunzioni irregolari tra i blocchi. Cambia il modo in cui i blocchi vicini si sovrappongono. |
- | Contesto extra | Prova meno contesto se il convertitore resta indietro. Può aiutare il modello a seguire le transizioni, al costo di una maggiore elaborazione. |
- | Predittore del tono | Se un'impostazione produce tempi instabili, confronta i predittori disponibili utilizzando le stesse frasi. Seleziona quello che gestisce l'intervallo del tono con un margine di elaborazione sufficiente. |
- | Rilevamento del silenzio o soglia di ingresso | Abbassa una soglia che taglia le sillabe morbide. Valutalo durante le pause e i discorsi tranquilli, non solo durante un input forte e prolungato. |
- | Frequenza del dispositivo | Controlla le frequenze di campionamento del dispositivo e del cavo virtuale se senti una velocità o un crepitio insoliti. Inizia con impostazioni compatibili lungo tutta la catena. |
+| Dimensione blocco o chunk (Block / Chunk Size) | Aumentala se la voce si spezza sotto carico. Una volta stabile, prova un valore inferiore e mantienilo solo se il parlato normale resta pulito. Blocchi più piccoli lasciano meno tempo per completare l'elaborazione. |
+| Crossfade | Aumentalo con cautela se senti giunzioni ruvide tra i blocchi. Modifica il modo in cui i blocchi adiacenti si sovrappongono. |
+| Contesto extra (Extra context) | Riduci il contesto se il convertitore resta indietro. Può aiutare il modello a seguire le transizioni, al costo di maggiore elaborazione. |
+| Predittore di pitch | Se un'impostazione produce tempistiche instabili, confronta i predittori disponibili con le stesse frasi. Scegli quello che gestisce la tua estensione con sufficiente margine di elaborazione. |
+| Rilevamento silenzio o soglia in ingresso | Abbassa la soglia se taglia sillabe deboli. Valuta durante le pause e il parlato leggero, non solo su un ingresso forte e costante. |
+| Frequenza dispositivo (Device rate) | Controlla le frequenze di campionamento di dispositivo e cavo virtuale se senti velocità anomala o crepitii. Parti con impostazioni compatibili lungo tutta la catena. |
 
-Inizia con le impostazioni predefinite dell'app e modifica un'impostazione alla volta. Se un gioco o un altro programma con uso intensivo della GPU condivide la macchina, ripeti il ​​test mentre è in esecuzione. Mantieni una preimpostazione funzionante in modo da poterla ripristinare prima di andare in diretta. [GUI principale in tempo reale](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
+Parti dai valori predefiniti dell'app e modifica un'impostazione alla volta. Se un gioco o un altro programma pesante sulla GPU condivide il PC, ripeti il test mentre è in esecuzione. Conserva un preset funzionante così da poterlo ripristinare prima di andare in diretta. [GUI tempo reale RVC WebUI (Mainline - Original RVC)](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
 
 ## Risolvi il problema in base al punto in cui appare l'errore
 
- | Sintomo | Controlla prima |
+| Sintomo | Cosa controllare per primo |
 | --- | --- |
- | Né il misuratore del convertitore né una registrazione con microfono a secco rispondono | Controlla il dispositivo di input del sistema operativo e l'autorizzazione del microfono. |
- | Il microfono a secco funziona, ma l'uscita convertita è silenziosa | Conferma che lo streaming è iniziato, il modello caricato e il convertitore ha selezionato l'uscita corretta. Controllare la soglia di ingresso. |
- | Il monitor locale funziona, ma la chiamata riceve la voce originale | Seleziona l'endpoint di registrazione virtuale come microfono della chiamata e disabilita qualsiasi sorgente di microfono fisico separata nell'app. |
- | Si sentono due versioni della voce | Disattiva i percorsi di ingresso duplicati e verifica che il monitor delle cuffie sia separato dal percorso virtuale. |
- | L'audio gracchia solo sotto carico | Ritorna all'ultima dimensione stabile del blocco, riduci i carichi di lavoro concorrenti e ripeti il ​​test. |
- | Un modello funziona nella conversione dei file ma fallisce dal vivo | Controlla l'edizione, l'architettura e il supporto dell'embedder del client live. Testare un modello elencato come compatibile in quel client prima di cambiare dispositivi audio. |
+| Né il misuratore del convertitore né una registrazione grezza del microfono rispondono | Controlla i permessi microfono di Windows, l'interruttore fisico di mute e la selezione di Input Device. |
+| Il microfono grezzo funziona, ma l'uscita convertita è muta | Conferma che il flusso sia avviato, il modello sia caricato e l'Output Device sia impostato correttamente. Abbassa la soglia VAD/silenzio. |
+| Il monitor locale funziona, ma la chiamata riceve la voce originale | Seleziona l'endpoint di registrazione virtuale (`CABLE Output` / `Line 1`) come microfono della chiamata e disattiva eventuali sorgenti grezze separate. |
+| Doppio monitoraggio / eco / loop di feedback | Non usare mai altoparlanti vicino a un microfono attivo. Disattiva **"Ascolta il dispositivo"** in Windows se l'app monitora già, e non instradare mai l'audio desktop/chiamata nel cavo virtuale. |
+| Crepitii, scatti o buffer underrun | Allinea **tutti** gli endpoint (Mic, Cuffie, Cable Input/Output) a **48000 Hz** (`mmsys.cpl`), aumenta **Block/Chunk Size** di un livello e verifica eventuale sovraccarico CPU. |
+| Voce robotica o sillabe spezzate | L'estrattore di pitch è troppo pesante (`crepe` full) -> passa a **RMVPE** o **FCPE**, oppure abbassa **Index Ratio**. |
+| **GPU Delay** alto o crepitii solo mentre giochi | **Saturazione GPU**: limita gli FPS nel gioco, abbassa le impostazioni grafiche pesanti o aumenta **Block Size**. |
+| Un modello funziona su file ma fallisce dal vivo | Controlla edizione del client dal vivo, architettura e supporto embedder. Prova un modello elencato come compatibile in quel client prima di cambiare dispositivi audio. |
 
 [Fondamenti di RVC](../start/rvc-fundamentals.md) · [Risoluzione dei problemi](../reference/troubleshooting.md)
 
 ## RVC Blue
 
-Conversione vocale in tempo reale su Windows. [Installazione e configurazione](../other-rvcs/rvc-blue/installation.md).
-## Ruoli dei dispositivi e backend audio
-
-| Termine | Cosa indica |
-| --- | --- |
-| **Input Device** | Il microfono fisico (o interfaccia audio) che invia la voce al convertitore. |
-| **Output Device** | Dove va la voce convertita (endpoint di riproduzione del cavo virtuale per Discord/OBS/giochi, o cuffie per test locale). |
-| **Monitor Device** | Seconda uscita opzionale per riascoltarti in cuffia mentre **Output Device** alimenta il cavo virtuale. |
-| **Virtual Cable Input** *(Riproduzione)* | Voce sotto Riproduzione Windows (Line 1 su VAC Lite / CABLE Input su VB-CABLE). Usala come **Output Device**. |
-| **Virtual Cable Output** *(Registrazione)* | Voce sotto Registrazione Windows (Line 1 / CABLE Output). Usala come **Microfono** in Discord, OBS o giochi. |
-
-- **Microfoni USB / Interfacce XLR:** Imposta 48000 Hz su tutti i dispositivi; usa **WASAPI Shared** per compatibilità con i cavi virtuali, **WASAPI Exclusive** per minor overhead quando supportato, oppure **ASIO** su interfacce dedicate (es. RVC Blue / w-okada).
-- **Discord, OBS e Giochi:** Su Discord disattiva Krisp, Cancellazione eco e sensibilità automatica se tagliano le parole; su OBS aggiungi una sola sorgente **Cattura audio in ingresso** sul cavo virtuale; nei giochi limita gli FPS per lasciare margine alla GPU.
-- **Latenza di elaborazione vs. latenza end-to-end:** Il **GPU Delay** misura solo il tempo GPU per blocco; la **latenza totale** include microfono, **Block Size**, crossfade, cavo virtuale e buffer di Discord/OBS/gioco.
+Conversione vocale desktop su Windows. [Installazione e configurazione](../other-rvcs/rvc-blue/installation.md).

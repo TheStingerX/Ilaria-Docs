@@ -22,10 +22,8 @@
 - [Converti una registrazione con Ilaria RVC](https://docs.ilariarvc.shop/it/conversion/voice-conversion.md): La conversione vocale inizia con una performance.
 - [Migliorare la Qualità Audio dell'Inferenza RVC](https://docs.ilariarvc.shop/it/conversion/audio-quality.md): Guida verificata sul codice per migliorare la qualità audio dell'inferenza RVC in Ilaria RVC: baseline diagnostica, pitch, metodi F0, Index Ratio, Protect, Formant Shifting, Volume Envelope e Post-Process.
 - [Sintesi vocale e RVC](https://docs.ilariarvc.shop/it/conversion/text-to-speech.md): Sintesi vocale (TTS) genera una registrazione sorgente dalle parole digitate. RVC applica quindi un modello vocale separato a quella registrazione.
-- [Conversione vocale in tempo reale](https://docs.ilariarvc.shop/it/conversion/real-time.md): Per una registrazione o una cover, la conversione dei file ti consente di renderizzare e confrontare diverse riprese.
 - [Tracce separate e mixaggio](https://docs.ilariarvc.shop/it/conversion/stems-and-mixing.md): Un gambo è una parte isolata di un mix, come la voce o lo strumentale. RVC è più facile da controllare con una sola voce pulita.
 - [Prepara un set di dati vocale](https://docs.ilariarvc.shop/it/model-training/dataset-preparation.md): Ogni clip insegna al modello qualcosa sulla sua voce di destinazione.
-- [Addestra un modello vocale RVC](https://docs.ilariarvc.shop/it/model-training/training.md): L'addestramento apprende una voce di destinazione da una raccolta audio preparata. Utilizza questa guida quando desideri creare un modello da registrazioni tue o autorizzate.
 
 ## Ilaria RVC
 
@@ -44,8 +42,8 @@
 
 - [Ilaria RVC nel cloud](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/cloud.md): Confronta Kaggle, Google Colab e Lightning AI Studio per eseguire Ilaria RVC nel browser quando il tuo PC non ha una GPU NVIDIA locale supportata.
 - [Kaggle](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/kaggle.md): Fai clic su Esegui tutto nell'editor. Puoi anche eseguire le quattro celle di codice una alla volta, dall'alto verso il basso.
-- [Google Colab](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/colab.md): Prepara un WAV breve e pulito e un modello compatibile per l’inferenza. Per il training conserva sul tuo computer il dataset originale e alcune clip di prova separate.
-- [Lightning AI Studio](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/lightning-ai.md): Prepara un WAV breve e pulito e un modello compatibile per l’inferenza. Per il training conserva sul tuo computer il dataset originale e alcune clip di prova separate.
+- [Google Colab](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/colab.md): Esegui Ilaria RVC nel browser con una GPU fornita dalla piattaforma cloud. Scegli un notebook qui sotto. Attiva un acceleratore NVIDIA prima di eseguire la prima cella.
+- [Lightning AI Studio](https://docs.ilariarvc.shop/it/ilaria-rvc/cloud/lightning-ai.md): Esegui Ilaria RVC nel browser con una GPU fornita dalla piattaforma cloud. Scegli un notebook qui sotto. Attiva un acceleratore NVIDIA prima di eseguire la prima cella.
 
 ### Inference
 
@@ -68,7 +66,7 @@
 - [Libreria modelli e fusione](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/model-library.md): Importa, ispeziona e gestisci file RVC .pth, .index, .safetensors, embedder e fusioni Voice Blender in Ilaria RVC.
 - [Voice Blender (Fusione Modelli)](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/voice-blender.md): In Ilaria RVC, la funzione Voice Blender si trova nella scheda Other sotto Merge models.
 - [Convertitore Safetensors ↔ PTH](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/safetensors-converter.md): Guida semplice e completa al convertitore Safetensors e PTH nella scheda Altro di Ilaria RVC, con salvataggio metadati RVC e pulsante Move .pth to models.
-- [Audio Analyzer](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/audio-analyzer.md): Apri Altro → Audio Analyzer in Ilaria RVC per confrontare fino a otto file audio con forme d'onda, spettrogrammi, spettro medio, stima del pitch e tabelle dei livelli.
+- [Analizzatore Audio](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/audio-analyzer.md): Apri Other → Audio Analyzer in Ilaria RVC per confrontare fino a otto file audio usando forme d'onda, spettrogrammi, spettro medio, stima del pitch e tabelle dei livelli.
 - [Spiegazione di tutti gli altri pannelli](https://docs.ilariarvc.shop/it/ilaria-rvc/manage/other-buttons.md): Usa Altro per gestire file, ispezionare o combinare modelli, rivedere l'audio e gestire l'app.
 
 ## Other RVCs
@@ -169,3 +167,11 @@
 - [MVSep](https://docs.ilariarvc.shop/it/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) è una piattaforma web gratuita basata sul cloud per la separazione e il restauro audio tramite IA.
 - [Usare MVSep: accesso, account e impostazioni](https://docs.ilariarvc.shop/it/non-rvc/mvsep/access-and-setup.md): Poiché MVSep funziona interamente nel cloud, non c'è nulla da scaricare o installare. Tuttavia, impostare correttamente account e formato di output fa una grande differenza.
 - [Guida MVSep: modelli e preset consigliati](https://docs.ilariarvc.shop/it/non-rvc/mvsep/usage-and-models.md): Qui trovi i migliori preset di MVSep per ottenere tracce vocali pulitissime (per training RVC, cover o conversione vocale), con link diretti che preselezionano automaticamente l'algoritmo e le opzioni esatte.
+
+## Conversione vocale
+
+- [Conversione vocale in tempo reale](https://docs.ilariarvc.shop/it/conversion/real-time.md): Per una registrazione o una cover, la conversione di file ti consente di eseguire il rendering e confrontare più riprese.
+
+## Modelli e addestramento
+
+- [Addestra un modello vocale RVC](https://docs.ilariarvc.shop/it/model-training/training.md): L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate.

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678912067">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680909914">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848678912067" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848680909914" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678912067" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678912067" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -176,7 +176,7 @@
                 <!-- Page content  -->
 <span id="redpanda-vc-vs-other-rvc-versions---complete-feature-comparison" class="docs-anchor"></span><h1 id="redpanda-vc-vs-outras-versões-rvc---comparação-completa-de-recursos">Redpanda-vc vs Outras Versões RVC - Comparação Completa de Recursos</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Comparação verificada no código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, checkpoints por passos, Rectified Flow, Beatrice 2, treino de vocoder, TTS, tempo real e compatibilidade.</div>
-<p><a href="../first-run/">Configurar Redpanda-vc</a> · <a href="../training/">Treinar modelos RVC (EMA e Steps)</a> · <a href="../live-audio/">Testar áudio ao vivo</a></p>
+<p><a href="../first-run/">Configurar Redpanda-vc</a> · <a href="../../../pt/ilaria-rvc/redpanda/training/">Treinar modelos RVC (EMA e Steps)</a> · <a href="../live-audio/">Testar áudio ao vivo</a></p>
 <p>Este guia compara o <strong>Redpanda-vc</strong> diretamente com <strong>RVC Mainline</strong>, <strong>Applio</strong> e <strong>Ilaria RVC</strong> com base na inspeção estática do código-fonte do branch <code translate="no" v-pre>main</code> de cada projeto (sem executar benchmarks de áudio ao vivo ou testes de hardware entre sistemas).</p>
 <hr>
 <span id="what-makes-redpanda-vc-different" class="docs-anchor"></span><h2 id="o-que-torna-o-redpanda-vc-diferente">O que torna o Redpanda-vc diferente?</h2>
@@ -192,7 +192,7 @@
 <p><em>(Termos rápidos para iniciantes: <strong>Inference</strong> significa converter áudio usando um modelo já treinado; <strong>CLI</strong> significa rodar comandos no terminal em vez de clicar em botões na <strong>WebUI</strong>; um <strong>vocoder</strong> transforma características acústicas em uma onda sonora audível; um <strong>decoder</strong> é a parte de um programa que sabe ler uma arquitetura de modelo específica.)</em></p>
 <hr>
 <span id="feature-comparison-overview" class="docs-anchor"></span><h2 id="visão-geral-comparativa-de-recursos">Visão geral comparativa de recursos</h2>
-<p>Os rótulos abaixo refletem a inspeção estática do código-fonte no branch <code translate="no" v-pre>main</code> de cada repositório (commits listados em <doc-anchor-trigger to="#fontes-e-referencias-tecnicas">Fontes e referências técnicas</doc-anchor-trigger>):</p>
+<p>Os rótulos abaixo refletem a inspeção estática do código-fonte no branch <code translate="no" v-pre>main</code> de cada repositório (commits listados em <doc-anchor-trigger to="#fontes-e-refer%C3%AAncias-t%C3%A9cnicas">Fontes e referências técnicas</doc-anchor-trigger>):</p>
 <retype-table copy-text="| Recurso | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |
 | **RVC V1** | **Sim** | **Inferência V1 suportada; UI atual de treino foca em V2** | **Sim** | **Sim** |
@@ -520,7 +520,7 @@
 <li><strong>Generator EMA Decay</strong> (<code translate="no" v-pre>0</code> a <code translate="no" v-pre>0.9999</code>, padrão <code translate="no" v-pre>0.999</code>, incremento <code translate="no" v-pre>0.0001</code>) controla quão devagar a média se atualiza. Definir <strong><code translate="no" v-pre>0</code></strong> desativa o EMA e exporta os pesos ativos brutos.</li>
 <li>Nem <strong>RVC Mainline</strong>, nem <strong>Applio</strong>, nem <strong>Ilaria RVC</strong> incluem <code translate="no" v-pre>GeneratorEMA</code> em seus scripts de treino verificados.</li>
 </ul>
-<p>O EMA pode suavizar oscilações de pesos entre steps, mas <strong>não</strong> garante qualidade de áudio superior, <strong>não</strong> elimina overfitting nem aleatoriedade do treino e <strong>não</strong> acelera o treino. Para explicações completas e detalhes matemáticos, veja <a href="../training/">Treinar modelos RVC no Redpanda-vc - EMA e Salvamento por Steps</a>.</p>
+<p>O EMA pode suavizar oscilações de pesos entre steps, mas <strong>não</strong> garante qualidade de áudio superior, <strong>não</strong> elimina overfitting nem aleatoriedade do treino e <strong>não</strong> acelera o treino. Para explicações completas e detalhes matemáticos, veja <a href="../../../pt/ilaria-rvc/redpanda/training/">Treinar modelos RVC no Redpanda-vc - EMA e Salvamento por Steps</a>.</p>
 <hr>
 <span id="step-based-training-and-saving" class="docs-anchor"></span><h2 id="treino-e-salvamento-baseados-em-steps">Treino e Salvamento Baseados em Steps</h2>
 <p>No treino RVC, uma <strong>epoch (época)</strong> é uma passagem completa pelo dataset preparado, enquanto um <strong>step (passo)</strong> é uma atualização de pesos após processar um único batch. <em>(Exemplo hipotético: se um dataset produz 100 steps por época, 1.000 steps equivalem a cerca de 10 épocas, embora a proporção exata dependa da duração do dataset e do batch size.)</em></p>
@@ -779,7 +779,7 @@ Combinar <strong>Generator EMA</strong>, <strong>salvamento RVC por intervalo de
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/training/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../pt/ilaria-rvc/redpanda/training/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
@@ -804,7 +804,7 @@ Combinar <strong>Generator EMA</strong>, <strong>salvamento RVC por intervalo de
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T15:14:29.000Z">22/11/2026 · 16:14</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T16:39:50.000Z">22/11/2026 · 17:39</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

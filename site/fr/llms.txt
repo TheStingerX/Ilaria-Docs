@@ -5,7 +5,6 @@
 - [Documentation Ilaria RVC](https://docs.ilariarvc.shop/fr/index.md): Documentation Ilaria RVC
 - [Mise en route](https://docs.ilariarvc.shop/fr/start/getting-started.md): Vous pouvez aussi utiliser Ilaria RVC sur Kaggle avec son GPU distant, même si votre ordinateur n’a pas de GPU NVIDIA. Ilaria RVC on Kaggle
 - [Fondamentaux de RVC](https://docs.ilariarvc.shop/fr/start/rvc-fundamentals.md): La conversion vocale basée sur la récupération (RVC) prend un enregistrement vocal et synthétise une version avec le caractère d'une voix entraînée.
-- [Modèles et fichiers RVC](https://docs.ilariarvc.shop/fr/start/models.md): Un modèle RVC transforme le timbre d’une voix existante. Les mots, le rythme et les pauses viennent de l’enregistrement d’origine.
 - [Pitch Extractors RVC (Méthodes F0)](https://docs.ilariarvc.shop/fr/start/pitch-extractors.md): Un pitch extractor (ou méthode d'extraction F0) est l'algorithme ou le réseau neuronal qui suit la fréquence fondamentale (hauteur, mélodie et intonation) de la voix source au fil du temps.
 - [Embedders RVC](https://docs.ilariarvc.shop/fr/start/embedders.md): Un embedder (également appelé content encoder) est le réseau neuronal qui lit votre audio d'entrée et transforme ce qui est dit ou chanté en caractéristiques numériques de contenu avant que le modèle vocal RVC ne le reconstruise dans le timbre du locuteur cible.
 - [Modèles de base Pretrained RVC](https://docs.ilariarvc.shop/fr/start/pretrained.md): Un modèle de base pretrained (ou pretrain) est une paire de points de contrôle de départ : un Générateur (G_.pth) et un Discriminateur (D_.pth), déjà entraînés sur des centaines d'heures d'audio multi-locuteurs.
@@ -22,10 +21,12 @@
 - [Convertir un enregistrement avec Ilaria RVC](https://docs.ilariarvc.shop/fr/conversion/voice-conversion.md): La conversion vocale commence par une performance.
 - [Améliorer la Qualité Audio d'Inférence RVC](https://docs.ilariarvc.shop/fr/conversion/audio-quality.md): Guide vérifié dans le code pour améliorer la qualité audio d'inférence RVC dans Ilaria RVC : base diagnostique, hauteur, méthodes F0, Index Ratio, Protect, Formant Shifting, Volume Envelope et Post-Process.
 - [Synthèse vocale et RVC](https://docs.ilariarvc.shop/fr/conversion/text-to-speech.md): La synthèse vocale (TTS) génère un enregistrement source à partir des mots que vous tapez. RVC applique ensuite un modèle vocal distinct à cet enregistrement.
-- [Conversion vocale en temps réel](https://docs.ilariarvc.shop/fr/conversion/real-time.md): Pour un enregistrement ou une reprise, la conversion de fichiers permet de restituer et de comparer plusieurs prises.
 - [Stems et mixage](https://docs.ilariarvc.shop/fr/conversion/stems-and-mixing.md): Un stem est une partie isolée d'un mix, comme le vocal ou l'instrumental. RVC est plus facile à contrôler avec une voix claire seule.
 - [Préparer un ensemble de données vocales](https://docs.ilariarvc.shop/fr/model-training/dataset-preparation.md): Chaque clip apprend au modèle quelque chose sur sa voix cible.
-- [Former un modèle vocal RVC](https://docs.ilariarvc.shop/fr/model-training/training.md): La formation apprend une voix cible à partir d'une collection audio préparée.
+
+## Pour commencer
+
+- [Modèles et fichiers RVC](https://docs.ilariarvc.shop/fr/start/models.md): Un modèle RVC modifie le timbre d'une interprétation existante. L'enregistrement source continue de fournir les mots, le phrasé et le rythme.
 
 ## Ilaria RVC
 
@@ -44,8 +45,8 @@
 
 - [Ilaria RVC dans le cloud](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/cloud.md): Comparez Kaggle, Google Colab et Lightning AI Studio pour exécuter Ilaria RVC dans le navigateur sans GPU NVIDIA local compatible.
 - [Kaggle](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/kaggle.md): Cliquez sur Exécuter tout dans l'éditeur. Vous pouvez également exécuter les quatre cellules de code une par une, de haut en bas.
-- [Google Colab](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/colab.md): Préparez un WAV court et propre, un modèle d’inférence compatible et, pour l’entraînement, un jeu de données sauvegardé séparément.
-- [Lightning AI Studio](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/lightning-ai.md): Préparez un WAV court et propre, un modèle d’inférence compatible et, pour l’entraînement, un jeu de données sauvegardé séparément.
+- [Google Colab](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/colab.md): Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.
+- [Lightning AI Studio](https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/lightning-ai.md): Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.
 
 ### Inference
 
@@ -68,7 +69,7 @@
 - [Bibliothèque et fusion de modèles](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/model-library.md): Importez, inspectez et gérez les fichiers RVC .pth, .index, .safetensors, embedders et fusions Voice Blender dans Ilaria RVC.
 - [Voice Blender (Fusion de Modèles)](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/voice-blender.md): Dans Ilaria RVC, la fonction Voice Blender se trouve dans l'onglet Other sous Merge models.
 - [Convertisseur Safetensors ↔ PTH](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/safetensors-converter.md): Guide simple et complet du convertisseur Safetensors et PTH dans l'onglet Other d'Ilaria RVC, avec préservation des métadonnées RVC et Move .pth to models.
-- [Audio Analyzer](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/audio-analyzer.md): Ouvrez Other → Audio Analyzer dans Ilaria RVC pour comparer jusqu'à huit fichiers audio (forme d'onde, spectrogramme, spectre moyen, hauteur et niveaux).
+- [Analyseur Audio](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/audio-analyzer.md): Ouvrez Other → Audio Analyzer dans Ilaria RVC pour comparer jusqu'à huit fichiers audio à l'aide de formes d'onde, spectrogrammes, spectre moyen, estimation de hauteur et tableaux de niveaux.
 - [Explication de tous les autres panneaux](https://docs.ilariarvc.shop/fr/ilaria-rvc/manage/other-buttons.md): Utilisez Autre pour gérer les fichiers, inspecter ou combiner des modèles, réviser l'audio et maintenir l'application.
 
 ## Other RVCs
@@ -79,7 +80,7 @@
 
 - [Installez Vonovox](https://docs.ilariarvc.shop/fr/other-rvcs/vonovox/installation.md): Vonovox est un convertisseur vocal Windows en direct pour les GPU NVIDIA pris en charge.
 - [Acheminer et régler Vonovox](https://docs.ilariarvc.shop/fr/other-rvcs/vonovox/live-audio.md): Utilisez trois points de terminaison : votre microphone physique pour l'entrée, un câble virtuel pour le signal converti et des écouteurs pour la surveillance.
-- [Optimisation avancée des performances : NVIDIA GPU Clock Locking](https://docs.ilariarvc.shop/fr/other-rvcs/vonovox/advanced-performance-optimization.md): Guide facultatif de verrouillage d'horloge GPU NVIDIA pour tester si le blocage des fréquences graphiques améliore la stabilité de latence dans Vonovox.
+- [Optimisation Avancée des Performances : NVIDIA GPU Clock Locking](https://docs.ilariarvc.shop/fr/other-rvcs/vonovox/advanced-performance-optimization.md): Guide optionnel de verrouillage d'horloge GPU NVIDIA (GPU Clock Locking) pour tester si le maintien de fréquences graphiques prises en charge améliore la stabilité de latence de Vonovox sous Windows.
 
 ### Applio
 
@@ -123,7 +124,7 @@
 
 - [Configurer Redpanda-vc](https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/first-run.md): Redpanda-vc étend Applio et propose plusieurs familles de modèles vocaux. Cette procédure pas à pas utilise la famille RVC partout.
 - [Testez l'audio en direct dans Redpanda-vc](https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/live-audio.md): Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local.
-- [Entraîner des Modèles RVC dans Redpanda-vc - EMA et Sauvegarde par Steps](https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/training.md): Guide débutant vérifié dans le code pour entraîner des modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde par étapes, reprise, exportation et dépannage.
+- [Entraîner des Modèles RVC dans Redpanda-vc - EMA & Sauvegarde par Pas](https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/training.md): Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage.
 - [Redpanda-vc vs Autres Versions RVC - Comparatif Complet des Fonctionnalités](https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/differences.md): Comparatif vérifié dans le code entre Redpanda-vc, RVC Mainline, Applio et Ilaria RVC : Generator EMA, sauvegarde par étapes, Rectified Flow, Beatrice 2, entraînement vocoder, TTS, temps réel et compatibilité.
 
 ### RVC Blue
@@ -169,3 +170,11 @@
 - [MVSep](https://docs.ilariarvc.shop/fr/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) est une plateforme web gratuite dans le cloud dédiée à la séparation et à la restauration audio par IA.
 - [Utiliser MVSep : accès, compte et configuration](https://docs.ilariarvc.shop/fr/non-rvc/mvsep/access-and-setup.md): MVSep fonctionnant dans le cloud, il n'y a rien à installer.
 - [Guide MVSep : modèles et presets recommandés](https://docs.ilariarvc.shop/fr/non-rvc/mvsep/usage-and-models.md): Voici les meilleurs presets MVSep pour obtenir des pistes vocales ultra-propres (pour entraînement RVC, covers ou conversion vocale), avec des liens directs pré-sélectionnant l'algorithme et les options exactes.
+
+## Conversion vocale
+
+- [Conversion vocale en temps réel](https://docs.ilariarvc.shop/fr/conversion/real-time.md): Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises.
+
+## Modèles et entraînement
+
+- [Entraîner un modèle vocal RVC](https://docs.ilariarvc.shop/fr/model-training/training.md): L'entraînement apprend une voix cible à partir d'une collection préparée d'audio. Utilisez ce guide pour créer un modèle à partir de vos propres enregistrements ou d'enregistrements autorisés.

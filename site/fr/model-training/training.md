@@ -1,108 +1,127 @@
-# Former un modèle vocal RVC
+# Entraîner un modèle vocal RVC
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
-La formation apprend une voix cible à partir d'une collection audio préparée. Utilisez ce guide lorsque vous souhaitez créer un modèle à partir de vos propres enregistrements ou de ceux autorisés. Si vous disposez déjà d'un modèle d'inférence, consultez [Modèles et fichiers RVC](../start/models.md) pour commencer à l'utiliser.
+L'entraînement apprend une voix cible à partir d'une collection préparée d'audio. Utilisez ce guide lorsque vous souhaitez créer un modèle à partir de vos propres enregistrements ou d'enregistrements autorisés. Si vous avez déjà un modèle d'inférence, consultez [Modèles et fichiers RVC](../start/models.md) pour commencer à l'utiliser.
 
-## Planifiez votre première course
+## Planifier votre premier entraînement
 
-Préparez l'audio avec le [guide de l'ensemble de données](dataset-preparation.md), puis sélectionnez-le dans **Formation**. Donnez à l'expérience un nom unique et choisissez un court enregistrement en dehors de l'ensemble de formation pour les tests d'écoute. Commencez par une exécution modeste qui peut franchir toutes les étapes et produire une exportation utilisable. Cela vous donne une base de référence pour les modifications apportées aux données ou aux paramètres.
+Préparez l'audio avec le [guide du dataset](dataset-preparation.md), puis sélectionnez-le dans **Training**. Donnez à l'expérience un nom unique et choisissez un court enregistrement en dehors du jeu d'entraînement pour les tests d'écoute. Commencez par une exécution modeste capable d'achever toutes les étapes et de produire un export utilisable. Cela vous donne une base pour évaluer vos changements de données ou de réglages.
 
-Enregistrez la version de l'application, la révision de l'ensemble de données, le format du modèle et la fréquence d'échantillonnage, l'intégration, la méthode de pitch, la paire pré-entraînée, la taille du lot et l'intervalle de sauvegarde prévu. Ajoutez le nom du clip de test retenu. Si une exécution ultérieure semble différente, ces notes vous aident à identifier ce qui a changé.
+Notez la version de l'application, la révision du dataset, le format et le taux d'échantillonnage du modèle, l'embedder, la méthode de hauteur, la paire pré-entraînée, la taille de lot (batch size) et l'intervalle de sauvegarde prévu. Ajoutez le nom de l'extrait de test mis de côté. Si une exécution ultérieure sonne différemment, ces notes aident à identifier ce qui a changé.
 
-## Choisissez les paramètres compatibles
+## Choisir des réglages compatibles
 
- | Paramètres | Que vérifier |
+| Réglage | Quoi vérifier |
 | --- | --- |
- | Format du modèle, vocodeur et fréquence d'échantillonnage | Sélectionnez une combinaison prise en charge par l'application et le client de lecture prévu. Une architecture spécifique à un fork peut limiter l'endroit où votre modèle se charge. |
- | Guidage et extraction de la hauteur | Le guidage de la hauteur est utile pour modéliser des éléments dépendant de la hauteur, en particulier le chant. Choisissez un extracteur disponible pour la formation dans votre build. |
- | Intégrateur | Ceci définit la représentation extraite de l’audio. Enregistrez le choix afin de pouvoir utiliser la représentation correspondante dans les clients d'inférence pris en charge. |
- | Générateur et discriminateur pré-entraînés | Utilisez une paire adaptée compatible avec l'architecture, le débit et la configuration de pas sélectionnés. Les fichiers générateurs et discriminateurs remplissent différents rôles dans la formation. |
- | Taille du lot | Contrôle la quantité de données traitées par mise à jour. Commencez par un paramètre que votre GPU peut adapter et réduisez-le si l'entraînement manque de mémoire. |
- | Intervalle cible et point de contrôle | Une époque correspond à environ un passage dans l'ensemble de données préparé. Les étapes sont des mises à jour de formation individuelles. Enregistrez périodiquement afin de pouvoir comparer les exportations et récupérer après une interruption. |
+| Format de modèle, vocodeur et sample rate | Choisissez une combinaison prise en charge par l'appli et le client de lecture prévu. Une architecture propre à un fork peut limiter où le modèle se charge. |
+| Guidage et extraction de hauteur | Le guidage de hauteur est utile pour modéliser des contenus dépendants de la justesse, surtout le chant. Choisissez un extracteur disponible pour l'entraînement dans votre version. |
+| Embedder | Définit la représentation extraite de l'audio. Notez ce choix afin d'utiliser la représentation correspondante dans les clients d'inférence compatibles. |
+| Générateur et discriminateur pré-entraînés | Utilisez une paire assortie compatible avec l'architecture, le taux et la configuration de hauteur choisis. Les fichiers générateur et discriminateur ont des rôles distincts pendant l'entraînement. |
+| Batch size | Contrôle la quantité de données traitée par mise à jour. Commencez par une valeur qui tient dans votre GPU et baissez-la si la mémoire sature. |
+| Cible et intervalle de checkpoint | Une époque correspond environ à un passage complet sur le dataset préparé. Les pas sont des mises à jour individuelles d'entraînement. Sauvegardez régulièrement pour comparer les exports et reprendre après une interruption. |
 
-Utilisez les choix de pré-entraînement indiqués comme compatibles par votre version installée. Dans Ilaria RVC 2.1.0, par exemple, le projet documente la formation RefineGAN à 32 kHz avec RVC V2 et guidage de pitch. La même version documente également un téléchargeur pour les paires pré-entraînées compatibles.
+Utilisez les choix de pré-entraînement indiqués comme compatibles par votre version installée. Dans Ilaria RVC 2.1.0, par exemple, le projet documente l'entraînement RefineGAN à 32 kHz avec RVC V2 et guidage de hauteur. La même version documente aussi un téléchargeur pour paires pré-entraînées compatibles.
 
-### Conseils de formation pratiques
+### Conseils pratiques d'entraînement
 
-- **Époques :** Essayez une première comparaison avec un objectif d'environ 200 époques et écoutez plusieurs sauvegardes antérieures. C'est un point de départ pour l'audition, puisque le point de contrôle le plus fort peut arriver plus tôt ou plus tard. Une exécution de 1 000 époques n’offre aucune garantie de qualité.
-- **Lot et précision :** Commencez par un lot modéré, par exemple 8, et traitez 16 comme un point de départ supérieur conservateur. Réduisez-le si la mémoire est épuisée. La précision mixte FP16 peut réduire l’utilisation de la VRAM et accélérer la formation sur le matériel pris en charge. Vérifiez si votre build le permet déjà et essayez FP32 si la précision mixte produit des pertes non finies.
-- **TensorBoard :** Utilisez des métriques pour suivre les progrès et repérer les exécutions bloquées ou instables. Les courbes de perte ne peuvent à elles seules déterminer quel point de contrôle sonne le mieux. Comparez les conversions des mêmes clips retenus.
-- **Normalisation :** Dans les versions Applio avec ces contrôles, Pre ajuste les niveaux avant le découpage et Post les ajuste après le découpage. Utilisez Aucun si les niveaux d'origine conviennent déjà. Dans Ilaria RVC, Process Data applique automatiquement l’ajustement du niveau à chaque tranche. L’implémentation publique n’a pas de bascule Post distincte.
-- **Filtrage du bruit :** Commencez par désactiver la réduction du bruit en option pour des enregistrements clairs. Si le frontal expose également un filtre passe-haut, utilisez-le pour un grondement audible à basse fréquence et comparez le résultat à l'oreille. Le filtrage passe-haut et la réduction du bruit sont des opérations distinctes.
-- **Cache de l'ensemble de données GPU :** Laissez-le désactivé comme référence. Cela consomme de la VRAM supplémentaire. Mesurez le temps par époque avant de l'activer pour une durée plus longue.
-- **Poids pré-entraînés :** Faites correspondre la paire G/D à l'architecture, au vocodeur, à la fréquence d'échantillonnage et à la configuration du pitch, et utilisez l'intégrateur spécifié par l'auteur du pré-entraînement. Pour les pré-formations RVC standard créées avec ContentVec, sélectionnez ContentVec pour l'extraction et l'inférence de fonctionnalités.
+- **Époques :** Essayez un premier test comparatif visant environ 200 époques et écoutez plusieurs sauvegardes antérieures. C'est un point de départ pour l'écoute, car le meilleur checkpoint peut arriver plus tôt ou plus tard. Une exécution de 1,000 époques n'offre aucune garantie de qualité.
+- **Batch et précision :** Commencez avec un batch modéré, par exemple 8, et considérez 16 comme un plafond de départ prudent. Réduisez-le si la mémoire manque. La précision mixte FP16 peut réduire la VRAM et accélérer l'entraînement sur matériel compatible. Vérifiez si votre build l'active déjà et essayez FP32 si la précision mixte produit des pertes non finies.
+- **TensorBoard :** Utilisez les métriques pour suivre l'avancement et repérer les exécutions bloquées ou instables. Les courbes de perte seules ne disent pas quel checkpoint sonne le mieux. Comparez les conversions sur les mêmes extraits de test mis de côté.
+- **Normalisation :** Dans les builds Applio dotés de ces contrôles, Pre ajuste les niveaux avant découpage et Post les ajuste après. Utilisez None si les niveaux d'origine conviennent déjà. Dans Ilaria RVC, Process Data ajuste automatiquement le niveau de chaque segment. L'implémentation publique n'a pas de bouton Post séparé.
+- **Filtrage du bruit :** Commencez avec la réduction de bruit optionnelle désactivée pour les enregistrements propres. Si l'interface expose aussi un filtre passe-haut, utilisez-le en cas de grondement basse fréquence audible et comparez à l'oreille. Filtrage passe-haut et réduction de bruit sont deux opérations distinctes.
+- **Cache GPU du dataset :** Laissez-le désactivé pour votre base de référence. Il consomme de la VRAM supplémentaire. Mesurez le temps par époque avant de l'activer pour une longue session.
+- **Poids pré-entraînés :** Associez la paire G/D à l'architecture, au vocodeur, au sample rate et à la configuration de hauteur, et utilisez l'embedder indiqué par l'auteur du pré-entraînement. Pour les pré-entraînements RVC standard bâtis avec ContentVec, choisissez ContentVec pour l'extraction de caractéristiques et l'inférence.
 
-### Choisissez un tarif en utilisant la bande passante source
+### Choisir une fréquence selon la bande passante source
 
-Vérifiez la fréquence d'échantillonnage dans les métadonnées du fichier et inspectez plusieurs clips représentatifs dans un visualiseur de spectrogramme tel que [Spek](https://www.spek.cc/p/download). Recherchez des détails vocaux utiles plutôt qu'un bruit isolé ou une coupure nette laissée par la compression. La moitié du taux d’échantillonnage d’entraînement est la fréquence la plus élevée que ce taux puisse représenter. Un modèle 32 kHz peut représenter des fréquences jusqu'à 16 kHz, un modèle 40 kHz jusqu'à 20 kHz et un modèle 48 kHz jusqu'à 24 kHz. Pour des détails utilisables au-dessus de 20 kHz, choisissez 48 kHz si l'architecture et la pré-formation le prennent en charge. Utilisez le débit compatible inférieur lorsqu’il couvre déjà la bande passante source. Le prétraitement peut rééchantillonner les enregistrements, mais ne peut pas restaurer les détails manquants.
+Vérifiez le sample rate dans les métadonnées du fichier et inspectez plusieurs extraits représentatifs dans un spectrogramme tel que [Spek](https://www.spek.cc/p/download). Cherchez du détail vocal utile plutôt que du bruit isolé ou une coupure nette due à la compression. La moitié du sample rate d'entraînement est la fréquence maximale représentable par ce taux. Un modèle 32 kHz représente jusqu'à 16 kHz, un modèle 40 kHz jusqu'à 20 kHz et un modèle 48 kHz jusqu'à 24 kHz. Pour du détail utile au-delà de 20 kHz, choisissez 48 kHz si l'architecture et le pré-entraînement le permettent. Utilisez le taux compatible inférieur lorsqu'il couvre déjà la bande passante source. Le prétraitement peut rééchantillonner, mais ne restaure pas un détail absent.
 
 ## Exécuter les étapes dans l'ordre
 
- | Étape | Ce qu'elle produit | Que vérifier |
+| Étape | Ce qu'elle produit | Quoi vérifier |
 | --- | --- | --- |
- | Prétraitement de l'ensemble de données | Audio préparé pour la configuration du modèle de l'expérience. | Le journal nomme le dossier prévu et signale le traitement réussi des fichiers utilisables. Vérifiez les fichiers ignorés avant de continuer. |
- | Extraction de fonctionnalités | Fonctionnalités de contenu, ainsi que des données de pitch lorsque la configuration choisie l'exige. | L'extraction se termine pour l'expérience en cours en utilisant la méthode d'intégration et de pitch sélectionnée. |
- | Formation du modèle | Exportations de points de contrôle et d'inférences selon les options de sauvegarde configurées. | Les étapes de formation avancent et les fichiers attendus sont enregistrés. Lisez la première erreur si la progression s'arrête. |
- | Index de récupération | Une collection consultable de fonctionnalités d'ensemble de données pour une utilisation facultative lors de la conversion. | L'index appartient à cette expérience et correspond à la voix exportée. Si vous l'avez ignoré, testez le modèle indépendamment. |
+| Prétraitement du dataset | Audio préparé pour la configuration modèle de l'expérience. | Le journal nomme le dossier prévu et signale le traitement réussi des fichiers utilisables. Vérifiez les fichiers ignorés avant de continuer. |
+| Extraction de caractéristiques | Caractéristiques de contenu, plus données de hauteur lorsque la configuration choisie l'exige. | L'extraction se termine pour l'expérience courante avec l'embedder et la méthode de hauteur choisis. |
+| Entraînement du modèle | Checkpoints et exports d'inférence selon les options de sauvegarde configurées. | Les pas d'entraînement avancent et les fichiers attendus sont enregistrés. Lisez la première erreur si la progression s'arrête. |
+| Index de recherche (retrieval) | Collection consultable de caractéristiques du dataset pour usage optionnel en conversion. | L'index appartient à cette expérience et correspond à la voix exportée. Si vous l'avez ignoré, testez le modèle indépendamment. |
 
-Utilisez le flux de travail automatique lorsqu'il est disponible, ou terminez et vérifiez chaque étape avant de commencer la suivante. Un ensemble de données ou une fréquence d'échantillonnage modifiés peuvent invalider l'audio préparé et les fonctionnalités extraites. Un intégrateur modifié nécessite une nouvelle extraction de fonctionnalités. Lorsque vous testez une configuration incompatible, démarrez une expérience distincte afin que les caches et les points de contrôle existants restent disponibles.
+Utilisez le flux automatique lorsqu'il existe, ou terminez et vérifiez chaque étape avant de lancer la suivante. Modifier le dataset ou le sample rate peut invalider l'audio préparé et les caractéristiques extraites. Changer d'embedder impose une nouvelle extraction. Pour tester une configuration incompatible, démarrez une expérience séparée afin de préserver caches et checkpoints existants.
 
-## Suivez les progrès dans Ilaria RVC
+## Suivre l'avancement dans Ilaria RVC
 
-- Utilisez **Training Dashboard** pour vérifier le nombre de pas, le temps par époque et les courbes de perte. Une courbe peut aider à expliquer une exécution bloquée, tandis que les tests d'écoute vous indiquent le son de la sortie.
-- Configurez les **aperçus de formation** avec un clip de test constant afin que l'application puisse générer des conversions comparables à mesure que les points de contrôle sont enregistrés.
-- Si vous utilisez la **file d'attente de formation**, définissez un nom d'expérience et un ensemble de données distincts pour chaque tâche. Avant de reprendre ou de réessayer, confirmez les étapes terminées par la tâche et l'endroit où la sortie sera enregistrée.
-- Lorsque votre version expose **Arrêtez et enregistrez**, utilisez-la lorsque vous devez interrompre et continuer plus tard. Attendez que le point de contrôle ait fini d'écrire avant de fermer l'application.
+- Utilisez **Training Dashboard** pour consulter le nombre de pas, le temps par époque et les courbes de perte. Une courbe aide à expliquer un blocage, tandis que l'écoute révèle la qualité sonore réelle.
+- Configurez les **aperçus d'entraînement** avec un extrait de test constant pour générer des conversions comparables lors des sauvegardes.
+- Si vous utilisez **Training Queue**, attribuez un nom d'expérience et un dataset distincts à chaque tâche. Avant de reprendre ou relancer, confirmez quelles étapes la tâche a terminées et où elle enregistrera la sortie.
+- Lorsque votre version propose **Stop and save**, utilisez-le pour interrompre et reprendre plus tard. Attendez la fin de l'écriture du checkpoint avant de fermer l'application.
 
-Ilaria RVC 2.1.0 prend en charge les cibles d'époque et de pas total, y compris la reprise à mi-chemin d'une époque pour les cibles de pas. D'autres interfaces peuvent exposer différents contrôles et reprendre le comportement.
+Ilaria RVC 2.1.0 prend en charge les cibles en époques et en pas totaux, y compris la reprise en milieu d'époque pour les cibles en pas. D'autres interfaces peuvent offrir des contrôles et comportements différents.
 
-### Comparez les budgets de formation par étapes
+### Comparer les budgets d'entraînement en pas
 
-Une époque est un passage dans l’ensemble de données préparé. Une étape de formation correspond à une mise à jour par lots. Divisez le nombre de clips après prétraitement par la taille effective du lot pour estimer les étapes par époque. Par exemple, 10 000 clips avec une taille de lot de 8 donnent 1 250 lots par époque dans une exécution avec un seul travailleur. L'abandon de lots partiels, l'utilisation de plusieurs GPU ou l'accumulation de gradients peuvent modifier la façon dont le formateur compte les mises à jour. Utilisez le nombre rapporté par votre exécution lorsque vous comparez les expériences.
+Une époque est un passage sur le dataset préparé. Un pas d'entraînement est une mise à jour de batch. Divisez le nombre de clips après prétraitement par la taille de batch effective pour estimer les pas par époque. Par exemple, 10,000 clips avec un batch de 8 donnent 1,250 batches par époque sur un seul worker. Des batches partiels écartés, plusieurs GPU ou l'accumulation de gradient peuvent modifier le comptage. Utilisez le total rapporté par votre session lors des comparaisons.
 
-Choisissez un intervalle de sauvegarde qui vous donne plusieurs points de contrôle à auditionner. Économiser environ toutes les 40 époques est un point de départ possible pour une course mesurée en centaines d’époques. Utilisez les mêmes clips retenus et paramètres d’inférence pour chaque comparaison. Écoutez l'intelligibilité, la hauteur stable, les pauses naturelles et les consonnes qui restent claires. Si les exportations ultérieures semblent plus dures ou fonctionnent bien sur quelques phrases seulement, comparez avec un point de contrôle antérieur et inspectez l'ensemble de données à la recherche de prises ou d'artefacts répétés. Choisissez le point de contrôle qui fonctionne le mieux pour vos entrées prévues.
+Choisissez un intervalle de sauvegarde offrant plusieurs checkpoints à écouter. Sauvegarder environ toutes les 40 époques est un point de départ possible pour un entraînement en centaines d'époques. Utilisez les mêmes extraits mis de côté et les mêmes réglages d'inférence à chaque comparaison. Écoutez intelligibilité, stabilité de hauteur, pauses naturelles et consonnes nettes. Si les exports tardifs deviennent plus durs ou ne marchent que sur quelques phrases, comparez avec un checkpoint antérieur et vérifiez le dataset pour détecter doublons ou artefacts. Choisissez le checkpoint le plus homogène sur vos entrées prévues.
 
-## Comparez les exports en écoutant
+## Comparer les exports à l'écoute
 
-Inférence ouverte avec un `.pth` exporté. Utilisez les mêmes courts enregistrements retenus et les mêmes paramètres de conversion pour comparer les modèles de différents points de contrôle. Si vous effectuez une comparaison d'index, maintenez le point de contrôle stable et comparez le même clip avec la récupération désactivée et activée.
+Ouvrez l'inférence avec un `.pth` exporté. Utilisez les mêmes courts extraits mis de côté et les mêmes réglages de conversion pour comparer différents checkpoints. Pour comparer l'index, gardez le checkpoint fixe et testez le même extrait avec retrieval désactivé puis activé.
 
-Comparez ces quatre qualités à travers les exportations.
+Comparez ces quatre qualités entre exports.
 
-1. **Timbre.** L'enregistrement converti ressemble-t-il au caractère vocal prévu dans toute la phrase ?
-2. **Intelligibilité.** Les consonnes et les terminaisons de mots sont-elles toujours faciles à comprendre ?
-3. **Stabilité de la hauteur.** Les notes ou les syllabes sautent, gazouillent ou perdent leur inflexion prévue ?
-4. **Artefacts.** La sortie ajoute-t-elle un bourdonnement, un bruit de pièce intégré, des queues dures ou des transitions étranges ?
+1. **Timbre.** L'enregistrement converti ressemble-t-il au caractère vocal visé sur toute la phrase ?
+2. **Intelligibilité.** Les consonnes et fins de mots restent-elles faciles à comprendre ?
+3. **Stabilité de hauteur.** Les notes ou syllabes sautent-elles, tremblent-elles ou perdent-elles l'inflexion voulue ?
+4. **Artefacts.** La sortie ajoute-t-elle bourdonnement, bruit de pièce incrusté, queues dures ou transitions étranges ?
 
-Conservez la meilleure exportation et ses sorties de test. D’autres époques peuvent valoir la peine d’être essayées lorsque les résultats s’améliorent sur plusieurs exemples. Si les exportations ultérieures n’améliorent qu’un seul clip ou commencent à reproduire des défauts de l’ensemble de données, revenez à la meilleure référence et examinez les enregistrements.
+Conservez le meilleur export et ses rendus de test. Poursuivre les époques peut valoir la peine si plusieurs exemples s'améliorent. Si les exports suivants n'améliorent qu'un extrait ou reproduisent des défauts du dataset, revenez à la meilleure base et réexaminez vos enregistrements.
 
 ## Exporter, reprendre ou partager
 
-- **Utiliser en inférence.** Sélectionnez le modèle exporté `.pth`. Gardez son `.index` correspondant à côté lorsque vous souhaitez le récupérer. Enregistrez toutes les informations requises sur l'intégration, le client pris en charge et la fréquence d'échantillonnage.
-- **Reprendre la formation.** Sauvegardez l'expérience et conservez les points de contrôle de formation du générateur et du discriminateur correspondants, communément appelés `G_*.pth` et `D_*.pth`. Reprenez avec la même expérience et la même configuration compatible, puis inspectez le journal pour connaître le point de contrôle et l'étape ou l'époque que vous attendiez. Une exportation d'inférence à elle seule ne dispose pas de l'état de formation complet.
-- **Partagez un modèle.** Partagez uniquement les fichiers que vous êtes autorisé à distribuer. Incluez des exemples d'écoute, des notes de compatibilité, l'index correspondant si utile et tous les termes d'utilisation dont le destinataire a besoin.
+- **Utiliser en inférence.** Sélectionnez le modèle `.pth` exporté. Gardez son `.index` correspondant à côté pour le retrieval. Notez l'embedder requis, le client compatible et le sample rate.
+- **Reprendre l'entraînement.** Sauvegardez l'expérience et conservez les checkpoints d'entraînement assortis du générateur et du discriminateur, généralement nommés `G_*.pth` et `D_*.pth`. Reprenez avec la même expérience et une configuration compatible, puis vérifiez dans le journal le checkpoint et le pas/époque attendus. Un export d'inférence seul ne contient pas l'état complet d'entraînement.
+- **Partager un modèle.** Ne partagez que les fichiers que vous avez le droit de distribuer. Joignez des extraits d'écoute, notes de compatibilité, l'index correspondant si utile et les conditions d'utilisation requises.
 
-Dans Ilaria RVC, les versions récentes utilisent la bibliothèque de modèles pour les exportations d'inférences et les index associés. Les chemins d’exportation et les noms peuvent différer selon les interfaces. Enregistrez les journaux d'expérience séparément si vous souhaitez recréer le modèle ultérieurement.
+Dans Ilaria RVC, les versions récentes utilisent la bibliothèque de modèles pour les exports d'inférence et index associés. Les chemins et noms peuvent varier selon les interfaces. Conservez séparément les journaux d'expérience pour pouvoir recréer le modèle plus tard.
 
-## Diagnostiquer un échec d'exécution
+## Diagnostiquer une exécution échouée
 
- | Symptôme | Vérifiez d'abord |
+| Symptôme | À vérifier en premier |
 | --- | --- |
- | Le prétraitement n'a trouvé aucun audio | Vérifiez le dossier de l'ensemble de données sélectionné et lisez un clip d'entrée. Vérifiez si votre build lit les dossiers imbriqués. |
- | L'extraction échoue ou signale un modèle manquant | Vérifiez les actifs de l'intégrateur et du modèle de pitch sélectionnés, et lisez le premier message dans le journal d'extraction. |
- | La mémoire GPU s'épuise | Réduisez la taille du lot, arrêtez les tâches GPU concurrentes et désactivez la mise en cache des ensembles de données GPU si votre build offre ce contrôle. Réessayez l'étape défaillante. |
- | La formation redémarre au début | Vérifiez que l'expérience pointe vers des points de contrôle de formation compatibles et que toute option de nouveau départ est désactivée. |
- | Un `.pth` ne se chargera pas pour la conversion | Vérifiez si vous avez sélectionné un point de contrôle de formation au lieu d'une exportation d'inférence, et vérifiez la compatibilité de l'architecture et de l'intégration avec le client. |
- | Un modèle utilisable n'a pas d'index | Vérifiez si la génération d'index a été ignorée ou a échoué. Exportez et testez le point de contrôle indépendamment, puis créez son index à partir de l'expérience correspondante si nécessaire. |
+| Le prétraitement n'a trouvé aucun audio | Vérifiez le dossier dataset choisi et écoutez un extrait source. Vérifiez si votre version lit les sous-dossiers imbriqués. |
+| L'extraction échoue ou signale un modèle manquant | Vérifiez les ressources embedder et pitch choisies, puis lisez le premier message du journal d'extraction. |
+| La mémoire GPU sature | Réduisez le batch size, fermez d'autres tâches GPU et désactivez le cache dataset GPU si votre version propose ce réglage. Relancez l'étape. |
+| L'entraînement repart du début | Vérifiez que l'expérience pointe vers des checkpoints d'entraînement compatibles et qu'aucune option de réinitialisation n'est cochée. |
+| Un `.pth` ne se charge pas en conversion | Vérifiez si vous avez sélectionné un checkpoint d'entraînement au lieu d'un export d'inférence, et confirmez compatibilité architecture/embedder. |
+| Un modèle utilisable n'a pas d'index | Vérifiez si la génération d'index a été ignorée ou a échoué. Exportez et testez le checkpoint seul, puis générez son index depuis l'expérience si besoin. |
 
-Conserver le premier message d'échec et la configuration associée à l'exécution. Pour plus de vérifications, voir [Dépannage](../reference/troubleshooting.md).
-## Profils d'entraînement indicatifs (à adapter)
+Conservez le premier message d'erreur et la configuration associée. Pour d'autres vérifications, voir [Dépannage](../reference/troubleshooting.md).
 
-- **Beginner Training :** RVC **v2** · **40 kHz** (32 kHz pour RefineGAN) · mvpe · contentvec · **Batch Size 4–8** · **Epochs 200** (sauvegarde tous les 25–50) · **FP32** (ou **BF16** sur RTX 30/40/50) · GPU Caching **OFF** · Workers 2.
-- **Intermediate Training :** RVC **v2** · **40/48 kHz** · mvpe · **Batch Size 8–12** · **Epochs 250–350** · **BF16** / **FP16** · Workers 4, Prefetch 4–8 · Index **FAISS Auto**.
-- **Advanced Training & Optimization :** Grands datasets, 12–24 Go+ VRAM · **Total Steps** · **Batch Size 12–16+** · **GPU Caching ON** (si VRAM suffisante) · **Fused AdamW ON** · **Training Queue** + **TensorBoard** + [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
+## Profils indicatifs d'entraînement (à adapter aux données et au matériel)
 
-## Repérer Underfitting vs Overfitting à l'oreille
+Ces trois profils sont des **points de départ indicatifs**, pas des règles universelles. Adaptez toujours **Batch Size** à votre VRAM et jugez les checkpoints à l'écoute sur les mêmes extraits mis de côté.
 
-1. **Underfitting :** Ressemble encore trop à l'orateur d'origine → reprenez depuis G_*.pth/D_*.pth.
-2. **Overfitting :** Son métallique sur de nouvelles phrases ou bruit du dataset copié → revenez 50–100 époques en arrière.
+### Entraînement Débutant (Base Sûre)
+
+- **Idéal pour :** Premier modèle vocal, 5-15 minutes d'audio propre d'un seul locuteur, GPU 6-8 Go VRAM.
+- **Réglages :** RVC **v2** · **40 kHz** (ou `32 kHz` pour RefineGAN) · Pitch Guidance **ON** (`rmvpe`) · Embedder `contentvec` · Pré-entraîné HiFi-GAN standard/vérifié · **Batch Size `4-8`** · **Epochs `200`** (sauvegarde toutes les `25-50` époques) · Précision **FP32** (ou **BF16** sur RTX 30/40/50) · GPU Caching **OFF** · Workers `2` · Fused AdamW **OFF**.
+- **Pourquoi :** Privilégie la stabilité et évite les manques de mémoire ou le surapprentissage précoce tout en produisant plusieurs checkpoints à comparer.
+
+### Entraînement Intermédiaire (Équilibre Qualité et Vitesse)
+
+- **Idéal pour :** 15-30 minutes de parole/chant propres, GPU 8-12 Go VRAM.
+- **Réglages :** RVC **v2** · **40 kHz** ou **48 kHz** (si la bande source dépasse 20 kHz) · `rmvpe` · `contentvec` ou `klm-vocal-contentvec` / `spin-v2` (assorti au pré-entraîné) · **Batch Size `8-12`** · **Epochs `250-350`** (ou **Total Steps** équivalents) · Sauvegarde toutes les `25-50` époques · Précision **BF16** (RTX 30/40/50) ou **FP16** (T4/RTX 20) · Workers `4`, Prefetch `4-8` · Générer un **index FAISS `Auto`** après choix du meilleur checkpoint.
+- **Pourquoi :** Utilise une précision mixte plus rapide et des lots plus grands tout en gardant des sauvegardes régulières et des aperçus d'écoute.
+
+### Entraînement Avancé et Optimisation
+
+- **Idéal pour :** Grands datasets ou multi-émotions/chant soignés, 12-24 Go+ VRAM, pré-entraînés personnalisés.
+- **Réglages :** RVC **v2** · Sample rate assorti (`32/40/48 kHz`) et vocodeur (`HiFi-GAN`, `MRF HiFi-GAN`, ou `RefineGAN` à `32 kHz` dans Ilaria RVC) · Pré-entraîné G/D et embedder personnalisés/assortis · **Batch Size `12-16+`** · Cible **Total Steps** (mises à jour de gradient cohérentes quelle que soit la taille du dataset) · **GPU Caching ON** (uniquement si la VRAM contient aisément le dataset ; mesurez d'abord le temps par époque) · **Fused AdamW ON** (à tester sur une nouvelle session) · **Training Queue** pour tests A/B nocturnes · Suivi **TensorBoard** + comparaison **Audio Analyzer**.
+- **Learning rate :** La plupart des WebUIs RVC (dont Ilaria RVC) utilisent le planning d'optimiseur RVC v2 standard (`1e-4` de base) ; ne modifiez le learning rate dans les interfaces qui l'exposent que si vous maîtrisez sa mise à l'échelle avec le batch size.
+
+## Repérer Underfitting vs. Overfitting à l'oreille
+
+1. **Underfitting (trop tôt) :** La sortie ressemble encore surtout au locuteur d'entrée, manque le timbre cible sur les voyelles tenues ou perd en caractère dans les aigus/graves. *Solution :* Poursuivez l'entraînement depuis le dernier checkpoint `G_*.pth`/`D_*.pth`.
+2. **Overfitting (trop tard) :** La voix sonne robotique/métallique sur des mots nouveaux, reproduit le bruit de pièce ou les artefacts de respiration du dataset, ou ne sonne bien *que* sur des phrases proches du jeu d'entraînement. *Solution :* Revenez à un checkpoint antérieur (`50-100` époques plus tôt) et inspectez le dataset dans [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
+
+> Si vous entraînez avec **Redpanda-vc** (qui ajoute Generator EMA et sauvegarde de checkpoints par pas), consultez [Entraîner des modèles RVC dans Redpanda-vc](../other-rvcs/redpanda/training.md).

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678877883">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680871674">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848678877883" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848680871674" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848680871674" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848680871674" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -240,7 +240,7 @@
 <li>Conserva un master WAV o FLAC non elaborato prima di aggiungere compressione, riverbero o limitazione.</li>
 <li>Per la musica, allinea la voce convertita con l&#x27;originale, controlla i tempi sulle consonanti e ascolta sia l&#x27;assolo che nel mix prima di esportare.</li>
 <li>Salva le tue impostazioni insieme al risultato. Includere il file sorgente, le versioni del modello e dell&#x27;indice, l&#x27;ID dell&#x27;altoparlante se applicabile, l&#x27;incorporamento, l&#x27;estrattore del tono, lo spostamento del tono, il rapporto dell&#x27;indice, l&#x27;elaborazione e il formato di output.</li>
-<li>Quando manca un modello o l&#x27;inferenza fallisce prima di produrre l&#x27;audio, inizia con <a href="../troubleshooting/">Risoluzione dei problemi</a>. Per la conversione del microfono, vedere <a href="../real-time/">Conversione vocale in tempo reale</a>.</li>
+<li>Quando manca un modello o l&#x27;inferenza fallisce prima di produrre l&#x27;audio, inizia con <a href="../troubleshooting/">Risoluzione dei problemi</a>. Per la conversione del microfono, vedere <a href="../it/real-time/">Conversione vocale in tempo reale</a>.</li>
 </ul>
 <h2 id="convert-a-recording-in-mainline-rvc">Converti una registrazione in RVC WebUI (Mainline - Original RVC)</h2>
 <span id="set-up-the-webui" class="docs-anchor"></span><h3 id="configura-la-webui">Configura la WebUI</h3>
@@ -248,7 +248,7 @@
 <span id="load-the-model-and-convert" class="docs-anchor"></span><h3 id="carica-il-modello-e-converti">Carica il modello e converti</h3>
 <p>Posiziona il checkpoint di inferenza in <code translate="no" v-pre>assets/weights</code> e il suo indice di recupero corrispondente, se fornito, in <code translate="no" v-pre>logs</code>. Apri <strong>Model Inference</strong> e aggiorna gli elenchi di voci e indici. Scegli il checkpoint e l&#x27;indice corrispondente. Imposta il rapporto di recupero su zero per i modelli senza indice.</p>
 <p>Fornisci alla WebUI il percorso completo di un breve file WAV locale. Se il percorso fallisce, copia il file di test in una posizione semplice come <code translate="no" v-pre>C:\RVC\input\test.wav</code>. Mantieni la trasposizione a zero per il primo passaggio e seleziona RMVPE se la tua build lo offre. Fai clic su <strong>Converti</strong>, quindi ascolta nel lettore di output e salva il risultato utilizzando il controllo di download. Se la generazione fallisce, leggere il messaggio della console prima di modificare le impostazioni. Un modello che non appare nell&#x27;elenco solitamente deve essere spostato nella directory dei pesi o riscoperto utilizzando l&#x27;aggiornamento.</p>
-<span id="convert-a-recording-in-applio" class="docs-anchor"></span><h2 id="converti-una-registrazione-in-applio">Converti una registrazione in Applio</h2>
+<h2 id="convert-a-recording-in-applio">Converti una registrazione in Applio</h2>
 <span id="set-up-a-single-file-test" class="docs-anchor"></span><h3 id="imposta-un-test-su-file-singolo">Imposta un test su file singolo</h3>
 <p>In Desktop, attendi che il motore sia pronto, aggiungi il modello di inferenza alla libreria e apri <strong>Converti audio</strong> in modalità file singolo. In Gradio, apri l&#x27;interfaccia del browser e seleziona <strong>Converti audio</strong> o <strong>Inferenza</strong>, a seconda della versione. Aggiorna l&#x27;elenco dei modelli dopo aver aggiunto un checkpoint se manca.</p>
 <p>Seleziona la voce e il suo indice accoppiato, quindi conferma l&#x27;incorporamento del contenuto previsto da quel modello. Carica una breve registrazione e scegli WAV o FLAC per il test. Controlla le impostazioni riportate da una esecuzione precedente, in particolare intonazione, recupero ed effetti. Una prova di riferimento utile inizia da zero semitoni con gli effetti disattivati. Avvia il lavoro una volta, attendi l&#x27;output e confronta la stessa frase in entrambe le registrazioni.</p>
@@ -324,7 +324,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T16:39:50.000Z">22/11/2026 · 17:39</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

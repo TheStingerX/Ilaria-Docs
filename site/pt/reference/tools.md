@@ -96,9 +96,14 @@ Após o encerramento do Weights.gg, o Replay deixou de receber suporte e atualiz
 
 | App | SO | GPU / CPU | Formatos | TTS | Estado e Licença | Facilidade |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sim | **Ativo** (MIT) | Fácil |
-| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | Não | **Beta** (2.0.0 Beta 3) | Fácil |
-| **Applio** | Windows, Linux, macOS | NVIDIA, AMD, MPS, CPU | .pth, .index, .onnx | Sim | **Ativo** (MIT) | Fácil–Média |
-| **w-okada / TGR / Deiteris** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | Não | **Ativos** | Média |
-| **RVC WebUI / RVC Blue / Redpanda-vc** | Windows, Linux | NVIDIA CUDA (DirectML/CPU var.) | .pth, .index | Não | **Ativos / Upstream** | Fácil–Média |
-| **RVC GUI / Replay** | Windows / Legacy | Legacy | .pth | Não | **Arquivado / Descontinuado** | Legacy |
+| **Ilaria RVC** | Windows (local), Linux (Cloud) | NVIDIA CUDA (`12.8` / `12.6` legado) | `.pth`, `.index`, `.safetensors` (conversor) | Sim (Kokoro / Edge) | **Ativo** (MIT / baseado em RVC) | Fácil (ZIP portátil) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 `.pth`, `.index` | Não | **Beta** (`2.0.0 Beta 3`) | Fácil (ZIP por GPU) |
+| **Applio** | Windows, Linux, macOS (MPS) | NVIDIA, AMD (doc.), Apple MPS, CPU | `.pth`, `.index`, `.onnx` (exportação) | Sim | **Ativo** (MIT) | Fácil-Média (Instalador / Python) |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML (AMD/Intel), MPS, CPU | `.pth`, `.onnx` | Não | **Ativo / Mantido** (MIT) | Média (depende da edição) |
+| **Okada TG Developed Fork** | Windows, Linux, macOS (exp.) | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | Não | **Fork ativo** | Média (ZIP / Build) |
+| **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | Não | **Fork ativo** | Média (ZIP / Build) |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | Não | **Upstream / Lento** (MIT) | Média (ZIP / Git) |
+| **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | Não | **Ativo** | Fácil (ZIP portátil) |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice na CPU) | RVC, Beatrice, Rectified Flow | Não | **Fork ativo** | Média |
+| **RVC GUI** | Windows | NVIDIA CUDA (legado) | `.pth`, `.index` | Não | **Arquivado** | Fácil (ZIP legado) |
+| **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legado) | `.pth` / Weights | Não | **Descontinuado** (Weights.gg fechou) | Quebrado / Apenas legado |

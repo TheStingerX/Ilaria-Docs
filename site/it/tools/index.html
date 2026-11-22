@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678877883">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680871674">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848678877883" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848680871674" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848680871674" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848678877883" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848680871674" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -393,15 +393,17 @@
 </blockquote>
 <retype-table copy-text="| App | OS | GPU / CPU | Formati | TTS | Stato e Licenza | Facilità |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sì (Kokoro / Edge) | **Attivo** (MIT) | Facile (ZIP portatile) |
-| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | No | **Beta** (2.0.0 Beta 3) | Facile |
-| **Applio** | Windows, Linux, macOS | NVIDIA, AMD (doc.), MPS, CPU | .pth, .index, .onnx | Sì | **Attivo** (MIT) | Facile–Media |
-| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | No | **Attivo** (MIT) | Media |
-| **Okada TGR / Deiteris** | Windows, Linux, macOS | NVIDIA CUDA, DirectML, CPU | .pth, .onnx | No | **Fork attivi** | Media |
-| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | .pth, .index | No | **Upstream lento** (MIT) | Media |
-| **RVC Blue** | Windows | NVIDIA CUDA (12.8 / 11.8) | .pth, .index | No | **Attivo** | Facile |
-| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
-| **RVC GUI / Replay** | Windows / Legacy | NVIDIA / Legacy | .pth | No | **Archiviato / Dismesso** | Legacy |">
+| **Ilaria RVC** | Windows (locale), Linux (Cloud) | NVIDIA CUDA (`12.8` / `12.6` legacy) | `.pth`, `.index`, `.safetensors` (converter) | Sì (Kokoro / Edge) | **Attivo** (MIT / basato su RVC) | Facile (ZIP portatile) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 `.pth`, `.index` | No | **Beta** (`2.0.0 Beta 3`) | Facile (ZIP per GPU) |
+| **Applio** | Windows, Linux, macOS (MPS) | NVIDIA, AMD (doc.), Apple MPS, CPU | `.pth`, `.index`, `.onnx` (export) | Sì | **Attivo** (MIT) | Facile-Media (Installer / Python) |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML (AMD/Intel), MPS, CPU | `.pth`, `.onnx` | No | **Attivo / Mantenuto** (MIT) | Media (dipende dall'edizione) |
+| **Okada TG Developed Fork** | Windows, Linux, macOS (sper.) | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Fork attivo** | Media (ZIP / Build) |
+| **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Fork attivo** | Media (ZIP / Build) |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | No | **Upstream / Lento** (MIT) | Media (ZIP / Git) |
+| **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | No | **Attivo** | Facile (ZIP portatile) |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice su CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
+| **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archiviato** | Facile (ZIP legacy) |
+| **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Dismesso** (Weights.gg chiuso) | Non funzionante / Solo legacy |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -418,84 +420,102 @@
 <tbody>
 <tr>
 <td><strong>Ilaria RVC</strong></td>
-<td>Windows, Linux (Cloud)</td>
-<td>NVIDIA CUDA (12.8 / 12.6)</td>
-<td>.pth, .index, .safetensors</td>
+<td>Windows (locale), Linux (Cloud)</td>
+<td>NVIDIA CUDA (<code translate="no" v-pre>12.8</code> / <code translate="no" v-pre>12.6</code> legacy)</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code>, <code translate="no" v-pre>.safetensors</code> (converter)</td>
 <td>Sì (Kokoro / Edge)</td>
-<td><strong>Attivo</strong> (MIT)</td>
+<td><strong>Attivo</strong> (MIT / basato su RVC)</td>
 <td>Facile (ZIP portatile)</td>
 </tr>
 <tr>
 <td><strong>Vonovox</strong></td>
 <td>Windows</td>
 <td>NVIDIA CUDA</td>
-<td>RVC v2 .pth, .index</td>
+<td>RVC v2 <code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code></td>
 <td>No</td>
-<td><strong>Beta</strong> (2.0.0 Beta 3)</td>
-<td>Facile</td>
+<td><strong>Beta</strong> (<code translate="no" v-pre>2.0.0 Beta 3</code>)</td>
+<td>Facile (ZIP per GPU)</td>
 </tr>
 <tr>
 <td><strong>Applio</strong></td>
-<td>Windows, Linux, macOS</td>
-<td>NVIDIA, AMD (doc.), MPS, CPU</td>
-<td>.pth, .index, .onnx</td>
+<td>Windows, Linux, macOS (MPS)</td>
+<td>NVIDIA, AMD (doc.), Apple MPS, CPU</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code>, <code translate="no" v-pre>.onnx</code> (export)</td>
 <td>Sì</td>
 <td><strong>Attivo</strong> (MIT)</td>
-<td>Facile–Media</td>
+<td>Facile-Media (Installer / Python)</td>
 </tr>
 <tr>
 <td><strong>w-okada VCClient</strong></td>
 <td>Windows, macOS, Linux</td>
-<td>NVIDIA, DirectML, MPS, CPU</td>
-<td>.pth, .onnx</td>
+<td>NVIDIA, DirectML (AMD/Intel), MPS, CPU</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.onnx</code></td>
 <td>No</td>
-<td><strong>Attivo</strong> (MIT)</td>
-<td>Media</td>
+<td><strong>Attivo / Mantenuto</strong> (MIT)</td>
+<td>Media (dipende dall&#x27;edizione)</td>
 </tr>
 <tr>
-<td><strong>Okada TGR / Deiteris</strong></td>
-<td>Windows, Linux, macOS</td>
-<td>NVIDIA CUDA, DirectML, CPU</td>
-<td>.pth, .onnx</td>
+<td><strong>Okada TG Developed Fork</strong></td>
+<td>Windows, Linux, macOS (sper.)</td>
+<td>NVIDIA CUDA, DirectML (AMD/Intel), CPU</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.onnx</code></td>
 <td>No</td>
-<td><strong>Fork attivi</strong></td>
-<td>Media</td>
+<td><strong>Fork attivo</strong></td>
+<td>Media (ZIP / Build)</td>
+</tr>
+<tr>
+<td><strong>Deiteris w-okada Fork</strong></td>
+<td>Windows, Linux, macOS</td>
+<td>NVIDIA CUDA, DirectML (AMD/Intel), CPU</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.onnx</code></td>
+<td>No</td>
+<td><strong>Fork attivo</strong></td>
+<td>Media (ZIP / Build)</td>
 </tr>
 <tr>
 <td><strong>RVC WebUI (Mainline)</strong></td>
 <td>Windows, Linux</td>
 <td>NVIDIA CUDA, CPU / DirectML</td>
-<td>.pth, .index</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code></td>
 <td>No</td>
-<td><strong>Upstream lento</strong> (MIT)</td>
-<td>Media</td>
+<td><strong>Upstream / Lento</strong> (MIT)</td>
+<td>Media (ZIP / Git)</td>
 </tr>
 <tr>
 <td><strong>RVC Blue</strong></td>
 <td>Windows</td>
-<td>NVIDIA CUDA (12.8 / 11.8)</td>
-<td>.pth, .index</td>
+<td>NVIDIA CUDA (<code translate="no" v-pre>12.8</code> / <code translate="no" v-pre>11.8</code>)</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code></td>
 <td>No</td>
 <td><strong>Attivo</strong></td>
-<td>Facile</td>
+<td>Facile (ZIP portatile)</td>
 </tr>
 <tr>
 <td><strong>Redpanda-vc</strong></td>
 <td>Windows, Linux</td>
-<td>NVIDIA CUDA (Beatrice CPU)</td>
+<td>NVIDIA CUDA (Beatrice su CPU)</td>
 <td>RVC, Beatrice, Rectified Flow</td>
 <td>No</td>
 <td><strong>Fork attivo</strong></td>
 <td>Media</td>
 </tr>
 <tr>
-<td><strong>RVC GUI / Replay</strong></td>
-<td>Windows / Legacy</td>
-<td>NVIDIA / Legacy</td>
-<td>.pth</td>
+<td><strong>RVC GUI</strong></td>
+<td>Windows</td>
+<td>NVIDIA CUDA (legacy)</td>
+<td><code translate="no" v-pre>.pth</code>, <code translate="no" v-pre>.index</code></td>
 <td>No</td>
-<td><strong>Archiviato / Dismesso</strong></td>
-<td>Legacy</td>
+<td><strong>Archiviato</strong></td>
+<td>Facile (ZIP legacy)</td>
+</tr>
+<tr>
+<td><strong>Replay</strong></td>
+<td>Windows, macOS</td>
+<td>NVIDIA / MPS / CPU (legacy)</td>
+<td><code translate="no" v-pre>.pth</code> / Weights</td>
+<td>No</td>
+<td><strong>Dismesso</strong> (Weights.gg chiuso)</td>
+<td>Non funzionante / Solo legacy</td>
 </tr>
 </tbody>
 </table>
@@ -535,7 +555,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T16:39:50.000Z">22/11/2026 · 17:39</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

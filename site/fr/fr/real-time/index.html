@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680890998">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Conversion vocale en temps réel">
+    <meta name="description" content="Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/fr/real-time/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/fr/real-time/">
+    <meta property="og:title" content="Conversion vocale en temps réel">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/fr/real-time/">
+    <meta name="twitter:title" content="Conversion vocale en temps réel">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/conversion/real-time.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
+    <link href="../../resources/css/retype.css?v=4.6.0.848680890998" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848680890998" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848680890998" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/fr/real-time/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/fr/fr/real-time/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="conversion-vocale-en-temps-réel">Conversion vocale en temps réel</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises.</div>
+<p>Pour un enregistrement ou une reprise, la conversion de fichier vous permet de générer et comparer plusieurs prises. En configuration directe, le convertisseur doit terminer chaque bloc audio assez vite pour maintenir le flux du microphone fluide. Configurez d&#x27;abord un signal local fiable, puis reliez-le à une application d&#x27;appel, d&#x27;enregistrement ou de streaming.</p>
+<h2 id="choisissez-un-outil-adapté">Choisissez un outil adapté</h2>
+<p>Consultez le <a href="../../tools/">répertoire des outils RVC</a> pour les téléchargements et notes matérielles, dont Vonovox pour GPU NVIDIA.</p>
+<retype-table copy-text="| Outil | Par où commencer |
+| --- | --- |
+| Vonovox | Un convertisseur temps réel pour modèles RVC V2 sous Windows avec GPU NVIDIA. Téléchargez une version pour votre GPU, chargez le modèle et testez votre micro au casque avant de router le signal converti vers une autre appli. [Téléchargements Vonovox](https://huggingface.co/dr87/vonovox/tree/main) · [Documentation projet](https://github.com/dr87/Vonovox) |
+| RVC WebUI (Mainline - Original RVC) | Le projet principal fournit une WebUI d'entraînement et d'inférence ainsi qu'une GUI dédiée temps réel. Référez-vous à ses instructions de version et de lancement pour votre plateforme. |
+| Applio | Ses interfaces Desktop et Gradio disposent de leurs propres workflows temps réel. Suivez les instructions d'installation correspondant à l'interface et la version installées. |
+| w-okada VCClient | Un modificateur de voix pour le direct. La disponibilité RVC dépend de l'édition et de la plateforme. Vérifiez les modèles pris en charge avant d'installer une version. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
+| Deiteris et Tg-Develop | Forks indépendants de w-okada avec leurs propres builds et réglages. Consultez les notes de version du fork avant d'appliquer des instructions d'une autre édition. [Dépôt Deiteris](https://github.com/deiteris/voice-changer) · [Dépôt Tg-Develop](https://github.com/tg-develop/voice-changer) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Outil</th>
+<th>Par où commencer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vonovox</td>
+<td>Un convertisseur temps réel pour modèles RVC V2 sous Windows avec GPU NVIDIA. Téléchargez une version pour votre GPU, chargez le modèle et testez votre micro au casque avant de router le signal converti vers une autre appli. <a href="https://huggingface.co/dr87/vonovox/tree/main">Téléchargements Vonovox</a> · <a href="https://github.com/dr87/Vonovox">Documentation projet</a></td>
+</tr>
+<tr>
+<td>RVC WebUI (Mainline - Original RVC)</td>
+<td>Le projet principal fournit une WebUI d&#x27;entraînement et d&#x27;inférence ainsi qu&#x27;une GUI dédiée temps réel. Référez-vous à ses instructions de version et de lancement pour votre plateforme.</td>
+</tr>
+<tr>
+<td>Applio</td>
+<td>Ses interfaces Desktop et Gradio disposent de leurs propres workflows temps réel. Suivez les instructions d&#x27;installation correspondant à l&#x27;interface et la version installées.</td>
+</tr>
+<tr>
+<td>w-okada VCClient</td>
+<td>Un modificateur de voix pour le direct. La disponibilité RVC dépend de l&#x27;édition et de la plateforme. Vérifiez les modèles pris en charge avant d&#x27;installer une version. <a href="https://github.com/w-okada/voice-changer">w-okada VCClient</a></td>
+</tr>
+<tr>
+<td>Deiteris et Tg-Develop</td>
+<td>Forks indépendants de w-okada avec leurs propres builds et réglages. Consultez les notes de version du fork avant d&#x27;appliquer des instructions d&#x27;une autre édition. <a href="https://github.com/deiteris/voice-changer">Dépôt Deiteris</a> · <a href="https://github.com/tg-develop/voice-changer">Dépôt Tg-Develop</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h2 id="écoutez-dabord-un-signal-propre">Écoutez d&#x27;abord un signal propre</h2>
+<ol>
+<li>Branchez un microphone et un casque. Dans le convertisseur, sélectionnez votre microphone physique en entrée et votre casque en sortie.</li>
+<li>Chargez un modèle d&#x27;inférence compatible connu et son index correspondant si vous utilisez le retrieval. Une courte <a href="../../getting-started/">conversion de fichier</a> réussie est une bonne référence avant de tester le chemin en direct.</li>
+<li>Lancez le flux et parlez à volume normal. Vérifiez le vumètre d&#x27;entrée ou faites un enregistrement brut. Réduisez le gain d&#x27;entrée si les crêtes saturent avant conversion.</li>
+<li>Vérifiez que le signal au casque change lorsque vous activez/désactivez la conversion. Si vous entendez l&#x27;original en même temps, vérifiez le monitoring matériel direct ou une seconde route dans le système.</li>
+<li>Testez plus longtemps qu&#x27;un seul mot. Incluez parole calme, phrase forte et courte pause. Écoutez s&#x27;il y a des coupures, dérives ou parasites sous la même charge que celle prévue en direct.</li>
+</ol>
+<p>Évitez d&#x27;écouter sur des haut-parleurs près d&#x27;un micro actif. Le casque aide à repérer un problème de routage sans renvoyer la sortie dans l&#x27;entrée.</p>
+<h2 id="comprendre-les-rôles-des-périphériques-et-backends-audio">Comprendre les rôles des périphériques et backends audio</h2>
+<blockquote>
+<p><strong>Routage Audio Correct (Correct Audio Routing)</strong></p>
+<p><strong>1. Dans le Voice Changer</strong></p>
+<ul>
+<li><strong>Périphérique d&#x27;Entrée :</strong> Votre microphone physique.</li>
+<li><strong>Périphérique de Sortie :</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommandé) ou <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. Dans Discord, Jeux, OBS ou Autres Applications</strong></p>
+<ul>
+<li><strong>Périphérique d&#x27;Entrée :</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommandé) ou <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Périphérique de Sortie :</strong> Votre casque (fortement recommandé par rapport aux haut-parleurs).</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Votre Microphone → Voice Changer → Line 1 (VAC) ou CABLE Input/Output (VB-CABLE) → Discord / Jeu / OBS</code></pre>
+</doc-codeblock></div>
+<p>L&#x27;audio venant de Discord, du jeu ou d&#x27;autres applis doit aller directement dans votre <strong>casque</strong> (jamais en retour dans le câble virtuel).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE :</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) est toujours recommandé. Si vous avez aussi (ou uniquement) <strong>VB-CABLE</strong> installé, rappelez-vous que le voice changer envoie vers <strong><code translate="no" v-pre>CABLE Input</code></strong> tandis que Discord / les jeux écoutent <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Haut-parleurs et fuite du casque :</strong> Évitez les haut-parleurs ; le son peut repasser dans votre microphone et provoquer un son double, de l&#x27;écho ou convertir aussi la voix d&#x27;autres personnes. Cela peut également arriver avec un casque si le volume est trop fort ou si les oreillettes ne sont pas assez fermées et isolées.</li>
+<li><strong>Monitoring :</strong> Entendre votre propre voix convertie au casque est une fonction optionnelle séparée à n&#x27;activer qu&#x27;au besoin. Évitez les trajets audio en double, l&#x27;écho et le loopback.</li>
+</ul>
+</blockquote>
+<p>Avant de câbler une application, sachez ce que fait chaque extrémité :</p>
+<retype-table copy-text="| Terme | Ce que c'est |
+| --- | --- |
+| **Input Device** | Votre microphone physique (ou canal d'interface audio) envoyant la voix brute vers le voice changer. |
+| **Output Device** | Où va la voix convertie (votre **point de lecture du câble virtuel** pour Discord/OBS/jeux, ou votre casque pour un test local). |
+| **Monitor Device** | Seconde sortie optionnelle pour entendre votre voix convertie au casque pendant que **Output Device** alimente un câble virtuel. |
+| **Virtual Cable Input** *(côté Lecture)* | Apparaît sous Lecture Windows (ex. `Line 1` dans VAC Lite ou `CABLE Input` dans VB-CABLE). Définissez-le comme **Output Device** du voice changer. |
+| **Virtual Cable Output** *(côté Enregistrement)* | Apparaît sous Enregistrement Windows (ex. `Line 1` dans VAC Lite ou `CABLE Output` dans VB-CABLE). Sélectionnez-le comme **Microphone** dans Discord, OBS ou les jeux. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Terme</th>
+<th>Ce que c&#x27;est</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input Device</strong></td>
+<td>Votre microphone physique (ou canal d&#x27;interface audio) envoyant la voix brute vers le voice changer.</td>
+</tr>
+<tr>
+<td><strong>Output Device</strong></td>
+<td>Où va la voix convertie (votre <strong>point de lecture du câble virtuel</strong> pour Discord/OBS/jeux, ou votre casque pour un test local).</td>
+</tr>
+<tr>
+<td><strong>Monitor Device</strong></td>
+<td>Seconde sortie optionnelle pour entendre votre voix convertie au casque pendant que <strong>Output Device</strong> alimente un câble virtuel.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Input</strong> <em>(côté Lecture)</em></td>
+<td>Apparaît sous Lecture Windows (ex. <code translate="no" v-pre>Line 1</code> dans VAC Lite ou <code translate="no" v-pre>CABLE Input</code> dans VB-CABLE). Définissez-le comme <strong>Output Device</strong> du voice changer.</td>
+</tr>
+<tr>
+<td><strong>Virtual Cable Output</strong> <em>(côté Enregistrement)</em></td>
+<td>Apparaît sous Enregistrement Windows (ex. <code translate="no" v-pre>Line 1</code> dans VAC Lite ou <code translate="no" v-pre>CABLE Output</code> dans VB-CABLE). Sélectionnez-le comme <strong>Microphone</strong> dans Discord, OBS ou les jeux.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="microphones-usb-interfaces-audio-et-backends">Microphones USB, interfaces audio et backends</h3>
+<ul>
+<li><strong>Microphones USB :</strong> Branchez-les directement sur un port USB arrière de la carte mère (évitez les hubs non alimentés), réglez le format Windows sur <strong>48000 Hz</strong> et désactivez la suspension sélective USB si le micro décroche.</li>
+<li><strong>Interfaces audio (XLR) :</strong> Utilisez <strong>ASIO</strong> lorsqu&#x27;il est pris en charge par votre voice changer (comme RVC Blue ou w-okada) pour une latence tampon moindre, ou <strong>WASAPI</strong> pour router vers des câbles virtuels Windows standard.</li>
+<li><strong>WASAPI Shared vs. WASAPI Exclusive :</strong> <strong>WASAPI Shared</strong> est le point de départ le plus sûr car Windows et les câbles virtuels peuvent partager proprement des flux <code translate="no" v-pre>48000 Hz</code>. <strong>WASAPI Exclusive</strong> contourne le mixeur Windows pour réduire la latence pilote quand c&#x27;est pris en charge, mais verrouille le périphérique pour les autres applis.</li>
+</ul>
+<h2 id="configuration-spécifique-par-application-discord-obs-jeux-appels-enregistrement">Configuration spécifique par application (Discord, OBS, jeux, appels, enregistrement)</h2>
+<ul>
+<li><strong>Discord / applis d&#x27;appel :</strong> Réglez <strong>Input Device</strong> sur le point d&#x27;enregistrement du câble virtuel (<code translate="no" v-pre>Line 1</code> / <code translate="no" v-pre>CABLE Output</code>), réglez <strong>Output Device</strong> sur votre casque et désactivez (<strong>OFF</strong>) Krisp, suppression d&#x27;écho et sensibilité d&#x27;entrée automatique si Discord coupe respirations ou fins de mots.</li>
+<li><strong>OBS Studio et enregistrement local :</strong> Ajoutez une source <strong>Capture d&#x27;entrée audio</strong> pointant vers le point d&#x27;enregistrement du câble virtuel, coupez toute source micro brute séparée et enregistrez un court extrait de test pour vérifier synchro et niveaux.</li>
+<li><strong>Jeux :</strong> Sélectionnez le point d&#x27;enregistrement du câble virtuel comme micro en jeu (ou définissez-le comme périphérique de communication par défaut dans Windows). Limitez toujours les FPS en jeu ou laissez de la marge GPU pour que le jeu n&#x27;affame pas le voice changer.</li>
+</ul>
+<h2 id="envoyer-laudio-converti-à-une-autre-application">Envoyer l&#x27;audio converti à une autre application</h2>
+<p>Un périphérique audio virtuel fournit un point de lecture pour le convertisseur et un point d&#x27;enregistrement correspondant pour l&#x27;application réceptrice. Les noms dépendent du pilote. Par exemple, un câble virtuel peut nommer son point de lecture &quot;Input&quot; et son point d&#x27;enregistrement &quot;Output&quot; car les instructions adoptent la perspective du câble.</p>
+<div id="envoyer-laudio-converti-à-une-autre-application-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Microphone physique → Convertisseur RVC → point de lecture virtuel
+                                               ↓
+                                point d'enregistrement correspondant → appel ou stream</code></pre>
+</doc-codeblock></div>
+<p>Sélectionnez le point d&#x27;enregistrement correspondant comme micro dans l&#x27;application réceptrice et faites-y un court enregistrement test. Si votre retour local est correct mais pas l&#x27;enregistrement, vérifiez l&#x27;entrée de destination et retirez toute source micro en double. Si vous écoutez l&#x27;audio converti, utilisez une sortie casque distincte. Évitez de renvoyer tout le mix bureau ou l&#x27;audio de l&#x27;appli réceptrice dans le convertisseur.</p>
+<h2 id="ajuster-la-latence-sans-perdre-en-stabilité">Ajuster la latence sans perdre en stabilité</h2>
+<p><strong>Latence de traitement vs latence totale de bout en bout :</strong> Le <strong>GPU Delay</strong> / temps d&#x27;inférence affiché dans votre voice changer correspond <strong>uniquement</strong> au temps pris par le GPU pour convertir un bloc. La <strong>latence totale de bout en bout</strong> ajoute tampon d&#x27;entrée micro, <strong>Block Size / Chunk Size</strong>, surcoût crossfade/contexte, tampon du câble virtuel et tampons audio Discord/OBS/jeu. Ne confondez pas un faible GPU Delay (ex. <code translate="no" v-pre>15 ms</code>) avec la latence aller-retour totale.</p>
+<retype-table copy-text="| Contrôle | Réglage pratique |
+| --- | --- |
+| Taille de bloc ou chunk | Augmentez-la si la parole se coupe sous charge. Une fois stable, testez plus petit et ne gardez que si la parole reste propre. Des blocs plus courts laissent moins de temps de calcul. |
+| Crossfade | Augmentez prudemment si vous entendez des raccords durs entre blocs. Modifie le chevauchement des blocs voisins. |
+| Contexte supplémentaire | Réduisez le contexte si le convertisseur prend du retard. Aide le modèle sur les transitions au prix de plus de calcul. |
+| Prédicteur de hauteur | Si un réglage donne un timing instable, comparez les prédicteurs sur les mêmes phrases. Choisissez celui qui gère votre tessiture avec assez de marge. |
+| Détection de silence ou seuil d'entrée | Baissez un seuil qui coupe les syllabes douces. Évaluez sur les pauses et la parole faible, pas seulement sur une voix forte continue. |
+| Fréquence périphérique | Vérifiez les fréquences d'échantillonnage du périphérique et du câble virtuel en cas de vitesse anormale ou craquements. Partez de réglages compatibles sur toute la chaîne. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contrôle</th>
+<th>Réglage pratique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taille de bloc ou chunk</td>
+<td>Augmentez-la si la parole se coupe sous charge. Une fois stable, testez plus petit et ne gardez que si la parole reste propre. Des blocs plus courts laissent moins de temps de calcul.</td>
+</tr>
+<tr>
+<td>Crossfade</td>
+<td>Augmentez prudemment si vous entendez des raccords durs entre blocs. Modifie le chevauchement des blocs voisins.</td>
+</tr>
+<tr>
+<td>Contexte supplémentaire</td>
+<td>Réduisez le contexte si le convertisseur prend du retard. Aide le modèle sur les transitions au prix de plus de calcul.</td>
+</tr>
+<tr>
+<td>Prédicteur de hauteur</td>
+<td>Si un réglage donne un timing instable, comparez les prédicteurs sur les mêmes phrases. Choisissez celui qui gère votre tessiture avec assez de marge.</td>
+</tr>
+<tr>
+<td>Détection de silence ou seuil d&#x27;entrée</td>
+<td>Baissez un seuil qui coupe les syllabes douces. Évaluez sur les pauses et la parole faible, pas seulement sur une voix forte continue.</td>
+</tr>
+<tr>
+<td>Fréquence périphérique</td>
+<td>Vérifiez les fréquences d&#x27;échantillonnage du périphérique et du câble virtuel en cas de vitesse anormale ou craquements. Partez de réglages compatibles sur toute la chaîne.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Partez des réglages par défaut de l&#x27;application et ne modifiez qu&#x27;un paramètre à la fois. Si un jeu ou programme lourd tourne sur la machine, répétez le test pendant qu&#x27;il est lancé. Conservez un profil fonctionnel pour le restaurer avant de passer en direct. <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py">GUI temps réel RVC WebUI (Mainline - Original RVC)</a></p>
+<h2 id="dépanner-selon-lendroit-où-apparaît-le-défaut">Dépanner selon l&#x27;endroit où apparaît le défaut</h2>
+<retype-table copy-text="| Symptôme | À vérifier d'abord |
+| --- | --- |
+| Ni le vumètre du convertisseur ni un enregistrement micro brut ne réagissent | Vérifiez les autorisations micro Windows, le bouton mute physique et le choix de Input Device. |
+| Le micro brut fonctionne, mais la sortie convertie est muette | Confirmez que le flux est démarré, le modèle chargé et Output Device bien défini. Baissez le seuil VAD/silence. |
+| Le retour local fonctionne, mais l'appel reçoit la voix d'origine | Sélectionnez le point d'enregistrement virtuel (`CABLE Output` / `Line 1`) comme micro d'appel et désactivez toute source micro brute séparée. |
+| Double retour / écho / boucle de rétroaction | N'utilisez jamais de haut-parleurs près d'un micro actif. Désactivez **&quot;Écouter ce périphérique&quot;** dans Windows si l'appli écoute déjà, et ne routez jamais l'audio bureau/appel dans le câble virtuel. |
+| Craquements, saccades ou sous-dépassement de tampon | Alignez **tous** les périphériques (Micro, Casque, Cable Input/Output) à **48000 Hz** (`mmsys.cpl`), montez **Block/Chunk Size** d'un cran et vérifiez la charge CPU. |
+| Voix robotique ou syllabes coupées | L'extracteur de hauteur est trop lourd (`crepe` full) -&gt; passez à **RMVPE** ou **FCPE**, ou baissez **Index Ratio**. |
+| **GPU Delay** élevé ou craquements uniquement en jeu | **Saturation GPU** : limitez les FPS du jeu, baissez les options GPU lourdes ou augmentez **Block Size**. |
+| Un modèle fonctionne sur fichier mais échoue en direct | Vérifiez l'édition du client live, l'architecture et le support d'embedder. Testez un modèle listé compatible avant de changer vos périphériques audio. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Symptôme</th>
+<th>À vérifier d&#x27;abord</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ni le vumètre du convertisseur ni un enregistrement micro brut ne réagissent</td>
+<td>Vérifiez les autorisations micro Windows, le bouton mute physique et le choix de Input Device.</td>
+</tr>
+<tr>
+<td>Le micro brut fonctionne, mais la sortie convertie est muette</td>
+<td>Confirmez que le flux est démarré, le modèle chargé et Output Device bien défini. Baissez le seuil VAD/silence.</td>
+</tr>
+<tr>
+<td>Le retour local fonctionne, mais l&#x27;appel reçoit la voix d&#x27;origine</td>
+<td>Sélectionnez le point d&#x27;enregistrement virtuel (<code translate="no" v-pre>CABLE Output</code> / <code translate="no" v-pre>Line 1</code>) comme micro d&#x27;appel et désactivez toute source micro brute séparée.</td>
+</tr>
+<tr>
+<td>Double retour / écho / boucle de rétroaction</td>
+<td>N&#x27;utilisez jamais de haut-parleurs près d&#x27;un micro actif. Désactivez <strong>&quot;Écouter ce périphérique&quot;</strong> dans Windows si l&#x27;appli écoute déjà, et ne routez jamais l&#x27;audio bureau/appel dans le câble virtuel.</td>
+</tr>
+<tr>
+<td>Craquements, saccades ou sous-dépassement de tampon</td>
+<td>Alignez <strong>tous</strong> les périphériques (Micro, Casque, Cable Input/Output) à <strong>48000 Hz</strong> (<code translate="no" v-pre>mmsys.cpl</code>), montez <strong>Block/Chunk Size</strong> d&#x27;un cran et vérifiez la charge CPU.</td>
+</tr>
+<tr>
+<td>Voix robotique ou syllabes coupées</td>
+<td>L&#x27;extracteur de hauteur est trop lourd (<code translate="no" v-pre>crepe</code> full) -&gt; passez à <strong>RMVPE</strong> ou <strong>FCPE</strong>, ou baissez <strong>Index Ratio</strong>.</td>
+</tr>
+<tr>
+<td><strong>GPU Delay</strong> élevé ou craquements uniquement en jeu</td>
+<td><strong>Saturation GPU</strong> : limitez les FPS du jeu, baissez les options GPU lourdes ou augmentez <strong>Block Size</strong>.</td>
+</tr>
+<tr>
+<td>Un modèle fonctionne sur fichier mais échoue en direct</td>
+<td>Vérifiez l&#x27;édition du client live, l&#x27;architecture et le support d&#x27;embedder. Testez un modèle listé compatible avant de changer vos périphériques audio.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><a href="../../rvc-fundamentals/">Fondamentaux RVC</a> · <a href="../../troubleshooting/">Dépannage</a></p>
+<h2 id="rvc-blue">RVC Blue</h2>
+<p>Conversion vocale de bureau sous Windows. <a href="../../ilaria-rvc/rvc-blue/installation/">Installation et configuration</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../text-to-speech/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#128172; Synth&#232;se vocale</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../stems-and-mixing/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">&#127925; Stems et mixage</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T16:39:50.000Z">22/11/2026 · 17:39</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "⚡ Conversion en temps réel", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/conversion/real-time.md" }</script>
+</body>
+</html>

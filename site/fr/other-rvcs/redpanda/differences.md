@@ -24,7 +24,7 @@ Un fork n'est **pas** automatiquement meilleur que l'original sur tous les plans
 
 ## Tableau comparatif général
 
-Les libellés ci-dessous reflètent l'inspection statique du code source sur la branche `main` de chaque dépôt (commits indiqués dans [Sources et références techniques](#sources-et-references-techniques)) :
+Les libellés ci-dessous reflètent l'inspection statique du code source sur la branche `main` de chaque dépôt (commits indiqués dans [Sources et références techniques](#sources-et-références-techniques)) :
 
 | Fonctionnalité | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
 | --- | --- | --- | --- | --- |

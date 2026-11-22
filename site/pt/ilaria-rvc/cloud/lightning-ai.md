@@ -1,26 +1,30 @@
 # Lightning AI Studio
 
-[Notebook · GitHub](https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb) · [Lightning AI Studio](https://lightning.ai/)
+[Abrir o notebook · GitHub](https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-LightningAI.ipynb) · [Lightning AI Studio](https://lightning.ai/)
+
+Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula.
 
 ## Antes de começar
 
-Prepara um WAV curto e limpo, um modelo compatível para inferência e uma cópia do conjunto de dados se fores treinar.
+Prepare um WAV curto e limpo e um modelo de inferência compatível. Para treinamento, mantenha o dataset original e alguns clipes de teste separados no seu próprio computador. O notebook roda em uma máquina Linux remota.
 
-1. Cria um Studio com GPU e abre o notebook carregado no JupyterLab.
-2. Executa as células 1 a 4 para verificar a GPU, instalar dependências, descarregar pesos e iniciar a interface.
 ### Créditos, plano gratuito e disponibilidade de GPU
 
-O Lightning AI usa um **sistema de créditos** (1 crédito =  USD por segundo; ver [Preços Lightning AI](https://lightning.ai/pricing)):
+O Lightning AI usa um **modelo de cobrança baseado em créditos** (`1 crédito = $1 USD`, cobrado por segundo de computação GPU; veja [Preços do Lightning AI](https://lightning.ai/pricing)):
 
-- **Plano gratuito:** Inclui **um Studio 4-CPU gratuito** (até 4h contínuas antes de reiniciar) e **10 GB de armazenamento gratuito**.
-- **Créditos iniciais vs. planos pagos:** Contas novas recebem normalmente créditos iniciais após verificação (não são horas GPU gratuitas renováveis mensalmente). Os planos **Pro** incluem créditos mensais.
-- **Verificar saldo e GPUs:** Confirma o saldo no painel do Studio e prepara o ambiente no Studio CPU gratuito antes de mudar para GPU.
+- **Plano gratuito:** Inclui **um Studio gratuito de 4 CPUs** (até 4 horas contínuas antes de reiniciar) e **10 GB de armazenamento gratuito** (armazenamento acima de 10 GB é cobrado mensalmente).
+- **Créditos iniciais vs. planos pagos:** Novas contas costumam receber créditos iniciais após cadastro/verificação (não são horas gratuitas de GPU renovadas mensalmente). Assinaturas pagas **Pro** fornecem uma cota mensal de créditos.
+- **Verifique seu saldo e GPUs:** Abra o painel do Studio / cobrança para conferir seu saldo restante de créditos antes de iniciar uma instância GPU, e lembre-se de que tipos específicos de GPU (como T4, L4 ou L40) estão sujeitos à disponibilidade regional e da conta. Faça primeiro a instalação de dependências no Studio CPU gratuito e mude para GPU apenas quando estiver pronto para rodar inferência ou treinamento.
 
-3. Abre no **Port viewer** a porta indicada (7865 por predefinição) e mantém-na privada.
+## Executar no Lightning AI Studio
 
-## Verificar as células
+1. Crie um GPU Studio, envie o notebook e abra-o no JupyterLab.
+2. Execute as células 1-4 em ordem. Elas verificam a GPU, instalam dependências, baixam pesos base e iniciam a Web UI. Defina `TRAINING_SAMPLE_RATES` como `[]` apenas para inferência ou selecione as taxas de amostragem em que pretende treinar.
+3. Abra o **Port viewer** no seu Studio e selecione a porta exibida pela célula de inicialização (`7865` por padrão). Mantenha a porta privada.
 
-Confirma que a primeira célula deteta uma GPU NVIDIA. Espera que as dependências acabem de instalar. Para inferência, podes usar `TRAINING_SAMPLE_RATES = []`. Mantém `DOWNLOAD_FCPE` se usares FCPE.
+## Verifique cada célula antes de continuar
+
+A verificação de GPU deve identificar um dispositivo NVIDIA. Se não identificar, troque o acelerador primeiro. Aguarde a instalação das dependências terminar antes de baixar os pesos. Defina `TRAINING_SAMPLE_RATES = []` apenas para inferência. Para treinamento, escolha a taxa compatível com seu modelo e par de pré-treinados. Deixe `DOWNLOAD_FCPE` ativado se pretende usar FCPE.
 
 ## 4. Converta uma gravação
 
@@ -86,14 +90,18 @@ Processe o conjunto completo somente depois que uma breve comparação parecer c
 
 ## Exportar e parar
 
-Ativa `EXPORT = True` e usa `INCLUDE_CHECKPOINTS` para retomar o treino. Guarda o ZIP antes de executar `STOP = True`.
+Defina `EXPORT = True` e execute a célula de exportação. Ative `INCLUDE_CHECKPOINTS` se precisar retomar o treinamento. Salve o ZIP localmente antes de encerrar a sessão e depois execute a célula de parada com `STOP = True`.
 
-### Verificar o ZIP
+## Se a inicialização falhar
 
-Confirma o WAV e o modelo exportados. Ativa `INCLUDE_CHECKPOINTS` para retomar o treino e guarda os dados originais em separado.
+Se a primeira célula não detectar a GPU, verifique seu acelerador e execute-a novamente. Se a interface não abrir, leia a saída da célula de inicialização, confirme que o servidor está pronto e reabra a visualização.
 
-## Resolver problemas
+### Verifique o ZIP de saída
 
-Lê o primeiro erro e repete a célula depois de o corrigir. Se o modelo não aparecer, verifica o registo de importação. Se faltar memória na GPU, reduz o lote.
+Para inferência, confira seu WAV exportado e os arquivos do modelo. Para treinamento, ative `INCLUDE_CHECKPOINTS` para incluir os logs do experimento e verifique o arquivo antes de fechar a sessão. Mantenha o dataset original separadamente.
 
-[Ilaria RVC na cloud](cloud.md)
+## Recuperar de problemas comuns
+
+Se a instalação falhar, leia o primeiro erro e execute novamente a célula com falha após corrigi-la. Se o aplicativo abrir mas seu modelo estiver ausente, verifique o log de importação e atualize a lista. Para erros de falta de memória (OOM), comece com um clipe mais curto ou reduza o batch size de treinamento. Se a Web UI fechar, reabra-a pela mesma célula de inicialização ou porta enquanto a sessão ainda estiver ativa.
+
+[Ilaria RVC na nuvem](cloud.md)

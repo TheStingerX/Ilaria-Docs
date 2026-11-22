@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848678886406">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680881592">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848678886406" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848680881592" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848678886406" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848680881592" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848678886406" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848680881592" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -176,7 +176,7 @@
                 <!-- Page content  -->
 <span id="redpanda-vc-vs-other-rvc-versions---complete-feature-comparison" class="docs-anchor"></span><h1 id="redpanda-vc-vs-otras-versiones-rvc---comparativa-completa-de-funciones">Redpanda-vc vs Otras Versiones RVC - Comparativa Completa de Funciones</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Comparativa verificada en código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2, entrenamiento de vocoder, TTS, tiempo real y compatibilidad.</div>
-<p><a href="../first-run/">Configurar Redpanda-vc</a> · <a href="../training/">Entrenar modelos RVC (EMA y Steps)</a> · <a href="../live-audio/">Probar audio en vivo</a></p>
+<p><a href="../first-run/">Configurar Redpanda-vc</a> · <a href="../../../es/ilaria-rvc/redpanda/training/">Entrenar modelos RVC (EMA y Steps)</a> · <a href="../live-audio/">Probar audio en vivo</a></p>
 <p>Esta guía compara <strong>Redpanda-vc</strong> directamente con <strong>RVC Mainline</strong>, <strong>Applio</strong> e <strong>Ilaria RVC</strong> mediante inspección estática del código fuente en las ramas <code translate="no" v-pre>main</code> de cada proyecto (sin ejecutar benchmarks de audio en vivo ni pruebas de hardware entre sistemas).</p>
 <hr>
 <span id="what-makes-redpanda-vc-different" class="docs-anchor"></span><h2 id="qué-hace-diferente-a-redpanda-vc">¿Qué hace diferente a Redpanda-vc?</h2>
@@ -520,7 +520,7 @@
 <li><strong>Generator EMA Decay</strong> (<code translate="no" v-pre>0</code> a <code translate="no" v-pre>0.9999</code>, defecto <code translate="no" v-pre>0.999</code>, incremento <code translate="no" v-pre>0.0001</code>) controla cuán lento se actualiza el promedio. Poner <strong><code translate="no" v-pre>0</code></strong> desactiva EMA y exporta los pesos vivos sin promediar.</li>
 <li>Ni <strong>RVC Mainline</strong>, ni <strong>Applio</strong>, ni <strong>Ilaria RVC</strong> incluyen <code translate="no" v-pre>GeneratorEMA</code> en sus scripts de entrenamiento verificados.</li>
 </ul>
-<p>EMA puede suavizar las fluctuaciones de pesos entre pasos, pero <strong>no</strong> garantiza mejor calidad de audio, <strong>no</strong> elimina el overfitting ni la aleatoriedad del entrenamiento y <strong>no</strong> acelera el entrenamiento. Para explicaciones completas y detalles matemáticos, consulta <a href="../training/">Entrenar modelos RVC en Redpanda-vc - EMA y Guardado por Pasos</a>.</p>
+<p>EMA puede suavizar las fluctuaciones de pesos entre pasos, pero <strong>no</strong> garantiza mejor calidad de audio, <strong>no</strong> elimina el overfitting ni la aleatoriedad del entrenamiento y <strong>no</strong> acelera el entrenamiento. Para explicaciones completas y detalles matemáticos, consulta <a href="../../../es/ilaria-rvc/redpanda/training/">Entrenar modelos RVC en Redpanda-vc - EMA y Guardado por Pasos</a>.</p>
 <hr>
 <span id="step-based-training-and-saving" class="docs-anchor"></span><h2 id="entrenamiento-y-guardado-por-pasos">Entrenamiento y Guardado por Pasos</h2>
 <p>En el entrenamiento RVC, una <strong>epoch (época)</strong> es una pasada completa por el dataset preparado, mientras que un <strong>step (paso)</strong> es una actualización de pesos tras procesar un solo batch. <em>(Ejemplo hipotético: si un dataset produce 100 pasos por época, 1.000 pasos equivalen a unas 10 épocas, aunque la proporción exacta depende de la duración del dataset y del tamaño del batch.)</em></p>
@@ -779,7 +779,7 @@ Combinar <strong>Generator EMA</strong>, <strong>guardado RVC por pasos (<code t
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/training/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../es/ilaria-rvc/redpanda/training/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
