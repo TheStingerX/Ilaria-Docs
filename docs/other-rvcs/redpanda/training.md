@@ -7,7 +7,7 @@ description: "Beginner-friendly, code-verified guide to training RVC models in R
 ---
 # Train RVC Models in Redpanda-vc - EMA & Step-Based Saving
 
-[Redpanda-vc on GitHub](https://github.com/redpanda343/Redpanda-vc) · [Set up Redpanda-vc](first-run.md) · [General RVC Training Guide](../../model-training/training.md)
+[Redpanda-vc on GitHub](https://github.com/redpanda343/Redpanda-vc) · [Set up Redpanda-vc](first-run.md) · [Redpanda-vc vs other RVC versions](differences.md) · [General RVC Training Guide](../../model-training/training.md)
 
 Training a voice model teaches a program to reproduce a target voice from a collection of clean audio clips. If you are new to RVC, you do not need to memorize technical jargon before starting. Here are the key terms in plain English:
 
