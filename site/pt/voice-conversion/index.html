@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680909914">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681212134">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848680909914" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848681212134" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848681212134" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848680909914" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848681212134" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -180,7 +180,7 @@
 <p>A conversão de voz começa com uma performance. A saída geralmente segue as palavras originais, o tempo, a articulação e o contorno do tom enquanto altera o som da voz. As decisões sobre a entrega ainda começam com a gravação original. Para um cover cantado, planeje converter um vocal principal isolado e depois mixar o vocal convertido com o instrumental.</p>
 <span id="make-a-baseline-conversion" class="docs-anchor"></span><h2 id="faça-uma-conversão-de-linha-de-base">Faça uma conversão de linha de base</h2>
 <ol>
-<li>Abra o Ilaria RVC e importe o modelo de inferência que deseja usar. Um índice opcional pertence ao ponto de verificação para o qual foi construído. Se uma voz importada estiver ausente do seletor, consulte <a href="../pt/models/">Modelos e arquivos RVC</a>.</li>
+<li>Abra o Ilaria RVC e importe o modelo de inferência que deseja usar. Um índice opcional pertence ao ponto de verificação para o qual foi construído. Se uma voz importada estiver ausente do seletor, consulte <a href="../models/">Modelos e arquivos RVC</a>.</li>
 <li>Abra <strong>Single Inference</strong>, escolha a voz e arraste uma gravação curta que você possa reconhecer de ouvido. Uma frase com pausa, várias consoantes e uma vogal mais longa é uma referência útil.</li>
 <li>Defina <strong>Pitch</strong> como zero e <strong>Index Ratio</strong> como zero. Combine o incorporador de conteúdo com aquele usado no treinamento quando o autor do modelo o fornecer. Comece com o extrator de pitch padrão do aplicativo e deixe o processamento de áudio opcional desativado.</li>
 <li>Converta o arquivo e verifique a saída. Use o reprodutor de forma de onda para revisitar a mesma frase e salve uma cópia WAV ou FLAC como linha de base.</li>
@@ -240,7 +240,7 @@
 <li>Mantenha um master WAV ou FLAC não processado antes de adicionar compactação, reverberação ou limitação.</li>
 <li>Para música, alinhe o vocal convertido com o original, verifique seu tempo nas consoantes e ouça tanto solo quanto na mixagem antes de exportar.</li>
 <li>Salve suas configurações junto com o resultado. Inclua o arquivo de origem, modelo e versões de índice, ID do alto-falante, se aplicável, incorporador, extrator de pitch, mudança de pitch, proporção de índice, processamento e formato de saída.</li>
-<li>Quando um modelo estiver faltando ou a inferência falhar antes de produzir o áudio, comece com <a href="../troubleshooting/">Solução de problemas</a>. Para conversão de microfone, consulte <a href="../pt/real-time/">Conversão de voz em tempo real</a>.</li>
+<li>Quando um modelo estiver faltando ou a inferência falhar antes de produzir o áudio, comece com <a href="../troubleshooting/">Solução de problemas</a>. Para conversão de microfone, consulte <a href="../real-time/">Conversão de voz em tempo real</a>.</li>
 </ul>
 <h2 id="convert-a-recording-in-mainline-rvc">Converter uma gravação no RVC WebUI (Mainline - Original RVC)</h2>
 <span id="set-up-the-webui" class="docs-anchor"></span><h3 id="configurar-a-webui">Configurar a WebUI</h3>
@@ -289,7 +289,7 @@
 </div>
 </retype-table>
 <p>Quando a linha de base funcionar, mude para <strong>Batch</strong> e escolha vários arquivos ou um diretório de entrada, dependendo da edição. Mantenha a saída em um local separado. Use uma execução diferente para arquivos que precisam de configurações de pitch diferentes e ouça pelo menos um resultado de cada grupo antes de usar o lote inteiro.</p>
-<p>Para problemas de importação de modelo e explicações detalhadas de configuração, use <a href="../pt/models/">Modelos e arquivos RVC</a>, <a href="../audio-quality/">Pitch e qualidade de áudio</a> e <a href="../troubleshooting/">Solução de problemas</a>.</p>
+<p>Para problemas de importação de modelo e explicações detalhadas de configuração, use <a href="../models/">Modelos e arquivos RVC</a>, <a href="../audio-quality/">Pitch e qualidade de áudio</a> e <a href="../troubleshooting/">Solução de problemas</a>.</p>
 
                 
                 <!-- Required only on API pages -->

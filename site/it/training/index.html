@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/it">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681168292">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Addestra un modello vocale RVC">
+    <meta name="description" content="L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/it/training/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/it/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/it/training/">
+    <meta property="og:title" content="Addestra un modello vocale RVC">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/training/">
+    <meta name="twitter:title" content="Addestra un modello vocale RVC">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/model-training/training.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
+    <link href="../resources/css/retype.css?v=4.6.0.848681168292" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848681168292" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848681168292" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:description" content="L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <meta name="twitter:description" content="L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/training/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/training/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/training/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/training/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/training/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/training/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/training/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/it/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Lingua: Italiano"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Italiano</span></summary><div><a href="/training/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/training/" lang="it" hreflang="it" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/training/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/training/" lang="fr" hreflang="fr"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/training/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/training/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/it/">Sito web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="train-an-rvc-voice-model" class="docs-anchor"></span><h1 id="addestra-un-modello-vocale-rvc">Addestra un modello vocale RVC</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate.</div>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Scarica Ilaria RVC 2.4.7 per Windows (ZIP)</a></p>
+<p>L&#x27;addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida quando vuoi creare un modello dalle tue registrazioni o da registrazioni autorizzate. Se hai già un modello di inferenza, consulta <a href="../models/">Modelli e file RVC</a> per iniziare a usarlo.</p>
+<span id="plan-your-first-run" class="docs-anchor"></span><h2 id="pianifica-il-tuo-primo-addestramento">Pianifica il tuo primo addestramento</h2>
+<p>Prepara l&#x27;audio con la <a href="../dataset-preparation/">guida al dataset</a>, poi selezionalo in <strong>Training</strong>. Dai all&#x27;esperimento un nome univoco e scegli una breve registrazione esterna al set di addestramento per i test d&#x27;ascolto. Inizia con un&#x27;esecuzione modesta capace di completare tutte le fasi e produrre un&#x27;esportazione utilizzabile. Questo ti fornisce una base per valutare modifiche a dati o impostazioni.</p>
+<p>Annota versione dell&#x27;applicazione, revisione del dataset, formato e sample rate del modello, embedder, metodo di pitch, coppia di pre-addestrati, batch size e intervallo di salvataggio previsto. Aggiungi il nome della clip di test esclusa. Se un&#x27;esecuzione successiva suona diversa, queste note ti aiutano a capire cosa è cambiato.</p>
+<span id="choose-compatible-settings" class="docs-anchor"></span><h2 id="scegli-impostazioni-compatibili">Scegli impostazioni compatibili</h2>
+<retype-table copy-text="| Impostazione | Cosa controllare |
+| --- | --- |
+| Formato modello, vocoder e sample rate | Seleziona una combinazione supportata dall'app e dal client di riproduzione previsto. Un'architettura specifica di un fork può limitare dove il modello può caricarsi. |
+| Guida ed estrazione del pitch | La guida del pitch è utile per modellare materiale dipendente dall'intonazione, soprattutto il canto. Scegli un estrattore disponibile per il training nella tua build. |
+| Embedder | Definisce la rappresentazione estratta dall'audio. Annota la scelta così da usare la rappresentazione corrispondente nei client di inferenza supportati. |
+| Generatore e discriminatore pre-addestrati | Usa una coppia abbinata compatibile con architettura, sample rate e configurazione pitch selezionati. I file generator e discriminator svolgono ruoli diversi nel training. |
+| Batch size | Controlla quanti dati vengono elaborati per aggiornamento. Inizia con un valore che la tua GPU può contenere e abbassalo se il training esaurisce la memoria. |
+| Obiettivo e intervallo checkpoint | Un'epoca è circa un passaggio completo attraverso il dataset preparato. Gli step sono singoli aggiornamenti di training. Salva periodicamente per confrontare le esportazioni e riprendere dopo un'interruzione. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Impostazione</th>
+<th>Cosa controllare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato modello, vocoder e sample rate</td>
+<td>Seleziona una combinazione supportata dall&#x27;app e dal client di riproduzione previsto. Un&#x27;architettura specifica di un fork può limitare dove il modello può caricarsi.</td>
+</tr>
+<tr>
+<td>Guida ed estrazione del pitch</td>
+<td>La guida del pitch è utile per modellare materiale dipendente dall&#x27;intonazione, soprattutto il canto. Scegli un estrattore disponibile per il training nella tua build.</td>
+</tr>
+<tr>
+<td>Embedder</td>
+<td>Definisce la rappresentazione estratta dall&#x27;audio. Annota la scelta così da usare la rappresentazione corrispondente nei client di inferenza supportati.</td>
+</tr>
+<tr>
+<td>Generatore e discriminatore pre-addestrati</td>
+<td>Usa una coppia abbinata compatibile con architettura, sample rate e configurazione pitch selezionati. I file generator e discriminator svolgono ruoli diversi nel training.</td>
+</tr>
+<tr>
+<td>Batch size</td>
+<td>Controlla quanti dati vengono elaborati per aggiornamento. Inizia con un valore che la tua GPU può contenere e abbassalo se il training esaurisce la memoria.</td>
+</tr>
+<tr>
+<td>Obiettivo e intervallo checkpoint</td>
+<td>Un&#x27;epoca è circa un passaggio completo attraverso il dataset preparato. Gli step sono singoli aggiornamenti di training. Salva periodicamente per confrontare le esportazioni e riprendere dopo un&#x27;interruzione.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Usa le scelte di pretraining indicate come compatibili dalla tua build installata. In Ilaria RVC 2.1.0, ad esempio, il progetto documenta l&#x27;addestramento RefineGAN a 32 kHz con RVC V2 e guida pitch. La stessa release documenta anche un downloader per coppie pre-addestrate compatibili.</p>
+<span id="practical-training-tips" class="docs-anchor"></span><h3 id="consigli-pratici-per-laddestramento">Consigli pratici per l&#x27;addestramento</h3>
+<ul>
+<li><strong>Epoche:</strong> Prova una prima esecuzione di confronto con obiettivo intorno a 200 epoche e ascolta diversi salvataggi precedenti. È un punto di partenza per i test d&#x27;ascolto, poiché il checkpoint migliore può arrivare prima o dopo. Un&#x27;esecuzione da 1.000 epoche non offre alcuna garanzia di qualità.</li>
+<li><strong>Batch e precisione:</strong> Inizia con un batch moderato, ad esempio 8, e considera 16 un limite superiore prudente di partenza. Riducilo se la memoria si esaurisce. La precisione mista FP16 può ridurre l&#x27;uso di VRAM e velocizzare il training su hardware supportato. Controlla se la tua build la attiva già e prova FP32 se la precisione mista produce loss non finite.</li>
+<li><strong>TensorBoard:</strong> Usa le metriche per seguire i progressi e individuare esecuzioni bloccate o instabili. Le sole curve di loss non possono dirti quale checkpoint suoni meglio. Confronta le conversioni delle stesse clip di test escluse.</li>
+<li><strong>Normalizzazione:</strong> Nelle build Applio con questi controlli, Pre regola i livelli prima del taglio (slicing) e Post li regola dopo. Usa None se i livelli originali sono già adatti. In Ilaria RVC, Process Data applica automaticamente la regolazione di livello a ogni segmento. L&#x27;implementazione pubblica non ha un selettore Post separato.</li>
+<li><strong>Filtro rumore:</strong> Inizia con la riduzione del rumore opzionale disattivata per registrazioni pulite. Se il frontend espone anche un filtro passa-alto (high-pass), usalo per ronzii udibili a bassa frequenza e confronta il risultato a orecchio. Filtro passa-alto e riduzione rumore sono operazioni separate.</li>
+<li><strong>Cache GPU del dataset:</strong> Lasciala disattivata per una base di riferimento. Consuma VRAM extra. Misura il tempo per epoca prima di attivarla per un&#x27;esecuzione più lunga.</li>
+<li><strong>Pesi pre-addestrati:</strong> Abbina la coppia G/D ad architettura, vocoder, sample rate e configurazione pitch, e usa l&#x27;embedder specificato dall&#x27;autore del pretraining. Per pretraining RVC standard costruiti con ContentVec, seleziona ContentVec per estrazione delle feature e inferenza.</li>
+</ul>
+<span id="choose-a-rate-using-the-source-bandwidth" class="docs-anchor"></span><h3 id="scegli-una-frequenza-in-base-alla-banda-della-sorgente">Scegli una frequenza in base alla banda della sorgente</h3>
+<p>Controlla il sample rate nei metadati del file e ispeziona diverse clip rappresentative in uno spettrogramma come <a href="https://www.spek.cc/p/download">Spek</a>. Cerca dettaglio vocale utile anziché rumore isolato o un taglio netto lasciato dalla compressione. La metà del sample rate di addestramento è la frequenza più alta rappresentabile da quella frequenza. Un modello a 32 kHz può rappresentare frequenze fino a 16 kHz, un modello a 40 kHz fino a 20 kHz e un modello a 48 kHz fino a 24 kHz. Per dettaglio utile sopra i 20 kHz, scegli 48 kHz se architettura e pretraining lo supportano. Usa la frequenza compatibile più bassa quando copre già la banda della sorgente. Il preprocessing può ricampionare le registrazioni, ma non può ripristinare dettagli mancanti.</p>
+<span id="run-the-stages-in-order" class="docs-anchor"></span><h2 id="esegui-le-fasi-in-ordine">Esegui le fasi in ordine</h2>
+<retype-table copy-text="| Fase | Cosa produce | Cosa controllare |
+| --- | --- | --- |
+| Pre-elaborazione dataset | Audio preparato per la configurazione del modello dell'esperimento. | Il log nomina la cartella prevista e segnala l'elaborazione riuscita per i file utilizzabili. Controlla i file saltati prima di continuare. |
+| Estrazione delle feature | Feature di contenuto, più i dati di pitch quando richiesti dalla configurazione scelta. | L'estrazione termina per l'esperimento corrente usando embedder e metodo pitch selezionati. |
+| Addestramento modello | Checkpoint ed esportazioni di inferenza secondo le opzioni di salvataggio configurate. | Gli step di training avanzano e i file attesi vengono salvati. Leggi il primo errore se l'avanzamento si ferma. |
+| Indice di retrieval | Raccolta ricercabile delle feature del dataset per uso opzionale in conversione. | L'indice appartiene a questo esperimento e corrisponde alla voce esportata. Se lo hai saltato, testa il modello indipendentemente. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Fase</th>
+<th>Cosa produce</th>
+<th>Cosa controllare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-elaborazione dataset</td>
+<td>Audio preparato per la configurazione del modello dell&#x27;esperimento.</td>
+<td>Il log nomina la cartella prevista e segnala l&#x27;elaborazione riuscita per i file utilizzabili. Controlla i file saltati prima di continuare.</td>
+</tr>
+<tr>
+<td>Estrazione delle feature</td>
+<td>Feature di contenuto, più i dati di pitch quando richiesti dalla configurazione scelta.</td>
+<td>L&#x27;estrazione termina per l&#x27;esperimento corrente usando embedder e metodo pitch selezionati.</td>
+</tr>
+<tr>
+<td>Addestramento modello</td>
+<td>Checkpoint ed esportazioni di inferenza secondo le opzioni di salvataggio configurate.</td>
+<td>Gli step di training avanzano e i file attesi vengono salvati. Leggi il primo errore se l&#x27;avanzamento si ferma.</td>
+</tr>
+<tr>
+<td>Indice di retrieval</td>
+<td>Raccolta ricercabile delle feature del dataset per uso opzionale in conversione.</td>
+<td>L&#x27;indice appartiene a questo esperimento e corrisponde alla voce esportata. Se lo hai saltato, testa il modello indipendentemente.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Usa il flusso automatico dove disponibile, oppure completa e verifica ciascuna fase prima di avviare la successiva. Un dataset o un sample rate modificati possono invalidare l&#x27;audio preparato e le feature estratte. Un embedder modificato richiede una nuova estrazione delle feature. Quando provi una configurazione incompatibile, avvia un esperimento separato così che cache e checkpoint esistenti restino disponibili.</p>
+<span id="follow-progress-in-ilaria-rvc" class="docs-anchor"></span><h2 id="segui-i-progressi-in-ilaria-rvc">Segui i progressi in Ilaria RVC</h2>
+<ul>
+<li>Usa <strong>Training Dashboard</strong> per controllare conteggio step, tempo per epoca e curve di loss. Una curva aiuta a spiegare un&#x27;esecuzione bloccata, mentre i test d&#x27;ascolto ti dicono come suona il risultato.</li>
+<li>Configura le <strong>anteprime di training</strong> con una clip di test costante così che l&#x27;app possa generare conversioni confrontabili al salvataggio dei checkpoint.</li>
+<li>Se usi la <strong>Training Queue</strong>, imposta nome esperimento e dataset distinti per ogni lavoro. Prima di riprendere o riprovare, conferma quali fasi il lavoro ha completato e dove salverà l&#x27;output.</li>
+<li>Quando la tua release espone <strong>Stop and save</strong>, usalo quando devi interrompere e continuare più tardi. Attendi il completamento della scrittura del checkpoint prima di chiudere l&#x27;app.</li>
+</ul>
+<p>Ilaria RVC 2.1.0 supporta obiettivi per epoche e per step totali, inclusa la ripresa a metà epoca per obiettivi a step. Altri frontend possono esporre controlli e comportamenti di ripresa diversi.</p>
+<span id="compare-training-budgets-in-steps" class="docs-anchor"></span><h3 id="confronta-i-budget-di-addestramento-in-step">Confronta i budget di addestramento in step</h3>
+<p>Un&#x27;epoca è un passaggio attraverso il dataset preparato. Uno step di training è un aggiornamento di batch. Dividi il numero di clip dopo il preprocessing per il batch size effettivo per stimare gli step per epoca. Ad esempio, 10.000 clip con batch size 8 danno 1.250 batch per epoca in un&#x27;esecuzione a singolo worker. Batch parziali scartati, più GPU o gradient accumulation possono cambiare il modo in cui il trainer conta gli aggiornamenti. Usa il conteggio riportato dalla tua esecuzione quando confronti esperimenti.</p>
+<p>Scegli un intervallo di salvataggio che ti offra diversi checkpoint da ascoltare. Salvare circa ogni 40 epoche è un possibile punto di partenza per un&#x27;esecuzione misurata in centinaia di epoche. Usa le stesse clip di test escluse e le stesse impostazioni di inferenza per ogni confronto. Ascolta intelligibilità, stabilità del pitch, pause naturali e consonanti che restino chiare. Se le esportazioni successive suonano più aspre o funzionano bene solo su poche frasi, confronta con un checkpoint precedente e ispeziona il dataset per riprese ripetute o artefatti. Scegli il checkpoint che funziona meglio sugli ingressi previsti.</p>
+<span id="compare-exports-by-listening" class="docs-anchor"></span><h2 id="confronta-le-esportazioni-allascolto">Confronta le esportazioni all&#x27;ascolto</h2>
+<p>Apri l&#x27;inferenza con un <code translate="no" v-pre>.pth</code> esportato. Usa le stesse brevi registrazioni di test escluse e le stesse impostazioni di conversione per confrontare modelli di checkpoint diversi. Se fai un confronto con l&#x27;indice, mantieni fisso il checkpoint e confronta la stessa clip con retrieval disattivato e attivato.</p>
+<p>Confronta queste quattro qualità tra le esportazioni.</p>
+<ol>
+<li><strong>Timbro.</strong> La registrazione convertita ricorda il carattere vocale previsto lungo l&#x27;intera frase?</li>
+<li><strong>Intelligibilità.</strong> Consonanti e finali di parola restano facili da capire?</li>
+<li><strong>Stabilità del pitch.</strong> Note o sillabe saltano, tremano o perdono l&#x27;inflessione prevista?</li>
+<li><strong>Artefatti.</strong> L&#x27;uscita aggiunge ronzio, rumore ambientale incorporato, code aspre o transizioni strane?</li>
+</ol>
+<p>Conserva l&#x27;esportazione dal suono migliore e i relativi output di test. Può valere la pena provare più epoche quando i risultati migliorano su più esempi. Se esportazioni successive migliorano una sola clip o iniziano a riprodurre difetti del dataset, torna alla migliore base di partenza e rivedi le registrazioni.</p>
+<span id="export-resume-or-share" class="docs-anchor"></span><h2 id="esporta-riprendi-o-condividi">Esporta, riprendi o condividi</h2>
+<ul>
+<li><strong>Usa in inferenza.</strong> Seleziona il modello <code translate="no" v-pre>.pth</code> esportato. Tieni il corrispondente <code translate="no" v-pre>.index</code> accanto ad esso quando vuoi usare il retrieval. Annota eventuali informazioni su embedder richiesto, client supportato e sample rate.</li>
+<li><strong>Riprendi il training.</strong> Fai un backup dell&#x27;esperimento e conserva i checkpoint di training di generatore e discriminatore corrispondenti, chiamati comunemente <code translate="no" v-pre>G_*.pth</code> e <code translate="no" v-pre>D_*.pth</code>. Riprendi con lo stesso esperimento e una configurazione compatibile, poi controlla il log per verificare checkpoint e step o epoca attesi. Una sola esportazione di inferenza non contiene l&#x27;intero stato di training.</li>
+<li><strong>Condividi un modello.</strong> Condividi solo file che hai il permesso di distribuire. Includi esempi d&#x27;ascolto, note di compatibilità, l&#x27;indice corrispondente se utile e i termini d&#x27;uso necessari al destinatario.</li>
+</ul>
+<p>In Ilaria RVC, le release recenti usano la libreria modelli per esportazioni di inferenza e relativi indici. Percorsi di esportazione e nomi possono variare tra frontend. Salva separatamente i log dell&#x27;esperimento se vuoi ricreare il modello in seguito.</p>
+<span id="diagnose-a-failed-run" class="docs-anchor"></span><h2 id="diagnostica-unesecuzione-fallita">Diagnostica un&#x27;esecuzione fallita</h2>
+<retype-table copy-text="| Sintomo | Cosa controllare per primo |
+| --- | --- |
+| Il preprocessing non ha trovato audio | Verifica la cartella dataset selezionata e riproduci una clip di ingresso. Controlla se la tua build legge sottocartelle nidificate. |
+| L'estrazione fallisce o segnala un modello mancante | Controlla gli asset selezionati di embedder e modello pitch e leggi il primo messaggio nel log di estrazione. |
+| La memoria GPU si esaurisce | Riduci il batch size, ferma altri lavori GPU concorrenti e disattiva il caching del dataset su GPU se la tua build offre quel controllo. Riprova la fase fallita. |
+| Il training riparte dall'inizio | Controlla che l'esperimento punti a checkpoint di training compatibili e che ogni opzione di avvio pulito sia disattivata. |
+| Un `.pth` non si carica per la conversione | Controlla se hai selezionato un checkpoint di training invece di un'esportazione di inferenza, e verifica compatibilità di architettura ed embedder con il client. |
+| Un modello utilizzabile non ha indice | Controlla se la generazione dell'indice è stata saltata o è fallita. Esporta e testa il checkpoint indipendentemente, poi costruisci il suo indice dall'esperimento corrispondente se necessario. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Sintomo</th>
+<th>Cosa controllare per primo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Il preprocessing non ha trovato audio</td>
+<td>Verifica la cartella dataset selezionata e riproduci una clip di ingresso. Controlla se la tua build legge sottocartelle nidificate.</td>
+</tr>
+<tr>
+<td>L&#x27;estrazione fallisce o segnala un modello mancante</td>
+<td>Controlla gli asset selezionati di embedder e modello pitch e leggi il primo messaggio nel log di estrazione.</td>
+</tr>
+<tr>
+<td>La memoria GPU si esaurisce</td>
+<td>Riduci il batch size, ferma altri lavori GPU concorrenti e disattiva il caching del dataset su GPU se la tua build offre quel controllo. Riprova la fase fallita.</td>
+</tr>
+<tr>
+<td>Il training riparte dall&#x27;inizio</td>
+<td>Controlla che l&#x27;esperimento punti a checkpoint di training compatibili e che ogni opzione di avvio pulito sia disattivata.</td>
+</tr>
+<tr>
+<td>Un <code translate="no" v-pre>.pth</code> non si carica per la conversione</td>
+<td>Controlla se hai selezionato un checkpoint di training invece di un&#x27;esportazione di inferenza, e verifica compatibilità di architettura ed embedder con il client.</td>
+</tr>
+<tr>
+<td>Un modello utilizzabile non ha indice</td>
+<td>Controlla se la generazione dell&#x27;indice è stata saltata o è fallita. Esporta e testa il checkpoint indipendentemente, poi costruisci il suo indice dall&#x27;esperimento corrispondente se necessario.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Conserva il primo messaggio di errore e la configurazione associata all&#x27;esecuzione. Per altri controlli, vedi <a href="../troubleshooting/">Risoluzione dei problemi</a>.</p>
+<span id="indicative-training-profiles-adapt-to-your-data--hardware" class="docs-anchor"></span><h2 id="profili-indicativi-di-training-da-adattare-a-dati-e-hardware">Profili indicativi di training (da adattare a dati e hardware)</h2>
+<p>Questi tre preset sono <strong>punti di partenza indicativi</strong>, non regole universali. Regola sempre il <strong>Batch Size</strong> in base alla tua VRAM e giudica i checkpoint ascoltando le stesse clip di test escluse.</p>
+<span id="beginner-training-safe-baseline" class="docs-anchor"></span><h3 id="training-principianti-base-sicura">Training Principianti (Base Sicura)</h3>
+<ul>
+<li><strong>Ideale per:</strong> Primo modello vocale, 5-15 minuti di audio pulito a singolo parlante, GPU con 6-8 GB VRAM.</li>
+<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> (oppure <code translate="no" v-pre>32 kHz</code> per RefineGAN) · Pitch Guidance <strong>ON</strong> (<code translate="no" v-pre>rmvpe</code>) · Embedder <code translate="no" v-pre>contentvec</code> · Pretrain HiFi-GAN standard/verificato · <strong>Batch Size <code translate="no" v-pre>4-8</code></strong> · <strong>Epochs <code translate="no" v-pre>200</code></strong> (salva ogni <code translate="no" v-pre>25-50</code> epoche) · Precisione <strong>FP32</strong> (oppure <strong>BF16</strong> su RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers <code translate="no" v-pre>2</code> · Fused AdamW <strong>OFF</strong>.</li>
+<li><strong>Perché:</strong> Privilegia la stabilità ed evita errori di memoria esaurita o overfitting precoce producendo più checkpoint da confrontare.</li>
+</ul>
+<span id="intermediate-training-balanced-quality--speed" class="docs-anchor"></span><h3 id="training-intermedio-equilibrio-qualità-e-velocità">Training Intermedio (Equilibrio Qualità e Velocità)</h3>
+<ul>
+<li><strong>Ideale per:</strong> 15-30 minuti di parlato/canto pulito, GPU con 8-12 GB VRAM.</li>
+<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> o <strong>48 kHz</strong> (se la banda sorgente supera 20 kHz) · <code translate="no" v-pre>rmvpe</code> · <code translate="no" v-pre>contentvec</code> oppure <code translate="no" v-pre>klm-vocal-contentvec</code> / <code translate="no" v-pre>spin-v2</code> (abbinato al pretrain) · <strong>Batch Size <code translate="no" v-pre>8-12</code></strong> · <strong>Epochs <code translate="no" v-pre>250-350</code></strong> (o <strong>Total Steps</strong> equivalenti) · Salva ogni <code translate="no" v-pre>25-50</code> epoche · Precisione <strong>BF16</strong> (RTX 30/40/50) o <strong>FP16</strong> (T4/RTX 20) · Workers <code translate="no" v-pre>4</code>, Prefetch <code translate="no" v-pre>4-8</code> · Crea <strong>indice FAISS <code translate="no" v-pre>Auto</code></strong> dopo aver scelto il checkpoint migliore.</li>
+<li><strong>Perché:</strong> Usa precisione mista più veloce e batch più ampi mantenendo checkpoint regolari e anteprime d&#x27;ascolto su clip escluse.</li>
+</ul>
+<span id="advanced-training--optimization" class="docs-anchor"></span><h3 id="training-avanzato-e-ottimizzazione">Training Avanzato e Ottimizzazione</h3>
+<ul>
+<li><strong>Ideale per:</strong> Dataset grandi o curati multi-emozione/canto, 12-24 GB+ VRAM, pretrain personalizzati.</li>
+<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · Sample rate abbinato (<code translate="no" v-pre>32/40/48 kHz</code>) e vocoder (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> oppure <code translate="no" v-pre>RefineGAN</code> a <code translate="no" v-pre>32 kHz</code> in Ilaria RVC) · Pretrain G/D ed embedder personalizzati/abbinati · <strong>Batch Size <code translate="no" v-pre>12-16+</code></strong> · Obiettivo <strong>Total Steps</strong> (per aggiornamenti di gradiente coerenti indipendentemente dalla dimensione del dataset) · <strong>GPU Caching ON</strong> (solo se la VRAM contiene comodamente il dataset; misura prima il tempo per epoca) · <strong>Fused AdamW ON</strong> (testa in un&#x27;esecuzione pulita) · <strong>Training Queue</strong> per esecuzioni A/B notturne · Monitoraggio <strong>TensorBoard</strong> + confronto con <strong>Audio Analyzer</strong>.</li>
+<li><strong>Learning rate:</strong> La maggior parte delle WebUI RVC (inclusa Ilaria RVC) usa lo schedule standard dell&#x27;ottimizzatore RVC v2 (<code translate="no" v-pre>1e-4</code> base); modifica il learning rate nei frontend che lo espongono solo se comprendi come scala con il batch size.</li>
+</ul>
+<span id="how-to-spot-underfitting-vs-overfitting-by-ear" class="docs-anchor"></span><h2 id="riconoscere-underfitting-vs-overfitting-allascolto">Riconoscere Underfitting vs. Overfitting all&#x27;ascolto</h2>
+<ol>
+<li><strong>Underfitting (troppo presto):</strong> L&#x27;uscita suona ancora per lo più come chi parla in ingresso, manca il timbro target sulle vocali tenute o perde carattere sulle note alte/basse. <em>Soluzione:</em> Continua il training dall&#x27;ultimo checkpoint <code translate="no" v-pre>G_*.pth</code>/<code translate="no" v-pre>D_*.pth</code>.</li>
+<li><strong>Overfitting (troppo tardi):</strong> La voce suona robotica/metallica su parole non familiari, riproduce rumore ambientale o artefatti di respiro del dataset, oppure suona bene <em>solo</em> su frasi simili al set di training. <em>Soluzione:</em> Torna a un checkpoint precedente (<code translate="no" v-pre>50-100</code> epoche prima) e ispeziona il dataset in <a href="../ilaria-rvc/audio-analyzer/">Audio Analyzer</a>.</li>
+</ol>
+<blockquote>
+<p>Se stai addestrando con <strong>Redpanda-vc</strong> (che aggiunge Generator EMA e salvataggio checkpoint basato sugli step), consulta <a href="../ilaria-rvc/redpanda/training/">Addestrare modelli RVC in Redpanda-vc</a>.</p>
+</blockquote>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../dataset-preparation/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#127911; Prepara un set di dati</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T16:44:42.000Z">22/11/2026 · 17:44</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "🛠️ Addestra un modello vocale", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/model-training/training.md" }</script>
+</body>
+</html>

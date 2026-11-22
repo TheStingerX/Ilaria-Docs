@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848680890998">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681190191">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848680890998" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848681190191" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848680890998" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848680890998" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -180,7 +180,7 @@
 <p>La conversion vocale commence par une performance. La sortie suit généralement les mots sources, le timing, l&#x27;articulation et le contour de la hauteur tout en modifiant le son de la voix. Les décisions concernant la livraison commencent toujours par l&#x27;enregistrement original. Pour une reprise chantée, prévoyez de convertir une voix principale isolée et de mélanger ensuite la voix convertie avec l&#x27;instrument.</p>
 <span id="make-a-baseline-conversion" class="docs-anchor"></span><h2 id="effectuez-une-conversion-de-base">Effectuez une conversion de base</h2>
 <ol>
-<li>Ouvrez Ilaria RVC et importez le modèle d&#x27;inférence que vous souhaitez utiliser. Un index facultatif appartient au point de contrôle pour lequel il a été construit. Si une voix importée est absente du sélecteur, voir <a href="../fr/models/">Modèles et fichiers RVC</a>.</li>
+<li>Ouvrez Ilaria RVC et importez le modèle d&#x27;inférence que vous souhaitez utiliser. Un index facultatif appartient au point de contrôle pour lequel il a été construit. Si une voix importée est absente du sélecteur, voir <a href="../models/">Modèles et fichiers RVC</a>.</li>
 <li>Ouvrez <strong>Single Inference</strong>, choisissez la voix et faites glisser un court enregistrement que vous pouvez reconnaître à l&#x27;oreille. Une phrase avec une pause, plusieurs consonnes et une voyelle plus longue constitue une référence utile.</li>
 <li>Réglez <strong>Pitch</strong> sur zéro et <strong>Index Ratio</strong> sur zéro. Faites correspondre l&#x27;intégrateur de contenu à celui utilisé dans la formation lorsque l&#x27;auteur du modèle le fournit. Commencez avec l&#x27;extracteur de hauteur par défaut de l&#x27;application et désactivez le traitement audio facultatif.</li>
 <li>Convertissez le fichier et vérifiez la sortie. Utilisez le lecteur de forme d&#x27;onde pour revisiter la même phrase, puis enregistrez une copie WAV ou FLAC comme référence.</li>
@@ -240,7 +240,7 @@
 <li>Conservez un master WAV ou FLAC non traité avant d&#x27;ajouter une compression, une réverbération ou une limitation.</li>
 <li>Pour la musique, alignez la voix convertie sur l&#x27;original, vérifiez son timing au niveau des consonnes et écoutez à la fois en solo et dans le mix avant d&#x27;exporter.</li>
 <li>Enregistrez vos paramètres à côté du résultat. Incluez le fichier source, les versions de modèle et d&#x27;index, l&#x27;ID du haut-parleur le cas échéant, l&#x27;intégration, l&#x27;extracteur de pitch, le pitch shift, le rapport d&#x27;index, le traitement et le format de sortie.</li>
-<li>Lorsqu&#x27;un modèle est manquant ou que l&#x27;inférence échoue avant de produire de l&#x27;audio, commencez par <a href="../troubleshooting/">Dépannage</a>. Pour la conversion du microphone, voir <a href="../fr/real-time/">Conversion vocale en temps réel</a>.</li>
+<li>Lorsqu&#x27;un modèle est manquant ou que l&#x27;inférence échoue avant de produire de l&#x27;audio, commencez par <a href="../troubleshooting/">Dépannage</a>. Pour la conversion du microphone, voir <a href="../real-time/">Conversion vocale en temps réel</a>.</li>
 </ul>
 <h2 id="convert-a-recording-in-mainline-rvc">Convertir un enregistrement dans RVC WebUI (Mainline - Original RVC)</h2>
 <span id="set-up-the-webui" class="docs-anchor"></span><h3 id="configurer-la-webui">Configurer la WebUI</h3>
@@ -289,7 +289,7 @@
 </div>
 </retype-table>
 <p>Lorsque la baseline fonctionne, passez en <strong>Batch</strong> et choisissez plusieurs fichiers ou un répertoire d&#x27;entrée, selon l&#x27;édition. Conservez la sortie dans un emplacement séparé. Utilisez une exécution différente pour les fichiers nécessitant des paramètres de hauteur différents et écoutez au moins un résultat de chaque groupe avant d&#x27;utiliser l&#x27;ensemble du lot.</p>
-<p>Pour les problèmes d&#x27;importation de modèle et les explications détaillées des paramètres, utilisez <a href="../fr/models/">Modèles et fichiers RVC</a>, <a href="../audio-quality/">Pitch et qualité audio</a> et <a href="../troubleshooting/">Dépannage</a>.</p>
+<p>Pour les problèmes d&#x27;importation de modèle et les explications détaillées des paramètres, utilisez <a href="../models/">Modèles et fichiers RVC</a>, <a href="../audio-quality/">Pitch et qualité audio</a> et <a href="../troubleshooting/">Dépannage</a>.</p>
 
                 
                 <!-- Required only on API pages -->

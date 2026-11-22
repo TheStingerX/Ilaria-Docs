@@ -5,6 +5,7 @@
 - [Ilaria RVC-Dokumentation](https://docs.ilariarvc.shop/de/index.md): Ilaria RVC-Dokumentation
 - [Erste Schritte](https://docs.ilariarvc.shop/de/start/getting-started.md): Du kannst Ilaria RVC auch auf Kaggle mit einer entfernten GPU nutzen, selbst wenn dein Computer keine NVIDIA-GPU hat. Ilaria RVC on Kaggle
 - [RVC-Grundlagen](https://docs.ilariarvc.shop/de/start/rvc-fundamentals.md): Die Retrieval-basierte Sprachkonvertierung (RVC) nimmt eine Gesangsaufnahme und synthetisiert eine Version mit dem Charakter einer trainierten Stimme.
+- [RVC-Modelle und Dateien](https://docs.ilariarvc.shop/de/start/models.md): Ein RVC-Modell verändert die Klangfarbe einer bestehenden Darbietung. Die Quellaufnahme liefert weiterhin Wörter, Phrasierung und Timing.
 - [RVC Pitch Extractors (F0-Methoden)](https://docs.ilariarvc.shop/de/start/pitch-extractors.md): Ein Pitch Extractor (auch F0-Extraktionsmethode genannt) ist der Algorithmus oder das neuronale Netz, das die Grundfrequenz (Tonhöhe, Melodie und Intonation) der Eingabestimme über die Zeit verfolgt.
 - [RVC-Embedder](https://docs.ilariarvc.shop/de/start/embedders.md): Ein Embedder (auch Content Encoder genannt) ist das neuronale Netz, das dein Eingabe-Audio liest und das Gesprochene oder Gesungene in numerische Inhaltsmerkmale umwandelt, bevor das RVC-Stimmmodell es im Timbre der Zielstimme rekonstruiert.
 - [Pretrained-Basismodelle in RVC](https://docs.ilariarvc.shop/de/start/pretrained.md): Ein Pretrained-Basismodell (auch Pretrain genannt) ist ein Paar aus Start-Checkpoints: ein Generator (G_.pth) und ein Diskriminator (D_.pth), die bereits auf hunderten Stunden Multi-Speaker-Audio trainiert wurden.
@@ -21,12 +22,10 @@
 - [Konvertieren Sie eine Aufnahme mit Ilaria RVC](https://docs.ilariarvc.shop/de/conversion/voice-conversion.md): Die Sprachkonvertierung beginnt mit einer Aufführung.
 - [RVC-Inferenz-Audioqualität verbessern](https://docs.ilariarvc.shop/de/conversion/audio-quality.md): Code-verifizierte Anleitung zur Verbesserung der RVC-Inferenz-Audioqualität in Ilaria RVC: Diagnose-Basis, Tonhöhe, F0-Methoden, Index Ratio, Protect, Formant Shifting, Volume Envelope und Post-Process.
 - [Text to Speech und RVC](https://docs.ilariarvc.shop/de/conversion/text-to-speech.md): Text to Speech (TTS) generiert eine Quellaufzeichnung aus den von Ihnen eingegebenen Wörtern. RVC wendet dann ein separates Sprachmodell auf diese Aufnahme an.
+- [Echtzeit-Stimmenkonvertierung](https://docs.ilariarvc.shop/de/conversion/real-time.md): Bei einer Aufnahme oder einem Cover kannst du mit der Dateikonvertierung mehrere Takes rendern und vergleichen.
 - [Stems und Mischung](https://docs.ilariarvc.shop/de/conversion/stems-and-mixing.md): Ein Stem ist ein isolierter Teil einer Mischung, wie zum Beispiel der Gesang oder das Instrumental. RVC lässt sich am einfachsten mit einem klaren Gesang allein steuern.
 - [Bereiten Sie einen Sprachdatensatz vor](https://docs.ilariarvc.shop/de/model-training/dataset-preparation.md): Jeder Clip bringt dem Modell etwas über seine Zielstimme bei.
-
-## Erste Schritte
-
-- [RVC-Modelle und Dateien](https://docs.ilariarvc.shop/de/start/models.md): Ein RVC-Modell verändert die Klangfarbe einer bestehenden Darbietung. Die Quellaufnahme liefert weiterhin Wörter, Phrasierung und Timing.
+- [Ein RVC-Stimmmodell trainieren](https://docs.ilariarvc.shop/de/model-training/training.md): Training erlernt eine Zielstimme aus einer vorbereiteten Audiosammlung. Nutze diese Anleitung, wenn du ein Modell aus eigenen oder autorisierten Aufnahmen erstellen möchtest.
 
 ## Ilaria RVC
 
@@ -170,11 +169,3 @@
 - [MVSep](https://docs.ilariarvc.shop/de/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) ist eine kostenlose, cloudbasierte Webplattform für KI-Audiotrennung und -Restauration.
 - [MVSep nutzen: Zugang, Konto & Einrichtung](https://docs.ilariarvc.shop/de/non-rvc/mvsep/access-and-setup.md): Da MVSep in der Cloud läuft, muss nichts installiert werden. Die richtige Einrichtung von Konto und Ausgabeformat macht jedoch einen großen Unterschied.
 - [MVSep-Anleitung: empfohlene Modelle & Presets](https://docs.ilariarvc.shop/de/non-rvc/mvsep/usage-and-models.md): Hier findest du die besten MVSep-Presets für extrem saubere Vocal-Spuren (für RVC-Training, Cover oder Stimmkonvertierung) - mit Direktlinks, die Algorithmus und Optionen passend vorauswählen.
-
-## Stimmkonvertierung
-
-- [Echtzeit-Stimmenkonvertierung](https://docs.ilariarvc.shop/de/conversion/real-time.md): Bei einer Aufnahme oder einem Cover kannst du mit der Dateikonvertierung mehrere Takes rendern und vergleichen.
-
-## Modelle und Training
-
-- [Ein RVC-Stimmmodell trainieren](https://docs.ilariarvc.shop/de/model-training/training.md): Training erlernt eine Zielstimme aus einer vorbereiteten Audiosammlung. Nutze diese Anleitung, wenn du ein Modell aus eigenen oder autorisierten Aufnahmen erstellen möchtest.

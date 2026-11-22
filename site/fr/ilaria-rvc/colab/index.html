@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681190191">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Google Colab">
+    <meta name="description" content="Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/colab/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/colab/">
+    <meta property="og:title" content="Google Colab">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/colab/">
+    <meta name="twitter:title" content="Google Colab">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/cloud/colab.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
+    <link href="../../resources/css/retype.css?v=4.6.0.848681190191" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/colab/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/colab/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/ilaria-rvc/colab/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/colab/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/colab/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/colab/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/colab/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/colab/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="google-colab">Google Colab</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule.</div>
+<p><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-Colab.ipynb">Ouvrir le notebook · GitHub</a> · <a href="https://colab.research.google.com/github/TheStingerX/Ilaria-RVC/blob/main/notebooks/Ilaria-RVC-Colab.ipynb">Google Colab</a></p>
+<p>Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d&#x27;exécuter la première cellule.</p>
+<span id="before-you-start" class="docs-anchor"></span><h2 id="avant-de-commencer">Avant de commencer</h2>
+<p>Préparez un court fichier WAV propre et un modèle d&#x27;inférence compatible. Pour l&#x27;entraînement, conservez le dataset d&#x27;origine et quelques extraits de test séparés sur votre propre ordinateur. Le notebook s&#x27;exécute sur une machine Linux distante.</p>
+<span id="google-colab-limits-compute-units-and-policies" class="docs-anchor"></span><h3 id="limites-unités-de-calcul-et-règles-de-google-colab">Limites, unités de calcul et règles de Google Colab</h3>
+<p>Avant de lancer une session longue, comprenez comment <a href="https://research.google.com/colaboratory/faq.html">Google Colab</a> gère les ressources :</p>
+<ul>
+<li><strong>Offre gratuite vs offres payantes (Compute Units) :</strong> L&#x27;offre gratuite de Colab fournit des GPU selon la disponibilité, mais la durée d&#x27;exécution, les délais d&#x27;inactivité et le type de GPU (comme T4) sont dynamiques et jamais garantis. Les offres payantes (<strong>Colab Pro</strong>, <strong>Pro+</strong> et <strong>Pay As You Go</strong>) utilisent des <strong>compute units</strong> consommées dynamiquement selon le GPU/TPU choisi ; une fois votre solde épuisé, le compte revient aux limites de l&#x27;offre gratuite.</li>
+<li><strong>Activités interdites et restrictions WebUI :</strong> La politique d&#x27;<a href="https://research.google.com/colaboratory/faq.html#disallowed-activities">Activités interdites</a> de Google interdit d&#x27;héberger des fichiers, de servir des applications web publiques sans lien avec le calcul interactif, d&#x27;exécuter des proxys distants, de contourner les limites de sécurité/accès, d&#x27;utiliser plusieurs comptes pour contourner les quotas ou de créer des deepfakes. Bien que les notebooks Gradio interactifs ne soient pas systématiquement bannis dans tous les cas, laisser tourner des tunnels WebUI publics persistants sur l&#x27;offre gratuite déclenche fréquemment des déconnexions ou des avertissements.</li>
+<li><strong>Déconnexions, sauvegarde et confidentialité :</strong> Colab peut déconnecter les sessions inactives ou longues et effacer le stockage local de la VM. Exportez vos résultats (<code translate="no" v-pre>EXPORT = True</code>) ou synchronisez régulièrement vos checkpoints importants sur Google Drive, et n&#x27;importez jamais d&#x27;audio confidentiel ou d&#x27;identifiants dans des notebooks publics ou partagés.</li>
+<li><strong>Alternatives :</strong> Si Colab se déconnecte ou manque de GPU disponibles, utilisez <a href="../kaggle/">Kaggle</a> (quota GPU hebdomadaire gratuit après vérification téléphonique) ou <a href="../lightning-ai/">Lightning AI Studio</a>.</li>
+</ul>
+<span id="run-on-google-colab" class="docs-anchor"></span><h2 id="exécuter-sur-google-colab">Exécuter sur Google Colab</h2>
+<ol>
+<li>Ouvrez dans Colab et sélectionnez un environnement d&#x27;exécution GPU.</li>
+<li>Exécutez les cellules 1 à 4 dans l&#x27;ordre. Elles vérifient le GPU, installent les dépendances, téléchargent les poids de base et lancent la Web UI. Réglez <code translate="no" v-pre>TRAINING_SAMPLE_RATES</code> sur <code translate="no" v-pre>[]</code> pour l&#x27;inférence seule ou choisissez les taux d&#x27;échantillonnage avec lesquels vous comptez entraîner.</li>
+<li>Ouvrez la vue intégrée générée par la cellule de lancement. Gardez l&#x27;environnement connecté.</li>
+</ol>
+<span id="check-each-cell-before-continuing" class="docs-anchor"></span><h2 id="vérifier-chaque-cellule-avant-de-continuer">Vérifier chaque cellule avant de continuer</h2>
+<p>La vérification du GPU doit identifier un périphérique NVIDIA. Sinon, changez d&#x27;abord l&#x27;accélérateur. Attendez la fin de l&#x27;installation des dépendances avant de télécharger les poids. Réglez <code translate="no" v-pre>TRAINING_SAMPLE_RATES = []</code> pour l&#x27;inférence seule. Pour l&#x27;entraînement, choisissez le taux correspondant à votre modèle et à votre paire de pré-entraînés. Laissez <code translate="no" v-pre>DOWNLOAD_FCPE</code> activé si vous prévoyez d&#x27;utiliser FCPE.</p>
+<span id="4-convert-one-recording" class="docs-anchor"></span><h2 id="4-convertir-un-enregistrement">4. Convertir un enregistrement</h2>
+<ol>
+<li>Dans l&#x27;onglet du navigateur Ilaria RVC, ouvrez <strong>Autre → Importer des modèles locaux</strong>. Importez le fichier du modèle d’inférence (<code translate="no" v-pre>.pth</code>) et, si vous l’avez, son index facultatif (<code translate="no" v-pre>.index</code>). Vous pouvez aussi importer un ZIP compatible contenant ces fichiers. Attendez la fin de l&#x27;importation. Vous pouvez aussi ouvrir <strong>Other → Download models from Hugging Face, Google Drive or MEGA</strong>, coller un lien public vers un ZIP compatible, un <code translate="no" v-pre>.pth</code> ou un <code translate="no" v-pre>.index</code>, puis cliquer sur <strong>Download and install model</strong>. Si le modèle et l’index facultatif ont des liens séparés, téléchargez-les un par un.</li>
+<li>Ouvrez <strong>Inférence</strong>, actualisez la liste des voix si nécessaire, sélectionnez la voix souhaitée et accédez à <strong>Single Inference</strong>.</li>
+<li>Téléchargez le court WAV. Commencez par <strong>Pitch 0</strong> et <strong>Index Ratio 0</strong>. Laissez les effets facultatifs désactivés et utilisez l&#x27;intégration attendue par le modèle.</li>
+<li>Cliquez une fois sur le contrôle de conversion et attendez la sortie. Jouez le résultat, puis téléchargez-le depuis le lecteur s&#x27;il est disponible. Conservez votre WAV d&#x27;entrée afin de pouvoir comparer la même phrase plus tard.</li>
+<li>Si vous souhaitez tester la récupération, sélectionnez l&#x27;index correspondant et essayez une petite augmentation à partir de zéro. Si la sortie échoue ou si la voix devient plus difficile à comprendre, revenez à la ligne de base et vérifiez l&#x27;appariement modèle-index.</li>
+</ol>
+<p>Si la voix n&#x27;apparaît jamais, vérifiez d&#x27;abord le journal d&#x27;importation. Un point de contrôle d&#x27;entraînement enregistré sous forme de fichier G ou D appartient à une expérience et nécessite une exportation d&#x27;inférence avant de pouvoir être sélectionné ici.</p>
+<span id="prepare-your-dataset-and-plan-a-training-run" class="docs-anchor"></span><h2 id="préparez-votre-ensemble-de-données-et-planifiez-une-séance-dentraînement">Préparez votre ensemble de données et planifiez une séance d&#x27;entraînement</h2>
+<span id="clean-the-audio-with-mvsep-only-where-needed" class="docs-anchor"></span><h3 id="nettoyez-laudio-avec-mvsep-uniquement-là-où-cela-est-nécessaire">Nettoyez l&#x27;audio avec MVSEP uniquement là où cela est nécessaire</h3>
+<p>Conservez une copie intacte de vos enregistrements. S’ils contiennent déjà une seule voix claire et sèche, sautez la séparation. Utilisez le matériel que vous êtes autorisé à télécharger sur <a href="https://mvsep.com/en/home">MVSEP</a> et sur lequel vous pouvez vous entraîner. Pour les enregistrements confidentiels, nettoyez-les localement.</p>
+<ol>
+<li><strong>Isolez la voix.</strong> Téléchargez un court exemple et choisissez une option de séparation vocale. Téléchargez la racine vocale au format WAV lorsqu&#x27;elle est disponible. Rejouez-le par rapport à l&#x27;original et écoutez avec des écouteurs de la musique, d&#x27;autres voix, des syllabes coupées et des artefacts aqueux ou métalliques.</li>
+<li><strong>Supprimez les chœurs uniquement s&#x27;ils sont présents.</strong> Pour les chansons avec des harmonies ou un refrain sous la cible, utilisez une option de séparation lead/backing sur la tige vocale. Gardez la sortie de plomb. Si les chanteurs se chevauchent encore ou si le lead présente des trous, utilisez une section propre ou une prise différente.</li>
+<li><strong>Réduisez la réverbération uniquement là où elle est audible.</strong> Si la voix a une large queue de réverbération stéréo, testez d&#x27;abord une option de dé-réverbération stéréo sur une copie. Pour les réflexions restantes de la pièce, comparez une passe de dé-réverbération de la pièce. Vous pouvez sauter l’une ou l’autre étape. Écoutez les consonnes tronquées et les respirations à chaque passage.</li>
+<li><strong>Supprimez l&#x27;écho uniquement s&#x27;il répète la voix.</strong> Une répétition audible retardée nécessite un court test séparé. Conservez l&#x27;original ou remplacez-le si la suppression supprime des mots. Évitez d’empiler les passes sur un son autrement propre.</li>
+<li><strong>Préparez les clips finaux.</strong> Coupez les bruits inutilisables et les longues sections vides dans un éditeur tel qu&#x27;Audacity, tout en gardant des souffles utiles et un phrasé naturel. Exportez des WAV propres. Rassemblez les fichiers approuvés dans un ZIP et conservez quelques clips propres à l&#x27;extérieur pour évaluation.</li>
+</ol>
+<p>Testez la chaîne de nettoyage complète sur quelques secondes avant de traiter l&#x27;intégralité de l&#x27;ensemble de données. Un modèle peut apprendre les artefacts laissés dans son audio d&#x27;entraînement. Vérifiez plusieurs clips de différentes sessions avant de les télécharger.</p>
+<span id="clean-a-dataset-locally-with-ultimate-vocal-remover-uvr" class="docs-anchor"></span><h3 id="nettoyez-un-ensemble-de-données-localement-avec-ultimate-vocal-remover-uvr">Nettoyez un ensemble de données localement avec Ultimate Vocal Remover (UVR)</h3>
+<p>UVR sépare un fichier audio en pistes appelées stems. Utilisez-le lorsque la voix cible est mélangée à de la musique, des effets sonores ou d&#x27;autres voix. Si vous disposez déjà d’un enregistrement vocal clair, conservez l’original. UVR traite l&#x27;audio sur votre ordinateur une fois les modèles requis téléchargés. Cloud exécute la dernière tâche de formation RVC séparément.</p>
+<span id="install-uvr-and-prepare-a-test-clip" class="docs-anchor"></span><h4 id="installez-uvr-et-préparez-un-clip-de-test">Installez UVR et préparez un clip de test</h4>
+<ol>
+<li>Téléchargez le programme d&#x27;installation ou le package pour votre système d&#x27;exploitation à partir de <a href="https://github.com/Anjok07/ultimatevocalremovergui/releases">versions UVR</a>. Lancez l&#x27;application de bureau après l&#x27;avoir installée.</li>
+<li>Faites une copie de 15 à 30 secondes d&#x27;un exemple contenant une ligne claire et une section où la musique la chevauche. Gardez l&#x27;original en sécurité.</li>
+<li>Cliquez sur <strong>Sélectionner l&#x27;entrée</strong> et choisissez ce clip de test. Utilisez <strong>Sélectionner la sortie</strong> pour choisir un nouveau dossier accessible en écriture, tel que <code translate="no" v-pre>uvr-test</code>. Choisissez <strong>WAV</strong> pour le format de sortie.</li>
+<li>Sélectionnez une <strong>Méthode de processus</strong> et un modèle qui sépare les <strong>voix</strong> de l&#x27;<strong>instrumental</strong>, par exemple un modèle de voix sous <strong>MDX-Net</strong>. Si la liste est vide, ouvrez les paramètres <strong>Centre de téléchargement</strong>, sélectionnez la famille de modèles correspondante et téléchargez un modèle approprié. Revenez à la fenêtre principale et sélectionnez-la.</li>
+<li>Activez la <strong>Conversion GPU</strong> uniquement si votre version installée reconnaît un périphérique pris en charge. Si cette option provoque une erreur, désactivez-la et testez sur le processeur. Le traitement du processeur peut être plus lent, alors commencez par un court clip.</li>
+</ol>
+<span id="separate-the-vocals-and-listen" class="docs-anchor"></span><h4 id="séparez-les-voix-et-écoutez">Séparez les voix et écoutez</h4>
+<p>Cliquez sur ** Démarrer le traitement **. Une fois terminé, recherchez la tige de voix dans le dossier de sortie. Certains modèles écrivent également une tige instrumentale. Jouez l&#x27;original et les voix à un volume similaire. Vérifiez les consonnes, les respirations, les notes tenues et les sections où l&#x27;accompagnement est fort. Si vous entendez toujours des instruments ou si la voix semble aqueuse ou métallique, comparez un autre modèle sur le même clip de test avant de traiter l&#x27;ensemble des données complet.</p>
+<p>Si vous avez sélectionné le mauvais stem, vérifiez les noms de fichiers ou écoutez chaque sortie. Gardez celui qui contient votre voix principale cible.</p>
+<span id="clean-the-remaining-problems-one-at-a-time" class="docs-anchor"></span><h4 id="nettoyer-les-problèmes-restants-un-à-la-fois">Nettoyer les problèmes restants un à la fois</h4>
+<retype-table copy-text="| Ce qui reste | Que tenter en UVR |
+| --- | --- |
+| Choeurs ou harmonies | Insérez la tige vocale isolée dans un modèle destiné à la séparation lead et backing, si votre installation en propose un. Conservez la sortie principale et vérifiez que la voix cible est complète. |
+| Queues de réverbération entre les phrases | Essayez un modèle destiné à la dé-réverbération si disponible. Comparez avant et après sur un même passage. Conservez la tige d'origine si la dé-réverbération endommage les consonnes ou les notes tenues. |
+| Répétitions différées audibles | Testez un modèle de suppression d'écho si disponible. Si cela supprime des mots ou déforme les respirations, utilisez une autre prise ou excluez la section concernée. |
+| Bourdonnement de la pièce, pics écrêtés ou autres voix | Vérifiez l'original. Si le traitement continue d’endommager la voix, remplacez ou excluez le clip. La séparation ne peut pas reconstruire les pics perdus à cause de l'écrêtage. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Ce qui reste</th>
+<th>Que tenter en UVR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choeurs ou harmonies</td>
+<td>Insérez la tige vocale isolée dans un modèle destiné à la séparation lead et backing, si votre installation en propose un. Conservez la sortie principale et vérifiez que la voix cible est complète.</td>
+</tr>
+<tr>
+<td>Queues de réverbération entre les phrases</td>
+<td>Essayez un modèle destiné à la dé-réverbération si disponible. Comparez avant et après sur un même passage. Conservez la tige d&#x27;origine si la dé-réverbération endommage les consonnes ou les notes tenues.</td>
+</tr>
+<tr>
+<td>Répétitions différées audibles</td>
+<td>Testez un modèle de suppression d&#x27;écho si disponible. Si cela supprime des mots ou déforme les respirations, utilisez une autre prise ou excluez la section concernée.</td>
+</tr>
+<tr>
+<td>Bourdonnement de la pièce, pics écrêtés ou autres voix</td>
+<td>Vérifiez l&#x27;original. Si le traitement continue d’endommager la voix, remplacez ou excluez le clip. La séparation ne peut pas reconstruire les pics perdus à cause de l&#x27;écrêtage.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Traitez l’ensemble complet seulement après qu’une courte comparaison semble correcte. Utilisez Audacity ou un autre éditeur pour couper le matériel inutilisable. Conservez les pauses et les respirations naturelles, exportez les clips approuvés au format WAV et regroupez uniquement ces clips dans l&#x27;ensemble de données ZIP. Gardez les tiges instrumentales et rejetées hors du ZIP. Ensuite, téléchargez-le dans <strong>Training</strong> sur Ilaria RVC et confirmez que <strong>Path to Dataset</strong> pointe vers les enregistrements importés.</p>
+<span id="5-train-a-voice-and-save-your-work" class="docs-anchor"></span><h2 id="5-entraînez-une-voix-et-sauvegardez-votre-travail">5. Entraînez une voix et sauvegardez votre travail</h2>
+<ol>
+<li>Dans <strong>Formation</strong>, choisissez un nouveau <strong>Nom de modèle</strong>. Importez votre audio ou votre ZIP via les contrôles de téléchargement de l&#x27;ensemble de données. Attendez la fin de l&#x27;importation et confirmez que <strong>Chemin vers l&#x27;ensemble de données</strong> pointe vers les enregistrements importés.</li>
+<li>Exécutez le <strong>Dataset Checker</strong> et écoutez tous les enregistrements suspects. Confirmez que vos paramètres d&#x27;architecture RVC V2, de fréquence d&#x27;échantillonnage, d&#x27;intégration et de pitch correspondent à vos pré-entraînements G/D sélectionnés si vous les utilisez. Commencez avec une taille de lot adaptée au GPU alloué.</li>
+<li>Exécutez <strong>Process Data</strong>, puis <strong>Feature Extraction</strong>. Lisez l’état de chacun avant de continuer. Si vous modifiez l&#x27;ensemble de données ou l&#x27;encodeur, préparez de nouveaux fichiers pour cette expérience avant la formation.</li>
+<li>Exécutez <strong>Train Pth</strong> avec une première cible modeste et enregistrez les points de contrôle périodiques. Conservez un court clip de test en dehors des données d’entraînement. Comparez les points de contrôle exportés sur ce même clip avant de démarrer une exécution plus longue.</li>
+<li>Créez l&#x27;index des fonctionnalités si vous avez besoin d&#x27;une récupération, puis essayez d&#x27;abord l&#x27;exportation d&#x27;inférence à <strong>Rapport d&#x27;index 0</strong>. Pour une explication détaillée de chaque paramètre, voir <a href="../training-controls/">Contrôles de formation et flux de travail</a>.</li>
+<li>Si vous souhaitez vous arrêter en cours d&#x27;exécution, utilisez <strong>Stop and save</strong> dans Ilaria RVC et attendez que le journal confirme la sauvegarde. Téléchargez les résultats pendant que la session Cloud est toujours active.</li>
+</ol>
+<span id="export-and-stop" class="docs-anchor"></span><h2 id="exporter-et-arrêter">Exporter et arrêter</h2>
+<p>Définissez <code translate="no" v-pre>EXPORT = True</code> et exécutez la cellule d&#x27;exportation. Activez <code translate="no" v-pre>INCLUDE_CHECKPOINTS</code> si vous devez reprendre l&#x27;entraînement. Enregistrez le ZIP localement avant d&#x27;arrêter la session, puis exécutez la cellule d&#x27;arrêt avec <code translate="no" v-pre>STOP = True</code>.</p>
+<span id="if-startup-fails" class="docs-anchor"></span><h2 id="si-le-démarrage-échoue">Si le démarrage échoue</h2>
+<p>Si la première cellule ne voit pas le GPU, vérifiez votre accélérateur et relancez-la. Si l&#x27;interface ne s&#x27;ouvre pas, lisez la sortie de la cellule de lancement, confirmez que le serveur est prêt et rouvrez la vue.</p>
+<span id="check-the-output-zip" class="docs-anchor"></span><h3 id="vérifier-le-zip-de-sortie">Vérifier le ZIP de sortie</h3>
+<p>Pour l&#x27;inférence, vérifiez votre WAV exporté et les fichiers du modèle. Pour l&#x27;entraînement, activez <code translate="no" v-pre>INCLUDE_CHECKPOINTS</code> afin d&#x27;inclure les journaux d&#x27;expérience, puis vérifiez l&#x27;archive avant de fermer la session. Conservez le dataset d&#x27;origine séparément.</p>
+<span id="recover-from-common-problems" class="docs-anchor"></span><h2 id="résoudre-les-problèmes-courants">Résoudre les problèmes courants</h2>
+<p>Si l&#x27;installation échoue, lisez la première erreur et relancez la cellule en échec après l&#x27;avoir corrigée. Si l&#x27;application s&#x27;ouvre mais que votre modèle manque, vérifiez le journal d&#x27;importation et actualisez la liste. En cas d&#x27;erreur de mémoire insuffisante (OOM), commencez par un extrait plus court ou réduisez la taille de lot (batch size) d&#x27;entraînement. Si la Web UI se ferme, rouvrez-la depuis la même cellule de lancement ou le même port tant que la session est active.</p>
+<p><a href="../cloud/">Ilaria RVC dans le cloud</a></p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/kaggle/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Kaggle</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/lightning-ai/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Lightning AI Studio</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T16:44:42.000Z">22/11/2026 · 17:44</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Google Colab", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/ilaria-rvc/cloud/colab.md" }</script>
+</body>
+</html>

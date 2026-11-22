@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/fr">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681190191">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="Entraîner des Modèles RVC dans Redpanda-vc - EMA & Sauvegarde par Pas">
+    <meta name="description" content="Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/training/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/fr/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/training/">
+    <meta property="og:title" content="Entraîner des Modèles RVC dans Redpanda-vc - EMA & Sauvegarde par Pas">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/training/">
+    <meta name="twitter:title" content="Entraîner des Modèles RVC dans Redpanda-vc - EMA & Sauvegarde par Pas">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/training.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848681190191" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848681190191" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <meta name="twitter:description" content="Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="es" href="https://docs.ilariarvc.shop/es/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="fr" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="pt" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/redpanda/training/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/training/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/fr/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Langue: Français"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg><span class="docs-language-name">Français</span></summary><div><a href="/ilaria-rvc/redpanda/training/" lang="en" hreflang="en"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/ilaria-rvc/redpanda/training/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a><a href="/es/ilaria-rvc/redpanda/training/" lang="es" hreflang="es"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M6 6h3v4H6z"/></svg> Español</a><a href="/fr/ilaria-rvc/redpanda/training/" lang="fr" hreflang="fr" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg> Français</a><a href="/de/ilaria-rvc/redpanda/training/" lang="de" hreflang="de"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a><a href="/pt/ilaria-rvc/redpanda/training/" lang="pt" hreflang="pt"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#da291c" d="M0 0h24v16H0z"/><path fill="#046a38" d="M0 0h9.6v16H0z"/><circle cx="9.6" cy="8" r="3.2" fill="none" stroke="#ffcc00" stroke-width=".8"/><path stroke="#ffcc00" stroke-width=".6" d="M6.4 8h6.4m-3.2-3.2v6.4M7 6l5.2 4"/><path fill="#fff" stroke="#da291c" stroke-width=".7" d="M7.9 6.1h3.4v2.5a1.7 1.7 0 0 1-3.4 0z"/><path stroke="#003399" stroke-width=".5" d="M9.6 6.9v2m-1-1h2"/></svg> Português</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/fr/">Site web</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<span id="train-rvc-models-in-redpanda-vc---ema--step-based-saving" class="docs-anchor"></span><h1 id="entraîner-des-modèles-rvc-dans-redpanda-vc---ema--sauvegarde-par-pas">Entraîner des Modèles RVC dans Redpanda-vc - EMA &amp; Sauvegarde par Pas</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage.</div>
+<p><a href="https://github.com/redpanda343/Redpanda-vc">Redpanda-vc sur GitHub</a> · <a href="../first-run/">Configurer Redpanda-vc</a> · <a href="../comparison/">Redpanda-vc vs autres versions RVC</a> · <a href="../../../training/">Guide Général d&#x27;Entraînement RVC</a></p>
+<p>Entraîner un modèle vocal apprend à un programme à reproduire une voix cible à partir d&#x27;une collection d&#x27;extraits audio propres. Si vous débutez en RVC, vous n&#x27;avez pas besoin de mémoriser du jargon technique avant de commencer. Voici les termes clés en langage clair :</p>
+<ul>
+<li><strong>Weights (Poids) :</strong> Les nombres internes du modèle qui s&#x27;ajustent petit à petit à mesure qu&#x27;il apprend une voix.</li>
+<li><strong>Generator (<code translate="no" v-pre>G</code>) :</strong> La partie du modèle qui crée réellement l&#x27;audio de la voix convertie.</li>
+<li><strong>Discriminator (<code translate="no" v-pre>D</code>) :</strong> Un réseau auxiliaire utilisé uniquement pendant l&#x27;entraînement pour juger à quel point l&#x27;audio du générateur sonne réaliste par rapport aux vrais enregistrements.</li>
+<li><strong>Optimizer (Optimiseur) :</strong> Le moteur mathématique qui met à jour les poids du modèle après chaque pas d&#x27;entraînement.</li>
+<li><strong>Step (Pas) :</strong> Une seule mise à jour des poids après le traitement d&#x27;un petit groupe (<strong>batch</strong>) d&#x27;extraits audio.</li>
+<li><strong>Epoch (Époque) :</strong> Un passage complet sur l&#x27;ensemble de votre dataset préparé.</li>
+<li><strong>Checkpoint (<code translate="no" v-pre>G_*.pth</code> / <code translate="no" v-pre>D_*.pth</code>) :</strong> Une capture d&#x27;entraînement sauvegardée permettant de mettre en pause et de reprendre l&#x27;entraînement plus tard.</li>
+<li><strong>EMA (Exponential Moving Average) :</strong> Une moyenne glissante lissée des poids du générateur maintenue pendant l&#x27;entraînement.</li>
+</ul>
+<blockquote>
+<p>EMA aide à lisser les variations des poids du générateur pendant l&#x27;entraînement. Au lieu d&#x27;exporter uniquement les tout derniers poids du générateur, Redpanda-vc peut en exporter une moyenne glissante.</p>
+</blockquote>
+<p>L&#x27;entraînement ne produit pas une voix terminée instantanément, et la qualité finale dépend fortement de vos enregistrements source, de la préparation du dataset et des réglages d&#x27;entraînement. Avant de plonger, gardez à l&#x27;esprit ce que EMA <strong>ne fait pas</strong> :</p>
+<ul>
+<li>EMA n&#x27;est <strong>pas</strong> un filtre audio ni un débruiteur.</li>
+<li>EMA n&#x27;édite <strong>pas</strong> et ne nettoie <strong>pas</strong> vos fichiers de dataset.</li>
+<li>EMA ne répare <strong>pas</strong> les enregistrements saturés ou bruités.</li>
+<li>EMA ne garantit <strong>pas</strong> une meilleure qualité audio sur toutes les voix.</li>
+<li>EMA ne supprime <strong>pas</strong> tout l&#x27;aléa de l&#x27;entraînement.</li>
+</ul>
+<hr>
+<span id="what-is-ema" class="docs-anchor"></span><h2 id="quest-ce-que-lema-">Qu&#x27;est-ce que l&#x27;EMA ?</h2>
+<p>Imaginez un élève s&#x27;entraînant à prononcer un mot difficile. Une tentative isolée peut sembler légèrement plus claire ou légèrement plus rugueuse que la précédente. Observer la tendance sur de nombreuses tentatives récentes donne une image plus régulière des progrès de l&#x27;élève que de juger uniquement sur la toute dernière tentative.</p>
+<p><em>(Gardez à l&#x27;esprit qu&#x27;il s&#x27;agit uniquement d&#x27;une analogie : EMA n&#x27;écoute pas l&#x27;audio, ne juge pas la prononciation et ne choisit pas de &quot;meilleurs&quot; enregistrements de lui-même.)</em></p>
+<span id="how-redpanda-vc-actually-runs-ema" class="docs-anchor"></span><h3 id="comment-redpanda-vc-exécute-réellement-lema">Comment Redpanda-vc exécute réellement l&#x27;EMA</h3>
+<p>Dans <code translate="no" v-pre>rvc/train/train.py</code>, Redpanda-vc maintient l&#x27;EMA en mémoire pendant l&#x27;entraînement :</p>
+<ol>
+<li>Le générateur s&#x27;entraîne normalement sur chaque batch.</li>
+<li>L&#x27;optimiseur met à jour les poids en direct du générateur.</li>
+<li>Immédiatement après chaque pas de l&#x27;optimiseur du générateur (sur le rang <code translate="no" v-pre>0</code>), <code translate="no" v-pre>GeneratorEMA.update()</code> met à jour une copie moyennée séparée des poids du générateur (en excluant <code translate="no" v-pre>enc_q</code>, utilisé uniquement pendant l&#x27;entraînement).</li>
+<li>Cette moyenne glissante reste en mémoire et est sauvegardée dans le checkpoint d&#x27;entraînement <code translate="no" v-pre>G</code>.</li>
+<li>Lorsque EMA est activé (<code translate="no" v-pre>Generator EMA Decay &gt; 0</code>), Redpanda-vc exporte les modèles <code translate="no" v-pre>.pth</code> d&#x27;inférence depuis ces poids EMA plutôt que depuis les poids bruts en direct du générateur.</li>
+</ol>
+<p><strong>EMA se met à jour à chaque step d&#x27;entraînement, pas une fois par epoch.</strong> Redpanda-vc <strong>ne</strong> moyenne <strong>pas</strong> plusieurs fichiers <code translate="no" v-pre>.pth</code> déjà enregistrés sur disque ; il maintient une unique moyenne glissante continue en mémoire pendant l&#x27;entraînement.</p>
+<doc-panel id="détails-mathématiques-optionnels--ema-standard-vs-formule-corrigée-du-biais-de-redpanda-vc" collapsed>
+    <template #title>Détails mathématiques optionnels : EMA standard vs. formule corrigée du biais de Redpanda-vc</template>
+<p>La mise à jour EMA standard intuitive est :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">EMA_new = decay * EMA_previous + (1 - decay) * current_weights</code></pre>
+</doc-codeblock></div>
+<p>Dans <code translate="no" v-pre>rvc/train/train.py</code> (<code translate="no" v-pre>GeneratorEMA.update()</code>, lignes 199-205), Redpanda-vc n&#x27;applique pas une décroissance constante dès la toute première mise à jour. À la place, il calcule une décroissance effective corrigée du biais selon le nombre de mises à jour (<code translate="no" v-pre>updates</code>) :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">effective_decay = beta * (1 - beta ** (updates - 1)) / (1 - beta ** updates)</code></pre>
+</doc-codeblock></div>
+<p>où <code translate="no" v-pre>beta</code> est votre réglage <code translate="no" v-pre>ema_decay</code>. Cette correction de démarrage réduit l&#x27;influence des poids initiaux lors des toutes premières mises à jour, puis se rapproche de <code translate="no" v-pre>beta</code> à mesure que <code translate="no" v-pre>updates</code> augmente. Les paramètres en virgule flottante sont mélangés via <code translate="no" v-pre>torch._foreach_lerp_</code>, tandis que les buffers non flottants sont copiés depuis le générateur en direct.</p>
+</doc-panel>
+<hr>
+<span id="understanding-generator-ema-decay" class="docs-anchor"></span><h2 id="comprendre-generator-ema-decay">Comprendre Generator EMA Decay</h2>
+<p>Dans <strong>Training → Advanced Settings</strong>, Redpanda-vc expose <strong>Generator EMA Decay</strong> (<code translate="no" v-pre>tabs/train/rvc.py</code>, lignes 809-819) :</p>
+<ul>
+<li><strong>Minimum :</strong> <code translate="no" v-pre>0</code></li>
+<li><strong>Maximum :</strong> <code translate="no" v-pre>0.9999</code></li>
+<li><strong>Défaut :</strong> <code translate="no" v-pre>0.999</code></li>
+<li><strong>Pas du curseur :</strong> <code translate="no" v-pre>0.0001</code></li>
+</ul>
+<span id="what-the-values-mean" class="docs-anchor"></span><h3 id="signification-des-valeurs">Signification des valeurs</h3>
+<ul>
+<li><strong><code translate="no" v-pre>Generator EMA Decay = 0</code> :</strong> Désactive complètement <code translate="no" v-pre>GeneratorEMA</code>. Les modèles <code translate="no" v-pre>.pth</code> d&#x27;inférence sont exportés directement depuis les poids en direct du générateur.</li>
+<li><strong><code translate="no" v-pre>Generator EMA Decay = 0.999</code> (Défaut) :</strong> Maintient une moyenne glissante exponentielle qui accorde un poids significatif aux mises à jour récentes du générateur tout en lissant les fluctuations pas à pas.</li>
+<li><strong><code translate="no" v-pre>Generator EMA Decay = 0.9999</code> :</strong> Fait évoluer la moyenne glissante plus lentement et moyenne sur une fenêtre de mises à jour plus longue. Cela peut accroître la régularité de la moyenne, mais rend aussi les poids EMA plus lents à réagir aux améliorations récentes du générateur en direct.</li>
+</ul>
+<p>Des valeurs plus basses s&#x27;adaptent plus vite aux poids récents, tandis que des valeurs plus élevées moyennent sur plus de pas. <code translate="no" v-pre>0.9999</code> n&#x27;est <strong>pas</strong> automatiquement meilleur que <code translate="no" v-pre>0.999</code>, et il n&#x27;existe aucun decay &quot;meilleur&quot; universel pour la parole, le chant, les petits datasets ou les grands datasets. Si vous débutez, partir du réglage par défaut <strong><code translate="no" v-pre>0.999</code></strong> et comparer des rendus audio réels avant d&#x27;ajuster constitue une base pratique.</p>
+<hr>
+<span id="why-does-redpanda-vc-use-ema" class="docs-anchor"></span><h2 id="pourquoi-redpanda-vc-utilise-t-il-lema-">Pourquoi Redpanda-vc utilise-t-il l&#x27;EMA ?</h2>
+<p>Dans la littérature sur l&#x27;apprentissage profond (comme la documentation de moyennage de poids de PyTorch et Morales-Brotons, Vogels et Hendrikx, 2024), le moyennage des poids le long d&#x27;une trajectoire d&#x27;entraînement est étudié parce que les mises à jour individuelles SGD/Adam peuvent osciller autour de bonnes solutions.</p>
+<span id="potential-benefits-not-guarantees" class="docs-anchor"></span><h3 id="bénéfices-potentiels-sans-garantie">Bénéfices potentiels (sans garantie)</h3>
+<ul>
+<li>Réduction des oscillations pas à pas dans les poids exportés.</li>
+<li>Meilleure continuité entre des exportations consécutives.</li>
+<li>Atténuation d&#x27;une partie de la variabilité d&#x27;une mise à jour à l&#x27;autre pendant l&#x27;entraînement.</li>
+<li>Comportement potentiellement plus stable du modèle exporté, bien qu&#x27;une réelle amélioration audio sur votre dataset RVC spécifique exige des tests d&#x27;écoute.</li>
+</ul>
+<span id="important-limitations" class="docs-anchor"></span><h3 id="limitations-importantes">Limitations importantes</h3>
+<ul>
+<li>EMA ne remplace <strong>pas</strong> un dataset propre et bien préparé.</li>
+<li>EMA n&#x27;élimine <strong>pas</strong> le surapprentissage (overfitting).</li>
+<li>EMA n&#x27;empêche <strong>pas</strong> un entraînement défaillant ou instable d&#x27;échouer.</li>
+<li>EMA ne garantit <strong>pas</strong> une meilleure ressemblance vocale ni une meilleure prononciation.</li>
+<li>EMA ne promet <strong>pas</strong> moins de pas ou d&#x27;époques d&#x27;entraînement.</li>
+<li>EMA n&#x27;est <strong>pas</strong> un sélecteur automatique du &quot;meilleur checkpoint&quot;.</li>
+<li>EMA conserve une copie supplémentaire des poids du générateur en mémoire et ajoute un léger coût de mise à jour par pas.</li>
+</ul>
+<hr>
+<span id="ema-weights-vs-training-checkpoints" class="docs-anchor"></span><h2 id="poids-ema-vs-checkpoints-dentraînement">Poids EMA vs. Checkpoints d&#x27;Entraînement</h2>
+<p>Dans Redpanda-vc, quatre éléments distincts existent pendant une session. Ne les confondez pas :</p>
+<retype-table copy-text="| Fichier / État | Emplacement | Contenu | Usage |
+| --- | --- | --- | --- |
+| **Generator checkpoint (`G_*.pth`)** | `logs/&lt;model_name&gt;/` | Poids en direct du générateur, état optimiseur, scaler, `iteration` (époque), `step`, `epoch_step`, RNG et état `ema` (si activé) | Reprendre l'entraînement (et export manuel) |
+| **Discriminator checkpoint (`D_*.pth`)** | `logs/&lt;model_name&gt;/` | Poids du discriminateur, état optimiseur, scaler, `step` | Reprendre l'entraînement avec `G_*.pth` |
+| **EMA weights** | En mémoire pendant l'entraînement et dans `G_*.pth` (`checkpoint[&quot;ema&quot;][&quot;weights&quot;]`) | Moyenne glissante des poids du générateur (hors `enc_q`) | Générer des exports `.pth` d'inférence lissés |
+| **Modèle d'inférence (`&lt;name&gt;_&lt;epoch&gt;e_&lt;step&gt;s.pth`)** | `logs/&lt;model_name&gt;/` | Poids compacts d'inférence seule du générateur + métadonnées | Conversion vocale uniquement (**impossible** de reprendre l'entraînement) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Fichier / État</th>
+<th>Emplacement</th>
+<th>Contenu</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Generator checkpoint (<code translate="no" v-pre>G_*.pth</code>)</strong></td>
+<td><code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Poids en direct du générateur, état optimiseur, scaler, <code translate="no" v-pre>iteration</code> (époque), <code translate="no" v-pre>step</code>, <code translate="no" v-pre>epoch_step</code>, RNG et état <code translate="no" v-pre>ema</code> (si activé)</td>
+<td>Reprendre l&#x27;entraînement (et export manuel)</td>
+</tr>
+<tr>
+<td><strong>Discriminator checkpoint (<code translate="no" v-pre>D_*.pth</code>)</strong></td>
+<td><code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Poids du discriminateur, état optimiseur, scaler, <code translate="no" v-pre>step</code></td>
+<td>Reprendre l&#x27;entraînement avec <code translate="no" v-pre>G_*.pth</code></td>
+</tr>
+<tr>
+<td><strong>EMA weights</strong></td>
+<td>En mémoire pendant l&#x27;entraînement et dans <code translate="no" v-pre>G_*.pth</code> (<code translate="no" v-pre>checkpoint[&quot;ema&quot;][&quot;weights&quot;]</code>)</td>
+<td>Moyenne glissante des poids du générateur (hors <code translate="no" v-pre>enc_q</code>)</td>
+<td>Générer des exports <code translate="no" v-pre>.pth</code> d&#x27;inférence lissés</td>
+</tr>
+<tr>
+<td><strong>Modèle d&#x27;inférence (<code translate="no" v-pre>&lt;name&gt;_&lt;epoch&gt;e_&lt;step&gt;s.pth</code>)</strong></td>
+<td><code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Poids compacts d&#x27;inférence seule du générateur + métadonnées</td>
+<td>Conversion vocale uniquement (<strong>impossible</strong> de reprendre l&#x27;entraînement)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><strong>Note :</strong> Dans le code vérifié de Redpanda-vc (<code translate="no" v-pre>train.py</code>), l&#x27;EMA est appliquée <strong>uniquement au générateur (<code translate="no" v-pre>net_g</code>)</strong>, jamais au discriminateur (<code translate="no" v-pre>net_d</code>).</p>
+<hr>
+<h2 id="training-steps-vs-epochs">Training Steps vs. Epochs</h2>
+<ul>
+<li><strong>Epoch (Époque) :</strong> Un passage complet sur le dataset d&#x27;entraînement préparé.</li>
+<li><strong>Batch :</strong> Un petit groupe de tranches audio traitées ensemble en une passe avant/arrière.</li>
+<li><strong>Step (Pas) :</strong> Une mise à jour de l&#x27;optimiseur après traitement d&#x27;un batch. Un pas n&#x27;est <strong>ni</strong> un fichier audio <strong>ni</strong> une seconde d&#x27;audio.</li>
+</ul>
+<span id="hypothetical-example" class="docs-anchor"></span><h3 id="exemple-hypothétique">Exemple hypothétique</h3>
+<p>Supposons que votre dataset préparé et votre <code translate="no" v-pre>Batch Size</code> produisent <strong>100 pas par époque</strong> :</p>
+<ul>
+<li><code translate="no" v-pre>100</code> pas ≈ <code translate="no" v-pre>1</code> époque</li>
+<li><code translate="no" v-pre>500</code> pas ≈ <code translate="no" v-pre>5</code> époques</li>
+<li><code translate="no" v-pre>1,000</code> pas ≈ <code translate="no" v-pre>10</code> époques</li>
+</ul>
+<p>Le ratio réel de pas par époque dépend de la durée de votre dataset, du découpage, de <code translate="no" v-pre>Batch Size</code> et de <code translate="no" v-pre>Max Audio per Batch (sec)</code>. Ne supposez jamais que 100 pas égalent 1 époque pour tous les modèles.</p>
+<hr>
+<span id="step-based-checkpoint-saving" class="docs-anchor"></span><h2 id="sauvegarde-de-checkpoints-par-pas">Sauvegarde de Checkpoints par Pas</h2>
+<p>Au lieu d&#x27;attendre la fin d&#x27;une époque complète avant de sauvegarder, Redpanda-vc planifie les sauvegardes selon le <strong>nombre de pas</strong> (<code translate="no" v-pre>tabs/train/rvc.py</code>, lignes 663-703 ; <code translate="no" v-pre>rvc/train/train.py</code>, lignes 917-921 et 1146-1195) :</p>
+<h3 id="total-steps">Total Steps</h3>
+<ul>
+<li><strong>Défaut :</strong> <code translate="no" v-pre>10000</code> (plage du curseur <code translate="no" v-pre>1</code> à <code translate="no" v-pre>1000000</code>, pas <code translate="no" v-pre>1</code>).</li>
+<li>Définit le <strong>nombre total de pas cible</strong> pour l&#x27;expérience, et <strong>non</strong> &quot;ajouter 10,000 pas de plus&quot;. Si votre modèle repris est déjà au pas <code translate="no" v-pre>10000</code>, vous devez augmenter <code translate="no" v-pre>Total Steps</code> (par exemple à <code translate="no" v-pre>15000</code>) pour continuer l&#x27;entraînement.</li>
+</ul>
+<h3 id="save-every-x-steps">Save Every X Steps</h3>
+<ul>
+<li><strong>Défaut :</strong> <code translate="no" v-pre>1000</code> (plage du curseur <code translate="no" v-pre>1</code> à <code translate="no" v-pre>100000</code>, pas <code translate="no" v-pre>1</code>).</li>
+<li>Sauvegarde les checkpoints <code translate="no" v-pre>G</code> et <code translate="no" v-pre>D</code> tous les <code translate="no" v-pre>X</code> pas d&#x27;entraînement (<code translate="no" v-pre>self.global_step % save_every_steps == 0</code>).</li>
+<li><strong>Exemple :</strong> Avec <code translate="no" v-pre>Total Steps = 10000</code> et <code translate="no" v-pre>Save Every X Steps = 1000</code>, Redpanda-vc sauvegarde aux pas <code translate="no" v-pre>1000</code>, <code translate="no" v-pre>2000</code>, <code translate="no" v-pre>3000</code>, ..., <code translate="no" v-pre>10000</code>, que ces pas tombent en milieu d&#x27;époque ou non.</li>
+</ul>
+<h3 id="final-save">Final Save</h3>
+<p>Même si <code translate="no" v-pre>Total Steps</code> n&#x27;est pas un multiple de <code translate="no" v-pre>Save Every X Steps</code> (par exemple, <code translate="no" v-pre>Total Steps = 2500</code> et <code translate="no" v-pre>Save Every X Steps = 1000</code>), Redpanda-vc sauvegarde <strong>toujours</strong> à la fois les checkpoints <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> et un modèle <code translate="no" v-pre>.pth</code> d&#x27;inférence en atteignant le pas final (<code translate="no" v-pre>final = self.global_step &gt;= self.args.total_steps</code>).</p>
+<h3 id="save-every-weights">Save Every Weights</h3>
+<ul>
+<li><strong>Défaut :</strong> <strong>Activé</strong> (<code translate="no" v-pre>True</code>).</li>
+<li>Lorsqu&#x27;il est <strong>activé</strong>, Redpanda-vc exporte un modèle <code translate="no" v-pre>.pth</code> d&#x27;inférence à chaque intervalle de sauvegarde <em>et</em> au pas final.</li>
+<li>Lorsqu&#x27;il est <strong>désactivé</strong>, les checkpoints <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> continuent d&#x27;être sauvegardés tous les <code translate="no" v-pre>Save Every X Steps</code>, mais un <code translate="no" v-pre>.pth</code> d&#x27;inférence automatique n&#x27;est exporté qu&#x27;au pas final.</li>
+</ul>
+<h3 id="save-only-latest">Save Only Latest</h3>
+<ul>
+<li><strong>Défaut :</strong> <strong>Activé</strong> (<code translate="no" v-pre>True</code>).</li>
+<li>Lorsqu&#x27;il est <strong>activé</strong>, les checkpoints <code translate="no" v-pre>G</code> et <code translate="no" v-pre>D</code> écrasent des noms fixes (<code translate="no" v-pre>G_2333333.pth</code> et <code translate="no" v-pre>D_2333333.pth</code>, où <code translate="no" v-pre>2333333</code> est <code translate="no" v-pre>LATEST_CHECKPOINT_SUFFIX</code>) pour économiser de l&#x27;espace disque.</li>
+<li>Lorsqu&#x27;il est <strong>désactivé</strong>, les checkpoints incluent le numéro de pas (<code translate="no" v-pre>G_1000.pth</code>, <code translate="no" v-pre>D_1000.pth</code>, <code translate="no" v-pre>G_2000.pth</code>, <code translate="no" v-pre>D_2000.pth</code>).</li>
+<li><strong>Important :</strong> <code translate="no" v-pre>Save Only Latest</code> n&#x27;affecte que les checkpoints d&#x27;entraînement <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>, <strong>pas</strong> les modèles <code translate="no" v-pre>.pth</code> d&#x27;inférence exportés (sauf si vous désactivez <code translate="no" v-pre>Save Every Weights</code>). Gardez à l&#x27;esprit qu&#x27;avec <code translate="no" v-pre>Save Only Latest</code> activé, vous ne pouvez pas revenir à un checkpoint <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> intermédiaire plus ancien si l&#x27;entraînement se dégrade plus tard.</li>
+</ul>
+<hr>
+<span id="your-first-rvc-training-in-redpanda-vc" class="docs-anchor"></span><h2 id="votre-premier-entraînement-rvc-dans-redpanda-vc">Votre Premier Entraînement RVC dans Redpanda-vc</h2>
+<span id="1-preparation" class="docs-anchor"></span><h3 id="1-préparation">1. Préparation</h3>
+<ol>
+<li>Installez et lancez Redpanda-vc (voir <a href="../first-run/">Configurer Redpanda-vc</a>).</li>
+<li>Ouvrez l&#x27;onglet <strong>Train</strong> et sélectionnez <strong>RVC</strong> (si votre build affiche plusieurs familles de modèles).</li>
+<li>Sous <strong>Model Settings</strong>, saisissez un <strong>Model Name</strong> unique (le nom de votre expérience).</li>
+<li>Choisissez un <strong>Sample Rate</strong> compatible (<code translate="no" v-pre>32k</code>, <code translate="no" v-pre>40k</code> ou <code translate="no" v-pre>48k</code>), une <strong>Version</strong> (<code translate="no" v-pre>v1</code> ou <code translate="no" v-pre>v2</code>) et un <strong>Vocoder</strong> (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> ou <code translate="no" v-pre>RefineGAN</code> selon vos pré-entraînés et votre application d&#x27;inférence cible).</li>
+<li>Préparez un dataset propre et sec d&#x27;<strong>enregistrements autorisés</strong> dans un dossier dédié.</li>
+</ol>
+<h3 id="2-preprocess">2. Preprocess</h3>
+<ol>
+<li>Ouvrez l&#x27;accordéon <strong>Preprocess</strong>.</li>
+<li>Saisissez ou sélectionnez le chemin de votre dossier dataset dans <strong>Dataset Path</strong> (cliquez sur <strong>Refresh</strong> si besoin).</li>
+<li>Cliquez sur <strong>Preprocess Dataset</strong> et attendez la fin du découpage et de la normalisation audio dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code>.</li>
+</ol>
+<h3 id="3-extract">3. Extract</h3>
+<ol>
+<li>Ouvrez l&#x27;accordéon <strong>Extract</strong>.</li>
+<li>Sélectionnez votre <strong>Pitch extraction algorithm</strong> (tel que <code translate="no" v-pre>rmvpe</code>) et <strong>Embedder Model</strong> (généralement <code translate="no" v-pre>contentvec</code>).</li>
+<li>Cliquez sur <strong>Extract Features</strong>. <em>(Cela prépare les caractéristiques de hauteur et de contenu pour l&#x27;entraînement ; cela <strong>n&#x27;entraîne pas</strong> encore les poids <code translate="no" v-pre>.pth</code>.)</em></li>
+</ol>
+<h3 id="4-training">4. Training</h3>
+<ol>
+<li>Ouvrez l&#x27;accordéon <strong>Training</strong>.</li>
+<li>Réglez <strong>Batch Size</strong> sur une valeur que la VRAM de votre GPU peut supporter confortablement.</li>
+<li>Pour un premier test illustratif, vous pouvez laisser les valeurs par défaut actuelles :
+<ul>
+<li><strong>Total Steps :</strong> <code translate="no" v-pre>10000</code></li>
+<li><strong>Save Every X Steps :</strong> <code translate="no" v-pre>1000</code></li>
+</ul>
+</li>
+<li>Dépliez <strong>Advanced Settings</strong> pour vérifier :
+<ul>
+<li><strong>Save Only Latest :</strong> Activé (<code translate="no" v-pre>True</code>)</li>
+<li><strong>Save Every Weights :</strong> Activé (<code translate="no" v-pre>True</code>)</li>
+<li><strong>Generator EMA Decay :</strong> <code translate="no" v-pre>0.999</code>
+<em>(Ces réglages par défaut sont des valeurs de départ illustratives, pas des réglages optimaux garantis pour chaque dataset.)</em></li>
+</ul>
+</li>
+<li>Cliquez sur <strong>Start Training</strong>.</li>
+<li>Suivez l&#x27;avancement via le statut terminal/UI, <strong>Pause Training</strong> / <strong>Resume Training</strong> / <strong>Stop Training</strong>, et les journaux TensorBoard (<code translate="no" v-pre>logs/&lt;model_name&gt;/eval/</code>).</li>
+<li>Une fois terminé, cliquez sur <strong>Generate Index</strong> si vous souhaitez un fichier <code translate="no" v-pre>.index</code> associé.</li>
+</ol>
+<span id="5-output-files" class="docs-anchor"></span><h3 id="5-fichiers-de-sortie">5. Fichiers de Sortie</h3>
+<p>Dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code>, vous trouverez :</p>
+<ul>
+<li><strong>Checkpoints reprenables :</strong> <code translate="no" v-pre>G_2333333.pth</code> et <code translate="no" v-pre>D_2333333.pth</code> (quand <strong>Save Only Latest</strong> est activé) ou <code translate="no" v-pre>G_&lt;step&gt;.pth</code> / <code translate="no" v-pre>D_&lt;step&gt;.pth</code> (quand il est désactivé).</li>
+<li><strong>Modèles d&#x27;inférence :</strong> <code translate="no" v-pre>&lt;model_name&gt;_&lt;epoch&gt;e_&lt;step&gt;s.pth</code> (par exemple, <code translate="no" v-pre>MyVoice_45e_1000s.pth</code>). Ce sont les fichiers que vous chargez pour la conversion vocale.</li>
+</ul>
+<hr>
+<span id="resuming-training-safely" class="docs-anchor"></span><h2 id="reprendre-lentraînement-en-toute-sécurité">Reprendre l&#x27;Entraînement en Toute Sécurité</h2>
+<p>Lorsque vous relancez l&#x27;entraînement sur une expérience existante (<code translate="no" v-pre>rvc/train/train.py</code>, lignes 420-436, 528-538, 763-803, 844-853) :</p>
+<ol>
+<li><code translate="no" v-pre>latest_checkpoint_pair()</code> recherche dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code> le fichier <code translate="no" v-pre>G_*.pth</code> le plus récent par date de modification et l&#x27;associe au suffixe <code translate="no" v-pre>D_*.pth</code> correspondant. <strong>Les deux fichiers <code translate="no" v-pre>G</code> et <code translate="no" v-pre>D</code> doivent exister</strong> pour reprendre.</li>
+<li><code translate="no" v-pre>restore()</code> recharge <code translate="no" v-pre>epoch</code>, <code translate="no" v-pre>start_batch</code> (<code translate="no" v-pre>epoch_step</code>), <code translate="no" v-pre>global_step</code> (<code translate="no" v-pre>step</code>), le <code translate="no" v-pre>scaler</code> AMP, l&#x27;état RNG et les deux optimiseurs.</li>
+<li><code translate="no" v-pre>build_ema()</code> restaure <code translate="no" v-pre>GeneratorEMA</code> depuis <code translate="no" v-pre>checkpoint[&quot;ema&quot;]</code> lorsque <code translate="no" v-pre>ema_decay &gt; 0</code>. Si l&#x27;état <code translate="no" v-pre>ema</code> est absent ou incompatible (par exemple lors d&#x27;une reprise depuis un checkpoint sans EMA), Redpanda-vc journalise un avis et initialise l&#x27;EMA depuis les poids repris du générateur au lieu de planter.</li>
+<li>Tous les pas terminés <em>après</em> le dernier checkpoint sauvegardé avant un plantage ou un arrêt manuel sont perdus et seront ré-exécutés depuis ce pas sauvegardé.</li>
+</ol>
+<span id="controls-not-to-confuse" class="docs-anchor"></span><h3 id="contrôles-à-ne-pas-confondre">Contrôles à ne pas confondre</h3>
+<ul>
+<li><strong>Reset Optimizer State :</strong> Conserve les poids du modèle, <code translate="no" v-pre>global_step</code> et le calendrier de taux d&#x27;apprentissage, mais efface les buffers de momentum/moments de l&#x27;optimiseur (<code translate="no" v-pre>state={}</code>). Utilisez-le uniquement pour réinitialiser volontairement la dynamique de l&#x27;optimiseur ; une reprise normale laisse ceci sur <strong>OFF</strong>.</li>
+<li><strong>Fresh Training (<code translate="no" v-pre>--cleanup</code>) :</strong> <strong>Supprime</strong> tous les checkpoints <code translate="no" v-pre>G_*</code> et <code translate="no" v-pre>D_*</code> générés précédemment, les fichiers <code translate="no" v-pre>spec.pt</code> et les journaux TensorBoard pour cette expérience. Laissez ceci sur <strong>OFF</strong> lors de toute reprise.</li>
+<li><strong>Save Every X Steps vs. Checkpointing :</strong> <strong>Save Every X Steps</strong> contrôle la fréquence d&#x27;écriture des checkpoints sur disque. <strong>Checkpointing</strong> (dans <strong>Advanced Settings</strong>) est l&#x27;<strong>activation checkpointing</strong>, qui échange une vitesse d&#x27;entraînement plus lente contre moins de VRAM sur les GPU à mémoire limitée (cela ne contrôle pas la sauvegarde sur disque).</li>
+</ul>
+<hr>
+<span id="how-redpanda-vc-exports-ema-models" class="docs-anchor"></span><h2 id="comment-redpanda-vc-exporte-les-modèles-ema">Comment Redpanda-vc Exporte les Modèles EMA</h2>
+<ol>
+<li><strong>Exports automatiques pendant l&#x27;entraînement (<code translate="no" v-pre>train.py</code>, lignes 1090-1091 &amp; 1157-1163) :</strong> Chaque fois que <code translate="no" v-pre>save()</code> déclenche un export d&#x27;inférence (<code translate="no" v-pre>Save Every Weights</code> ou le pas final), <code translate="no" v-pre>export_state_dict()</code> renvoie <code translate="no" v-pre>self.ema.weights</code> si EMA est activé (<code translate="no" v-pre>ema_decay &gt; 0</code>), ou le <code translate="no" v-pre>state_dict()</code> du générateur en direct si EMA est désactivé (<code translate="no" v-pre>ema_decay = 0</code>).</li>
+<li><strong>Exports manuels (accordéon <code translate="no" v-pre>Export Model</code> -&gt; <code translate="no" v-pre>rvc/train/process/checkpoint_exporter.py</code>, lignes 44-117) :</strong> Vous pouvez exporter manuellement n&#x27;importe quel checkpoint reprenable <code translate="no" v-pre>G_*.pth</code> en <code translate="no" v-pre>fp16</code> ou <code translate="no" v-pre>fp32</code>. <code translate="no" v-pre>export_generator_checkpoint()</code> vérifie si <code translate="no" v-pre>checkpoint[&quot;ema&quot;][&quot;weights&quot;]</code> existe et utilise automatiquement ces poids EMA lorsqu&#x27;ils sont présents (en affichant <code translate="no" v-pre>... and the generator EMA</code> dans le message d&#x27;état).</li>
+<li>Il n&#x27;y a <strong>pas</strong> d&#x27;option séparée &quot;Raw vs. EMA&quot; dans l&#x27;exportateur WebUI ; le <code translate="no" v-pre>.pth</code> exporté sert uniquement à l&#x27;inférence, tandis que <code translate="no" v-pre>G_*.pth</code> + <code translate="no" v-pre>D_*.pth</code> restent nécessaires pour reprendre l&#x27;entraînement.</li>
+</ol>
+<hr>
+<span id="does-ema-actually-sound-better" class="docs-anchor"></span><h2 id="lema-sonne-t-il-vraiment-mieux-">L&#x27;EMA Sonne-t-il Vraiment Mieux ?</h2>
+<p>Il n&#x27;existe pas de réponse universelle oui ou non pour toutes les voix et tous les datasets. Comme la WebUI actuelle n&#x27;exporte pas les versions Raw et EMA côte à côte sur une seule exécution, la méthode la plus propre pour tester l&#x27;EMA est une comparaison contrôlée :</p>
+<ol>
+<li>Utilisez exactement le même dataset préparé et la même extraction de caractéristiques.</li>
+<li>Gardez <code translate="no" v-pre>Batch Size</code>, <code translate="no" v-pre>Total Steps</code>, le calendrier de taux d&#x27;apprentissage et les poids pré-entraînés identiques.</li>
+<li>Lancez une expérience avec <code translate="no" v-pre>Generator EMA Decay = 0.999</code> et une autre avec <code translate="no" v-pre>0</code>.</li>
+<li>Comparez les exports <code translate="no" v-pre>.pth</code> d&#x27;inférence au <strong>même nombre de pas</strong> (par ex. <code translate="no" v-pre>5000s</code> vs. <code translate="no" v-pre>5000s</code>) sur des extraits de test externes absents du jeu d&#x27;entraînement.</li>
+<li>Écoutez la ressemblance vocale, la netteté des consonnes, la stabilité de hauteur et les artefacts plutôt que de juger uniquement sur les courbes de perte TensorBoard.</li>
+</ol>
+<hr>
+<span id="troubleshooting-for-beginners" class="docs-anchor"></span><h2 id="dépannage-pour-débutants">Dépannage pour Débutants</h2>
+<retype-table copy-text="| Problème | Cause possible | Quoi vérifier | Solution |
+| --- | --- | --- | --- |
+| **L'entraînement ne démarre pas** | Fichiers prétraités/extraits manquants, mauvais chemin ou verrou d'exécution actif (`training_state.json`) | Vérifiez la sortie terminal pour la première erreur | Terminez d'abord **Preprocess Dataset** et **Extract Features**, et confirmez qu'aucune exécution n'est active |
+| **Mémoire GPU saturée (OOM)** | `Batch Size` trop élevé ou `Cache Dataset in GPU` activé sur VRAM limitée | Vérifiez l'usage VRAM et l'erreur terminal | Baissez **Batch Size**, désactivez **Cache Dataset in GPU** ou activez **Checkpointing** |
+| **EMA ne semble pas changer les résultats** | Peu de pas, decay proche de `0` ou comparaison à des pas différents | Vérifiez `Generator EMA Decay` et le résumé console au démarrage | Confirmez que `generator EMA &lt;value&gt;` apparaît au démarrage et comparez des exports au même pas sur des clips externes |
+| **EMA Decay réglé sur `0`** | Curseur réglé sur `0` | Vérifiez **Training → Advanced Settings → Generator EMA Decay** | Réglez sur `0.999` (défaut) si vous voulez EMA activé à la prochaine exécution |
+| **Aucun modèle `.pth` d'inférence intermédiaire** | **Save Every Weights** est désactivé | Vérifiez **Training → Advanced Settings → Save Every Weights** | Activez **Save Every Weights** pour exporter des modèles d'inférence à chaque `Save Every X Steps` |
+| **Seuls les derniers checkpoints `G`/`D` existent** | **Save Only Latest** est activé (défaut) | Vérifiez `G_2333333.pth` / `D_2333333.pth` dans `logs/&lt;model_name&gt;/` | Désactivez **Save Only Latest** avant l'entraînement pour garder un historique numéroté `G_&lt;step&gt;.pth` |
+| **Checkpoint `G` ou `D` manquant** | Un fichier a été supprimé ou déplacé manuellement | Cherchez la paire `G_*` et `D_*` correspondante dans `logs/&lt;model_name&gt;/` | Les deux fichiers `G` et `D` avec le même suffixe sont requis pour reprendre (`latest_checkpoint_pair()`) |
+| **L'entraînement repart d'un pas antérieur** | Arrêt ou plantage avant le prochain `Save Every X Steps` | Comparez le dernier pas console vs. le pas repris | Comportement normal : la progression après la dernière sauvegarde disque n'est stockée qu'au prochain intervalle |
+| **Avis/erreur lors de la restauration EMA** | Reprise depuis un checkpoint sans EMA ou configuration modèle différente | Lisez `&quot;Could not restore the generator EMA...&quot;` dans le terminal | Redpanda-vc bascule automatiquement sur une initialisation EMA depuis les poids repris du générateur |
+| **Fresh Training a supprimé les anciens checkpoints** | **Fresh Training** (`--cleanup`) est resté coché | Vérifiez `logs/&lt;model_name&gt;/` | Décochez **Fresh Training** lors d'une reprise ; les checkpoints supprimés ne sont pas récupérables sans sauvegarde |
+| **Total Steps déjà atteint** | `global_step &gt;= Total Steps` | Lisez `&quot;already reached step X. Raise the total steps...&quot;` dans le terminal | Augmentez **Total Steps** au-dessus du pas actuel et cliquez sur **Start Training** |
+| **Le `.pth` exporté ne peut pas reprendre l'entraînement** | Un `.pth` d'inférence a été chargé au lieu de `G_*.pth` + `D_*.pth` | Vérifiez le nom (`&lt;name&gt;_Xe_Ys.pth` vs. `G_*.pth`) | Les `.pth` d'inférence retirent l'état d'entraînement ; reprenez depuis `logs/&lt;model_name&gt;/` avec `G_*.pth` et `D_*.pth` |
+| **Consommation VRAM anormalement élevée** | **Checkpointing** désactivé, **Batch Size** élevé ou **Cache Dataset in GPU** activé | Vérifiez **Advanced Settings** | Activez **Checkpointing** (activation checkpointing), désactivez **Cache Dataset in GPU** et réduisez **Batch Size** |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Problème</th>
+<th>Cause possible</th>
+<th>Quoi vérifier</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L&#x27;entraînement ne démarre pas</strong></td>
+<td>Fichiers prétraités/extraits manquants, mauvais chemin ou verrou d&#x27;exécution actif (<code translate="no" v-pre>training_state.json</code>)</td>
+<td>Vérifiez la sortie terminal pour la première erreur</td>
+<td>Terminez d&#x27;abord <strong>Preprocess Dataset</strong> et <strong>Extract Features</strong>, et confirmez qu&#x27;aucune exécution n&#x27;est active</td>
+</tr>
+<tr>
+<td><strong>Mémoire GPU saturée (OOM)</strong></td>
+<td><code translate="no" v-pre>Batch Size</code> trop élevé ou <code translate="no" v-pre>Cache Dataset in GPU</code> activé sur VRAM limitée</td>
+<td>Vérifiez l&#x27;usage VRAM et l&#x27;erreur terminal</td>
+<td>Baissez <strong>Batch Size</strong>, désactivez <strong>Cache Dataset in GPU</strong> ou activez <strong>Checkpointing</strong></td>
+</tr>
+<tr>
+<td><strong>EMA ne semble pas changer les résultats</strong></td>
+<td>Peu de pas, decay proche de <code translate="no" v-pre>0</code> ou comparaison à des pas différents</td>
+<td>Vérifiez <code translate="no" v-pre>Generator EMA Decay</code> et le résumé console au démarrage</td>
+<td>Confirmez que <code translate="no" v-pre>generator EMA &lt;value&gt;</code> apparaît au démarrage et comparez des exports au même pas sur des clips externes</td>
+</tr>
+<tr>
+<td><strong>EMA Decay réglé sur <code translate="no" v-pre>0</code></strong></td>
+<td>Curseur réglé sur <code translate="no" v-pre>0</code></td>
+<td>Vérifiez <strong>Training → Advanced Settings → Generator EMA Decay</strong></td>
+<td>Réglez sur <code translate="no" v-pre>0.999</code> (défaut) si vous voulez EMA activé à la prochaine exécution</td>
+</tr>
+<tr>
+<td><strong>Aucun modèle <code translate="no" v-pre>.pth</code> d&#x27;inférence intermédiaire</strong></td>
+<td><strong>Save Every Weights</strong> est désactivé</td>
+<td>Vérifiez <strong>Training → Advanced Settings → Save Every Weights</strong></td>
+<td>Activez <strong>Save Every Weights</strong> pour exporter des modèles d&#x27;inférence à chaque <code translate="no" v-pre>Save Every X Steps</code></td>
+</tr>
+<tr>
+<td><strong>Seuls les derniers checkpoints <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> existent</strong></td>
+<td><strong>Save Only Latest</strong> est activé (défaut)</td>
+<td>Vérifiez <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code> dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Désactivez <strong>Save Only Latest</strong> avant l&#x27;entraînement pour garder un historique numéroté <code translate="no" v-pre>G_&lt;step&gt;.pth</code></td>
+</tr>
+<tr>
+<td><strong>Checkpoint <code translate="no" v-pre>G</code> ou <code translate="no" v-pre>D</code> manquant</strong></td>
+<td>Un fichier a été supprimé ou déplacé manuellement</td>
+<td>Cherchez la paire <code translate="no" v-pre>G_*</code> et <code translate="no" v-pre>D_*</code> correspondante dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Les deux fichiers <code translate="no" v-pre>G</code> et <code translate="no" v-pre>D</code> avec le même suffixe sont requis pour reprendre (<code translate="no" v-pre>latest_checkpoint_pair()</code>)</td>
+</tr>
+<tr>
+<td><strong>L&#x27;entraînement repart d&#x27;un pas antérieur</strong></td>
+<td>Arrêt ou plantage avant le prochain <code translate="no" v-pre>Save Every X Steps</code></td>
+<td>Comparez le dernier pas console vs. le pas repris</td>
+<td>Comportement normal : la progression après la dernière sauvegarde disque n&#x27;est stockée qu&#x27;au prochain intervalle</td>
+</tr>
+<tr>
+<td><strong>Avis/erreur lors de la restauration EMA</strong></td>
+<td>Reprise depuis un checkpoint sans EMA ou configuration modèle différente</td>
+<td>Lisez <code translate="no" v-pre>&quot;Could not restore the generator EMA...&quot;</code> dans le terminal</td>
+<td>Redpanda-vc bascule automatiquement sur une initialisation EMA depuis les poids repris du générateur</td>
+</tr>
+<tr>
+<td><strong>Fresh Training a supprimé les anciens checkpoints</strong></td>
+<td><strong>Fresh Training</strong> (<code translate="no" v-pre>--cleanup</code>) est resté coché</td>
+<td>Vérifiez <code translate="no" v-pre>logs/&lt;model_name&gt;/</code></td>
+<td>Décochez <strong>Fresh Training</strong> lors d&#x27;une reprise ; les checkpoints supprimés ne sont pas récupérables sans sauvegarde</td>
+</tr>
+<tr>
+<td><strong>Total Steps déjà atteint</strong></td>
+<td><code translate="no" v-pre>global_step &gt;= Total Steps</code></td>
+<td>Lisez <code translate="no" v-pre>&quot;already reached step X. Raise the total steps...&quot;</code> dans le terminal</td>
+<td>Augmentez <strong>Total Steps</strong> au-dessus du pas actuel et cliquez sur <strong>Start Training</strong></td>
+</tr>
+<tr>
+<td><strong>Le <code translate="no" v-pre>.pth</code> exporté ne peut pas reprendre l&#x27;entraînement</strong></td>
+<td>Un <code translate="no" v-pre>.pth</code> d&#x27;inférence a été chargé au lieu de <code translate="no" v-pre>G_*.pth</code> + <code translate="no" v-pre>D_*.pth</code></td>
+<td>Vérifiez le nom (<code translate="no" v-pre>&lt;name&gt;_Xe_Ys.pth</code> vs. <code translate="no" v-pre>G_*.pth</code>)</td>
+<td>Les <code translate="no" v-pre>.pth</code> d&#x27;inférence retirent l&#x27;état d&#x27;entraînement ; reprenez depuis <code translate="no" v-pre>logs/&lt;model_name&gt;/</code> avec <code translate="no" v-pre>G_*.pth</code> et <code translate="no" v-pre>D_*.pth</code></td>
+</tr>
+<tr>
+<td><strong>Consommation VRAM anormalement élevée</strong></td>
+<td><strong>Checkpointing</strong> désactivé, <strong>Batch Size</strong> élevé ou <strong>Cache Dataset in GPU</strong> activé</td>
+<td>Vérifiez <strong>Advanced Settings</strong></td>
+<td>Activez <strong>Checkpointing</strong> (activation checkpointing), désactivez <strong>Cache Dataset in GPU</strong> et réduisez <strong>Batch Size</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Que signifie EMA ?</strong>
+Exponential Moving Average : une moyenne glissante des poids du générateur maintenue pendant l&#x27;entraînement.</p>
+<p><strong>L&#x27;EMA améliore-t-il la qualité vocale ?</strong>
+Il peut lisser les oscillations de poids, mais ce n&#x27;est pas garanti. Qu&#x27;une voix donnée sonne mieux dépend de votre dataset et nécessite des tests d&#x27;écoute.</p>
+<p><strong>Les débutants doivent-ils laisser EMA sur <code translate="no" v-pre>0.999</code> ?</strong>
+Oui, <code translate="no" v-pre>0.999</code> est la valeur par défaut dans Redpanda-vc et constitue un point de départ raisonnable avant d&#x27;essayer d&#x27;autres valeurs.</p>
+<p><strong>Que se passe-t-il si EMA Decay est à <code translate="no" v-pre>0</code> ?</strong>
+L&#x27;EMA est désactivé (<code translate="no" v-pre>self.ema</code> n&#x27;est pas construit) et les modèles d&#x27;inférence sont exportés depuis les poids en direct du générateur.</p>
+<p><strong><code translate="no" v-pre>0.9999</code> est-il meilleur que <code translate="no" v-pre>0.999</code> ?</strong>
+Pas automatiquement. <code translate="no" v-pre>0.9999</code> moyenne sur un historique plus long et réagit plus lentement aux mises à jour récentes.</p>
+<p><strong>L&#x27;EMA accélère-t-il l&#x27;entraînement ?</strong>
+Non. L&#x27;EMA maintient une copie supplémentaire des poids et effectue une étape de mise à jour après chaque pas du générateur.</p>
+<p><strong>L&#x27;EMA empêche-t-il le surapprentissage (overfitting) ?</strong>
+Non. Le surapprentissage dépend toujours de la taille du dataset, de sa variété et du nombre total de pas d&#x27;entraînement.</p>
+<p><strong>L&#x27;EMA est-il appliqué au discriminateur ?</strong>
+Non. Dans Redpanda-vc (<code translate="no" v-pre>train.py</code>), l&#x27;EMA est appliqué uniquement au générateur (<code translate="no" v-pre>net_g</code>).</p>
+<p><strong>Quelle est la différence entre une époque et un pas ?</strong>
+Une époque est un passage complet sur le dataset ; un pas est une mise à jour des poids après le traitement d&#x27;un batch.</p>
+<p><strong>Redpanda-vc peut-il sauvegarder au milieu d&#x27;une époque ?</strong>
+Oui. Les sauvegardes sont déclenchées par <code translate="no" v-pre>Save Every X Steps</code>, indépendamment des limites d&#x27;époque.</p>
+<p><strong>Vais-je perdre ma progression si j&#x27;arrête l&#x27;entraînement ?</strong>
+Vous conservez la progression jusqu&#x27;au dernier checkpoint <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> sauvegardé ; les pas exécutés après cette sauvegarde sont perdus.</p>
+<p><strong>Quelle est la différence entre Save Only Latest et Save Every Weights ?</strong>
+<code translate="no" v-pre>Save Only Latest</code> écrase les checkpoints d&#x27;entraînement <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code> ; <code translate="no" v-pre>Save Every Weights</code> exporte un modèle <code translate="no" v-pre>.pth</code> d&#x27;inférence à chaque intervalle de sauvegarde plutôt qu&#x27;uniquement au pas final.</p>
+<p><strong>Checkpointing est-il la même chose que sauvegarder des checkpoints ?</strong>
+Non. <code translate="no" v-pre>Checkpointing</code> dans Advanced Settings est l&#x27;activation checkpointing pour économiser la VRAM, tandis que <code translate="no" v-pre>Save Every X Steps</code> contrôle l&#x27;enregistrement des checkpoints sur disque.</p>
+<p><strong>Puis-je reprendre l&#x27;entraînement depuis un <code translate="no" v-pre>.pth</code> d&#x27;inférence ?</strong>
+Non. La reprise nécessite une paire correspondante de checkpoints <code translate="no" v-pre>G_*.pth</code> et <code translate="no" v-pre>D_*.pth</code> dans <code translate="no" v-pre>logs/&lt;model_name&gt;/</code>.</p>
+<hr>
+<span id="official-sources--further-reading" class="docs-anchor"></span><h2 id="sources-officielles-et-lectures-complémentaires">Sources Officielles et Lectures Complémentaires</h2>
+<ul>
+<li><strong>Dépôt Redpanda-vc :</strong> <a href="https://github.com/redpanda343/Redpanda-vc">github.com/redpanda343/Redpanda-vc</a></li>
+<li><strong>Implémentation de <code translate="no" v-pre>GeneratorEMA</code> :</strong> <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/train.py#L179-L217"><code translate="no" v-pre>rvc/train/train.py</code> (lignes 179-217)</a></li>
+<li><strong>Sauvegarde par pas, reprise et état d&#x27;export :</strong> <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/train.py#L1146-L1195"><code translate="no" v-pre>rvc/train/train.py</code> (lignes 420-436, 526-579, 763-853, 902-921, 1044-1097, 1146-1195)</a></li>
+<li><strong>Contrôles WebUI d&#x27;entraînement :</strong> <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/tabs/train/rvc.py#L663-L880"><code translate="no" v-pre>tabs/train/rvc.py</code> (lignes 663-880)</a></li>
+<li><strong>Exportateur manuel de checkpoints :</strong> <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/process/checkpoint_exporter.py#L44-L117"><code translate="no" v-pre>rvc/train/process/checkpoint_exporter.py</code> (lignes 44-117)</a></li>
+<li><strong>E/S des checkpoints et contrôle des processus :</strong> <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/utils.py"><code translate="no" v-pre>rvc/train/utils.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/main/rvc/train/process/training_control.py"><code translate="no" v-pre>rvc/train/process/training_control.py</code></a></li>
+<li><strong>Documentation officielle PyTorch :</strong> <a href="https://docs.pytorch.org/docs/stable/optim.html#weight-averaging-swa-and-ema">Weight Averaging (SWA and EMA)</a> · <a href="https://docs.pytorch.org/docs/stable/generated/torch.optim.swa_utils.AveragedModel.html"><code translate="no" v-pre>torch.optim.swa_utils.AveragedModel</code></a></li>
+<li><strong>Article scientifique :</strong> Morales-Brotons, Vogels et Hendrikx, <em>Exponential Moving Average of Weights in Deep Learning: Dynamics and Benefits</em> (<a href="https://openreview.net/forum?id=2M9CUnYnBA">OpenReview</a>)</li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/live-audio/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Testez l&#39;audio en direct dans Redpanda-​vc</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/comparison/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Redpanda-​vc vs autres versions RVC</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T16:44:42.000Z">22/11/2026 · 17:44</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Entraîner des modèles RVC (EMA & Steps)", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/training.md" }</script>
+</body>
+</html>
