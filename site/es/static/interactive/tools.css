@@ -9,6 +9,7 @@
   --rvc-error: #a92247;
   color: var(--rvc-text);
   margin-block: 1.5rem;
+  container-type: inline-size;
 }
 .dark [data-rvc-tool] {
   --rvc-surface: #291d28;
@@ -26,8 +27,11 @@
   gap: .75rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
 }
+.rvc-results {grid-template-columns: repeat(3, minmax(0, 1fr));}
+@container (max-width: 40rem) {.rvc-results {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@container (max-width: 24rem) {.rvc-results {grid-template-columns: minmax(0, 1fr);}}
 .rvc-list {grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));}
-.rvc-field {display: grid; align-content: start; gap: .35rem; min-width: 0; color: var(--rvc-muted); font-size: .9rem;}
+.rvc-field {display: grid; grid-template-rows: 1fr auto; gap: .35rem; min-width: 0; color: var(--rvc-muted); font-size: .9rem;}
 [data-rvc-tool] [hidden] {display: none !important;}
 .rvc-field input, .rvc-field select, .rvc-actions button {
   width: 100%;
@@ -40,7 +44,12 @@
   border-radius: .55rem;
   font: inherit;
 }
-.dark .rvc-field select {color-scheme: dark;}
+[data-rvc-tool] .rvc-field select {
+  appearance: auto;
+  background-image: none;
+  color-scheme: light;
+}
+.dark [data-rvc-tool] .rvc-field select {color-scheme: dark;}
 .rvc-actions {display: flex; flex-wrap: wrap; gap: .65rem; margin-block: .9rem;}
 .rvc-actions button {width: auto; cursor: pointer; transition: transform 150ms ease, border-color 150ms ease;}
 .rvc-actions button:active {transform: scale(.96);}
