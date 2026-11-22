@@ -1,5 +1,6 @@
 ---
-label: "🩺 Troubleshooting"
+label: "Troubleshooting"
+icon: ":stethoscope:"
 order: 95
 permalink: /troubleshooting/
 description: "Step-by-step RVC troubleshooting for beginners and advanced users: Windows/launcher errors, GPU/CUDA/DirectML, models, training, live mic, and cloud notebooks."

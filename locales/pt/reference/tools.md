@@ -1,6 +1,7 @@
 ---
 permalink: /tools/
-label: "🧰 Ferramentas RVC"
+label: "Ferramentas RVC"
+icon: ":toolbox:"
 order: 95
 description: "Compare aplicativos compatíveis para conversão de voz ao vivo, conversão de arquivos e treinamento."
 ---

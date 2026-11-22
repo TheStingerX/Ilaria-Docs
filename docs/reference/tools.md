@@ -1,6 +1,7 @@
 ---
 permalink: /tools/
-label: 🧰 RVC tools
+label: RVC tools
+icon: ":toolbox:"
 order: 95
 description: Compare compatible apps for live voice conversion, file conversion, and training.
 ---

@@ -1,5 +1,6 @@
 ---
-label: "🩺 Dépannage"
+label: "Dépannage"
+icon: ":stethoscope:"
 order: 95
 permalink: /troubleshooting/
 description: "Dépannage RVC étape par étape pour débutants et experts : erreurs Windows/lancement, GPU/CUDA/DirectML, modèles, entraînement, micro en direct et Colab/Kaggle."

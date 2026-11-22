@@ -1,6 +1,7 @@
 ---
 permalink: /tools/
-label: "🧰 Outils RVC"
+label: "Outils RVC"
+icon: ":toolbox:"
 order: 95
 description: "Comparez les applications compatibles pour la conversion vocale en direct, la conversion de fichiers et la formation."
 ---

@@ -1,5 +1,6 @@
 ---
-label: "📖 Glossaire"
+label: "Glossaire"
+icon: ":book:"
 order: 94
 permalink: /glossary/
 description: "Voir Fondements RVC, Modèles et fichiers et Formation pour ces termes en contexte."

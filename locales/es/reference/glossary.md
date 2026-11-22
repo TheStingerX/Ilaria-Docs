@@ -1,5 +1,6 @@
 ---
-label: "📖 Glosario"
+label: "Glosario"
+icon: ":book:"
 order: 94
 permalink: /glossary/
 description: "Consulte Fundamentos de RVC, Modelos y archivos y Capacitación] para conocer estos términos en contexto."

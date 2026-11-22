@@ -1,6 +1,7 @@
 ---
 permalink: /tools/
-label: "🧰 RVC-Tools"
+label: "RVC-Tools"
+icon: ":toolbox:"
 order: 95
 description: "Vergleichen Sie kompatible Apps für Live-Sprachkonvertierung, Dateikonvertierung und Schulung."
 ---

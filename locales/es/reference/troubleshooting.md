@@ -1,5 +1,6 @@
 ---
-label: "🩺 Solución de problemas"
+label: "Solución de problemas"
+icon: ":stethoscope:"
 order: 95
 permalink: /troubleshooting/
 description: "Solución de problemas RVC paso a paso para principiantes y expertos: errores de Windows/inicio, GPU/CUDA/DirectML, modelos, entrenamiento, micrófono en vivo y nube."
