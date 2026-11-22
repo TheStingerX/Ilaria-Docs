@@ -73,3 +73,5 @@ Guarda la versión funcional de la app, la versión del modelo, el tono seleccio
 - [Inferencia](../ilaria-rvc/convert/inference.md)
 - [Preparación del dataset](../model-training/dataset-preparation.md)
 - [Solución de problemas](../reference/troubleshooting.md)
+
+[Matriz interactiva de compatibilidad con RVC](../reference/compatibility-matrix.md)

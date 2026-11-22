@@ -109,3 +109,5 @@ Execute `python webui.py` no mesmo diretório. O codificador de recursos deve se
 | HuBERT, RMVPE ou FFmpeg ausentes | Verifique as pastas de ativos e os caminhos executáveis ​​acima. Tente novamente com um WAV local simples após corrigir o arquivo ausente. |
 
 Quando a interface abrir, continue com [sua primeira conversão de arquivo](inference.md).
+
+[Matriz interativa de compatibilidade RVC](../../reference/compatibility-matrix.md)

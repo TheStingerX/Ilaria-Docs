@@ -203,3 +203,5 @@ o kernel image is available**: build CUDA incompatibile con l'architettura (es. 
 | Tesla V100 | 12.6 |
 
 [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda/gpus) · [NVIDIA legacy CUDA GPUs](https://developer.nvidia.com/cuda/gpus/legacy)
+
+[Stimatore VRAM e training](../../reference/vram-estimator.md)

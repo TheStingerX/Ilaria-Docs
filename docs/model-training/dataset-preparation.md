@@ -101,3 +101,5 @@ Recent Ilaria RVC builds let you drag audio or a dataset ZIP into the training i
 | One session is much quieter | Check whether the speaker's performance is intentionally quiet. Adjust recording gain differences while retaining useful natural dynamics. |
 
 Before continuing, play a few clips from each session, confirm you selected the prepared folder, and record the folder version in your notes. Then [run a training experiment](training.md).
+
+[VRAM & Training Estimator](../reference/vram-estimator.md)

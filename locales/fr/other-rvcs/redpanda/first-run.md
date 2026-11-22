@@ -30,3 +30,5 @@ Si votre build expose une conversion hors ligne, commencez avec un WAV sec et co
 - **Modèle manquant** : revérifiez le dossier attendu par votre build, le moteur actuel et si le fichier est une exportation d'inférence.
 - **Erreur CUDA** : confirmez le périphérique RVC choisi et testez avec d'autres jobs GPU fermés. Enregistrez la première erreur au lieu d'interpréter le message d'arrêt final.
 - **Compatibilité peu claire** : notez la version de paiement ou du package, le GPU et la famille de modèles prévue. Testez une base de référence avant d’essayer des vocodeurs ou des fonctionnalités personnalisés.
+
+[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)

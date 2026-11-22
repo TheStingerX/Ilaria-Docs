@@ -200,3 +200,5 @@ Compute, backpropagation and ContentVec loading were tested on an **RTX 4070**. 
 | Tesla V100 | 12.6 |
 
 [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda/gpus) · [NVIDIA legacy CUDA GPUs](https://developer.nvidia.com/cuda/gpus/legacy)
+
+[VRAM & Training Estimator](../../reference/vram-estimator.md)

@@ -19,6 +19,7 @@ DOCUMENT_METADATA = re.compile(
 GENERATED_SCRIPT = re.compile(
     r'(?:/([a-z]{2}/)?|(?:\.\./)*)resources/js/(?:config|retype|lunr|prism)\.js(?:\?v=[0-9.]+)?'
 )
+INTERACTIVE_SCRIPT = re.compile(r'/(?:it/|es/|fr/|de/|pt/)?static/interactive/tools\.js')
 SAFE_EXTENSIONS = {'.html', '.js', '.css', '.json', '.xml', '.txt', '.md', '.png', '.svg',
                    '.webp', '.jpg', '.jpeg', '.gif', '.ico', '.woff', '.woff2', '.mp4', '.wav', '.mp3'}
 
@@ -45,7 +46,7 @@ class Audit(HTMLParser):
                 raise ValueError(f'{self.path}: unexpected redirect')
         if tag == 'script':
             source = attributes.get('src')
-            if source is not None and not GENERATED_SCRIPT.fullmatch(source):
+            if source is not None and not INTERACTIVE_SCRIPT.fullmatch(source) and not GENERATED_SCRIPT.fullmatch(source):
                 raise ValueError(f'{self.path}: unexpected script source')
             self.script = (source, [])
         if self.path.endswith('.svg') and tag in {'script', 'style', 'use', 'image', 'animate', 'set'}:
@@ -78,7 +79,7 @@ def make_manifest(dist, source):
         name = path.relative_to(dist).as_posix()
         if not re.fullmatch(r'[A-Za-z0-9_./-]+', name) or path.is_symlink():
             raise ValueError(f'Unexpected asset: {name}')
-        if path.suffix == '.js' and not re.fullmatch(r'(?:[a-z]{2}/)?resources/js/(?:config|retype|lunr|prism|search|instagram)\.js', name):
+        if path.suffix == '.js' and not re.fullmatch(r'(?:[a-z]{2}/)?static/interactive/tools\.js', name) and not re.fullmatch(r'(?:[a-z]{2}/)?resources/js/(?:config|retype|lunr|prism|search|instagram)\.js', name):
             raise ValueError(f'Unexpected JavaScript asset: {name}')
         body = path.read_bytes()
         if path.suffix in {'.html', '.svg'}:

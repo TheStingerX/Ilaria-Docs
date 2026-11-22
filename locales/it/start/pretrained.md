@@ -86,3 +86,5 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 - **Legacy Core V1.5v2** e **Legacy Core V1.6** (`32 kHz`) sono nuovamente disponibili con il consenso dell'autore originale tramite [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) e sono stati ripristinati in Ilaria RVC `2.4.7`.
 - **Attenzione per Legacy Core V1.6**: nel repository di reupload i nomi **G** e **D** sono **invertiti** (`D_LegacyCoreOld.pth` è **G**, mentre `G_LegacyCoreOld.pth` è **D**). Assicurati di caricare ogni file nello slot corretto.
 !!!
+
+[Matrice interattiva di compatibilità RVC](../reference/compatibility-matrix.md)

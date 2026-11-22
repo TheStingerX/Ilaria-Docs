@@ -115,3 +115,7 @@ Redpanda-vc is an Applio fork whose realtime interface supports RVC, Beatrice, a
 Replay is no longer supported following the closure of Weights.gg. The [official Replay page](https://www.weights.com/replay) may go offline at any time. The Internet Archive hosts historical Replay 8.7.0 installers. Replay is not recommended for new setups. With Weights shut down, the archived installer will likely fail to download required files, so setup may not complete.
 
 [Archived installers · Replay 8.7.0](https://archive.org/details/replay-8.7.0-installers)
+
+[VRAM & Training Estimator](vram-estimator.md)
+
+[Interactive RVC Compatibility Matrix](compatibility-matrix.md)

@@ -35,3 +35,5 @@ La conversion vocale et l'entraînement RVC dépendent du calcul GPU, de la band
 ## 4. Optimisation avancée facultative (NVIDIA)
 
 Sur GPU NVIDIA compatibles, le verrouillage d'horloge via `nvidia-smi` est un test **facultatif** ; voir [Optimisation avancée Vonovox](../other-rvcs/vonovox/advanced-performance-optimization.md).
+
+[Estimateur de VRAM et d’entraînement](vram-estimator.md)

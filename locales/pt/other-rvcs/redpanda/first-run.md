@@ -30,3 +30,5 @@ Se sua compilação expõe conversão offline, comece com um WAV seco e falado e
 - **Modelo ausente**: verifique novamente a pasta esperada pela sua compilação, o mecanismo atual e se o arquivo é uma exportação de inferência.
 - **Erro CUDA**: confirme o dispositivo RVC escolhido e teste com outros trabalhos de GPU fechados. Registre o primeiro erro em vez de interpretar a mensagem final de desligamento.
 - **Compatibilidade pouco clara**: observe a versão do checkout ou do pacote, GPU e família de modelos pretendida. Teste uma linha de base antes de tentar vocoders ou recursos personalizados.
+
+[Matriz interativa de compatibilidade RVC](../../reference/compatibility-matrix.md)

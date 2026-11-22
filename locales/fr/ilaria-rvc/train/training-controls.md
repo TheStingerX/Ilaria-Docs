@@ -58,3 +58,5 @@ Une époque couvre une itération sur l'ensemble de données préparé. Le mode 
 ## Conserver un enregistrement reproductible
 
 Enregistrez la révision de l'ensemble de données, la fréquence d'échantillonnage, l'encodeur, l'extracteur, le vocodeur, les pré-entraînements, la précision, la taille du lot et enregistrez la cadence. Si vous réutilisez le même nom avec un tarif incompatible, l'interface utilisateur peut signaler la non-concordance. Démarrez une expérience distincte pour une nouvelle configuration et conservez l’ancienne expérience disponible à des fins de comparaison.
+
+[Estimateur de VRAM et d’entraînement](../../reference/vram-estimator.md)

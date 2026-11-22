@@ -131,3 +131,5 @@ Estos tres preajustes son **puntos de partida indicativos**, no reglas universal
 2. **Overfitting (demasiado tarde):** La voz suena robótica/metálica en palabras nuevas, reproduce ruido ambiental o artefactos de respiración del dataset, o suena bien *solo* en frases similares al conjunto de entrenamiento. *Solución:* Vuelve a un checkpoint anterior (`50-100` épocas antes) e inspecciona el dataset en [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
 
 > Si estás entrenando con **Redpanda-vc** (que añade Generator EMA y guardado de checkpoints basado en pasos), consulta [Entrenar modelos RVC en Redpanda-vc](../other-rvcs/redpanda/training.md).
+
+[Estimador de VRAM y entrenamiento](../reference/vram-estimator.md)
