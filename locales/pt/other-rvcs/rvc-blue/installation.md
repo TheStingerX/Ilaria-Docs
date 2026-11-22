@@ -69,6 +69,25 @@ O RVC Blue permite escolher **Input** (entrada), **Output** (saída) e **Monitor
 
 ## 4. Encaminhar áudio para Discord, OBS ou jogo
 
+> **Correct Audio Routing**
+>
+> **1. Dentro do Voice Changer**
+> - **Input Device:** Seu microfone físico.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. No Discord, Jogos, OBS ou outros aplicativos**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` é o nome usado pelo **VAC (Virtual Audio Cable)**, não um nome universal para todos os cabos virtuais. Com **VB-CABLE**, defina a saída do Voice Changer como **`CABLE Input`** e a entrada do Discord / jogo como **`CABLE Output`**.
+> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
+
 Para usar a voz convertida noutra aplicação, liga o RVC Blue através de um cabo de áudio virtual (**VAC Lite** ou **VB-CABLE**):
 
 1. Define **Output** no RVC Blue para o dispositivo de reprodução do cabo virtual (por exemplo `CABLE Input` ou `Line 1`).

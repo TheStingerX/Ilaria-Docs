@@ -7,6 +7,25 @@ description: "Utilisez trois points de terminaison : votre microphone physique p
 ---
 # Acheminer et régler Vonovox
 
+> **Correct Audio Routing**
+>
+> **1. Dans le Voice Changer**
+> - **Input Device :** Votre microphone physique.
+> - **Output Device :** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Dans Discord, les jeux, OBS ou d'autres applications**
+> - **Input Device :** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device :** Vos écouteurs ou haut-parleurs.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
+>
+> - **VAC vs. VB-CABLE :** `Line 1` est le nom utilisé par **VAC (Virtual Audio Cable)**, pas un nom universel pour tous les câbles virtuels. Avec **VB-CABLE**, réglez la sortie du Voice Changer sur **`CABLE Input`** et l'entrée de Discord / jeu sur **`CABLE Output`**.
+> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
+
 ## Configurer l'itinéraire
 
 Utilisez trois points de terminaison : votre microphone physique pour l'entrée, un câble virtuel pour le signal converti et des écouteurs pour la surveillance. Un câble virtuel a un côté lecture pour l'application qui envoie l'audio et un côté enregistrement pour l'application qui le reçoit. Certains pilotes affichent le même nom de ligne des deux côtés.

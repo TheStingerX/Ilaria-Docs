@@ -67,3 +67,5 @@ Starting in **v0.3.1**, CVC includes a **built-in updater** directly in the app.
 When updating manually or from source:
 - On Windows, if you run from source and the UI changed, run `run-realtime.bat` / `run-training.bat` with `CAUSALVC_REBUILD=1` to rebuild the WinUI 3 interface.
 - On Linux, the Rust UI rebuilds automatically on the next launch after an update.
+
+> **Live audio routing:** Once installed, configure **Input device** = physical microphone and **Output device** = `Line 1` (VAC) or `CABLE Input` (VB-CABLE) inside CausalVC, and **Input Device** = `Line 1` or `CABLE Output` with **Output Device** = headphones inside Discord/OBS/games. See [Using CausalVC Realtime](realtime.md).

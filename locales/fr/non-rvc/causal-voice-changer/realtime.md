@@ -7,6 +7,25 @@ description: "Après avoir exécuté run-training au moins une fois et préparé
 ---
 # Utiliser CausalVC Realtime
 
+> **Correct Audio Routing**
+>
+> **1. Dans le Voice Changer**
+> - **Input Device :** Votre microphone physique.
+> - **Output Device :** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Dans Discord, les jeux, OBS ou d'autres applications**
+> - **Input Device :** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device :** Vos écouteurs ou haut-parleurs.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
+>
+> - **VAC vs. VB-CABLE :** `Line 1` est le nom utilisé par **VAC (Virtual Audio Cable)**, pas un nom universel pour tous les câbles virtuels. Avec **VB-CABLE**, réglez la sortie du Voice Changer sur **`CABLE Input`** et l'entrée de Discord / jeu sur **`CABLE Output`**.
+> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
+
 Après avoir exécuté `run-training` au moins une fois et préparé une voix `.cvc`, lancez le changeur de voix en direct avec :
 - **Windows** : `run-realtime.bat`
 - **Linux** : `run-realtime.sh` *(ajoutez-le au lanceur d'applications avec `realtime/scripts/install-desktop-entry.sh`)*

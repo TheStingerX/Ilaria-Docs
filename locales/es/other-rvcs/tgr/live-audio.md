@@ -7,7 +7,24 @@ description: "Utilice un punto de control de inferencia RVC compatible y un micr
 ---
 # Configure audio en vivo en Okada TG Developed Fork
 
-> Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+> **Correct Audio Routing**
+>
+> **1. Dentro del Voice Changer**
+> - **Input Device:** Tu micrófono físico.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Dentro de Discord, Juegos, OBS u otras aplicaciones**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Tus auriculares o altavoces.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> El audio que llega desde Discord, el juego u otras apps debe reproducirse directamente en tus **auriculares** (nunca de vuelta al cable virtual).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` es el nombre usado por **VAC (Virtual Audio Cable)**, no un nombre universal para todos los cables virtuales. Con **VB-CABLE**, configura la salida del Voice Changer en **`CABLE Input`** y la entrada de Discord / juego en **`CABLE Output`**.
+> - **Monitoreo:** Escuchar tu propia voz convertida en los auriculares es una función opcional aparte que solo debe activarse cuando haga falta. Evita rutas de audio duplicadas, eco y loopback.
 
 Utilice un punto de control de inferencia RVC compatible y un micrófono que funcione. Primero prueba que la señal convertida llega a tus auriculares. Luego envía esa señal a otra aplicación y haz una grabación desde el extremo receptor.
 

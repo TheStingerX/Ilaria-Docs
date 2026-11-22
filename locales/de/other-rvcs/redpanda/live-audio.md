@@ -7,7 +7,24 @@ description: "Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die d
 ---
 # Testen Sie Live-Audio in Redpanda-vc
 
-> Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist **VAC Lite** die erste Wahl, **VB-CABLE** eine Alternative. Lies vor dem Anruf die vollständige Anleitung. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+> **Correct Audio Routing**
+>
+> **1. Im Voice Changer**
+> - **Input Device:** Dein physisches Mikrofon.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` ist der Name von **VAC (Virtual Audio Cable)**, kein universeller Name für alle virtuellen Kabel. Bei **VB-CABLE** wähle als Voice-Changer-Output **`CABLE Input`** und als Discord-/Spiel-Input **`CABLE Output`**.
+> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
 
 ## Wählen Sie Desktop oder Browser
 
