@@ -13,3 +13,5 @@ Faça um pequeno clipe de teste antes do treino. Ative **Visualizações de trei
 ## Retomar e exportar
 
 Use **Parar e salvar**, aguarde a confirmação e mantenha a pasta do experimento e os pontos de verificação G/D correspondentes juntos. Para inferência, exporte o ponto de verificação de voz compacto e mantenha seu índice correspondente. Consulte [Treinar um modelo de voz RVC](../../model-training/training.md) para ajuste e recuperação.
+
+[Estimador de VRAM e treino](../../reference/vram-estimator.md)

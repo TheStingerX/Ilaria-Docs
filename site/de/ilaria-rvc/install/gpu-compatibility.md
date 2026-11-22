@@ -194,3 +194,5 @@ o kernel image is available**: CUDA-Build passt nicht zur GPU-Architektur.
 | Tesla V100 | 12.6 |
 
 [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda/gpus) · [NVIDIA legacy CUDA GPUs](https://developer.nvidia.com/cuda/gpus/legacy)
+
+[VRAM- und Trainingsrechner](../../reference/vram-estimator.md)

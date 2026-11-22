@@ -41,3 +41,5 @@ Le générateur RVC étant entraîné pour recevoir les caractéristiques d'**un
 - **Laissez sur `Auto` ou `contentvec`** pour la quasi-totalité des modèles et entraînements.
 - **Ne le changez que** si l'auteur d'une voix téléchargée indique explicitement un autre embedder (ex. `spin-v2` ou `japanese-hubert-base`), et uniquement pour convertir avec ce modèle précis.
 - **Ne changez pas d'embedder en cours d'entraînement** : cela impose de ré-extraire les features (`3_feature768`) dans une nouvelle expérience.
+
+[Matrice interactive de compatibilité RVC](../reference/compatibility-matrix.md)

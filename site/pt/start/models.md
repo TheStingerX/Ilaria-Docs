@@ -67,3 +67,5 @@ Salve a versão funcional do aplicativo, versão do modelo, tom selecionado e aj
 - [Inferência](../ilaria-rvc/convert/inference.md)
 - [Preparação de dataset](../model-training/dataset-preparation.md)
 - [Solução de problemas](../reference/troubleshooting.md)
+
+[Matriz interativa de compatibilidade RVC](../reference/compatibility-matrix.md)

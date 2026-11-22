@@ -67,3 +67,5 @@ Save the working app version, model version, selected pitch and retrieval settin
 - [Inference](../ilaria-rvc/convert/inference.md)
 - [Dataset preparation](../model-training/dataset-preparation.md)
 - [Troubleshooting](../reference/troubleshooting.md)
+
+[Interactive RVC Compatibility Matrix](../reference/compatibility-matrix.md)

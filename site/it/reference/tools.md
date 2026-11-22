@@ -107,3 +107,7 @@ Dopo la chiusura di Weights.gg, Replay non riceve più supporto né aggiornament
 | **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice su CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
 | **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archiviato** | Facile (ZIP legacy) |
 | **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Dismesso** (Weights.gg chiuso) | Non funzionante / Solo legacy |
+
+[Stimatore VRAM e training](vram-estimator.md)
+
+[Matrice interattiva di compatibilità RVC](compatibility-matrix.md)

@@ -28,3 +28,5 @@ Stimmkonvertierung und RVC-Training hängen stark von GPU-Rechenleistung, Speich
 ## 4. Optionale erweiterte Optimierung (NVIDIA)
 
 Auf unterstützten NVIDIA-GPUs ist `nvidia-smi` GPU Clock Locking ein **optionaler** Test; siehe [Vonovox Erweiterte Leistungsoptimierung](../other-rvcs/vonovox/advanced-performance-optimization.md).
+
+[VRAM- und Trainingsrechner](vram-estimator.md)

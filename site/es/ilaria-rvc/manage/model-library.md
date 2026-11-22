@@ -28,3 +28,5 @@
 ## Mezclar voces compatibles
 
 Elige dos `.pth` de **inferencia** compatibles en [Voice Blender](voice-blender.md), comprueba compatibilidad y prueba con `Index Ratio = 0`.
+
+[Matriz interactiva de compatibilidad con RVC](../../reference/compatibility-matrix.md)

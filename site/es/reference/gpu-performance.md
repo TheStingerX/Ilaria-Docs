@@ -28,3 +28,5 @@ La conversión de voz y el entrenamiento RVC dependen del cómputo GPU, el ancho
 ## 4. Optimización avanzada opcional (NVIDIA)
 
 En GPUs NVIDIA compatibles, fijar relojes gráficos con `nvidia-smi` es una prueba **opcional** para reducir picos de latencia; consulta [Optimización avanzada de rendimiento Vonovox](../other-rvcs/vonovox/advanced-performance-optimization.md).
+
+[Estimador de VRAM y entrenamiento](vram-estimator.md)

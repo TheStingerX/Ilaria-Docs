@@ -43,3 +43,5 @@ Die meisten RVC-Stimmen werden als `.pth` geteilt, nicht als `.onnx`. Wenn du ei
 - **Bei Störungen unter DirectML auf `FP32` stellen:** DirectML auf AMD/Intel hat bei `FP16` oft Fehler; wechsle auf `FP32`, wenn der Ton abbricht.
 - **Windows HAGS nur bei Bedarf testen:** **Hardware-Accelerated GPU Scheduling** ist standardmäßig nicht schädlich; bei starker GPU-Last kannst du es testweise in den Windows-Grafikeinstellungen deaktivieren (neu starten, vorher/nachher vergleichen und bei fehlendem Nutzen wieder aktivieren).
 - **Überall `48000 Hz` nutzen:** Stelle Mikrofon, Kopfhörer und `VB-CABLE` in der Windows-Sound-Systemsteuerung (`mmsys.cpl`) auf `48000 Hz`, um `PortAudioError` zu verhindern.
+
+[Interaktive RVC-Kompatibilitätsmatrix](../reference/compatibility-matrix.md)

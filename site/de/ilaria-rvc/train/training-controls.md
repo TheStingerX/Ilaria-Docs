@@ -51,3 +51,5 @@ Eine Epoche umfasst eine Iteration über den vorbereiteten Datensatz. Der Schrit
 ## Führen Sie eine reproduzierbare Aufzeichnung
 
 Zeichnen Sie die Datensatzrevision, die Abtastrate, den Encoder, den Extraktor, den Vocoder, die Vorzüge, die Präzision, die Stapelgröße und die Speicherfrequenz auf. Wenn Sie denselben Namen mit einem inkompatiblen Tarif wiederverwenden, kann die Benutzeroberfläche die Nichtübereinstimmung melden. Starten Sie ein separates Experiment für eine neue Konfiguration und halten Sie das alte Experiment zum Vergleich bereit.
+
+[VRAM- und Trainingsrechner](../../reference/vram-estimator.md)

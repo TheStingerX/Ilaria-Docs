@@ -34,3 +34,5 @@ Sie können ein offizielles Desktop-Paket ohne Node.js oder pnpm installieren. D
 | Die Dateikonvertierung wird gestartet, es ist jedoch nicht mehr genügend Speicher vorhanden | Schließen Sie konkurrierende Jobs und testen Sie ein paar Sekunden Audio mit ausgeschalteten Effekten. Probieren Sie ein von Ihrem Build unterstütztes Gerät aus. |
 
 Bevor Sie eine neue Version installieren oder Ordner verschieben, speichern Sie Ihr Arbeitsaudio und sichern Sie benutzerdefinierte Modelle, Indizes, Datensätze und vollständige Trainingsexperimente. Bestätigen Sie nach der Aktualisierung mit derselben kurzen Aufnahme und Stimme, dass die neue Engine ein brauchbares Ergebnis liefert.
+
+[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

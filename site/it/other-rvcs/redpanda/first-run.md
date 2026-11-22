@@ -23,3 +23,5 @@ Se la tua build prevede una conversione offline, inizia con un WAV secco, breve 
 - **Modello mancante**: ricontrolla la cartella prevista dalla tua build, dal motore corrente e se il file è un'esportazione di inferenza.
 - **Errore CUDA**: conferma il dispositivo RVC scelto e prova con altri lavori GPU chiusi. Registra il primo errore invece di interpretare il messaggio di arresto finale.
 - **Compatibilità non chiara**: prendi nota della versione del pacchetto o del checkout, della GPU e della famiglia di modelli prevista. Testa una prova di riferimento prima di provare vocoder o funzionalità personalizzate.
+
+[Matrice interattiva di compatibilità RVC](../../reference/compatibility-matrix.md)

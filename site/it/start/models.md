@@ -67,3 +67,5 @@ Annota la versione dell’app, quella del modello, la trasposizione e il valore 
 - [Inferenza](../ilaria-rvc/convert/inference.md)
 - [Preparazione del dataset](../model-training/dataset-preparation.md)
 - [Risoluzione dei problemi](../reference/troubleshooting.md)
+
+[Matrice interattiva di compatibilità RVC](../reference/compatibility-matrix.md)

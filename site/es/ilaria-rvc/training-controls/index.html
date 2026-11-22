@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848681179343">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848686954023">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,13 +36,15 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848681179343" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848686954023" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848681179343" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848686954023" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848681179343" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848686954023" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
+    <link rel="stylesheet" href="/es/static/interactive/tools.css">
+    <script src="/es/static/interactive/tools.js" defer></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
@@ -279,6 +281,7 @@
 <p>Una época cubre una iteración sobre el conjunto de datos preparado. El modo por pasos apunta a un recuento total de actualizaciones por lotes y admite la reanudación dentro de una época. El almacenamiento en caché del conjunto de datos de GPU debe estar desactivado en el modo por pasos en esta versión. La frecuencia de guardado se mide en épocas incluso cuando se utiliza un objetivo de paso. Utilice un objetivo por encima del progreso ya completado al extender una carrera. Vale la pena probar más pasos cuando mejora el audio retenido comparable.</p>
 <span id="keep-a-reproducible-record" class="docs-anchor"></span><h2 id="mantener-un-registro-reproducible">Mantener un registro reproducible</h2>
 <p>Registre la revisión del conjunto de datos, la frecuencia de muestreo, el codificador, el extractor, el vocoder, los preentrenamientos, la precisión, el tamaño del lote y guarde la cadencia. Si reutiliza el mismo nombre con una tarifa incompatible, la interfaz de usuario puede informar la discrepancia. Inicie un experimento independiente para una nueva configuración y mantenga el experimento anterior disponible para comparar.</p>
+<p><a href="../../tools/vram-estimator/">Estimador de VRAM y entrenamiento</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -313,7 +316,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T22:12:26.000Z">21/11/2026 · 23:12</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-22T18:19:55.000Z">22/11/2026 · 19:19</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

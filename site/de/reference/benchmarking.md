@@ -31,3 +31,5 @@ Verlasse dich nicht auf Schätzungen: miss deine eigene Hardware mit **wiederhol
 | Throttling beobachtet | `Ja / Nein` | `Ja / Nein` |
 
 5. **Nur belegte Vorteile behalten:** Ohne klaren Gewinn zu Test A zurückkehren.
+
+[VRAM- und Trainingsrechner](vram-estimator.md)

@@ -95,3 +95,5 @@ Las compilaciones recientes de Ilaria RVC le permiten arrastrar audio o un conju
  | Una sesión es mucho más tranquila | Compruebe si la actuación del orador es intencionalmente silenciosa. Ajuste las diferencias de ganancia de grabación mientras conserva la dinámica natural útil. |
 
 Antes de continuar, reproduzca algunos clips de cada sesión, confirme que seleccionó la carpeta preparada y registre la versión de la carpeta en sus notas. Luego [ejecute un experimento de entrenamiento](training.md).
+
+[Estimador de VRAM y entrenamiento](../reference/vram-estimator.md)

@@ -55,3 +55,5 @@ Si le modèle ne parvient pas à se charger, vérifiez RVC V2 et l'intégrateur 
 | Aucun signal de microphone | Testez le micro physique dans Windows, puis resélectionnez le même appareil dans Vonovox. |
 | Bon son local mais silence lors d'un appel | Parcourez les extrémités du câble et la sélection du micro de destination dans le guide de routage. |
 | L'audio se coupe uniquement pendant une partie | Testez avec le jeu ouvert et augmentez la taille du bloc d'un cran si nécessaire. |
+
+[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)

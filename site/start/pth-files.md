@@ -69,3 +69,5 @@ If you put a raw `G_*.pth` file into `models/` and try to convert audio with it,
 | `EOFError` / `invalid load key` / `File is not a zip archive` | Download broke or saved an HTML webpage instead of the binary model. | Check file size: a valid `.pth` is **40 - 110+ MB**, not a few KB. Delete and re-download cleanly. |
 | `Missing key(s) in state_dict` / `Sizes of tensors must match` | Loaded a raw `G_*.pth` training checkpoint instead of an exported inference `.pth`. | Export the finished model properly instead of copying `G_*.pth` from `logs/`. |
 | `UnpicklingError` / `Weights only load failed` | PyTorch 2.6+ blocked legacy pickle objects in an older RVC app. | Update to **Ilaria RVC 2.4.0+** or the latest **Applio**. |
+
+[Interactive RVC Compatibility Matrix](../reference/compatibility-matrix.md)

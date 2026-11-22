@@ -51,3 +51,5 @@ Uma época cobre uma iteração no conjunto de dados preparado. O modo Step tem 
 ## Mantenha um registro reproduzível
 
 Registre a revisão do conjunto de dados, taxa de amostragem, codificador, extrator, vocoder, pré-treinamento, precisão, tamanho do lote e cadência de salvamento. Se você reutilizar o mesmo nome com uma taxa incompatível, a IU poderá relatar a incompatibilidade. Inicie um experimento separado para uma nova configuração e mantenha o experimento antigo disponível para comparação.
+
+[Estimador de VRAM e treino](../../reference/vram-estimator.md)

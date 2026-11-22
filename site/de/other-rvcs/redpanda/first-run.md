@@ -23,3 +23,5 @@ Wenn Ihr Build eine Offline-Konvertierung ermöglicht, beginnen Sie mit einem tr
 - **Modell fehlt**: Überprüfen Sie noch einmal den von Ihrem Build erwarteten Ordner, die aktuelle Engine und ob es sich bei der Datei um einen Inferenzexport handelt.
 - **CUDA-Fehler**: Bestätigen Sie das ausgewählte RVC-Gerät und testen Sie es mit anderen geschlossenen GPU-Jobs. Zeichnen Sie den ersten Fehler auf, anstatt die endgültige Meldung zum Herunterfahren zu interpretieren.
 - **Unklare Kompatibilität**: Beachten Sie die Checkout- oder Paketversion, die GPU und die vorgesehene Modellfamilie. Testen Sie eine Baseline, bevor Sie benutzerdefinierte Vocoder oder Funktionen ausprobieren.
+
+[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

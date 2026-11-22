@@ -95,3 +95,5 @@ Les versions récentes d'Ilaria RVC vous permettent de faire glisser un fichier 
  | Une session est beaucoup plus silencieuse | Vérifiez si la performance de l'orateur est intentionnellement silencieuse. Ajustez les différences de gain d’enregistrement tout en conservant une dynamique naturelle utile. |
 
 Avant de continuer, lisez quelques clips de chaque session, confirmez que vous avez sélectionné le dossier préparé et enregistrez la version du dossier dans vos notes. Ensuite, [lancez une expérience de formation](training.md).
+
+[Estimateur de VRAM et d’entraînement](../reference/vram-estimator.md)

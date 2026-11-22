@@ -25,3 +25,5 @@ If your build exposes offline conversion, start with one dry, short spoken WAV a
 - **Unclear compatibility**: note the checkout or package version, GPU, and intended model family. Test a baseline before trying custom vocoders or features.
 
 If you want to train your own RVC voice in Redpanda-vc using Generator EMA and step-based checkpoints, see [Train RVC models (EMA & Steps)](training.md). For a full feature comparison against RVC Mainline, Applio, and Ilaria RVC, see [Redpanda-vc vs other RVC versions](differences.md).
+
+[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

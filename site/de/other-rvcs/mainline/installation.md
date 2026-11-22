@@ -101,3 +101,5 @@ Führen Sie `python webui.py` aus demselben Verzeichnis aus. Der Feature-Encoder
 | Fehlendes HuBERT, RMVPE oder FFmpeg | Überprüfen Sie die Asset-Ordner und ausführbaren Pfade oben. Versuchen Sie es erneut mit einer einfachen lokalen WAV-Datei, nachdem Sie die fehlende Datei korrigiert haben. |
 
 Wenn sich die Benutzeroberfläche öffnet, fahren Sie mit [Ihrer ersten Dateikonvertierung](inference.md) fort.
+
+[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

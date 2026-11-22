@@ -43,3 +43,5 @@ Casi todas las voces RVC se publican como `.pth`, no como `.onnx`. Si necesitas 
 - **Usa `FP32` en DirectML si hay fallos:** DirectML en GPUs AMD/Intel suele fallar o distorsionar en `FP16`; cambia a `FP32` si el audio se corta.
 - **Prueba Windows HAGS solo si hace falta:** **Hardware-Accelerated GPU Scheduling** no es dañino por defecto, pero con alta carga GPU puedes probar a desactivarlo en Configuración de gráficos de Windows (reinicia, compara antes/después y restablece si no mejora).
 - **Usa `48000 Hz` en todo:** Configura micrófono, auriculares y `VB-CABLE` a `48000 Hz` en el Panel de sonido (`mmsys.cpl`) para evitar `PortAudioError`.
+
+[Matriz interactiva de compatibilidad con RVC](../reference/compatibility-matrix.md)

@@ -31,3 +31,5 @@ Never rely on guesswork or single-number claims when tuning RVC training or live
 | Throttling observed | `Yes / No` | `Yes / No` |
 
 5. **Keep only proven gains:** If Test B shows no measurable improvement, or introduces heat, instability, or worse audio, revert to Test A.
+
+[VRAM & Training Estimator](vram-estimator.md)
