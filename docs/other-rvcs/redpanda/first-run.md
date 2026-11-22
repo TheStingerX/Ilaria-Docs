@@ -30,3 +30,5 @@ If your build exposes offline conversion, start with one dry, short spoken WAV a
 - **Model missing**: recheck the folder expected by your build, the current engine, and whether the file is an inference export.
 - **CUDA error**: confirm the chosen RVC device and test with other GPU jobs closed. Record the first error instead of interpreting the final shutdown message.
 - **Unclear compatibility**: note the checkout or package version, GPU, and intended model family. Test a baseline before trying custom vocoders or features.
+
+If you want to train your own RVC voice in Redpanda-vc using Generator EMA and step-based checkpoints, see [Train RVC models (EMA & Steps)](training.md).
