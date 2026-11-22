@@ -153,7 +153,7 @@ try {
   await call('Emulation.setScriptExecutionDisabled', {value:true});
   await call('Page.navigate', {url: origin + '/it/tools/vram-estimator/'});
   const raw = await (await fetch(origin + '/it/tools/vram-estimator/')).text();
-  assert.ok(raw.includes('Lo strumento richiede JavaScript') && raw.includes('/it/training/'));
+  assert.ok(raw.includes('Lo strumento richiede JavaScript') && raw.includes('href="../../training/"'));
   assert.deepEqual(errors, []);
   console.log('Mobile width, keyboard focus, dark theme, reduced motion and runtime passed');
 } finally {
