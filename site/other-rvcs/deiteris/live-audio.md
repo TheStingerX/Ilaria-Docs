@@ -1,27 +1,27 @@
 # Route and tune Deiteris w-okada Fork
 
+Always wear **headphones** during live conversion. Using speakers feeds the converted voice back into your microphone and creates echo and feedback loops.
+
+## 1. Configure audio devices
+
 > **Correct Audio Routing**
 >
-> **1. Inside the Voice Changer (Deiteris)**
+> **1. Inside the Voice Changer**
 > - **Input Device:** Your physical microphone.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** `Line 1` (VAC, recommended) or `CABLE Input` (VB-CABLE).
 >
 > **2. Inside Discord, Games, OBS, or Other Applications**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
 > - **Output Device:** Your headphones or speakers.
 >
 > ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
 > ```
 >
 > Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
 >
-> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
-> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
-
-Always wear **headphones** during live conversion. Using speakers feeds the converted voice back into your microphone and creates echo and feedback loops.
-
-## 1. Configure audio devices
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 1. Set **Audio Input** to your physical microphone.
 2. Set **Audio Output** to your headphones for a local test first, or to **`CABLE Input`** (your virtual audio cable's playback endpoint) when routing to other apps.

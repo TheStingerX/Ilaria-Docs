@@ -1,24 +1,5 @@
 # Converta seu microfone em w-okada VCClient
 
-> **Correct Audio Routing**
->
-> **1. Dentro do Voice Changer**
-> - **Input Device:** Seu microfone físico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. No Discord, Jogos, OBS ou outros aplicativos**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Seus fones de ouvido ou alto-falantes.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
->
-> - **VAC vs. VB-CABLE:** `Line 1` é o nome usado pelo **VAC (Virtual Audio Cable)**, não um nome universal para todos os cabos virtuais. Com **VB-CABLE**, defina a saída do Voice Changer como **`CABLE Input`** e a entrada do Discord / jogo como **`CABLE Output`**.
-> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
-
 Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz limpa e convertida nos fones de ouvido, conecte-a a uma chamada ou gravador. Esta ordem permite localizar problemas antes de adicionar o cabo virtual.
 
 ## Adicione um modelo e ouça o primeiro resultado
@@ -37,6 +18,25 @@ Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz
 Em um PC, teste primeiro o caminho do cliente mais simples. Mude para Servidor se sua compilação expor um monitor separado ou se o navegador não puder selecionar o endpoint de saída desejado. No modo Servidor, escolha a API do host e os nomes dos dispositivos oferecidos pelo servidor. Se várias entradas compartilharem o mesmo nome, tente usar a mesma API de áudio para entrada e saída. Quando o sinal estiver estável, você poderá testar alternativas de latência.
 
 ## Enviar conversão para Discord, OBS ou outro aplicativo
+
+> **Correct Audio Routing**
+>
+> **1. Dentro do Voice Changer**
+> - **Input Device:** Seu microfone físico.
+> - **Output Device:** `Line 1` (VAC, recomendado) ou `CABLE Input` (VB-CABLE).
+>
+> **2. No Discord, Jogos, OBS ou outros aplicativos**
+> - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
+> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
+> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
 
 1. Instale um cabo virtual para seu sistema operacional e reabra ambos os aplicativos para que suas listas de dispositivos sejam atualizadas. Deve expor um ponto final de reprodução e um ponto final de gravação correspondente.
 2. Defina a entrada VCClient para o microfone físico. Defina a saída do conversor para o ponto final de **reprodução** do cabo. Com VB-CABLE, geralmente é **CABLE Input**.

@@ -1,24 +1,5 @@
 # Converti la voce dal vivo con RVC WebUI (Mainline - Original RVC)
 
-> **Correct Audio Routing**
->
-> **1. Nel Voice Changer**
-> - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Le tue cuffie o altoparlanti.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
->
-> - **VAC vs. VB-CABLE:** `Line 1` è il nome usato da **VAC (Virtual Audio Cable)**, non un nome universale per tutti i cavi virtuali. Con **VB-CABLE**, imposta Output del Voice Changer su **`CABLE Input`** e Input di Discord / gioco su **`CABLE Output`**.
-> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
 Usa la GUI separata inclusa nelle versioni supportate di RVC WebUI (Mainline - Original RVC) per convertire in tempo reale la voce del microfono. La WebUI serve per convertire file e addestrare modelli. Ascolta il risultato in cuffia prima di mandarlo all'app di destinazione.
 
 ## Apri l'interfaccia e seleziona i tuoi file
@@ -36,6 +17,25 @@ Usa la GUI separata inclusa nelle versioni supportate di RVC WebUI (Mainline - O
 4. Interrompi lo streaming prima di cambiare dispositivi audio o caricare un checkpoint diverso. Riavvia e ripeti lo stesso test di ascolto.
 
 ## Invia l'audio di RVC WebUI (Mainline - Original RVC) a una chiamata o a un registratore
+
+> **Correct Audio Routing**
+>
+> **1. Nel Voice Changer**
+> - **Input Device:** Il tuo microfono fisico.
+> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Giochi, OBS o altre applicazioni**
+> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
+> - **Output Device:** Le tue cuffie o altoparlanti.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 Configura un cavo virtuale o un'altra coppia di dispositivi di riproduzione e registrazione collegati. L'ingresso di riproduzione del cavo riceve l'audio da RVC WebUI (Mainline - Original RVC). L'estremità di registrazione fornisce l'audio alla chiamata o al registratore.
 

@@ -1,24 +1,5 @@
 # Prova l'audio dal vivo in Redpanda-vc
 
-> **Correct Audio Routing**
->
-> **1. Nel Voice Changer**
-> - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Le tue cuffie o altoparlanti.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
->
-> - **VAC vs. VB-CABLE:** `Line 1` è il nome usato da **VAC (Virtual Audio Cable)**, non un nome universale per tutti i cavi virtuali. Con **VB-CABLE**, imposta Output del Voice Changer su **`CABLE Input`** e Input di Discord / gioco su **`CABLE Output`**.
-> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
 ## Scegli desktop o browser
 
 L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale. La scheda in tempo reale dell'interfaccia utente Web acquisisce l'input del microfono tramite il browser e trasmette l'audio al dispositivo di inferenza selezionato. Utilizza un percorso per il tuo primo test e lascia l'altro chiuso per facilitare la diagnosi del feedback e dei lavori concorrenti.
@@ -33,6 +14,25 @@ L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a q
 Nelle build WebUI con **Dispositivo di inferenza**, **Automatico** assegna un nuovo flusso a un dispositivo disponibile. Scegli una GPU specifica quando confronti risultati ripetibili o lasci una GPU libera per un altro carico di lavoro. Uno streaming rimane sul dispositivo assegnato. Più GPU possono gestire flussi separati; cambiare il selettore non è un modo per combinare la loro capacità in un unico flusso. Beatrice utilizza un percorso CPU separato nell'implementazione documentata.
 
 ## Instradare il segnale dopo un test pulito
+
+> **Correct Audio Routing**
+>
+> **1. Nel Voice Changer**
+> - **Input Device:** Il tuo microfono fisico.
+> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Giochi, OBS o altre applicazioni**
+> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
+> - **Output Device:** Le tue cuffie o altoparlanti.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 Se il percorso di riproduzione può avere come target un cavo virtuale, scegli lì il punto finale di riproduzione del cavo. Nell'app ricevente, seleziona l'endpoint di registrazione complementare come microfono. Mantieni il microfono fisico come convertitore di ingresso e uscita dalla chiamata in cuffia. Nella modalità browser la destinazione della riproduzione può dipendere dalle impostazioni di output del browser e del sistema operativo. Verifica il ricevitore con una registrazione locale prima di giudicare lo streaming live in una chiamata.
 

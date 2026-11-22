@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626332506">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626770127">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848626332506" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626770127" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626332506" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626770127" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626332506" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626770127" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -176,27 +176,6 @@
                 <!-- Page content  -->
 <span id="test-live-audio-in-redpanda-vc" class="docs-anchor"></span><h1 id="testez-laudio-en-direct-dans-redpanda-vc">Testez l&#x27;audio en direct dans Redpanda-vc</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local.</div>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Dans le Voice Changer</strong></p>
-<ul>
-<li><strong>Input Device :</strong> Votre microphone physique.</li>
-<li><strong>Output Device :</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-</ul>
-<p><strong>2. Dans Discord, les jeux, OBS ou d&#x27;autres applications</strong></p>
-<ul>
-<li><strong>Input Device :</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-<li><strong>Output Device :</strong> Vos écouteurs ou haut-parleurs.</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>L&#x27;audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre <strong>casque</strong> (jamais renvoyé dans le câble virtuel).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE :</strong> <code translate="no" v-pre>Line 1</code> est le nom utilisé par <strong>VAC (Virtual Audio Cable)</strong>, pas un nom universel pour tous les câbles virtuels. Avec <strong>VB-CABLE</strong>, réglez la sortie du Voice Changer sur <strong><code translate="no" v-pre>CABLE Input</code></strong> et l&#x27;entrée de Discord / jeu sur <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Monitoring :</strong> Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n&#x27;activer qu&#x27;en cas de besoin. Évitez les chemins audio dupliqués, l&#x27;écho et le loopback.</li>
-</ul>
-</blockquote>
 <span id="choose-desktop-or-browser" class="docs-anchor"></span><h2 id="choisissez-le-bureau-ou-le-navigateur">Choisissez le bureau ou le navigateur</h2>
 <p>Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local. L&#x27;onglet en temps réel de WebUI capture l&#x27;entrée du microphone via le navigateur et transmet l&#x27;audio au périphérique d&#x27;inférence sélectionné. Utilisez un chemin pour votre premier test et laissez l’autre fermé pour faciliter le diagnostic des commentaires et des tâches concurrentes.</p>
 <ol>
@@ -208,6 +187,27 @@
 <span id="select-the-compute-device" class="docs-anchor"></span><h2 id="sélectionnez-le-périphérique-de-calcul">Sélectionnez le périphérique de calcul</h2>
 <p>Dans les versions WebUI avec <strong>Inference Device</strong>, <strong>Automatic</strong> attribue un nouveau flux à un périphérique disponible. Choisissez un GPU spécifique lorsque vous comparez des résultats reproductibles ou laissez un GPU libre pour une autre charge de travail. Un flux reste sur l&#x27;appareil qui lui est attribué. Plusieurs GPU peuvent gérer des flux distincts ; changer le sélecteur n&#x27;est pas un moyen de combiner leur capacité en un seul flux. Beatrice utilise un chemin CPU distinct dans l&#x27;implémentation documentée.</p>
 <span id="route-the-signal-after-a-clean-test" class="docs-anchor"></span><h2 id="acheminer-le-signal-après-un-test-propre">Acheminer le signal après un test propre</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dans le Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device :</strong> Votre microphone physique.</li>
+<li><strong>Output Device :</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommandé) ou <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. Dans Discord, les jeux, OBS ou d&#x27;autres applications</strong></p>
+<ul>
+<li><strong>Input Device :</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommandé) ou <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Output Device :</strong> Vos écouteurs ou haut-parleurs.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>L&#x27;audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre <strong>casque</strong> (jamais renvoyé dans le câble virtuel).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE :</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) est toujours recommandé. Si vous avez aussi (ou uniquement) <strong>VB-CABLE</strong>, le voice changer envoie vers <strong><code translate="no" v-pre>CABLE Input</code></strong> et Discord / les jeux écoutent <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring :</strong> Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n&#x27;activer qu&#x27;en cas de besoin. Évitez les chemins audio dupliqués, l&#x27;écho et le loopback.</li>
+</ul>
+</blockquote>
 <p>Si votre chemin de lecture peut cibler un câble virtuel, choisissez-y le point de terminaison de lecture du câble. Dans l&#x27;application de réception, sélectionnez le point de terminaison d&#x27;enregistrement compagnon comme microphone. Conservez le micro physique comme entrée et sortie du convertisseur de l&#x27;appel sur le casque. En mode navigateur, la destination de lecture peut dépendre des paramètres de sortie du navigateur et du système d&#x27;exploitation. Vérifiez le récepteur avec un enregistrement local avant de juger le flux en direct lors d&#x27;un appel.</p>
 <retype-table copy-text="| Ce que vous entendez | Que tester |
 | --- | --- |
@@ -279,7 +279,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T01:38:09.000Z">22/11/2026 · 02:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626306848">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626750437">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848626306848" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848626750437" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848626750437" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848626750437" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -175,27 +175,6 @@
                 <!-- Page content  -->
 <h1 id="real-time-voice-conversion">Real-time voice conversion</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">For a recording or a cover, file conversion lets you render and compare several takes.</div>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Inside the Voice Changer</strong></p>
-<ul>
-<li><strong>Input Device:</strong> Your physical microphone.</li>
-<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-</ul>
-<p><strong>2. Inside Discord, Games, OBS, or Other Applications</strong></p>
-<ul>
-<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-<li><strong>Output Device:</strong> Your headphones or speakers.</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>Audio coming from Discord, your game, or other apps must play directly to your <strong>headphones</strong> (never back into the virtual cable).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> is the name used by <strong>VAC (Virtual Audio Cable)</strong>, not a universal name for every virtual cable. With <strong>VB-CABLE</strong>, set Voice Changer Output to <strong><code translate="no" v-pre>CABLE Input</code></strong> and Discord / Game Input to <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Monitoring:</strong> Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See the <a href="../ilaria-rvc/vonovox/live-audio/">Vonovox VAC Lite / VB-CABLE routing guide</a> for Windows setup details.</li>
-</ul>
-</blockquote>
 <p>For a recording or a cover, file conversion lets you render and compare several takes. In a live setup, the converter has to finish each audio block quickly enough to keep the microphone stream moving. Configure a reliable local signal first, then connect it to a call, recording or streaming application.</p>
 <h2 id="choose-a-tool-for-the-job">Choose a tool for the job</h2>
 <p>See the <a href="../tools/">RVC tools directory</a> for downloads and hardware notes, including Vonovox for NVIDIA GPUs.</p>
@@ -249,6 +228,27 @@
 </ol>
 <p>Avoid listening through speakers near an active microphone. Headphones help you identify a routing issue without feeding the output back into the input.</p>
 <h2 id="understand-device-roles-and-audio-backends">Understand device roles and audio backends</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Inside the Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Your physical microphone.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommended) or <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. Inside Discord, Games, OBS, or Other Applications</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommended) or <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Output Device:</strong> Your headphones or speakers.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>Audio coming from Discord, your game, or other apps must play directly to your <strong>headphones</strong> (never back into the virtual cable).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) is always recommended. If you have <strong>VB-CABLE</strong> installed as well (or instead), remember that the voice changer outputs to <strong><code translate="no" v-pre>CABLE Input</code></strong> while Discord / games listen to <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring:</strong> Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.</li>
+</ul>
+</blockquote>
 <p>Before wiring any app, know what each endpoint does:</p>
 <retype-table copy-text="| Term | What it is |
 | --- | --- |
@@ -451,7 +451,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:38:09.000Z">22/11/2026 · 02:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

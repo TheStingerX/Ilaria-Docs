@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626306848">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626750437">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848626306848" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626750437" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626750437" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626750437" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -175,27 +175,6 @@
                 <!-- Page content  -->
 <h1 id="convert-your-microphone-in-w-okada-vcclient">Convert your microphone in w-okada VCClient</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder.</div>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Inside the Voice Changer (w-okada VCClient)</strong></p>
-<ul>
-<li><strong>Input Device:</strong> Your physical microphone.</li>
-<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-</ul>
-<p><strong>2. Inside Discord, Games, OBS, or Other Applications</strong></p>
-<ul>
-<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-<li><strong>Output Device:</strong> Your headphones or speakers.</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>Audio coming from Discord, your game, or other apps must play directly to your <strong>headphones</strong> (never back into the virtual cable).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> is the name used by <strong>VAC (Virtual Audio Cable)</strong>, not a universal name for every virtual cable. With <strong>VB-CABLE</strong>, set Voice Changer Output to <strong><code translate="no" v-pre>CABLE Input</code></strong> and Discord / Game Input to <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Monitoring:</strong> Hearing your own converted voice in your headphones (via <strong>Monitor</strong>, if your build exposes it) is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a>.</li>
-</ul>
-</blockquote>
 <p>Start with headphones and a single local audio path. When you hear a clean converted voice in the headphones, connect it to a call or recorder. This order lets you locate issues before adding the virtual cable.</p>
 <h2 id="add-a-model-and-hear-the-first-result">Add a model and hear the first result</h2>
 <ol>
@@ -210,6 +189,27 @@
 <p><strong>Client</strong> uses devices available to the client/browser. Microphone permissions and the browser&#x27;s output selection can affect the device list. <strong>Server</strong> opens devices on the computer running the conversion engine. This matters on two computers: a USB microphone plugged into the client does not automatically appear on the server.</p>
 <p>On one PC, test the simpler client path first. Switch to Server if your build exposes a separate monitor or the browser cannot select the desired output endpoint. In Server mode, choose the host API and device names offered by the server. If several entries share a name, try using the same audio API for input and output. Once the signal is stable, you can test alternatives for latency.</p>
 <h2 id="send-conversion-to-discord-obs-or-another-app">Send conversion to Discord, OBS or another app</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Inside the Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Your physical microphone.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommended) or <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. Inside Discord, Games, OBS, or Other Applications</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recommended) or <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Output Device:</strong> Your headphones or speakers.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>Audio coming from Discord, your game, or other apps must play directly to your <strong>headphones</strong> (never back into the virtual cable).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) is always recommended. If you have <strong>VB-CABLE</strong> installed as well (or instead), remember that the voice changer outputs to <strong><code translate="no" v-pre>CABLE Input</code></strong> while Discord / games listen to <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring:</strong> Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.</li>
+</ul>
+</blockquote>
 <ol>
 <li>Install a virtual cable for your OS and reopen both applications so their device lists refresh. It should expose a playback endpoint and a corresponding recording endpoint.</li>
 <li>Set VCClient input to the physical microphone. Set the converter&#x27;s output to the cable&#x27;s <strong>playback</strong> endpoint. With VB-CABLE, this is commonly <strong>CABLE Input</strong>.</li>
@@ -305,7 +305,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:38:09.000Z">22/11/2026 · 02:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

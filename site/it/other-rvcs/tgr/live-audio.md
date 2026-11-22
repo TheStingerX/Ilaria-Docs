@@ -1,24 +1,5 @@
 # Configurare l'audio live in Okada TG Developed Fork
 
-> **Correct Audio Routing**
->
-> **1. Nel Voice Changer**
-> - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Le tue cuffie o altoparlanti.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
->
-> - **VAC vs. VB-CABLE:** `Line 1` è il nome usato da **VAC (Virtual Audio Cable)**, non un nome universale per tutti i cavi virtuali. Con **VB-CABLE**, imposta Output del Voice Changer su **`CABLE Input`** e Input di Discord / gioco su **`CABLE Output`**.
-> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
 Utilizza un checkpoint di inferenza RVC compatibile e un microfono funzionante. Per prima cosa verifica che il segnale convertito raggiunga le tue cuffie. Quindi invia quel segnale a un'altra applicazione e registra ciò che riceve l'altra app.
 
 ## Carica una voce RVC
@@ -37,6 +18,25 @@ Utilizza un checkpoint di inferenza RVC compatibile e un microfono funzionante. 
 5. Se senti anche la voce originale, disattiva l'ascolto diretto del microfono sul dispositivo o rimuovi l'altro collegamento del microfono nel sistema operativo. Tieni moderato il volume delle cuffie durante i test.
 
 ## Collega un cavo virtuale
+
+> **Correct Audio Routing**
+>
+> **1. Nel Voice Changer**
+> - **Input Device:** Il tuo microfono fisico.
+> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Giochi, OBS o altre applicazioni**
+> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
+> - **Output Device:** Le tue cuffie o altoparlanti.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 Il progetto TGR usa Virtual Audio Cable di Muzychenko per i suoi esempi di risoluzione dei problemi di Windows. Questo in genere espone endpoint di riproduzione e registrazione corrispondenti denominati **Line 1**. Altri driver dei cavi utilizzano etichette diverse. Il segnale deve entrare nell'endpoint di riproduzione ed uscire attraverso l'endpoint di registrazione corrispondente.
 

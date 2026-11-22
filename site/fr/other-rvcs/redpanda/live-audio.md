@@ -1,24 +1,5 @@
 # Testez l'audio en direct dans Redpanda-vc
 
-> **Correct Audio Routing**
->
-> **1. Dans le Voice Changer**
-> - **Input Device :** Votre microphone physique.
-> - **Output Device :** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Dans Discord, les jeux, OBS ou d'autres applications**
-> - **Input Device :** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device :** Vos écouteurs ou haut-parleurs.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
->
-> - **VAC vs. VB-CABLE :** `Line 1` est le nom utilisé par **VAC (Virtual Audio Cable)**, pas un nom universel pour tous les câbles virtuels. Avec **VB-CABLE**, réglez la sortie du Voice Changer sur **`CABLE Input`** et l'entrée de Discord / jeu sur **`CABLE Output`**.
-> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
-
 ## Choisissez le bureau ou le navigateur
 
 Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce processus local. L'onglet en temps réel de WebUI capture l'entrée du microphone via le navigateur et transmet l'audio au périphérique d'inférence sélectionné. Utilisez un chemin pour votre premier test et laissez l’autre fermé pour faciliter le diagnostic des commentaires et des tâches concurrentes.
@@ -33,6 +14,25 @@ Le lanceur en temps réel du bureau Windows utilise les appareils exposés à ce
 Dans les versions WebUI avec **Inference Device**, **Automatic** attribue un nouveau flux à un périphérique disponible. Choisissez un GPU spécifique lorsque vous comparez des résultats reproductibles ou laissez un GPU libre pour une autre charge de travail. Un flux reste sur l'appareil qui lui est attribué. Plusieurs GPU peuvent gérer des flux distincts ; changer le sélecteur n'est pas un moyen de combiner leur capacité en un seul flux. Beatrice utilise un chemin CPU distinct dans l'implémentation documentée.
 
 ## Acheminer le signal après un test propre
+
+> **Correct Audio Routing**
+>
+> **1. Dans le Voice Changer**
+> - **Input Device :** Votre microphone physique.
+> - **Output Device :** `Line 1` (VAC, recommandé) ou `CABLE Input` (VB-CABLE).
+>
+> **2. Dans Discord, les jeux, OBS ou d'autres applications**
+> - **Input Device :** `Line 1` (VAC, recommandé) ou `CABLE Output` (VB-CABLE).
+> - **Output Device :** Vos écouteurs ou haut-parleurs.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
+>
+> - **VAC vs. VB-CABLE :** **VAC** (`Line 1`) est toujours recommandé. Si vous avez aussi (ou uniquement) **VB-CABLE**, le voice changer envoie vers **`CABLE Input`** et Discord / les jeux écoutent **`CABLE Output`**.
+> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
 
 Si votre chemin de lecture peut cibler un câble virtuel, choisissez-y le point de terminaison de lecture du câble. Dans l'application de réception, sélectionnez le point de terminaison d'enregistrement compagnon comme microphone. Conservez le micro physique comme entrée et sortie du convertisseur de l'appel sur le casque. En mode navigateur, la destination de lecture peut dépendre des paramètres de sortie du navigateur et du système d'exploitation. Vérifiez le récepteur avec un enregistrement local avant de juger le flux en direct lors d'un appel.
 

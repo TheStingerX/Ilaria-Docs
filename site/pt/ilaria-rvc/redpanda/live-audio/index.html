@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626348982">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626782508">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848626348982" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626782508" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626782508" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626782508" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -176,27 +176,6 @@
                 <!-- Page content  -->
 <span id="test-live-audio-in-redpanda-vc" class="docs-anchor"></span><h1 id="teste-o-áudio-ao-vivo-no-redpanda-vc">Teste o áudio ao vivo no Redpanda-vc</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">O iniciador em tempo real da área de trabalho do Windows usa os dispositivos expostos a esse processo local.</div>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Dentro do Voice Changer</strong></p>
-<ul>
-<li><strong>Input Device:</strong> Seu microfone físico.</li>
-<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-</ul>
-<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
-<ul>
-<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> é o nome usado pelo <strong>VAC (Virtual Audio Cable)</strong>, não um nome universal para todos os cabos virtuais. Com <strong>VB-CABLE</strong>, defina a saída do Voice Changer como <strong><code translate="no" v-pre>CABLE Input</code></strong> e a entrada do Discord / jogo como <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
-</ul>
-</blockquote>
 <span id="choose-desktop-or-browser" class="docs-anchor"></span><h2 id="escolha-a-área-de-trabalho-ou-navegador">Escolha a área de trabalho ou navegador</h2>
 <p>O iniciador em tempo real da área de trabalho do Windows usa os dispositivos expostos a esse processo local. A guia WebUI em tempo real captura a entrada do microfone por meio do navegador e passa o áudio para o dispositivo de inferência selecionado. Use um caminho para seu primeiro teste e deixe o outro fechado para facilitar o diagnóstico de feedback e trabalhos concorrentes.</p>
 <ol>
@@ -208,6 +187,27 @@
 <span id="select-the-compute-device" class="docs-anchor"></span><h2 id="selecione-o-dispositivo-de-computação">Selecione o dispositivo de computação</h2>
 <p>Em compilações WebUI com <strong>Dispositivo de inferência</strong>, <strong>Automático</strong> atribui um novo fluxo a um dispositivo disponível. Escolha uma GPU específica ao comparar resultados repetíveis ou deixe uma GPU livre para outra carga de trabalho. Um stream permanece no dispositivo atribuído. Várias GPUs podem lidar com fluxos separados; alterar o seletor não é uma maneira de combinar sua capacidade em um fluxo. Beatrice usa um caminho de CPU separado na implementação documentada.</p>
 <span id="route-the-signal-after-a-clean-test" class="docs-anchor"></span><h2 id="roteie-o-sinal-após-um-teste-limpo">Roteie o sinal após um teste limpo</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dentro do Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Seu microfone físico.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recomendado) ou <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recomendado) ou <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) é sempre recomendado. Se você também (ou só) usa <strong>VB-CABLE</strong>, lembre-se de que o voice changer envia para <strong><code translate="no" v-pre>CABLE Input</code></strong> e o Discord / jogos recebem de <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
+</ul>
+</blockquote>
 <p>Se o seu caminho de reprodução puder ter como alvo um cabo virtual, escolha o ponto final de reprodução do cabo nesse local. No aplicativo receptor, selecione o ponto final de gravação complementar como microfone. Mantenha o microfone físico como entrada e saída do conversor da chamada nos fones de ouvido. No modo navegador, o destino da reprodução pode depender das configurações de saída do navegador e do sistema operacional. Verifique o receptor com uma gravação local antes de julgar a transmissão ao vivo de uma chamada.</p>
 <retype-table copy-text="| O que você ouve | O que testar |
 | --- | --- |
@@ -279,7 +279,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:38:09.000Z">22/11/2026 · 02:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

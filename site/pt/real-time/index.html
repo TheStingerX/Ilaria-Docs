@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626348982">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626782508">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848626348982" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848626782508" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848626782508" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848626782508" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -176,27 +176,6 @@
                 <!-- Page content  -->
 <span id="real-time-voice-conversion" class="docs-anchor"></span><h1 id="conversão-de-voz-em-tempo-real">Conversão de voz em tempo real</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Para uma gravação ou cover, a conversão de arquivo permite renderizar e comparar várias tomadas.</div>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Dentro do Voice Changer</strong></p>
-<ul>
-<li><strong>Input Device:</strong> Seu microfone físico.</li>
-<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-</ul>
-<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
-<ul>
-<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
-<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> é o nome usado pelo <strong>VAC (Virtual Audio Cable)</strong>, não um nome universal para todos os cabos virtuais. Com <strong>VB-CABLE</strong>, defina a saída do Voice Changer como <strong><code translate="no" v-pre>CABLE Input</code></strong> e a entrada do Discord / jogo como <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
-</ul>
-</blockquote>
 <p>Para uma gravação ou cover, a conversão de arquivo permite renderizar e comparar várias tomadas. Em uma configuração ao vivo, o conversor precisa terminar cada bloco de áudio com rapidez suficiente para manter o fluxo do microfone em movimento. Configure primeiro um sinal local confiável e depois conecte-o a um aplicativo de chamada, gravação ou streaming.</p>
 <span id="choose-a-tool-for-the-job" class="docs-anchor"></span><h2 id="escolha-uma-ferramenta-para-o-trabalho">Escolha uma ferramenta para o trabalho</h2>
 <p>Consulte o <a href="../tools/">diretório de ferramentas RVC</a> para downloads e notas de hardware, incluindo Vonovox para GPUs NVIDIA.</p>
@@ -250,6 +229,27 @@
 </ol>
 <p>Evite ouvir através de alto-falantes próximos a um microfone ativo. Os fones de ouvido ajudam a identificar um problema de roteamento sem realimentar a saída na entrada.</p>
 <span id="understand-device-roles-and-audio-backends" class="docs-anchor"></span><h2 id="enviar-áudio-convertido-para-outro-aplicativo">Enviar áudio convertido para outro aplicativo</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dentro do Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Seu microfone físico.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recomendado) ou <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
+</ul>
+<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, recomendado) ou <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
+<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) é sempre recomendado. Se você também (ou só) usa <strong>VB-CABLE</strong>, lembre-se de que o voice changer envia para <strong><code translate="no" v-pre>CABLE Input</code></strong> e o Discord / jogos recebem de <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
+</ul>
+</blockquote>
 <p>Um dispositivo de áudio virtual fornece um ponto final de reprodução para o conversor e um ponto final de gravação correspondente para o aplicativo receptor. Os nomes dos terminais dependem do driver. Por exemplo, um cabo virtual pode chamar seu terminal de reprodução de “Entrada” e seu terminal de gravação de “Saída” porque as instruções usam a perspectiva do cabo.</p>
 <div id="enviar-áudio-convertido-para-outro-aplicativo-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">Physical microphone → RVC converter → virtual playback endpoint
@@ -434,7 +434,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:38:09.000Z">22/11/2026 · 02:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -1,24 +1,5 @@
 # Convertissez votre microphone dans w-okada VCClient
 
-> **Correct Audio Routing**
->
-> **1. Dans le Voice Changer**
-> - **Input Device :** Votre microphone physique.
-> - **Output Device :** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. Dans Discord, les jeux, OBS ou d'autres applications**
-> - **Input Device :** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device :** Vos écouteurs ou haut-parleurs.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
->
-> - **VAC vs. VB-CABLE :** `Line 1` est le nom utilisé par **VAC (Virtual Audio Cable)**, pas un nom universel pour tous les câbles virtuels. Avec **VB-CABLE**, réglez la sortie du Voice Changer sur **`CABLE Input`** et l'entrée de Discord / jeu sur **`CABLE Output`**.
-> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
-
 Commencez avec des écouteurs et un seul chemin audio local. Lorsque vous entendez une voix claire et convertie dans le casque, connectez-le à un appel ou à un enregistreur. Cet ordre vous permet de localiser les problèmes avant d'ajouter le câble virtuel.
 
 ## Ajoutez un modèle et écoutez le premier résultat
@@ -37,6 +18,25 @@ Commencez avec des écouteurs et un seul chemin audio local. Lorsque vous entend
 Sur un PC, testez d’abord le chemin client le plus simple. Basculez vers le serveur si votre build expose un moniteur distinct ou si le navigateur ne peut pas sélectionner le point de terminaison de sortie souhaité. En mode Serveur, choisissez l'API hôte et les noms d'appareil proposés par le serveur. Si plusieurs entrées partagent un nom, essayez d'utiliser la même API audio pour l'entrée et la sortie. Une fois le signal stable, vous pouvez tester des alternatives de latence.
 
 ## Envoyez la conversion vers Discord, OBS ou une autre application
+
+> **Correct Audio Routing**
+>
+> **1. Dans le Voice Changer**
+> - **Input Device :** Votre microphone physique.
+> - **Output Device :** `Line 1` (VAC, recommandé) ou `CABLE Input` (VB-CABLE).
+>
+> **2. Dans Discord, les jeux, OBS ou d'autres applications**
+> - **Input Device :** `Line 1` (VAC, recommandé) ou `CABLE Output` (VB-CABLE).
+> - **Output Device :** Vos écouteurs ou haut-parleurs.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
+>
+> - **VAC vs. VB-CABLE :** **VAC** (`Line 1`) est toujours recommandé. Si vous avez aussi (ou uniquement) **VB-CABLE**, le voice changer envoie vers **`CABLE Input`** et Discord / les jeux écoutent **`CABLE Output`**.
+> - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
 
 1. Installez un câble virtuel pour votre système d'exploitation et rouvrez les deux applications pour que leurs listes d'appareils soient actualisées. Il doit exposer un point final de lecture et un point final d’enregistrement correspondant.
 2. Réglez l'entrée VCClient sur le microphone physique. Définissez la sortie du convertisseur sur le point final de **lecture** du câble. Avec VB-CABLE, il s'agit généralement de **CABLE Input**.

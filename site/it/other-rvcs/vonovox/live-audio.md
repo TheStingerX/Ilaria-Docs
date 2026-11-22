@@ -1,24 +1,5 @@
 # Instrada e sintonizza Vonovox
 
-> **Correct Audio Routing**
->
-> **1. Nel Voice Changer**
-> - **Input Device:** Il tuo microfono fisico.
-> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
->
-> **2. In Discord, Giochi, OBS o altre applicazioni**
-> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
-> - **Output Device:** Le tue cuffie o altoparlanti.
->
-> ```text
-> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
-> ```
->
-> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
->
-> - **VAC vs. VB-CABLE:** `Line 1` è il nome usato da **VAC (Virtual Audio Cable)**, non un nome universale per tutti i cavi virtuali. Con **VB-CABLE**, imposta Output del Voice Changer su **`CABLE Input`** e Input di Discord / gioco su **`CABLE Output`**.
-> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
-
 ## Imposta il percorso
 
 Utilizza tre endpoint: il microfono fisico per l'ingresso, un cavo virtuale per il segnale convertito e le cuffie per il monitoraggio. Un cavo virtuale ha un lato di riproduzione per l'app che invia l'audio e un lato di registrazione per l'app che lo riceve. Alcuni driver mostrano lo stesso nome di linea su entrambi i lati.
@@ -44,6 +25,25 @@ Lo sviluppatore utilizza un percorso audio a 48 kHz. Se il microfono e il driver
 Continua a guardare avanti alla sua preimpostazione per il primo test. Cambialo solo dopo aver trovato una dimensione di blocco stabile. Accorda l'altezza e la formante in modo indipendente, facendo delle pause tra le modifiche in modo che gli artefatti risultanti siano più facili da isolare. Durante il test della riproduzione di file in tempo reale, controlla la sorgente attiva nell'interfaccia utente prima di riprendere a utilizzare il microfono. Un file in riproduzione può sostituire temporaneamente il microfono fisico.
 
 ## Guida virtuale ai cavi Windows
+
+> **Correct Audio Routing**
+>
+> **1. Nel Voice Changer**
+> - **Input Device:** Il tuo microfono fisico.
+> - **Output Device:** `Line 1` (VAC, consigliato) o `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Giochi, OBS o altre applicazioni**
+> - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
+> - **Output Device:** Le tue cuffie o altoparlanti.
+>
+> ```text
+> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
+> ```
+>
+> L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 ### Scegli VAC Lite o VB-CABLE
 
