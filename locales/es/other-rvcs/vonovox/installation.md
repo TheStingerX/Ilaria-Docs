@@ -62,5 +62,3 @@ Si el modelo no se carga, verifique RVC V2 y el integrador antes de cambiar la c
 | No hay señal de micrófono | Pruebe el micrófono físico en Windows, luego vuelva a seleccionar el mismo dispositivo en Vonovox. |
 | Buen sonido local pero silencio en una llamada | Analice los puntos finales del cable y la selección del micrófono de destino en la guía de enrutamiento. |
 | El audio se interrumpe solo durante un juego | Pruebe con el juego abierto y aumente el tamaño del bloque un paso si es necesario. |
-
-[Matriz interactiva de compatibilidad con RVC](../../reference/compatibility-matrix.md)

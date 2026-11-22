@@ -56,5 +56,3 @@ Pour Windows v2, le projet répertorie à la fois la prise en charge de Torch et
 | Le panneau du modèle s'ouvre mais la liste des microphones est vide | Vérifiez le compteur d'entrée du système d'exploitation et l'autorisation du site du navigateur. Pour le mode client, rechargez après avoir accordé l’autorisation. Pour le mode serveur, actualisez la liste des appareils du serveur. |
 
 Passez à [Audio en direct, routage et dépannage](live-audio.md).
-
-[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)

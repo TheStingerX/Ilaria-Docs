@@ -58,5 +58,3 @@ Una época cubre una iteración sobre el conjunto de datos preparado. El modo po
 ## Mantener un registro reproducible
 
 Registre la revisión del conjunto de datos, la frecuencia de muestreo, el codificador, el extractor, el vocoder, los preentrenamientos, la precisión, el tamaño del lote y guarde la cadencia. Si reutiliza el mismo nombre con una tarifa incompatible, la interfaz de usuario puede informar la discrepancia. Inicie un experimento independiente para una nueva configuración y mantenga el experimento anterior disponible para comparar.
-
-[Estimador de VRAM y entrenamiento](../../reference/vram-estimator.md)

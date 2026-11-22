@@ -43,5 +43,3 @@ You can install an official Desktop package without Node.js or pnpm. Those tools
 Before installing a new version or moving folders, save your working audio and back up custom models, indexes, datasets and full training experiments. After updating, use the same short recording and voice to confirm that the new engine produces a usable result.
 
 > **Live microphone routing:** To use Applio in real time with Discord, games, or OBS, set Applio's **Input Device** to your physical microphone and **Output Device** to `Line 1` (VAC) or `CABLE Input` (VB-CABLE), then set Discord/OBS **Input Device** to `Line 1` or `CABLE Output` and **Output Device** to your headphones. See [Set up a live microphone](realtime.md).
-
-[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

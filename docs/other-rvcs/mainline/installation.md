@@ -109,5 +109,3 @@ Run `python webui.py` from the same directory. The feature encoder should be a f
 | Missing HuBERT, RMVPE or FFmpeg | Check the asset folders and executable paths above. Retry with a simple local WAV after correcting the missing file. |
 
 When the interface opens, continue with [your first file conversion](inference.md).
-
-[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

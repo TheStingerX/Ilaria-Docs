@@ -41,5 +41,3 @@ Vous pouvez installer un package Desktop officiel sans Node.js ou pnpm. Ces outi
 | La conversion de fichiers démarre mais manque de mémoire | Fermez les tâches concurrentes et testez quelques secondes d’audio sans effets. Essayez un appareil pris en charge par votre build. |
 
 Avant d'installer une nouvelle version ou de déplacer des dossiers, enregistrez votre audio de travail et sauvegardez les modèles personnalisés, les index, les ensembles de données et les expériences de formation complètes. Après la mise à jour, utilisez le même court enregistrement et la même voix pour confirmer que le nouveau moteur produit un résultat utilisable.
-
-[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)

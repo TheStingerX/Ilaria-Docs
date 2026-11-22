@@ -56,5 +56,3 @@ For Windows v2, the project lists both Torch and ONNX support. A given file can 
 | The model panel opens but the microphone list is empty | Check the OS input meter and browser site permission. For client mode, reload after granting permission. For server mode, refresh the server's own device list. |
 
 Continue to [Live audio, routing and troubleshooting](live-audio.md).
-
-[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

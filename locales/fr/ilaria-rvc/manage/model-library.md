@@ -35,5 +35,3 @@ description: "Importez, inspectez et gérez les fichiers RVC .pth, .index, .safe
 ## Fusionner des voix compatibles
 
 Choisissez deux `.pth` d'**inférence** compatibles dans [Voice Blender](voice-blender.md) et testez avec `Index Ratio = 0`.
-
-[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)

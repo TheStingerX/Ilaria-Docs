@@ -20,5 +20,3 @@ Halten Sie vor dem Training einen kurzen Testclip hin. Aktivieren Sie **Training
 ## Fortsetzen und exportieren
 
 Verwenden Sie **Stopp und Speichern**, warten Sie auf die Bestätigung und behalten Sie dann den Experimentordner und die passenden G/D-Kontrollpunkte bei. Exportieren Sie zur Schlussfolgerung den kompakten Sprachkontrollpunkt und behalten Sie seinen passenden Index bei. Informationen zur Abstimmung und Wiederherstellung finden Sie unter [Trainieren eines RVC-Sprachmodells](../../model-training/training.md)].
-
-[VRAM- und Trainingsrechner](../../reference/vram-estimator.md)

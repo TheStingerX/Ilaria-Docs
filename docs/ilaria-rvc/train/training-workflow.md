@@ -20,5 +20,3 @@ Hold out a short test clip before training. Enable **Training previews** if your
 ## Resume and export
 
 Use **Stop and save**, wait for confirmation, then keep the experiment folder and the matching G/D checkpoints together. For inference, export the compact voice checkpoint and keep its matching index. See [Train an RVC voice model](../../model-training/training.md) for tuning and recovery.
-
-[VRAM & Training Estimator](../../reference/vram-estimator.md)

@@ -47,5 +47,3 @@ Como el generador RVC se entrena para esperar características de **un embedder 
 - **Déjalo en `Auto` o `contentvec`** para casi cualquier modelo y entrenamiento.
 - **Cámbialo solo** si descargaste una voz cuyo autor indica explícitamente otro embedder (por ejemplo `spin-v2` o `japanese-hubert-base`), y úsalo únicamente al convertir con ese modelo concreto.
 - **No cambies de embedder a mitad de entrenamiento**: cambiarlo exige re-extraer características (`3_feature768`) en un experimento aparte.
-
-[Matriz interactiva de compatibilidad con RVC](../reference/compatibility-matrix.md)

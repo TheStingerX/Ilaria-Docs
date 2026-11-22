@@ -38,5 +38,3 @@ Ne vous fiez pas aux suppositions : mesurez votre matériel avec des **tests A/B
 | Throttling observé | `Oui / Non` | `Oui / Non` |
 
 5. **Ne conservez que les gains prouvés :** Sans amélioration mesurable, revenez au Test A.
-
-[Estimateur de VRAM et d’entraînement](vram-estimator.md)

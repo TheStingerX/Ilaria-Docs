@@ -101,5 +101,3 @@ Le recenti build di Ilaria RVC ti consentono di trascinare l'audio o uno ZIP del
  | Una sessione è molto più silenziosa | Controlla se la performance dell'oratore è intenzionalmente silenziosa. Regola le differenze di guadagno della registrazione mantenendo la dinamica naturale utile. |
 
 Prima di continuare, riproduci alcuni clip di ogni sessione, conferma di aver selezionato la cartella preparata e registra la versione della cartella nelle tue note. Quindi [esegui un esperimento di formazione](training.md).
-
-[Stimatore VRAM e training](../reference/vram-estimator.md)

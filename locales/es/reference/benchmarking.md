@@ -38,5 +38,3 @@ No confíes en suposiciones al ajustar entrenamiento o voz en directo. Mide tu p
 | Throttling observado | `Sí / No` | `Sí / No` |
 
 5. **Conserva solo mejoras demostradas:** Si el Test B no mejora o empeora calor/estabilidad, vuelve al Test A.
-
-[Estimador de VRAM y entrenamiento](vram-estimator.md)

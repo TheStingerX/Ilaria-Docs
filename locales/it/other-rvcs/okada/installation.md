@@ -56,5 +56,3 @@ Per Windows v2, il progetto elenca sia il supporto Torch che ONNX. Un determinat
 | Si apre il pannello del modello ma l'elenco dei microfoni è vuoto | Controlla il indicatore del livello in ingresso del sistema operativo e l'autorizzazione del sito del browser. In modalità Client, ricarica dopo aver concesso l'autorizzazione. In modalità Server, aggiorna l'elenco dei dispositivi del server. |
 
 Continua con [Audio live, routing e risoluzione dei problemi](live-audio.md).
-
-[Matrice interattiva di compatibilità RVC](../../reference/compatibility-matrix.md)

@@ -56,5 +56,3 @@ Para Windows v2, el proyecto incluye compatibilidad con Torch y ONNX. Un archivo
 | Se abre el panel del modelo pero la lista de micrófonos está vacía. | Verifique el medidor de entrada del sistema operativo y el permiso del sitio del navegador. Para el modo cliente, vuelva a cargar después de otorgar permiso. Para el modo de servidor, actualice la lista de dispositivos del servidor. |
 
 Continúe con [Audio en vivo, enrutamiento y solución de problemas](live-audio.md).
-
-[Matriz interactiva de compatibilidad con RVC](../../reference/compatibility-matrix.md)

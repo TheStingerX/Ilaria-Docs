@@ -30,5 +30,3 @@ Si su compilación expone la conversión fuera de línea, comience con un WAV se
 - **Falta el modelo**: vuelva a verificar la carpeta esperada por su compilación, el motor actual y si el archivo es una exportación de inferencia.
 - **Error CUDA**: confirme el dispositivo RVC elegido y pruebe con otros trabajos de GPU cerrados. Registre el primer error en lugar de interpretar el mensaje de apagado final.
 - **Compatibilidad poco clara**: tenga en cuenta la versión de pago o del paquete, la GPU y la familia de modelos prevista. Pruebe una línea de base antes de probar funciones o codificadores de voz personalizados.
-
-[Matriz interactiva de compatibilidad con RVC](../../reference/compatibility-matrix.md)

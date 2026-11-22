@@ -131,5 +131,3 @@ These three presets are **indicative starting points**, not universal rules. Alw
 2. **Overfitting (too late):** The voice sounds robotic/metallic on unfamiliar words, reproduces dataset room noise or breath artifacts, or sounds great *only* on phrases similar to the training set. *Fix:* Roll back to an earlier checkpoint (`50–100` epochs earlier) and inspect the dataset in [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
 
 > If you are training with **Redpanda-vc** (which adds Generator EMA and step-based checkpoint saving), see [Train RVC Models in Redpanda-vc](../other-rvcs/redpanda/training.md).
-
-[VRAM & Training Estimator](../reference/vram-estimator.md)

@@ -20,5 +20,3 @@ Mostra una breve clip di prova prima dell'allenamento. Abilita le **Anteprime de
 ## Riprendi ed esporta
 
 Utilizza **Interrompi e salva**, attendi la conferma, quindi conserva insieme la cartella dell'esperimento e i checkpoint G/D corrispondenti. Per deduzione, esporta il checkpoint vocale compatto e mantieni l'indice corrispondente. Vedi [Addestra un modello vocale RVC](../../model-training/training.md) per la messa a punto e il recupero.
-
-[Stimatore VRAM e training](../../reference/vram-estimator.md)

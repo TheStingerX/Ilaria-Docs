@@ -20,5 +20,3 @@ Muestra un breve clip de prueba antes del entrenamiento. Habilite **Vistas previ
 ## Reanudar y exportar
 
 Utilice **Detener y guardar**, espere la confirmación y luego mantenga juntos la carpeta del experimento y los puntos de control G/D coincidentes. A modo de inferencia, exporte el punto de control de voz compacto y mantenga su índice coincidente. Consulte [Entrenar un modelo de voz RVC](../../model-training/training.md) para sintonización y recuperación.
-
-[Estimador de VRAM y entrenamiento](../../reference/vram-estimator.md)

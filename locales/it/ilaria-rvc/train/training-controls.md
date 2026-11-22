@@ -58,5 +58,3 @@ Un'epoca copre un'iterazione sul set di dati preparato. La modalità passo mira 
 ## Conservare un registro riproducibile
 
 Registra la revisione del set di dati, la frequenza di campionamento, il codificatore, l'estrattore, il vocoder, i pretraining, la precisione, la dimensione del batch e salva la cadenza. Se riutilizzi lo stesso nome con una tariffa incompatibile, l'interfaccia utente può segnalare la mancata corrispondenza. Avvia un esperimento separato per una nuova configurazione e mantieni il vecchio esperimento disponibile per il confronto.
-
-[Stimatore VRAM e training](../../reference/vram-estimator.md)

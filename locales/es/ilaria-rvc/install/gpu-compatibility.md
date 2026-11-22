@@ -202,5 +202,3 @@ o kernel image is available**: runtime CUDA incorrecto para tu arquitectura.
 | Tesla V100 | 12.6 |
 
 [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda/gpus) · [NVIDIA legacy CUDA GPUs](https://developer.nvidia.com/cuda/gpus/legacy)
-
-[Estimador de VRAM y entrenamiento](../../reference/vram-estimator.md)

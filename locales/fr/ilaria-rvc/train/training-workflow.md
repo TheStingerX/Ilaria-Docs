@@ -20,5 +20,3 @@ Présentez un court clip de test avant l'entraînement. Activez les **Aperçus d
 ## Reprendre et exporter
 
 Utilisez **Arrêter et enregistrer**, attendez la confirmation, puis conservez le dossier d'expérience et les points de contrôle G/D correspondants ensemble. À des fins d'inférence, exportez le point de contrôle vocal compact et conservez son index correspondant. Voir [Former un modèle vocal RVC](../../model-training/training.md) pour le réglage et la récupération.
-
-[Estimateur de VRAM et d’entraînement](../../reference/vram-estimator.md)

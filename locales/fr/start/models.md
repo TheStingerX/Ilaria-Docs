@@ -73,5 +73,3 @@ Notez la version fonctionnelle de l'application, la version du modèle, la haute
 - [Inférence](../ilaria-rvc/convert/inference.md)
 - [Préparation du dataset](../model-training/dataset-preparation.md)
 - [Dépannage](../reference/troubleshooting.md)
-
-[Matrice interactive de compatibilité RVC](../reference/compatibility-matrix.md)

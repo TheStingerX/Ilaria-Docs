@@ -47,5 +47,3 @@ Poiché il generatore RVC è addestrato per ricevere feature da **un embedder sp
 - **Lascialo su `Auto` o `contentvec`** per quasi tutti i modelli e gli addestramenti.
 - **Cambialo solo** se hai scaricato un modello il cui autore indica esplicitamente un embedder diverso (ad esempio `spin-v2` o `japanese-hubert-base`), e usalo solo per convertire con quel modello specifico.
 - **Non cambiare embedder a metà addestramento**: cambiare encoder richiede di ri-estrarre le feature (`3_feature768`) in un nuovo esperimento.
-
-[Matrice interattiva di compatibilità RVC](../reference/compatibility-matrix.md)

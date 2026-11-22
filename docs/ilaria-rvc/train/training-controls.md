@@ -58,5 +58,3 @@ An epoch covers an iteration over the prepared dataset. Step mode targets a tota
 ## Keep a reproducible record
 
 Record the dataset revision, sample rate, encoder, extractor, vocoder, pretrains, precision, batch size and save cadence. If you reuse the same name with an incompatible rate, the UI can report the mismatch. Start a separate experiment for a new configuration and keep the old experiment available for comparison.
-
-[VRAM & Training Estimator](../../reference/vram-estimator.md)

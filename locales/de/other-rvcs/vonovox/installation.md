@@ -62,5 +62,3 @@ Wenn das Modell nicht geladen werden kann, überprüfen Sie RVC V2 und den Embed
 | Kein Mikrofonsignal | Testen Sie das physische Mikrofon in Windows und wählen Sie dann dasselbe Gerät in Vonovox erneut aus. |
 | Guter lokaler Klang, aber Stille während eines Anrufs | Gehen Sie die Kabelendpunkte und die Auswahl des Zielmikrofons im Routing-Leitfaden durch. |
 | Audiounterbrechungen nur während eines Spiels | Testen Sie bei geöffnetem Spiel und erhöhen Sie die Blockgröße bei Bedarf um eine Stufe. |
-
-[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

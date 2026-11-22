@@ -38,5 +38,3 @@ Não confies em palpites ao afinar o treino ou a voz ao vivo. Mede o teu hardwar
 | Throttling observado | `Sim / Não` | `Sim / Não` |
 
 5. **Mantém apenas ganhos comprovados:** Sem melhoria clara, regressa ao Teste A.
-
-[Estimador de VRAM e treino](vram-estimator.md)

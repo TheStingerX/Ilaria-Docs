@@ -36,5 +36,3 @@ description: "Import, inspect, and manage RVC .pth, .index, .safetensors, embedd
 ## Merge compatible voices
 
 Choose two compatible **inference** `.pth` checkpoints in [Voice Blender](voice-blender.md) and run the compatibility check first (same RVC version, sample rate, pitch guidance, and embedder). Adjust the blending ratio, save under a fresh name, and test the result with retrieval disabled (`Index Ratio = 0`) because an old `.index` belongs only to the original unblended model.
-
-[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

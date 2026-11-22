@@ -109,5 +109,3 @@ Exécutez `python webui.py` à partir du même répertoire. L'encodeur de foncti
 | HuBERT, RMVPE ou FFmpeg manquants | Vérifiez les dossiers d'actifs et les chemins d'exécutables ci-dessus. Réessayez avec un simple WAV local après avoir corrigé le fichier manquant. |
 
 Lorsque l'interface s'ouvre, continuez avec [votre première conversion de fichier](inference.md).
-
-[Matrice interactive de compatibilité RVC](../../reference/compatibility-matrix.md)
