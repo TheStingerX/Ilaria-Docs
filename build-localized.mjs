@@ -159,7 +159,15 @@ try {
       .replace(/^url:.*$/m, `url: ${origin}${localizedPath(lang, '/')}`)
       .replace('text: Website', `text: ${JSON.stringify(names[3])}`)
       .replace('https://ilariarvc.shop/en/', `https://ilariarvc.shop/${lang}/`));
-    execFileSync(retype, ['build', config], { stdio: 'inherit' });
+    for (let attempt = 1; ; attempt++) {
+      try {
+        execFileSync(retype, ['build', config], { stdio: 'inherit' });
+        break;
+      } catch (err) {
+        if (attempt >= 3) throw err;
+        rmSync(join(staging, lang), { recursive: true, force: true });
+      }
+    }
   }
   for (const lang of Object.keys(languages)) decorate(join(staging, lang), lang);
   mkdirSync(output, { recursive: true });
