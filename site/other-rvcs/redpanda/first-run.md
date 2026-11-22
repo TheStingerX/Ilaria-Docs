@@ -15,7 +15,7 @@ Redpanda-vc extends Applio and offers multiple voice model families. This walkth
 
 In the relevant conversion view, select the **RVC** workflow, pick a compatible inference checkpoint and pair it with the matching index only when you have it. The app also exposes Beatrice and Rectified Flow in supported views. Each uses its own model format. A model that belongs to another family needs its own engine.
 
-If your build exposes offline conversion, start with one dry, short spoken WAV and zero transposition. Save a fresh output and check the same words in both files. If you mainly need microphone conversion, move directly to the [realtime test](live-audio.md) with a known compatible model.
+If your build exposes offline conversion, start with one dry, short spoken WAV and zero transposition. Save a fresh output and check the same words in both files. If you mainly need microphone conversion, move directly to the [realtime test](live-audio.md) with a known compatible model (remember: inside Redpanda-vc set **Input** = physical microphone and **Output** = `Line 1` / `CABLE Input`; inside Discord/OBS set **Input** = `Line 1` / `CABLE Output` and **Output** = headphones).
 
 ## 3. Diagnose startup before changing audio settings
 

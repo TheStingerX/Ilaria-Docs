@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625428645">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626306848">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625428645" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626306848" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625428645" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625428645" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -176,7 +176,25 @@
 <h1 id="test-live-audio-in-redpanda-vc">Test live audio in Redpanda-vc</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">The Windows desktop realtime launcher uses the devices exposed to that local process.</div>
 <blockquote>
-<p>Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with <strong>VAC Lite</strong> for Vonovox, or use <strong>VB-CABLE</strong> as an alternative. Read the full routing guide before testing in a call. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Inside the Voice Changer (Redpanda-vc)</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Your physical microphone.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. Inside Discord, Games, OBS, or Other Applications</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device:</strong> Your headphones or speakers.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>Audio coming from Discord, your game, or other apps must play directly to your <strong>headphones</strong> (never back into the virtual cable).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> is the name used by <strong>VAC (Virtual Audio Cable)</strong>, not a universal name for every virtual cable. With <strong>VB-CABLE</strong>, set Voice Changer Output to <strong><code translate="no" v-pre>CABLE Input</code></strong> and Discord / Game Input to <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring:</strong> Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a>.</li>
+</ul>
 </blockquote>
 <h2 id="choose-desktop-or-browser">Choose desktop or browser</h2>
 <p>The Windows desktop realtime launcher uses the devices exposed to that local process. The WebUI realtime tab captures microphone input through the browser and passes audio to the selected inference device. Use one path for your first test and leave the other closed to make feedback and competing jobs easier to diagnose.</p>
@@ -260,7 +278,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

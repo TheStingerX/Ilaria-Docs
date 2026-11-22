@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625440042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626315452">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625440042" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626315452" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625440042" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626315452" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625440042" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626315452" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -176,6 +176,27 @@
                 <!-- Page content  -->
 <span id="using-causalvc-realtime" class="docs-anchor"></span><h1 id="usare-causalvc-realtime">Usare CausalVC Realtime</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Dopo aver eseguito almeno una volta run-training e aver preparato una voce .cvc, avvia il cambia-voce live con:</div>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Nel Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Il tuo microfono fisico.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. In Discord, Giochi, OBS o altre applicazioni</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device:</strong> Le tue cuffie o altoparlanti.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>L&#x27;audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle <strong>cuffie</strong> (mai di nuovo nel cavo virtuale).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> è il nome usato da <strong>VAC (Virtual Audio Cable)</strong>, non un nome universale per tutti i cavi virtuali. Con <strong>VB-CABLE</strong>, imposta Output del Voice Changer su <strong><code translate="no" v-pre>CABLE Input</code></strong> e Input di Discord / gioco su <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoraggio:</strong> Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.</li>
+</ul>
+</blockquote>
 <p>Dopo aver eseguito almeno una volta <code translate="no" v-pre>run-training</code> e aver preparato una voce <code translate="no" v-pre>.cvc</code>, avvia il cambia-voce live con:</p>
 <ul>
 <li><strong>Windows</strong>: <code translate="no" v-pre>run-realtime.bat</code></li>
@@ -274,7 +295,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

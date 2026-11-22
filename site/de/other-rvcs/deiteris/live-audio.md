@@ -1,5 +1,24 @@
 # Deiteris w-okada Fork routen und abstimmen
 
+> **Correct Audio Routing**
+>
+> **1. Im Voice Changer**
+> - **Input Device:** Dein physisches Mikrofon.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` ist der Name von **VAC (Virtual Audio Cable)**, kein universeller Name für alle virtuellen Kabel. Bei **VB-CABLE** wähle als Voice-Changer-Output **`CABLE Input`** und als Discord-/Spiel-Input **`CABLE Output`**.
+> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
+
 Trage bei der Live-Konvertierung immer **Kopfhörer**. Über Lautsprecher gelangt die konvertierte Stimme zurück ins Mikrofon und erzeugt Echo und Rückkopplung.
 
 ## 1. Audiogeräte einrichten

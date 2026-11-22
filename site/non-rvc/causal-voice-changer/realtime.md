@@ -4,6 +4,25 @@ Once you have run `run-training` at least once and have a `.cvc` voice ready, la
 - **Windows**: `run-realtime.bat`
 - **Linux**: `run-realtime.sh` *(you can also add it to your app launcher with `realtime/scripts/install-desktop-entry.sh`)*
 
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer (CausalVC)**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones (via **Monitor device**) is a separate optional feature to enable only when needed; leave it **Disabled** if you do not want to hear yourself and avoid duplicate audio paths, echo, and loopback.
+
 > **Always wear headphones** when using a live voice changer. Using speakers lets the converted voice loop back into your microphone, causing echo and feedback.
 
 ## 1. Set up Audio (`Audio` page)

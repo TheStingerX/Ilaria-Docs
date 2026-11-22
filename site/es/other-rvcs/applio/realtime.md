@@ -1,6 +1,23 @@
 # Use Applio con un micrófono
 
-> Conecta el micrófono físico al conversor, envía la salida al extremo de reproducción del cable y selecciona el extremo de grabación en Discord u OBS. Para Vonovox recomendamos **VAC Lite**, con **VB-CABLE** como alternativa. Lee la guía completa antes de probar en una llamada. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+> **Correct Audio Routing**
+>
+> **1. Dentro del Voice Changer**
+> - **Input Device:** Tu micrófono físico.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Dentro de Discord, Juegos, OBS u otras aplicaciones**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Tus auriculares o altavoces.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> El audio que llega desde Discord, el juego u otras apps debe reproducirse directamente en tus **auriculares** (nunca de vuelta al cable virtual).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` es el nombre usado por **VAC (Virtual Audio Cable)**, no un nombre universal para todos los cables virtuales. Con **VB-CABLE**, configura la salida del Voice Changer en **`CABLE Input`** y la entrada de Discord / juego en **`CABLE Output`**.
+> - **Monitoreo:** Escuchar tu propia voz convertida en los auriculares es una función opcional aparte que solo debe activarse cuando haga falta. Evita rutas de audio duplicadas, eco y loopback.
 
 Demuestre que su modelo funciona con [un clip grabado](inference.md) antes de configurar el audio en vivo. Utilice auriculares para monitorear para que el micrófono no pueda volver a capturar a los parlantes. Detenga los trabajos de entrenamiento o conversión de archivos que utilizan la misma GPU.
 

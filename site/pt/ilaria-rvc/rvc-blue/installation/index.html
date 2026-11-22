@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625487026">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626348982">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625487026" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626348982" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625487026" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625487026" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -255,6 +255,27 @@
 <li>Clica em <strong>Start</strong>, diz uma frase curta e faz uma pausa para verificar latência, clareza e ruído.</li>
 </ol>
 <span id="4-route-audio-to-discord-obs-or-a-game" class="docs-anchor"></span><h2 id="4-encaminhar-áudio-para-discord-obs-ou-jogo">4. Encaminhar áudio para Discord, OBS ou jogo</h2>
+<blockquote>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dentro do Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Seu microfone físico.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> é o nome usado pelo <strong>VAC (Virtual Audio Cable)</strong>, não um nome universal para todos os cabos virtuais. Com <strong>VB-CABLE</strong>, defina a saída do Voice Changer como <strong><code translate="no" v-pre>CABLE Input</code></strong> e a entrada do Discord / jogo como <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
+</ul>
+</blockquote>
 <p>Para usar a voz convertida noutra aplicação, liga o RVC Blue através de um cabo de áudio virtual (<strong>VAC Lite</strong> ou <strong>VB-CABLE</strong>):</p>
 <ol>
 <li>Define <strong>Output</strong> no RVC Blue para o dispositivo de reprodução do cabo virtual (por exemplo <code translate="no" v-pre>CABLE Input</code> ou <code translate="no" v-pre>Line 1</code>).</li>
@@ -351,7 +372,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T20:04:05.000Z">21/11/2026 · 21:04</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

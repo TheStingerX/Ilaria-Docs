@@ -1,5 +1,24 @@
 # Route and tune Vonovox
 
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer (Vonovox)**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
+
 ## Set up the route
 
 Use three endpoints: your physical microphone for input, a virtual cable for the converted signal, and headphones for monitoring. A virtual cable has a playback side for the app that sends audio and a recording side for the app that receives it. Some drivers show the same line name on both sides.

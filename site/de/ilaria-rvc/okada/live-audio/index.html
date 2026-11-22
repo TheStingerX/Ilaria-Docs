@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625475563">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626340704">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625475563" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626340704" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625475563" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626340704" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625475563" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626340704" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -177,7 +177,25 @@
 <span id="convert-your-microphone-in-w-okada-vcclient" class="docs-anchor"></span><h1 id="konvertieren-sie-ihr-mikrofon-in-w-okada-vcclient">Konvertieren Sie Ihr Mikrofon in w-okada VCClient</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Beginnen Sie mit Kopfhörern und einem einzigen lokalen Audiopfad.</div>
 <blockquote>
-<p>Wähle das physische Mikrofon im Voice Changer, leite dessen Ausgabe an das Wiedergabegerät des virtuellen Kabels und wähle das zugehörige Aufnahmegerät in Discord oder OBS. Für Vonovox ist <strong>VAC Lite</strong> die erste Wahl, <strong>VB-CABLE</strong> eine Alternative. Lies vor dem Anruf die vollständige Anleitung. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Im Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Dein physisches Mikrofon.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. In Discord, Spielen, OBS oder anderen Anwendungen</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device:</strong> Deine Kopfhörer oder Lautsprecher.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine <strong>Kopfhörer</strong> gehen (niemals zurück in das virtuelle Kabel).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> ist der Name von <strong>VAC (Virtual Audio Cable)</strong>, kein universeller Name für alle virtuellen Kabel. Bei <strong>VB-CABLE</strong> wähle als Voice-Changer-Output <strong><code translate="no" v-pre>CABLE Input</code></strong> und als Discord-/Spiel-Input <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring:</strong> Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.</li>
+</ul>
 </blockquote>
 <p>Beginnen Sie mit Kopfhörern und einem einzigen lokalen Audiopfad. Wenn Sie im Kopfhörer eine sauber umgewandelte Stimme hören, schließen Sie ihn an einen Anruf oder einen Rekorder an. Mit dieser Reihenfolge können Sie Probleme lokalisieren, bevor Sie das virtuelle Kabel hinzufügen.</p>
 <span id="add-a-model-and-hear-the-first-result" class="docs-anchor"></span><h2 id="fügen-sie-ein-modell-hinzu-und-hören-sie-das-erste-ergebnis">Fügen Sie ein Modell hinzu und hören Sie das erste Ergebnis.</h2>
@@ -288,7 +306,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

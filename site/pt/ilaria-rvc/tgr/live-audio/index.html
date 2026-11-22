@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625487026">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626348982">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625487026" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626348982" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625487026" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625487026" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626348982" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
@@ -177,7 +177,25 @@
 <span id="set-up-live-audio-in-okada-tg-developed-fork" class="docs-anchor"></span><h1 id="configure-o-áudio-ao-vivo-no-okada-tg-developed-fork">Configure o áudio ao vivo no Okada TG Developed Fork</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido.</div>
 <blockquote>
-<p>Usa o microfone físico no conversor, envia a saída para o dispositivo de reprodução do cabo e escolhe a entrada de gravação correspondente no Discord ou OBS. Para Vonovox, começa com <strong>VAC Lite</strong> ou usa <strong>VB-CABLE</strong>. Lê o guia completo antes de testar numa chamada. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dentro do Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device:</strong> Seu microfone físico.</li>
+<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. No Discord, Jogos, OBS ou outros aplicativos</strong></p>
+<ul>
+<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device:</strong> Seus fones de ouvido ou alto-falantes.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os <strong>fones de ouvido</strong> (nunca de volta para o cabo virtual).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE:</strong> <code translate="no" v-pre>Line 1</code> é o nome usado pelo <strong>VAC (Virtual Audio Cable)</strong>, não um nome universal para todos os cabos virtuais. Com <strong>VB-CABLE</strong>, defina a saída do Voice Changer como <strong><code translate="no" v-pre>CABLE Input</code></strong> e a entrada do Discord / jogo como <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoramento:</strong> Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.</li>
+</ul>
 </blockquote>
 <p>Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido. Em seguida, envie esse sinal para outro aplicativo e faça uma gravação do lado receptor.</p>
 <span id="load-an-rvc-voice" class="docs-anchor"></span><h2 id="carregar-uma-voz-rvc">Carregar uma voz RVC</h2>
@@ -327,7 +345,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

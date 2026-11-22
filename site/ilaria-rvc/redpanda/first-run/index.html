@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625428645">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626306848">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625428645" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626306848" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625428645" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625428645" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626306848" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -186,7 +186,7 @@
 </ol>
 <h2 id="2-choose-the-engine-and-model">2. Choose the engine and model</h2>
 <p>In the relevant conversion view, select the <strong>RVC</strong> workflow, pick a compatible inference checkpoint and pair it with the matching index only when you have it. The app also exposes Beatrice and Rectified Flow in supported views. Each uses its own model format. A model that belongs to another family needs its own engine.</p>
-<p>If your build exposes offline conversion, start with one dry, short spoken WAV and zero transposition. Save a fresh output and check the same words in both files. If you mainly need microphone conversion, move directly to the <a href="../live-audio/">realtime test</a> with a known compatible model.</p>
+<p>If your build exposes offline conversion, start with one dry, short spoken WAV and zero transposition. Save a fresh output and check the same words in both files. If you mainly need microphone conversion, move directly to the <a href="../live-audio/">realtime test</a> with a known compatible model (remember: inside Redpanda-vc set <strong>Input</strong> = physical microphone and <strong>Output</strong> = <code translate="no" v-pre>Line 1</code> / <code translate="no" v-pre>CABLE Input</code>; inside Discord/OBS set <strong>Input</strong> = <code translate="no" v-pre>Line 1</code> / <code translate="no" v-pre>CABLE Output</code> and <strong>Output</strong> = headphones).</p>
 <h2 id="3-diagnose-startup-before-changing-audio-settings">3. Diagnose startup before changing audio settings</h2>
 <ul>
 <li><strong>Import error</strong>: confirm the interpreter running the launcher is the one in your project environment and has the build&#x27;s dependencies.</li>
@@ -229,7 +229,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:16:03.000Z">22/11/2026 · 02:16</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

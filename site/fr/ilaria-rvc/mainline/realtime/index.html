@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848625464013">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848626332506">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848625464013" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848626332506" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848625464013" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848626332506" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848625464013" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848626332506" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -177,7 +177,25 @@
 <span id="use-the-rvc-webui-mainline---original-rvc-real-time-voice-changer" class="docs-anchor"></span><h1 id="utilisez-le-changeur-de-voix-en-temps-réel-rvc-webui-mainline---original-rvc">Utilisez le changeur de voix en temps réel RVC WebUI (Mainline - Original RVC)</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ce guide s'applique à l'interface graphique en temps réel distincte incluse dans les versions RVC WebUI (Mainline - Original RVC) prises en charge.</div>
 <blockquote>
-<p>Utilisez le micro physique en entrée du convertisseur, envoyez sa sortie vers le périphérique de lecture du câble et choisissez son entrée d’enregistrement dans Discord ou OBS. Pour Vonovox, commencez avec <strong>VAC Lite</strong> ou utilisez <strong>VB-CABLE</strong>. Lisez le guide complet avant un appel. <a href="../../vonovox/live-audio/">VAC Lite / VB-CABLE</a></p>
+<p><strong>Correct Audio Routing</strong></p>
+<p><strong>1. Dans le Voice Changer</strong></p>
+<ul>
+<li><strong>Input Device :</strong> Votre microphone physique.</li>
+<li><strong>Output Device :</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+</ul>
+<p><strong>2. Dans Discord, les jeux, OBS ou d&#x27;autres applications</strong></p>
+<ul>
+<li><strong>Input Device :</strong> <code translate="no" v-pre>Line 1</code> (Virtual Audio Cable / VAC).</li>
+<li><strong>Output Device :</strong> Vos écouteurs ou haut-parleurs.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS</code></pre>
+</doc-codeblock></div>
+<p>L&#x27;audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre <strong>casque</strong> (jamais renvoyé dans le câble virtuel).</p>
+<ul>
+<li><strong>VAC vs. VB-CABLE :</strong> <code translate="no" v-pre>Line 1</code> est le nom utilisé par <strong>VAC (Virtual Audio Cable)</strong>, pas un nom universel pour tous les câbles virtuels. Avec <strong>VB-CABLE</strong>, réglez la sortie du Voice Changer sur <strong><code translate="no" v-pre>CABLE Input</code></strong> et l&#x27;entrée de Discord / jeu sur <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
+<li><strong>Monitoring :</strong> Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n&#x27;activer qu&#x27;en cas de besoin. Évitez les chemins audio dupliqués, l&#x27;écho et le loopback.</li>
+</ul>
 </blockquote>
 <p>Ce guide s&#x27;applique à l&#x27;interface graphique en temps réel distincte incluse dans les versions RVC WebUI (Mainline - Original RVC) prises en charge. Il peut faire passer un microphone à travers un modèle en continu pendant que l&#x27;interface Web est utilisée pour les enregistrements et la formation. Commencez par écouter directement avec des écouteurs, puis envoyez l&#x27;audio traité à votre autre application.</p>
 <span id="open-the-interface-and-select-your-files" class="docs-anchor"></span><h2 id="ouvrez-linterface-et-sélectionnez-vos-fichiers">Ouvrez l&#x27;interface et sélectionnez vos fichiers</h2>
@@ -291,7 +309,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-22T01:30:40.000Z">22/11/2026 · 02:30</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

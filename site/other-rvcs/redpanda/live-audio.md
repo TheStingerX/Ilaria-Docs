@@ -1,6 +1,23 @@
 # Test live audio in Redpanda-vc
 
-> Connect your physical mic to the voice changer, send its output to the cable’s playback endpoint, and select the matching recording endpoint in Discord or OBS. Start with **VAC Lite** for Vonovox, or use **VB-CABLE** as an alternative. Read the full routing guide before testing in a call. [VAC Lite / VB-CABLE](../vonovox/live-audio.md)
+> **Correct Audio Routing**
+>
+> **1. Inside the Voice Changer (Redpanda-vc)**
+> - **Input Device:** Your physical microphone.
+> - **Output Device:** `Line 1` (Virtual Audio Cable / VAC).
+>
+> **2. Inside Discord, Games, OBS, or Other Applications**
+> - **Input Device:** `Line 1` (Virtual Audio Cable / VAC).
+> - **Output Device:** Your headphones or speakers.
+>
+> ```text
+> Your Microphone → Voice Changer → Virtual Audio Cable (Line 1) → Discord / Game / OBS
+> ```
+>
+> Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
+>
+> - **VAC vs. VB-CABLE:** `Line 1` is the name used by **VAC (Virtual Audio Cable)**, not a universal name for every virtual cable. With **VB-CABLE**, set Voice Changer Output to **`CABLE Input`** and Discord / Game Input to **`CABLE Output`**.
+> - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback. See also [VAC Lite / VB-CABLE](../vonovox/live-audio.md).
 
 ## Choose desktop or browser
 
