@@ -1,6 +1,6 @@
 ---
 label: "Ajustes y Calidad de Audio"
-icon: ":sliders:"
+icon: ":gear:"
 order: 96
 permalink: /es/non-rvc/yunevoix/settings/
 description: "Guía completa para principiantes de cada ajuste de YuneVoix v0.7.1 en General, Voice & Timbre, Pitch & Autotune, EQ & Filters y Effects."
