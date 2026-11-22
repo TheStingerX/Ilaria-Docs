@@ -41,7 +41,7 @@ Evitare l'ascolto attraverso gli altoparlanti vicino a un microfono attivo. Le c
 >
 > **2. In Discord, Giochi, OBS o altre applicazioni**
 > - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
-> - **Output Device:** Le tue cuffie o altoparlanti.
+> - **Output Device:** Le tue cuffie (fortemente consigliate rispetto agli altoparlanti).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -50,6 +50,7 @@ Evitare l'ascolto attraverso gli altoparlanti vicino a un microfono attivo. Le c
 > L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Altoparlanti e rientro dalle cuffie:** Evita gli altoparlanti: il suono può rientrare nel microfono generando audio doppio, eco o facendo convertire anche le voci degli altri presenti in chiamata. Può succedere persino con le cuffie se il volume è troppo alto o se i padiglioni non sono abbastanza chiusi e isolati.
 > - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 Un dispositivo audio virtuale fornisce un endpoint di riproduzione per il convertitore e un endpoint di registrazione corrispondente per l'app ricevente. I nomi degli endpoint dipendono dal driver. Ad esempio, un cavo virtuale può chiamare il suo endpoint di riproduzione "Input" e il suo endpoint di registrazione "Output" perché le istruzioni utilizzano la prospettiva del cavo.

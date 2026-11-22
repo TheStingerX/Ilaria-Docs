@@ -41,7 +41,7 @@ Evite ouvir através de alto-falantes próximos a um microfone ativo. Os fones d
 >
 > **2. No Discord, Jogos, OBS ou outros aplicativos**
 > - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
-> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+> - **Output Device:** Seus fones de ouvido (fortemente recomendados em vez de caixas de som).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -50,6 +50,7 @@ Evite ouvir através de alto-falantes próximos a um microfone ativo. Os fones d
 > O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
+> - **Caixas de som e vazamento do fone:** Evite usar caixas de som; o som pode vazar para o microfone e causar áudio duplo, eco ou até converter a voz de outras pessoas. Isso também pode acontecer com headsets se estiverem altos demais ou não forem fechados e isolados o suficiente.
 > - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
 
 Um dispositivo de áudio virtual fornece um ponto final de reprodução para o conversor e um ponto final de gravação correspondente para o aplicativo receptor. Os nomes dos terminais dependem do driver. Por exemplo, um cabo virtual pode chamar seu terminal de reprodução de “Entrada” e seu terminal de gravação de “Saída” porque as instruções usam a perspectiva do cabo.

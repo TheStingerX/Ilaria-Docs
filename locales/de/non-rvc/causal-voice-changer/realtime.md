@@ -32,7 +32,7 @@ Sobald du `run-training` mindestens einmal ausgeführt hast und eine `.cvc`-Stim
 >
 > **2. In Discord, Spielen, OBS oder anderen Anwendungen**
 > - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
-> - **Output Device:** Deine Kopfhörer oder Lautsprecher.
+> - **Output Device:** Deine Kopfhörer (dringend statt Lautsprechern empfohlen).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -41,6 +41,7 @@ Sobald du `run-training` mindestens einmal ausgeführt hast und eine `.cvc`-Stim
 > Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
+> - **Lautsprecher & Übersprechen bei Headsets:** Vermeide Lautsprecher: Der Ton kann ins Mikrofon gelangen und Doppelton, Echo oder sogar die Konvertierung fremder Stimmen verursachen. Das kann auch bei Headsets passieren, wenn sie zu laut oder nicht geschlossen und gut genug isoliert sind.
 > - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
 
 ## 2. Stimme wählen & abstimmen (Seite `Model`)

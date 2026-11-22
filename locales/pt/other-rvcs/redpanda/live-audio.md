@@ -30,7 +30,7 @@ Em compilações WebUI com **Dispositivo de inferência**, **Automático** atrib
 >
 > **2. No Discord, Jogos, OBS ou outros aplicativos**
 > - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
-> - **Output Device:** Seus fones de ouvido ou alto-falantes.
+> - **Output Device:** Seus fones de ouvido (fortemente recomendados em vez de caixas de som).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -39,6 +39,7 @@ Em compilações WebUI com **Dispositivo de inferência**, **Automático** atrib
 > O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
+> - **Caixas de som e vazamento do fone:** Evite usar caixas de som; o som pode vazar para o microfone e causar áudio duplo, eco ou até converter a voz de outras pessoas. Isso também pode acontecer com headsets se estiverem altos demais ou não forem fechados e isolados o suficiente.
 > - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
 
 Se o seu caminho de reprodução puder ter como alvo um cabo virtual, escolha o ponto final de reprodução do cabo nesse local. No aplicativo receptor, selecione o ponto final de gravação complementar como microfone. Mantenha o microfone físico como entrada e saída do conversor da chamada nos fones de ouvido. No modo navegador, o destino da reprodução pode depender das configurações de saída do navegador e do sistema operacional. Verifique o receptor com uma gravação local antes de julgar a transmissão ao vivo de uma chamada.

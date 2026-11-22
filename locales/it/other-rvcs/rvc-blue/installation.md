@@ -77,7 +77,7 @@ RVC Blue permette di scegliere **Input** (ingresso), **Output** (uscita) e **Mon
 >
 > **2. In Discord, Giochi, OBS o altre applicazioni**
 > - **Input Device:** `Line 1` (VAC, consigliato) o `CABLE Output` (VB-CABLE).
-> - **Output Device:** Le tue cuffie o altoparlanti.
+> - **Output Device:** Le tue cuffie (fortemente consigliate rispetto agli altoparlanti).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -86,6 +86,7 @@ RVC Blue permette di scegliere **Input** (ingresso), **Output** (uscita) e **Mon
 > L'audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle **cuffie** (mai di nuovo nel cavo virtuale).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) è sempre consigliato. Se hai anche (o solo) **VB-CABLE**, ricorda che il voice changer invia a **`CABLE Input`** mentre Discord / giochi ricevono da **`CABLE Output`**.
+> - **Altoparlanti e rientro dalle cuffie:** Evita gli altoparlanti: il suono può rientrare nel microfono generando audio doppio, eco o facendo convertire anche le voci degli altri presenti in chiamata. Può succedere persino con le cuffie se il volume è troppo alto o se i padiglioni non sono abbastanza chiusi e isolati.
 > - **Monitoraggio:** Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.
 
 Per usare la voce convertita in un'altra app, collega RVC Blue tramite un cavo audio virtuale (**VAC Lite** o **VB-CABLE**):
