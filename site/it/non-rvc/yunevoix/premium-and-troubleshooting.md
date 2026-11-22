@@ -1,49 +1,53 @@
-# Premium, licenza e risoluzione dei problemi
+# Premium, Licenza e Risoluzione dei Problemi
 
 ## YuneVoix PREMIUM: Song Cover e Karaoke
 
-Chi supporta il progetto su [Ko-fi](https://ko-fi.com/yunevoix) ottiene l'accesso a **YuneVoix PREMIUM**, che sblocca le funzioni musicali offline oltre a tutto ciò che è incluso in BASIC:
+I sostenitori su [Ko-fi](https://ko-fi.com/yunevoix) ottengono l'accesso a **YuneVoix PREMIUM**, che sblocca funzioni musicali offline in aggiunta a tutto ciò che è incluso in BASIC:
 
-- **Song Cover**: scegli un brano e una voce target. YuneVoix separa la voce dalla base, converte la voce principale (e facoltativamente i cori) e remixa tutto insieme.
-  - **Formati supportati**: WAV, MP3, FLAC, M4A, AAC, OGG, WMA, AIFF (fino a **15 minuti**).
-  - **Tempo di elaborazione**: circa **1,3×** la durata del brano (un brano di 5 minuti richiede circa 6–7 minuti).
-  - **Formati di esportazione**: **WAV 24-bit** o **MP3 320 kbps**.
-- **Karaoke**: canta seguendo i testi sullo schermo; la tua esecuzione viene convertita nella voce scelta e mixata con la musica, allineata alla tonalità e al volume dell'originale.
+- **Song Cover:** Scegli qualsiasi brano e voce di destinazione. YuneVoix separa la voce dalla base strumentale, converte la voce principale (e opzionalmente i cori) e mixa di nuovo tutto insieme.
+- **Karaoke:** Canta seguendo il testo sullo schermo; la tua esecuzione viene convertita nella voce scelta e mixata con la musica, adattata alla tonalità e al livello dell'originale.
 
-### Consigli per Song Cover
+Per tutorial completi passo dopo passo e per tutte le impostazioni di Song Cover e Karaoke, consulta **[Song Cover e Karaoke - Guida Completa per Principianti](song-cover-karaoke.md)**.
 
-- **Tonalità errata**: imposta manualmente **Settings → Song Cover → Octave** su **`−12`**, **`0`** o **`+12`** invece di `Auto`.
-- **Duetti e cori**: l'opzione **"Lead vocal only"** dà il risultato più pulito. Con due cantanti principali entrambi ricevono la voce scelta (non è possibile isolarne uno solo).
-- **Copyright**: il brano resta di proprietà dei rispettivi autori - verifica le regole della piattaforma e i diritti prima di pubblicare le cover.
+---
 
-## Licenza PREMIUM e attivazione
+## Licenza PREMIUM e Attivazione
 
-1. Apri la scheda **Song Cover** e clicca **"Copy request code"**.
-2. Invia il codice insieme al tuo acquisto su Ko-fi.
-3. Riceverai un file `license.yvl`. Clicca **"Load license…"** e selezionalo.
+1. Apri la scheda **Song Cover** e clicca su **"Copy request code"**.
+2. Invia il codice di richiesta insieme al tuo acquisto su Ko-fi.
+3. Riceverai un file `license.yvl`. Clicca su **"Load license…"** e selezionalo (viene copiato accanto a `YuneVoix.exe`).
 
 ### Come funziona la licenza
 
 - **Non scade mai** e funziona **100% offline**.
-- **Aggiornamenti**: copia `license.yvl` accanto al nuovo `YuneVoix.exe` (oppure ricaricalo).
-- **Un PC per licenza**: copiare la cartella PREMIUM o la licenza su un altro computer non sblocca Song Cover.
-- **Cambi hardware**: la licenza è legata a **scheda madre**, **disco di sistema** e **installazione di Windows**.
-  - Cambiarne **uno** solo non dà problemi (e cambiare GPU, RAM o monitor non conta affatto).
-  - Cambiarne **due insieme** (es. nuovo disco di sistema con Windows reinstallato) richiede una nuova licenza: copia il nuovo request code e contatta il supporto con il tuo ordine.
+- **Aggiornamenti:** Copia `license.yvl` accanto al nuovo `YuneVoix.exe` (oppure caricalo di nuovo).
+- **Un PC per licenza:** Una cartella PREMIUM o una licenza copiata non sbloccherà Song Cover su un altro computer.
+- **Modifiche hardware:** La licenza è legata a **scheda madre**, **disco di sistema** e **installazione di Windows**.
+  - Cambiare **uno** di questi componenti non crea problemi (e aggiornare GPU, RAM o monitor non conta affatto).
+  - Cambiare **due componenti contemporaneamente** (ad es. un nuovo disco di sistema con una nuova installazione di Windows) richiede una nuova licenza: copia il nuovo codice di richiesta e contatta il supporto con il tuo ordine.
 
-## Risoluzione dei problemi
+---
 
-| Sintomo | Cosa controllare prima |
+## Risoluzione dei Problemi
+
+| Sintomo | Cosa provare per prima cosa |
 | --- | --- |
-| **Voce robotica, bassa o "sott'acqua"** | Alza il volume del microfono su Windows finché i picchi arrivano vicino a **−6 dBFS** (`Settings → General → Microphone level`) e lascia Input cleaning su **`DF3`**. |
-| **Ottava sbagliata / effetto "chipmunk"** | In `Settings → Pitch & Autotune`, imposta **Pitch shift** (`+12` uomo→donna, `0` stesso registro, `−12` donna→uomo) o attiva il pitch automatico. |
-| **Risate, respiri o sussurri spariscono** | Disattiva **Speech gate**, imposta Input cleaning su **`Gentle`** (in stanza silenziosa) e prova il content engine **WavLM+** (supportato su NVIDIA e AMD DirectML). |
-| **AMD: si chiude su START / WavLM+ o FlowEdit non disponibili** | Aggiorna alla **v0.7.1** (risolve i crash su CPU con grafica AMD integrata usando DirectML sulla GPU dedicata). Se hai attivato il motore sperimentale MIGraphX in `Settings → General → "AMD graphics engine"`, torna su **DirectML** e riavvia per riattivare `WavLM+` e `FlowEdit 3+1`. |
-| **Crepitii o brevi interruzioni** | Aumenta **Output buffer** (`Settings → General`), chiudi altre app che usano la GPU, riduci **Model steps** o la lunghezza del prompt e disattiva **Harmony**. |
-| **Scatti mentre giochi** | Abbassa la grafica o il limite FPS del gioco, oppure riduci **Model steps** e lunghezza del prompt in `Settings → Voice & Timbre`. |
-| **Esplora File dice che lo ZIP non è valido** | Usa **7-Zip** o **WinRAR** (l'archivio usa cifratura AES-256) con password `yunevoix`. |
+| **Voce robotica, bassa o "sott'acqua"** | Alza il guadagno del microfono in Windows in modo che i picchi di voce alta siano vicini a **−6 dBFS** (`Settings → General → Microphone level`) e mantieni Input cleaning su **`DF3`**. |
+| **Tastiera o clic diventano toni** | Imposta Input cleaning (`Settings → General`) su **`DF3`**. |
+| **Fruscio o "grana" sulle alte frequenze** | Mantieni **Smooth top** al `100%` e **Brightness** a `0 dB` (`Settings → EQ & Filters`). |
+| **Ottava errata / suono da scoiattolo** | In `Settings → Pitch & Autotune`, regola **Pitch shift** oppure prova **Automatic pitch** (`Octave from the target voice` per il canto; `Match the target voice's pitch` per il parlato). |
+| **Risate, respiri o sussurri spariscono** | Disattiva **Speech gate**, imposta Input cleaning su **`Gentle`** (in una stanza silenziosa), prova **WavLM+** (NVIDIA e AMD DirectML), oppure imposta **Model method** su **`FlowEdit 3+1`** (richiede un campione di 5-20 s della tua voce). |
+| **FlowEdit mantiene rumore di fondo o eco della stanza** | Attiva la pulizia input **`DF3`**, registra in una stanza più silenziosa oppure riporta **Model method** su **`Classic`**. |
+| **Scricchiolii o brevi interruzioni** | Imposta **Model method** su **`Learned 4 steps`**, riduci **Prompt length**, aumenta **Output buffer** (`Settings → General`) e chiudi le altre app che usano molto la GPU. |
+| **Scatti mentre giochi** | Limita gli **FPS** del gioco e abbassa la grafica del gioco, imposta **Model method** su **`Learned 4 steps`**, riduci **Prompt length** e disattiva **Harmony**. |
+| **LIVE interrotto: "the audio device stopped working"** | Il microfono o l'uscita è stato scollegato o cambiato. Ricollegalo, clicca **Refresh devices** e premi **START**. |
+| **AMD: si chiude su START / `ShapeInferenceNotRegistered`** | Aggiorna alla **v0.7.1** (usa **DirectML** sulla GPU dedicata per impostazione predefinita, risolvendo sia i crash quando è presente una GPU integrata AMD sia `ShapeInferenceNotRegistered` quando la grafica integrata è disattivata). Controlla `check.txt` per la scheda/motore attivo e mantieni aggiornati i driver Adrenalin. |
+| **AMD: FlowEdit torna al fallback o WavLM+ non disponibile** | Controlla `Settings → General → "AMD graphics engine"`. Se hai attivato **MIGraphX** sperimentale, torna a **DirectML** e riavvia (`WavLM+` e `FlowEdit 3+1` non sono disponibili con MIGraphX). Assicurati anche che `Sample of your voice…` sia impostato per FlowEdit in LIVE. |
+| **Esplora File di Windows dice che lo ZIP non è valido** | Usa **7-Zip** o **WinRAR** (ZIP crittografato AES-256) con password `yunevoix`. |
 
-## Diagnostica e supporto
+---
+
+## Diagnostica e Supporto
 
 Se qualcosa continua a non funzionare:
 
@@ -52,4 +56,10 @@ Se qualcosa continua a non funzionare:
    ```bat
    YuneVoix.exe --check
    ```
-3. Invia il file **`check.txt`** generato insieme a **`live-diag.log`** quando chiedi supporto in **`yune-support`**, via DM a **Kuroyuki** (`sxxyneko` su Discord), o su [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
+3. **File creati accanto a `YuneVoix.exe`:**
+   - **`check.txt`**: report di hardware, edizione, licenza e rilevamento GPU/motore.
+   - **`live-diag.log`**: log diagnostico della sessione corrente.
+   - **`live-diag.prev.log`** e **`crash.log`**: log precedente e dettagli del crash conservati dopo un arresto anomalo.
+4. Invia **`check.txt`** e **`live-diag.log`**; dopo un crash invia anche **`live-diag.prev.log`** e **`crash.log`** (tutti si trovano accanto a `YuneVoix.exe`).
+5. **Test di velocità AMD (opzionale):** Puoi eseguire `YuneVoix.exe --bench` per generare `bench.txt`, `bench_ort.log` e `bench_output.wav` con la velocità diagnostica sulla tua scheda AMD specifica (i risultati variano in base alla scheda e al sistema).
+6. *(Promemoria privacy)* Prima di condividere i log o i file WAV opzionali di **Save diagnostic recordings** in **`yune-support`**, via DM a **Kuroyuki** (`sxxyneko` su Discord) o su [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix), controlla che non contengano nomi utente personali, percorsi di file o parlato privato.

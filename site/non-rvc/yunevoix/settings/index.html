@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848677338330">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="YuneVoix Settings Explained - Complete Audio Quality Guide">
+    <meta name="description" content="Complete beginner-friendly guide to every YuneVoix v0.7.1 setting across General, Voice & Timbre, Pitch & Autotune, EQ & Filters, and Effects.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings/">
+    <meta property="og:title" content="YuneVoix Settings Explained - Complete Audio Quality Guide">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings/">
+    <meta name="twitter:title" content="YuneVoix Settings Explained - Complete Audio Quality Guide">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../resources/css/retype.css?v=4.6.0.848677338330" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848677338330" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848677338330" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="Complete beginner-friendly guide to every YuneVoix v0.7.1 setting across General, Voice & Timbre, Pitch & Autotune, EQ & Filters, and Effects.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
+    <meta name="twitter:description" content="Complete beginner-friendly guide to every YuneVoix v0.7.1 setting across General, Voice & Timbre, Pitch & Autotune, EQ & Filters, and Effects.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
+    <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings/">
+    <link rel="alternate" hreflang="it" href="https://docs.ilariarvc.shop/it/non-rvc/yunevoix/settings/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.ilariarvc.shop/non-rvc/yunevoix/settings/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/en/">Website</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Language: English"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg><span class="docs-language-name">English</span></summary><div><a href="/non-rvc/yunevoix/settings/" lang="en" hreflang="en" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#21468b" d="M0 0h24v16H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 24 16m0-16L0 16"/><path stroke="#c8102e" stroke-width="1.5" d="m0 0 24 16m0-16L0 16"/><path stroke="#fff" stroke-width="6" d="M12 0v16M0 8h24"/><path stroke="#c8102e" stroke-width="3" d="M12 0v16M0 8h24"/></svg> English</a><a href="/it/non-rvc/yunevoix/settings/" lang="it" hreflang="it"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg> Italiano</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/en/">Website</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="yunevoix-settings-explained---complete-audio-quality-guide">YuneVoix Settings Explained - Complete Audio Quality Guide</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Complete beginner-friendly guide to every YuneVoix v0.7.1 setting across General, Voice &amp; Timbre, Pitch &amp; Autotune, EQ &amp; Filters, and Effects.</div>
+<p><a href="../overview/">Overview &amp; Requirements</a> · <a href="../usage/">Voice Bank &amp; Live Usage</a> · <a href="../song-cover-karaoke/">Song Cover &amp; Karaoke</a></p>
+<p>This reference explains every setting documented in YuneVoix <strong>v0.7.1</strong> (NVIDIA and AMD). In the developer documentation:</p>
+<ul>
+<li><strong>&quot;Works live&quot;</strong> means the change takes effect immediately while LIVE is running.</li>
+<li><strong>&quot;At the next START&quot;</strong> means you must stop LIVE and press <strong>START</strong> again for the change to take effect.</li>
+</ul>
+<hr>
+<h2 id="settings--general">Settings → General</h2>
+<p>These controls manage input cleanup, monitoring, output level, buffering, and AMD graphics backend selection (applies to <strong>LIVE</strong>, with <code translate="no" v-pre>Models folder</code> and <code translate="no" v-pre>AMD graphics engine</code> affecting the app globally):</p>
+<retype-table copy-text="| Control | Default | Applies | What It Is &amp; What It Does | When to Use &amp; What Can Go Wrong |
+| --- | --- | --- | --- | --- |
+| **Input cleaning** (`DF3`, `Gentle`, `Sidon`, `Off`) | `DF3` | At next START | Cleans microphone audio before conversion. `DF3` removes typing, clicks, and hiss while boosting quiet mics (`+30 ms`). `Gentle` removes steady noise/clicks while keeping laughter and breaths. `Sidon` rebuilds speech on GPU (`+~200 ms`). `Off` disables cleaning. | Use `DF3` in normal/noisy rooms, `Gentle` in quiet rooms, `Off` only for a clean studio mic. **Do not use `Sidon` for singing** (documented as not for singing). |
+| **Speech gate** | `Off` | Works live | Silences output between words. | Enable only for noisy rooms during plain speech; **laughter and sighs get cut**, so leave off if you laugh a lot. |
+| **Microphone level** | Meter (`−6 dBFS` target) | Meter only | Displays your microphone level in dB. | Raise Windows microphone gain until loud speech peaks near **`−6 dBFS`**. Quiet input causes robotic/underwater output. |
+| **Monitor device** | Windows default output | LIVE monitoring | Chooses where **&quot;Listen to input&quot;** / **&quot;Listen to output&quot;** play. | Set to your **headphones**, never the virtual cable used as LIVE Output (avoids feedback loops). |
+| **Monitor volume** | `−6 dB` | LIVE monitoring | Adjusts volume of the built-in monitor output. | Lower if monitoring feels loud; does not affect what Discord/OBS receives. |
+| **Output volume** | `−6 dB` | Works live | Controls the converted output level sent to your LIVE output device. | YUNE plays louder than most recordings; keep around `−6 dB` unless your receiving app needs adjustment. |
+| **Peak limiter (`−1 dBFS`)** | `On` | Works live | Caps output peaks at `−1 dBFS` to prevent digital clipping. | Keep **On** unless intentionally testing raw dynamics. |
+| **Output buffer** | `200 ms` | At next START | Audio buffer size before playback. | Larger values reduce dropouts/crackles at the cost of higher delay; lowering too far causes audio dropouts. |
+| **Models folder** | Empty (`models` next to `.exe`) | Global | Points to a custom folder for models/voices. | Leave empty unless storing `models` elsewhere. |
+| **Save diagnostic recordings** | `Off` | Diagnostic | Saves WAV files of what the engine heard and produced (auto-stops after 10 min; resets to off on restart). | Turn on **only** when reporting a bug; check recordings for private speech before sharing. |
+| **Restore default settings** | Action button | Global | Resets all settings to defaults. | Your saved voices and selected audio devices stay intact. |
+| **AMD graphics engine** *(AMD build only)* | `DirectML` | After restart | Switches between **DirectML** (default, dedicated GPU) and experimental **MIGraphX**. | Leave on **DirectML** for `WavLM+` and `FlowEdit 3+1`. **MIGraphX** requires Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min first compile, and disables `WavLM+` / `FlowEdit 3+1`. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Control</th>
+<th>Default</th>
+<th>Applies</th>
+<th>What It Is &amp; What It Does</th>
+<th>When to Use &amp; What Can Go Wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input cleaning</strong> (<code translate="no" v-pre>DF3</code>, <code translate="no" v-pre>Gentle</code>, <code translate="no" v-pre>Sidon</code>, <code translate="no" v-pre>Off</code>)</td>
+<td><code translate="no" v-pre>DF3</code></td>
+<td>At next START</td>
+<td>Cleans microphone audio before conversion. <code translate="no" v-pre>DF3</code> removes typing, clicks, and hiss while boosting quiet mics (<code translate="no" v-pre>+30 ms</code>). <code translate="no" v-pre>Gentle</code> removes steady noise/clicks while keeping laughter and breaths. <code translate="no" v-pre>Sidon</code> rebuilds speech on GPU (<code translate="no" v-pre>+~200 ms</code>). <code translate="no" v-pre>Off</code> disables cleaning.</td>
+<td>Use <code translate="no" v-pre>DF3</code> in normal/noisy rooms, <code translate="no" v-pre>Gentle</code> in quiet rooms, <code translate="no" v-pre>Off</code> only for a clean studio mic. <strong>Do not use <code translate="no" v-pre>Sidon</code> for singing</strong> (documented as not for singing).</td>
+</tr>
+<tr>
+<td><strong>Speech gate</strong></td>
+<td><code translate="no" v-pre>Off</code></td>
+<td>Works live</td>
+<td>Silences output between words.</td>
+<td>Enable only for noisy rooms during plain speech; <strong>laughter and sighs get cut</strong>, so leave off if you laugh a lot.</td>
+</tr>
+<tr>
+<td><strong>Microphone level</strong></td>
+<td>Meter (<code translate="no" v-pre>−6 dBFS</code> target)</td>
+<td>Meter only</td>
+<td>Displays your microphone level in dB.</td>
+<td>Raise Windows microphone gain until loud speech peaks near <strong><code translate="no" v-pre>−6 dBFS</code></strong>. Quiet input causes robotic/underwater output.</td>
+</tr>
+<tr>
+<td><strong>Monitor device</strong></td>
+<td>Windows default output</td>
+<td>LIVE monitoring</td>
+<td>Chooses where <strong>&quot;Listen to input&quot;</strong> / <strong>&quot;Listen to output&quot;</strong> play.</td>
+<td>Set to your <strong>headphones</strong>, never the virtual cable used as LIVE Output (avoids feedback loops).</td>
+</tr>
+<tr>
+<td><strong>Monitor volume</strong></td>
+<td><code translate="no" v-pre>−6 dB</code></td>
+<td>LIVE monitoring</td>
+<td>Adjusts volume of the built-in monitor output.</td>
+<td>Lower if monitoring feels loud; does not affect what Discord/OBS receives.</td>
+</tr>
+<tr>
+<td><strong>Output volume</strong></td>
+<td><code translate="no" v-pre>−6 dB</code></td>
+<td>Works live</td>
+<td>Controls the converted output level sent to your LIVE output device.</td>
+<td>YUNE plays louder than most recordings; keep around <code translate="no" v-pre>−6 dB</code> unless your receiving app needs adjustment.</td>
+</tr>
+<tr>
+<td><strong>Peak limiter (<code translate="no" v-pre>−1 dBFS</code>)</strong></td>
+<td><code translate="no" v-pre>On</code></td>
+<td>Works live</td>
+<td>Caps output peaks at <code translate="no" v-pre>−1 dBFS</code> to prevent digital clipping.</td>
+<td>Keep <strong>On</strong> unless intentionally testing raw dynamics.</td>
+</tr>
+<tr>
+<td><strong>Output buffer</strong></td>
+<td><code translate="no" v-pre>200 ms</code></td>
+<td>At next START</td>
+<td>Audio buffer size before playback.</td>
+<td>Larger values reduce dropouts/crackles at the cost of higher delay; lowering too far causes audio dropouts.</td>
+</tr>
+<tr>
+<td><strong>Models folder</strong></td>
+<td>Empty (<code translate="no" v-pre>models</code> next to <code translate="no" v-pre>.exe</code>)</td>
+<td>Global</td>
+<td>Points to a custom folder for models/voices.</td>
+<td>Leave empty unless storing <code translate="no" v-pre>models</code> elsewhere.</td>
+</tr>
+<tr>
+<td><strong>Save diagnostic recordings</strong></td>
+<td><code translate="no" v-pre>Off</code></td>
+<td>Diagnostic</td>
+<td>Saves WAV files of what the engine heard and produced (auto-stops after 10 min; resets to off on restart).</td>
+<td>Turn on <strong>only</strong> when reporting a bug; check recordings for private speech before sharing.</td>
+</tr>
+<tr>
+<td><strong>Restore default settings</strong></td>
+<td>Action button</td>
+<td>Global</td>
+<td>Resets all settings to defaults.</td>
+<td>Your saved voices and selected audio devices stay intact.</td>
+</tr>
+<tr>
+<td><strong>AMD graphics engine</strong> <em>(AMD build only)</em></td>
+<td><code translate="no" v-pre>DirectML</code></td>
+<td>After restart</td>
+<td>Switches between <strong>DirectML</strong> (default, dedicated GPU) and experimental <strong>MIGraphX</strong>.</td>
+<td>Leave on <strong>DirectML</strong> for <code translate="no" v-pre>WavLM+</code> and <code translate="no" v-pre>FlowEdit 3+1</code>. <strong>MIGraphX</strong> requires Windows 11 24H2+, Adrenalin 25.10.13.09+, 10–30 min first compile, and disables <code translate="no" v-pre>WavLM+</code> / <code translate="no" v-pre>FlowEdit 3+1</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<blockquote>
+<p><strong>Cleaning vs. Volume vs. Limiter vs. Buffer:</strong> <em>Input cleaning</em> removes background noise before the AI hears you; <em>Output volume</em> changes loudness; <em>Peak limiter</em> prevents sudden distortion; <em>Output buffer</em> trades latency for stability against crackles.</p>
+</blockquote>
+<hr>
+<h2 id="settings--voice--timbre-live">Settings → Voice &amp; Timbre (LIVE)</h2>
+<p>Controls how closely the output matches the target Voice Bank vs. your own voice, and which model architecture/method runs:</p>
+<ul>
+<li><strong>Timbre strength</strong> (<code translate="no" v-pre>100%</code> default): Below <code translate="no" v-pre>100%</code> mixes in your own vocal timbre using <strong><code translate="no" v-pre>Sample of your voice…</code></strong> (5–20 s of normal speech, saved as <code translate="no" v-pre>my_voice.yvoice</code>). Works in LIVE.</li>
+<li><strong>Timbre change when you raise or lower your voice</strong> (<code translate="no" v-pre>50%</code> default): <code translate="no" v-pre>100%</code> lets vocal color shift naturally with pitch; <code translate="no" v-pre>0%</code> keeps the same color across your range.</li>
+<li><strong>Prompt length</strong> (<code translate="no" v-pre>20 s</code> default, recommended): Length of the reference prompt used by the diffusion model. <code translate="no" v-pre>20 s</code> gives the steadiest timbre; shorter values save GPU memory (<strong>At the next START</strong>).</li>
+<li><strong>Model method</strong> (<code translate="no" v-pre>Classic</code> default, <strong>At the next START</strong>):
+<ul>
+<li><strong><code translate="no" v-pre>Classic</code>:</strong> Earlier-version behavior; enables the four Classic-only controls below.</li>
+<li><strong><code translate="no" v-pre>Learned 4 steps</code>:</strong> Tuned to sound like 10 steps while the model needs about <strong>40%</strong> of its GPU time and less GPU memory (per developer notes).</li>
+<li><strong><code translate="no" v-pre>FlowEdit 3+1</code>:</strong> Starts from your own voice (<code translate="no" v-pre>Sample of your voice…</code>, 5–20 s) instead of noise and changes only voice identity, keeping breaths, whispers, laughter, and articulation better (about <strong>60%</strong> of model GPU time). Falls back to <code translate="no" v-pre>Learned 4 steps</code> if no sample is set or on <strong>AMD MIGraphX</strong> (shown in LIVE status line).</li>
+</ul>
+</li>
+<li><strong>Classic-only controls</strong> <em>(active only when <code translate="no" v-pre>Model method = Classic</code>)</em>:
+<ul>
+<li><strong>Model steps</strong> (<code translate="no" v-pre>10</code> default): <code translate="no" v-pre>8</code>, <code translate="no" v-pre>6</code> (<code translate="no" v-pre>≈ −0.75 GB</code> VRAM), or <code translate="no" v-pre>4</code> (<code translate="no" v-pre>≈ −1.1 GB</code> VRAM) run faster with less VRAM.</li>
+<li><strong>Solver</strong> (<code translate="no" v-pre>Euler</code> default): Switch to <code translate="no" v-pre>DPM++ 2M</code> when using <code translate="no" v-pre>4–6</code> steps.</li>
+<li><strong>Guidance (CFG) only in the first half of the steps</strong> (<code translate="no" v-pre>Off</code> default): Saves GPU memory, mainly useful with <code translate="no" v-pre>4–6</code> steps.</li>
+<li><strong>Timbre guidance</strong> (<code translate="no" v-pre>0 = off</code> default): <code translate="no" v-pre>0.5–1</code> strengthens breathiness on breathy target recordings; costs extra GPU time.</li>
+</ul>
+</li>
+<li><strong>Content engine</strong> (<code translate="no" v-pre>Whisper</code> default, <strong>At the next START</strong>):
+<ul>
+<li><strong><code translate="no" v-pre>Whisper</code>:</strong> Closer target timbre accuracy.</li>
+<li><strong><code translate="no" v-pre>WavLM+</code></strong> <em>(NVIDIA and AMD DirectML only; unavailable on AMD MIGraphX)</em>: Clearer live speech, preserves your laughter, whispers, and breaths with much less buzzing, though timbre can be slightly less exact. Because <code translate="no" v-pre>WavLM+</code> uses its own model, <strong><code translate="no" v-pre>Fine-tuned model</code></strong> and <strong><code translate="no" v-pre>Breathiness</code></strong> are disabled when <code translate="no" v-pre>WavLM+</code> is active.</li>
+</ul>
+</li>
+<li><strong>Fine-tuned model</strong> (<code translate="no" v-pre>Off</code> default, <strong>At the next START</strong>, Whisper only): Follows your breath and grit more closely, with slightly less exact target timbre.</li>
+<li><strong>Breathiness</strong> <em>(Fine-tuned model only)</em>: Default <code translate="no" v-pre>as you sing</code>; <code translate="no" v-pre>×1</code> / <code translate="no" v-pre>×2</code> adds extra air.</li>
+<li><strong>Roughness from your voice</strong> (<code translate="no" v-pre>Off</code> default): Restores vocal growl where your own voice is rough.</li>
+<li><strong>Smooth out vocal fry</strong> (<code translate="no" v-pre>Off</code> default, <strong>Works live</strong>): Prevents very low or creaky speech/singing from sounding raspy while preserving breathiness.</li>
+<li><strong>Guidance (CFG)</strong> (<code translate="no" v-pre>0.7</code> default, recommended as trained): Controls adherence to the target timbre prompt.</li>
+</ul>
+<hr>
+<h2 id="settings--pitch--autotune-live">Settings → Pitch &amp; Autotune (LIVE)</h2>
+<ul>
+<li><strong>Pitch shift</strong> (<code translate="no" v-pre>+12 st</code> default in developer docs as an example for male voice → female target; <code translate="no" v-pre>0</code> for same range; <code translate="no" v-pre>−12</code> for female → male): Shifts pitch in semitones. There is no single &quot;correct&quot; shift for every voice - choose the shift that fits your own voice and target character.</li>
+<li><strong>Automatic pitch</strong> (<code translate="no" v-pre>Off</code> default): <code translate="no" v-pre>Off</code> uses the Pitch shift slider. <strong><code translate="no" v-pre>Octave from the target voice</code></strong> keeps singing in key; <strong><code translate="no" v-pre>Match the target voice's pitch</code></strong> adjusts talking pitch toward the target.</li>
+<li><strong>Melody mode</strong> (<code translate="no" v-pre>Follow my pitch</code> default):
+<ul>
+<li><strong><code translate="no" v-pre>Follow my pitch</code>:</strong> Natural pitch tracking.</li>
+<li><strong><code translate="no" v-pre>Autotune</code>:</strong> Snaps notes to the key/scale (<code translate="no" v-pre>Retune speed</code> <code translate="no" v-pre>40 ms</code> default: <code translate="no" v-pre>25–60 ms</code> natural, <code translate="no" v-pre>0–10 ms</code> robotic; <code translate="no" v-pre>Stability</code> <code translate="no" v-pre>50%</code>; <code translate="no" v-pre>Pull to the nearest note</code> <code translate="no" v-pre>50%</code>; <code translate="no" v-pre>Note change threshold</code> <code translate="no" v-pre>20 cents</code>).</li>
+<li><strong><code translate="no" v-pre>Stabilize</code>:</strong> Steadies held notes while keeping vibrato.</li>
+</ul>
+</li>
+<li><strong>I sing without a backing track</strong> (<code translate="no" v-pre>On</code> default): Turn <strong>Off</strong> when singing along with a song.</li>
+<li><strong>Key / Scale</strong> (<code translate="no" v-pre>Auto</code> default): Automatically detects or locks musical scale for Autotune/Harmony.</li>
+<li><strong>Vibrato</strong> (<code translate="no" v-pre>100%</code> default): Keeps your natural vibrato at <code translate="no" v-pre>100%</code>.</li>
+<li><strong>Fix pitch detector errors</strong> (<code translate="no" v-pre>On</code> default, recommended): Smooths sudden pitch tracker jumps.</li>
+<li><strong>Harmony</strong> (<code translate="no" v-pre>Off</code> default): Adds live thirds/fifths following the key (<code translate="no" v-pre>Harmony volume</code> <code translate="no" v-pre>−6 dB</code>); costs extra GPU time.</li>
+</ul>
+<hr>
+<h2 id="settings--eq--filters-live">Settings → EQ &amp; Filters (LIVE)</h2>
+<p>All controls here shape tone and clean up harshness in <strong>LIVE</strong> (and are copied to covers if you click <strong>Copy settings from LIVE</strong>):</p>
+<ul>
+<li><strong>Voice character</strong> (<code translate="no" v-pre>Off (as before)</code> default): Built-in presets (<strong>Soft</strong>, <strong>Warm</strong>, <strong>Bright</strong>, <strong>Calm</strong>, <strong>Expressive</strong>) or manual sliders for <strong>Formants</strong>, <strong>Intonation range</strong>, <strong>Pitch smoothing</strong>, <strong>Warmth</strong> (<code translate="no" v-pre>≈250 Hz</code>), <strong>Softness</strong> (<code translate="no" v-pre>0.5–3 kHz</code>), and <strong>Presence</strong> (<code translate="no" v-pre>≈3.5 kHz</code>).</li>
+<li><strong>Breath smoothing</strong> (<code translate="no" v-pre>100%</code> default): Removes faint crackle in breaths.</li>
+<li><strong>Silence stays silent</strong> (<code translate="no" v-pre>On</code> default): Forces pauses to true silence; with <code translate="no" v-pre>WavLM+</code> you can compare it <strong>Off</strong>.</li>
+<li><strong>Smooth top</strong> (<code translate="no" v-pre>100%</code> default) &amp; <strong>Brightness</strong> (<code translate="no" v-pre>0 dB</code> default): <strong>Smooth top</strong> softens high-frequency harshness/grain. Only raise <strong>Brightness</strong> if the output sounds muffled (and set <strong>Smooth top</strong> to <code translate="no" v-pre>0</code> if raising Brightness).</li>
+<li><strong>Filters, De-esser, Dynamic EQ</strong> (<code translate="no" v-pre>Off</code> default): Pick a preset first, then fine-tune if sibilants (<code translate="no" v-pre>s</code>/<code translate="no" v-pre>sh</code>) or specific frequencies feel harsh.</li>
+</ul>
+<hr>
+<h2 id="settings--effects-live">Settings → Effects (LIVE)</h2>
+<ul>
+<li><strong>Compressor, Saturation, Bitcrush, Reverb</strong> (<code translate="no" v-pre>Off</code> default): Each effect includes presets and <strong>works live</strong> (changes smoothly even while singing). Use sparingly to avoid masking target timbre or adding unwanted distortion/echo.</li>
+</ul>
+<hr>
+<h2 id="quick-reference-summary-tables">Quick Reference Summary Tables</h2>
+<h3 id="recommended-starting-point-from-developer-docs">Recommended Starting Point (from Developer Docs)</h3>
+<retype-table copy-text="| Area | Starting Value | Notes |
+| --- | --- | --- |
+| **Input cleaning** | `DF3` (`Gentle` in quiet rooms) | `Speech gate` `Off` |
+| **Microphone level** | Peaks near `−6 dBFS` | Set in Windows Sound settings |
+| **Output / Monitor volume** | `−6 dB` / `−6 dB` | `Peak limiter (−1 dBFS)` `On` |
+| **Output buffer** | `200 ms` | Raise if audio crackles |
+| **Prompt length / CFG** | `20 s` / `0.7` | `Timbre strength` `100%` |
+| **Model method / Content engine** | `Classic` (or `Learned 4 steps` for games) / `Whisper` | Test `WavLM+` / `FlowEdit 3+1` for breaths &amp; laughs |
+| **EQ &amp; Effects** | `Smooth top` `100%`, `Brightness` `0 dB`, `Breath smoothing` `100%` | `Effects` `Off` |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Area</th>
+<th>Starting Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input cleaning</strong></td>
+<td><code translate="no" v-pre>DF3</code> (<code translate="no" v-pre>Gentle</code> in quiet rooms)</td>
+<td><code translate="no" v-pre>Speech gate</code> <code translate="no" v-pre>Off</code></td>
+</tr>
+<tr>
+<td><strong>Microphone level</strong></td>
+<td>Peaks near <code translate="no" v-pre>−6 dBFS</code></td>
+<td>Set in Windows Sound settings</td>
+</tr>
+<tr>
+<td><strong>Output / Monitor volume</strong></td>
+<td><code translate="no" v-pre>−6 dB</code> / <code translate="no" v-pre>−6 dB</code></td>
+<td><code translate="no" v-pre>Peak limiter (−1 dBFS)</code> <code translate="no" v-pre>On</code></td>
+</tr>
+<tr>
+<td><strong>Output buffer</strong></td>
+<td><code translate="no" v-pre>200 ms</code></td>
+<td>Raise if audio crackles</td>
+</tr>
+<tr>
+<td><strong>Prompt length / CFG</strong></td>
+<td><code translate="no" v-pre>20 s</code> / <code translate="no" v-pre>0.7</code></td>
+<td><code translate="no" v-pre>Timbre strength</code> <code translate="no" v-pre>100%</code></td>
+</tr>
+<tr>
+<td><strong>Model method / Content engine</strong></td>
+<td><code translate="no" v-pre>Classic</code> (or <code translate="no" v-pre>Learned 4 steps</code> for games) / <code translate="no" v-pre>Whisper</code></td>
+<td>Test <code translate="no" v-pre>WavLM+</code> / <code translate="no" v-pre>FlowEdit 3+1</code> for breaths &amp; laughs</td>
+</tr>
+<tr>
+<td><strong>EQ &amp; Effects</strong></td>
+<td><code translate="no" v-pre>Smooth top</code> <code translate="no" v-pre>100%</code>, <code translate="no" v-pre>Brightness</code> <code translate="no" v-pre>0 dB</code>, <code translate="no" v-pre>Breath smoothing</code> <code translate="no" v-pre>100%</code></td>
+<td><code translate="no" v-pre>Effects</code> <code translate="no" v-pre>Off</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="when-changes-apply-works-live-vs-at-the-next-start">When Changes Apply (<code translate="no" v-pre>Works live</code> vs. <code translate="no" v-pre>At the next START</code>)</h3>
+<retype-table copy-text="| Applies Immediately (`Works live`) | Requires Stop → `START` (`At the next START`) |
+| --- | --- |
+| `Speech gate`, `Output volume`, `Peak limiter` | `Input cleaning`, `Output buffer` |
+| `Smooth out vocal fry`, `Timbre strength`, `Guidance (CFG)` | `Prompt length`, `Model method` (`Classic` / `Learned 4 steps` / `FlowEdit 3+1`) |
+| `Pitch &amp; Autotune` controls, `EQ &amp; Filters`, `Effects` | `Content engine` (`Whisper` / `WavLM+`), `Fine-tuned model` |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Applies Immediately (<code translate="no" v-pre>Works live</code>)</th>
+<th>Requires Stop → <code translate="no" v-pre>START</code> (<code translate="no" v-pre>At the next START</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>Speech gate</code>, <code translate="no" v-pre>Output volume</code>, <code translate="no" v-pre>Peak limiter</code></td>
+<td><code translate="no" v-pre>Input cleaning</code>, <code translate="no" v-pre>Output buffer</code></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Smooth out vocal fry</code>, <code translate="no" v-pre>Timbre strength</code>, <code translate="no" v-pre>Guidance (CFG)</code></td>
+<td><code translate="no" v-pre>Prompt length</code>, <code translate="no" v-pre>Model method</code> (<code translate="no" v-pre>Classic</code> / <code translate="no" v-pre>Learned 4 steps</code> / <code translate="no" v-pre>FlowEdit 3+1</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Pitch &amp; Autotune</code> controls, <code translate="no" v-pre>EQ &amp; Filters</code>, <code translate="no" v-pre>Effects</code></td>
+<td><code translate="no" v-pre>Content engine</code> (<code translate="no" v-pre>Whisper</code> / <code translate="no" v-pre>WavLM+</code>), <code translate="no" v-pre>Fine-tuned model</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="classic-only-controls-vs-amd-backend-compatibility">Classic-Only Controls vs. AMD Backend Compatibility</h3>
+<retype-table copy-text="| Feature | Classic Only? | NVIDIA | AMD DirectML | AMD MIGraphX (Experimental) |
+| --- | --- | --- | --- | --- |
+| `Model steps`, `Solver`, `1st-half CFG`, `Timbre guidance` | **Yes** | Yes | Yes | Yes *(Classic mode)* |
+| `Learned 4 steps` | No | Yes | Yes | Yes |
+| `WavLM+` | No | Yes | Yes | **No** *(unavailable)* |
+| `FlowEdit 3+1` | No | Yes | Yes | **No** *(falls back to `Learned 4 steps`)* |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Classic Only?</th>
+<th>NVIDIA</th>
+<th>AMD DirectML</th>
+<th>AMD MIGraphX (Experimental)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>Model steps</code>, <code translate="no" v-pre>Solver</code>, <code translate="no" v-pre>1st-half CFG</code>, <code translate="no" v-pre>Timbre guidance</code></td>
+<td><strong>Yes</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes <em>(Classic mode)</em></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Learned 4 steps</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>WavLM+</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><strong>No</strong> <em>(unavailable)</em></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>FlowEdit 3+1</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><strong>No</strong> <em>(falls back to <code translate="no" v-pre>Learned 4 steps</code>)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="speech-vs-singing-starting-differences">Speech vs. Singing Starting Differences</h3>
+<retype-table copy-text="| Setting | Speaking (Discord / Streaming) | Singing |
+| --- | --- | --- |
+| **Input cleaning** | `DF3` (or `Gentle` in quiet room) | `DF3` or `Gentle` (**never `Sidon`**) |
+| **Automatic pitch** | `Match the target voice's pitch` (or `Off` + slider) | `Octave from the target voice` (or `Off` + `0`/`±12`) |
+| **I sing without a backing track** | `On` | `Off` when singing along with music |
+| **Melody mode** | `Follow my pitch` | `Follow my pitch`, `Stabilize`, or `Autotune` |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Speaking (Discord / Streaming)</th>
+<th>Singing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input cleaning</strong></td>
+<td><code translate="no" v-pre>DF3</code> (or <code translate="no" v-pre>Gentle</code> in quiet room)</td>
+<td><code translate="no" v-pre>DF3</code> or <code translate="no" v-pre>Gentle</code> (<strong>never <code translate="no" v-pre>Sidon</code></strong>)</td>
+</tr>
+<tr>
+<td><strong>Automatic pitch</strong></td>
+<td><code translate="no" v-pre>Match the target voice's pitch</code> (or <code translate="no" v-pre>Off</code> + slider)</td>
+<td><code translate="no" v-pre>Octave from the target voice</code> (or <code translate="no" v-pre>Off</code> + <code translate="no" v-pre>0</code>/<code translate="no" v-pre>±12</code>)</td>
+</tr>
+<tr>
+<td><strong>I sing without a backing track</strong></td>
+<td><code translate="no" v-pre>On</code></td>
+<td><code translate="no" v-pre>Off</code> when singing along with music</td>
+</tr>
+<tr>
+<td><strong>Melody mode</strong></td>
+<td><code translate="no" v-pre>Follow my pitch</code></td>
+<td><code translate="no" v-pre>Follow my pitch</code>, <code translate="no" v-pre>Stabilize</code>, or <code translate="no" v-pre>Autotune</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Next step: <a href="../song-cover-karaoke/">Song Cover &amp; Karaoke - Complete Beginner Guide</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/yunevoix/usage/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Voice Bank &amp; Live Usage</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../non-rvc/yunevoix/song-cover-karaoke/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Song Cover &amp; Karaoke</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Settings & Audio Quality", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/yunevoix/settings.md" }</script>
+</body>
+</html>

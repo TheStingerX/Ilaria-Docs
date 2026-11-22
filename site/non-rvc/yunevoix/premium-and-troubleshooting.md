@@ -4,44 +4,48 @@
 
 Supporters on [Ko-fi](https://ko-fi.com/yunevoix) gain access to **YuneVoix PREMIUM**, which unlocks offline music features on top of everything in BASIC:
 
-- **Song Cover**: pick any song and target voice. YuneVoix separates the vocals from the instrumental, converts the lead (and optionally backing vocals), and mixes everything back together.
-  - **Supported formats**: WAV, MP3, FLAC, M4A, AAC, OGG, WMA, AIFF (up to **15 minutes**).
-  - **Processing time**: roughly **1.3×** the song length (a 5-minute song takes about 6–7 minutes).
-  - **Output formats**: **WAV 24-bit** or **MP3 320 kbps**.
-- **Karaoke**: sing along with on-screen lyrics; your take is converted into the chosen voice and mixed with the music, matched to the key and level of the original.
+- **Song Cover:** Pick any song and target voice. YuneVoix separates vocals from the instrumental, converts the lead (and optionally backing vocals), and mixes everything back together.
+- **Karaoke:** Sing along with on-screen lyrics; your take is converted into the chosen voice and mixed with the music, matched to the key and level of the original.
 
-### Song Cover tips
+For complete step-by-step tutorials and every Song Cover / Karaoke setting, see **[Song Cover & Karaoke - Complete Beginner Guide](song-cover-karaoke.md)**.
 
-- **Wrong pitch**: set **Settings → Song Cover → Octave** manually to **`−12`**, **`0`**, or **`+12`** instead of `Auto`.
-- **Duets & backing vocals**: **"Lead vocal only"** gives the cleanest result. If a song has two lead singers, both are converted to the chosen voice (a single singer cannot be isolated).
-- **Copyright**: the song still belongs to its authors - check copyright and platform rules before publishing covers.
+---
 
 ## PREMIUM Licence & Activation
 
 1. Open the **Song Cover** tab and click **"Copy request code"**.
 2. Send the request code along with your Ko-fi purchase.
-3. You will receive a `license.yvl` file. Click **"Load license…"** and select it.
+3. You will receive a `license.yvl` file. Click **"Load license…"** and select it (it is copied next to `YuneVoix.exe`).
 
 ### How the licence works
 
 - **Never expires** and works **100% offline**.
-- **Updates**: copy `license.yvl` next to the new `YuneVoix.exe` (or load it again).
-- **One PC per licence**: a copied PREMIUM folder or licence will not unlock Song Cover on another computer.
-- **Hardware changes**: the licence is tied to your **motherboard**, **system disk**, and **Windows installation**.
+- **Updates:** Copy `license.yvl` next to the new `YuneVoix.exe` (or load it again).
+- **One PC per licence:** A copied PREMIUM folder or licence will not unlock Song Cover on another computer.
+- **Hardware changes:** The licence is tied to your **motherboard**, **system disk**, and **Windows installation**.
   - Changing **one** of them is fine (and upgrading your GPU, RAM, or monitor does not count at all).
   - Changing **two at once** (e.g., a new system disk with a fresh Windows install) requires a new licence - copy the new request code and contact support with your order.
+
+---
 
 ## Troubleshooting
 
 | Symptom | What to try first |
 | --- | --- |
 | **Robotic, quiet, or "underwater" voice** | Raise your mic gain in Windows so loud speech peaks near **−6 dBFS** (`Settings → General → Microphone level`) and keep Input cleaning on **`DF3`**. |
-| **Wrong octave / sounds like a chipmunk** | In `Settings → Pitch & Autotune`, set **Pitch shift** (`+12` male→female, `0` same range, `−12` female→male) or enable automatic pitch. |
-| **Laughs, breaths, or whispers get lost** | Disable **Speech gate**, switch Input cleaning to **`Gentle`** (in a quiet room), and try the **WavLM+** content engine (supported on NVIDIA and AMD DirectML). |
-| **AMD: closes on START / WavLM+ or FlowEdit unavailable** | Update to **v0.7.1** (fixes crashes on CPUs with integrated AMD graphics by defaulting to DirectML on the dedicated GPU). If you enabled experimental MIGraphX in `Settings → General → "AMD graphics engine"`, switch back to **DirectML** and restart so `WavLM+` and `FlowEdit 3+1` work. |
-| **Crackles or short dropouts** | Raise **Output buffer** (`Settings → General`), close other GPU-heavy apps, reduce **Model steps** or prompt length, and turn off **Harmony**. |
-| **Stuttering while gaming** | Lower the game's graphics or FPS cap, or lower **Model steps** and prompt length in `Settings → Voice & Timbre`. |
-| **Windows Explorer says ZIP is invalid** | Use **7-Zip** or **WinRAR** (the archive uses AES-256 encryption) with password `yunevoix`. |
+| **Typing or clicks turn into tones** | Set Input cleaning (`Settings → General`) to **`DF3`**. |
+| **Hiss or "grain" on top** | Keep **Smooth top** at `100%` and **Brightness** at `0 dB` (`Settings → EQ & Filters`). |
+| **Wrong octave / sounds like a chipmunk** | In `Settings → Pitch & Autotune`, adjust **Pitch shift** or test **Automatic pitch** (`Octave from the target voice` for singing; `Match the target voice's pitch` for talking). |
+| **Laughs, breaths, or whispers get lost** | Disable **Speech gate**, switch Input cleaning to **`Gentle`** (in a quiet room), try **WavLM+** (NVIDIA and AMD DirectML), or set **Model method** to **`FlowEdit 3+1`** (needs a 5–20 s sample of your own voice). |
+| **FlowEdit keeps background noise or room echo** | Enable **`DF3`** input cleaning, record in a quieter room, or switch **Model method** to **`Classic`**. |
+| **Crackles or short dropouts** | Set **Model method** to **`Learned 4 steps`**, shorten **Prompt length**, raise **Output buffer** (`Settings → General`), and close other GPU-heavy apps. |
+| **Stuttering while gaming** | Cap the game's **FPS** and lower game graphics, set **Model method** to **`Learned 4 steps`**, shorten **Prompt length**, and turn off **Harmony**. |
+| **LIVE stopped: "the audio device stopped working"** | Your mic or output was unplugged or changed. Reconnect it, click **Refresh devices**, and press **START**. |
+| **AMD: closes on START / `ShapeInferenceNotRegistered`** | Update to **v0.7.1** (uses **DirectML** on the dedicated GPU by default, fixing both crashes when integrated AMD graphics are present and `ShapeInferenceNotRegistered` when integrated graphics are disabled). Check `check.txt` for active card/engine and keep Adrenalin drivers current. |
+| **AMD: FlowEdit falls back or WavLM+ unavailable** | Check `Settings → General → "AMD graphics engine"`. If you enabled experimental **MIGraphX**, switch back to **DirectML** and restart (`WavLM+` and `FlowEdit 3+1` are not available under MIGraphX). Also ensure `Sample of your voice…` is set for LIVE FlowEdit. |
+| **Windows Explorer says ZIP is invalid** | Use **7-Zip** or **WinRAR** (AES-256 encrypted ZIP) with password `yunevoix`. |
+
+---
 
 ## Diagnostics & Support
 
@@ -52,4 +56,10 @@ If something still does not work:
    ```bat
    YuneVoix.exe --check
    ```
-3. Send the generated **`check.txt`** together with **`live-diag.log`** when asking for help in **`yune-support`**, via DM to **Kuroyuki** (`sxxyneko` on Discord), or on [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix).
+3. **Files created next to `YuneVoix.exe`:**
+   - **`check.txt`**: hardware, edition, licence, GPU/engine detection report.
+   - **`live-diag.log`**: current session diagnostic log.
+   - **`live-diag.prev.log`** and **`crash.log`**: preserved previous log and crash details after a crash.
+4. Send **`check.txt`** and **`live-diag.log`**; after a crash also send **`live-diag.prev.log`** and **`crash.log`** (all are kept next to `YuneVoix.exe`).
+5. **AMD speed test (optional):** You can run `YuneVoix.exe --bench` to generate `bench.txt`, `bench_ort.log`, and `bench_output.wav` showing diagnostic speed on your specific AMD card (results vary by card and system).
+6. *(Privacy reminder)* Before sharing logs or optional **Save diagnostic recordings** WAV files in **`yune-support`**, via DM to **Kuroyuki** (`sxxyneko` on Discord), or on [ko-fi.com/yunevoix](https://ko-fi.com/yunevoix), check them for personal usernames, file paths, or private speech.

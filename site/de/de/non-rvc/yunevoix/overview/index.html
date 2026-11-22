@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/de">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848677375680">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ilaria&apos;s Docs &#x1F496;</title>
+    <meta name="title" content="YuneVoix (YUNE)">
+    <meta name="description" content="YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.ilariarvc.shop/de/de/non-rvc/yunevoix/overview/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.ilariarvc.shop/de/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.ilariarvc.shop/de/de/non-rvc/yunevoix/overview/">
+    <meta property="og:title" content="YuneVoix (YUNE)">
+    <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.ilariarvc.shop/de/de/non-rvc/yunevoix/overview/">
+    <meta name="twitter:title" content="YuneVoix (YUNE)">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/de/non-rvc/yunevoix/overview.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848677375680" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848677375680" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848677375680" data-turbo-eval="false" defer></script>
+
+    <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
+
+    <meta name="theme-color" content="#FFC0CB">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:description" content="YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.">
+    <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <meta name="twitter:description" content="YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.">
+    <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
+    <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
+    <link rel="alternate" hreflang="de" href="https://docs.ilariarvc.shop/de/de/non-rvc/yunevoix/overview/">
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.ilariarvc.shop/de/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Ilaria Docs <span class="docs-emoji">&#x1F496;</span></span>
+                    </a>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+        <details class="docs-language"><summary aria-label="Sprache: Deutsch"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg><span class="docs-language-name">Deutsch</span></summary><div><a href="/de/de/non-rvc/yunevoix/overview/" lang="de" hreflang="de" aria-current="true"><svg aria-hidden="true" width="21" height="14" viewBox="0 0 24 16" style="display:inline-block;flex:none;vertical-align:middle;border-radius:2px;overflow:hidden"><path d="M0 0h24v16H0z"/><path fill="#dd0000" d="M0 5.33h24V16H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg> Deutsch</a></div></details>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ilariarvc.shop/de/">Website</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://ko-fi.com/ilariaowo">Ilaria&#x27;s Ko-Fi</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="yunevoix-yune">YuneVoix (YUNE)</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.</div>
+<p><a href="https://huggingface.co/JohnBlvck/YUNE/tree/main">Hugging Face (Download)</a> · <a href="https://ko-fi.com/yunevoix">Ko-fi (Support &amp; Premium)</a></p>
+<p>YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der <strong>YUNE</strong>-Engine. Genau wie RVC verwandelt es deine Stimme in die einer anderen Person - sowohl beim Sprechen als auch beim Singen, live oder offline - aber <strong>ohne ein einzelnes Stimmmodell zu trainieren</strong>. Alles läuft lokal auf deiner eigenen Grafikkarte: keine Cloud, kein Konto, und dein Audio verlässt niemals deinen PC.</p>
+<blockquote>
+<p><strong>Leitfaden-Übersicht:</strong> <a href="">1. Übersicht &amp; Anforderungen</a> · <a href="../installation/">2. Installieren &amp; Aktualisieren</a> · <a href="../usage/">3. Voice Bank &amp; Live-Nutzung</a> · <a href="../settings/">4. Einstellungen &amp; Audioqualität</a> · <a href="../song-cover-karaoke/">5. Song Cover &amp; Karaoke</a> · <a href="../premium-and-troubleshooting/">6. Premium, Lizenz &amp; Hilfe</a> · <a href="../changelog/">7. Changelog</a></p>
+</blockquote>
+<h2 id="so-funktioniert-es">So funktioniert es</h2>
+<p>Anstatt Stunden damit zu verbringen, ein Modell auf einem Datensatz zu trainieren, erstellt YUNE ein <strong>Voice Bank</strong>-Profil aus einer kurzen Referenzaufnahme der Zielstimme (<strong>10-25 Sekunden</strong>). <em>(Unabhängig davon nutzt die LIVE-Methode <strong>FlowEdit 3+1</strong> zusätzlich eine <strong>5-20 Sekunden</strong> lange Aufnahme deiner eigenen natürlichen Stimme als Ausgangspunkt - zum Beispiel 15 Sekunden der Zielstimme in der Voice Bank vs. 10 Sekunden deiner eigenen normalen Sprache unter <code translate="no" v-pre>Settings → Voice &amp; Timbre → Sample of your voice…</code>.)</em></p>
+<p>Laut Entwicklerdokumentation teilt die YUNE-Pipeline deine Stimme in <em>was du sagst</em> und <em>wie du es sagst</em> auf:</p>
+<ol>
+<li><strong>Voice Bank &amp; Sprecheridentität:</strong> Speichert ein Stimmprofil (<code translate="no" v-pre>.yvoice</code>) aus einer 10-25-sekündigen Zielaufnahme, ohne ein separates neuronales Netz von Grund auf zu trainieren.</li>
+<li><strong>Content-Engine (<code translate="no" v-pre>Whisper</code> oder <code translate="no" v-pre>WavLM+</code>):</strong> Erfasst deine Wörter, dein Timing und deine Artikulation.</li>
+<li><strong>Pitch-Tracking:</strong> Folgt deiner Melodie und Intonation.</li>
+<li><strong>Diffusionsbasierte Konvertierung:</strong> Baut das Audio mit der Voice-Bank-Referenz in der Klangfarbe der Zielstimme neu auf.</li>
+<li><strong>Neuronaler Vocoder (<code translate="no" v-pre>PC-NSF</code>):</strong> Gibt Vollband-Audio mit <strong>44.1 kHz</strong> aus.</li>
+<li><strong>Audioverarbeitung:</strong> Wendet Eingangsreinigung, Pitch-/Autotune-Werkzeuge, EQ/Filter und Effekte an.</li>
+</ol>
+<p>Im <strong>LIVE</strong>-Modus wird das Audio in kleinen Blöcken von etwa <strong>160 ms</strong> verarbeitet, mit rund <strong>0.7 Sekunden</strong> gesamter Ende-zu-Ende-Verzögerung bei Standardeinstellungen (laut Entwicklerangaben).</p>
+<h2 id="basic-vs-premium">BASIC vs. PREMIUM</h2>
+<retype-table copy-text="| Funktion | BASIC (Kostenlos) | PREMIUM |
+| --- | --- | --- |
+| **LIVE-Stimmenverzerrer** (Sprechen &amp; Singen) | Enthalten | Enthalten |
+| **Voice Bank** (`.yvoice`-Stimmen erstellen &amp; teilen) | Enthalten | Enthalten |
+| **Pitch-Werkzeuge** (Shift, Autotune, Stabilizer, Harmonie) | Enthalten | Enthalten |
+| **Stimmcharakter &amp; Stimm-Effekte** | Enthalten | Enthalten |
+| **Eingangsreinigung** (Rausch-/Klickentfernung, Speech Gate) | Enthalten | Enthalten |
+| **Song Cover** (Gesang trennen, konvertieren, mischen) | - | Enthalten |
+| **Karaoke** (mitsingen mit Liedtext auf dem Bildschirm) | - | Enthalten |
+| **Offline-Lizenz** | Nicht erforderlich | `license.yvl` pro PC |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Funktion</th>
+<th>BASIC (Kostenlos)</th>
+<th>PREMIUM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LIVE-Stimmenverzerrer</strong> (Sprechen &amp; Singen)</td>
+<td>Enthalten</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Voice Bank</strong> (<code translate="no" v-pre>.yvoice</code>-Stimmen erstellen &amp; teilen)</td>
+<td>Enthalten</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Pitch-Werkzeuge</strong> (Shift, Autotune, Stabilizer, Harmonie)</td>
+<td>Enthalten</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Stimmcharakter &amp; Stimm-Effekte</strong></td>
+<td>Enthalten</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Eingangsreinigung</strong> (Rausch-/Klickentfernung, Speech Gate)</td>
+<td>Enthalten</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Song Cover</strong> (Gesang trennen, konvertieren, mischen)</td>
+<td>-</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Karaoke</strong> (mitsingen mit Liedtext auf dem Bildschirm)</td>
+<td>-</td>
+<td>Enthalten</td>
+</tr>
+<tr>
+<td><strong>Offline-Lizenz</strong></td>
+<td>Nicht erforderlich</td>
+<td><code translate="no" v-pre>license.yvl</code> pro PC</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<blockquote>
+<p><strong>YuneVoix PREMIUM</strong> steht Unterstützern auf <a href="https://ko-fi.com/yunevoix">Ko-fi</a> zur Verfügung. Der Zugang wird privat über Ko-fi oder DMs abgewickelt, und die Lizenz funktioniert vollständig offline. Siehe <a href="../song-cover-karaoke/">Song Cover &amp; Karaoke</a> und <a href="../premium-and-troubleshooting/">Premium, Lizenz &amp; Hilfe</a> für Details.</p>
+</blockquote>
+<h2 id="hauptfunktionen">Hauptfunktionen</h2>
+<ul>
+<li><strong>LIVE-Stimmenverzerrer</strong>: Mikrofon rein, konvertierte Stimme raus an jedes Audiogerät (Discord, OBS, Spiele, VRChat). Funktioniert zum Sprechen und Singen.</li>
+<li><strong>Voice Bank</strong>: erstelle ein neues <code translate="no" v-pre>.yvoice</code>-Profil aus <strong>10-25 Sekunden</strong> klaren Aufnahmen. YuneVoix kann automatisch Stimme von Musik/Rauschen trennen und Hall entfernen.</li>
+<li><strong>Drei Modellmethoden</strong> (laut Entwicklerdokumentation):
+<ul>
+<li><strong>Classic:</strong> Verhalten früherer Versionen mit konfigurierbaren <code translate="no" v-pre>Model steps</code>, <code translate="no" v-pre>Solver</code> und Guidance-Reglern.</li>
+<li><strong>Learned 4 steps:</strong> Darauf abgestimmt, wie Classic mit 10 Schritten zu klingen, bei etwa <strong>40%</strong> der GPU-Zeit des Modells und weniger GPU-Speicher.</li>
+<li><strong>FlowEdit 3+1:</strong> Startet von deiner eigenen Quellstimme (5-20 s Eigenstimm-Sample in LIVE; die Gesangsspur im Song Cover) statt von Rauschen und zielt darauf ab, Atemzüge, Flüstern, Lachen und Artikulation besser zu erhalten (laut Angaben bei etwa <strong>60%</strong> der GPU-Zeit des Modells).</li>
+</ul>
+</li>
+<li><strong>Content-Engines</strong>: <strong>Whisper</strong> (Standard) und <strong>WavLM+</strong> (auf NVIDIA und AMD DirectML, ausgelegt auf klarere Live-Sprache und besseren Erhalt von Lachen, Flüstern und Atemzügen).</li>
+<li><strong>Pitch-Werkzeuge</strong>: manuelle oder automatische Tonhöhenverschiebung, Autotune mit Tonarterkennung, sanfter Pitch-Stabilizer, Vibrato-Tiefe und Live-Harmonie (Terzen, Quinten).</li>
+<li><strong>Stimmcharakter, EQ &amp; Effekte</strong>: Timbre-Stärke, Formanten, Wärme, Weichheit, Präsenz, De-Esser, dynamischer EQ, Kompressor, Sättigung, Bitcrush, Hall und Peak-Limiter. Siehe <a href="../settings/">Einstellungen &amp; Audioqualität</a>.</li>
+<li><strong>Song Cover &amp; Karaoke (PREMIUM)</strong>: ganze Songs mit automatischer Stimmtrennung neu singen oder zu Liedtexten auf dem Bildschirm mitsingen.</li>
+<li><strong>UI-Sprachauswahl</strong>: Englisch, Deutsch, Italienisch, Spanisch, Polnisch und Portugiesisch.</li>
+</ul>
+<h2 id="systemanforderungen">Systemanforderungen</h2>
+<p>YuneVoix benötigt eine <strong>dedizierte GPU</strong> und läuft nicht allein auf der CPU. Integrierte Intel-/Arc-Grafik, macOS und Linux werden nicht unterstützt.</p>
+<retype-table copy-text="| Komponente | NVIDIA (Empfohlen) | AMD |
+| --- | --- | --- |
+| **OS** | Windows 10 / 11 64-bit | Windows 10 / 11 64-bit |
+| **GPU** | 8 GB+ VRAM (**12 GB empfohlen**), GeForce RTX empfohlen | Radeon **RX 7000-Serie** oder neuer, 12 GB+ VRAM (**16 GB empfohlen**) |
+| **Treiber** | Aktueller NVIDIA-Treiber | Aktueller AMD Software: Adrenalin Edition-Treiber |
+| **Audio** | Mikrofon + **Kopfhörer** (für Live-Nutzung erforderlich) | Mikrofon + **Kopfhörer** (für Live-Nutzung erforderlich) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Komponente</th>
+<th>NVIDIA (Empfohlen)</th>
+<th>AMD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OS</strong></td>
+<td>Windows 10 / 11 64-bit</td>
+<td>Windows 10 / 11 64-bit</td>
+</tr>
+<tr>
+<td><strong>GPU</strong></td>
+<td>8 GB+ VRAM (<strong>12 GB empfohlen</strong>), GeForce RTX empfohlen</td>
+<td>Radeon <strong>RX 7000-Serie</strong> oder neuer, 12 GB+ VRAM (<strong>16 GB empfohlen</strong>)</td>
+</tr>
+<tr>
+<td><strong>Treiber</strong></td>
+<td>Aktueller NVIDIA-Treiber</td>
+<td>Aktueller AMD Software: Adrenalin Edition-Treiber</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>Mikrofon + <strong>Kopfhörer</strong> (für Live-Nutzung erforderlich)</td>
+<td>Mikrofon + <strong>Kopfhörer</strong> (für Live-Nutzung erforderlich)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<blockquote>
+<p><strong>Fußnote (AMD):</strong> Windows 11 24H2+ und Adrenalin 25.10.13.09+ sind nur für die experimentelle <strong>MIGraphX</strong>-Engine erforderlich, die unter <code translate="no" v-pre>Settings → General → &quot;AMD graphics engine&quot;</code> verfügbar ist.</p>
+</blockquote>
+<h3 id="amd-directml-vs-amd-migraphx">AMD DirectML vs. AMD MIGraphX</h3>
+<ul>
+<li><strong>AMD DirectML (Standard in v0.7.1):</strong> Integriert und standardmäßig auf der dedizierten AMD-GPU aktiv. Funktioniert sofort ohne Windows-Update-Download oder anfängliches Modell-Kompilieren und unterstützt laut Entwicklerdokumentation sowohl <strong><code translate="no" v-pre>WavLM+</code></strong> als auch <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong>.</li>
+<li><strong>AMD MIGraphX (Experimentell):</strong> Muss ausdrücklich unter <code translate="no" v-pre>Settings → General → &quot;AMD graphics engine&quot;</code> aktiviert werden und erfordert einen Neustart. Windows Update lädt eventuell MIGraphX-Komponenten herunter, die erstmalige Modellvorbereitung kann <strong>10-30 Minuten</strong> dauern, und <strong><code translate="no" v-pre>WavLM+</code></strong> sowie <strong><code translate="no" v-pre>FlowEdit 3+1</code></strong> sind unter MIGraphX <strong>nicht</strong> verfügbar.</li>
+</ul>
+<p>Nächster Schritt: <a href="../installation/">YuneVoix installieren und aktualisieren</a>.</p>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../ilaria-rvc/rvc-model-merger/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">RVC-​Modelle zusammenf&#252;hren</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../de/non-rvc/yunevoix/installation/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Installieren &amp; Aktualisieren</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T15:40:57.000Z">22/11/2026 · 16:40</time></p>
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Made with <span class="docs-emoji">&#x1F496;</span> by Ilaria</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Übersicht & Anforderungen", level: 4, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/yunevoix/overview.md" }</script>
+</body>
+</html>

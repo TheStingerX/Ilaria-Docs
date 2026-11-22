@@ -1,61 +1,93 @@
-# Voice Bank e utilização ao vivo
+# Voice Bank e Uso ao Vivo
 
-Usa este guia para criar vozes no **Voice Bank**, encaminhar o YuneVoix para **Discord, OBS, jogos ou VRChat** e ajustar as definições de áudio para uma conversão ao vivo limpa.
+Use este guia para criar vozes no **Voice Bank**, rotear o YuneVoix para **Discord, OBS, jogos ou VRChat**, usar os controles integrados de monitoramento e escolher o **Model method** certo para conversão LIVE. Para um detalhamento completo de cada controle deslizante, consulte [Configurações e Qualidade de Áudio](settings.md).
 
-## 1. Criar e partilhar vozes (Voice Bank)
+## 1. Criar e compartilhar vozes (Voice Bank)
 
-O YuneVoix não requer **qualquer treino de modelo**.
+Diferente do RVC tradicional, criar um perfil no **Voice Bank** no YuneVoix **não treina uma rede neural do zero** - ele cria uma referência leve `.yvoice` do locutor em segundos.
 
-1. Abre o separador **Voice Bank**.
-2. Fornece **10–25 segundos** de gravações limpas da voz alvo:
-   - Melhores resultados: apenas uma pessoa, áudio limpo sem música nem efeitos.
-   - Incluir **risos, respirações, "mmm" e canto** ajuda o motor a captar a expressividade vocal.
-3. Mantém a limpeza em **"Separate voice + remove reverb"** se a amostra tiver ruído de fundo ou reverberação.
-4. A tua voz fica pronta em segundos e é guardada num pequeno ficheiro `.yvoice`.
+1. Abra a aba **Voice Bank**.
+2. Forneça **10-25 segundos** de gravações nítidas da voz de destino:
+   - **O que usar:** Apenas um locutor, fala ou canto limpo e seco, sem música de fundo, reverberação pesada ou vozes sobrepostas.
+   - **Variedade útil:** Incluir **risadas naturais, respirações, "mmm" e canto** ajuda o YUNE a capturar um timbre expressivo.
+   - **O que evitar:** Clipes com menos de 10 segundos, áudio distorcido/clipado, várias pessoas falando ao mesmo tempo ou eco forte de sala (o que pode deixar a voz convertida ruidosa ou instável).
+3. Mantenha a limpeza definida como **"Separate voice + remove reverb (recommended)"** se o clipe de origem tiver ruído de fundo ou eco de ambiente.
+4. Salve a voz - ela é armazenada como um arquivo `.yvoice` dentro de `models\yune\voices`.
+5. Clique em **Play sample** no Voice Bank para pré-ouvir (a partir da v0.7.0, **Play sample** toca pela sua saída padrão do Windows / fones de ouvido em vez da saída LIVE).
 
-Para partilhar ou fazer cópia de segurança de uma voz, usa **Voice Bank → Open folder** para encontrar o ficheiro `.yvoice`, ou carrega um através de **Import .yvoice…**.
+Para compartilhar ou fazer backup de uma voz, use **Voice Bank → Open folder** para localizar o arquivo `.yvoice`, ou carregue um via **Import .yvoice…**.
 
-> **Uso responsável**: usa apenas vozes que tens o direito de utilizar (a tua ou de alguém que concordou). Nunca uses o YuneVoix para te fazeres passar por pessoas reais, enganar, assediar ou cometer fraude.
+> **Uso responsável:** Use apenas vozes que você tem direito de usar (a sua própria ou a de alguém que concordou). Nunca use o YuneVoix para se passar por pessoas reais, enganar, assediar ou cometer fraude.
 
-## 2. Configurar o encaminhamento de áudio ao vivo
+---
 
-> **Usa sempre auscultadores** em modo ao vivo. Com colunas, a voz convertida volta a entrar no microfone e gera eco, zumbidos e microfonia.
+## 2. Configurar roteamento de áudio ao vivo e monitoramento
 
-### Encaminhar para Discord, OBS, jogos ou VRChat
+> **Sempre use fones de ouvido** no uso ao vivo. Com caixas de som (ou fones abertos muito altos e pouco isolados), a voz convertida pode vazar de volta para o microfone e causar áudio duplo, eco ou microfonia.
 
-1. Instala um cabo de áudio virtual (como o gratuito **VB-CABLE**).
-2. No **YuneVoix**, seleciona o teu microfone físico como entrada e **`CABLE Input`** como dispositivo de saída.
-3. No **Discord, OBS, VRChat ou no jogo**, seleciona **`CABLE Output`** como microfone.
-4. *(Opcional)* Para te ouvires: abre **Definições de Som do Windows → Gravação → CABLE Output → Propriedades → Ouvir**, ativa **"Ouvir este dispositivo"** e escolhe os teus auscultadores.
-5. **No Discord**, desativa a **Supressão de ruído (Krisp)** e a **sensibilidade de entrada automática** para este microfone - cortam respirações e palavras baixas, e o YuneVoix já limpa a entrada.
+### Roteamento para Discord, OBS, jogos ou VRChat
 
-### Latência esperada
+Com um cabo de áudio virtual como **VB-CABLE** (ou **VAC** `Line 1`), lembre-se de que o cabo tem dois lados: o **YuneVoix** envia áudio *para dentro* do cabo, e o **Discord / OBS / jogos** recebem áudio *a partir* do cabo:
 
-Com as definições predefinidas, o atraso total é de cerca de **0,7 segundos**. É ótimo para streaming, chat de voz e gravações, mas demasiado alto para cantar exatamente a tempo com uma faixa. Reduzir o **Output buffer** baixa ligeiramente a latência, com risco de falhas no áudio.
+1. **Dentro do YuneVoix (aba LIVE):**
+   - **Input (Microphone):** Seu microfone físico.
+   - **Output:** **`CABLE Input`** (VB-CABLE) ou **`Line 1`** (VAC).
+2. **Dentro do Discord, OBS, VRChat ou do seu jogo:**
+   - **Dispositivo de Entrada (Microfone):** **`CABLE Output`** (VB-CABLE) ou **`Line 1`** (VAC).
+   - **Dispositivo de Saída (Alto-falantes/Fones):** Seus **fones de ouvido** (nunca o cabo virtual).
+3. **No Discord:** Desative a **Supressão de Ruído (Krisp)** e a **sensibilidade de entrada automática** para este microfone virtual - eles cortam respirações e palavras baixas, e o YuneVoix já cuida da limpeza de entrada.
 
-## 3. Afinações recomendadas
+### Ouvir a si mesmo (Monitoramento integrado)
 
-### Nível do microfone e limpeza de entrada
+**Não** use a opção *"Escutar o dispositivo"* do Windows no cabo virtual. O YuneVoix oferece controles integrados de monitoramento:
 
-- Vai a **Settings → General** e observa **Microphone level**. Aumenta o ganho do microfone no Windows para que a fala forte atinja picos perto de **−6 dBFS**. Um microfone baixo é a causa mais comum de voz robótica ou "debaixo de água".
-- Mantém **Input cleaning** em **`DF3`** em ambientes ruidosos. Numa divisão silenciosa, se risos, respirações ou sussurros forem cortados, desativa **Speech gate** e experimenta **`Gentle`**.
+- **(Opcional) Para se ouvir:** Use **"Listen to input"** (o que o motor ouve após a limpeza de entrada) ou **"Listen to output"** (a voz convertida) na aba **LIVE**.
+- Escolha seu **Monitor device** (seus fones de ouvido, nunca a saída de cabo virtual do LIVE) e **Monitor volume** (padrão `-6 dB`) em **`Settings → General`**.
+- **Nota sobre monitoramento direto:** O *direct monitoring* por hardware do seu headset ou interface de áudio não tem atraso algum, mas reproduz sua **voz original sem processamento**, não a voz convertida.
 
-### Pitch e Autotune
+### Expectativa de latência
 
-Vai a **Settings → Pitch & Autotune**:
-- **Pitch shift**:
-  - **`+12`** para voz masculina → alvo feminino
-  - **`0`** para uma voz no teu próprio registo
-  - **`−12`** para voz feminina → alvo masculino
-  - Ou ativa o **pitch automático**.
-- Para cantar, podes ativar **autotune** (com deteção de tonalidade), **pitch stabilizer**, **vibrato depth** e **harmonia ao vivo** (terças, quintas, oitavas).
+Nas configurações padrão (`Output buffer` `200 ms`), o atraso total ponta a ponta é de cerca de **0.7 segundos** (conforme informado pelo desenvolvedor). Isso funciona muito bem para chat de voz, streaming e gravações, embora seja alto demais para cantar exatamente no tempo com uma faixa ao vivo (para cantar sobre música, veja [Song Cover e Karaoke](song-cover-karaoke.md)).
 
-### Carácter vocal, efeitos e carga de GPU
+---
 
-- **Voice character**: ajusta intensidade do timbre, formante, calor e presença, ou começa a partir de uma predefinição.
-- **Vocal effects**: de-esser, compressor, reverberação e limitador de picos.
-- **Motores de conteúdo e FlowEdit 3+1** (**Settings → Voice & Timbre**):
-  - Experimenta **WavLM+** (suportado em NVIDIA e AMD DirectML; indisponível se estiver selecionado AMD MIGraphX) para manter risos, sussurros e respirações da tua própria voz.
-  - O modo **FlowEdit 3+1** (suportado em NVIDIA e AMD DirectML) preserva mais da tua respiração e articulação naturais (requer uma amostra da tua voz em LIVE).
-  - Em AMD, o **DirectML** na placa dedicada é usado por predefinição; podes opcionalmente testar **MIGraphX** (experimental, após reiniciar) em `Settings → General → "AMD graphics engine"`, embora `WavLM+` e `FlowEdit 3+1` exijam DirectML.
-  - Se estiveres a **jogar ao mesmo tempo** e notares engasgos, baixa os gráficos/FPS do jogo, reduz **Model steps**, usa um prompt mais curto ou desativa **Harmony**.
+## 3. Model Method: Classic vs. Learned 4 Steps vs. FlowEdit 3+1
+
+Você pode escolher **Model method** em **`Settings → Voice & Timbre`** (e separadamente em **`Settings → Song Cover`** para covers e karaoke). As alterações entram em vigor **no próximo START**.
+
+### Classic (Padrão)
+
+- Funciona como nas versões anteriores.
+- **Model steps** (`10` padrão, ou `8` / `6` / `4`), **Solver** (`Euler` / `DPM++ 2M`), **Guidance (CFG) only in the first half of the steps** e **Timbre guidance** aplicam-se **apenas** ao modo Classic.
+
+### Learned 4 steps
+
+- Ajustado para soar como Classic de 10 passos enquanto o modelo precisa de cerca de **40%** do tempo de GPU e menos memória de GPU (segundo as notas do desenvolvedor).
+- Melhor opção para testar quando estiver jogando ao mesmo tempo ou usando placas de vídeo mais modestas.
+
+### FlowEdit 3+1
+
+- Parte da **sua própria voz** em vez de ruído e muda apenas a identidade vocal, buscando preservar melhor **respirações, sussurros, risadas e articulação** (relatado em cerca de **60%** do tempo de GPU do modelo).
+- **Requisito no LIVE:** Precisa de uma amostra de **5-20 segundos** da sua própria fala normal selecionada em **`Settings → Voice & Timbre → "Sample of your voice…"`** (armazenada como `my_voice.yvoice`).
+- **Fallback automático:** Sem essa amostra, ou ao usar **AMD MIGraphX**, o FlowEdit 3+1 volta automaticamente para **Learned 4 steps** e a linha de status LIVE informa isso.
+- **Dica de ambiente e microfone:** Como o FlowEdit preserva mais do seu próprio timbre e da acústica da sala, um ambiente silencioso ou a limpeza de entrada **`DF3`** ajuda a manter a saída limpa.
+
+---
+
+## 4. Ajuste recomendado e Vocal Fry
+
+- **Microphone level (`Settings → General`):** Observe o medidor e aumente o ganho do microfone no Windows para que falas altas tenham picos próximos de **`−6 dBFS`**. Microfone baixo é a causa mais comum de voz robótica ou "debaixo d'água".
+- **Input cleaning (`Settings → General`):** Mantenha **`DF3`** ativado em ambientes barulhentos (remove digitação, cliques e chiado; `+30 ms`). Em salas silenciosas, se risadas ou respirações forem cortadas, deixe **Speech gate** desligado e teste **`Gentle`**.
+- **Smooth out vocal fry (`Settings → Voice & Timbre`, e `Settings → Karaoke`):** Se você fala ou canta muito grave ou com voz crepitante (vocal fry) e a voz de destino soar áspera, ative **Smooth out vocal fry** (funciona ao vivo; mantém o ar/respiração).
+- **Tom e motor de conteúdo:** Ajuste **Pitch shift** (`Settings → Pitch & Autotune`) ou um modo **Automatic pitch**, e compare de ouvido **Whisper** (padrão) vs. **WavLM+** (`Settings → Voice & Timbre`, suportado em NVIDIA e AMD DirectML).
+
+### Jogando enquanto usa o LIVE
+
+Se notar engasgos enquanto joga:
+1. Limite os **FPS** do jogo.
+2. Mude **Model method** para **`Learned 4 steps`**.
+3. Encurte **Prompt length** (ex.: abaixo de `20 s`).
+4. Desative **Harmony** se não precisar dela.
+5. Verifique a carga geral da GPU (reduzir **Model steps** só se aplica ao modo **Classic**).
+
+Próximo passo: [Configurações e Qualidade de Áudio](settings.md).
