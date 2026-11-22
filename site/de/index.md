@@ -26,7 +26,7 @@ Bei Problemen, Vorschlägen oder Hinweisen zu Updates schreib mir auf Discord.
 
 Ilaria RVC ist eine Windows-Anwendung zum Konvertieren von Aufnahmen und zum Trainieren von Sprachmodellen. Die Benutzeroberfläche wird in einem Browser geöffnet und die Konvertierungs-Engine wird auf Ihrem Computer ausgeführt. Das Windows-Paket wurde für NVIDIA-GPUs erstellt.
 
-Wenn dein Computer keine geeignete NVIDIA-GPU hat, kannst du Ilaria RVC auf Kaggle ausführen. Öffne das Notebook im Browser und aktiviere den GPU-Beschleuniger. Die NVIDIA-GPU von Kaggle übernimmt die Stimmkonvertierung und das Modelltraining. Die [Anleitung für Ilaria RVC auf Kaggle](ilaria-rvc/cloud/kaggle.md) zeigt dir, wie du das Notebook einrichtest und die Ergebnisse vor Ende der Sitzung speicherst.
+Wenn dein Computer keine geeignete NVIDIA-GPU hat, kannst du Ilaria RVC auf Kaggle ausführen. Aktiviere in den Notebook-Einstellungen den Internetzugang und wähle einen GPU-Beschleuniger aus. Wähle GPU T4 ×2, falls verfügbar. Die NVIDIA-GPU von Kaggle übernimmt die Stimmkonvertierung und das Modelltraining. Die [Anleitung für Ilaria RVC auf Kaggle](ilaria-rvc/cloud/kaggle.md) zeigt dir, wie du das Notebook einrichtest und die Ergebnisse vor Ende der Sitzung speicherst.
 
 [Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Sprachdemos durchsuchen](https://ilariarvc.shop/en/demos/) · [Änderungsprotokoll lesen](ilaria-rvc/install/version-history.md)
 
