@@ -63,11 +63,11 @@ description: "Guia opcional de NVIDIA GPU Clock Locking para testar se fixar as 
 
 ## 3. Compatibilidade NVIDIA e mensagens de erro
 
-Ter `nvidia-smi` instalado não garante suporte a `--lgc` (muitos portáteis, drivers antigos ou certas arquiteturas bloqueiam-no).
+Ter `nvidia-smi` instalado não garante suporte a `-lgc` (muitos portáteis, drivers antigos ou certas arquiteturas bloqueiam-no).
 
 | Mensagem | Significado | Solução |
 | --- | --- | --- |
-| `Not Supported` | GPU, BIOS do portátil ou driver não permite `--lgc`. | Deixa dinâmico e usa as [Alternativas](#13-alternativas). |
+| `Not Supported` | GPU, BIOS do portátil ou driver não permite `-lgc`. | Deixa dinâmico e usa as [Alternativas](#13-alternativas). |
 | `Insufficient Permissions` | CMD não aberto como administrador. | Botão direito → **Executar como administrador**. |
 | `Invalid Argument` | Sintaxe ou MHz fora de `SUPPORTED_CLOCKS`. | Copia um valor exato de `Graphics :` no formato `min,max`. |
 | `NVIDIA-SMI has failed` | Driver sem resposta ou GPU adormecida. | Verifica Gestor de Dispositivos e liga o carregador. |
@@ -108,7 +108,7 @@ Observa primeiro os clocks normais com `nvidia-smi -i 0 -q -d CLOCK`, escolhe um
 nvidia-smi -i 0 -lgc 1800,1800
 ```
 
-Exemplo com intervalo: `nvidia-smi -i 0 -lgc 1500,1800`. Distingue a frequência pedida da frequência **realmente observada** com `nvidia-smi -i 0 -q -d CLOCK` (ou `-l 1`). A aceitação de `--lgc` não garante um clock perfeitamente fixo: limites térmicos, energéticos ou de firmware podem limitá-lo.
+Exemplo com intervalo: `nvidia-smi -i 0 -lgc 1500,1800`. Distingue a frequência pedida da frequência **realmente observada** com `nvidia-smi -i 0 -q -d CLOCK` (ou `-l 1`). A aceitação de `-lgc` não garante um clock perfeitamente fixo: limites térmicos, energéticos ou de firmware podem limitá-lo.
 
 ---
 
@@ -389,7 +389,7 @@ Mais calor, ruído, consumo, menor bateria em portáteis, throttling e possívei
 
 ## 13. Alternativas
 
-Usa o **Painel de Controlo NVIDIA → Modo de gestão de energia → Preferir desempenho máximo** (não equivale a `--lgc`), aumenta o **Block Size**, confirma `48 kHz` e WASAPI em [Configurar e ajustar Vonovox](live-audio.md), limita FPS em jogos e verifica a refrigeração.
+Usa o **Painel de Controlo NVIDIA → Modo de gestão de energia → Preferir desempenho máximo** (não equivale a `-lgc`), aumenta o **Block Size**, confirma `48 kHz` e WASAPI em [Configurar e ajustar Vonovox](live-audio.md), limita FPS em jogos e verifica a refrigeração.
 
 ---
 

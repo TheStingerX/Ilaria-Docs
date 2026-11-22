@@ -63,11 +63,11 @@ description: "Optionale Anleitung zu NVIDIA GPU Clock Locking, um zu testen, ob 
 
 ## 3. NVIDIA-Kompatibilität und Fehlermeldungen
 
-`nvidia-smi` allein garantiert kein `--lgc` (viele Laptops, ältere Karten oder Treiber sperren es).
+`nvidia-smi` allein garantiert kein `-lgc` (viele Laptops, ältere Karten oder Treiber sperren es).
 
 | Meldung | Bedeutung | Lösung |
 | --- | --- | --- |
-| `Not Supported` | GPU, Laptop-BIOS oder Treiber erlaubt `--lgc` nicht. | Standard lassen und [Alternativen](#13-alternativen) nutzen. |
+| `Not Supported` | GPU, Laptop-BIOS oder Treiber erlaubt `-lgc` nicht. | Standard lassen und [Alternativen](#13-alternativen) nutzen. |
 | `Insufficient Permissions` | CMD nicht als Administrator gestartet. | Rechtsklick → **Als Administrator ausführen**. |
 | `Invalid Argument` | Ungültiger Wert oder falsches `min,max`-Format. | Exakten `Graphics`-Wert aus `SUPPORTED_CLOCKS` wählen. |
 | `NVIDIA-SMI has failed` | Treiber reagiert nicht oder Laptop-GPU schläft. | Geräte-Manager prüfen, Netzteil anschließen. |
@@ -108,7 +108,7 @@ Beobachte zuerst deinen Normaltakt mit `nvidia-smi -i 0 -q -d CLOCK`, wähle ein
 nvidia-smi -i 0 -lgc 1800,1800
 ```
 
-Bereichsbeispiel: `nvidia-smi -i 0 -lgc 1500,1800`. Unterscheide zwischen angefordertem Takt und dem mit `nvidia-smi -i 0 -q -d CLOCK` (oder `-l 1`) **tatsächlich beobachteten Takt**. Dass `--lgc` akzeptiert wird, garantiert keinen dauerhaft fixierten Takt: Power-, Temperatur- oder Firmwarelimits können ihn begrenzen.
+Bereichsbeispiel: `nvidia-smi -i 0 -lgc 1500,1800`. Unterscheide zwischen angefordertem Takt und dem mit `nvidia-smi -i 0 -q -d CLOCK` (oder `-l 1`) **tatsächlich beobachteten Takt**. Dass `-lgc` akzeptiert wird, garantiert keinen dauerhaft fixierten Takt: Power-, Temperatur- oder Firmwarelimits können ihn begrenzen.
 
 ---
 
@@ -389,7 +389,7 @@ Mehr Wärme, Lüftergeräusch, Stromverbrauch, kürzere Akkulaufzeit, mögliches
 
 ## 13. Alternativen
 
-**NVIDIA Systemsteuerung → Energieverwaltungsmodus → Maximale Leistung bevorzugen** (nicht identisch mit `--lgc`), **Block Size** erhöhen, `48 kHz` und WASAPI in [Vonovox einrichten](live-audio.md) prüfen, Spiel-FPS begrenzen und Kühlung prüfen.
+**NVIDIA Systemsteuerung → Energieverwaltungsmodus → Maximale Leistung bevorzugen** (nicht identisch mit `-lgc`), **Block Size** erhöhen, `48 kHz` und WASAPI in [Vonovox einrichten](live-audio.md) prüfen, Spiel-FPS begrenzen und Kühlung prüfen.
 
 ---
 
@@ -400,7 +400,7 @@ Mehr Wärme, Lüftergeräusch, Stromverbrauch, kürzere Akkulaufzeit, mögliches
 | `nvidia-smi` nicht erkannt | Nicht im `PATH`. | Vollständigen Pfad oder BAT-Dateien nutzen. |
 | Keine GPU / `NVIDIA-SMI has failed` | GPU deaktiviert oder im Schlafmodus. | Geräte-Manager prüfen, Netzteil einstecken. |
 | `Insufficient Permissions` | Keine Admin-Rechte. | Als Administrator ausführen. |
-| `Not Supported` | Hardware/Treiber sperrt `--lgc`. | [Alternativen](#13-alternativen) nutzen. |
+| `Not Supported` | Hardware/Treiber sperrt `-lgc`. | [Alternativen](#13-alternativen) nutzen. |
 | `Invalid Argument` | Falsche Syntax oder MHz. | Exakten `Graphics`-Wert aus `SUPPORTED_CLOCKS` nutzen. |
 | Takt weicht ab / fällt | Power- oder Temperaturlimit. | Niedrigeren Takt testen oder `-rgc`. |
 | Hohe Temperaturen | Zu wenig Kühlung. | Sofort `nvidia-smi -i 0 -rgc` ausführen. |

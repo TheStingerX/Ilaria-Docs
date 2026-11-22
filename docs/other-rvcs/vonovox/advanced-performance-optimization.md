@@ -99,18 +99,18 @@ Vonovox processes live microphone audio through **CUDA** on your NVIDIA GPU. Eve
 
 ## 3. NVIDIA Compatibility & Error Messages
 
-Having `nvidia-smi` installed does **not** guarantee that `--lgc` (Lock Graphics Clocks) is supported on your hardware and driver combination.
+Having `nvidia-smi` installed does **not** guarantee that `-lgc` (Lock Graphics Clocks) is supported on your hardware and driver combination.
 
-- **Desktop GeForce GPUs:** Many modern desktop GeForce cards support `--lgc` on recent drivers, though exact clock granularity and behavior depend on architecture and driver version.
-- **Laptop NVIDIA GPUs:** Many laptops restrict clock locking in firmware/BIOS, power management, or Optimus/hybrid graphics paths. Even when `--lgc` is accepted, laptop thermal and power limits frequently override the requested clock.
+- **Desktop GeForce GPUs:** Many modern desktop GeForce cards support `-lgc` on recent drivers, though exact clock granularity and behavior depend on architecture and driver version.
+- **Laptop NVIDIA GPUs:** Many laptops restrict clock locking in firmware/BIOS, power management, or Optimus/hybrid graphics paths. Even when `-lgc` is accepted, laptop thermal and power limits frequently override the requested clock.
 - **Workstation / Datacenter GPUs (Quadro, RTX A-series, Tesla, L4/T4):** Broadly support `nvidia-smi` clock controls on standard enterprise/studio drivers.
-- **Older hardware generations & drivers:** Older architectures (such as Maxwell/Pascal or legacy drivers) may return `Not Supported` for `--lgc` or `SUPPORTED_CLOCKS`. Do not assume every GTX or RTX card supports clock locking.
+- **Older hardware generations & drivers:** Older architectures (such as Maxwell/Pascal or legacy drivers) may return `Not Supported` for `-lgc` or `SUPPORTED_CLOCKS`. Do not assume every GTX or RTX card supports clock locking.
 
 ### Common messages and what they mean
 
 | Message | Meaning | Safe solution |
 | --- | --- | --- |
-| `Not Supported` | Your GPU model, laptop firmware, or current driver does not allow `--lgc` or `SUPPORTED_CLOCKS` queries. | Do not force it. Skip clock locking and use the [alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Not Supported` | Your GPU model, laptop firmware, or current driver does not allow `-lgc` or `SUPPORTED_CLOCKS` queries. | Do not force it. Skip clock locking and use the [alternatives](#13-alternatives-when-clock-locking-does-not-help). |
 | `Insufficient Permissions` | Command Prompt was opened normally instead of **Run as administrator**. | Close CMD, search `cmd` in Start, right-click **Command Prompt**, and choose **Run as administrator**. |
 | `Invalid Argument` | The MHz values you entered are not valid, not formatted as `min,max`, or outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and pick an exact value listed under **Graphics**. |
 | `NVIDIA-SMI has failed` | The NVIDIA driver is not responding, no NVIDIA GPU is active, or the card is asleep in hybrid laptop mode. | Make sure the NVIDIA GPU is enabled in Device Manager and not disabled by a laptop eco/battery mode. |
@@ -246,7 +246,7 @@ Or watch it update every second (press `Ctrl + C` to stop watching):
 nvidia-smi -i 0 -q -d CLOCK -l 1
 ```
 
-Look at **Clocks → Graphics** in the output. **Thermal limits, power limits, and driver or laptop firmware restrictions** can still prevent the GPU from holding the exact requested MHz, and `--lgc` does not always keep a perfectly fixed frequency under all conditions.
+Look at **Clocks → Graphics** in the output. **Thermal limits, power limits, and driver or laptop firmware restrictions** can still prevent the GPU from holding the exact requested MHz, and `-lgc` does not always keep a perfectly fixed frequency under all conditions.
 
 ---
 
@@ -588,7 +588,7 @@ nvidia-smi -i 0 -rmc
 
 ## 13. Alternatives When Clock Locking Does Not Help
 
-If `--lgc` returns `Not Supported` or does not improve your audio, try these safer, often more effective steps:
+If `-lgc` returns `Not Supported` or does not improve your audio, try these safer, often more effective steps:
 
 1. **NVIDIA Control Panel → Power Management Mode:** Set **Power management mode** to **Prefer maximum performance** for the Vonovox executable (`Manage 3D settings → Program Settings`). Note: this is **not** the same as `-lgc` and does not guarantee fixed clocks across all CUDA workloads, but it can reduce aggressive downclocking on some systems.
 2. **Verify Vonovox uses your NVIDIA GPU:** On laptops with hybrid graphics, make sure Vonovox runs on the NVIDIA GPU rather than integrated graphics.
@@ -606,7 +606,7 @@ If `--lgc` returns `Not Supported` or does not improve your audio, try these saf
 | `'nvidia-smi' is not recognized` | `nvidia-smi.exe` is not in `PATH`. | Run `"C:\Windows\System32\nvidia-smi.exe"` or `"C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe"`, or use the `.bat` scripts above. |
 | NVIDIA detects no GPU / `NVIDIA-SMI has failed` | No NVIDIA GPU present, GPU disabled, or laptop hybrid GPU asleep. | Check **Task Manager → Performance**, enable the NVIDIA adapter in Device Manager, and plug in laptop AC power. |
 | `Insufficient Permissions` | CMD was not opened as Administrator. | Right-click **Command Prompt** (or the `.bat` file) and select **Run as administrator**. |
-| `Not Supported` when running `--lgc` | GPU architecture, laptop firmware, or driver does not allow clock locking. | Leave clocks on default and use the [Alternatives](#13-alternatives-when-clock-locking-does-not-help). |
+| `Not Supported` when running `-lgc` | GPU architecture, laptop firmware, or driver does not allow clock locking. | Leave clocks on default and use the [Alternatives](#13-alternatives-when-clock-locking-does-not-help). |
 | `Invalid Argument` | Syntax error or frequency outside supported clocks. | Run `nvidia-smi -i 0 -q -d SUPPORTED_CLOCKS` and enter an exact `Graphics` value with `min,max` format. |
 | Displayed clock does not match requested MHz | Power limit, thermal limit, or driver constraint is capping the GPU. | Test a slightly lower supported clock or check `nvidia-smi -i 0 -q -d PERFORMANCE`. |
 | Clock drops under load | Thermal throttling or laptop power limit reached. | Lower the locked clock, improve cooling, or restore defaults with `-rgc`. |
@@ -616,7 +616,7 @@ If `--lgc` returns `Not Supported` or does not improve your audio, try these saf
 | GPU behaves differently with a game open | Game uses most of the GPU compute/power budget. | Cap game FPS, lower GPU-heavy settings, or raise Vonovox **Block Size**. |
 | Reset command (`-rgc`) fails | Missing admin rights, wrong `-i` index, or driver glitch. | Run CMD as administrator with the right `-i` index, or reboot Windows. |
 | Unsure which MHz value to pick | Haven't checked baseline clocks under load yet. | Run `nvidia-smi -i 0 -q -d CLOCK` while using Vonovox normally, then pick a supported value near that range. |
-| Laptop limits clocks automatically | Laptop OEM power profile / battery / firmware cap. | Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of `--lgc`. |
+| Laptop limits clocks automatically | Laptop OEM power profile / battery / firmware cap. | Plug in the charger, use Balanced/Performance OEM mode, or rely on Block Size tuning instead of `-lgc`. |
 
 ---
 
@@ -633,7 +633,7 @@ If `--lgc` returns `Not Supported` or does not improve your audio, try these saf
 5. **Will it reduce latency?**
    It does not lower minimum latency below what your GPU can already compute, though it may reduce sudden **latency spikes** caused by clock ramping on some setups.
 6. **Does it work on laptops?**
-   Sometimes, but many laptops restrict `--lgc` in firmware or hit thermal/power limits quickly. Always keep laptops plugged into AC power when testing.
+   Sometimes, but many laptops restrict `-lgc` in firmware or hit thermal/power limits quickly. Always keep laptops plugged into AC power when testing.
 7. **Does it work on every NVIDIA GPU?**
    No. Support depends on the GPU generation, board/laptop firmware, and driver version.
 8. **Should I always select the maximum clock?**
@@ -641,7 +641,7 @@ If `--lgc` returns `Not Supported` or does not improve your audio, try these saf
 9. **Can I use `50000` MHz?**
    No. Never enter arbitrary numbers. Out-of-range values can fail with `Invalid Argument` and are not guaranteed to clamp safely.
 10. **Does it work with RTX GPUs?**
-    Many desktop RTX cards support `--lgc` on modern drivers, while some laptops or specific configurations may return `Not Supported`. Test with `SUPPORTED_CLOCKS` first.
+    Many desktop RTX cards support `-lgc` on modern drivers, while some laptops or specific configurations may return `Not Supported`. Test with `SUPPORTED_CLOCKS` first.
 11. **Do I need to apply it every time?**
     Yes, if you decide to keep using it, because `nvidia-smi` clock locks reset on reboot or driver restart.
 12. **Will the settings survive a reboot?**
