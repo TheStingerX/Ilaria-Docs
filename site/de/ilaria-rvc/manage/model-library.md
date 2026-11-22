@@ -28,5 +28,3 @@
 ## Kompatible Stimmen mischen
 
 Wähle zwei kompatible **Inferenz**-`.pth` in [Voice Blender](voice-blender.md) und teste mit `Index Ratio = 0`.
-
-[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

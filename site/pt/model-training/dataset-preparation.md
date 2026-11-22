@@ -95,5 +95,3 @@ As compilações recentes do Ilaria RVC permitem arrastar áudio ou um ZIP de co
  | Uma sessão é muito mais silenciosa. | Verifique se o desempenho do palestrante é intencionalmente silencioso. Ajuste as diferenças de ganho de gravação enquanto mantém a dinâmica natural útil. |
 
 Antes de continuar, reproduza alguns clipes de cada sessão, confirme que selecionou a pasta preparada e grave a versão da pasta em suas anotações. Então [execute um experimento de treinamento](training.md).
-
-[Estimador de VRAM e treino](../reference/vram-estimator.md)

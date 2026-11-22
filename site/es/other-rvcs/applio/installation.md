@@ -34,5 +34,3 @@ Puedes instalar un paquete de escritorio oficial sin Node.js o pnpm. Esas herram
 | La conversión de archivos comienza pero se queda sin memoria | Cierra los trabajos de la competencia y prueba unos segundos de audio con los efectos desactivados. Pruebe un dispositivo compatible con su compilación. |
 
 Antes de instalar una nueva versión o mover carpetas, guarde el audio de trabajo y haga una copia de seguridad de modelos, índices, conjuntos de datos y experimentos de entrenamiento completos personalizados. Después de la actualización, utilice la misma grabación breve y la misma voz para confirmar que el nuevo motor produce un resultado utilizable.
-
-[Matriz interactiva de compatibilidad con RVC](../../reference/compatibility-matrix.md)

@@ -41,5 +41,3 @@ Because the RVC generator is trained to expect features from **one specific embe
 - **Leave it on `Auto` or `contentvec`** for almost every voice model and training run.
 - **Only change it** if you downloaded a pre-trained voice whose author explicitly states it was trained with a specific embedder (for example `spin-v2` or `japanese-hubert-base`). Even then, only change it for inference on that specific model, not as your default for new training.
 - **Do not switch embedders mid-training**: changing the embedder requires re-extracting features (`3_feature768`) in a separate experiment.
-
-[Interactive RVC Compatibility Matrix](../reference/compatibility-matrix.md)

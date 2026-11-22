@@ -49,5 +49,3 @@ Für Windows v2 listet das Projekt sowohl Torch- als auch ONNX-Unterstützung au
 | Das Modellfenster wird geöffnet, aber die Mikrofonliste ist leer. | Überprüfen Sie die Eingabeanzeige des Betriebssystems und die Browser-Site-Berechtigung. Laden Sie im Client-Modus neu, nachdem Sie die Erlaubnis erteilt haben. Aktualisieren Sie im Servermodus die eigene Geräteliste des Servers. |
 
 Weiter mit [Live-Audio, Routing und Fehlerbehebung](live-audio.md).
-
-[Interaktive RVC-Kompatibilitätsmatrix](../../reference/compatibility-matrix.md)

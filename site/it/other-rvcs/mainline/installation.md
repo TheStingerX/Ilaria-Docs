@@ -101,5 +101,3 @@ Esegui `python webui.py` dalla stessa directory. La cartella `assets/hubert_base
 | HuBERT, RMVPE o FFmpeg mancanti | Controlla le cartelle delle risorse e i percorsi eseguibili sopra. Riprova con un semplice WAV locale dopo aver corretto il file mancante. |
 
 Quando si apre l'interfaccia, continua con [la tua prima conversione di file](inference.md).
-
-[Matrice interattiva di compatibilità RVC](../../reference/compatibility-matrix.md)

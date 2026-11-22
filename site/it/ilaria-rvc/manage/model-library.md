@@ -28,5 +28,3 @@
 ## Unisci voci compatibili
 
 Scegli due `.pth` di **inferenza** compatibili in [Voice Blender](voice-blender.md), verifica la compatibilità, imposta il rapporto e prova il risultato con `Index Ratio = 0`.
-
-[Matrice interattiva di compatibilità RVC](../../reference/compatibility-matrix.md)

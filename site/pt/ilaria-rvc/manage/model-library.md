@@ -28,5 +28,3 @@
 ## Fundir vozes compatíveis
 
 Escolhe dois `.pth` de **inferência** compatíveis no [Voice Blender](voice-blender.md) e testa com `Index Ratio = 0`.
-
-[Matriz interativa de compatibilidade RVC](../../reference/compatibility-matrix.md)

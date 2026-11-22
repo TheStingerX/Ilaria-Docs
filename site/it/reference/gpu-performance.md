@@ -28,5 +28,3 @@ Conversione vocale e training RVC dipendono da calcolo GPU, banda di memoria e s
 ## 4. Ottimizzazione avanzata facoltativa (NVIDIA)
 
 Su GPU NVIDIA compatibili, bloccare i clock grafici con `nvidia-smi` è un test **facoltativo** che può ridurre le oscillazioni di latenza in app come Vonovox. Consulta [Ottimizzazione prestazioni avanzata Vonovox](../other-rvcs/vonovox/advanced-performance-optimization.md) per la procedura reversibile e gli script BAT.
-
-[Stimatore VRAM e training](vram-estimator.md)

@@ -31,5 +31,3 @@ Non affidarti a stime o numeri isolati quando ottimizzi il training RVC o la con
 | Throttling osservato | `Sì / No` | `Sì / No` |
 
 5. **Mantieni solo miglioramenti reali:** Se il Test B non migliora o introduce calore e instabilità, torna al Test A.
-
-[Stimatore VRAM e training](vram-estimator.md)

@@ -55,5 +55,3 @@ If the model fails to load, verify RVC V2 and the embedder before changing audio
 | No microphone signal | Test the physical mic in Windows, then reselect the same device in Vonovox. |
 | Good local sound but silence in a call | Work through the cable endpoints and destination mic selection in the routing guide. |
 | Audio breaks only during a game | Test with the game open and raise the block size one step if needed. |
-
-[Interactive RVC Compatibility Matrix](../../reference/compatibility-matrix.md)

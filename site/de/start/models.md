@@ -67,5 +67,3 @@ Speichere die funktionierende App-Version, Modellversion, gewählten Pitch und R
 - [Inferenz](../ilaria-rvc/convert/inference.md)
 - [Dataset-Vorbereitung](../model-training/dataset-preparation.md)
 - [Fehlerbehebung](../reference/troubleshooting.md)
-
-[Interaktive RVC-Kompatibilitätsmatrix](../reference/compatibility-matrix.md)

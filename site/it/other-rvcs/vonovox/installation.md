@@ -55,5 +55,3 @@ Se il modello non viene caricato, verificare RVC V2 e l'embedder prima di modifi
 | Nessun segnale dal microfono | Prova il microfono fisico in Windows, quindi seleziona nuovamente lo stesso dispositivo in Vonovox. |
 | Buon suono locale ma silenzio durante una chiamata | Gestisci i terminali del cavo e la selezione del microfono di destinazione nella guida di instradamento. |
 | L'audio si interrompe solo durante una partita | Prova con il gioco aperto e aumenta la **Block Size** di un livello se necessario. |
-
-[Matrice interattiva di compatibilità RVC](../../reference/compatibility-matrix.md)

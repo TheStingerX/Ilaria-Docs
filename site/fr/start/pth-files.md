@@ -69,5 +69,3 @@ Si vous placez un `G_*.pth` brut dans `models/` et tentez une conversion, RVC pl
 | `EOFError` / `invalid load key` / `File is not a zip archive` | Téléchargement interrompu ou page HTML enregistrée à la place du fichier. | Vérifiez la taille : un `.pth` valide fait **40 - 110+ Mo**, pas quelques Ko. Supprimez et retéléchargez. |
 | `Missing key(s) in state_dict` / `Sizes of tensors must match` | Vous avez chargé un checkpoint brut `G_*.pth` au lieu d'un `.pth` exporté. | Exportez proprement le modèle final au lieu de copier `G_*.pth` depuis `logs/`. |
 | `UnpicklingError` / `Weights only load failed` | PyTorch 2.6+ a bloqué d'anciens objets pickle sur une app RVC obsolète. | Mettez à jour vers **Ilaria RVC 2.4.0+** ou le dernier **Applio**. |
-
-[Matrice interactive de compatibilité RVC](../reference/compatibility-matrix.md)

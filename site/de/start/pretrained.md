@@ -79,5 +79,3 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 !!!
 
 > **Kompatibilitätshinweis**: In Ilaria RVC wird RefineGAN-Training speziell bei `32 kHz` mit RVC v2 und Pitch-Guidance unterstützt. Ein `40 kHz`- oder `44.1 kHz`-RefineGAN-Pretrain bei auf `32 kHz` eingestelltem Training schlägt fehl oder liefert kaputte Ergebnisse.
-
-[Interaktive RVC-Kompatibilitätsmatrix](../reference/compatibility-matrix.md)

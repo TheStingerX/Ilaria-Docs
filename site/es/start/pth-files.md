@@ -69,5 +69,3 @@ Si copias un `G_*.pth` crudo dentro de `models/` e intentas convertir audio, RVC
 | `EOFError` / `invalid load key` / `File is not a zip archive` | La descarga se cortó o guardó una página HTML en vez del binario. | Revisa el tamaño: un `.pth` válido pesa **40 - 110+ MB**, no pocos KB. Borra y vuelve a descargar. |
 | `Missing key(s) in state_dict` / `Sizes of tensors must match` | Cargaste un checkpoint crudo `G_*.pth` en lugar de un `.pth` exportado. | Exporta el modelo final correctamente en vez de copiar `G_*.pth` de `logs/`. |
 | `UnpicklingError` / `Weights only load failed` | PyTorch 2.6+ bloqueó objetos pickle antiguos en una app RVC vieja. | Actualiza a **Ilaria RVC 2.4.0+** o al último **Applio**. |
-
-[Matriz interactiva de compatibilidad con RVC](../reference/compatibility-matrix.md)

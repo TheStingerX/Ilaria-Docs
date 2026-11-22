@@ -95,5 +95,3 @@ Mit den neuesten RVC-Builds von Ilaria können Sie Audio- oder ZIP-Datensätze i
  | Eine Sitzung ist viel leiser | Überprüfen Sie, ob die Leistung des Lautsprechers absichtlich leise ist. Passen Sie Unterschiede in der Aufnahmeverstärkung an und bewahren Sie gleichzeitig die nützliche natürliche Dynamik. |
 
 Bevor Sie fortfahren, spielen Sie einige Clips aus jeder Sitzung ab, bestätigen Sie, dass Sie den vorbereiteten Ordner ausgewählt haben, und notieren Sie die Ordnerversion in Ihren Notizen. Dann [führen Sie ein Trainingsexperiment durch](training.md).
-
-[VRAM- und Trainingsrechner](../reference/vram-estimator.md)
