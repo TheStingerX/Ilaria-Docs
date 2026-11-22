@@ -1,68 +1,75 @@
 ---
 label: "📦 Modèles et fichiers RVC"
 order: 93
-permalink: /models/
-description: "Un modèle RVC transforme le timbre d’une voix existante. Les mots, le rythme et les pauses viennent de l’enregistrement d’origine."
+permalink: /fr/models/
+description: "Un modèle RVC modifie le timbre d'une interprétation existante. L'enregistrement source continue de fournir les mots, le phrasé et le rythme."
 ---
 # Modèles et fichiers RVC
 
-Un modèle RVC transforme le timbre d’une voix existante. Les mots, le rythme et les pauses viennent de l’enregistrement d’origine. Pour commencer, choisissez une seule voix, sans musique ni effets.
+Un modèle RVC modifie le timbre d'une interprétation existante. L'enregistrement source continue de fournir les mots, le phrasé et le rythme. Vous avez besoin d'un modèle d'inférence compatible et d'un enregistrement ou d'un signal micro. Commencez avec une seule voix isolée afin d'entendre clairement ce que fait le modèle.
 
-## Comprendre les fichiers
+## Ce que font les fichiers
 
-| Fichier | Utilisation |
-| --- | --- |
-| `.pth` d’inférence | Poids du modèle à sélectionner dans le convertisseur. |
-| `.index` associé | Index de recherche facultatif. La conversion fonctionne sans lui. |
-| `.zip` | Archive à importer si l’application le permet, ou à extraire. |
-| `G_*.pth` et `D_*.pth` | Points de sauvegarde qui peuvent servir à reprendre l’entraînement. Choisissez l’export d’inférence pour convertir. |
+| Fichier | Contenu | Que faire |
+| --- | --- | --- |
+| `.pth` d'inférence | Les poids du modèle utilisés pour la conversion. | Chargez-le dans le sélecteur de modèle. |
+| `.index` correspondant | Des caractéristiques que l'application peut récupérer pendant la conversion. | Ajoutez-le s'il est disponible. Vous pouvez convertir sans lui. |
+| `.zip` | Une archive pouvant contenir le modèle, l'index et un README. | Utilisez l'import ZIP si votre application le prend en charge, ou extrayez-le et sélectionnez les fichiers individuellement. |
+| Checkpoints d'entraînement, comme `G_*.pth` et `D_*.pth` | Fichiers intermédiaires servant à reprendre l'entraînement, selon l'application. | Utilisez le modèle d'inférence exporté dans votre convertisseur. L'extension `.pth` seule n'identifie pas le rôle du fichier. |
 
-## Quel index choisir ?
+## Quel index dois-je utiliser ?
 
-Dans RVC WebUI (Mainline - Original RVC), `trained_*.index` est l’index FAISS entraîné avant l’ajout des vecteurs. `added_*.index` contient les vecteurs consultables. Si les deux existent, utilisez le fichier `added_*.index` associé. Si seul `trained_*.index` est disponible, désactivez la recherche ou générez l’index complet. Les noms varient selon l’application.
+Dans l'entraînement de RVC WebUI (Mainline - RVC original), `trained_*.index` est l'index FAISS après qu'il a appris à organiser les caractéristiques, avant l'ajout des vecteurs de caractéristiques. `added_*.index` est la version peuplée. Pour la conversion, choisissez le `added_*.index` correspondant si les deux existent. Si vous n'avez que `trained_*.index`, laissez la récupération (retrieval) désactivée ou générez l'index peuplé depuis l'expérience. D'autres applications peuvent utiliser des noms de fichiers différents.
 
-Un fichier `.index` fourni avec le modèle exporté contient très probablement déjà les vecteurs, même sans le préfixe `added_`. Le nom seul ne le garantit pas.
+Un `.index` fourni avec un modèle exporté est très probablement déjà peuplé, même si son nom ne comporte pas le préfixe `added_`. Le nom seul ne peut pas confirmer son contenu.
 
-## À quoi servent les dossiers d’entraînement ?
+## Que sont les dossiers d'entraînement ?
 
-Ces dossiers se trouvent généralement dans `logs/<expérience>/`. Pour la conversion, préparez le `.pth` exporté et, si vous le souhaitez, l’index associé contenant les vecteurs.
+Ces dossiers apparaissent couramment dans `logs/<experiment>/`. Ce sont des fichiers de travail pour l'entraînement et l'évaluation. Une voix terminée n'a besoin que de son `.pth` d'inférence exporté et, en option, de l'index peuplé correspondant.
 
 | Dossier | Contenu |
 | --- | --- |
-| `0_gt_wavs` | Segments prétraités à la fréquence d’échantillonnage de l’expérience. |
-| `1_16k_wavs` | Copies des segments à 16 kHz pour l’extraction des caractéristiques. |
-| `2a_f0` | Hauteur fondamentale sous forme de valeurs discrètes. |
-| `2b-f0nsf` | Fréquence fondamentale continue en hertz. |
-| `3_feature768` | Vecteurs de 768 dimensions pour RVC v2, utilisés pour l’entraînement et l’index. |
-| `eval` | Sorties d’évaluation, par exemple les événements TensorBoard selon le logiciel. |
+| `0_gt_wavs` | Extraits vocaux prétraités à la fréquence d'échantillonnage de l'expérience. Ils servent de cibles audio pendant l'entraînement. |
+| `1_16k_wavs` | Copies à 16 kHz des extraits utilisées pour l'extraction de caractéristiques. |
+| `2a_f0` | Hauteur extraite enregistrée sous forme de valeurs discrètes pour les modèles conditionnés par la hauteur. |
+| `2b-f0nsf` | Hauteur continue en hertz pour les modèles conditionnés par la hauteur. |
+| `3_feature768` | Vecteurs de caractéristiques par extrait à 768 dimensions au format RVC v2. Ces caractéristiques servent à l'entraînement et peuvent aussi peupler l'index de récupération. |
+| `eval` | Sortie d'évaluation, comme les fichiers d'événements TensorBoard si le build les écrit ici. Son contenu dépend de l'entraîneur. |
 
-## Choisir une voix
+## Choisir un modèle adapté
 
-Écoutez des démonstrations proches de votre usage. Pour la parole, vérifiez les consonnes et les passages calmes. Pour le chant, écoutez les notes tenues et les extrêmes de la tessiture visée. Vérifiez le moteur compatible, la version et les conditions d’utilisation. Testez séparément chaque langue dont vous avez besoin.
+Écoutez des démos ressemblant à votre entrée prévue. Pour la parole, écoutez les consonnes, les mots faibles et les pauses naturelles. Pour le chant, vérifiez les notes tenues ainsi que les extrémités grave et aiguë de votre tessiture. Si vous prévoyez un usage en direct, testez en parlant librement et en variant le volume. Vérifiez le moteur et la version du modèle documentés, les limitations de langue connues et les conditions d'utilisation. Un modèle qui sonne bien dans une langue peut paraître inégal dans une autre, même si le dataset d'entraînement inclut les deux.
 
-## Importer et organiser
+## Importer et organiser vos modèles
 
-Téléchargez le modèle auprès d’une source de confiance. Gardez chaque version dans un dossier avec son index éventuel et sa documentation. Dans Ilaria RVC, ouvrez **Other → Import Local Models**, puis importez le `.pth` d’inférence ou un ZIP compatible. Ajoutez uniquement l’index associé.
+1. Téléchargez depuis une source fiable et lisez les notes incluses. Les fichiers de modèle peuvent être dangereux lorsqu'ils sont chargés par des logiciels désérialisant des objets arbitraires.
+2. Conservez chaque voix et chaque version dans son propre dossier, avec le `.pth` exporté, son `.index` optionnel et les notes. Les noms de fichiers seuls ne suffisent pas pour associer un index à un modèle.
+3. Dans Ilaria RVC, ouvrez **Other → Import Local Models**. Choisissez le `.pth` d'inférence ou un ZIP pris en charge, puis ajoutez le `.index` correspondant si vous l'avez. D'autres applications peuvent demander d'actualiser la liste des modèles après import.
 
-## Faire un essai
+## Lancer une première conversion
 
-1. Enregistrez dix secondes de voix claire et sans musique.
-2. Convertissez à zéro demi-ton et sans recherche dans l’index. Gardez ce WAV comme référence.
-3. Ajustez progressivement la hauteur si le registre sonne forcé, puis essayez une faible valeur de recherche avec l’index associé.
-4. Réécoutez le même extrait au même volume. Contrôlez les consonnes et les respirations.
+1. Enregistrez environ dix secondes d'une seule voix dans une pièce calme, sans musique, sans forte réverbération ni écrêtage.
+2. Sélectionnez le modèle souhaité, laissez la récupération d'index désactivée et commencez à décalage de hauteur nul. Enregistrez le WAV converti comme référence.
+3. Si le registre paraît forcé, comparez de petits décalages de hauteur en demi-tons sur la même entrée. Le décalage de hauteur change le registre, jugez-le donc séparément de l'identité vocale.
+4. Une fois la hauteur réglée, testez une légère augmentation de la récupération avec l'index correspondant. Écoutez si le caractère vocal devient plus net, puis vérifiez si les respirations ou consonnes deviennent rugueuses. Gardez le réglage qui sonne le mieux, y compris zéro.
 
-## Résoudre les problèmes
+## Diagnostiquer les problèmes courants
 
-Si le chargement échoue, vérifiez le moteur et le type de checkpoint. Si le timbre source reste audible, comparez avec un autre modèle. Un modèle ou son encodeur, notamment certaines variantes de HuBERT, peut conserver trop de timbre source. Si les respirations restent métalliques sur plusieurs entrées propres, le modèle peut nécessiter un nouvel entraînement. Si les coupures surviennent seulement en direct, vérifiez le routage et le tampon audio.
+| Symptôme | Quoi vérifier |
+| --- | --- |
+| L'application ne parvient pas à charger le modèle | Confirmez le moteur, la version et le type de fichier. Extrayez le ZIP si l'importateur le refuse, puis sélectionnez les poids d'inférence exportés. |
+| Le résultat sonne encore comme la source | Comparez avec un autre modèle fiable sur le même extrait. Un timbre source persistant peut venir du modèle ou de son embedder d'entraînement, y compris des variantes HuBERT. Augmenter la récupération peut ne pas suffire. |
+| Les respirations ou consonnes sonnent métalliques | Comparez avec la récupération désactivée. Si le problème persiste sur des entrées propres et différents réglages, il peut venir du modèle et nécessiter un réentraînement. |
+| Seule la sortie en direct saccade | Testez le même modèle sur un fichier. Si la conversion de fichier fonctionne, vérifiez le microphone, le routage audio et le tampon dans l'application en direct. |
 
-## Conserver une référence
+## Garder un modèle prêt à réutiliser
 
-Notez la version du modèle et du logiciel, la transposition et la valeur de recherche. Gardez une courte prise de référence pour comparer le résultat après une mise à jour.
+Notez la version fonctionnelle de l'application, la version du modèle, la hauteur choisie et les réglages de récupération avec un court extrait de référence. Testez à nouveau après un changement d'application ou une mise à jour du modèle. Si vous entraînez vos propres voix, conservez l'export pour l'inférence et les fichiers nécessaires à la reprise de l'entraînement dans des dossiers séparés.
 
-## Poursuivre avec les guides
+## Continuer avec les guides
 
-- [Guides par application](../other-rvcs/app-guides.md)
+- [Guides d'applications](../other-rvcs/app-guides.md)
 - [Bibliothèque de modèles Ilaria RVC](../ilaria-rvc/manage/model-library.md)
 - [Inférence](../ilaria-rvc/convert/inference.md)
-- [Préparer les données](../model-training/dataset-preparation.md)
+- [Préparation du dataset](../model-training/dataset-preparation.md)
 - [Dépannage](../reference/troubleshooting.md)

@@ -103,12 +103,14 @@ Dopo la chiusura di Weights.gg, Replay non riceve più supporto né aggiornament
 
 | App | OS | GPU / CPU | Formati | TTS | Stato e Licenza | Facilità |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Ilaria RVC** | Windows, Linux (Cloud) | NVIDIA CUDA (12.8 / 12.6) | .pth, .index, .safetensors | Sì (Kokoro / Edge) | **Attivo** (MIT) | Facile (ZIP portatile) |
-| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 .pth, .index | No | **Beta** (2.0.0 Beta 3) | Facile |
-| **Applio** | Windows, Linux, macOS | NVIDIA, AMD (doc.), MPS, CPU | .pth, .index, .onnx | Sì | **Attivo** (MIT) | Facile–Media |
-| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML, MPS, CPU | .pth, .onnx | No | **Attivo** (MIT) | Media |
-| **Okada TGR / Deiteris** | Windows, Linux, macOS | NVIDIA CUDA, DirectML, CPU | .pth, .onnx | No | **Fork attivi** | Media |
-| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | .pth, .index | No | **Upstream lento** (MIT) | Media |
-| **RVC Blue** | Windows | NVIDIA CUDA (12.8 / 11.8) | .pth, .index | No | **Attivo** | Facile |
-| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
-| **RVC GUI / Replay** | Windows / Legacy | NVIDIA / Legacy | .pth | No | **Archiviato / Dismesso** | Legacy |
+| **Ilaria RVC** | Windows (locale), Linux (Cloud) | NVIDIA CUDA (`12.8` / `12.6` legacy) | `.pth`, `.index`, `.safetensors` (converter) | Sì (Kokoro / Edge) | **Attivo** (MIT / basato su RVC) | Facile (ZIP portatile) |
+| **Vonovox** | Windows | NVIDIA CUDA | RVC v2 `.pth`, `.index` | No | **Beta** (`2.0.0 Beta 3`) | Facile (ZIP per GPU) |
+| **Applio** | Windows, Linux, macOS (MPS) | NVIDIA, AMD (doc.), Apple MPS, CPU | `.pth`, `.index`, `.onnx` (export) | Sì | **Attivo** (MIT) | Facile-Media (Installer / Python) |
+| **w-okada VCClient** | Windows, macOS, Linux | NVIDIA, DirectML (AMD/Intel), MPS, CPU | `.pth`, `.onnx` | No | **Attivo / Mantenuto** (MIT) | Media (dipende dall'edizione) |
+| **Okada TG Developed Fork** | Windows, Linux, macOS (sper.) | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Fork attivo** | Media (ZIP / Build) |
+| **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Fork attivo** | Media (ZIP / Build) |
+| **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | No | **Upstream / Lento** (MIT) | Media (ZIP / Git) |
+| **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | No | **Attivo** | Facile (ZIP portatile) |
+| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice su CPU) | RVC, Beatrice, Rectified Flow | No | **Fork attivo** | Media |
+| **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archiviato** | Facile (ZIP legacy) |
+| **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Dismesso** (Weights.gg chiuso) | Non funzionante / Solo legacy |

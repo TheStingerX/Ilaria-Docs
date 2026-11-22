@@ -62,7 +62,7 @@ Posiziona il checkpoint di inferenza in `assets/weights` e il suo indice di recu
 
 Fornisci alla WebUI il percorso completo di un breve file WAV locale. Se il percorso fallisce, copia il file di test in una posizione semplice come `C:\RVC\input\test.wav`. Mantieni la trasposizione a zero per il primo passaggio e seleziona RMVPE se la tua build lo offre. Fai clic su **Converti**, quindi ascolta nel lettore di output e salva il risultato utilizzando il controllo di download. Se la generazione fallisce, leggere il messaggio della console prima di modificare le impostazioni. Un modello che non appare nell'elenco solitamente deve essere spostato nella directory dei pesi o riscoperto utilizzando l'aggiornamento.
 
-## Converti una registrazione in Applio
+## Converti una registrazione in Applio {#convert-a-recording-in-applio}
 
 ### Imposta un test su file singolo
 

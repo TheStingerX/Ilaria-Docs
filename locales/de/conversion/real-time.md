@@ -1,109 +1,121 @@
 ---
-label: "⚡ Echtzeitkonvertierung"
+label: "⚡ Echtzeit-Konvertierung"
 order: 92
-permalink: /real-time/
-description: "Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonvertierung mehrere Takes rendern und vergleichen."
+permalink: /de/real-time/
+description: "Bei einer Aufnahme oder einem Cover kannst du mit der Dateikonvertierung mehrere Takes rendern und vergleichen."
 ---
-# Echtzeit-Sprachkonvertierung
+# Echtzeit-Stimmenkonvertierung
 
-Bei einer Aufnahme oder einem Cover können Sie mit der Dateikonvertierung mehrere Takes rendern und vergleichen. In einem Live-Setup muss der Konverter jeden Audioblock schnell genug fertigstellen, um den Mikrofonstrom in Bewegung zu halten. Konfigurieren Sie zunächst ein zuverlässiges lokales Signal und verbinden Sie es dann mit einer Anruf-, Aufnahme- oder Streaming-Anwendung.
+Bei einer Aufnahme oder einem Cover kannst du mit der Dateikonvertierung mehrere Takes rendern und vergleichen. Im Live-Betrieb muss der Konverter jeden Audioblock schnell genug abschließen, um den Mikrofonstream flüssig zu halten. Richte zuerst ein zuverlässiges lokales Signal ein und verbinde es dann mit einer Anruf-, Aufnahme- oder Streaming-Anwendung.
 
-## Wählen Sie ein Tool für den Job.
+## Wähle das passende Werkzeug
 
-Im [RVC-Tools-Verzeichnis](../reference/tools.md) finden Sie Downloads und Hardware-Hinweise, einschließlich Vonovox für NVIDIA-GPUs.
+Siehe das [RVC-Tool-Verzeichnis](../reference/tools.md) für Downloads und Hardwarehinweise, einschließlich Vonovox für NVIDIA-GPUs.
 
- | Tool | Wo soll ich anfangen |
+| Tool | Wo anfangen |
 | --- | --- |
- | Vonovox | Ein Echtzeitkonverter für RVC V2-Modelle unter Windows mit einer NVIDIA-GPU. Laden Sie einen Build für Ihre GPU herunter, laden Sie das Modell und testen Sie Ihr Mikrofon über Kopfhörer, bevor Sie das konvertierte Signal an eine andere App weiterleiten. [Vonovox-Downloads](https://huggingface.co/dr87/vonovox/tree/main) · [Projektdokumentation](https://github.com/dr87/Vonovox) |
- | RVC WebUI (Mainline - Original RVC) | Das Upstream-Projekt bietet eine Schulungs- und Inferenz-WebUI sowie eine dedizierte Echtzeit-GUI. Beachten Sie die Release- und Launcher-Anweisungen für die von Ihnen verwendete Plattform. |
- | Applio | Die Desktop- und Gradio-Schnittstellen verfügen über eigene Echtzeit-Workflows. Befolgen Sie die Setup-Anweisungen für die Schnittstelle und Version, die Sie installiert haben. |
- | w-okada VCClient | Ein Stimmverzerrer für den Live-Einsatz. Die RVC-Verfügbarkeit hängt von der Release-Edition und der Plattform ab. Überprüfen Sie die unterstützten Modelle, bevor Sie einen Build installieren. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
- | Deiteris und Tg-Develop | Unabhängige w-okada-Forks mit ihren eigenen Builds und Einstellungen. Überprüfen Sie die Versionshinweise des Forks, bevor Sie Anweisungen für eine andere Edition anwenden. [Deiteris-Repository](https://github.com/deiteris/voice-changer) · [Tg-Develop-Repository](https://github.com/tg-develop/voice-changer) |
+| Vonovox | Ein Echtzeit-Konverter für RVC-V2-Modelle unter Windows mit NVIDIA-GPU. Lade einen Build für deine GPU herunter, lade das Modell und teste dein Mikrofon über Kopfhörer, bevor du das konvertierte Signal an eine andere App routest. [Vonovox-Downloads](https://huggingface.co/dr87/vonovox/tree/main) · [Projektdokumentation](https://github.com/dr87/Vonovox) |
+| RVC WebUI (Mainline - Original RVC) | Das Hauptprojekt bietet eine Trainings- und Inferenz-WebUI sowie eine eigene Echtzeit-GUI. Beachte die Release- und Startanweisungen für deine Plattform. |
+| Applio | Seine Desktop- und Gradio-Oberflächen besitzen eigene Echtzeit-Workflows. Folge den Einrichtungsanweisungen für deine installierte Oberfläche und Version. |
+| w-okada VCClient | Ein Voice Changer für Live-Nutzung. RVC-Verfügbarkeit hängt von Edition und Plattform ab. Prüfe unterstützte Modelle vor der Installation. [w-okada VCClient](https://github.com/w-okada/voice-changer) |
+| Deiteris und Tg-Develop | Eigenständige w-okada-Forks mit eigenen Builds und Einstellungen. Lies die Release-Notes des Forks, bevor du Anleitungen einer anderen Edition übernimmst. [Deiteris-Repository](https://github.com/deiteris/voice-changer) · [Tg-Develop-Repository](https://github.com/tg-develop/voice-changer) |
 
+## Zuerst ein sauberes Signal abhören
 
-## Hören Sie zuerst ein sauberes Signal.
+1. Schließe Mikrofon und Kopfhörer an. Wähle im Konverter dein physisches Mikrofon als Eingang und deine Kopfhörer als Ausgang.
+2. Lade ein bekanntermaßen kompatibles Inferenzmodell und den passenden Index, falls du Retrieval nutzt. Eine erfolgreiche kurze [Dateikonvertierung](../start/getting-started.md) ist eine nützliche Referenz vor dem Live-Test.
+3. Starte den Stream und sprich in normaler Lautstärke. Prüfe die Pegelanzeige oder mache eine trockene Aufnahme. Senke den Eingangspegel, falls Spitzen vor der Konvertierung clippen.
+4. Prüfe, ob sich das Kopfhörersignal beim Umschalten der Konvertierung ändert. Hörst du gleichzeitig das Original, prüfe direktes Hardware-Monitoring oder einen zweiten Pfad im Betriebssystem.
+5. Teste länger als ein einzelnes Wort. Nutze leise Sprache, einen lauten Satz und eine kurze Pause. Achte auf Abbrüche, Drift oder Störungen unter derselben Auslastung wie im Live-Einsatz.
 
-1. Schließen Sie ein Mikrofon und Kopfhörer an. Wählen Sie im Konverter Ihr physisches Mikrofon als Eingang und Ihre Kopfhörer als Ausgang aus.
-2. Laden Sie ein bekanntermaßen kompatibles Inferenzmodell und seinen passenden Index, wenn Sie Retrieval verwenden. Eine erfolgreiche kurze [Dateikonvertierung](../start/getting-started.md) ist eine nützliche Referenz, bevor Sie den Live-Pfad testen.
-3. Starten Sie den Stream und sprechen Sie mit normaler Lautstärke. Überprüfen Sie den Eingangspegel oder machen Sie eine Trockenaufnahme. Reduzieren Sie die Eingangsverstärkung, wenn Spitzen vor der Konvertierung abgeschnitten werden.
-4. Stellen Sie sicher, dass sich das Kopfhörersignal ändert, wenn die Konvertierung umgeschaltet wird. Wenn Sie gleichzeitig das Original hören, prüfen Sie, ob eine direkte Hardwareüberwachung oder eine zweite Route durch das Betriebssystem erfolgt.
-5. Testen Sie länger als ein einzelnes Wort. Bauen Sie leises Sprechen, einen lauten Satz und eine kurze Pause ein. Achten Sie auf Unterbrechungen, Abweichungen oder Störungen bei derselben Arbeitslast, die Sie live nutzen möchten.
+Vermeide Wiedergabe über Lautsprecher neben einem aktiven Mikrofon. Kopfhörer helfen dir, Routing-Probleme zu erkennen, ohne den Ausgang zurück in den Eingang zu leiten.
 
-Vermeiden Sie es, über Lautsprecher in der Nähe eines aktiven Mikrofons zu hören. Kopfhörer helfen Ihnen, ein Routing-Problem zu erkennen, ohne den Ausgang wieder in den Eingang einzuspeisen.
+## Geräte-Rollen und Audio-Backends verstehen
+
+> **Korrektes Audio-Routing (Correct Audio Routing)**
+>
+> **1. Im Voice Changer**
+> - **Eingabegerät (Input Device):** Dein physisches Mikrofon.
+> - **Ausgabegerät (Output Device):** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
+>
+> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
+> - **Eingabegerät (Input Device):** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
+> - **Ausgabegerät (Output Device):** Deine Kopfhörer (gegenüber Lautsprechern dringend empfohlen).
+>
+> ```text
+> Dein Mikrofon → Voice Changer → Line 1 (VAC) oder CABLE Input/Output (VB-CABLE) → Discord / Spiel / OBS
+> ```
+>
+> Audio aus Discord, deinem Spiel oder anderen Apps muss direkt an deine **Kopfhörer** gehen (niemals zurück ins virtuelle Kabel).
+>
+> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder stattdessen) **VB-CABLE** installiert hast, beachte, dass der Voice Changer an **`CABLE Input`** ausgibt, während Discord / Spiele von **`CABLE Output`** abhören.
+> - **Lautsprecher & Kopfhörer-Übersprechen:** Vermeide Lautsprecher; Ton aus Lautsprechern kann ins Mikrofon gelangen und Doppelton, Echo oder das Konvertieren fremder Stimmen verursachen. Das kann auch mit Kopfhörern passieren, wenn die Lautstärke zu hoch ist oder die Ohrmuscheln nicht geschlossen und isoliert genug sind.
+> - **Monitoring:** Deine eigene konvertierte Stimme über Kopfhörer zu hören ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiopfade, Echo und Loopback.
+
+Bevor du eine App verbindest, kläre die Aufgabe jedes Endpunkts:
+
+| Begriff | Was es ist |
+| --- | --- |
+| **Input Device** | Dein physisches Mikrofon (oder Audio-Interface-Kanal), das rohe Sprache an den Voice Changer sendet. |
+| **Output Device** | Wohin die konvertierte Stimme geht (dein **virtueller Kabel-Wiedergabe-Endpunkt** für Discord/OBS/Spiele oder Kopfhörer für einen lokalen Test). |
+| **Monitor Device** | Optionaler zweiter Ausgang, um deine eigene konvertierte Stimme im Kopfhörer zu hören, während **Output Device** ein virtuelles Kabel speist. |
+| **Virtual Cable Input** *(Wiedergabe-Seite)* | Erscheint unter Windows-Wiedergabe (z. B. `Line 1` bei VAC Lite oder `CABLE Input` bei VB-CABLE). Als **Output Device** im Voice Changer wählen. |
+| **Virtual Cable Output** *(Aufnahme-Seite)* | Erscheint unter Windows-Aufnahme (z. B. `Line 1` bei VAC Lite oder `CABLE Output` bei VB-CABLE). Als **Mikrofon** in Discord, OBS oder Spielen wählen. |
+
+### USB-Mikrofone, Audio-Interfaces und Backends
+
+- **USB-Mikrofone:** Direkt an einen hinteren USB-Port des Mainboards anschließen (keine passiven Hubs), Windows-Format auf **48000 Hz** stellen und selektives USB-Energiesparen deaktivieren, falls das Mikrofon aussetzt.
+- **Audio-Interfaces (XLR):** Nutze **ASIO**, wenn vom Voice Changer unterstützt (z. B. RVC Blue oder w-okada), für geringere Treiberpuffer-Latenz, oder **WASAPI** beim Routing an normale virtuelle Windows-Kabel.
+- **WASAPI Shared vs. WASAPI Exclusive:** **WASAPI Shared** ist der sicherste Startpunkt, da Windows und virtuelle Kabel `48000 Hz`-Streams sauber teilen können. **WASAPI Exclusive** umgeht den Windows-Mixer für geringere Treiberlatenz (sofern unterstützt), sperrt das Gerät aber für andere Apps.
+
+## App-spezifische Einrichtung (Discord, OBS, Spiele, Anrufe, Aufnahme)
+
+- **Discord / Anruf-Apps:** Stelle **Input Device** auf den Aufnahme-Endpunkt deines virtuellen Kabels (`Line 1` / `CABLE Output`), **Output Device** auf deine Kopfhörer, und schalte Krisp, Echounterdrückung und automatische Eingabeempfindlichkeit **AUS**, falls Discord Atemzüge oder Wortenden abschneidet.
+- **OBS Studio & lokale Aufnahme:** Füge eine **Audio-Eingabeaufnahme**-Quelle mit dem Aufnahme-Endpunkt des virtuellen Kabels hinzu, schalte jede separate rohe Mikrofonquelle stumm und nimm einen kurzen Testclip auf, um Sync und Pegel zu prüfen.
+- **Spiele:** Wähle den Aufnahme-Endpunkt des virtuellen Kabels als In-Game-Mikrofon (oder setze ihn als Windows-Standardkommunikationsgerät). Begrenze immer Spiel-FPS oder lasse GPU-Reserve, damit das Spiel den Voice Changer nicht aushungert.
 
 ## Konvertiertes Audio an eine andere App senden
 
-> **Correct Audio Routing**
->
-> **1. Im Voice Changer**
-> - **Input Device:** Dein physisches Mikrofon.
-> - **Output Device:** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
->
-> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
-> - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
-> - **Output Device:** Deine Kopfhörer (dringend statt Lautsprechern empfohlen).
->
-> ```text
-> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
-> ```
->
-> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
->
-> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
-> - **Lautsprecher & Übersprechen bei Headsets:** Vermeide Lautsprecher: Der Ton kann ins Mikrofon gelangen und Doppelton, Echo oder sogar die Konvertierung fremder Stimmen verursachen. Das kann auch bei Headsets passieren, wenn sie zu laut oder nicht geschlossen und gut genug isoliert sind.
-> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
-
-Ein virtuelles Audiogerät stellt einen Wiedergabeendpunkt für den Konverter und einen entsprechenden Aufnahmeendpunkt für die empfangende App bereit. Endpunktnamen hängen vom Treiber ab. Beispielsweise kann ein virtuelles Kabel seinen Wiedergabeendpunkt „Eingabe“ und seinen Aufnahmeendpunkt „Ausgabe“ nennen, da die Anweisungen die Perspektive des Kabels verwenden.
+Ein virtuelles Audiogerät bietet einen Wiedergabe-Endpunkt für den Konverter und einen passenden Aufnahme-Endpunkt für die empfangende App. Endpunktnamen hängen vom Treiber ab. Beispielsweise kann ein virtuelles Kabel seinen Wiedergabe-Endpunkt "Input" und seinen Aufnahme-Endpunkt "Output" nennen, weil die Bezeichnungen aus Sicht des Kabels gewählt sind.
 
 ```text
-Physical microphone → RVC converter → virtual playback endpoint
-                                           ↓
-                              matching recording endpoint → call or stream
+Physisches Mikrofon → RVC-Konverter → virtueller Wiedergabe-Endpunkt
+                                               ↓
+                                passender Aufnahme-Endpunkt → Anruf oder Stream
 ```
 
-Wählen Sie in der empfangenden App den passenden Aufnahmeendpunkt als Mikrofon aus und machen Sie dort eine kurze Testaufnahme. Wenn Ihr lokaler Monitor korrekt klingt, die Aufnahme jedoch nicht, überprüfen Sie den Zieleingang und entfernen Sie alle doppelten Mikrofonquellen. Wenn Sie den konvertierten Ton überwachen, verwenden Sie einen separaten Kopfhörerausgang. Vermeiden Sie es, Ihren gesamten Desktop-Mix oder das Audio der empfangenden App zurück in den Konverter zu leiten.
+Wähle den passenden Aufnahme-Endpunkt als Mikrofon in der empfangenden App und mache dort eine kurze Testaufnahme. Klingt dein lokaler Monitor sauber, aber die Aufnahme nicht, prüfe den Zieleingang und entferne doppelte Mikrofonquellen. Wenn du das konvertierte Audio abhörst, nutze einen separaten Kopfhörerausgang. Leite niemals deinen gesamten Desktop-Mix oder das Audio der empfangenden App zurück in den Konverter.
 
-## Optimieren Sie die Latenz, ohne an Stabilität zu verlieren.
+## Latenz ohne Stabilitätsverlust optimieren
 
-Die End-to-End-Verzögerung umfasst Gerätepuffer, Konvertierung, virtuelles Routing und jegliche Verarbeitung im Ziel. Eine Verarbeitungszeitzahl im Konverter misst nur einen Teil dieses Pfades. Erfassen Sie einen lokalen Test sowohl des Trockenmikrofons als auch der konvertierten Route, wenn Sie die Verzögerung zwischen ihnen messen müssen.
+**Verarbeitungslatenz vs. gesamte Ende-zu-Ende-Latenz:** Der **GPU Delay** / die Inferenzzeit im Voice Changer zeigt **nur**, wie lange die GPU zum Konvertieren eines Blocks braucht. Die **gesamte Ende-zu-Ende-Latenz** addiert Mikrofon-Eingabepuffer, **Block Size / Chunk Size**, Crossfade-/Kontext-Overhead, Puffer des virtuellen Kabels und Audiopuffer von Discord/OBS/Spiel. Verwechsle keinen niedrigen GPU Delay (z. B. `15 ms`) mit der gesamten Round-Trip-Latenz.
 
- | Steuerung | Praktische Einstellung |
+| Regler | Praktische Anpassung |
 | --- | --- |
- | Blockgröße oder Chunk-Größe | Erhöhen Sie diese, wenn die Sprache unter Last unterbrochen wird. Sobald die Einstellung stabil ist, versuchen Sie es mit einer kleineren Einstellung und behalten Sie diese nur bei, wenn die normale Sprache sauber bleibt. Bei kleineren Blöcken bleibt weniger Zeit, die Verarbeitung abzuschließen. |
- | Crossfade | Erhöhen Sie vorsichtig, wenn Sie raue Übergänge zwischen Blöcken hören. Es ändert die Art und Weise, wie benachbarte Blöcke überlappen. |
- | Zusätzlicher Kontext | Versuchen Sie weniger Kontext, wenn der Konverter ins Hintertreffen gerät. Dies kann dem Modell helfen, Übergängen zu folgen, allerdings auf Kosten einer höheren Verarbeitungsleistung. |
- | Tonhöhenprädiktor | Wenn eine Einstellung zu instabilem Timing führt, vergleichen Sie die verfügbaren Prädiktoren mit denselben Phrasen. Wählen Sie diejenige aus, die Ihren Tonhöhenbereich mit genügend Verarbeitungsspielraum abdeckt. |
- | Stilleerkennung oder Eingabeschwelle | Senken Sie einen Schwellenwert, der weiche Silben abschneidet. Bewerten Sie dies bei Pausen und leisem Sprechen, nicht nur bei einer anhaltenden lauten Eingabe. |
- | Geräterate | Überprüfen Sie die Abtastraten des Geräts und des virtuellen Kabels, wenn Sie ungewöhnliche Geschwindigkeit oder Knistern hören. Beginnen Sie mit kompatiblen Einstellungen in der gesamten Kette. |
+| Block- oder Chunk-Größe | Erhöhen, wenn Sprache unter Last abbricht. Sobald stabil, kleineren Wert testen und nur behalten, wenn normale Sprache sauber bleibt. Kleinere Blöcke lassen weniger Rechenzeit. |
+| Crossfade | Vorsichtig erhöhen, wenn du raue Übergänge zwischen Blöcken hörst. Ändert die Überlappung benachbarter Blöcke. |
+| Extra-Kontext | Weniger Kontext testen, falls der Konverter hinterherhinkt. Hilft dem Modell bei Übergängen, kostet aber mehr Rechenzeit. |
+| Pitch-Prädiktor | Verursacht eine Einstellung instabiles Timing, vergleiche verfügbare Prädiktoren mit denselben Sätzen. Wähle denjenigen, der deinen Tonumfang mit genug Reserve verarbeitet. |
+| Stille-Erkennung / Eingangsschwelle | Schwelle senken, falls leise Silben abgeschnitten werden. In Pausen und bei leisem Sprechen prüfen, nicht nur bei konstant lauter Eingabe. |
+| Geräte-Abtastrate | Prüfe Abtastraten von Gerät und virtuellem Kabel bei falscher Geschwindigkeit oder Knistern. Starte mit einheitlichen Einstellungen in der gesamten Kette. |
 
-Beginnen Sie mit den App-Standardeinstellungen und ändern Sie jeweils eine Einstellung. Wenn ein Spiel oder ein anderes GPU-lastiges Programm die Maschine gemeinsam nutzt, wiederholen Sie den Test, während es läuft. Behalten Sie eine funktionierende Voreinstellung bei, damit Sie sie wiederherstellen können, bevor Sie live gehen. [Haupt-Echtzeit-GUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
+Starte mit den App-Standardwerten und ändere immer nur eine Einstellung auf einmal. Teilt sich ein Spiel oder eine andere GPU-lastige App den PC, wiederhole den Test währenddessen. Speichere ein funktionierendes Preset, um es vor dem Live-Einsatz wiederherstellen zu können. [RVC WebUI (Mainline - Original RVC) Echtzeit-GUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/realtime_gui.py)
 
-## Fehlerbehebung anhand der Stelle, an der der Fehler auftritt
+## Fehlerbehebung nach Fehlerort
 
- | Symptom | Zuerst prüfen |
+| Symptom | Zuerst prüfen |
 | --- | --- |
- | Weder das Konvertermessgerät noch eine Trockenmikrofonaufnahme reagieren | Überprüfen Sie das Eingabegerät und die Mikrofonberechtigung des Betriebssystems. |
- | Das Trockenmikrofon funktioniert, aber die konvertierte Ausgabe ist stumm. | Bestätigen Sie, dass der Stream gestartet, das Modell geladen und der Konverter die richtige Ausgabe ausgewählt hat. Überprüfen Sie die Eingabeschwelle. |
- | Der lokale Monitor funktioniert, aber der Anruf empfängt die Originalstimme. | Wählen Sie den virtuellen Aufzeichnungsendpunkt als Anrufmikrofon und deaktivieren Sie alle separaten physischen Mikrofonquellen in dieser App. |
- | Sie hören zwei Versionen der Stimme | Schalten Sie doppelte Eingaberouten stumm und stellen Sie sicher, dass der Kopfhörermonitor von der virtuellen Route getrennt ist. |
- | Audio knistert nur unter Last. | Kehren Sie zur letzten stabilen Blockgröße zurück, reduzieren Sie konkurrierende Arbeitslasten und testen Sie erneut. |
- | Ein Modell funktioniert bei der Dateikonvertierung, schlägt jedoch live fehl | Überprüfen Sie die Edition, Architektur und Embedder-Unterstützung des Live-Clients. Testen Sie ein Modell, das in diesem Client als kompatibel aufgeführt ist, bevor Sie das Audiogerät wechseln. |
+| Weder Konverter-Pegel noch trockene Mikrofonaufnahme reagieren | Windows-Mikrofonberechtigungen, physischen Mute-Schalter und Input-Device-Auswahl prüfen. |
+| Trockenes Mikrofon geht, aber konvertierter Ausgang ist stumm | Prüfen, ob Stream läuft, Modell geladen und Output Device korrekt gesetzt ist. VAD-/Stille-Schwelle senken. |
+| Lokaler Monitor geht, aber im Anruf kommt die Originalstimme an | Virtuellen Aufnahme-Endpunkt (`CABLE Output` / `Line 1`) als Anruf-Mikrofon wählen und separate rohe Mikrofonquellen deaktivieren. |
+| Doppeltes Monitoring / Echo / Rückkopplung | Niemals Lautsprecher neben einem aktiven Mikrofon nutzen. Windows **"Dieses Gerät als Wiedergabequelle verwenden"** ausschalten, falls die App bereits abhört, und nie Desktop-/Anruf-Audio ins virtuelle Kabel routen. |
+| Knackser, Stottern oder Puffer-Underruns | **Alle** Endpunkte (Mikro, Kopfhörer, Cable Input/Output) auf **48000 Hz** (`mmsys.cpl`) angleichen, **Block/Chunk Size** eine Stufe erhöhen und CPU-Last prüfen. |
+| Roboterstimme oder abgehackte Silben | Pitch-Extraktor zu schwer (`crepe` full) -> auf **RMVPE** oder **FCPE** wechseln oder **Index Ratio** senken. |
+| Hoher **GPU Delay** oder Knackser nur beim Spielen | **GPU-Sättigung**: Spiel-FPS begrenzen, schwere GPU-Einstellungen senken oder **Block Size** erhöhen. |
+| Modell geht bei Dateien, scheitert aber live | Edition des Live-Clients, Architektur und Embedder-Unterstützung prüfen. Ein im Client als kompatibel gelistetes Modell testen, bevor Audiogeräte geändert werden. |
 
 [RVC-Grundlagen](../start/rvc-fundamentals.md) · [Fehlerbehebung](../reference/troubleshooting.md)
 
 ## RVC Blue
 
-Echtzeit-Stimmkonvertierung unter Windows. [Installation und Einrichtung](../other-rvcs/rvc-blue/installation.md).
-## Geräte-Rollen und Audio-Backends
-
-| Begriff | Bedeutung |
-| --- | --- |
-| **Input Device** | Dein physisches Mikrofon für den Eingang. |
-| **Output Device** | Ziel der konvertierten Stimme (Wiedergabeseite des virtuellen Kabels für Discord/OBS/Spiele oder Kopfhörer). |
-| **Monitor Device** | Optionaler zweiter Ausgang zum Mithören per Kopfhörer. |
-| **Virtual Cable Input** *(Wiedergabe)* | Unter Windows-Wiedergabe (Line 1 / CABLE Input). Als **Output Device** wählen. |
-| **Virtual Cable Output** *(Aufnahme)* | Unter Windows-Aufnahme (Line 1 / CABLE Output). In Discord/OBS/Spielen als **Mikrofon** wählen. |
-
-- **USB-Mikrofone / XLR-Interfaces / WASAPI / ASIO:** Alles auf 48000 Hz stellen; **WASAPI Shared** für Kompatibilität, **WASAPI Exclusive** oder **ASIO** falls unterstützt.
-- **Discord, OBS & Spiele:** Krisp/Echounterdrückung in Discord bei abgeschnittenen Silben deaktivieren; Spiel-FPS begrenzen für GPU-Reserve.
-- **Rechenlatenz vs. Gesamtlatenz:** **GPU Delay** misst nur die GPU-Zeit pro Block; die **End-to-End-Latenz** umfasst Mikrofon, **Block Size**, virtuelles Kabel und Zielpuffer.
+Desktop-Stimmenkonvertierung unter Windows. [Installation und Einrichtung](../other-rvcs/rvc-blue/installation.md).

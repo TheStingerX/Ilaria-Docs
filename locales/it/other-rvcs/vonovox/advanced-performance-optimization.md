@@ -523,6 +523,8 @@ Non considerare un MHz più alto come prova di miglioramento. Esegui una prova *
   5. Ripeti il **Test B (Locked GPU Clocks)** per almeno **10-15 minuti** mantenendo identici **modello RVC**, **F0 Method**, **Block Size**, **dispositivi audio**, **backend audio** e **carico GPU concorrente**.
   6. Confronta i risultati e ripeti la prova se incerta; se non ci sono benefici, ripristina subito con `-rgc`.
 
+### Tabella comparativa compilabile
+
 | Valore da annotare | Test A: Clock predefiniti (10-15 min) | Test B: Clock bloccati (10-15 min) |
 | --- | --- | --- |
 | **GPU Delay** medio (ms) | `____ ms` | `____ ms` |
@@ -534,7 +536,10 @@ Non considerare un MHz più alto come prova di miglioramento. Esegui una prova *
 | Frequenza Graphics reale (`-q -d CLOCK`) | `____ MHz` | `____ MHz` |
 | Stato throttling (`-q -d PERFORMANCE`) | `Nessuno / Termico / Potenza` | `Nessuno / Termico / Potenza` |
 
-**Come interpretare i risultati:** Mantieni il blocco solo se il Test B riduce chiaramente i picchi di GPU Delay o gli scatti *senza* surriscaldare. Se i risultati sono uguali o peggiori, ripristina subito con `nvidia-smi -i 0 -rgc`.
+### Come interpretare i risultati
+
+- Mantieni il blocco solo se il Test B riduce chiaramente i picchi di GPU Delay o gli scatti *senza* surriscaldare o andare in throttling.
+- Se i risultati sono uguali, scalda inutilmente o peggiora, ripristina subito con `nvidia-smi -i 0 -rgc`.
 
 ---
 
@@ -552,7 +557,14 @@ Il GPU Clock Locking entro i limiti supportati non è overclocking, ma comporta 
 
 ## 12. Nota avanzata: blocco della memoria GPU (`-lmc`)
 
-`nvidia-smi` include anche `-lmc <min,max>` e `-rmc` per bloccare i clock della **VRAM (memoria)** invece del core grafico (`-lgc`). **Non** è incluso nella procedura standard: non ci sono prove sufficienti per consigliarlo con Vonovox e mantiene la memoria calda e ad alto consumo anche a riposo.
+`nvidia-smi` include anche i comandi per la frequenza di memoria:
+
+```bat
+nvidia-smi -i 0 -lmc <min,max>
+nvidia-smi -i 0 -rmc
+```
+
+`-lmc` blocca la frequenza della **VRAM (memoria)**, mentre `-lgc` blocca la frequenza del **core grafico (GPU)**. Il blocco della memoria **non** fa parte della procedura standard per Vonovox perché non ci sono prove sufficienti che migliorino le prestazioni audio RVC dal vivo, e mantenere la VRAM a frequenze alte aumenta calore e consumi anche a riposo.
 
 ---
 

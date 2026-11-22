@@ -62,7 +62,7 @@ Coloque o ponto de verificação de inferência em `assets/weights` e seu índic
 
 Forneça ao WebUI o caminho completo para um arquivo WAV local curto. Se o caminho falhar, copie o arquivo de teste para um local simples como `C:\RVC\input\test.wav`. Mantenha a transposição em zero para a primeira passagem e selecione RMVPE se sua construção oferecer isso. Clique em **Converter**, ouça no reprodutor de saída e salve o resultado usando seu controle de download. Se a geração falhar, leia a mensagem do console antes de alterar as configurações. Um modelo que não aparece na lista geralmente precisa ser movido para o diretório de pesos ou redescoberto usando atualização.
 
-## Converta uma gravação no Applio
+## Converta uma gravação no Applio {#convert-a-recording-in-applio}
 
 ### Configure um teste de arquivo único
 
