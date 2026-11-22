@@ -2,7 +2,7 @@
 label: "Analisador de Áudio"
 icon: ":chart_with_upwards_trend:"
 order: 85
-permalink: /pt/ilaria-rvc/audio-analyzer/
+permalink: /ilaria-rvc/audio-analyzer/
 description: "Abra Other → Audio Analyzer no Ilaria RVC para comparar até oito arquivos de áudio usando formas de onda, espectrogramas, espectro médio, estimativa de tom e tabelas de nível."
 ---
 # Analisador de Áudio

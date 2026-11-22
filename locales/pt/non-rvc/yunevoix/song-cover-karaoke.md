@@ -2,7 +2,7 @@
 label: "Song Cover e Karaoke"
 icon: ":musical_note:"
 order: 95
-permalink: /pt/non-rvc/yunevoix/song-cover-karaoke/
+permalink: /non-rvc/yunevoix/song-cover-karaoke/
 description: "Tutorial completo para iniciantes dos recursos offline Song Cover e Karaoke do YuneVoix PREMIUM, incluindo diferenças do FlowEdit, controles, atalhos de teclado e solução de problemas."
 ---
 # YuneVoix Song Cover e Karaoke - Guia Completo para Iniciantes

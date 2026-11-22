@@ -2,7 +2,7 @@
 label: "Premium, Licenza e Aiuto"
 icon: ":wrench:"
 order: 94
-permalink: /it/non-rvc/yunevoix/premium-and-troubleshooting/
+permalink: /non-rvc/yunevoix/premium-and-troubleshooting/
 description: "Licenza YuneVoix PREMIUM (Song Cover e Karaoke), attivazione offline, regole hardware, risoluzione problemi estesa NVIDIA e AMD e diagnostica."
 ---
 # Premium, Licenza e Risoluzione dei Problemi

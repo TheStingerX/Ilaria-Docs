@@ -2,7 +2,7 @@
 label: "Voice Bank e Uso ao Vivo"
 icon: ":studio_microphone:"
 order: 97
-permalink: /pt/non-rvc/yunevoix/usage/
+permalink: /non-rvc/yunevoix/usage/
 description: "Tutorial completo para iniciantes para criar perfis .yvoice no Voice Bank, rotear o YuneVoix para Discord, OBS, jogos ou VRChat, usar o monitoramento integrado e escolher Classic, Learned 4 steps ou FlowEdit 3+1."
 ---
 # Voice Bank e Uso ao Vivo

@@ -2,7 +2,7 @@
 label: "Erweiterte Leistungsoptimierung"
 icon: ":zap:"
 order: 97
-permalink: /de/ilaria-rvc/vonovox/advanced-performance-optimization/
+permalink: /ilaria-rvc/vonovox/advanced-performance-optimization/
 description: "Optionale Anleitung zum NVIDIA GPU Clock Locking, um zu testen, ob das Fixieren unterstützter Grafiktaktraten die Latenzstabilität von Vonovox unter Windows verbessert."
 ---
 # Erweiterte Leistungsoptimierung: NVIDIA GPU Clock Locking

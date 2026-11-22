@@ -1,7 +1,7 @@
 ---
 label: "🛠️ Addestra un modello vocale"
 order: 94
-permalink: /it/training/
+permalink: /training/
 description: "L'addestramento insegna una voce di destinazione a partire da una raccolta preparata di audio. Usa questa guida per creare un modello dalle tue registrazioni o da registrazioni autorizzate."
 ---
 # Addestra un modello vocale RVC

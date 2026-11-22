@@ -1,7 +1,7 @@
 ---
 label: "🛠️ Entraîner un modèle vocal"
 order: 94
-permalink: /fr/training/
+permalink: /training/
 description: "L'entraînement apprend une voix cible à partir d'une collection préparée d'audio. Utilisez ce guide pour créer un modèle à partir de vos propres enregistrements ou d'enregistrements autorisés."
 ---
 # Entraîner un modèle vocal RVC

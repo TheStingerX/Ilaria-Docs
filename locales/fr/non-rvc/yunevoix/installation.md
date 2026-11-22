@@ -2,7 +2,7 @@
 label: "Installer et Mettre à Jour"
 icon: ":cd:"
 order: 98
-permalink: /fr/non-rvc/yunevoix/installation/
+permalink: /non-rvc/yunevoix/installation/
 description: "YuneVoix est une application Windows portable : rien n'est installé dans Windows, et tous les paramètres, voix, journaux et licences restent à côté de YuneVoix.exe."
 ---
 # Installer et mettre à jour YuneVoix

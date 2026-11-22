@@ -1,7 +1,7 @@
 ---
 label: "⚡ Conversión en tiempo real"
 order: 92
-permalink: /es/real-time/
+permalink: /real-time/
 description: "Para una grabación o una versión, la conversión de archivos permite renderizar y comparar varias tomas."
 ---
 # Conversión de voz en tiempo real

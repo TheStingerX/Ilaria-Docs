@@ -1,7 +1,7 @@
 ---
 label: "⚡ Echtzeit-Konvertierung"
 order: 92
-permalink: /de/real-time/
+permalink: /real-time/
 description: "Bei einer Aufnahme oder einem Cover kannst du mit der Dateikonvertierung mehrere Takes rendern und vergleichen."
 ---
 # Echtzeit-Stimmenkonvertierung

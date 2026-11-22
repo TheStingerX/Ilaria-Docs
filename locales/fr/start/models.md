@@ -1,7 +1,7 @@
 ---
 label: "📦 Modèles et fichiers RVC"
 order: 93
-permalink: /fr/models/
+permalink: /models/
 description: "Un modèle RVC modifie le timbre d'une interprétation existante. L'enregistrement source continue de fournir les mots, le phrasé et le rythme."
 ---
 # Modèles et fichiers RVC

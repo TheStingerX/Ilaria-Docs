@@ -1,7 +1,7 @@
 ---
 label: "📦 Modelos y archivos RVC"
 order: 93
-permalink: /es/models/
+permalink: /models/
 description: "Un modelo RVC cambia el timbre de una interpretación existente. La grabación de origen sigue aportando las palabras, el fraseo y el ritmo."
 ---
 # Modelos y archivos RVC

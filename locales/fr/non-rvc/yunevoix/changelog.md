@@ -2,7 +2,7 @@
 label: "Journal des Modifications"
 icon: ":memo:"
 order: 93
-permalink: /fr/non-rvc/yunevoix/changelog/
+permalink: /non-rvc/yunevoix/changelog/
 description: "Historique complet des versions et journal des modifications de YuneVoix de la v0.6.0 à la v0.7.1, incluant les mises à jour DirectML, GPU AMD, WavLM+ et FlowEdit 3+1."
 ---
 # Journal des Modifications de YuneVoix

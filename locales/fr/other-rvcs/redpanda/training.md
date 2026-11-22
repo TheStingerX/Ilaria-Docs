@@ -2,7 +2,7 @@
 label: "Entraîner des modèles RVC (EMA & Steps)"
 icon: ":mortar_board:"
 order: 97
-permalink: /fr/ilaria-rvc/redpanda/training/
+permalink: /ilaria-rvc/redpanda/training/
 description: "Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage."
 ---
 # Entraîner des Modèles RVC dans Redpanda-vc - EMA & Sauvegarde par Pas

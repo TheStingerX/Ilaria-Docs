@@ -2,7 +2,7 @@
 label: "Voice Bank & Live-Nutzung"
 icon: ":studio_microphone:"
 order: 97
-permalink: /de/non-rvc/yunevoix/usage/
+permalink: /non-rvc/yunevoix/usage/
 description: "Vollständige Einsteiger-Anleitung zum Erstellen von Voice Bank .yvoice-Profilen, Audio-Routing zu Discord, OBS, Spielen oder VRChat, integriertem Monitoring und Wahl zwischen Classic, Learned 4 steps und FlowEdit 3+1."
 ---
 # Voice Bank und Live-Nutzung

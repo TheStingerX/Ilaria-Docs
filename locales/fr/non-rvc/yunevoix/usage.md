@@ -2,7 +2,7 @@
 label: "Voice Bank et Utilisation en Direct"
 icon: ":studio_microphone:"
 order: 97
-permalink: /fr/non-rvc/yunevoix/usage/
+permalink: /non-rvc/yunevoix/usage/
 description: "Tutoriel complet pour débutants pour créer des profils Voice Bank .yvoice, router YuneVoix vers Discord, OBS, les jeux ou VRChat, utiliser le monitoring intégré et choisir Classic, Learned 4 steps ou FlowEdit 3+1."
 ---
 # Voice Bank et Utilisation en Direct

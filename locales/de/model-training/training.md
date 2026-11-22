@@ -1,7 +1,7 @@
 ---
 label: "🛠️ Stimmmodell trainieren"
 order: 94
-permalink: /de/training/
+permalink: /training/
 description: "Training erlernt eine Zielstimme aus einer vorbereiteten Audiosammlung. Nutze diese Anleitung, wenn du ein Modell aus eigenen oder autorisierten Aufnahmen erstellen möchtest."
 ---
 # Ein RVC-Stimmmodell trainieren

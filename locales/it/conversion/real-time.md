@@ -1,7 +1,7 @@
 ---
 label: "⚡ Conversione in tempo reale"
 order: 92
-permalink: /it/real-time/
+permalink: /real-time/
 description: "Per una registrazione o una cover, la conversione di file ti consente di eseguire il rendering e confrontare più riprese."
 ---
 # Conversione vocale in tempo reale

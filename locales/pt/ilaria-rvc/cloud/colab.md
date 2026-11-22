@@ -2,7 +2,7 @@
 label: "Google Colab"
 icon: ":tangerine:"
 order: 97
-permalink: /pt/ilaria-rvc/colab/
+permalink: /ilaria-rvc/colab/
 description: "Execute o Ilaria RVC no navegador com uma GPU fornecida pela plataforma na nuvem. Escolha um notebook abaixo. Ative um acelerador NVIDIA antes de executar a primeira célula."
 ---
 # Google Colab

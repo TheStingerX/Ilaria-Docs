@@ -2,7 +2,7 @@
 label: "Changelog"
 icon: ":memo:"
 order: 93
-permalink: /it/non-rvc/yunevoix/changelog/
+permalink: /non-rvc/yunevoix/changelog/
 description: "Cronologia completa delle versioni e changelog di YuneVoix dalla v0.6.0 alla v0.7.1, inclusi aggiornamenti DirectML, GPU AMD, WavLM+ e FlowEdit 3+1."
 ---
 # YuneVoix Changelog

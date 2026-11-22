@@ -2,7 +2,7 @@
 label: "Optimización Avanzada de Rendimiento"
 icon: ":zap:"
 order: 97
-permalink: /es/ilaria-rvc/vonovox/advanced-performance-optimization/
+permalink: /ilaria-rvc/vonovox/advanced-performance-optimization/
 description: "Guía opcional de bloqueo de relojes de GPU NVIDIA (GPU Clock Locking) para comprobar si fijar frecuencias gráficas compatibles mejora la estabilidad de latencia de Vonovox en Windows."
 ---
 # Optimización Avanzada de Rendimiento: NVIDIA GPU Clock Locking

@@ -2,7 +2,7 @@
 label: "Lightning AI Studio"
 icon: ":zap:"
 order: 96
-permalink: /fr/ilaria-rvc/lightning-ai/
+permalink: /ilaria-rvc/lightning-ai/
 description: "Exécutez Ilaria RVC dans un navigateur avec un GPU fourni par la plateforme cloud. Choisissez un notebook ci-dessous. Activez un accélérateur NVIDIA avant d'exécuter la première cellule."
 ---
 # Lightning AI Studio

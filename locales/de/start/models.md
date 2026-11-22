@@ -1,7 +1,7 @@
 ---
 label: "📦 RVC-Modelle und Dateien"
 order: 93
-permalink: /de/models/
+permalink: /models/
 description: "Ein RVC-Modell verändert die Klangfarbe einer bestehenden Darbietung. Die Quellaufnahme liefert weiterhin Wörter, Phrasierung und Timing."
 ---
 # RVC-Modelle und Dateien

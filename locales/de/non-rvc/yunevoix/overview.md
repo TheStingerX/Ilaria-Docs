@@ -2,7 +2,7 @@
 label: "Übersicht & Anforderungen"
 icon: ":book:"
 order: 99
-permalink: /de/non-rvc/yunevoix/overview/
+permalink: /non-rvc/yunevoix/overview/
 description: "YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine."
 ---
 # YuneVoix (YUNE)

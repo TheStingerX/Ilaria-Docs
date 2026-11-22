@@ -1,7 +1,7 @@
 ---
 label: "🛠️ Treinar um modelo de voz"
 order: 94
-permalink: /pt/training/
+permalink: /training/
 description: "O treinamento aprende uma voz de destino a partir de uma coleção preparada de áudio. Use este guia quando quiser construir um modelo com suas próprias gravações ou gravações autorizadas."
 ---
 # Treinar um modelo de voz RVC
