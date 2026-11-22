@@ -26,7 +26,7 @@ Ce guide s'applique à l'interface graphique en temps réel distincte incluse da
 >
 > **2. Dans Discord, les jeux, OBS ou d'autres applications**
 > - **Input Device :** `Line 1` (VAC, recommandé) ou `CABLE Output` (VB-CABLE).
-> - **Output Device :** Vos écouteurs ou haut-parleurs.
+> - **Output Device :** Votre casque (fortement recommandé plutôt que des haut-parleurs).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -35,6 +35,7 @@ Ce guide s'applique à l'interface graphique en temps réel distincte incluse da
 > L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
 >
 > - **VAC vs. VB-CABLE :** **VAC** (`Line 1`) est toujours recommandé. Si vous avez aussi (ou uniquement) **VB-CABLE**, le voice changer envoie vers **`CABLE Input`** et Discord / les jeux écoutent **`CABLE Output`**.
+> - **Haut-parleurs et fuite du casque :** Évitez les haut-parleurs : le son peut repasser dans votre micro et créer un son doublé, de l'écho ou convertir aussi la voix d'autres personnes. Cela peut également arriver avec un casque s'il est trop fort ou insuffisamment fermé et isolé.
 > - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
 
 Configurez un câble virtuel ou une autre paire d'appareils de lecture et d'enregistrement connectés. La fin de la lecture reçoit le son de RVC WebUI (Mainline - Original RVC). L'extrémité d'enregistrement fournit le son à votre appel ou à votre enregistreur.

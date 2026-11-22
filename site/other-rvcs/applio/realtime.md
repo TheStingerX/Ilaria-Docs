@@ -19,7 +19,7 @@ Prove that your model works with [one recorded clip](inference.md) before settin
 >
 > **2. Inside Discord, Games, OBS, or Other Applications**
 > - **Input Device:** `Line 1` (VAC, recommended) or `CABLE Output` (VB-CABLE).
-> - **Output Device:** Your headphones or speakers.
+> - **Output Device:** Your headphones (strongly recommended over speakers).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -28,6 +28,7 @@ Prove that your model works with [one recorded clip](inference.md) before settin
 > Audio coming from Discord, your game, or other apps must play directly to your **headphones** (never back into the virtual cable).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) is always recommended. If you have **VB-CABLE** installed as well (or instead), remember that the voice changer outputs to **`CABLE Input`** while Discord / games listen to **`CABLE Output`**.
+> - **Speakers & Headset Bleed:** Avoid using speakers; sound from speakers can leak into your microphone and cause double audio, echo, or other people's voices being converted too. This can also happen with headsets if the volume is too loud or the earcups are not closed and isolated enough.
 > - **Monitoring:** Hearing your own converted voice in your headphones is a separate optional feature to enable only when needed. Avoid duplicate audio paths, echo, and loopback.
 
 Once the headphone test works, stop the stream and choose an installed virtual audio cable or equivalent operating system device. The virtual cable has one endpoint that receives playback and another that exposes that signal as a recording input.

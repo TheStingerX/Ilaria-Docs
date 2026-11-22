@@ -19,7 +19,7 @@ Demuestre que su modelo funciona con [un clip grabado](inference.md) antes de co
 >
 > **2. Dentro de Discord, Juegos, OBS u otras aplicaciones**
 > - **Input Device:** `Line 1` (VAC, recomendado) o `CABLE Output` (VB-CABLE).
-> - **Output Device:** Tus auriculares o altavoces.
+> - **Output Device:** Tus auriculares (muy recomendados frente a altavoces).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -28,6 +28,7 @@ Demuestre que su modelo funciona con [un clip grabado](inference.md) antes de co
 > El audio que llega desde Discord, el juego u otras apps debe reproducirse directamente en tus **auriculares** (nunca de vuelta al cable virtual).
 >
 > - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) es siempre la opción recomendada. Si también (o solo) usas **VB-CABLE**, recuerda que el voice changer envía a **`CABLE Input`** mientras que Discord / juegos escuchan **`CABLE Output`**.
+> - **Altavoces y filtración de auriculares:** Evita usar altavoces; el sonido puede filtrarse en el micrófono y provocar doble audio, eco o que también se conviertan las voces de otras personas. También puede pasar con auriculares si el volumen está muy alto o no son lo bastante cerrados y aislados.
 > - **Monitoreo:** Escuchar tu propia voz convertida en los auriculares es una función opcional aparte que solo debe activarse cuando haga falta. Evita rutas de audio duplicadas, eco y loopback.
 
 Una vez que la prueba de auriculares funcione, detén la transmisión y elige un cable de audio virtual instalado o un dispositivo con sistema operativo equivalente. El cable virtual tiene un punto final que recibe la reproducción y otro que expone esa señal como entrada de grabación.

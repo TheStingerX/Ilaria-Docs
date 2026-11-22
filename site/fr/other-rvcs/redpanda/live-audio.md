@@ -23,7 +23,7 @@ Dans les versions WebUI avec **Inference Device**, **Automatic** attribue un nou
 >
 > **2. Dans Discord, les jeux, OBS ou d'autres applications**
 > - **Input Device :** `Line 1` (VAC, recommandé) ou `CABLE Output` (VB-CABLE).
-> - **Output Device :** Vos écouteurs ou haut-parleurs.
+> - **Output Device :** Votre casque (fortement recommandé plutôt que des haut-parleurs).
 >
 > ```text
 > Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
@@ -32,6 +32,7 @@ Dans les versions WebUI avec **Inference Device**, **Automatic** attribue un nou
 > L'audio reçu depuis Discord, le jeu ou une autre app doit être envoyé directement vers votre **casque** (jamais renvoyé dans le câble virtuel).
 >
 > - **VAC vs. VB-CABLE :** **VAC** (`Line 1`) est toujours recommandé. Si vous avez aussi (ou uniquement) **VB-CABLE**, le voice changer envoie vers **`CABLE Input`** et Discord / les jeux écoutent **`CABLE Output`**.
+> - **Haut-parleurs et fuite du casque :** Évitez les haut-parleurs : le son peut repasser dans votre micro et créer un son doublé, de l'écho ou convertir aussi la voix d'autres personnes. Cela peut également arriver avec un casque s'il est trop fort ou insuffisamment fermé et isolé.
 > - **Monitoring :** Entendre votre propre voix convertie dans votre casque est une fonction optionnelle séparée à n'activer qu'en cas de besoin. Évitez les chemins audio dupliqués, l'écho et le loopback.
 
 Si votre chemin de lecture peut cibler un câble virtuel, choisissez-y le point de terminaison de lecture du câble. Dans l'application de réception, sélectionnez le point de terminaison d'enregistrement compagnon comme microphone. Conservez le micro physique comme entrée et sortie du convertisseur de l'appel sur le casque. En mode navigateur, la destination de lecture peut dépendre des paramètres de sortie du navigateur et du système d'exploitation. Vérifiez le récepteur avec un enregistrement local avant de juger le flux en direct lors d'un appel.
