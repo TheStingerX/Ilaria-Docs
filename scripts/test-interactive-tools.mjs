@@ -62,13 +62,19 @@ try {
     const prefix = lang ? '/' + lang : '';
     await open(prefix + '/tools/vram-estimator/');
     const estimator = await evaluate(() => {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
       const root = document.querySelector('[data-rvc-tool]');
       const set = (name, value) => {
         const control = root.querySelector('[name=' + name + ']');
         control.value = value;
         control.dispatchEvent(new Event('input', {bubbles:true}));
       };
-      const initial = root.querySelector('[name=vendor]').labels[0].textContent;
+      const vendor = root.querySelector('[name=vendor]');
+      const initial = vendor.labels[0].textContent;
+      const menuStyle = getComputedStyle(vendor);
+      const menuBackground = menuStyle.backgroundImage;
+      const menuAppearance = menuStyle.appearance;
       const initialMemory = root.querySelector('[name=available]').value;
       set('vendor','AMD');
       const amd = root.querySelector('[name=available]').value;
@@ -82,9 +88,10 @@ try {
       set('architecture','RVC V1');
       const validVocoders = root.querySelector('[name=vocoder]').options.length;
       root.querySelector('.rvc-actions button:last-child').click();
-      return {initial, initialMemory, amd, total, validVocoders, reset: root.querySelector('[name=batch]').value, css: getComputedStyle(root.querySelector('.rvc-grid')).display};
+      return {initial, menuBackground, menuAppearance, initialMemory, amd, total, validVocoders, reset: root.querySelector('[name=batch]').value, css: getComputedStyle(root.querySelector('.rvc-grid')).display};
     });
     assert.ok(estimator.initial.includes(manufacturer));
+    assert.deepEqual([estimator.menuBackground, estimator.menuAppearance], ['none', 'auto']);
     assert.deepEqual([estimator.initialMemory, estimator.amd, estimator.total, estimator.validVocoders, estimator.reset, estimator.css], ['12','24','300',1,'4','grid']);
     await open(prefix + '/tools/compatibility-matrix/');
     const matrix = await evaluate(() => {
