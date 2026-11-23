@@ -26,6 +26,25 @@ MVSep fonctionnant dans le cloud, il n'y a **rien à installer**. Cependant, bie
 ## 3. Crédits prépayés et API complète (Optionnel)
 
 Si vous traitez de longs fichiers (jusqu'à 100 minutes / 1 Go), voulez du **WAV 32-bit float / FLAC 24-bit** ou voulez éviter les files d'attente aux heures de pointe :
-- Les **packs de crédits** n'expirent jamais (à partir d'environ 3 \$ pour 60 crédits, 5 \$ pour 200, 10 \$ pour 600).
 - Les modèles standard coûtent **1 crédit par minute** d'audio ; les ensembles lourds utilisent des multiplicateurs (`2×`–`6×`).
 - **Accès API** : les utilisateurs connectés peuvent générer un jeton API depuis leur compte pour automatiser des lots en Python via `https://mvsep.com/api`.
+
+## Tarifs des packs
+
+MVSEP propose jusqu’à 50 séparations gratuites par jour sans carte. Premium utilise des crédits prépayés.
+
+| Prix (USD) | Crédits | Titres estimés (4 min) | USD par minute |
+| ---: | ---: | ---: | ---: |
+| 3 | 60 | ≈ 15 | 0,05 |
+| 5 | 200 | ≈ 50 | 0,025 |
+| 10 | 600 | ≈ 150 | 0,0167 |
+| 30 | 2 000 | ≈ 500 | 0,015 |
+| 50 | 4 000 | ≈ 1 000 | 0,0125 |
+| 100 | 8 500 | ≈ 2 125 | 0,0118 |
+| 200 | 18 000 | ≈ 4 500 | 0,0111 |
+| 500 | 50 000 | ≈ 12 500 | 0,01 |
+| 1 000 | 110 000 | ≈ 27 500 | 0,0091 |
+
+Les estimations supposent une séparation par titre avec un modèle standard à 1 crédit par minute. Un titre de 4 minutes coûte 4 crédits. Un modèle Ensemble à 2× coûte 8 crédits pour le même titre et un pack de 60 couvre environ 7 titres complets au lieu de 15. Des options ou passages supplémentaires peuvent augmenter le coût.
+
+[Offres MVSEP](https://sg.mvsep.com/en/plans) · [Calcul des crédits](https://mvsep.com/en/credits)

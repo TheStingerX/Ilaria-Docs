@@ -26,6 +26,25 @@ Because MVSep runs in the cloud, there is **nothing to install**. However, confi
 ## 3. Prepaid credits & Full API (Optional)
 
 If you process long files (up to 100 minutes / 1 GB), want **WAV 32-bit float / FLAC 24-bit**, or want to avoid peak-hour queues:
-- **Credit packs** never expire (starting around \$3 for 60 credits, \$5 for 200 credits, \$10 for 600 credits).
 - Standard models cost **1 credit per minute** of audio; heavy ensembles use multipliers (`2×`–`6×`).
 - **API access**: logged-in users can generate an API token in their account to automate batch separations from Python scripts via `https://mvsep.com/api`.
+
+## Credit pack prices
+
+MVSEP offers up to 50 free separations per day without a card. Premium uses prepaid credits.
+
+| Price (USD) | Credits | Approx. songs (4 min) | USD per minute |
+| ---: | ---: | ---: | ---: |
+| 3 | 60 | ≈ 15 | 0.05 |
+| 5 | 200 | ≈ 50 | 0.025 |
+| 10 | 600 | ≈ 150 | 0.0167 |
+| 30 | 2,000 | ≈ 500 | 0.015 |
+| 50 | 4,000 | ≈ 1,000 | 0.0125 |
+| 100 | 8,500 | ≈ 2,125 | 0.0118 |
+| 200 | 18,000 | ≈ 4,500 | 0.0111 |
+| 500 | 50,000 | ≈ 12,500 | 0.01 |
+| 1,000 | 110,000 | ≈ 27,500 | 0.0091 |
+
+Estimates assume one separation per song with a standard model at 1 credit per minute. A 4-minute song costs 4 credits. An Ensemble model at 2× uses 8 credits for the same track, so a pack of 60 covers about 7 full songs instead of 15. Extra options and additional passes can increase usage.
+
+[MVSEP plans](https://sg.mvsep.com/en/plans) · [How credits are calculated](https://mvsep.com/en/credits)
