@@ -1,54 +1,27 @@
 ---
-label: "Testen Sie Live-Audio in Redpanda-vc"
-icon: ":studio_microphone:"
-order: 98
+label: "Stimmkonvertierung in Echtzeit"
+icon: ":microphone:"
+order: 97
 permalink: /ilaria-rvc/redpanda/live-audio/
-description: "Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind."
+description: "Öffne Realtime in der Desktop-App oder WebUI. Teste zunächst eine Stimme über Kopfhörer, bevor du das Signal an Discord, OBS, ein Spiel oder eine andere App sendest."
 ---
-# Testen Sie Live-Audio in Redpanda-vc
 
-## Wählen Sie Desktop oder Browser
+# Stimmkonvertierung in Echtzeit
 
-Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind. Die WebUI-Echtzeitregisterkarte erfasst Mikrofoneingaben über den Browser und leitet Audio an das ausgewählte Inferenzgerät weiter. Verwenden Sie einen Pfad für Ihren ersten Test und lassen Sie den anderen geschlossen, um die Diagnose von Rückmeldungen und Konkurrenzjobs zu erleichtern.
+[Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-1. Laden Sie ein kompatibles RVC-Modell, wählen Sie den erwarteten Einbetter aus, an dem er freigelegt wird, und beginnen Sie bei neutraler Tonhöhe mit dem Standardpuffer.
-2. Wählen Sie das physische Mikrofon aus. Erteilen Sie im Browsermodus der lokalen Seite die Mikrofonberechtigung und überprüfen Sie die tatsächliche Quelle in den Browserberechtigungen.
-3. Kopfhörer anschließen und über den Monitor abspielen. Sagen Sie einen kurzen Satz, der sowohl leise als auch laute Wörter enthält, gefolgt von einer Pause. Überprüfen Sie Stimmidentität, Lautstärke und Aussetzer.
-4. Stoppen Sie den Stream, bevor Sie die Engine wechseln oder ein anderes Inferenzgerät auswählen. Führen Sie nach der erneuten Verbindung einen weiteren Test durch.
+Öffne Realtime in der Desktop-App oder WebUI. Teste zunächst eine Stimme über Kopfhörer, bevor du das Signal an Discord, OBS, ein Spiel oder eine andere App sendest.
 
-## Wählen Sie das Rechengerät aus.
+## Audio-Routing einrichten
 
-In WebUI-Builds mit **Inferenzgerät** weist **Automatisch** einem verfügbaren Gerät einen neuen Stream zu. Wählen Sie eine bestimmte GPU, wenn Sie wiederholbare Ergebnisse vergleichen oder eine GPU für eine andere Arbeitslast frei lassen möchten. Ein Stream bleibt auf dem ihm zugewiesenen Gerät. Mehrere GPUs können separate Streams verarbeiten; Das Ändern des Selektors ist keine Möglichkeit, ihre Kapazität in einem Stream zu kombinieren. Beatrice verwendet in der dokumentierten Implementierung einen separaten CPU-Pfad.
+Wähle für den ersten Test das echte Mikrofon unter **Microphone** und Kopfhörer unter **Output**. Für die Weiterleitung wählst du die Wiedergabeseite des virtuellen Kabels als Redpanda-Ausgabe und die Aufnahmeseite als Mikrofon in der Ziel-App. Nutze **Monitor** für Kopfhörer und vermeide Rückkopplungen.
 
-## Leiten Sie das Signal nach einem sauberen Test weiter
+## RVC- und CVC-Stimmen
 
-> **Correct Audio Routing**
->
-> **1. Im Voice Changer**
-> - **Input Device:** Dein physisches Mikrofon.
-> - **Output Device:** `Line 1` (VAC, empfohlen) oder `CABLE Input` (VB-CABLE).
->
-> **2. In Discord, Spielen, OBS oder anderen Anwendungen**
-> - **Input Device:** `Line 1` (VAC, empfohlen) oder `CABLE Output` (VB-CABLE).
-> - **Output Device:** Deine Kopfhörer (dringend statt Lautsprechern empfohlen).
->
-> ```text
-> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
-> ```
->
-> Audio aus Discord, dem Spiel oder anderen Apps muss direkt auf deine **Kopfhörer** gehen (niemals zurück in das virtuelle Kabel).
->
-> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) wird immer empfohlen. Falls du auch (oder nur) **VB-CABLE** nutzt, sendet der Voice Changer an **`CABLE Input`**, während Discord / Spiele **`CABLE Output`** empfangen.
-> - **Lautsprecher & Übersprechen bei Headsets:** Vermeide Lautsprecher: Der Ton kann ins Mikrofon gelangen und Doppelton, Echo oder sogar die Konvertierung fremder Stimmen verursachen. Das kann auch bei Headsets passieren, wenn sie zu laut oder nicht geschlossen und gut genug isoliert sind.
-> - **Monitoring:** Das Mithören der eigenen konvertierten Stimme im Kopfhörer ist eine separate optionale Funktion, die nur bei Bedarf aktiviert werden sollte. Vermeide doppelte Audiowege, Echo und Loopback.
+RVC nutzt ein `.pth`-Inferenzmodell und optional den passenden `.index`. CVC nutzt eine `.cvc`-Stimme und einen 48-kHz-Audiopfad. Es übernimmt gespeicherte Einstellungen für Tonhöhe, Gain, Gate und Index. Alte `.causalvc.json`- und `.nextvc.json`-Stimmen benötigen ihre Gewichte. RNNoise kann den Eingang filtern. Teste bei Aussetzern längere Blöcke und schalte Effekte einzeln ab.
 
-Wenn Ihr Wiedergabepfad auf ein virtuelles Kabel abzielen kann, wählen Sie dort den Wiedergabeendpunkt des Kabels aus. Wählen Sie in der empfangenden App den Aufnahmeendpunkt des Begleiters als Mikrofon aus. Behalten Sie das physische Mikrofon als Konverter-Eingang und -Ausgang des Anrufs über Kopfhörer bei. Im Browsermodus kann das Wiedergabeziel von den Ausgabeeinstellungen des Browsers und des Betriebssystems abhängen. Überprüfen Sie den Empfänger anhand einer lokalen Aufzeichnung, bevor Sie den Live-Stream in einem Anruf beurteilen.
+[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Training mit Casual Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
-| Was Sie hören | Was Sie testen sollten |
-| --- | --- |
-| Der Monitor funktioniert, aber der Anruf hat rohes Audio | Wählen Sie den Kabelendpunkt im Anruf aus und deaktivieren Sie zusätzliche Mikrofonquellen. |
-| Die Verzögerung nimmt zu oder der Ton stottert. | Stoppen Sie andere Streams, verwenden Sie den Standardpuffer und testen Sie lokal mit einer Registerkarte. |
-| Browser-Mikrofonanzeige bewegt sich nie | Bestätigen Sie die Site-Berechtigung, das ausgewählte physische Gerät und ob eine andere App exklusiven Zugriff hat. |
-| Nur ein Spiel führt zu Audioausfällen | Testen Sie, während das Spiel läuft, geben Sie der Konvertierungs-GPU etwas Spielraum oder wählen Sie eine andere verfügbare GPU. |
+## Quellcode und Release
 
-Der Browser-Stream versucht den WebSocket-Transport und kann bei Bedarf auf HTTP-Streaming zurückgreifen. Stellen Sie ein sauberes lokales Ergebnis her, bevor Sie die Qualität der Remoteverbindung untersuchen.
+[Realtime UI](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/ui/index.html) · [Realtime engine](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/realtime.py)

@@ -1,54 +1,27 @@
 ---
-label: "Pruebe el audio en vivo en Redpanda-vc"
-icon: ":studio_microphone:"
-order: 98
+label: "Conversión de voz en tiempo real"
+icon: ":microphone:"
+order: 97
 permalink: /ilaria-rvc/redpanda/live-audio/
-description: "El iniciador en tiempo real del escritorio de Windows utiliza los dispositivos expuestos a ese proceso local."
+description: "Abre Realtime en la aplicación de escritorio o en la WebUI. Prueba una voz con auriculares antes de enviar el sonido a Discord, OBS, un juego u otra aplicación."
 ---
-# Pruebe el audio en vivo en Redpanda-vc
 
-## Elija escritorio o navegador
+# Conversión de voz en tiempo real
 
-El iniciador en tiempo real del escritorio de Windows utiliza los dispositivos expuestos a ese proceso local. La pestaña en tiempo real de WebUI captura la entrada del micrófono a través del navegador y pasa el audio al dispositivo de inferencia seleccionado. Utilice una ruta para su primera prueba y deje la otra cerrada para facilitar el diagnóstico de los comentarios y los trabajos competitivos.
+[Versión precompilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-1. Cargue un modelo RVC compatible, seleccione el incrustador esperado donde esté expuesto y comience en un paso neutro con el búfer predeterminado.
-2. Selecciona el micrófono físico. En el modo de navegador, otorgue permiso al micrófono para la página local y verifique la fuente real en los permisos del navegador.
-3. Conecte los auriculares y reproduzca el monitor. Diga una oración corta que contenga palabras en voz baja y en voz alta, seguida de una pausa. Verifique la identidad de la voz, el volumen y las interrupciones.
-4. Detenga la transmisión antes de cambiar de motor o elegir un dispositivo de inferencia diferente. Ejecute otra prueba después de volver a conectarse.
+Abre Realtime en la aplicación de escritorio o en la WebUI. Prueba una voz con auriculares antes de enviar el sonido a Discord, OBS, un juego u otra aplicación.
 
-## Seleccione el dispositivo informático
+## Configurar el enrutamiento de audio
 
-En las compilaciones de WebUI con **Dispositivo de inferencia**, **Automático** asigna una nueva secuencia a un dispositivo disponible. Elija una GPU específica al comparar resultados repetibles o dejar una GPU libre para otra carga de trabajo. Una transmisión permanece en su dispositivo asignado. Varias GPU pueden manejar transmisiones separadas; cambiar el selector no es una forma de combinar su capacidad en una sola secuencia. Beatrice utiliza una ruta de CPU separada en la implementación documentada.
+Para la primera prueba, selecciona el micrófono físico en **Microphone** y los auriculares en **Output**. Para enviar la voz a otra aplicación, elige el extremo de reproducción del cable virtual como salida de Redpanda y el de grabación como micrófono de la aplicación de destino. Usa **Monitor** para los auriculares sin devolver la señal al micrófono.
 
-## Enrutar la señal después de una prueba limpia
+## Voces RVC y CVC
 
-> **Correct Audio Routing**
->
-> **1. Dentro del Voice Changer**
-> - **Input Device:** Tu micrófono físico.
-> - **Output Device:** `Line 1` (VAC, recomendado) o `CABLE Input` (VB-CABLE).
->
-> **2. Dentro de Discord, Juegos, OBS u otras aplicaciones**
-> - **Input Device:** `Line 1` (VAC, recomendado) o `CABLE Output` (VB-CABLE).
-> - **Output Device:** Tus auriculares (muy recomendados frente a altavoces).
->
-> ```text
-> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
-> ```
->
-> El audio que llega desde Discord, el juego u otras apps debe reproducirse directamente en tus **auriculares** (nunca de vuelta al cable virtual).
->
-> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) es siempre la opción recomendada. Si también (o solo) usas **VB-CABLE**, recuerda que el voice changer envía a **`CABLE Input`** mientras que Discord / juegos escuchan **`CABLE Output`**.
-> - **Altavoces y filtración de auriculares:** Evita usar altavoces; el sonido puede filtrarse en el micrófono y provocar doble audio, eco o que también se conviertan las voces de otras personas. También puede pasar con auriculares si el volumen está muy alto o no son lo bastante cerrados y aislados.
-> - **Monitoreo:** Escuchar tu propia voz convertida en los auriculares es una función opcional aparte que solo debe activarse cuando haga falta. Evita rutas de audio duplicadas, eco y loopback.
+RVC usa un `.pth` de inferencia y un `.index` opcional. CVC usa una voz `.cvc` y una ruta de audio de 48 kHz. Carga los ajustes de tono, ganancia, puerta e índice guardados con la voz. Los archivos antiguos `.causalvc.json` y `.nextvc.json` requieren sus pesos. RNNoise puede filtrar la entrada del micrófono. Si hay cortes, prueba un bloque más largo y desactiva los efectos de uno en uno.
 
-Si su ruta de reproducción puede apuntar a un cable virtual, elija allí el punto final de reproducción del cable. En la aplicación de recepción, seleccione el punto final de grabación complementario como micrófono. Mantenga el micrófono físico como entrada y salida del convertidor de la llamada en los auriculares. En el modo de navegador, el destino de la reproducción puede depender de la configuración de salida del navegador y del sistema operativo. Verifique el receptor con una grabación local antes de juzgar la transmisión en vivo en una llamada.
+[Instalar Redpanda VC](first-run.md) · [Inferencia con archivos](inference.md) · [Entrenamiento con Casual Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
-| Lo que escuchas | Qué probar |
-| --- | --- |
-| El monitor funciona pero la llamada tiene audio sin procesar | Seleccione el punto final del cable en la llamada y desactive las fuentes de micrófono adicionales. |
-| El retraso aumenta o el audio se entrecorta | Detenga otras transmisiones, use el búfer predeterminado y pruebe localmente con una pestaña. |
-| El medidor del micrófono del navegador nunca se mueve | Confirme el permiso del sitio, el dispositivo físico seleccionado y si otra aplicación tiene acceso exclusivo. |
-| Solo un juego causa audio roto | Pruebe mientras el juego se está ejecutando, déle margen de maniobra a la GPU de conversión o elija otra GPU disponible. |
+## Código fuente y versión
 
-La transmisión del navegador intenta el transporte WebSocket y puede recurrir a la transmisión HTTP cuando sea necesario. Establezca un resultado local limpio antes de investigar la calidad de la conexión remota.
+[Realtime UI](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/ui/index.html) · [Realtime engine](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/realtime.py)

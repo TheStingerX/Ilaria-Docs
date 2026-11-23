@@ -1,7 +1,7 @@
 ---
 label: "Entraîner des modèles RVC (EMA & Steps)"
 icon: ":mortar_board:"
-order: 97
+order: 96
 permalink: /ilaria-rvc/redpanda/training/
 description: "Guide complet pour débutants, vérifié dans le code, sur l'entraînement de modèles RVC dans Redpanda-vc : Generator EMA, sauvegarde de checkpoints par pas, reprise, exportation et dépannage."
 ---
@@ -165,7 +165,7 @@ Au lieu d'attendre la fin d'une époque complète avant de sauvegarder, Redpanda
 
 Même si `Total Steps` n'est pas un multiple de `Save Every X Steps` (par exemple, `Total Steps = 2500` et `Save Every X Steps = 1000`), Redpanda-vc sauvegarde **toujours** à la fois les checkpoints `G`/`D` et un modèle `.pth` d'inférence en atteignant le pas final (`final = self.global_step >= self.args.total_steps`).
 
-### Save Every Weights
+### `save_every_weights`
 
 - **Défaut :** **Activé** (`True`).
 - Lorsqu'il est **activé**, Redpanda-vc exporte un modèle `.pth` d'inférence à chaque intervalle de sauvegarde *et* au pas final.
@@ -176,56 +176,17 @@ Même si `Total Steps` n'est pas un multiple de `Save Every X Steps` (par exempl
 - **Défaut :** **Activé** (`True`).
 - Lorsqu'il est **activé**, les checkpoints `G` et `D` écrasent des noms fixes (`G_2333333.pth` et `D_2333333.pth`, où `2333333` est `LATEST_CHECKPOINT_SUFFIX`) pour économiser de l'espace disque.
 - Lorsqu'il est **désactivé**, les checkpoints incluent le numéro de pas (`G_1000.pth`, `D_1000.pth`, `G_2000.pth`, `D_2000.pth`).
-- **Important :** `Save Only Latest` n'affecte que les checkpoints d'entraînement `G`/`D`, **pas** les modèles `.pth` d'inférence exportés (sauf si vous désactivez `Save Every Weights`). Gardez à l'esprit qu'avec `Save Only Latest` activé, vous ne pouvez pas revenir à un checkpoint `G`/`D` intermédiaire plus ancien si l'entraînement se dégrade plus tard.
+- **Important :** `Save Only Latest` n'affecte que les checkpoints d'entraînement `G`/`D`, **pas** les modèles `.pth` d'inférence exportés (sauf si vous désactivez `save_every_weights`). Gardez à l'esprit qu'avec `Save Only Latest` activé, vous ne pouvez pas revenir à un checkpoint `G`/`D` intermédiaire plus ancien si l'entraînement se dégrade plus tard.
 
 ---
 
-## Votre Premier Entraînement RVC dans Redpanda-vc
+## Entraîner une voix RVC dans l’interface actuelle
 
-### 1. Préparation
+Dans **Training → RVC**, réglez **Model name**, **Dataset folder**, **Sample rate**, **Training steps** et **Save every (steps)**. Reprenez un entraînement préparé avec le même nom, **Dataset folder** vide et un objectif de pas supérieur. **Advanced settings** contient **Version**, **Vocoder**, **Precision**, **Embedder** et **Index algorithm**. L’interface propose HiFi-GAN et RefineGAN. Choisissez des poids préentraînés adaptés et une précision compatible avec votre GPU. **Reset optimizer on resume** réinitialise l’optimiseur et conserve les poids. Suivez l’entraînement dans **TensorBoard** et écoutez plusieurs exports.
 
-1. Installez et lancez Redpanda-vc (voir [Configurer Redpanda-vc](first-run.md)).
-2. Ouvrez l'onglet **Train** et sélectionnez **RVC** (si votre build affiche plusieurs familles de modèles).
-3. Sous **Model Settings**, saisissez un **Model Name** unique (le nom de votre expérience).
-4. Choisissez un **Sample Rate** compatible (`32k`, `40k` ou `48k`), une **Version** (`v1` ou `v2`) et un **Vocoder** (`HiFi-GAN`, `MRF HiFi-GAN` ou `RefineGAN` selon vos pré-entraînés et votre application d'inférence cible).
-5. Préparez un dataset propre et sec d'**enregistrements autorisés** dans un dossier dédié.
+L’interface de bureau et du navigateur exporte une voix d’inférence à chaque sauvegarde. **Keep latest training checkpoint** règle la conservation de la paire G/D pour la reprise. Lancez un nouveau flux avec **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-### 2. Preprocess
-
-1. Ouvrez l'accordéon **Preprocess**.
-2. Saisissez ou sélectionnez le chemin de votre dossier dataset dans **Dataset Path** (cliquez sur **Refresh** si besoin).
-3. Cliquez sur **Preprocess Dataset** et attendez la fin du découpage et de la normalisation audio dans `logs/<model_name>/`.
-
-### 3. Extract
-
-1. Ouvrez l'accordéon **Extract**.
-2. Sélectionnez votre **Pitch extraction algorithm** (tel que `rmvpe`) et **Embedder Model** (généralement `contentvec`).
-3. Cliquez sur **Extract Features**. *(Cela prépare les caractéristiques de hauteur et de contenu pour l'entraînement ; cela **n'entraîne pas** encore les poids `.pth`.)*
-
-### 4. Training
-
-1. Ouvrez l'accordéon **Training**.
-2. Réglez **Batch Size** sur une valeur que la VRAM de votre GPU peut supporter confortablement.
-3. Pour un premier test illustratif, vous pouvez laisser les valeurs par défaut actuelles :
-   - **Total Steps :** `10000`
-   - **Save Every X Steps :** `1000`
-4. Dépliez **Advanced Settings** pour vérifier :
-   - **Save Only Latest :** Activé (`True`)
-   - **Save Every Weights :** Activé (`True`)
-   - **Generator EMA Decay :** `0.999`
-   *(Ces réglages par défaut sont des valeurs de départ illustratives, pas des réglages optimaux garantis pour chaque dataset.)*
-5. Cliquez sur **Start Training**.
-6. Suivez l'avancement via le statut terminal/UI, **Pause Training** / **Resume Training** / **Stop Training**, et les journaux TensorBoard (`logs/<model_name>/eval/`).
-7. Une fois terminé, cliquez sur **Generate Index** si vous souhaitez un fichier `.index` associé.
-
-### 5. Fichiers de Sortie
-
-Dans `logs/<model_name>/`, vous trouverez :
-
-- **Checkpoints reprenables :** `G_2333333.pth` et `D_2333333.pth` (quand **Save Only Latest** est activé) ou `G_<step>.pth` / `D_<step>.pth` (quand il est désactivé).
-- **Modèles d'inférence :** `<model_name>_<epoch>e_<step>s.pth` (par exemple, `MyVoice_45e_1000s.pth`). Ce sont les fichiers que vous chargez pour la conversion vocale.
-
----
+[Entraînement avec Casual Voice Changer](causal-training.md)
 
 ## Reprendre l'Entraînement en Toute Sécurité
 
@@ -246,7 +207,7 @@ Lorsque vous relancez l'entraînement sur une expérience existante (`rvc/train/
 
 ## Comment Redpanda-vc Exporte les Modèles EMA
 
-1. **Exports automatiques pendant l'entraînement (`train.py`, lignes 1090-1091 & 1157-1163) :** Chaque fois que `save()` déclenche un export d'inférence (`Save Every Weights` ou le pas final), `export_state_dict()` renvoie `self.ema.weights` si EMA est activé (`ema_decay > 0`), ou le `state_dict()` du générateur en direct si EMA est désactivé (`ema_decay = 0`).
+1. **Exports automatiques pendant l'entraînement (`train.py`, lignes 1090-1091 & 1157-1163) :** Chaque fois que `save()` déclenche un export d'inférence (`save_every_weights` ou le pas final), `export_state_dict()` renvoie `self.ema.weights` si EMA est activé (`ema_decay > 0`), ou le `state_dict()` du générateur en direct si EMA est désactivé (`ema_decay = 0`).
 2. **Exports manuels (accordéon `Export Model` -> `rvc/train/process/checkpoint_exporter.py`, lignes 44-117) :** Vous pouvez exporter manuellement n'importe quel checkpoint reprenable `G_*.pth` en `fp16` ou `fp32`. `export_generator_checkpoint()` vérifie si `checkpoint["ema"]["weights"]` existe et utilise automatiquement ces poids EMA lorsqu'ils sont présents (en affichant `... and the generator EMA` dans le message d'état).
 3. Il n'y a **pas** d'option séparée "Raw vs. EMA" dans l'exportateur WebUI ; le `.pth` exporté sert uniquement à l'inférence, tandis que `G_*.pth` + `D_*.pth` restent nécessaires pour reprendre l'entraînement.
 
@@ -272,13 +233,12 @@ Il n'existe pas de réponse universelle oui ou non pour toutes les voix et tous 
 | **Mémoire GPU saturée (OOM)** | `Batch Size` trop élevé ou `Cache Dataset in GPU` activé sur VRAM limitée | Vérifiez l'usage VRAM et l'erreur terminal | Baissez **Batch Size**, désactivez **Cache Dataset in GPU** ou activez **Checkpointing** |
 | **EMA ne semble pas changer les résultats** | Peu de pas, decay proche de `0` ou comparaison à des pas différents | Vérifiez `Generator EMA Decay` et le résumé console au démarrage | Confirmez que `generator EMA <value>` apparaît au démarrage et comparez des exports au même pas sur des clips externes |
 | **EMA Decay réglé sur `0`** | Curseur réglé sur `0` | Vérifiez **Training → Advanced Settings → Generator EMA Decay** | Réglez sur `0.999` (défaut) si vous voulez EMA activé à la prochaine exécution |
-| **Aucun modèle `.pth` d'inférence intermédiaire** | **Save Every Weights** est désactivé | Vérifiez **Training → Advanced Settings → Save Every Weights** | Activez **Save Every Weights** pour exporter des modèles d'inférence à chaque `Save Every X Steps` |
-| **Seuls les derniers checkpoints `G`/`D` existent** | **Save Only Latest** est activé (défaut) | Vérifiez `G_2333333.pth` / `D_2333333.pth` dans `logs/<model_name>/` | Désactivez **Save Only Latest** avant l'entraînement pour garder un historique numéroté `G_<step>.pth` |
+| **Seuls les derniers checkpoints `G`/`D` existent** | **Keep latest training checkpoint** est activé (défaut) | Vérifiez `G_2333333.pth` / `D_2333333.pth` dans `logs/<model_name>/` | Désactivez **Keep latest training checkpoint** avant l'entraînement pour garder un historique numéroté `G_<step>.pth` |
 | **Checkpoint `G` ou `D` manquant** | Un fichier a été supprimé ou déplacé manuellement | Cherchez la paire `G_*` et `D_*` correspondante dans `logs/<model_name>/` | Les deux fichiers `G` et `D` avec le même suffixe sont requis pour reprendre (`latest_checkpoint_pair()`) |
 | **L'entraînement repart d'un pas antérieur** | Arrêt ou plantage avant le prochain `Save Every X Steps` | Comparez le dernier pas console vs. le pas repris | Comportement normal : la progression après la dernière sauvegarde disque n'est stockée qu'au prochain intervalle |
 | **Avis/erreur lors de la restauration EMA** | Reprise depuis un checkpoint sans EMA ou configuration modèle différente | Lisez `"Could not restore the generator EMA..."` dans le terminal | Redpanda-vc bascule automatiquement sur une initialisation EMA depuis les poids repris du générateur |
 | **Fresh Training a supprimé les anciens checkpoints** | **Fresh Training** (`--cleanup`) est resté coché | Vérifiez `logs/<model_name>/` | Décochez **Fresh Training** lors d'une reprise ; les checkpoints supprimés ne sont pas récupérables sans sauvegarde |
-| **Total Steps déjà atteint** | `global_step >= Total Steps` | Lisez `"already reached step X. Raise the total steps..."` dans le terminal | Augmentez **Total Steps** au-dessus du pas actuel et cliquez sur **Start Training** |
+| **Total Steps déjà atteint** | `global_step >= Total Steps` | Lisez `"already reached step X. Raise the total steps..."` dans le terminal | Augmentez **Total Steps** au-dessus du pas actuel et cliquez sur **Run full workflow** |
 | **Le `.pth` exporté ne peut pas reprendre l'entraînement** | Un `.pth` d'inférence a été chargé au lieu de `G_*.pth` + `D_*.pth` | Vérifiez le nom (`<name>_Xe_Ys.pth` vs. `G_*.pth`) | Les `.pth` d'inférence retirent l'état d'entraînement ; reprenez depuis `logs/<model_name>/` avec `G_*.pth` et `D_*.pth` |
 | **Consommation VRAM anormalement élevée** | **Checkpointing** désactivé, **Batch Size** élevé ou **Cache Dataset in GPU** activé | Vérifiez **Advanced Settings** | Activez **Checkpointing** (activation checkpointing), désactivez **Cache Dataset in GPU** et réduisez **Batch Size** |
 
@@ -320,7 +280,7 @@ Oui. Les sauvegardes sont déclenchées par `Save Every X Steps`, indépendammen
 Vous conservez la progression jusqu'au dernier checkpoint `G`/`D` sauvegardé ; les pas exécutés après cette sauvegarde sont perdus.
 
 **Quelle est la différence entre Save Only Latest et Save Every Weights ?**
-`Save Only Latest` écrase les checkpoints d'entraînement `G_2333333.pth` / `D_2333333.pth` ; `Save Every Weights` exporte un modèle `.pth` d'inférence à chaque intervalle de sauvegarde plutôt qu'uniquement au pas final.
+`Save Only Latest` écrase les checkpoints d'entraînement `G_2333333.pth` / `D_2333333.pth` ; `save_every_weights` exporte un modèle `.pth` d'inférence à chaque intervalle de sauvegarde plutôt qu'uniquement au pas final.
 
 **Checkpointing est-il la même chose que sauvegarder des checkpoints ?**
 Non. `Checkpointing` dans Advanced Settings est l'activation checkpointing pour économiser la VRAM, tandis que `Save Every X Steps` contrôle l'enregistrement des checkpoints sur disque.

@@ -42,7 +42,7 @@ Avec NVIDIA, choisissez le paquet Vonovox adapté. Avec AMD ou Intel, commencez 
 
 ## Autres tâches avec Applio ou Redpanda-vc
 
-Applio regroupe la synthèse vocale et la gestion des modèles. Redpanda-vc permet de comparer RVC, Beatrice et Rectified Flow et de tester le direct sur ordinateur ou dans le navigateur. Pour un modèle RVC, choisissez le moteur RVC.
+Choisissez Applio pour la synthèse vocale et la gestion des modèles. Redpanda VC propose entraînement, inférence sur fichier et conversion en temps réel pour RVC et Casual Voice Changer, sur le bureau et dans la WebUI. Utilisez `.pth` avec RVC et `.cvc` avec CVC.
 
 [Installer Applio](applio/installation.md) · [Synthèse vocale Applio](applio/tts.md) · [Modèles Applio](applio/models.md) · [Configurer Redpanda-vc](redpanda/first-run.md) · [Direct dans Redpanda-vc](redpanda/live-audio.md)
 

@@ -42,7 +42,7 @@ Con NVIDIA, elige el paquete de Vonovox para tu GPU. Con AMD o Intel, prueba la 
 
 ## Otras tareas con Applio o Redpanda-vc
 
-Applio reúne la síntesis de voz y la gestión de modelos. Redpanda-vc permite comparar RVC, Beatrice y Rectified Flow y probar el directo en el navegador o en el escritorio. Elige el motor RVC para un modelo RVC.
+Elige Applio para la síntesis de voz y la gestión de modelos. Redpanda VC ofrece entrenamiento, inferencia con archivos y conversión en tiempo real para RVC y Casual Voice Changer, en el escritorio y en la WebUI. Usa `.pth` con RVC y `.cvc` con CVC.
 
 [Instala Applio](applio/installation.md) · [Síntesis de voz en Applio](applio/tts.md) · [Modelos en Applio](applio/models.md) · [Configura Redpanda-vc](redpanda/first-run.md) · [Directo en Redpanda-vc](redpanda/live-audio.md)
 

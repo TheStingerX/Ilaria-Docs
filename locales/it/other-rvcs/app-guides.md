@@ -42,7 +42,7 @@ Su Windows con NVIDIA, installa Vonovox e scegli il pacchetto adatto alla GPU. C
 
 ## Usare Applio o Redpanda-vc per gli altri casi
 
-Scegli Applio per convertire testo in parlato, gestire modelli o riunire più funzioni RVC nella stessa interfaccia. Scegli Redpanda-vc per confrontare RVC con motori come Beatrice e Rectified Flow o per provare la conversione dal vivo nel browser e nell’app desktop. Se usi un modello vocale RVC, seleziona il motore RVC. Parti dalle impostazioni predefinite e prova un solo file o flusso audio prima di toccare le opzioni avanzate.
+Scegli Applio per la sintesi vocale e la gestione dei modelli. Redpanda VC offre training, inferenza da file e conversione in tempo reale per RVC e Casual Voice Changer, nell’app desktop e nella WebUI. Usa `.pth` con RVC e `.cvc` con CVC.
 
 [Installa Applio](applio/installation.md) · [Sintesi vocale in Applio](applio/tts.md) · [Libreria modelli di Applio](applio/models.md) · [Configura Redpanda-vc](redpanda/first-run.md) · [Modalità live di Redpanda-vc](redpanda/live-audio.md)
 
