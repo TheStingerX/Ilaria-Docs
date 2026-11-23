@@ -1,6 +1,6 @@
 # Stimmkonvertierung in Echtzeit
 
-[Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Öffne Realtime in der Desktop-App oder WebUI. Teste zunächst eine Stimme über Kopfhörer, bevor du das Signal an Discord, OBS, ein Spiel oder eine andere App sendest.
 

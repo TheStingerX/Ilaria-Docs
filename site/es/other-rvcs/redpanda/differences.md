@@ -1,6 +1,6 @@
 # Redpanda VC frente a otras aplicaciones RVC
 
-[Versión precompilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Redpanda VC reúne RVC y Causal Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.
 

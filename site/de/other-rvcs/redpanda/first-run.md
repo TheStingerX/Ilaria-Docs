@@ -1,6 +1,6 @@
 # Redpanda VC einrichten
 
-[Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Beginne mit der vorkompilierten Version für Windows x64. Die Desktop-App nutzt Tauri und führt die Python-Sprachengines lokal aus. Der Quellcode enthält außerdem eine WebUI mit derselben Oberfläche.
 

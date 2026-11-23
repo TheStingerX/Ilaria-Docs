@@ -1,6 +1,6 @@
 # Conversão de voz em tempo real
 
-[Versão pré-compilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Abre Realtime na aplicação de desktop ou na WebUI. Testa uma voz nos auscultadores antes de enviares o som para Discord, OBS, um jogo ou outra aplicação.
 

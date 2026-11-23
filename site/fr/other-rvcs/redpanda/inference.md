@@ -1,6 +1,6 @@
 # Inférence sur fichier
 
-[Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Utilisez Inference pour convertir un enregistrement ou un dossier entier. Une voix RVC utilise un modèle .pth d’inférence et une voix Causal Voice Changer utilise .cvc.
 

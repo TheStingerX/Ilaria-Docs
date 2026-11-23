@@ -1,6 +1,6 @@
 # Conversione vocale in tempo reale
 
-[Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.
 

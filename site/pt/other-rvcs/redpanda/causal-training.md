@@ -1,6 +1,6 @@
 # Treino com Causal Voice Changer
 
-[Versão pré-compilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 A opção Causal Voice Changer do Redpanda integra Causal Voice Changer v0.4.0. O ajuste fino cria uma voz .cvc para o motor CVC.
 
