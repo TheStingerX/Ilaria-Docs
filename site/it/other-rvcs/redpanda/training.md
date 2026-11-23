@@ -158,7 +158,7 @@ Anziché attendere la fine di un'intera epoca prima di salvare, Redpanda-vc pian
 
 Anche se `Total Steps` non è multiplo di `Save Every X Steps` (ad es. `Total Steps = 2500` e `Save Every X Steps = 1000`), Redpanda-vc salva **sempre** la coppia `G`/`D` e un modello `.pth` per inference allo step finale (`final = self.global_step >= self.args.total_steps`).
 
-### Save Every Weights
+### `save_every_weights`
 
 - **Predefinito:** **Abilitato** (`True`).
 - Se **abilitato**, Redpanda-vc esporta un modello `.pth` per inference a ogni intervallo di salvataggio *e* allo step finale.
@@ -173,52 +173,13 @@ Anche se `Total Steps` non è multiplo di `Save Every X Steps` (ad es. `Total St
 
 ---
 
-## Il Tuo Primo Training RVC in Redpanda-vc
+## Addestrare una voce RVC nell’interfaccia attuale
 
-### 1. Preparazione
+Nella scheda **Training → RVC**, imposta **Model name**, **Dataset folder**, **Sample rate**, **Training steps** e **Save every (steps)**. Puoi riprendere un run preparato con lo stesso nome, **Dataset folder** vuoto e un obiettivo di step più alto. In **Advanced settings** trovi **Version**, **Vocoder**, **Precision**, **Embedder** e **Index algorithm**. La UI offre HiFi-GAN e RefineGAN. Usa pretrained adatti alla configurazione e una precisione supportata dalla GPU. **Reset optimizer on resume** azzera lo stato dell’ottimizzatore mantenendo i pesi del modello. Segui il run in **TensorBoard** e ascolta più esportazioni.
 
-1. Installa e avvia Redpanda-vc (vedi [Configurare Redpanda-vc](first-run.md)).
-2. Apri la scheda **Train** e seleziona **RVC**.
-3. In **Model Settings**, inserisci un **Model Name** univoco per l'esperimento.
-4. Scegli **Sample Rate** (`32k`, `40k` o `48k`), **Version** (`v1` o `v2`) e **Vocoder** (`HiFi-GAN`, `MRF HiFi-GAN` o `RefineGAN`) compatibili con i pretrained e l'app di inference prevista.
-5. Prepara un dataset pulito e asciutto di **registrazioni autorizzate** in una cartella dedicata.
+La UI desktop e browser esporta una voce per inferenza a ogni salvataggio. **Keep latest training checkpoint** controlla la conservazione della coppia G/D usata per riprendere il training. Avvia un nuovo flusso con **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-### 2. Preprocess
-
-1. Apri la sezione **Preprocess**.
-2. Inserisci o seleziona la cartella del dataset in **Dataset Path** (usa **Refresh** se serve).
-3. Clicca **Preprocess Dataset** e attendi la suddivisione e normalizzazione in `logs/<model_name>/`.
-
-### 3. Extract
-
-1. Apri la sezione **Extract**.
-2. Seleziona **Pitch extraction algorithm** (es. `rmvpe`) ed **Embedder Model** (di norma `contentvec`).
-3. Clicca **Extract Features**. *(Prepara feature di contenuto e F0; **non** allena ancora i pesi `.pth`.)*
-
-### 4. Training
-
-1. Apri la sezione **Training**.
-2. Imposta **Batch Size** in base alla VRAM della tua GPU.
-3. Per un primo test illustrativo puoi mantenere i valori predefiniti correnti:
-   - **Total Steps:** `10000`
-   - **Save Every X Steps:** `1000`
-4. Espandi **Advanced Settings** per verificare:
-   - **Save Only Latest:** Abilitato (`True`)
-   - **Save Every Weights:** Abilitato (`True`)
-   - **Generator EMA Decay:** `0.999`
-   *(Sono valori iniziali illustrativi, non impostazioni garantite come ottimali per ogni dataset.)*
-5. Clicca **Start Training**.
-6. Controlla l'avanzamento da terminale/interfaccia con **Pause Training** / **Resume Training** / **Stop Training** e TensorBoard (`logs/<model_name>/eval/`).
-7. A fine training, clicca **Generate Index** se desideri il file `.index` abbinato.
-
-### 5. Output
-
-Dentro `logs/<model_name>/` troverai:
-
-- **Checkpoint per riprendere:** `G_2333333.pth` e `D_2333333.pth` (con **Save Only Latest** attivo) oppure `G_<step>.pth` / `D_<step>.pth` (se disattivo).
-- **Modelli per inference:** `<model_name>_<epoch>e_<step>s.pth` (es. `MiaVoce_45e_1000s.pth`). Questi sono i file da caricare per la conversione vocale.
-
----
+[Training con Casual Voice Changer](causal-training.md)
 
 ## Riprendere un Training in Sicurezza
 
@@ -239,7 +200,7 @@ Quando riavvii il training su un esperimento esistente (`rvc/train/train.py`, ri
 
 ## Come Redpanda-vc Esporta i Modelli EMA
 
-1. **Esportazione automatica durante il training (`train.py`, righe 1090-1091 e 1157-1163):** Quando `save()` esporta un `.pth` per inference (`Save Every Weights` o step finale), `export_state_dict()` usa `self.ema.weights` se EMA è attivo (`ema_decay > 0`), oppure i pesi correnti di `net_g` se EMA è disabilitato (`ema_decay = 0`).
+1. **Esportazione automatica durante il training (`train.py`, righe 1090-1091 e 1157-1163):** Quando `save()` esporta un `.pth` per inference (`save_every_weights` o step finale), `export_state_dict()` usa `self.ema.weights` se EMA è attivo (`ema_decay > 0`), oppure i pesi correnti di `net_g` se EMA è disabilitato (`ema_decay = 0`).
 2. **Esportazione manuale (`Export Model` -> `rvc/train/process/checkpoint_exporter.py`, righe 44-117):** Permette di esportare qualsiasi `G_*.pth` in `fp16` o `fp32`. `export_generator_checkpoint()` controlla se esiste `checkpoint["ema"]["weights"]` e usa automaticamente quei pesi EMA se presenti.
 3. Nella WebUI non esiste un selettore separato tra pesi Raw ed EMA; il `.pth` esportato serve solo per inference, mentre `G_*.pth` + `D_*.pth` restano necessari per riprendere il training.
 
@@ -265,13 +226,12 @@ Non esiste una risposta valida in assoluto per ogni voce e dataset. Poiché l'at
 | **GPU out of memory (OOM)** | `Batch Size` troppo alto o `Cache Dataset in GPU` attivo con poca VRAM | Controlla VRAM ed errore nel terminale | Abbassa **Batch Size**, disattiva **Cache Dataset in GPU** o attiva **Checkpointing** |
 | **EMA non sembra cambiare il risultato** | Pochi step, decay vicino a `0` o confronto tra step diversi | Controlla `Generator EMA Decay` e il riepilogo iniziale | Verifica che all'avvio compaia `generator EMA <valore>` e confronta export allo stesso step su clip esterne |
 | **EMA Decay impostato a `0`** | Slider su `0` | Controlla **Training → Advanced Settings → Generator EMA Decay** | Imposta `0.999` (predefinito) se vuoi abilitare EMA al prossimo run |
-| **Nessun modello inference intermedio** | **Save Every Weights** disattivato | Controlla **Training → Advanced Settings → Save Every Weights** | Attiva **Save Every Weights** per esportare un `.pth` a ogni `Save Every X Steps` |
-| **Solo gli ultimi checkpoint `G`/`D` presenti** | **Save Only Latest** attivo (predefinito) | Controlla `logs/<model_name>/` (`G_2333333.pth` / `D_2333333.pth`) | Disattiva **Save Only Latest** prima del training se vuoi conservare `G_<step>.pth` numerati |
+| **Solo gli ultimi checkpoint `G`/`D` presenti** | **Keep latest training checkpoint** attivo (predefinito) | Controlla `logs/<model_name>/` (`G_2333333.pth` / `D_2333333.pth`) | Disattiva **Keep latest training checkpoint** prima del training se vuoi conservare `G_<step>.pth` numerati |
 | **Checkpoint `G` o `D` mancante** | Un file è stato eliminato o spostato | Verifica la coppia `G_*` e `D_*` in `logs/<model_name>/` | Servono entrambi `G` e `D` con lo stesso suffisso per riprendere (`latest_checkpoint_pair()`) |
 | **Il training riparte da uno step precedente** | Arresto o crash prima del successivo `Save Every X Steps` | Confronta ultimo step nel terminale vs. step ripreso | Comportamento normale: gli step dopo l'ultimo salvataggio non vengono conservati |
 | **Errore/avviso durante il ripristino EMA** | Ripresa da checkpoint senza EMA o config diversa | Leggi `"Could not restore the generator EMA..."` nel terminale | Redpanda-vc riparte automaticamente con EMA inizializzato dai pesi del generatore ripreso |
 | **Fresh Training ha eliminato i checkpoint** | **Fresh Training** (`--cleanup`) era spuntato | Controlla `logs/<model_name>/` | Togli la spunta a **Fresh Training** quando riprendi; i file eliminati non sono recuperabili senza backup |
-| **È stato raggiunto Total Steps** | `global_step >= Total Steps` | Leggi `"already reached step X. Raise the total steps..."` | Alza **Total Steps** oltre lo step attuale e clicca **Start Training** |
+| **È stato raggiunto Total Steps** | `global_step >= Total Steps` | Leggi `"already reached step X. Raise the total steps..."` | Alza **Total Steps** oltre lo step attuale e clicca **Run full workflow** |
 | **Un `.pth` esportato non riprende il training** | Selezionato un `.pth` da inference invece di `G_*.pth` + `D_*.pth` | Controlla il nome (`<nome>_Xe_Ys.pth` vs. `G_*.pth`) | I `.pth` per inference non contengono lo stato di training; riprendi da `logs/<model_name>/` con `G_*.pth` e `D_*.pth` |
 | **Aumento anomalo di VRAM** | **Checkpointing** disattivato, **Batch Size** alto o **Cache Dataset in GPU** attivo | Controlla **Advanced Settings** | Attiva **Checkpointing** (activation checkpointing), disattiva **Cache Dataset in GPU** e riduci **Batch Size** |
 
@@ -313,7 +273,7 @@ Sì. I salvataggi sono attivati da `Save Every X Steps`, indipendentemente dalla
 Mantieni i progressi fino all'ultimo checkpoint `G`/`D` salvato; gli step successivi vengono persi.
 
 **Che differenza c'è tra Save Only Latest e Save Every Weights?**
-`Save Only Latest` sovrascrive i checkpoint `G_2333333.pth` / `D_2333333.pth`; `Save Every Weights` esporta un `.pth` per inference a ogni salvataggio invece che solo alla fine.
+`Save Only Latest` sovrascrive i checkpoint `G_2333333.pth` / `D_2333333.pth`; `save_every_weights` esporta un `.pth` per inference a ogni salvataggio invece che solo alla fine.
 
 **Checkpointing è la stessa cosa che salvare i checkpoint?**
 No. `Checkpointing` in Advanced Settings è activation checkpointing per ridurre la VRAM, mentre `Save Every X Steps` controlla i salvataggi su disco.

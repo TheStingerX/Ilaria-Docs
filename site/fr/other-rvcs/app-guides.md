@@ -35,7 +35,7 @@ Avec NVIDIA, choisissez le paquet Vonovox adapté. Avec AMD ou Intel, commencez 
 
 ## Autres tâches avec Applio ou Redpanda-vc
 
-Applio regroupe la synthèse vocale et la gestion des modèles. Redpanda-vc permet de comparer RVC, Beatrice et Rectified Flow et de tester le direct sur ordinateur ou dans le navigateur. Pour un modèle RVC, choisissez le moteur RVC.
+Choisissez Applio pour la synthèse vocale et la gestion des modèles. Redpanda VC propose entraînement, inférence sur fichier et conversion en temps réel pour RVC et Casual Voice Changer, sur le bureau et dans la WebUI. Utilisez `.pth` avec RVC et `.cvc` avec CVC.
 
 [Installer Applio](applio/installation.md) · [Synthèse vocale Applio](applio/tts.md) · [Modèles Applio](applio/models.md) · [Configurer Redpanda-vc](redpanda/first-run.md) · [Direct dans Redpanda-vc](redpanda/live-audio.md)
 
@@ -50,7 +50,7 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Non | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Oui | Oui | Oui · Lanceur séparé | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
 | [Applio](../other-rvcs/applio/installation.md) | Oui | Oui | Oui | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) · [Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Non | Oui | Non | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Non | Non | Oui | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Non | Non | Oui | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
@@ -63,7 +63,7 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversion de fichiers, TTS, formation et analyse audio | La distribution Windows actuelle est NVIDIA uniquement. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Formation et inférence en amont, avec un lanceur en temps réel séparé | NVIDIA CUDA sur Windows et Ubuntu. La configuration du processeur en amont couvre les systèmes AMD et Intel, avec une utilisation possible de DirectML sous Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | Conversion de fichiers, formation et temps réel dans une seule application | La documentation du bureau répertorie NVIDIA CUDA, les configurations AMD prises en charge et Apple MPS. La disponibilité dépend de l'édition et du moteur. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Un fork Applio pour expérimenter plusieurs moteurs de conversion vocale | Le dépôt comprend un conteneur CUDA et documente la sélection de GPU pour les flux WebUI. Vérifiez le moteur sélectionné et créez pour d'autres backends. |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Conversion simple de fichiers locaux dans l'interface de bureau existante | Archivé. Le projet documente Windows NVIDIA CUDA et une solution de contournement historique d'Apple Silicon. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Recommandé pour live RVC v2 sur Windows avec NVIDIA | NVIDIA CUDA uniquement. Faites correspondre le package Hugging Face à votre génération de GPU. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Conversion en direct sur plusieurs systèmes d'exploitation | Windows CUDA et packages standard, y compris DirectML ou CPU, lorsqu'ils sont pris en charge. Chemins d’installation distincts d’Apple Silicon et de Linux. |

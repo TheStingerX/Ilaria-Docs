@@ -1,27 +1,21 @@
-# Set up Redpanda-vc
+# Set up Redpanda VC
 
-[GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-Redpanda-vc extends Applio and offers multiple voice model families. This walkthrough uses the **RVC** family throughout. Pick one installation and keep its dependencies separate from other RVC programs.
+Start with the Windows x64 precompiled release. The desktop app uses Tauri and runs its Python voice engines locally. The source checkout also includes a browser WebUI with the same interface.
 
-## 1. Choose a launch path
+## Windows x64
 
-1. Download the source or a compatible package from the [Redpanda-vc project](https://github.com/redpanda343/Redpanda-vc). For a source setup, extract it to a local writable folder and check that the project's dependency file and launcher are present. Install the dependencies required by your checkout in a dedicated Python environment. CUDA installations need a PyTorch build that supports the NVIDIA GPU and driver in use.
-2. On Windows, start with `run-install.bat` and let it finish preparing the bundled project environment. Then use `run-applio.bat` for the browser WebUI, or `run-realtime-gui.bat` for the standalone realtime window. Both launchers expect the environment created in the project folder. Open a terminal in the project folder when you need to read startup logs. Keep it running during use.
-3. Wait for the UI or open the loopback address printed by the process. If the launcher finishes without opening a page, check the terminal output for an import error, CUDA initialization failure, or port conflict. Repair the named problem in this installation before reopening it.
-4. Confirm the correct execution device. Test one job at a time with the local interface before adding browser streams or other GPU-heavy jobs.
+1. Download the Windows x64 ZIP from the release page. Extract the whole archive into a writable local folder and open `Redpanda.exe` from that folder.
+2. Allow the first setup to finish. The desktop bootstrap uses portable Python 3.12 and PyTorch via `uv` when it cannot reuse an installed runtime. It detects NVIDIA CUDA or CPU. Keep `runtime/`, `assets/`, `datasets/`, `models/` and `logs/` together.
+3. Open **Inference**, choose a compatible voice and test a short WAV. If the app fails before the UI loads, check the first startup error, the writable folder, network access for downloads and the NVIDIA driver if you expect CUDA.
 
-## 2. Choose the engine and model
+## Browser WebUI and source builds
 
-In the relevant conversion view, select the **RVC** workflow, pick a compatible inference checkpoint and pair it with the matching index only when you have it. The app also exposes Beatrice and Rectified Flow in supported views. Each uses its own model format. A model that belongs to another family needs its own engine.
+In a source checkout, run `run-install.bat` on Windows or `run-install.sh` on Linux/macOS. Start the browser interface with `run-web.bat`, `run-web.sh` or `python core.py web --host 127.0.0.1 --port 7860`, using the prepared Python environment. Compiling the desktop app is a separate process that requires Rust and the platform WebView development tools. The Windows portable-runtime improvements and Dark Frutiger Aero theme landed after the release tag. Check the source revision before looking for them.
 
-If your build exposes offline conversion, start with one dry, short spoken WAV and zero transposition. Save a fresh output and check the same words in both files. If you mainly need microphone conversion, move directly to the [realtime test](live-audio.md) with a known compatible model (remember: inside Redpanda-vc set **Input** = physical microphone and **Output** = `Line 1` / `CABLE Input`; inside Discord/OBS set **Input** = `Line 1` / `CABLE Output` and **Output** = headphones).
+[File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [Casual Voice Changer training](causal-training.md) · [RVC Training](training.md)
 
-## 3. Diagnose startup before changing audio settings
+## Source and release
 
-- **Import error**: confirm the interpreter running the launcher is the one in your project environment and has the build's dependencies.
-- **Model missing**: recheck the folder expected by your build, the current engine, and whether the file is an inference export.
-- **CUDA error**: confirm the chosen RVC device and test with other GPU jobs closed. Record the first error instead of interpreting the final shutdown message.
-- **Unclear compatibility**: note the checkout or package version, GPU, and intended model family. Test a baseline before trying custom vocoders or features.
-
-If you want to train your own RVC voice in Redpanda-vc using Generator EMA and step-based checkpoints, see [Train RVC models (EMA & Steps)](training.md). For a full feature comparison against RVC Mainline, Applio, and Ilaria RVC, see [Redpanda-vc vs other RVC versions](differences.md).
+[README](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/README.md) · [Runtime](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/src/runtime.rs)

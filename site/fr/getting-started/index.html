@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696535594">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786197775">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848696535594" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848786197775" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848696535594" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848696535594" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -238,12 +238,8 @@
 <li>Entrez le chemin complet d&#x27;un court fichier audio, gardez la hauteur à zéro et cliquez sur <strong>Convertir</strong>. Utilisez le contrôle de téléchargement du lecteur de sortie pour l&#x27;enregistrer. Consultez le <a href="../voice-conversion/#convert-a-recording-in-mainline-rvc">workflow de conversion principal</a> pour des vérifications supplémentaires.</li>
 </ol>
 <h2 id="redpanda-vc">Redpanda-vc</h2>
-<ol>
-<li>Téléchargez <a href="https://github.com/redpanda343/Redpanda-vc">Redpanda-vc</a> et démarrez WebUI avec une version adaptée à votre système. Le projet fournit une option de conteneur CUDA pour NVIDIA.</li>
-<li>Sélectionnez le moteur RVC et chargez une voix RVC compatible avec son index optionnel. Redpanda-vc propose également d&#x27;autres familles de modèles, chacune avec son propre format de modèle.</li>
-<li>Pour un test du microphone du navigateur, autorisez l&#x27;accès au microphone, choisissez le GPU prévu si les paramètres de flux exposent la sélection de périphérique et démarrez le flux. Vérifiez le moniteur du casque au tampon par défaut avant de réduire la latence.</li>
-</ol>
-<p>Pour une comparaison côte à côte, voir <a href="../tools/">Outils RVC</a>. Pour le routage, la latence et les pertes du microphone, voir <a href="../real-time/">Conversion vocale en temps réel</a>.</p>
+<p>Redpanda VC propose entraînement, inférence sur fichier et conversion en temps réel pour RVC et Casual Voice Changer, sur le bureau et dans la WebUI. Utilisez <code translate="no" v-pre>.pth</code> avec RVC et <code translate="no" v-pre>.cvc</code> avec CVC.</p>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Version précompilée pour Windows x64</a> · <a href="../ilaria-rvc/redpanda/first-run/">Installer Redpanda VC</a> · <a href="../ilaria-rvc/redpanda/inference/">Inférence sur fichier</a></p>
 <h2 id="rvc-blue">RVC Blue</h2>
 <p>Conversion de voix en temps réel sous Windows. <a href="../ilaria-rvc/rvc-blue/installation/">Installation et configuration</a>.</p>
 
@@ -280,7 +276,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -69,11 +69,9 @@ Utilice grabaciones y modelos de voz para los que tenga permiso. Para demostraci
 
 ## Redpanda-vc
 
-1. Descargue [Redpanda-vc](https://github.com/redpanda343/Redpanda-vc) e inicie WebUI con una compilación adecuada a su sistema. El proyecto proporciona una opción de contenedor CUDA para NVIDIA.
-2. Seleccione el motor RVC y cargue una voz RVC compatible con su índice opcional. Redpanda-vc también ofrece otras familias de modelos, cada una con su propio formato de modelo.
-3. Para una prueba de micrófono del navegador, permita el acceso al micrófono, elija la GPU deseada si la configuración de transmisión expone la selección del dispositivo e inicie la transmisión. Verifique el monitor de auriculares en el búfer predeterminado antes de reducir la latencia.
+Redpanda VC ofrece entrenamiento, inferencia con archivos y conversión en tiempo real para RVC y Casual Voice Changer, en el escritorio y en la WebUI. Usa `.pth` con RVC y `.cvc` con CVC.
 
-Para una comparación lado a lado, consulte [Herramientas RVC](../reference/tools.md). Para conocer el enrutamiento, la latencia y las interrupciones del micrófono, consulte [Conversión de voz en tiempo real](../conversion/real-time.md).
+[Versión precompilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Instalar Redpanda VC](../other-rvcs/redpanda/first-run.md) · [Inferencia con archivos](../other-rvcs/redpanda/inference.md)
 
 ## RVC Blue
 

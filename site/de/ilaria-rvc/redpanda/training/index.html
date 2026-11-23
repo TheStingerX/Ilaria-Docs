@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696546317">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786204421">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848696546317" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786204421" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848696546317" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786204421" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848696546317" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786204421" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -341,7 +341,7 @@
 </ul>
 <h3 id="final-save">Final Save</h3>
 <p>Selbst wenn <code translate="no" v-pre>Total Steps</code> kein Vielfaches von <code translate="no" v-pre>Save Every X Steps</code> ist (z. B. <code translate="no" v-pre>Total Steps = 2500</code> und <code translate="no" v-pre>Save Every X Steps = 1000</code>), speichert Redpanda-vc beim Erreichen des letzten Schritts <strong>immer</strong> sowohl die <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>-Checkpoints als auch ein Inferenz-<code translate="no" v-pre>.pth</code>-Modell (<code translate="no" v-pre>final = self.global_step &gt;= self.args.total_steps</code>).</p>
-<h3 id="save-every-weights">Save Every Weights</h3>
+<h3 id="save_every_weights"><code translate="no" v-pre>save_every_weights</code></h3>
 <ul>
 <li><strong>Standard:</strong> <strong>Aktiviert</strong> (<code translate="no" v-pre>True</code>).</li>
 <li>Wenn <strong>aktiviert</strong>, exportiert Redpanda-vc bei jedem Speicherintervall <em>und</em> beim letzten Schritt ein Inferenz-<code translate="no" v-pre>.pth</code>-Modell.</li>
@@ -352,59 +352,13 @@
 <li><strong>Standard:</strong> <strong>Aktiviert</strong> (<code translate="no" v-pre>True</code>).</li>
 <li>Wenn <strong>aktiviert</strong>, überschreiben <code translate="no" v-pre>G</code>- und <code translate="no" v-pre>D</code>-Checkpoints feste Dateinamen (<code translate="no" v-pre>G_2333333.pth</code> und <code translate="no" v-pre>D_2333333.pth</code>, wobei <code translate="no" v-pre>2333333</code> für <code translate="no" v-pre>LATEST_CHECKPOINT_SUFFIX</code> steht), um Speicherplatz zu sparen.</li>
 <li>Wenn <strong>deaktiviert</strong>, enthalten Checkpoints die Schrittnummer (<code translate="no" v-pre>G_1000.pth</code>, <code translate="no" v-pre>D_1000.pth</code>, <code translate="no" v-pre>G_2000.pth</code>, <code translate="no" v-pre>D_2000.pth</code>).</li>
-<li><strong>Wichtig:</strong> <code translate="no" v-pre>Save Only Latest</code> betrifft nur <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>-Trainingscheckpoints, <strong>nicht</strong> exportierte Inferenz-<code translate="no" v-pre>.pth</code>-Modelle (sofern du <code translate="no" v-pre>Save Every Weights</code> nicht deaktivierst). Beachte, dass du bei aktiviertem <code translate="no" v-pre>Save Only Latest</code> kein Training auf einen älteren Zwischenstand (<code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>) zurückrollen kannst, falls ein Lauf später schlechter wird.</li>
+<li><strong>Wichtig:</strong> <code translate="no" v-pre>Save Only Latest</code> betrifft nur <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>-Trainingscheckpoints, <strong>nicht</strong> exportierte Inferenz-<code translate="no" v-pre>.pth</code>-Modelle (sofern du <code translate="no" v-pre>save_every_weights</code> nicht deaktivierst). Beachte, dass du bei aktiviertem <code translate="no" v-pre>Save Only Latest</code> kein Training auf einen älteren Zwischenstand (<code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>) zurückrollen kannst, falls ein Lauf später schlechter wird.</li>
 </ul>
 <hr>
-<span id="your-first-rvc-training-in-redpanda-vc" class="docs-anchor"></span><h2 id="dein-erstes-rvc-training-in-redpanda-vc">Dein erstes RVC-Training in Redpanda-vc</h2>
-<span id="1-preparation" class="docs-anchor"></span><h3 id="1-vorbereitung">1. Vorbereitung</h3>
-<ol>
-<li>Installiere und starte Redpanda-vc (siehe <a href="../first-run/">Redpanda-vc einrichten</a>).</li>
-<li>Öffne den Tab <strong>Train</strong> und wähle <strong>RVC</strong> (falls dein Build mehrere Modellfamilien anzeigt).</li>
-<li>Gib unter <strong>Model Settings</strong> einen eindeutigen <strong>Model Name</strong> (deinen Experimentnamen) ein.</li>
-<li>Wähle eine kompatible <strong>Sample Rate</strong> (<code translate="no" v-pre>32k</code>, <code translate="no" v-pre>40k</code> oder <code translate="no" v-pre>48k</code>), <strong>Version</strong> (<code translate="no" v-pre>v1</code> oder <code translate="no" v-pre>v2</code>) und <strong>Vocoder</strong> (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> oder <code translate="no" v-pre>RefineGAN</code>, abhängig von deinen Pretrained-Modellen und der Ziel-Inferenz-App).</li>
-<li>Bereite ein sauberes, trockenes Dataset aus <strong>autorisierten Aufnahmen</strong> in einem eigenen Ordner vor.</li>
-</ol>
-<h3 id="2-preprocess">2. Preprocess</h3>
-<ol>
-<li>Öffne das Akkordeon <strong>Preprocess</strong>.</li>
-<li>Gib deinen Dataset-Ordnerpfad unter <strong>Dataset Path</strong> ein oder wähle ihn aus (klicke bei Bedarf auf <strong>Refresh</strong>).</li>
-<li>Klicke auf <strong>Preprocess Dataset</strong> und warte, bis das Audio in <code translate="no" v-pre>logs/&lt;model_name&gt;/</code> zugeschnitten und normalisiert wurde.</li>
-</ol>
-<h3 id="3-extract">3. Extract</h3>
-<ol>
-<li>Öffne das Akkordeon <strong>Extract</strong>.</li>
-<li>Wähle deinen <strong>Pitch extraction algorithm</strong> (etwa <code translate="no" v-pre>rmvpe</code>) und <strong>Embedder Model</strong> (üblicherweise <code translate="no" v-pre>contentvec</code>).</li>
-<li>Klicke auf <strong>Extract Features</strong>. <em>(Das bereitet Pitch- und Inhaltsmerkmale fürs Training vor; es trainiert noch <strong>nicht</strong> die <code translate="no" v-pre>.pth</code>-Gewichte.)</em></li>
-</ol>
-<h3 id="4-training">4. Training</h3>
-<ol>
-<li>Öffne das Akkordeon <strong>Training</strong>.</li>
-<li>Setze <strong>Batch Size</strong> auf einen Wert, den der VRAM deiner GPU problemlos verkraftet.</li>
-<li>Für einen ersten anschaulichen Test kannst du die aktuellen Standardwerte belassen:
-<ul>
-<li><strong>Total Steps:</strong> <code translate="no" v-pre>10000</code></li>
-<li><strong>Save Every X Steps:</strong> <code translate="no" v-pre>1000</code></li>
-</ul>
-</li>
-<li>Klappe <strong>Advanced Settings</strong> aus und prüfe:
-<ul>
-<li><strong>Save Only Latest:</strong> Aktiviert (<code translate="no" v-pre>True</code>)</li>
-<li><strong>Save Every Weights:</strong> Aktiviert (<code translate="no" v-pre>True</code>)</li>
-<li><strong>Generator EMA Decay:</strong> <code translate="no" v-pre>0.999</code>
-<em>(Diese Standardwerte sind anschauliche Startwerte, keine garantierten Optimalwerte für jedes Dataset.)</em></li>
-</ul>
-</li>
-<li>Klicke auf <strong>Start Training</strong>.</li>
-<li>Beobachte den Fortschritt über den Terminal-/UI-Status, <strong>Pause Training</strong> / <strong>Resume Training</strong> / <strong>Stop Training</strong> sowie TensorBoard-Logs (<code translate="no" v-pre>logs/&lt;model_name&gt;/eval/</code>).</li>
-<li>Klicke nach Abschluss auf <strong>Generate Index</strong>, wenn du eine passende <code translate="no" v-pre>.index</code>-Datei möchtest.</li>
-</ol>
-<span id="5-output-files" class="docs-anchor"></span><h3 id="5-ausgabedateien">5. Ausgabedateien</h3>
-<p>In <code translate="no" v-pre>logs/&lt;model_name&gt;/</code> findest du:</p>
-<ul>
-<li><strong>Fortsetzbare Checkpoints:</strong> <code translate="no" v-pre>G_2333333.pth</code> und <code translate="no" v-pre>D_2333333.pth</code> (bei aktiviertem <strong>Save Only Latest</strong>) oder <code translate="no" v-pre>G_&lt;step&gt;.pth</code> / <code translate="no" v-pre>D_&lt;step&gt;.pth</code> (wenn deaktiviert).</li>
-<li><strong>Inferenzmodelle:</strong> <code translate="no" v-pre>&lt;model_name&gt;_&lt;epoch&gt;e_&lt;step&gt;s.pth</code> (zum Beispiel <code translate="no" v-pre>MyVoice_45e_1000s.pth</code>). Diese Dateien lädst du zur Stimmenkonvertierung.</li>
-</ul>
-<hr>
+<span id="train-an-rvc-voice-in-the-current-interface" class="docs-anchor"></span><h2 id="eine-rvc-stimme-in-der-aktuellen-oberfläche-trainieren">Eine RVC-Stimme in der aktuellen Oberfläche trainieren</h2>
+<p>Stelle in <strong>Training → RVC</strong> die Felder <strong>Model name</strong>, <strong>Dataset folder</strong>, <strong>Sample rate</strong>, <strong>Training steps</strong> und <strong>Save every (steps)</strong> ein. Setze einen vorbereiteten Lauf unter demselben Namen mit leerem <strong>Dataset folder</strong> und höherem Schrittziel fort. Unter <strong>Advanced settings</strong> findest du <strong>Version</strong>, <strong>Vocoder</strong>, <strong>Precision</strong>, <strong>Embedder</strong> und <strong>Index algorithm</strong>. Die Oberfläche bietet HiFi-GAN und RefineGAN. Nutze passende vortrainierte Gewichte und eine von deiner GPU unterstützte Präzision. <strong>Reset optimizer on resume</strong> verwirft den Optimiererzustand und behält die Modellgewichte. Verfolge den Lauf in <strong>TensorBoard</strong> und höre mehrere Exporte an.</p>
+<p>Die Desktop- und Browseroberfläche exportiert bei jedem Speicherintervall eine Inferenzstimme. <strong>Keep latest training checkpoint</strong> steuert die Aufbewahrung des G/D-Paars zum Fortsetzen. Starte einen neuen Ablauf mit <strong>Run full workflow</strong>. <a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py">Training jobs</a></p>
+<p><a href="../causal-training/">Training mit Casual Voice Changer</a></p>
 <span id="resuming-training-safely" class="docs-anchor"></span><h2 id="training-sicher-fortsetzen">Training sicher fortsetzen</h2>
 <p>Wenn du das Training eines bestehenden Experiments neu startest (<code translate="no" v-pre>rvc/train/train.py</code>, Zeilen 420-436, 528-538, 763-803, 844-853):</p>
 <ol>
@@ -422,7 +376,7 @@
 <hr>
 <span id="how-redpanda-vc-exports-ema-models" class="docs-anchor"></span><h2 id="wie-redpanda-vc-ema-modelle-exportiert">Wie Redpanda-vc EMA-Modelle exportiert</h2>
 <ol>
-<li><strong>Automatische Exporte während des Trainings (<code translate="no" v-pre>train.py</code>, Zeilen 1090-1091 &amp; 1157-1163):</strong> Immer wenn <code translate="no" v-pre>save()</code> einen Inferenzexport auslöst (<code translate="no" v-pre>Save Every Weights</code> oder letzter Schritt), liefert <code translate="no" v-pre>export_state_dict()</code> <code translate="no" v-pre>self.ema.weights</code>, wenn EMA aktiviert ist (<code translate="no" v-pre>ema_decay &gt; 0</code>), oder das <code translate="no" v-pre>state_dict()</code> des Live-Generators, wenn EMA deaktiviert ist (<code translate="no" v-pre>ema_decay = 0</code>).</li>
+<li><strong>Automatische Exporte während des Trainings (<code translate="no" v-pre>train.py</code>, Zeilen 1090-1091 &amp; 1157-1163):</strong> Immer wenn <code translate="no" v-pre>save()</code> einen Inferenzexport auslöst (<code translate="no" v-pre>save_every_weights</code> oder letzter Schritt), liefert <code translate="no" v-pre>export_state_dict()</code> <code translate="no" v-pre>self.ema.weights</code>, wenn EMA aktiviert ist (<code translate="no" v-pre>ema_decay &gt; 0</code>), oder das <code translate="no" v-pre>state_dict()</code> des Live-Generators, wenn EMA deaktiviert ist (<code translate="no" v-pre>ema_decay = 0</code>).</li>
 <li><strong>Manuelle Exporte (Akkordeon <code translate="no" v-pre>Export Model</code> -&gt; <code translate="no" v-pre>rvc/train/process/checkpoint_exporter.py</code>, Zeilen 44-117):</strong> Du kannst jeden fortsetzbaren <code translate="no" v-pre>G_*.pth</code>-Checkpoint manuell in <code translate="no" v-pre>fp16</code> oder <code translate="no" v-pre>fp32</code> exportieren. <code translate="no" v-pre>export_generator_checkpoint()</code> prüft, ob <code translate="no" v-pre>checkpoint[&quot;ema&quot;][&quot;weights&quot;]</code> existiert, und nutzt diese EMA-Gewichte automatisch, wenn vorhanden (mit der Statusmeldung <code translate="no" v-pre>... and the generator EMA</code>).</li>
 <li>Es gibt <strong>keinen</strong> separaten &quot;Raw vs. EMA&quot;-Schalter im WebUI-Exporter; die exportierte <code translate="no" v-pre>.pth</code> ist nur für die Inferenz gedacht, während <code translate="no" v-pre>G_*.pth</code> + <code translate="no" v-pre>D_*.pth</code> weiterhin zum Fortsetzen des Trainings benötigt werden.</li>
 </ol>
@@ -444,13 +398,12 @@
 | **GPU-Speicher voll (OOM)** | `Batch Size` zu hoch oder `Cache Dataset in GPU` bei begrenztem VRAM aktiviert | VRAM-Nutzung und Terminalfehler prüfen | Senke **Batch Size**, deaktiviere **Cache Dataset in GPU** oder aktiviere **Checkpointing** |
 | **EMA scheint Ergebnisse nicht zu ändern** | Wenige Schritte, Decay nahe `0` oder Vergleich verschiedener Schritte | `Generator EMA Decay` und Konsolen-Startzusammenfassung prüfen | Bestätige, dass `generator EMA &lt;value&gt;` beim Start erscheint, und vergleiche Exporte desselben Schritts an externen Clips |
 | **EMA Decay steht auf `0`** | Regler auf `0` gestellt | Prüfe **Training → Advanced Settings → Generator EMA Decay** | Setze auf `0.999` (Standard), wenn EMA beim nächsten Lauf aktiv sein soll |
-| **Keine Zwischen-Inferenz-`.pth`-Modelle** | **Save Every Weights** ist deaktiviert | Prüfe **Training → Advanced Settings → Save Every Weights** | Aktiviere **Save Every Weights**, um bei jedem `Save Every X Steps` Inferenzmodelle zu exportieren |
-| **Nur die neuesten `G`/`D`-Checkpoints vorhanden** | **Save Only Latest** ist aktiviert (Standard) | Prüfe `logs/&lt;model_name&gt;/` auf `G_2333333.pth` / `D_2333333.pth` | Deaktiviere **Save Only Latest** vor dem Training, wenn du nummerierte `G_&lt;step&gt;.pth`-Historie willst |
+| **Nur die neuesten `G`/`D`-Checkpoints vorhanden** | **Keep latest training checkpoint** ist aktiviert (Standard) | Prüfe `logs/&lt;model_name&gt;/` auf `G_2333333.pth` / `D_2333333.pth` | Deaktiviere **Keep latest training checkpoint** vor dem Training, wenn du nummerierte `G_&lt;step&gt;.pth`-Historie willst |
 | **`G`- oder `D`-Checkpoint fehlt** | Eine Datei wurde manuell gelöscht oder verschoben | Prüfe `logs/&lt;model_name&gt;/` auf passendes `G_*`- und `D_*`-Paar | Sowohl `G` als auch `D` mit demselben Suffix sind zum Fortsetzen nötig (`latest_checkpoint_pair()`) |
 | **Training startet von früherem Schritt neu** | Stopp oder Absturz vor dem nächsten `Save Every X Steps` | Letzten Konsolenschritt mit fortgesetztem Schritt vergleichen | Normales Verhalten: Fortschritt nach der letzten Festplattenspeicherung wird erst beim nächsten Intervall gesichert |
 | **Hinweis/Fehler beim Wiederherstellen von EMA** | Fortsetzen eines Checkpoints ohne EMA oder abweichende Modellkonfig | Lies `&quot;Could not restore the generator EMA...&quot;` im Terminal | Redpanda-vc startet EMA automatisch ab den fortgesetzten Generatorgewichten |
 | **Fresh Training hat alte Checkpoints gelöscht** | **Fresh Training** (`--cleanup`) blieb angehakt | Prüfe `logs/&lt;model_name&gt;/` | Hake **Fresh Training** beim Fortsetzen ab; gelöschte Checkpoints lassen sich ohne Backup nicht wiederherstellen |
-| **Total Steps bereits erreicht** | `global_step &gt;= Total Steps` | Lies `&quot;already reached step X. Raise the total steps...&quot;` im Terminal | Erhöhe **Total Steps** über den aktuellen Schritt und klicke auf **Start Training** |
+| **Total Steps bereits erreicht** | `global_step &gt;= Total Steps` | Lies `&quot;already reached step X. Raise the total steps...&quot;` im Terminal | Erhöhe **Total Steps** über den aktuellen Schritt und klicke auf **Run full workflow** |
 | **Exportierte `.pth` kann Training nicht fortsetzen** | Inferenz-`.pth` statt `G_*.pth` + `D_*.pth` geladen | Dateiname prüfen (`&lt;name&gt;_Xe_Ys.pth` vs. `G_*.pth`) | Inferenz-`.pth`-Dateien entfernen den Trainingszustand; setze aus `logs/&lt;model_name&gt;/` mit `G_*.pth` und `D_*.pth` fort |
 | **Unerwartet hohe VRAM-Nutzung** | **Checkpointing** deaktiviert, hohe **Batch Size** oder **Cache Dataset in GPU** an | **Advanced Settings** prüfen | Aktiviere **Checkpointing** (Activation Checkpointing), schalte **Cache Dataset in GPU** aus und reduziere **Batch Size** |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -489,16 +442,10 @@
 <td>Setze auf <code translate="no" v-pre>0.999</code> (Standard), wenn EMA beim nächsten Lauf aktiv sein soll</td>
 </tr>
 <tr>
-<td><strong>Keine Zwischen-Inferenz-<code translate="no" v-pre>.pth</code>-Modelle</strong></td>
-<td><strong>Save Every Weights</strong> ist deaktiviert</td>
-<td>Prüfe <strong>Training → Advanced Settings → Save Every Weights</strong></td>
-<td>Aktiviere <strong>Save Every Weights</strong>, um bei jedem <code translate="no" v-pre>Save Every X Steps</code> Inferenzmodelle zu exportieren</td>
-</tr>
-<tr>
 <td><strong>Nur die neuesten <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>-Checkpoints vorhanden</strong></td>
-<td><strong>Save Only Latest</strong> ist aktiviert (Standard)</td>
+<td><strong>Keep latest training checkpoint</strong> ist aktiviert (Standard)</td>
 <td>Prüfe <code translate="no" v-pre>logs/&lt;model_name&gt;/</code> auf <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code></td>
-<td>Deaktiviere <strong>Save Only Latest</strong> vor dem Training, wenn du nummerierte <code translate="no" v-pre>G_&lt;step&gt;.pth</code>-Historie willst</td>
+<td>Deaktiviere <strong>Keep latest training checkpoint</strong> vor dem Training, wenn du nummerierte <code translate="no" v-pre>G_&lt;step&gt;.pth</code>-Historie willst</td>
 </tr>
 <tr>
 <td><strong><code translate="no" v-pre>G</code>- oder <code translate="no" v-pre>D</code>-Checkpoint fehlt</strong></td>
@@ -528,7 +475,7 @@
 <td><strong>Total Steps bereits erreicht</strong></td>
 <td><code translate="no" v-pre>global_step &gt;= Total Steps</code></td>
 <td>Lies <code translate="no" v-pre>&quot;already reached step X. Raise the total steps...&quot;</code> im Terminal</td>
-<td>Erhöhe <strong>Total Steps</strong> über den aktuellen Schritt und klicke auf <strong>Start Training</strong></td>
+<td>Erhöhe <strong>Total Steps</strong> über den aktuellen Schritt und klicke auf <strong>Run full workflow</strong></td>
 </tr>
 <tr>
 <td><strong>Exportierte <code translate="no" v-pre>.pth</code> kann Training nicht fortsetzen</strong></td>
@@ -571,7 +518,7 @@ Ja. Speicherungen werden durch <code translate="no" v-pre>Save Every X Steps</co
 <p><strong>Verliere ich Fortschritt, wenn ich das Training stoppe?</strong>
 Du behältst den Fortschritt bis zum letzten gespeicherten <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>-Checkpoint; Schritte nach dieser Speicherung gehen verloren.</p>
 <p><strong>Was ist der Unterschied zwischen Save Only Latest und Save Every Weights?</strong>
-<code translate="no" v-pre>Save Only Latest</code> überschreibt die Trainingscheckpoints <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code>; <code translate="no" v-pre>Save Every Weights</code> exportiert bei jedem Speicherintervall ein Inferenz-<code translate="no" v-pre>.pth</code>-Modell statt nur beim letzten Schritt.</p>
+<code translate="no" v-pre>Save Only Latest</code> überschreibt die Trainingscheckpoints <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code>; <code translate="no" v-pre>save_every_weights</code> exportiert bei jedem Speicherintervall ein Inferenz-<code translate="no" v-pre>.pth</code>-Modell statt nur beim letzten Schritt.</p>
 <p><strong>Ist Checkpointing dasselbe wie Checkpoints speichern?</strong>
 Nein. <code translate="no" v-pre>Checkpointing</code> in den Advanced Settings ist Activation Checkpointing zum Sparen von VRAM, während <code translate="no" v-pre>Save Every X Steps</code> das Schreiben von Checkpoints auf die Festplatte steuert.</p>
 <p><strong>Kann ich ein Training aus einer Inferenz-<code translate="no" v-pre>.pth</code> fortsetzen?</strong>
@@ -601,16 +548,16 @@ Nein. Zum Fortsetzen ist ein passendes Paar aus <code translate="no" v-pre>G_*.p
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">Testen Sie Live-​Audio in Redpanda-​vc</span>
+                                <span class="block mt-1">Stimmkonvertierung in Echtzeit</span>
                             </span>
                         </a>
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/comparison/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/causal-training/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Redpanda-​vc vs andere RVC-​Versionen</span>
+                                <span class="block mt-1">Training mit Casual Voice Changer</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -622,7 +569,7 @@ Nein. Zum Fortsetzen ist ein passendes Paar aus <code translate="no" v-pre>G_*.p
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T16:44:42.000Z">22/11/2026 · 17:44</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

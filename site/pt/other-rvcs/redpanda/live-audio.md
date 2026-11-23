@@ -1,47 +1,19 @@
-# Teste o áudio ao vivo no Redpanda-vc
+# Conversão de voz em tempo real
 
-## Escolha a área de trabalho ou navegador
+[Versão pré-compilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-O iniciador em tempo real da área de trabalho do Windows usa os dispositivos expostos a esse processo local. A guia WebUI em tempo real captura a entrada do microfone por meio do navegador e passa o áudio para o dispositivo de inferência selecionado. Use um caminho para seu primeiro teste e deixe o outro fechado para facilitar o diagnóstico de feedback e trabalhos concorrentes.
+Abre Realtime na aplicação de desktop ou na WebUI. Testa uma voz nos auscultadores antes de enviares o som para Discord, OBS, um jogo ou outra aplicação.
 
-1. Carregue um modelo RVC compatível, selecione o incorporador esperado onde exposto e comece em passo neutro com o buffer padrão.
-2. Selecione o microfone físico. No modo navegador, conceda permissão de microfone à página local e verifique a fonte real nas permissões do navegador.
-3. Conecte fones de ouvido e reproduza o monitor. Diga uma frase curta contendo palavras baixas e altas, seguida de uma pausa. Verifique a identidade da voz, o volume e as interrupções.
-4. Pare o fluxo antes de trocar de mecanismo ou escolher um dispositivo de inferência diferente. Execute outro teste após reconectar.
+## Configurar o encaminhamento de áudio
 
-## Selecione o dispositivo de computação
+Para o primeiro teste, seleciona o microfone físico em **Microphone** e os auscultadores em **Output**. Para enviar a voz a outra aplicação, usa o lado de reprodução do cabo virtual como saída do Redpanda e o lado de gravação como microfone da aplicação de destino. Usa **Monitor** para os auscultadores e evita devolver o sinal ao microfone.
 
-Em compilações WebUI com **Dispositivo de inferência**, **Automático** atribui um novo fluxo a um dispositivo disponível. Escolha uma GPU específica ao comparar resultados repetíveis ou deixe uma GPU livre para outra carga de trabalho. Um stream permanece no dispositivo atribuído. Várias GPUs podem lidar com fluxos separados; alterar o seletor não é uma maneira de combinar sua capacidade em um fluxo. Beatrice usa um caminho de CPU separado na implementação documentada.
+## Vozes RVC e CVC
 
-## Roteie o sinal após um teste limpo
+RVC usa um `.pth` de inferência e o `.index` correspondente opcional. CVC usa uma voz `.cvc` e um percurso de áudio a 48 kHz. Carrega as definições de tom, ganho, gate e índice guardadas com a voz. Os ficheiros antigos `.causalvc.json` e `.nextvc.json` precisam dos respetivos pesos. O RNNoise pode filtrar o microfone. Se houver cortes, testa blocos mais longos e desativa os efeitos um de cada vez.
 
-> **Correct Audio Routing**
->
-> **1. Dentro do Voice Changer**
-> - **Input Device:** Seu microfone físico.
-> - **Output Device:** `Line 1` (VAC, recomendado) ou `CABLE Input` (VB-CABLE).
->
-> **2. No Discord, Jogos, OBS ou outros aplicativos**
-> - **Input Device:** `Line 1` (VAC, recomendado) ou `CABLE Output` (VB-CABLE).
-> - **Output Device:** Seus fones de ouvido (fortemente recomendados em vez de caixas de som).
->
-> ```text
-> Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS
-> ```
->
-> O áudio recebido do Discord, do jogo ou de outros apps deve ir diretamente para os **fones de ouvido** (nunca de volta para o cabo virtual).
->
-> - **VAC vs. VB-CABLE:** **VAC** (`Line 1`) é sempre recomendado. Se você também (ou só) usa **VB-CABLE**, lembre-se de que o voice changer envia para **`CABLE Input`** e o Discord / jogos recebem de **`CABLE Output`**.
-> - **Caixas de som e vazamento do fone:** Evite usar caixas de som; o som pode vazar para o microfone e causar áudio duplo, eco ou até converter a voz de outras pessoas. Isso também pode acontecer com headsets se estiverem altos demais ou não forem fechados e isolados o suficiente.
-> - **Monitoramento:** Ouvir sua própria voz convertida nos fones é um recurso opcional separado, para ativar apenas quando necessário. Evite caminhos de áudio duplicados, eco e loopback.
+[Instalar o Redpanda VC](first-run.md) · [Inferência por ficheiros](inference.md) · [Treino com Casual Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
-Se o seu caminho de reprodução puder ter como alvo um cabo virtual, escolha o ponto final de reprodução do cabo nesse local. No aplicativo receptor, selecione o ponto final de gravação complementar como microfone. Mantenha o microfone físico como entrada e saída do conversor da chamada nos fones de ouvido. No modo navegador, o destino da reprodução pode depender das configurações de saída do navegador e do sistema operacional. Verifique o receptor com uma gravação local antes de julgar a transmissão ao vivo de uma chamada.
+## Código-fonte e versão
 
-| O que você ouve | O que testar |
-| --- | --- |
-| O monitor funciona, mas a chamada tem áudio bruto | Selecione o terminal do cabo na chamada e desative fontes extras de microfone. |
-| O atraso aumenta ou o áudio falha. | Interrompa outros streams, use o buffer padrão e teste localmente com uma guia. |
-| O medidor do microfone do navegador nunca se move. | Confirme a permissão do site, o dispositivo físico selecionado e se outro aplicativo tem acesso exclusivo. |
-| Apenas um jogo causa áudio quebrado | Teste enquanto o jogo está em execução, dê algum espaço à GPU de conversão ou escolha outra GPU disponível. |
-
-O fluxo do navegador tenta o transporte WebSocket e pode retornar ao streaming HTTP quando necessário. Estabeleça um resultado local limpo antes de investigar a qualidade da conexão remota.
+[Realtime UI](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/ui/index.html) · [Realtime engine](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/realtime.py)

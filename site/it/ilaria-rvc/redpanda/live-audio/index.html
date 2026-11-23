@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696514228">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786183979">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Prova l'audio dal vivo in Redpanda-vc">
-    <meta name="description" content="L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale.">
+    <meta name="title" content="Conversione vocale in tempo reale">
+    <meta name="description" content="Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/live-audio/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/live-audio/">
-    <meta property="og:title" content="Prova l'audio dal vivo in Redpanda-vc">
+    <meta property="og:title" content="Conversione vocale in tempo reale">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/live-audio/">
-    <meta name="twitter:title" content="Prova l'audio dal vivo in Redpanda-vc">
+    <meta name="twitter:title" content="Conversione vocale in tempo reale">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/other-rvcs/redpanda/live-audio.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848696514228" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786183979" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale.">
+    <meta property="og:description" content="Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale.">
+    <meta name="twitter:description" content="Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/live-audio/">
@@ -174,78 +174,17 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="test-live-audio-in-redpanda-vc" class="docs-anchor"></span><h1 id="prova-laudio-dal-vivo-in-redpanda-vc">Prova l&#x27;audio dal vivo in Redpanda-vc</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">L'avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale.</div>
-<span id="choose-desktop-or-browser" class="docs-anchor"></span><h2 id="scegli-desktop-o-browser">Scegli desktop o browser</h2>
-<p>L&#x27;avvio in tempo reale del desktop di Windows utilizza i dispositivi esposti a quel processo locale. La scheda in tempo reale dell&#x27;interfaccia utente Web acquisisce l&#x27;input del microfono tramite il browser e trasmette l&#x27;audio al dispositivo di inferenza selezionato. Utilizza un percorso per il tuo primo test e lascia l&#x27;altro chiuso per facilitare la diagnosi del feedback e dei lavori concorrenti.</p>
-<ol>
-<li>Carica un modello RVC compatibile, seleziona l&#x27;embedder previsto dove esposto e inizia con un intonazione neutra con il buffer predefinito.</li>
-<li>Seleziona il microfono fisico. In modalità browser, concedi l&#x27;autorizzazione microfono alla pagina locale e controlla la fonte effettiva nelle autorizzazioni del browser.</li>
-<li>Collega le cuffie e riproduci il monitor. Pronuncia una breve frase contenente sia parole a voce bassa che ad alta voce, seguita da una pausa. Controlla l&#x27;identità vocale, il volume e gli abbandoni.</li>
-<li>Interrompi lo streaming prima di cambiare motore o scegliere un dispositivo di inferenza diverso. Eseguire un altro test dopo la riconnessione.</li>
-</ol>
-<span id="select-the-compute-device" class="docs-anchor"></span><h2 id="seleziona-il-dispositivo-di-elaborazione">Seleziona il dispositivo di elaborazione</h2>
-<p>Nelle build WebUI con <strong>Dispositivo di inferenza</strong>, <strong>Automatico</strong> assegna un nuovo flusso a un dispositivo disponibile. Scegli una GPU specifica quando confronti risultati ripetibili o lasci una GPU libera per un altro carico di lavoro. Uno streaming rimane sul dispositivo assegnato. Più GPU possono gestire flussi separati; cambiare il selettore non è un modo per combinare la loro capacità in un unico flusso. Beatrice utilizza un percorso CPU separato nell&#x27;implementazione documentata.</p>
-<span id="route-the-signal-after-a-clean-test" class="docs-anchor"></span><h2 id="instradare-il-segnale-dopo-un-test-pulito">Instradare il segnale dopo un test pulito</h2>
-<blockquote>
-<p><strong>Correct Audio Routing</strong></p>
-<p><strong>1. Nel Voice Changer</strong></p>
-<ul>
-<li><strong>Input Device:</strong> Il tuo microfono fisico.</li>
-<li><strong>Output Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, consigliato) o <code translate="no" v-pre>CABLE Input</code> (VB-CABLE).</li>
-</ul>
-<p><strong>2. In Discord, Giochi, OBS o altre applicazioni</strong></p>
-<ul>
-<li><strong>Input Device:</strong> <code translate="no" v-pre>Line 1</code> (VAC, consigliato) o <code translate="no" v-pre>CABLE Output</code> (VB-CABLE).</li>
-<li><strong>Output Device:</strong> Le tue cuffie (fortemente consigliate rispetto agli altoparlanti).</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">Your Microphone → Voice Changer → Line 1 (VAC) or CABLE Input/Output (VB-CABLE) → Discord / Game / OBS</code></pre>
-</doc-codeblock></div>
-<p>L&#x27;audio in arrivo da Discord, dal gioco o da altre app deve andare direttamente alle <strong>cuffie</strong> (mai di nuovo nel cavo virtuale).</p>
-<ul>
-<li><strong>VAC vs. VB-CABLE:</strong> <strong>VAC</strong> (<code translate="no" v-pre>Line 1</code>) è sempre consigliato. Se hai anche (o solo) <strong>VB-CABLE</strong>, ricorda che il voice changer invia a <strong><code translate="no" v-pre>CABLE Input</code></strong> mentre Discord / giochi ricevono da <strong><code translate="no" v-pre>CABLE Output</code></strong>.</li>
-<li><strong>Altoparlanti e rientro dalle cuffie:</strong> Evita gli altoparlanti: il suono può rientrare nel microfono generando audio doppio, eco o facendo convertire anche le voci degli altri presenti in chiamata. Può succedere persino con le cuffie se il volume è troppo alto o se i padiglioni non sono abbastanza chiusi e isolati.</li>
-<li><strong>Monitoraggio:</strong> Ascoltare la propria voce convertita in cuffia è una funzione separata opzionale da attivare solo quando serve. Evita percorsi audio duplicati, eco e loopback.</li>
-</ul>
-</blockquote>
-<p>Se il percorso di riproduzione può avere come target un cavo virtuale, scegli lì il punto finale di riproduzione del cavo. Nell&#x27;app ricevente, seleziona l&#x27;endpoint di registrazione complementare come microfono. Mantieni il microfono fisico come convertitore di ingresso e uscita dalla chiamata in cuffia. Nella modalità browser la destinazione della riproduzione può dipendere dalle impostazioni di output del browser e del sistema operativo. Verifica il ricevitore con una registrazione locale prima di giudicare lo streaming live in una chiamata.</p>
-<retype-table copy-text="| Cosa senti | Cosa testare |
-| --- | --- |
-| Il monitor funziona ma la chiamata ha audio non elaborato | Seleziona l'endpoint del cavo nella chiamata e disabilita le sorgenti microfoniche aggiuntive. |
-| Il ritardo aumenta o l'audio si interrompe | Interrompi altri flussi, utilizza il buffer predefinito e prova localmente con una scheda. |
-| Il misuratore del microfono del browser non si muove mai | Conferma l'autorizzazione del sito, il dispositivo fisico selezionato e se un'altra app ha accesso esclusivo. |
-| Solo un gioco causa audio interrotto | Prova mentre il gioco è in esecuzione, dai un po' di margine alla GPU di conversione o scegli un'altra GPU disponibile. |">
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Cosa senti</th>
-<th>Cosa testare</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Il monitor funziona ma la chiamata ha audio non elaborato</td>
-<td>Seleziona l&#x27;endpoint del cavo nella chiamata e disabilita le sorgenti microfoniche aggiuntive.</td>
-</tr>
-<tr>
-<td>Il ritardo aumenta o l&#x27;audio si interrompe</td>
-<td>Interrompi altri flussi, utilizza il buffer predefinito e prova localmente con una scheda.</td>
-</tr>
-<tr>
-<td>Il misuratore del microfono del browser non si muove mai</td>
-<td>Conferma l&#x27;autorizzazione del sito, il dispositivo fisico selezionato e se un&#x27;altra app ha accesso esclusivo.</td>
-</tr>
-<tr>
-<td>Solo un gioco causa audio interrotto</td>
-<td>Prova mentre il gioco è in esecuzione, dai un po&#x27; di margine alla GPU di conversione o scegli un&#x27;altra GPU disponibile.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</retype-table>
-<p>Il flusso del browser tenta il trasporto WebSocket e può ricorrere allo streaming HTTP quando necessario. Stabilire un risultato locale pulito prima di esaminare la qualità della connessione remota.</p>
+<span id="realtime-voice-conversion" class="docs-anchor"></span><h1 id="conversione-vocale-in-tempo-reale">Conversione vocale in tempo reale</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.</div>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a> · <a href="https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true">Windows x64 ZIP</a> · <a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></p>
+<p>Apri Realtime nell’app desktop o nella WebUI. Prova prima una voce in cuffia, poi invia l’audio a Discord, OBS, un gioco o un’altra app.</p>
+<span id="set-up-audio-routing" class="docs-anchor"></span><h2 id="configurare-il-routing-audio">Configurare il routing audio</h2>
+<p>Per la prima prova, imposta il microfono fisico in <strong>Microphone</strong> e le cuffie in <strong>Output</strong>. Per inviare il segnale convertito a un’altra app, usa il lato di riproduzione del cavo virtuale come uscita di Redpanda e il lato di registrazione come microfono nell’app di destinazione. Usa <strong>Monitor</strong> per ascoltarti in cuffia, evitando di rimandare quel segnale al microfono.</p>
+<span id="rvc-and-cvc-voices" class="docs-anchor"></span><h2 id="voci-rvc-e-cvc">Voci RVC e CVC</h2>
+<p>RVC usa un <code translate="no" v-pre>.pth</code> per inferenza con <code translate="no" v-pre>.index</code> abbinato e facoltativo. CVC usa una voce <code translate="no" v-pre>.cvc</code> e un percorso audio a 48 kHz. Carica pitch, guadagno, gate e indice salvati con la voce. I manifest legacy <code translate="no" v-pre>.causalvc.json</code> e <code translate="no" v-pre>.nextvc.json</code> richiedono i pesi associati. Puoi usare RNNoise sull’ingresso microfono. Se l’audio si interrompe, prova un blocco più lungo e disattiva gli effetti uno alla volta.</p>
+<p><a href="../first-run/">Installare Redpanda VC</a> · <a href="../inference/">Inferenza da file</a> · <a href="../causal-training/">Training con Casual Voice Changer</a> · <a href="../training/">RVC Training</a> · <a href="../../../real-time/">VAC Lite / VB-CABLE</a></p>
+<span id="source-and-release" class="docs-anchor"></span><h2 id="sorgente-e-release">Sorgente e release</h2>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/ui/index.html">Realtime UI</a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/realtime.py">Realtime engine</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -255,11 +194,11 @@
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/first-run/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/inference/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">Configura Redpanda-​vc</span>
+                                <span class="block mt-1">Inferenza da file</span>
                             </span>
                         </a>
                     </div>
@@ -280,7 +219,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T01:39:39.000Z">22/11/2026 · 02:39</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -313,6 +252,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Prova l'audio dal vivo in Redpanda-vc", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/live-audio.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Conversione vocale in tempo reale", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/live-audio.md" }</script>
 </body>
 </html>

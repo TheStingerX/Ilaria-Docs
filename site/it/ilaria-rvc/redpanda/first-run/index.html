@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696514228">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786183979">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Configura Redpanda-vc">
-    <meta name="description" content="Redpanda-vc estende Applio e offre più famiglie di modelli vocali. In questa procedura dettagliata viene utilizzata la famiglia RVC.">
+    <meta name="title" content="Installare Redpanda VC">
+    <meta name="description" content="Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed esegue i motori vocali Python in locale. Il sorgente include anche una WebUI con la stessa interfaccia.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/first-run/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/first-run/">
-    <meta property="og:title" content="Configura Redpanda-vc">
+    <meta property="og:title" content="Installare Redpanda VC">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/it/ilaria-rvc/redpanda/first-run/">
-    <meta name="twitter:title" content="Configura Redpanda-vc">
+    <meta name="twitter:title" content="Installare Redpanda VC">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/it/other-rvcs/redpanda/first-run.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848696514228" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786183979" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="Redpanda-vc estende Applio e offre più famiglie di modelli vocali. In questa procedura dettagliata viene utilizzata la famiglia RVC.">
+    <meta property="og:description" content="Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed esegue i motori vocali Python in locale. Il sorgente include anche una WebUI con la stessa interfaccia.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="Redpanda-vc estende Applio e offre più famiglie di modelli vocali. In questa procedura dettagliata viene utilizzata la famiglia RVC.">
+    <meta name="twitter:description" content="Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed esegue i motori vocali Python in locale. Il sorgente include anche una WebUI con la stessa interfaccia.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/first-run/">
@@ -174,27 +174,21 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="set-up-redpanda-vc" class="docs-anchor"></span><h1 id="configura-redpanda-vc">Configura Redpanda-vc</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Redpanda-vc estende Applio e offre più famiglie di modelli vocali. In questa procedura dettagliata viene utilizzata la famiglia RVC.</div>
-<p><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></p>
-<p>Redpanda-vc estende Applio e offre più famiglie di modelli vocali. In questa procedura dettagliata viene utilizzata la famiglia <strong>RVC</strong>. Scegli un&#x27;installazione e mantieni le sue dipendenze separate dagli altri programmi RVC.</p>
-<span id="1-choose-a-launch-path" class="docs-anchor"></span><h2 id="1-scegli-un-percorso-di-lancio">1. Scegli un percorso di lancio</h2>
+<span id="set-up-redpanda-vc" class="docs-anchor"></span><h1 id="installare-redpanda-vc">Installare Redpanda VC</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed esegue i motori vocali Python in locale. Il sorgente include anche una WebUI con la stessa interfaccia.</div>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a> · <a href="https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true">Windows x64 ZIP</a> · <a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></p>
+<p>Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed esegue i motori vocali Python in locale. Il sorgente include anche una WebUI con la stessa interfaccia.</p>
+<h2 id="windows-x64">Windows x64</h2>
 <ol>
-<li>Scarica il sorgente o un pacchetto compatibile dal <a href="https://github.com/redpanda343/Redpanda-vc">progetto Redpanda-vc</a>. Per una configurazione di origine, estraila in una cartella scrivibile locale e controlla che siano presenti il ​​file delle dipendenze e il programma di avvio del progetto. Installa le dipendenze richieste dal tuo checkout in un ambiente Python dedicato. Le installazioni CUDA richiedono una build PyTorch che supporti la GPU NVIDIA e il driver in uso.</li>
-<li>Su Windows, inizia con <code translate="no" v-pre>run-install.bat</code> e lascia che finisca di preparare l&#x27;ambiente di progetto in bundle. Quindi utilizzare <code translate="no" v-pre>run-applio.bat</code> per la WebUI del browser o <code translate="no" v-pre>run-realtime-gui.bat</code> per la finestra in tempo reale autonoma. Entrambi i lanciatori si aspettano l&#x27;ambiente creato nella cartella del progetto. Apri un terminale nella cartella del progetto quando devi leggere i log di avvio. Mantenerlo in funzione durante l&#x27;uso.</li>
-<li>Attendi l&#x27;interfaccia utente o apri l&#x27;indirizzo di loopback stampato dal processo. Se il programma di avvio termina senza aprire una pagina, controlla l&#x27;output del terminale per un errore di importazione, un errore di inizializzazione CUDA o un conflitto di porte. Riparare il problema indicato in questa installazione prima di riaprirla.</li>
-<li>Confermare il dispositivo di esecuzione corretto. Testa un lavoro alla volta con l&#x27;interfaccia locale prima di aggiungere flussi del browser o altri lavori che richiedono un utilizzo intensivo della GPU.</li>
+<li>Scarica lo ZIP Windows x64 dalla pagina della release. Estrai tutto in una cartella locale in cui puoi scrivere e avvia <code translate="no" v-pre>Redpanda.exe</code> da lì.</li>
+<li>Attendi il completamento della configurazione. Se non riutilizza un runtime, l’app prepara Python 3.12 e PyTorch tramite <code translate="no" v-pre>uv</code> e rileva NVIDIA CUDA o CPU. Tieni insieme <code translate="no" v-pre>runtime/</code>, <code translate="no" v-pre>assets/</code>, <code translate="no" v-pre>datasets/</code>, <code translate="no" v-pre>models/</code> e <code translate="no" v-pre>logs/</code>.</li>
+<li>Apri <strong>Inference</strong>, scegli una voce compatibile e prova un WAV breve. Se l’avvio fallisce, controlla il primo errore, i permessi della cartella, la connessione per i download e il driver NVIDIA se usi CUDA.</li>
 </ol>
-<span id="2-choose-the-engine-and-model" class="docs-anchor"></span><h2 id="2-scegli-il-motore-e-il-modello">2. Scegli il motore e il modello</h2>
-<p>Nella visualizzazione di conversione pertinente, seleziona il flusso di lavoro <strong>RVC</strong>, scegli un checkpoint di inferenza compatibile e abbinalo all&#x27;indice corrispondente solo quando lo hai. L&#x27;app espone anche Beatrice e Rectified Flow nelle viste supportate. Ciascuno utilizza il proprio formato modello. Un modello che appartiene ad un&#x27;altra famiglia necessita di un proprio motore.</p>
-<p>Se la tua build prevede una conversione offline, inizia con un WAV secco, breve e senza trasposizione. Salva un nuovo output e controlla le stesse parole in entrambi i file. Se hai principalmente bisogno della conversione del microfono, passa direttamente al <a href="../live-audio/">test in tempo reale</a> con un modello compatibile noto.</p>
-<span id="3-diagnose-startup-before-changing-audio-settings" class="docs-anchor"></span><h2 id="3-diagnosticare-lavvio-prima-di-modificare-le-impostazioni-audio">3. Diagnosticare l&#x27;avvio prima di modificare le impostazioni audio</h2>
-<ul>
-<li><strong>Errore di importazione</strong>: conferma che l&#x27;interprete che esegue il launcher è quello nell&#x27;ambiente del tuo progetto e ha le dipendenze della build.</li>
-<li><strong>Modello mancante</strong>: ricontrolla la cartella prevista dalla tua build, dal motore corrente e se il file è un&#x27;esportazione di inferenza.</li>
-<li><strong>Errore CUDA</strong>: conferma il dispositivo RVC scelto e prova con altri lavori GPU chiusi. Registra il primo errore invece di interpretare il messaggio di arresto finale.</li>
-<li><strong>Compatibilità non chiara</strong>: prendi nota della versione del pacchetto o del checkout, della GPU e della famiglia di modelli prevista. Testa una prova di riferimento prima di provare vocoder o funzionalità personalizzate.</li>
-</ul>
+<span id="browser-webui-and-source-builds" class="docs-anchor"></span><h2 id="webui-e-build-da-sorgente">WebUI e build da sorgente</h2>
+<p>Da un checkout del sorgente, esegui <code translate="no" v-pre>run-install.bat</code> su Windows o <code translate="no" v-pre>run-install.sh</code> su Linux/macOS. Avvia la WebUI con <code translate="no" v-pre>run-web.bat</code>, <code translate="no" v-pre>run-web.sh</code> o <code translate="no" v-pre>python core.py web --host 127.0.0.1 --port 7860</code> nell’ambiente Python preparato. Per compilare l’app desktop servono Rust e gli strumenti WebView della piattaforma. I miglioramenti al runtime portabile e il tema Dark Frutiger Aero sono successivi al tag della release.</p>
+<p><a href="../inference/">Inferenza da file</a> · <a href="../live-audio/">Conversione vocale in tempo reale</a> · <a href="../causal-training/">Training con Casual Voice Changer</a> · <a href="../training/">RVC Training</a></p>
+<span id="source-and-release" class="docs-anchor"></span><h2 id="sorgente-e-release">Sorgente e release</h2>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/README.md">README</a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/desktop/src/runtime.rs">Runtime</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -214,10 +208,10 @@
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/live-audio/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/inference/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Prova l&#39;audio dal vivo in Redpanda-​vc</span>
+                                <span class="block mt-1">Inferenza da file</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -229,7 +223,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T19:52:55.000Z">22/11/2026 · 20:52</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -262,6 +256,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Configura Redpanda-vc", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/first-run.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Installare Redpanda VC", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/first-run.md" }</script>
 </body>
 </html>

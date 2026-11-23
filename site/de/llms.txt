@@ -121,10 +121,12 @@
 
 ### Redpanda-vc
 
-- [Redpanda-vc einrichten](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/first-run.md): Redpanda-vc erweitert Applio und bietet mehrere Sprachmodellfamilien. In dieser exemplarischen Vorgehensweise wird durchgehend die RVC-Familie verwendet.
-- [Testen Sie Live-Audio in Redpanda-vc](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/live-audio.md): Der Windows-Desktop-Echtzeit-Launcher verwendet die Geräte, die diesem lokalen Prozess ausgesetzt sind.
+- [Redpanda VC einrichten](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/first-run.md): Beginne mit der vorkompilierten Version für Windows x64. Die Desktop-App nutzt Tauri und führt die Python-Sprachengines lokal aus. Der Quellcode enthält außerdem eine WebUI mit derselben Oberfläche.
+- [Datei-Inferenz](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/inference.md): Unter Inference kannst du eine Aufnahme oder einen ganzen Ordner konvertieren. Eine RVC-Stimme verwendet ein .pth-Inferenzmodell, eine Casual-Voice-Changer-Stimme eine .cvc-Datei.
+- [Stimmkonvertierung in Echtzeit](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/live-audio.md): Öffne Realtime in der Desktop-App oder WebUI. Teste zunächst eine Stimme über Kopfhörer, bevor du das Signal an Discord, OBS, ein Spiel oder eine andere App sendest.
 - [RVC-Modelle in Redpanda-vc trainieren - EMA & Schrittbasiertes Speichern](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/training.md): Einsteigerfreundliche, im Quellcode verifizierte Anleitung zum Trainieren von RVC-Modellen in Redpanda-vc: Generator EMA, schrittbasiertes Speichern von Checkpoints, Fortsetzen, Export und Fehlerbehebung.
-- [Redpanda-vc vs Andere RVC-Versionen - Vollständiger Funktionsvergleich](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/differences.md): Code-verifizierter Vergleich von Redpanda-vc mit RVC Mainline, Applio und Ilaria RVC: Generator EMA, schrittbasiertes Speichern, Rectified Flow, Beatrice 2, Vocoder-Training, TTS, Echtzeit und Kompatibilität.
+- [Training mit Casual Voice Changer](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/causal-training.md): Redpandas Option Casual Voice Changer integriert Causal Voice Changer v0.4.0. Beim Feintraining entsteht eine .cvc-Stimme für die CVC-Engine.
+- [Redpanda VC im Vergleich mit anderen RVC-Apps](https://docs.ilariarvc.shop/de/other-rvcs/redpanda/differences.md): Redpanda VC vereint RVC und Casual Voice Changer in einer gemeinsamen Desktop- und Browseroberfläche. Ältere Builds nutzten Gradio und enthielten Engines und Werkzeuge, die in der aktuellen Version entfallen sind.
 
 ### RVC Blue
 

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696524946">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786190753">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Redpanda-vc vs Otras Versiones RVC - Comparativa Completa de Funciones">
-    <meta name="description" content="Comparativa verificada en código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2, entrenamiento de vocoder, TTS, tiempo real y compatibilidad.">
+    <meta name="title" content="Redpanda VC frente a otras aplicaciones RVC">
+    <meta name="description" content="Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/ilaria-rvc/redpanda/comparison/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/es/ilaria-rvc/redpanda/comparison/">
-    <meta property="og:title" content="Redpanda-vc vs Otras Versiones RVC - Comparativa Completa de Funciones">
+    <meta property="og:title" content="Redpanda VC frente a otras aplicaciones RVC">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/es/ilaria-rvc/redpanda/comparison/">
-    <meta name="twitter:title" content="Redpanda-vc vs Otras Versiones RVC - Comparativa Completa de Funciones">
+    <meta name="twitter:title" content="Redpanda VC frente a otras aplicaciones RVC">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/es/other-rvcs/redpanda/differences.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848696524946" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786190753" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848696524946" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786190753" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848696524946" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786190753" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="Comparativa verificada en código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2, entrenamiento de vocoder, TTS, tiempo real y compatibilidad.">
+    <meta property="og:description" content="Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="Comparativa verificada en código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2, entrenamiento de vocoder, TTS, tiempo real y compatibilidad.">
+    <meta name="twitter:description" content="Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/comparison/">
@@ -174,602 +174,55 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="redpanda-vc-vs-other-rvc-versions---complete-feature-comparison" class="docs-anchor"></span><h1 id="redpanda-vc-vs-otras-versiones-rvc---comparativa-completa-de-funciones">Redpanda-vc vs Otras Versiones RVC - Comparativa Completa de Funciones</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Comparativa verificada en código entre Redpanda-vc, RVC Mainline, Applio e Ilaria RVC: Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2, entrenamiento de vocoder, TTS, tiempo real y compatibilidad.</div>
-<p><a href="../first-run/">Configurar Redpanda-vc</a> · <a href="../training/">Entrenar modelos RVC (EMA y Steps)</a> · <a href="../live-audio/">Probar audio en vivo</a></p>
-<p>Esta guía compara <strong>Redpanda-vc</strong> directamente con <strong>RVC Mainline</strong>, <strong>Applio</strong> e <strong>Ilaria RVC</strong> mediante inspección estática del código fuente en las ramas <code translate="no" v-pre>main</code> de cada proyecto (sin ejecutar benchmarks de audio en vivo ni pruebas de hardware entre sistemas).</p>
-<hr>
-<span id="what-makes-redpanda-vc-different" class="docs-anchor"></span><h2 id="qué-hace-diferente-a-redpanda-vc">¿Qué hace diferente a Redpanda-vc?</h2>
-<p>Si eres nuevo en la conversión de voz por IA, conviene saber que estos programas <strong>no</strong> son versiones sucesivas de una misma aplicación, sino proyectos relacionados con objetivos distintos:</p>
-<ul>
-<li><strong>RVC:</strong> Familia de arquitecturas y modelos para conversión de voz (Retrieval-based Voice Conversion).</li>
-<li><strong>RVC Mainline:</strong> La implementación de referencia original (<code translate="no" v-pre>RVC-Project/Retrieval-based-Voice-Conversion-WebUI</code>).</li>
-<li><strong>Applio:</strong> Aplicación RVC muy extendida que amplía la WebUI, los vocoders, el TTS y las herramientas en torno a RVC.</li>
-<li><strong>Redpanda-vc:</strong> Fork de <strong>Applio</strong> (<code translate="no" v-pre>redpanda343/Redpanda-vc</code>) que añade Generator EMA, guardado de checkpoints RVC por pasos, entrenamiento/inferencia <strong>Rectified Flow</strong>, entrenamiento/tiempo real <strong>Beatrice 2</strong> y <strong>entrenamiento dedicado de vocoders</strong>.</li>
-<li><strong>Ilaria RVC:</strong> Implementación personalizada basada en RVC Mainline (<code translate="no" v-pre>TheStingerX/Ilaria-RVC</code>) con su propio pipeline de inferencia, <code translate="no" v-pre>Training Target: Steps</code>, soporte RefineGAN/MRF HiFi-GAN en la interfaz, Audio Analyzer, Voice Blender y herramientas TTS.</li>
-</ul>
-<p>Un fork <strong>no</strong> es automáticamente mejor que el original en todos los aspectos: cada proyecto equilibra de forma distinta la simplicidad, la estabilidad, la compatibilidad de modelos y las arquitecturas adicionales.</p>
-<p><em>(Términos rápidos para principiantes: <strong>Inference</strong> significa convertir audio usando un modelo ya entrenado; <strong>CLI</strong> significa ejecutar comandos en terminal en lugar de pulsar botones en la <strong>WebUI</strong>; un <strong>vocoder</strong> transforma rasgos acústicos en una onda de audio audible; un <strong>decoder</strong> es la parte de un programa que sabe leer una arquitectura de modelo concreta.)</em></p>
-<hr>
-<span id="feature-comparison-overview" class="docs-anchor"></span><h2 id="comparativa-general-de-funciones">Comparativa general de funciones</h2>
-<p>Las etiquetas de estado reflejan la inspección estática de la rama <code translate="no" v-pre>main</code> de cada repositorio (commits listados en <doc-anchor-trigger to="#fuentes-y-referencias-t%C3%A9cnicas">Fuentes y referencias técnicas</doc-anchor-trigger>):</p>
-<retype-table copy-text="| Función | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
-| --- | --- | --- | --- | --- |
-| **RVC V1** | **Sí** | **Inferencia V1 compatible; la UI actual de entrenamiento se centra en V2** | **Sí** | **Sí** |
-| **RVC V2** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Entrenamiento RVC** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Entrenamiento por épocas** | **Sí** | **Sí** | **Implementación diferente** *(objetivo por pasos)* | **Sí** |
-| **Objetivo por pasos** | **No - verificado** | **No - verificado** | **Sí** (`Total Steps`) | **Sí** (`Training Target: Steps`) |
-| **Checkpoints por intervalos de épocas** | **Sí** | **Sí** (`save_every_epoch`) | **No - verificado** *(usa intervalos de pasos)* | **Sí** (`save_every_epoch`) |
-| **Checkpoints por intervalos de pasos** | **No - verificado** | **No - verificado** | **Sí** (`Save Every X Steps`) | **No - verificado** *(guarda por épocas; época parcial al parar/paso final)* |
-| **Generator EMA** | **No - verificado** | **No - verificado** | **Sí** (`GeneratorEMA`) | **No - verificado** |
-| **Reanudar entrenamiento (`G`/`D`)** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Exportación `.pth` intermedia** | **Sí** | **Sí** (`save_every_weights`) | **Sí** (`Save Every Weights`) | **Sí** *(en límites completos de `save_every_epoch`)* |
-| **Entrenamiento Rectified Flow** | **No - verificado** | **No - verificado** | **Sí** | **No - verificado** |
-| **Entrenamiento Beatrice 2** | **No - verificado** | **No - verificado** | **Sí** | **No - verificado** *(Beatrice es solo extractor F0)* |
-| **Entrenamiento dedicado de vocoders** | **No - verificado** | **No - verificado** | **Sí** (`tabs/train/nsf_hifigan.py`) | **No - verificado** |
-| **HiFi-GAN** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **RefineGAN** | **No - verificado** | **Sí** | **Sí** | **Sí** *(32 kHz v2 f0)* |
-| **MRF HiFi-GAN** | **No - verificado** | **Compatible en código / CLI; no seleccionable en la WebUI estándar de entrenamiento** | **Compatible en código / CLI; no seleccionable en la WebUI estándar de entrenamiento** | **Sí** *(seleccionable en WebUI de entrenamiento, v2 f0)* |
-| **Pretrained personalizados** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Warmup del learning rate** | **No - verificado** | **No - verificado** *(programación fija)* | **Sí** (`Warmup Steps`) | **No - verificado** |
-| **Programación de LR** | **Implementación diferente** *(exponencial por época)* | **Implementación diferente** *(exponencial por época)* | **Sí** (`Exponential` / `Cosine`) | **Implementación diferente** *(exponencial por época)* |
-| **Control de batch** | **Sí** (`batch_size`) | **Sí** (`batch_size`) | **Sí** (`Batch Size` + `Max Audio per Batch`) | **Sí** (`batch_size`) |
-| **Optimización de VRAM** | **Implementación diferente** *(FP16, caché GPU)* | **Sí** (`Checkpointing`, caché GPU) | **Sí** (`Checkpointing`, caché GPU) | **Implementación diferente** *(FP16/BF16, caché GPU)* |
-| **Extracción de rasgos y F0** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Inferencia vocal (offline)** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Text-to-Speech (TTS)** | **No - verificado** *(requiere TTS externo + RVC)* | **Sí** *(`tabs/tts/` integrado + CLI `rvc/lib/tools/tts.py`)* | **No - verificado** *(pestaña `tts` de Applio eliminada de `tabs/`)* | **Sí** *(Kokoro, ElevenLabs, Windows TTS integrados + RVC)* |
-| **Conversión en tiempo real** | **Sí** | **Sí** | **Sí** | **No - verificado** *(solo offline y lotes)* |
-| **GUI desktop realtime** | **Sí** (`realtime_gui.py`) | **Realtime en WebUI; GUI desktop independiente separada no verificada** | **Sí** (`run-realtime-gui.bat`, lanzador Windows) | **No - verificado** |
-| **Realtime en navegador** | **No - verificado** | **Sí** (`tabs/realtime`) | **Sí** (WebSocket + respaldo HTTP) | **No - verificado** |
-| **Entrenamiento multi-GPU** | **Sí** | **Sí** | **Sí** | **Sí** |
-| **Flujos realtime multi-GPU simultáneos** | **No - verificado** | **No verificado** | **Sí** *(1 GPU por flujo)* | **No - verificado** |
-| **Soporte multifamilia** | **No - verificado** *(solo RVC)* | **Familia RVC con opciones de vocoder adicionales** *(selector `Architecture` oculto; no familias separadas como RF/Beatrice)* | **Sí** *(RVC + Rectified Flow + Beatrice)* | **No - verificado** *(solo RVC)* |
-| **Herramientas de monitorización** | TensorBoard | TensorBoard | TensorBoard | TensorBoard + Audio Analyzer + Training Previews |">
+<span id="redpanda-vc-compared-with-other-rvc-apps" class="docs-anchor"></span><h1 id="redpanda-vc-frente-a-otras-aplicaciones-rvc">Redpanda VC frente a otras aplicaciones RVC</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.</div>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Versión precompilada para Windows x64</a> · <a href="https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true">Windows x64 ZIP</a> · <a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></p>
+<p>Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.</p>
+<span id="model-formats-and-supported-engines" class="docs-anchor"></span><h2 id="formatos-de-modelos-y-motores-compatibles">Formatos de modelos y motores compatibles</h2>
+<p>La versión actual incluye entrenamiento, inferencia y modo en tiempo real para RVC y CVC. Se han retirado Beatrice, Rectified Flow y el entrenamiento independiente de vocoders. HiFi-GAN y RefineGAN siguen en el entrenamiento RVC. Una voz <code translate="no" v-pre>.cvc</code> requiere un motor CVC. Antes de usar un <code translate="no" v-pre>.pth</code> en Mainline, Applio o Ilaria RVC, comprueba arquitectura, vocoder y embedder.</p>
+<retype-table copy-text="| Aplicación | Interfaz | Diferencia principal |
+| --- | --- | --- |
+| Redpanda VC | Escritorio y navegador | RVC y CVC en una interfaz |
+| RVC WebUI (Mainline - Original RVC) | Navegador y lanzador aparte para tiempo real | Implementación original de RVC |
+| Applio | WebUI | Flujos de RVC y síntesis de voz |
+| Ilaria RVC | Interfaz en navegador | Paquete Windows para NVIDIA y cuadernos en la nube |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>Función</th>
-<th>RVC Mainline</th>
-<th>Applio</th>
-<th>Redpanda-vc</th>
-<th>Ilaria RVC</th>
+<th>Aplicación</th>
+<th>Interfaz</th>
+<th>Diferencia principal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>RVC V1</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Inferencia V1 compatible; la UI actual de entrenamiento se centra en V2</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
+<td>Redpanda VC</td>
+<td>Escritorio y navegador</td>
+<td>RVC y CVC en una interfaz</td>
 </tr>
 <tr>
-<td><strong>RVC V2</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
+<td>RVC WebUI (Mainline - Original RVC)</td>
+<td>Navegador y lanzador aparte para tiempo real</td>
+<td>Implementación original de RVC</td>
 </tr>
 <tr>
-<td><strong>Entrenamiento RVC</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
+<td>Applio</td>
+<td>WebUI</td>
+<td>Flujos de RVC y síntesis de voz</td>
 </tr>
 <tr>
-<td><strong>Entrenamiento por épocas</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Implementación diferente</strong> <em>(objetivo por pasos)</em></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Objetivo por pasos</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Total Steps</code>)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Training Target: Steps</code>)</td>
-</tr>
-<tr>
-<td><strong>Checkpoints por intervalos de épocas</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>save_every_epoch</code>)</td>
-<td><strong>No - verificado</strong> <em>(usa intervalos de pasos)</em></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>save_every_epoch</code>)</td>
-</tr>
-<tr>
-<td><strong>Checkpoints por intervalos de pasos</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Save Every X Steps</code>)</td>
-<td><strong>No - verificado</strong> <em>(guarda por épocas; época parcial al parar/paso final)</em></td>
-</tr>
-<tr>
-<td><strong>Generator EMA</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>GeneratorEMA</code>)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Reanudar entrenamiento (<code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code>)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Exportación <code translate="no" v-pre>.pth</code> intermedia</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>save_every_weights</code>)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Save Every Weights</code>)</td>
-<td><strong>Sí</strong> <em>(en límites completos de <code translate="no" v-pre>save_every_epoch</code>)</em></td>
-</tr>
-<tr>
-<td><strong>Entrenamiento Rectified Flow</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Entrenamiento Beatrice 2</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong> <em>(Beatrice es solo extractor F0)</em></td>
-</tr>
-<tr>
-<td><strong>Entrenamiento dedicado de vocoders</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>tabs/train/nsf_hifigan.py</code>)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>HiFi-GAN</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>RefineGAN</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong> <em>(32 kHz v2 f0)</em></td>
-</tr>
-<tr>
-<td><strong>MRF HiFi-GAN</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Compatible en código / CLI; no seleccionable en la WebUI estándar de entrenamiento</strong></td>
-<td><strong>Compatible en código / CLI; no seleccionable en la WebUI estándar de entrenamiento</strong></td>
-<td><strong>Sí</strong> <em>(seleccionable en WebUI de entrenamiento, v2 f0)</em></td>
-</tr>
-<tr>
-<td><strong>Pretrained personalizados</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Warmup del learning rate</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong> <em>(programación fija)</em></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Warmup Steps</code>)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Programación de LR</strong></td>
-<td><strong>Implementación diferente</strong> <em>(exponencial por época)</em></td>
-<td><strong>Implementación diferente</strong> <em>(exponencial por época)</em></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Exponential</code> / <code translate="no" v-pre>Cosine</code>)</td>
-<td><strong>Implementación diferente</strong> <em>(exponencial por época)</em></td>
-</tr>
-<tr>
-<td><strong>Control de batch</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>batch_size</code>)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>batch_size</code>)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Batch Size</code> + <code translate="no" v-pre>Max Audio per Batch</code>)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>batch_size</code>)</td>
-</tr>
-<tr>
-<td><strong>Optimización de VRAM</strong></td>
-<td><strong>Implementación diferente</strong> <em>(FP16, caché GPU)</em></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Checkpointing</code>, caché GPU)</td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Checkpointing</code>, caché GPU)</td>
-<td><strong>Implementación diferente</strong> <em>(FP16/BF16, caché GPU)</em></td>
-</tr>
-<tr>
-<td><strong>Extracción de rasgos y F0</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Inferencia vocal (offline)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Text-to-Speech (TTS)</strong></td>
-<td><strong>No - verificado</strong> <em>(requiere TTS externo + RVC)</em></td>
-<td><strong>Sí</strong> <em>(<code translate="no" v-pre>tabs/tts/</code> integrado + CLI <code translate="no" v-pre>rvc/lib/tools/tts.py</code>)</em></td>
-<td><strong>No - verificado</strong> <em>(pestaña <code translate="no" v-pre>tts</code> de Applio eliminada de <code translate="no" v-pre>tabs/</code>)</em></td>
-<td><strong>Sí</strong> <em>(Kokoro, ElevenLabs, Windows TTS integrados + RVC)</em></td>
-</tr>
-<tr>
-<td><strong>Conversión en tiempo real</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong> <em>(solo offline y lotes)</em></td>
-</tr>
-<tr>
-<td><strong>GUI desktop realtime</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>realtime_gui.py</code>)</td>
-<td><strong>Realtime en WebUI; GUI desktop independiente separada no verificada</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>run-realtime-gui.bat</code>, lanzador Windows)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Realtime en navegador</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>tabs/realtime</code>)</td>
-<td><strong>Sí</strong> (WebSocket + respaldo HTTP)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Entrenamiento multi-GPU</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-</tr>
-<tr>
-<td><strong>Flujos realtime multi-GPU simultáneos</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No verificado</strong></td>
-<td><strong>Sí</strong> <em>(1 GPU por flujo)</em></td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Soporte multifamilia</strong></td>
-<td><strong>No - verificado</strong> <em>(solo RVC)</em></td>
-<td><strong>Familia RVC con opciones de vocoder adicionales</strong> <em>(selector <code translate="no" v-pre>Architecture</code> oculto; no familias separadas como RF/Beatrice)</em></td>
-<td><strong>Sí</strong> <em>(RVC + Rectified Flow + Beatrice)</em></td>
-<td><strong>No - verificado</strong> <em>(solo RVC)</em></td>
-</tr>
-<tr>
-<td><strong>Herramientas de monitorización</strong></td>
-<td>TensorBoard</td>
-<td>TensorBoard</td>
-<td>TensorBoard</td>
-<td>TensorBoard + Audio Analyzer + Training Previews</td>
+<td>Ilaria RVC</td>
+<td>Interfaz en navegador</td>
+<td>Paquete Windows para NVIDIA y cuadernos en la nube</td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<span id="platform--backend-support" class="docs-anchor"></span><h3 id="soporte-de-plataformas-y-backends">Soporte de Plataformas y Backends</h3>
-<p>Tener un script <code translate="no" v-pre>.sh</code> <strong>no</strong> demuestra que todas las funciones estén probadas en Linux o macOS, por lo que la siguiente tabla separa los lanzadores del código de backend:</p>
-<retype-table copy-text="| Plataforma / Backend | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
-| --- | --- | --- | --- | --- |
-| **Lanzadores Windows** | `go-webui.bat`, `go-realtime_gui.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-updater.bat` | `run-install.bat`, `run-applio.bat`, `run-tensorboard.bat`, `run-realtime-gui.bat` | `RUN_ILARIA_RVC.bat`, `RUN_ILARIA_RVC_LOGS.bat` |
-| **Lanzadores Linux / macOS** | Inicio manual con Python | `run-install.sh`, `run-applio.sh`, `run-tensorboard.sh` | `run-install.sh`, `run-applio.sh` *(sin `.sh` para `realtime_gui.py`)* | Inicio manual con Python *(lanzadores `.bat` para Windows)* |
-| **Backends de cómputo en código** | **CUDA / DirectML / CPU** *(DirectML para inferencia con `--dml` / respaldo; entrenamiento usa CUDA o CPU)* | CUDA / MPS / CPU | CUDA / MPS / CPU *(Beatrice realtime en CPU)* | CUDA / DirectML (AMD e Intel) / CPU |
-| **Estado de pruebas multi-OS** | No probado en esta auditoría | No probado en esta auditoría | No probado en esta auditoría | No probado en esta auditoría |">
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Plataforma / Backend</th>
-<th>RVC Mainline</th>
-<th>Applio</th>
-<th>Redpanda-vc</th>
-<th>Ilaria RVC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Lanzadores Windows</strong></td>
-<td><code translate="no" v-pre>go-webui.bat</code>, <code translate="no" v-pre>go-realtime_gui.bat</code></td>
-<td><code translate="no" v-pre>run-install.bat</code>, <code translate="no" v-pre>run-applio.bat</code>, <code translate="no" v-pre>run-tensorboard.bat</code>, <code translate="no" v-pre>run-updater.bat</code></td>
-<td><code translate="no" v-pre>run-install.bat</code>, <code translate="no" v-pre>run-applio.bat</code>, <code translate="no" v-pre>run-tensorboard.bat</code>, <code translate="no" v-pre>run-realtime-gui.bat</code></td>
-<td><code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>, <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code></td>
-</tr>
-<tr>
-<td><strong>Lanzadores Linux / macOS</strong></td>
-<td>Inicio manual con Python</td>
-<td><code translate="no" v-pre>run-install.sh</code>, <code translate="no" v-pre>run-applio.sh</code>, <code translate="no" v-pre>run-tensorboard.sh</code></td>
-<td><code translate="no" v-pre>run-install.sh</code>, <code translate="no" v-pre>run-applio.sh</code> <em>(sin <code translate="no" v-pre>.sh</code> para <code translate="no" v-pre>realtime_gui.py</code>)</em></td>
-<td>Inicio manual con Python <em>(lanzadores <code translate="no" v-pre>.bat</code> para Windows)</em></td>
-</tr>
-<tr>
-<td><strong>Backends de cómputo en código</strong></td>
-<td><strong>CUDA / DirectML / CPU</strong> <em>(DirectML para inferencia con <code translate="no" v-pre>--dml</code> / respaldo; entrenamiento usa CUDA o CPU)</em></td>
-<td>CUDA / MPS / CPU</td>
-<td>CUDA / MPS / CPU <em>(Beatrice realtime en CPU)</em></td>
-<td>CUDA / DirectML (AMD e Intel) / CPU</td>
-</tr>
-<tr>
-<td><strong>Estado de pruebas multi-OS</strong></td>
-<td>No probado en esta auditoría</td>
-<td>No probado en esta auditoría</td>
-<td>No probado en esta auditoría</td>
-<td>No probado en esta auditoría</td>
-</tr>
-</tbody>
-</table>
-</div>
-</retype-table>
-<hr>
-<span id="generator-ema-smoother-exported-weights" class="docs-anchor"></span><h2 id="generator-ema-pesos-exportados-más-suaves">Generator EMA: Pesos Exportados Más Suaves</h2>
-<p>Dentro de una red neuronal, los <strong>weights (pesos)</strong> son los números internos que se ajustan tras cada batch de entrenamiento. Como cada batch es solo un pequeño fragmento de tu dataset, los pesos vivos del generador pueden oscilar ligeramente de un paso a otro.</p>
-<p><strong>EMA (Exponential Moving Average)</strong> mantiene en memoria un promedio continuo separado de los pesos del generador (distinto de los momentos internos del optimizador Adam). En <code translate="no" v-pre>rvc/train/train.py</code>, Redpanda-vc implementa <code translate="no" v-pre>GeneratorEMA</code>:</p>
-<ul>
-<li>Tras cada paso del optimizador del generador (en rank <code translate="no" v-pre>0</code>), <code translate="no" v-pre>GeneratorEMA.update()</code> mezcla los pesos vivos del generador en el promedio continuo (excluyendo <code translate="no" v-pre>enc_q</code>, usado solo en entrenamiento).</li>
-<li><strong>Generator EMA Decay</strong> (<code translate="no" v-pre>0</code> a <code translate="no" v-pre>0.9999</code>, defecto <code translate="no" v-pre>0.999</code>, incremento <code translate="no" v-pre>0.0001</code>) controla cuán lento se actualiza el promedio. Poner <strong><code translate="no" v-pre>0</code></strong> desactiva EMA y exporta los pesos vivos sin promediar.</li>
-<li>Ni <strong>RVC Mainline</strong>, ni <strong>Applio</strong>, ni <strong>Ilaria RVC</strong> incluyen <code translate="no" v-pre>GeneratorEMA</code> en sus scripts de entrenamiento verificados.</li>
-</ul>
-<p>EMA puede suavizar las fluctuaciones de pesos entre pasos, pero <strong>no</strong> garantiza mejor calidad de audio, <strong>no</strong> elimina el overfitting ni la aleatoriedad del entrenamiento y <strong>no</strong> acelera el entrenamiento. Para explicaciones completas y detalles matemáticos, consulta <a href="../training/">Entrenar modelos RVC en Redpanda-vc - EMA y Guardado por Pasos</a>.</p>
-<hr>
-<span id="step-based-training-and-saving" class="docs-anchor"></span><h2 id="entrenamiento-y-guardado-por-pasos">Entrenamiento y Guardado por Pasos</h2>
-<p>En el entrenamiento RVC, una <strong>epoch (época)</strong> es una pasada completa por el dataset preparado, mientras que un <strong>step (paso)</strong> es una actualización de pesos tras procesar un solo batch. <em>(Ejemplo hipotético: si un dataset produce 100 pasos por época, 1.000 pasos equivalen a unas 10 épocas, aunque la proporción exacta depende de la duración del dataset y del tamaño del batch.)</em></p>
-<p>Los cuatro programas gestionan los objetivos por pasos y los guardados de forma distinta:</p>
-<ul>
-<li><strong>Redpanda-vc:</strong> Usa <strong>Total Steps</strong> (defecto <code translate="no" v-pre>10000</code>) y <strong>Save Every X Steps</strong> (defecto <code translate="no" v-pre>1000</code>). Guarda checkpoints reanudables <code translate="no" v-pre>G</code>/<code translate="no" v-pre>D</code> (y un <code translate="no" v-pre>.pth</code> de inferencia si <strong>Save Every Weights</strong> está activo) en intervalos exactos de pasos, incluso a mitad de época, además de un <strong>Final Save</strong> obligatorio en <code translate="no" v-pre>Total Steps</code>. <strong>Save Only Latest</strong> sobrescribe <code translate="no" v-pre>G_2333333.pth</code> / <code translate="no" v-pre>D_2333333.pth</code> para ahorrar espacio.</li>
-<li><strong>Applio y RVC Mainline:</strong> Ambos entrenan por <strong>épocas totales</strong> y guardan checkpoints en intervalos de <strong>épocas</strong> (<code translate="no" v-pre>save_every_epoch</code>).</li>
-<li><strong>Ilaria RVC:</strong> Incluye <strong>Training Target: Steps</strong> (<code translate="no" v-pre>ILARIA_RVC.py</code>, <code translate="no" v-pre>train.py</code>), por lo que también <strong>puede</strong> detenerse en un número exacto de pasos. Sin embargo, su frecuencia de guardado sigue contando <strong>épocas</strong> (<code translate="no" v-pre>save_every_epoch</code>) y las exportaciones intermedias <code translate="no" v-pre>.pth</code> solo ocurren en límites completos <code translate="no" v-pre>epoch % save_every_epoch == 0</code> (no en una <code translate="no" v-pre>partial_epoch</code> a mitad de época), mientras que el estado reanudable se guarda en <code translate="no" v-pre>save_every_epoch</code>, parada o <code translate="no" v-pre>final_epoch</code>.</li>
-</ul>
-<hr>
-<span id="rectified-flow-a-different-voice-conversion-architecture" class="docs-anchor"></span><h2 id="rectified-flow-otra-arquitectura-de-conversión-de-voz">Rectified Flow: Otra Arquitectura de Conversión de Voz</h2>
-<p>Una de las mayores novedades de Redpanda-vc es <strong>Rectified Flow</strong> (<code translate="no" v-pre>tabs/train/rectified_flow.py</code>, <code translate="no" v-pre>rectified_flow/</code>). <strong>No</strong> es una variante de RVC V2:</p>
-<ul>
-<li><strong>Modelo acústico:</strong> Usa una arquitectura inspirada en el modelo acústico de <strong>DiffSinger</strong>, tomando rasgos del habla <strong>ContentVec</strong> en lugar de fonemas (<code translate="no" v-pre>README.md</code>).</li>
-<li><strong>Salida y vocoder:</strong> El modelo de flujo predice representaciones mel-spectrogram, que un <strong>vocoder</strong> separado (<code translate="no" v-pre>PC-NSF-HiFiGAN</code>, <code translate="no" v-pre>NSF-HiFiGAN</code> o <code translate="no" v-pre>Vocos</code>) convierte en onda de audio.</li>
-<li><strong>Presets de entrenamiento:</strong> Incluye los presets <code translate="no" v-pre>standard</code>, <code translate="no" v-pre>meanflow</code> (inspirado en MeanVC2) y <code translate="no" v-pre>smaller</code> en <code translate="no" v-pre>rectified_flow/presets/</code>.</li>
-<li><strong>Soporte en tiempo real:</strong> Compatible con la GUI en tiempo real y la pestaña realtime de la WebUI de Redpanda-vc.</li>
-<li><strong>Aviso de compatibilidad:</strong> Aunque un archivo exportado use extensión <code translate="no" v-pre>.pth</code>, un modelo Rectified Flow <strong>no es un modelo RVC V2</strong> y no cargará en cargadores RVC estándar salvo que un cliente implemente explícitamente ese decoder Rectified Flow.</li>
-</ul>
-<p><em>(No existen benchmarks verificados entre arquitecturas en el repositorio que prueben que Rectified Flow sea universalmente más rápido, natural o superior en calidad a RVC.)</em></p>
-<hr>
-<span id="beatrice-2-support" class="docs-anchor"></span><h2 id="soporte-de-beatrice-2">Soporte de Beatrice 2</h2>
-<p><strong>Beatrice</strong> es una arquitectura independiente de conversión de voz optimizada para CPU (integrada desde <code translate="no" v-pre>beatrice-trainer</code> en <code translate="no" v-pre>tabs/train/beatrice.py</code>, <code translate="no" v-pre>beatrice/</code>, <code translate="no" v-pre>beatrice/realtime.py</code>):</p>
-<ul>
-<li><strong>Separada de RVC:</strong> Beatrice utiliza su propio formato de modelo (exportado como carpeta de modelo, no como <code translate="no" v-pre>.pth</code> RVC) y ejecuta su inferencia en tiempo real en <strong>CPU</strong> (<code translate="no" v-pre>README.md</code>).</li>
-<li><strong>No confundir con extracción de tono F0:</strong> Algunas aplicaciones (como Ilaria RVC) incluyen <code translate="no" v-pre>beatrice</code> como opción de <strong>extractor F0</strong> durante la inferencia RVC. Redpanda-vc va más allá permitiendo <strong>entrenar y convertir con Beatrice 2</strong> tanto en su WebUI como en <code translate="no" v-pre>run-realtime-gui.bat</code>.</li>
-<li>Los modelos entrenados en la pestaña Beatrice de Redpanda-vc funcionan con cargadores compatibles con Beatrice (como Beatrice VST / clientes Beatrice), no como archivos <code translate="no" v-pre>.pth</code> RVC V2.</li>
-</ul>
-<hr>
-<span id="custom-vocoder-training" class="docs-anchor"></span><h2 id="entrenamiento-dedicado-de-vocoders">Entrenamiento Dedicado de Vocoders</h2>
-<p>Redpanda-vc incluye una pestaña dedicada al entrenamiento de <strong>Vocoder</strong> (<code translate="no" v-pre>tabs/train/nsf_hifigan.py</code>, <code translate="no" v-pre>nsf_hifigan/</code>):</p>
-<ul>
-<li><strong>Vocoders compatibles:</strong> <code translate="no" v-pre>PC-NSF-HiFiGAN</code>, <code translate="no" v-pre>NSF-HiFiGAN</code> y <code translate="no" v-pre>Vocos</code> (24 kHz).</li>
-<li><strong>Modos:</strong> Entrenar desde cero o ajustar (fine-tuning) desde un checkpoint pretrained compatible (por ejemplo, <code translate="no" v-pre>PC-NSF-HiFiGAN 2025.02</code> o <code translate="no" v-pre>Vocos 24 kHz</code>).</li>
-<li><strong>Modelo acústico vs. vocoder:</strong> Un modelo acústico (como Rectified Flow) predice rasgos espectrales (mel-spectrograms); un vocoder transforma esos rasgos en sonido audible.</li>
-<li><strong>Limitación importante:</strong> Esta pestaña está estrechamente ligada a las configuraciones mel de <strong>Rectified Flow</strong> (<code translate="no" v-pre>check_registry_vocoder</code> / <code translate="no" v-pre>mel_mismatch</code> en <code translate="no" v-pre>tabs/train/rectified_flow.py</code>). Elegir <code translate="no" v-pre>HiFi-GAN</code> o <code translate="no" v-pre>RefineGAN</code> en la WebUI de entrenamiento <strong>RVC</strong> usa la arquitectura integrada generador/vocoder de RVC; <strong>no</strong> puedes acoplar arbitrariamente un vocoder entrenado aquí a cualquier modelo RVC estándar.</li>
-</ul>
-<hr>
-<span id="real-time-conversion-differences" class="docs-anchor"></span><h2 id="diferencias-en-la-conversión-en-tiempo-reale">Diferencias en la Conversión en Tiempo Reale</h2>
-<retype-table copy-text="| Capacidad en Tiempo Real | RVC Mainline | Applio | Redpanda-vc | Ilaria RVC |
-| --- | --- | --- | --- | --- |
-| **GUI Desktop Realtime** | **Sí** (`realtime_gui.py`) | **Realtime en WebUI; GUI desktop independiente separada no verificada** | **Sí** (`run-realtime-gui.bat`, RVC + Beatrice + RF) | **No - verificado** |
-| **Realtime en Navegador WebUI** | **No - verificado** | **Sí** (`tabs/realtime`) | **Sí** (WebSocket binario + respaldo HTTP streaming) | **No - verificado** |
-| **Asignación Multi-GPU por flujo** | **No - verificado** | **No verificado** | **Sí** (`Inference Device: Automatic` o GPU concreta) | **No - verificado** |">
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Capacidad en Tiempo Real</th>
-<th>RVC Mainline</th>
-<th>Applio</th>
-<th>Redpanda-vc</th>
-<th>Ilaria RVC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>GUI Desktop Realtime</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>realtime_gui.py</code>)</td>
-<td><strong>Realtime en WebUI; GUI desktop independiente separada no verificada</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>run-realtime-gui.bat</code>, RVC + Beatrice + RF)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Realtime en Navegador WebUI</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>tabs/realtime</code>)</td>
-<td><strong>Sí</strong> (WebSocket binario + respaldo HTTP streaming)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-<tr>
-<td><strong>Asignación Multi-GPU por flujo</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No verificado</strong></td>
-<td><strong>Sí</strong> (<code translate="no" v-pre>Inference Device: Automatic</code> o GPU concreta)</td>
-<td><strong>No - verificado</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-</retype-table>
-<p>En la pestaña realtime de la WebUI de Redpanda-vc (<code translate="no" v-pre>README.md</code>, <code translate="no" v-pre>tabs/inference/realtime.py</code>):</p>
-<ul>
-<li><strong>Concurrencia multi-GPU:</strong> Dos GPU pueden ejecutar <strong>dos flujos simultáneos independientes</strong> (un flujo por GPU para preservar el estado de audio). Añadir más GPU <strong>no</strong> se combina para acelerar un único flujo.</li>
-<li><strong>Transporte:</strong> Usa audio WebSocket binario (incluso con <code translate="no" v-pre>--share</code>), con colas acotadas y respaldo automático a HTTP streaming si WebSocket está bloqueado.</li>
-</ul>
-<hr>
-<span id="advanced-training-controls" class="docs-anchor"></span><h2 id="controles-avanzados-de-entrenamiento">Controles Avanzados de Entrenamiento</h2>
-<p>Más allá de <strong>Generator EMA Decay</strong> y <strong>Total Steps</strong>, Redpanda-vc expone varios controles extra en <strong>Training</strong> (<code translate="no" v-pre>tabs/train/rvc.py</code>):</p>
-<ul>
-<li><strong>Dinámica de entrenamiento:</strong> <code translate="no" v-pre>Learning Rate Schedule</code> (<code translate="no" v-pre>Exponential</code> o <code translate="no" v-pre>Cosine</code>), <code translate="no" v-pre>Warmup Steps</code>, <code translate="no" v-pre>Learning Rate Decay Every X Steps</code>, <code translate="no" v-pre>Final Learning Rate</code>, <code translate="no" v-pre>Reset Optimizer State</code> y <code translate="no" v-pre>Max Audio per Batch (sec)</code>.</li>
-<li><strong>Optimización de memoria:</strong> <code translate="no" v-pre>Checkpointing</code> (activation checkpointing, heredado de Applio, intercambia velocidad por menor uso de VRAM) y <code translate="no" v-pre>Cache Dataset in GPU</code> (heredado).</li>
-<li><strong>Guardados y exportaciones:</strong> <code translate="no" v-pre>Save Every X Steps</code>, <code translate="no" v-pre>Save Only Latest</code>, <code translate="no" v-pre>Save Every Weights</code> y <code translate="no" v-pre>Generator EMA Decay</code>.</li>
-</ul>
-<p>Los principiantes <strong>no</strong> necesitan ajustar programaciones coseno, pasos de warmup ni decaimiento personalizado en su primer modelo RVC.</p>
-<hr>
-<span id="model-compatibility-what-works-where" class="docs-anchor"></span><h2 id="compatibilidad-de-modelos-qué-funciona-dónde">Compatibilidad de Modelos: ¿Qué Funciona Dónde?</h2>
-<p>Tener extensión <code translate="no" v-pre>.pth</code> <strong>no</strong> significa que dos modelos sean intercambiables. La compatibilidad depende de la arquitectura, el formato del checkpoint, el embedder esperado, el decoder del vocoder y el índice FAISS correspondiente:</p>
-<retype-table copy-text="| Tipo de modelo | Redpanda-vc | RVC Mainline | Applio | Ilaria RVC | Otros Clientes Compatibles |
-| --- | --- | --- | --- | --- | --- |
-| **RVC V1 (`.pth` inferencia)** | **Sí** | **Sí** | **Inferencia compatible; UI de entrenamiento enfocada en V2** | **Sí** | **Compatible en clientes que implementan esta arquitectura** |
-| **RVC V2 HiFi-GAN (`.pth`)** | **Sí** | **Sí** | **Sí** | **Sí** | **Compatible en clientes que implementan esta arquitectura** |
-| **RVC V2 RefineGAN (`.pth`)** | **Sí** | **No - verificado** | **Sí** | **Sí** *(32 kHz)* | **Requiere decoder compatible** (**Depende de la versión**) |
-| **RVC V2 MRF HiFi-GAN (`.pth`)** | **Sí** *(inferencia + CLI)* | **No - verificado** | **Sí** *(inferencia + CLI)* | **Sí** *(UI + inferencia)* | **Requiere decoder compatible** (**Depende de la versión**) |
-| **Rectified Flow (`.pth`)** | **Sí** | **No - verificado** | **No - verificado** | **No - verificado** | **Requiere decoder compatible** *(no es RVC V2 estándar)* |
-| **Beatrice 2 (carpeta de modelo)** | **Sí** | **No - verificado** | **No - verificado** | **No - verificado** | **Depende de la versión** *(solo cargadores/VST Beatrice)* |
-| **Vocoder personalizado (`nsf_hifigan`)** | **Sí** *(para Rectified Flow)* | **No - verificado** | **No - verificado** | **No - verificado** | **Requiere decoder compatible** |
-| **Checkpoints de entrenamiento (`G_*`/`D_*`)** | **Sí** *(RVC)* | **Sí** *(RVC)* | **Sí** *(RVC)* | **Sí** *(RVC)* | **No - verificado** *(solo reanudación)* |
-| **Archivos FAISS `.index`** | **Sí** *(embedder y dim. compatibles)* | **Sí** *(embedder y dim. compatibles)* | **Sí** *(embedder y dim. compatibles)* | **Sí** *(embedder y dim. compatibles)* | **Compatible en clientes RVC con retrieval** *(embedder y dim. compatibles)* |">
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Tipo de modelo</th>
-<th>Redpanda-vc</th>
-<th>RVC Mainline</th>
-<th>Applio</th>
-<th>Ilaria RVC</th>
-<th>Otros Clientes Compatibles</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>RVC V1 (<code translate="no" v-pre>.pth</code> inferencia)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Inferencia compatible; UI de entrenamiento enfocada en V2</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Compatible en clientes que implementan esta arquitectura</strong></td>
-</tr>
-<tr>
-<td><strong>RVC V2 HiFi-GAN (<code translate="no" v-pre>.pth</code>)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Compatible en clientes que implementan esta arquitectura</strong></td>
-</tr>
-<tr>
-<td><strong>RVC V2 RefineGAN (<code translate="no" v-pre>.pth</code>)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>Sí</strong> <em>(32 kHz)</em></td>
-<td><strong>Requiere decoder compatible</strong> (<strong>Depende de la versión</strong>)</td>
-</tr>
-<tr>
-<td><strong>RVC V2 MRF HiFi-GAN (<code translate="no" v-pre>.pth</code>)</strong></td>
-<td><strong>Sí</strong> <em>(inferencia + CLI)</em></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Sí</strong> <em>(inferencia + CLI)</em></td>
-<td><strong>Sí</strong> <em>(UI + inferencia)</em></td>
-<td><strong>Requiere decoder compatible</strong> (<strong>Depende de la versión</strong>)</td>
-</tr>
-<tr>
-<td><strong>Rectified Flow (<code translate="no" v-pre>.pth</code>)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Requiere decoder compatible</strong> <em>(no es RVC V2 estándar)</em></td>
-</tr>
-<tr>
-<td><strong>Beatrice 2 (carpeta de modelo)</strong></td>
-<td><strong>Sí</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Depende de la versión</strong> <em>(solo cargadores/VST Beatrice)</em></td>
-</tr>
-<tr>
-<td><strong>Vocoder personalizado (<code translate="no" v-pre>nsf_hifigan</code>)</strong></td>
-<td><strong>Sí</strong> <em>(para Rectified Flow)</em></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>No - verificado</strong></td>
-<td><strong>Requiere decoder compatible</strong></td>
-</tr>
-<tr>
-<td><strong>Checkpoints de entrenamiento (<code translate="no" v-pre>G_*</code>/<code translate="no" v-pre>D_*</code>)</strong></td>
-<td><strong>Sí</strong> <em>(RVC)</em></td>
-<td><strong>Sí</strong> <em>(RVC)</em></td>
-<td><strong>Sí</strong> <em>(RVC)</em></td>
-<td><strong>Sí</strong> <em>(RVC)</em></td>
-<td><strong>No - verificado</strong> <em>(solo reanudación)</em></td>
-</tr>
-<tr>
-<td><strong>Archivos FAISS <code translate="no" v-pre>.index</code></strong></td>
-<td><strong>Sí</strong> <em>(embedder y dim. compatibles)</em></td>
-<td><strong>Sí</strong> <em>(embedder y dim. compatibles)</em></td>
-<td><strong>Sí</strong> <em>(embedder y dim. compatibles)</em></td>
-<td><strong>Sí</strong> <em>(embedder y dim. compatibles)</em></td>
-<td><strong>Compatible en clientes RVC con retrieval</strong> <em>(embedder y dim. compatibles)</em></td>
-</tr>
-</tbody>
-</table>
-</div>
-</retype-table>
-<hr>
-<span id="which-rvc-version-should-you-choose" class="docs-anchor"></span><h2 id="qué-versión-rvc-deberías-elegir">¿Qué Versión RVC Deberías Elegir?</h2>
-<ul>
-<li><strong>Elige RVC Mainline</strong> si quieres la base de código de referencia original y el flujo clásico de <code translate="no" v-pre>realtime_gui.py</code>.</li>
-<li><strong>Elige Applio</strong> si buscas un espacio de trabajo RVC completo con entrenamiento por épocas y <strong>TTS</strong> integrado.</li>
-<li><strong>Elige Redpanda-vc</strong> si buscas específicamente <strong>Generator EMA</strong>, <strong>guardado de checkpoints por pasos</strong>, <strong>Rectified Flow</strong>, <strong>entrenamiento/tiempo real Beatrice 2</strong>, <strong>entrenamiento dedicado de vocoders</strong> o <strong>tiempo real WebSocket / multiflujo</strong> (ten en cuenta que la pestaña <code translate="no" v-pre>tts</code> de Applio no está en Redpanda-vc).</li>
-<li><strong>Elige Ilaria RVC</strong> si prefieres un estudio RVC orientado a offline con <code translate="no" v-pre>Training Target: Steps</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> / <code translate="no" v-pre>RefineGAN</code> seleccionables en WebUI, <strong>TTS</strong> integrado (Kokoro, ElevenLabs, Windows), <code translate="no" v-pre>Audio Analyzer</code>, <code translate="no" v-pre>Voice Blender</code>, <code translate="no" v-pre>RMVPE High Register</code> y <code translate="no" v-pre>Proposed Pitch</code>.</li>
-</ul>
-<hr>
-<span id="beginner-faq" class="docs-anchor"></span><h2 id="faq-para-principiantes">FAQ para Principiantes</h2>
-<p><strong>¿Qué es un fork de RVC?</strong>
-Un proyecto separado que copia un código base de RVC existente y modifica o añade funciones sobre él.</p>
-<p><strong>¿Es Redpanda-vc lo mismo que Applio?</strong>
-No. Redpanda-vc parte de Applio y comparte su interfaz base, pero añade Generator EMA, guardado por pasos, Rectified Flow, Beatrice 2 y entrenamiento de vocoders, omitiendo la pestaña <code translate="no" v-pre>tts</code> de Applio.</p>
-<p><strong>¿Produce Redpanda-vc mejores modelos RVC?</strong>
-No automáticamente. La calidad vocal depende ante todo del dataset, el preprocesado y los ajustes; EMA y las programaciones extra son herramientas para probar, no garantías.</p>
-<p><strong>¿Qué es EMA?</strong>
-Exponential Moving Average: un promedio continuo de los pesos del generador mantenido durante el entrenamiento y usado al exportar modelos para inferencia.</p>
-<p><strong>¿Por qué Redpanda-vc guarda por pasos?</strong>
-Porque el guardado por pasos permite guardar en intervalos exactos de actualización (ej. cada <code translate="no" v-pre>1000</code> pasos) sin importar lo pequeño o grande que sea el dataset.</p>
-<p><strong>¿Ilaria RVC también soporta entrenamiento por pasos?</strong>
-Sí, mediante <code translate="no" v-pre>Training Target: Steps</code>, aunque su <code translate="no" v-pre>Save frequency</code> sigue contando épocas en lugar de intervalos arbitrarios de pasos.</p>
-<p><strong>¿Qué es Rectified Flow?</strong>
-Una arquitectura acústica de difusión/flow-matching inspirada en DiffSinger que usa rasgos ContentVec y un vocoder separado.</p>
-<p><strong>¿Es Rectified Flow lo mismo que RVC V2?</strong>
-No. Son arquitecturas completamente distintas y no son compatibles entre sí.</p>
-<p><strong>¿Qué es Beatrice?</strong>
-Una arquitectura de conversión de voz independiente y ligera en CPU (de <code translate="no" v-pre>beatrice-trainer</code>), distinta de RVC y distinta de usar Beatrice solo como extractor de tono F0.</p>
-<p><strong>¿Qué hace un vocoder?</strong>
-Convierte rasgos acústicos (como mel-spectrograms) en una onda de audio audible.</p>
-<p><strong>¿Puedo usar un modelo de Redpanda-vc en otro programa RVC?</strong>
-Los modelos estándar <strong>RVC V1 / V2 HiFi-GAN</strong> exportados desde Redpanda-vc funcionan en clientes que implementen esos decoders; <strong>Rectified Flow</strong>, <strong>Beatrice</strong>, <strong>RefineGAN</strong> y <strong>MRF HiFi-GAN</strong> requieren clientes compatibles con esos decoders.</p>
-<p><strong>¿Puede Redpanda-vc entrenar modelos RVC normales?</strong>
-Sí, en la pestaña <strong>Train → RVC</strong> (<code translate="no" v-pre>HiFi-GAN</code> y <code translate="no" v-pre>RefineGAN</code> en WebUI; <code translate="no" v-pre>MRF HiFi-GAN</code> en código/CLI).</p>
-<p><strong>¿Soporta Redpanda-vc conversión en tiempo real?</strong>
-Sí, tanto en la pestaña <strong>Realtime</strong> de la WebUI como en <code translate="no" v-pre>run-realtime-gui.bat</code>.</p>
-<p><strong>¿El tiempo real multi-GPU hace más rápida una sola conversión?</strong>
-No. Cada flujo permanece en una GPU; las GPU adicionales permiten múltiples flujos simultáneos.</p>
-<p><strong>¿Deberían los principiantes elegir RVC, Rectified Flow o Beatrice?</strong>
-Empieza con <strong>RVC</strong> si buscas la mayor compatibilidad de modelos y clientes; explora <strong>Rectified Flow</strong> o <strong>Beatrice</strong> solo si quieres específicamente sus flujos de trabajo.</p>
-<p><strong>¿Qué funciones son realmente exclusivas de Redpanda-vc entre estos cuatro?</strong>
-Combinar <strong>Generator EMA</strong>, <strong>guardado RVC por pasos (<code translate="no" v-pre>Save Every X Steps</code>)</strong>, <strong>Rectified Flow</strong>, <strong>entrenamiento/tiempo real Beatrice 2</strong> y <strong>entrenamiento dedicado de vocoder <code translate="no" v-pre>nsf_hifigan</code></strong> en un mismo fork basado en Applio.</p>
-<hr>
-<span id="sources-and-technical-references" class="docs-anchor"></span><h2 id="fuentes-y-referencias-técnicas">Fuentes y referencias técnicas</h2>
-<p>Comparación estática de código verificada en ramas <code translate="no" v-pre>main</code> el <strong>2026-11-22</strong>:</p>
-<ul>
-<li><strong>Redpanda-vc</strong> (commit <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80"><code translate="no" v-pre>55a3a80</code></a>, 2026-10-31): <a href="https://github.com/redpanda343/Redpanda-vc">Repositorio</a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/train.py"><code translate="no" v-pre>tabs/train/train.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/train/rvc.py"><code translate="no" v-pre>tabs/train/rvc.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/rvc/train/train.py"><code translate="no" v-pre>rvc/train/train.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/rectified_flow"><code translate="no" v-pre>rectified_flow/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/beatrice"><code translate="no" v-pre>beatrice/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/tree/55a3a80/nsf_hifigan"><code translate="no" v-pre>nsf_hifigan/</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/tabs/inference/realtime.py"><code translate="no" v-pre>tabs/inference/realtime.py</code></a> · <a href="https://github.com/redpanda343/Redpanda-vc/blob/55a3a80/realtime_gui.py"><code translate="no" v-pre>realtime_gui.py</code></a></li>
-<li><strong>Applio</strong> (commit <a href="https://github.com/IAHispano/Applio/tree/445b0f6"><code translate="no" v-pre>445b0f6</code></a>, 2026-11-19): <a href="https://github.com/IAHispano/Applio">Repositorio</a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/tabs/train/train.py"><code translate="no" v-pre>tabs/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/infer/infer.py"><code translate="no" v-pre>rvc/infer/infer.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/core.py"><code translate="no" v-pre>core.py</code></a> · <a href="https://github.com/IAHispano/Applio/blob/445b0f6/rvc/train/train.py"><code translate="no" v-pre>rvc/train/train.py</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/tts"><code translate="no" v-pre>tabs/tts/</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/tabs/realtime"><code translate="no" v-pre>tabs/realtime/</code></a> · <a href="https://github.com/IAHispano/Applio/tree/445b0f6/rvc/realtime"><code translate="no" v-pre>rvc/realtime/</code></a></li>
-<li><strong>RVC Mainline</strong> (commit <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/81eed5e"><code translate="no" v-pre>81eed5e</code></a>, 2026-08-04): <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">Repositorio</a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/configs/config.py"><code translate="no" v-pre>configs/config.py</code></a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/train/train.py"><code translate="no" v-pre>train/train.py</code></a> · <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/81eed5e/realtime_gui.py"><code translate="no" v-pre>realtime_gui.py</code></a></li>
-<li><strong>Ilaria RVC</strong> (commit <a href="https://github.com/TheStingerX/Ilaria-RVC/tree/a887ba5"><code translate="no" v-pre>a887ba5</code></a>, 2026-11-21): <a href="https://github.com/TheStingerX/Ilaria-RVC">Repository</a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ILARIA_RVC.py"><code translate="no" v-pre>app/ILARIA_RVC.py</code></a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/infer/modules/train/train.py"><code translate="no" v-pre>app/infer/modules/train/train.py</code></a> · <a href="https://github.com/TheStingerX/Ilaria-RVC/blob/a887ba5/app/ilaria/ilaria_tts.py"><code translate="no" v-pre>app/ilaria/ilaria_tts.py</code></a></li>
-</ul>
+<p><a href="../first-run/">Instalar Redpanda VC</a> · <a href="../inference/">Inferencia con archivos</a> · <a href="../live-audio/">Conversión de voz en tiempo real</a> · <a href="../causal-training/">Entrenamiento con Casual Voice Changer</a> · <a href="../training/">RVC Training</a></p>
+<span id="source-and-release" class="docs-anchor"></span><h2 id="código-fuente-y-versión">Código fuente y versión</h2>
+<p><a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/README.md">Release README</a> · <a href="https://github.com/redpanda343/Redpanda-vc/commit/2b1367c8c">Interface migration</a> · <a href="https://github.com/redpanda343/Redpanda-vc/commit/577f02066">Engine changes</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -779,11 +232,11 @@ Combinar <strong>Generator EMA</strong>, <strong>guardado RVC por pasos (<code t
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/training/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/causal-training/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">Entrenar modelos RVC (EMA y Steps)</span>
+                                <span class="block mt-1">Entrenamiento con Casual Voice Changer</span>
                             </span>
                         </a>
                     </div>
@@ -804,7 +257,7 @@ Combinar <strong>Generator EMA</strong>, <strong>guardado RVC por pasos (<code t
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-22T15:14:29.000Z">22/11/2026 · 16:14</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -837,6 +290,6 @@ Combinar <strong>Generator EMA</strong>, <strong>guardado RVC por pasos (<code t
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Redpanda-vc vs otras versiones RVC", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/differences.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Redpanda VC frente a otras aplicaciones RVC", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/differences.md" }</script>
 </body>
 </html>

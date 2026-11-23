@@ -121,10 +121,12 @@
 
 ### Redpanda-vc
 
-- [Set up Redpanda-vc](https://docs.ilariarvc.shop/other-rvcs/redpanda/first-run.md): Redpanda-vc extends Applio and offers multiple voice model families. This walkthrough uses the RVC family throughout.
-- [Test live audio in Redpanda-vc](https://docs.ilariarvc.shop/other-rvcs/redpanda/live-audio.md): The Windows desktop realtime launcher uses the devices exposed to that local process.
+- [Set up Redpanda VC](https://docs.ilariarvc.shop/other-rvcs/redpanda/first-run.md): Start with the Windows x64 precompiled release. The desktop app uses Tauri and runs its Python voice engines locally. The source checkout also includes a browser WebUI with the same interface.
+- [File inference](https://docs.ilariarvc.shop/other-rvcs/redpanda/inference.md): Use Inference to convert a recording or an entire folder. An RVC voice uses a compact .pth model; a Casual Voice Changer voice uses .cvc.
+- [Realtime voice conversion](https://docs.ilariarvc.shop/other-rvcs/redpanda/live-audio.md): Open Realtime in the desktop app or browser WebUI. Test a single voice directly through headphones before sending the sound to Discord, OBS, a game or another app.
 - [Train RVC Models in Redpanda-vc - EMA & Step-Based Saving](https://docs.ilariarvc.shop/other-rvcs/redpanda/training.md): Beginner-friendly, code-verified guide to training RVC models in Redpanda-vc: Generator EMA, step-based checkpoint saving, resuming, exporting, and troubleshooting.
-- [Redpanda-vc vs Other RVC Versions - Complete Feature Comparison](https://docs.ilariarvc.shop/other-rvcs/redpanda/differences.md): Code-verified comparison of Redpanda-vc against RVC Mainline, Applio, and Ilaria RVC: Generator EMA, step-based checkpoints, Rectified Flow, Beatrice 2, vocoder training, TTS, realtime, and compatibility.
+- [Casual Voice Changer training](https://docs.ilariarvc.shop/other-rvcs/redpanda/causal-training.md): Redpanda’s Casual Voice Changer option integrates Causal Voice Changer v0.4.0. Fine-tuning creates a .cvc voice for the CVC engine.
+- [Redpanda VC compared with other RVC apps](https://docs.ilariarvc.shop/other-rvcs/redpanda/differences.md): Redpanda VC combines RVC and Casual Voice Changer in a shared desktop and browser interface. Older Redpanda builds used Gradio and included engines and tools removed from the current release.
 
 ### RVC Blue
 

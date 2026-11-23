@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696514228">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786183979">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848696514228" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848786183979" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848696514228" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -197,7 +197,7 @@
 <p>Su Windows con NVIDIA, installa Vonovox e scegli il pacchetto adatto alla GPU. Con AMD o Intel, parti dalla build DirectML di Okada TG Developed Fork se la scheda la supporta. Ascolta prima in cuffia per verificare che il programma riceva e converta il microfono. Invia poi l’audio convertito all’ingresso di riproduzione del cavo virtuale e seleziona l’uscita di registrazione come microfono in Discord, OBS, un gioco o un’altra app. Se l’audio salta, aumenta il buffer e riprova con l’app di destinazione aperta.</p>
 <p><a href="../vonovox/installation/">Installa Vonovox</a> · <a href="../vonovox/live-audio/">Configura l’audio di Vonovox</a> · <a href="../tgr/installation/">Installa Okada TG Developed Fork</a> · <a href="../tgr/live-audio/">Configura l’audio di TGR</a></p>
 <span id="use-applio-or-redpanda-vc-for-other-workflows" class="docs-anchor"></span><h2 id="usare-applio-o-redpanda-vc-per-gli-altri-casi">Usare Applio o Redpanda-vc per gli altri casi</h2>
-<p>Scegli Applio per convertire testo in parlato, gestire modelli o riunire più funzioni RVC nella stessa interfaccia. Scegli Redpanda-vc per confrontare RVC con motori come Beatrice e Rectified Flow o per provare la conversione dal vivo nel browser e nell’app desktop. Se usi un modello vocale RVC, seleziona il motore RVC. Parti dalle impostazioni predefinite e prova un solo file o flusso audio prima di toccare le opzioni avanzate.</p>
+<p>Scegli Applio per la sintesi vocale e la gestione dei modelli. Redpanda VC offre training, inferenza da file e conversione in tempo reale per RVC e Casual Voice Changer, nell’app desktop e nella WebUI. Usa <code translate="no" v-pre>.pth</code> con RVC e <code translate="no" v-pre>.cvc</code> con CVC.</p>
 <p><a href="../applio/installation/">Installa Applio</a> · <a href="../applio/tts/">Sintesi vocale in Applio</a> · <a href="../applio/models/">Libreria modelli di Applio</a> · <a href="../redpanda/first-run/">Configura Redpanda-vc</a> · <a href="../redpanda/live-audio/">Modalità live di Redpanda-vc</a></p>
 <span id="keep-a-baseline-and-fix-one-issue-at-a-time" class="docs-anchor"></span><h2 id="fai-una-prova-di-riferimento-e-risolvi-un-problema-alla-volta">Fai una prova di riferimento e risolvi un problema alla volta</h2>
 <p>Per i file, confronta lo stesso campione allo stesso volume. Per il tempo reale, registra una breve prova nell’app che riceve l’audio e controlla se senti la voce doppia, interruzioni o ritardo. Se la voce suona male in entrambe le prove, verifica modello, motore e intonazione. Se il problema compare solo nell’app di destinazione, controlla prima cavo virtuale, microfono selezionato e ascolto in cuffia.</p>
@@ -207,7 +207,7 @@
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Sì | Sì | No | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Sì | Sì | Sì · Launcher separato | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
 | [Applio](../other-rvcs/applio/installation.md) | Sì | Sì | Sì | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Sì | Sì | Sì | [GitHub](https://github.com/redpanda343/Redpanda-vc) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Sì | Sì | Sì | [GitHub](https://github.com/redpanda343/Redpanda-vc) · [Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | No | Sì | No | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | No | No | Sì | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | No | No | Sì | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
@@ -252,7 +252,7 @@
 <td>Sì</td>
 <td>Sì</td>
 <td>Sì</td>
-<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></td>
+<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a> · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a></td>
 </tr>
 <tr>
 <td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
@@ -305,7 +305,7 @@
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversione file, TTS, formazione e analisi audio | L'attuale distribuzione Windows è solo NVIDIA. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Formazione e inferenza upstream, con un launcher in tempo reale separato | NVIDIA CUDA su Windows e Ubuntu. La configurazione della CPU upstream copre i sistemi AMD e Intel, con possibile utilizzo di DirectML su Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | Conversione di file, formazione e tempo reale in un'unica app | La documentazione del desktop elenca NVIDIA CUDA, configurazioni AMD supportate e Apple MPS. La disponibilità dipende dall'edizione e dal motore. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Un fork di Applio per sperimentare più motori di conversione vocale | Il repository include un contenitore CUDA e documenta la selezione della GPU per i flussi WebUI. Controlla il motore selezionato e crea per altri backend. |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Semplice conversione di file locali nell'interfaccia desktop legacy | Archiviato. Il progetto documenta Windows NVIDIA CUDA e una soluzione alternativa storica di Apple Silicon. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Consigliato per RVC v2 live su Windows con NVIDIA | Solo NVIDIA CUDA. Abbina il pacchetto Hugging Face alla tua generazione di GPU. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Conversione live su diversi sistemi operativi | Windows CUDA e pacchetti standard, inclusi DirectML o CPU, ove supportati. Percorsi di installazione separati di Apple Silicon e Linux. |
@@ -339,8 +339,8 @@
 </tr>
 <tr>
 <td><a href="../redpanda/first-run/">Redpanda-vc</a></td>
-<td>Un fork di Applio per sperimentare più motori di conversione vocale</td>
-<td>Il repository include un contenitore CUDA e documenta la selezione della GPU per i flussi WebUI. Controlla il motore selezionato e crea per altri backend.</td>
+<td>RVC + Casual Voice Changer · Tauri / WebUI</td>
+<td>NVIDIA CUDA / CPU · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a></td>
 </tr>
 <tr>
 <td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
@@ -414,7 +414,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

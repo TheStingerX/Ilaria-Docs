@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848696546317">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786204421">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848696546317" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848786204421" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848696546317" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848786204421" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848696546317" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848786204421" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=5">
 
@@ -185,7 +185,7 @@
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Ja | Ja | Nein | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Ja | Ja | Ja · Separater Launcher | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
 | [Applio](../other-rvcs/applio/installation.md) | Ja | Ja | Ja | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Ja | Ja | Ja | [GitHub](https://github.com/redpanda343/Redpanda-vc) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Ja | Ja | Ja | [GitHub](https://github.com/redpanda343/Redpanda-vc) · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Nein | Ja | Nein | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Nein | Nein | Ja | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Nein | Nein | Ja | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
@@ -230,7 +230,7 @@
 <td>Ja</td>
 <td>Ja</td>
 <td>Ja</td>
-<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></td>
+<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a> · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Vorkompilierte Version für Windows x64</a></td>
 </tr>
 <tr>
 <td><a href="../ilaria-rvc/rvc-gui/file-conversion/">RVC GUI</a></td>
@@ -283,7 +283,7 @@
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Dateikonvertierung, TTS, Training und Audioanalyse | Die aktuelle Windows-Distribution ist nur NVIDIA. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Upstream-Training und Inferenz mit einem separaten Echtzeit-Launcher | NVIDIA CUDA unter Windows und Ubuntu. Das Upstream-CPU-Setup deckt AMD- und Intel-Systeme ab, mit möglicher DirectML-Nutzung unter Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | Dateikonvertierung, Schulung und Echtzeit in einer App | Desktop-Dokumentation listet NVIDIA CUDA, unterstützte AMD-Setups und Apple MPS auf. Die Verfügbarkeit hängt von der Edition und der Engine ab. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | Ein Applio-Fork zum Experimentieren mit mehreren Sprachkonvertierungs-Engines | Das Repo enthält einen CUDA-Container und dokumentiert die GPU-Auswahl für WebUI-Streams. Überprüfen Sie die ausgewählte Engine und erstellen Sie sie für andere Backends. |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Einfache lokale Dateikonvertierung in der Legacy-Desktop-Oberfläche | Archiviert. Das Projekt dokumentiert Windows NVIDIA CUDA und einen historischen Workaround von Apple Silicon. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Empfohlen für Live-RVC v2 unter Windows mit NVIDIA | Nur NVIDIA CUDA. Passen Sie das Hugging Face-Paket an Ihre GPU-Generation an. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Live-Konvertierung über mehrere Betriebssysteme hinweg | Windows CUDA und Standardpakete, einschließlich DirectML oder CPU, sofern unterstützt. Separate Setup-Pfade für Apple Silicon und Linux. |
@@ -317,8 +317,8 @@
 </tr>
 <tr>
 <td><a href="../ilaria-rvc/redpanda/first-run/">Redpanda-vc</a></td>
-<td>Ein Applio-Fork zum Experimentieren mit mehreren Sprachkonvertierungs-Engines</td>
-<td>Das Repo enthält einen CUDA-Container und dokumentiert die GPU-Auswahl für WebUI-Streams. Überprüfen Sie die ausgewählte Engine und erstellen Sie sie für andere Backends.</td>
+<td>RVC + Casual Voice Changer · Tauri / WebUI</td>
+<td>NVIDIA CUDA / CPU · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Vorkompilierte Version für Windows x64</a></td>
 </tr>
 <tr>
 <td><a href="../ilaria-rvc/rvc-gui/file-conversion/">RVC GUI</a></td>
@@ -375,7 +375,7 @@
 <span id="rvc-webui-mainline---original-rvc" class="docs-anchor"></span><h2 id="rvc-webui">RVC-WebUI</h2>
 <p>Retrieval-based-Voice-Conversion-WebUI ist das Upstream-RVC-Projekt. Seine WebUI übernimmt das Training und die Dateiinferenz. Die Echtzeit-GUI des Projekts verfügt über einen eigenen Launcher. Der Hauptzweig dokumentiert separate CUDA-Abhängigkeiten für neuere und ältere NVIDIA-Karten sowie einen CPU-Abhängigkeitssatz für AMD- und Intel-Systeme. Unter Windows ist DirectML möglicherweise für unterstützte Vorgänge verfügbar. Befolgen Sie die <a href="../voice-conversion/#convert-a-recording-in-mainline-rvc">Hauptkonvertierungsschritte</a> für das Windows-Paket.</p>
 <h2 id="redpanda-vc">Redpanda-vc</h2>
-<p>Redpanda-vc ist ein Applio-Fork, dessen Echtzeitschnittstelle RVC, Beatrice und Rectified Flow unterstützt. Es bietet mehrere Modellfamilien. Wählen Sie daher den RVC-Workflow für eine RVC-Stimme. Im Browser-Echtzeitmodus dokumentiert das Projekt die Zuweisung von Streams zu bestimmten GPUs und stellt fest, dass Beatrice auf der CPU läuft. Diese Ressourcenauswahl gilt für Redpanda-vc und die ausgewählte Engine. <a href="https://github.com/redpanda343/Redpanda-vc">Redpanda-vc-Repository und unterstützte Engines</a></p>
+<p>Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Casual Voice Changer in der Desktop-App und WebUI. Verwende <code translate="no" v-pre>.pth</code> für RVC und <code translate="no" v-pre>.cvc</code> für CVC. <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Vorkompilierte Version für Windows x64</a></p>
 <span id="compare-apps-with-the-same-voice" class="docs-anchor"></span><h2 id="apps-mit-derselben-stimme-vergleichen">Apps mit derselben Stimme vergleichen</h2>
 <ol>
 <li>Wählen Sie das Paket für Ihr Betriebssystem, Ihre GPU und Ihr Modellformat. Prüfen Sie, ob die App die RVC-Generierung und den Feature-Encoder Ihres Modells unterstützt.</li>
@@ -401,7 +401,7 @@
 | **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | Nein | **Aktiver Fork** | Mittel (ZIP / Build) |
 | **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | Nein | **Upstream / Langsam** (MIT) | Mittel (ZIP / Git) |
 | **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | Nein | **Aktiv** | Einfach (Portables ZIP) |
-| **Redpanda-vc** | Windows, Linux | NVIDIA CUDA (Beatrice auf CPU) | RVC, Beatrice, Rectified Flow | Nein | **Aktiver Fork** | Mittel |
+| **Redpanda-vc** | Windows x64 · Linux (source) | NVIDIA CUDA / CPU | RVC, Casual Voice Changer | Nein | **Aktiver Fork** | Mittel |
 | **RVC GUI** | Windows | NVIDIA CUDA (Legacy) | `.pth`, `.index` | Nein | **Archiviert** | Einfach (Legacy-ZIP) |
 | **Replay** | Windows, macOS | NVIDIA / MPS / CPU (Legacy) | `.pth` / Weights | Nein | **Eingestellt** (Weights.gg geschlossen) | Defekt / Nur Legacy |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -492,9 +492,9 @@
 </tr>
 <tr>
 <td><strong>Redpanda-vc</strong></td>
-<td>Windows, Linux</td>
-<td>NVIDIA CUDA (Beatrice auf CPU)</td>
-<td>RVC, Beatrice, Rectified Flow</td>
+<td>Windows x64 · Linux (source)</td>
+<td>NVIDIA CUDA / CPU</td>
+<td>RVC, Casual Voice Changer</td>
 <td>Nein</td>
 <td><strong>Aktiver Fork</strong></td>
 <td>Mittel</td>
@@ -555,7 +555,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-22T20:50:54.000Z">22/11/2026 · 21:50</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
