@@ -2,7 +2,7 @@
 
 [Versão pré-compilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-O Redpanda VC reúne RVC e Casual Voice Changer numa interface comum ao desktop e ao browser. As versões antigas usavam Gradio e incluíam motores e ferramentas removidos da versão atual.
+O Redpanda VC reúne RVC e Causal Voice Changer numa interface comum ao desktop e ao browser. As versões antigas usavam Gradio e incluíam motores e ferramentas removidos da versão atual.
 
 ## Formatos e motores suportados
 
@@ -15,7 +15,7 @@ A versão atual inclui treino, inferência e tempo real para RVC e CVC. Beatrice
 | Applio | WebUI | Fluxos RVC e síntese de fala |
 | Ilaria RVC | Interface no browser | Pacote Windows para NVIDIA e notebooks na cloud |
 
-[Instalar o Redpanda VC](first-run.md) · [Inferência por ficheiros](inference.md) · [Conversão de voz em tempo real](live-audio.md) · [Treino com Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Instalar o Redpanda VC](first-run.md) · [Inferência por ficheiros](inference.md) · [Conversão de voz em tempo real](live-audio.md) · [Treino com Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Código-fonte e versão
 

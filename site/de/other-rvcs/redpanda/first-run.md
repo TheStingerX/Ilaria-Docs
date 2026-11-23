@@ -14,7 +14,7 @@ Beginne mit der vorkompilierten Version für Windows x64. Die Desktop-App nutzt 
 
 Führe im Quellcode-Checkout unter Windows `run-install.bat` oder unter Linux/macOS `run-install.sh` aus. Starte die WebUI mit `run-web.bat`, `run-web.sh` oder `python core.py web --host 127.0.0.1 --port 7860` in der vorbereiteten Python-Umgebung. Für den Desktop-Build brauchst du Rust und die WebView-Werkzeuge der Plattform. Die Verbesserungen der portablen Laufzeit und das Design Dark Frutiger Aero kamen nach dem Release-Tag hinzu.
 
-[Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Quellcode und Release
 

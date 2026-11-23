@@ -1,12 +1,12 @@
-# Casual Voice Changer training
+# Causal Voice Changer training
 
 [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-Redpanda’s Casual Voice Changer option integrates Causal Voice Changer v0.4.0. Fine-tuning creates a .cvc voice for the CVC engine.
+Redpanda’s Causal Voice Changer option integrates Causal Voice Changer v0.4.0. Fine-tuning creates a .cvc voice for the CVC engine.
 
 ## Train and resume a voice
 
-Prepare clean recordings of one speaker and reserve a short sample for testing. Open **Training → Casual Voice Changer**, enter a voice name, choose the dataset folder and device, then set **Training steps**. The base downloads when first needed. The release defaults to saving every 1,000 steps. To resume, use the same name and run folder and set a higher total step target. Keep the training files and test the exported `.cvc` in Inference and Realtime.
+Prepare clean recordings of one speaker and reserve a short sample for testing. Open **Training → Causal Voice Changer**, enter a voice name, choose the dataset folder and device, then set **Training steps**. The base downloads when first needed. The release defaults to saving every 1,000 steps. To resume, use the same name and run folder and set a higher total step target. Keep the training files and test the exported `.cvc` in Inference and Realtime.
 
 ## Exports and licence
 

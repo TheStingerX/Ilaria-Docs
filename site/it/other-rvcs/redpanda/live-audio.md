@@ -12,7 +12,7 @@ Per la prima prova, imposta il microfono fisico in **Microphone** e le cuffie in
 
 RVC usa un `.pth` per inferenza con `.index` abbinato e facoltativo. CVC usa una voce `.cvc` e un percorso audio a 48 kHz. Carica pitch, guadagno, gate e indice salvati con la voce. I manifest legacy `.causalvc.json` e `.nextvc.json` richiedono i pesi associati. Puoi usare RNNoise sull’ingresso microfono. Se l’audio si interrompe, prova un blocco più lungo e disattiva gli effetti uno alla volta.
 
-[Installare Redpanda VC](first-run.md) · [Inferenza da file](inference.md) · [Training con Casual Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
+[Installare Redpanda VC](first-run.md) · [Inferenza da file](inference.md) · [Training con Causal Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
 ## Sorgente e release
 

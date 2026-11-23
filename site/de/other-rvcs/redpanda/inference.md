@@ -12,7 +12,7 @@ Unter Inference kannst du eine Aufnahme oder einen ganzen Ordner konvertieren. E
 
 Beginne mit einer kurzen, sauberen WAV-Datei, null Halbtönen und WAV-Export. Wähle ein separates Ziel in **Save as** und höre das Ergebnis an, bevor du Tonhöhe oder Modell änderst. Aktiviere dann **Folder mode**, wähle einen kleinen Eingabeordner und ein separates Ausgabeziel und prüfe einige Dateien vor der Stapelverarbeitung.
 
-[Redpanda VC einrichten](first-run.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Redpanda VC einrichten](first-run.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Quellcode und Release
 

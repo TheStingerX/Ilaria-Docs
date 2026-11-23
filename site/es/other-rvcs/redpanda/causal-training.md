@@ -1,12 +1,12 @@
-# Entrenamiento con Casual Voice Changer
+# Entrenamiento con Causal Voice Changer
 
 [Versión precompilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-La opción Casual Voice Changer de Redpanda integra Causal Voice Changer v0.4.0. El ajuste fino crea una voz .cvc para el motor CVC.
+La opción Causal Voice Changer de Redpanda integra Causal Voice Changer v0.4.0. El ajuste fino crea una voz .cvc para el motor CVC.
 
 ## Entrenar y reanudar una voz
 
-Prepara grabaciones limpias de una sola persona y reserva una muestra para la prueba. Abre **Training → Casual Voice Changer**, ponle nombre a la voz, selecciona la carpeta y el dispositivo, y configura **Training steps**. La base se descarga al usarla por primera vez. La versión guarda cada 1.000 pasos por defecto. Para continuar, usa el mismo nombre y carpeta con un objetivo de pasos mayor. Guarda los archivos de entrenamiento y prueba el `.cvc` en Inference y Realtime.
+Prepara grabaciones limpias de una sola persona y reserva una muestra para la prueba. Abre **Training → Causal Voice Changer**, ponle nombre a la voz, selecciona la carpeta y el dispositivo, y configura **Training steps**. La base se descarga al usarla por primera vez. La versión guarda cada 1.000 pasos por defecto. Para continuar, usa el mismo nombre y carpeta con un objetivo de pasos mayor. Guarda los archivos de entrenamiento y prueba el `.cvc` en Inference y Realtime.
 
 ## Exportaciones y licencia
 

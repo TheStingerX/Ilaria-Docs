@@ -122,11 +122,11 @@
 ### Redpanda-vc
 
 - [Instalar Redpanda VC](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/first-run.md): Empieza con la versión precompilada para Windows x64. La aplicación de escritorio usa Tauri y ejecuta los motores de voz en Python de forma local. El código fuente también incluye una WebUI con la misma interfaz.
-- [Inferencia con archivos](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/inference.md): Usa Inference para convertir una grabación o una carpeta entera. Una voz RVC utiliza un modelo .pth de inferencia; una voz Casual Voice Changer utiliza .cvc.
+- [Inferencia con archivos](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/inference.md): Usa Inference para convertir una grabación o una carpeta entera. Una voz RVC utiliza un modelo .pth de inferencia; una voz Causal Voice Changer utiliza .cvc.
 - [Conversión de voz en tiempo real](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/live-audio.md): Abre Realtime en la aplicación de escritorio o en la WebUI. Prueba una voz con auriculares antes de enviar el sonido a Discord, OBS, un juego u otra aplicación.
 - [Entrenar Modelos RVC en Redpanda-vc - EMA y Guardado por Pasos](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/training.md): Guía completa y verificada en código para principiantes sobre cómo entrenar modelos RVC en Redpanda-vc: Generator EMA, guardado de checkpoints por pasos, reanudación, exportación y solución de problemas.
-- [Entrenamiento con Casual Voice Changer](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/causal-training.md): La opción Casual Voice Changer de Redpanda integra Causal Voice Changer v0.4.0. El ajuste fino crea una voz .cvc para el motor CVC.
-- [Redpanda VC frente a otras aplicaciones RVC](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/differences.md): Redpanda VC reúne RVC y Casual Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.
+- [Entrenamiento con Causal Voice Changer](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/causal-training.md): La opción Causal Voice Changer de Redpanda integra Causal Voice Changer v0.4.0. El ajuste fino crea una voz .cvc para el motor CVC.
+- [Redpanda VC frente a otras aplicaciones RVC](https://docs.ilariarvc.shop/es/other-rvcs/redpanda/differences.md): Redpanda VC reúne RVC y Causal Voice Changer en una interfaz compartida para escritorio y navegador. Las compilaciones antiguas usaban Gradio e incluían motores y herramientas retirados de la versión actual.
 
 ### RVC Blue
 

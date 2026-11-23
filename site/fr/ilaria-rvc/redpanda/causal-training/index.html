@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786197775">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786905035">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
-    <meta name="title" content="Entraînement avec Casual Voice Changer">
-    <meta name="description" content="L’option Casual Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
+    <meta name="title" content="Entraînement avec Causal Voice Changer">
+    <meta name="description" content="L’option Causal Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/causal-training/">
@@ -22,13 +22,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/causal-training/">
-    <meta property="og:title" content="Entraînement avec Casual Voice Changer">
+    <meta property="og:title" content="Entraînement avec Causal Voice Changer">
     <meta property="og:site_name" content="Ilaria Docs &#x1F496;">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.ilariarvc.shop/fr/ilaria-rvc/redpanda/causal-training/">
-    <meta name="twitter:title" content="Entraînement avec Casual Voice Changer">
+    <meta name="twitter:title" content="Entraînement avec Causal Voice Changer">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/fr/other-rvcs/redpanda/causal-training.md">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848786197775" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786905035" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786905035" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786905035" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:description" content="L’option Casual Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
+    <meta property="og:description" content="L’option Causal Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
-    <meta name="twitter:description" content="L’option Casual Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
+    <meta name="twitter:description" content="L’option Causal Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria et Mario jouent sur des consoles portables sur un fond violet foncé">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/redpanda/causal-training/">
@@ -174,12 +174,12 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<span id="casual-voice-changer-training" class="docs-anchor"></span><h1 id="entraînement-avec-casual-voice-changer">Entraînement avec Casual Voice Changer</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">L’option Casual Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.</div>
+<span id="causal-voice-changer-training" class="docs-anchor"></span><h1 id="entraînement-avec-causal-voice-changer">Entraînement avec Causal Voice Changer</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">L’option Causal Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.</div>
 <p><a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Version précompilée pour Windows x64</a> · <a href="https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true">Windows x64 ZIP</a> · <a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a></p>
-<p>L’option Casual Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.</p>
+<p>L’option Causal Voice Changer de Redpanda intègre Causal Voice Changer v0.4.0. L’affinage produit une voix .cvc pour le moteur CVC.</p>
 <span id="train-and-resume-a-voice" class="docs-anchor"></span><h2 id="entraîner-une-voix-et-reprendre">Entraîner une voix et reprendre</h2>
-<p>Préparez des enregistrements propres d’une seule personne et gardez un extrait de test. Ouvrez <strong>Training → Casual Voice Changer</strong>, nommez la voix, choisissez le dossier et le périphérique, puis réglez <strong>Training steps</strong>. La base se télécharge au premier usage. La version sauvegarde par défaut tous les 1 000 pas. Pour reprendre, utilisez le même nom et le même dossier avec un objectif de pas supérieur. Conservez les fichiers d’entraînement et testez le <code translate="no" v-pre>.cvc</code> dans Inference et Realtime.</p>
+<p>Préparez des enregistrements propres d’une seule personne et gardez un extrait de test. Ouvrez <strong>Training → Causal Voice Changer</strong>, nommez la voix, choisissez le dossier et le périphérique, puis réglez <strong>Training steps</strong>. La base se télécharge au premier usage. La version sauvegarde par défaut tous les 1 000 pas. Pour reprendre, utilisez le même nom et le même dossier avec un objectif de pas supérieur. Conservez les fichiers d’entraînement et testez le <code translate="no" v-pre>.cvc</code> dans Inference et Realtime.</p>
 <span id="exports-and-licence" class="docs-anchor"></span><h2 id="exports-et-licence">Exports et licence</h2>
 <p>Le projet d’origine réserve la base CVC par défaut et ses affinages à un usage non commercial. Utilisez des enregistrements autorisés pour l’entraînement. Cherchez l’export dans <code translate="no" v-pre>logs/causalvc/</code> en version portable ou dans <code translate="no" v-pre>runs/models/voice-&lt;name&gt;/voices/</code> depuis le code source.</p>
 <p><a href="../first-run/">Installer Redpanda VC</a> · <a href="../inference/">Inférence sur fichier</a> · <a href="../live-audio/">Conversion vocale en temps réel</a> · <a href="../training/">RVC Training</a> · <a href="../../../non-rvc/causal-voice-changer/overview/">Causal Voice Changer</a></p>
@@ -219,7 +219,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-23T22:07:24.000Z">23/11/2026 · 23:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -252,6 +252,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Entraînement avec Casual Voice Changer", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/causal-training.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Entraînement avec Causal Voice Changer", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/redpanda/causal-training.md" }</script>
 </body>
 </html>

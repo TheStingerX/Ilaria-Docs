@@ -27,7 +27,7 @@ Start with what you want to do. A **live voice changer** processes a microphone 
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | File conversion, TTS, training, and audio analysis | The current Windows distribution is NVIDIA only. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Upstream training and inference, with a separate realtime launcher | NVIDIA CUDA on Windows and Ubuntu. The upstream CPU setup covers AMD and Intel systems, with possible DirectML use on Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | File conversion, training, and realtime in one app | Desktop documentation lists NVIDIA CUDA, supported AMD setups, and Apple MPS. Availability depends on the edition and engine. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Causal Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Simple local file conversion in the legacy desktop interface | Archived. The project documents Windows NVIDIA CUDA and a historical Apple Silicon workaround. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Recommended for live RVC v2 on Windows with NVIDIA | NVIDIA CUDA only. Match the Hugging Face package to your GPU generation. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Live conversion across several operating systems | Windows CUDA and standard packages, including DirectML or CPU where supported. Separate Apple Silicon and Linux setup paths. |
@@ -74,7 +74,7 @@ Retrieval-based-Voice-Conversion-WebUI is the upstream RVC project. Its WebUI ha
 
 ## Redpanda-vc
 
-Redpanda VC provides RVC and Casual Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC. [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release)
+Redpanda VC provides RVC and Causal Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC. [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release)
 
 ## Compare apps with the same voice
 
@@ -97,7 +97,7 @@ Redpanda VC provides RVC and Casual Voice Changer training, file conversion and 
 | **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Active Fork** | Moderate (ZIP / Build) |
 | **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | No | **Upstream / Slow** (MIT) | Moderate (ZIP / Git) |
 | **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | No | **Active** | Easy (Portable ZIP) |
-| **Redpanda-vc** | Windows x64 · Linux (source) | NVIDIA CUDA / CPU | RVC, Casual Voice Changer | No | **Active Fork** | Moderate |
+| **Redpanda-vc** | Windows x64 · Linux (source) | NVIDIA CUDA / CPU | RVC, Causal Voice Changer | No | **Active Fork** | Moderate |
 | **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archived** | Easy (Legacy ZIP) |
 | **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Discontinued** (Weights.gg shut down) | Broken / Legacy only |
 

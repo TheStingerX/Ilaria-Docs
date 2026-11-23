@@ -69,7 +69,7 @@ Verwenden Sie Aufnahmen und Sprachmodelle, zu deren Nutzung Sie berechtigt sind.
 
 ## Redpanda-vc
 
-Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Casual Voice Changer in der Desktop-App und WebUI. Verwende `.pth` für RVC und `.cvc` für CVC.
+Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Causal Voice Changer in der Desktop-App und WebUI. Verwende `.pth` für RVC und `.cvc` für CVC.
 
 [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Redpanda VC einrichten](../other-rvcs/redpanda/first-run.md) · [Datei-Inferenz](../other-rvcs/redpanda/inference.md)
 

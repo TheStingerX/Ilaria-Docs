@@ -69,7 +69,7 @@ Use recordings and voice models you have permission to use. For model demos and 
 
 ## Redpanda-vc
 
-Redpanda VC provides RVC and Casual Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC.
+Redpanda VC provides RVC and Causal Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC.
 
 [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Set up Redpanda VC](../other-rvcs/redpanda/first-run.md) · [File inference](../other-rvcs/redpanda/inference.md)
 

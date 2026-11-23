@@ -14,7 +14,7 @@ Empieza con la versión precompilada para Windows x64. La aplicación de escrito
 
 Desde el código fuente, ejecuta `run-install.bat` en Windows o `run-install.sh` en Linux/macOS. Abre la WebUI con `run-web.bat`, `run-web.sh` o `python core.py web --host 127.0.0.1 --port 7860` en el entorno Python preparado. Compilar la aplicación requiere Rust y las herramientas WebView de la plataforma. Las mejoras del entorno portátil y el tema Dark Frutiger Aero son posteriores a la etiqueta de la versión.
 
-[Inferencia con archivos](inference.md) · [Conversión de voz en tiempo real](live-audio.md) · [Entrenamiento con Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Inferencia con archivos](inference.md) · [Conversión de voz en tiempo real](live-audio.md) · [Entrenamiento con Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Código fuente y versión
 

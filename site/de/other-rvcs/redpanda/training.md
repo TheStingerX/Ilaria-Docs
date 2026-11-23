@@ -179,7 +179,7 @@ Stelle in **Training → RVC** die Felder **Model name**, **Dataset folder**, **
 
 Die Desktop- und Browseroberfläche exportiert bei jedem Speicherintervall eine Inferenzstimme. **Keep latest training checkpoint** steuert die Aufbewahrung des G/D-Paars zum Fortsetzen. Starte einen neuen Ablauf mit **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-[Training mit Casual Voice Changer](causal-training.md)
+[Training mit Causal Voice Changer](causal-training.md)
 
 ## Training sicher fortsetzen
 

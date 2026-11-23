@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786197775">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786905035">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848786197775" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848786905035" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848786905035" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786197775" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848786905035" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -358,7 +358,7 @@
 <span id="train-an-rvc-voice-in-the-current-interface" class="docs-anchor"></span><h2 id="entraîner-une-voix-rvc-dans-linterface-actuelle">Entraîner une voix RVC dans l’interface actuelle</h2>
 <p>Dans <strong>Training → RVC</strong>, réglez <strong>Model name</strong>, <strong>Dataset folder</strong>, <strong>Sample rate</strong>, <strong>Training steps</strong> et <strong>Save every (steps)</strong>. Reprenez un entraînement préparé avec le même nom, <strong>Dataset folder</strong> vide et un objectif de pas supérieur. <strong>Advanced settings</strong> contient <strong>Version</strong>, <strong>Vocoder</strong>, <strong>Precision</strong>, <strong>Embedder</strong> et <strong>Index algorithm</strong>. L’interface propose HiFi-GAN et RefineGAN. Choisissez des poids préentraînés adaptés et une précision compatible avec votre GPU. <strong>Reset optimizer on resume</strong> réinitialise l’optimiseur et conserve les poids. Suivez l’entraînement dans <strong>TensorBoard</strong> et écoutez plusieurs exports.</p>
 <p>L’interface de bureau et du navigateur exporte une voix d’inférence à chaque sauvegarde. <strong>Keep latest training checkpoint</strong> règle la conservation de la paire G/D pour la reprise. Lancez un nouveau flux avec <strong>Run full workflow</strong>. <a href="https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py">Training jobs</a></p>
-<p><a href="../causal-training/">Entraînement avec Casual Voice Changer</a></p>
+<p><a href="../causal-training/">Entraînement avec Causal Voice Changer</a></p>
 <span id="resuming-training-safely" class="docs-anchor"></span><h2 id="reprendre-lentraînement-en-toute-sécurité">Reprendre l&#x27;Entraînement en Toute Sécurité</h2>
 <p>Lorsque vous relancez l&#x27;entraînement sur une expérience existante (<code translate="no" v-pre>rvc/train/train.py</code>, lignes 420-436, 528-538, 763-803, 844-853) :</p>
 <ol>
@@ -557,7 +557,7 @@ Non. La reprise nécessite une paire correspondante de checkpoints <code transla
                         <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/causal-training/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Entra&#238;nement avec Casual Voice Changer</span>
+                                <span class="block mt-1">Entra&#238;nement avec Causal Voice Changer</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -569,7 +569,7 @@ Non. La reprise nécessite une paire correspondante de checkpoints <code transla
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-23T22:07:24.000Z">23/11/2026 · 23:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -179,7 +179,7 @@ Nella scheda **Training → RVC**, imposta **Model name**, **Dataset folder**, *
 
 La UI desktop e browser esporta una voce per inferenza a ogni salvataggio. **Keep latest training checkpoint** controlla la conservazione della coppia G/D usata per riprendere il training. Avvia un nuovo flusso con **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-[Training con Casual Voice Changer](causal-training.md)
+[Training con Causal Voice Changer](causal-training.md)
 
 ## Riprendere un Training in Sicurezza
 

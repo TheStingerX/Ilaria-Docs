@@ -35,7 +35,7 @@ Wähle unter NVIDIA das passende Vonovox-Paket. Für kompatible AMD- oder Intel-
 
 ## Weitere Aufgaben mit Applio oder Redpanda-vc
 
-Wähle Applio für Sprachsynthese und Modellverwaltung. Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Casual Voice Changer in der Desktop-App und WebUI. Verwende `.pth` für RVC und `.cvc` für CVC.
+Wähle Applio für Sprachsynthese und Modellverwaltung. Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Causal Voice Changer in der Desktop-App und WebUI. Verwende `.pth` für RVC und `.cvc` für CVC.
 
 [Applio installieren](applio/installation.md) · [Sprachsynthese in Applio](applio/tts.md) · [Modelle in Applio](applio/models.md) · [Redpanda-vc einrichten](redpanda/first-run.md) · [Livebetrieb in Redpanda-vc](redpanda/live-audio.md)
 
@@ -63,7 +63,7 @@ Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Live
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Dateikonvertierung, TTS, Training und Audioanalyse | Die aktuelle Windows-Distribution ist nur NVIDIA. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Upstream-Training und Inferenz mit einem separaten Echtzeit-Launcher | NVIDIA CUDA unter Windows und Ubuntu. Das Upstream-CPU-Setup deckt AMD- und Intel-Systeme ab, mit möglicher DirectML-Nutzung unter Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | Dateikonvertierung, Schulung und Echtzeit in einer App | Desktop-Dokumentation listet NVIDIA CUDA, unterstützte AMD-Setups und Apple MPS auf. Die Verfügbarkeit hängt von der Edition und der Engine ab. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Causal Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Einfache lokale Dateikonvertierung in der Legacy-Desktop-Oberfläche | Archiviert. Das Projekt dokumentiert Windows NVIDIA CUDA und einen historischen Workaround von Apple Silicon. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Empfohlen für Live-RVC v2 unter Windows mit NVIDIA | Nur NVIDIA CUDA. Passen Sie das Hugging Face-Paket an Ihre GPU-Generation an. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Live-Konvertierung über mehrere Betriebssysteme hinweg | Windows CUDA und Standardpakete, einschließlich DirectML oder CPU, sofern unterstützt. Separate Setup-Pfade für Apple Silicon und Linux. |

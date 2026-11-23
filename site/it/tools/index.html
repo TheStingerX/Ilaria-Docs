@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786183979">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848786886450">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848786183979" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848786886450" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848786886450" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848786183979" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848786886450" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -283,7 +283,7 @@
 | [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversione file, TTS, formazione e analisi audio | L'attuale distribuzione Windows è solo NVIDIA. |
 | [RVC WebUI (Mainline - Original RVC)](../other-rvcs/mainline/installation.md) | Formazione e inferenza upstream, con un launcher in tempo reale separato | NVIDIA CUDA su Windows e Ubuntu. La configurazione della CPU upstream copre i sistemi AMD e Intel, con possibile utilizzo di DirectML su Windows. |
 | [Applio](../other-rvcs/applio/installation.md) | Conversione di file, formazione e tempo reale in un'unica app | La documentazione del desktop elenca NVIDIA CUDA, configurazioni AMD supportate e Apple MPS. La disponibilità dipende dall'edizione e dal motore. |
-| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Casual Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
+| [Redpanda-vc](../other-rvcs/redpanda/first-run.md) | RVC + Causal Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
 | [RVC GUI](../other-rvcs/rvc-gui/file-conversion.md) | Semplice conversione di file locali nell'interfaccia desktop legacy | Archiviato. Il progetto documenta Windows NVIDIA CUDA e una soluzione alternativa storica di Apple Silicon. |
 | [Vonovox](../other-rvcs/vonovox/installation.md) | Consigliato per RVC v2 live su Windows con NVIDIA | Solo NVIDIA CUDA. Abbina il pacchetto Hugging Face alla tua generazione di GPU. |
 | [w-okada VCClient](../other-rvcs/okada/installation.md) | Conversione live su diversi sistemi operativi | Windows CUDA e pacchetti standard, inclusi DirectML o CPU, ove supportati. Percorsi di installazione separati di Apple Silicon e Linux. |
@@ -317,7 +317,7 @@
 </tr>
 <tr>
 <td><a href="../ilaria-rvc/redpanda/first-run/">Redpanda-vc</a></td>
-<td>RVC + Casual Voice Changer · Tauri / WebUI</td>
+<td>RVC + Causal Voice Changer · Tauri / WebUI</td>
 <td>NVIDIA CUDA / CPU · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a></td>
 </tr>
 <tr>
@@ -375,7 +375,7 @@
 <h2 id="rvc-webui-mainline---original-rvc">RVC WebUI (Mainline - Original RVC)</h2>
 <p>WebUI basato sul recupero della conversione vocale è il progetto RVC upstream. La sua WebUI gestisce l&#x27;addestramento e l&#x27;inferenza dei file. La GUI in tempo reale del progetto ha il proprio launcher. Il ramo principale documenta le dipendenze CUDA separate per le schede NVIDIA più recenti e quelle meno recenti, oltre a un set di dipendenze CPU per i sistemi AMD e Intel. Su Windows, DirectML potrebbe essere disponibile per le operazioni supportate. Seguire i <a href="../voice-conversion/#convert-a-recording-in-mainline-rvc">Passaggi di conversione della linea principale</a> per il pacchetto Windows.</p>
 <h2 id="redpanda-vc">Redpanda-vc</h2>
-<p>Redpanda VC offre training, inferenza da file e conversione in tempo reale per RVC e Casual Voice Changer, nell’app desktop e nella WebUI. Usa <code translate="no" v-pre>.pth</code> con RVC e <code translate="no" v-pre>.cvc</code> con CVC. <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a></p>
+<p>Redpanda VC offre training, inferenza da file e conversione in tempo reale per RVC e Causal Voice Changer, nell’app desktop e nella WebUI. Usa <code translate="no" v-pre>.pth</code> con RVC e <code translate="no" v-pre>.cvc</code> con CVC. <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Release precompilata per Windows x64</a></p>
 <span id="compare-apps-with-the-same-voice" class="docs-anchor"></span><h2 id="confronta-le-app-con-la-stessa-voce">Confronta le app con la stessa voce</h2>
 <ol>
 <li>Scegli il pacchetto per il tuo sistema operativo, GPU e formato del modello. Controlla se l&#x27;app supporta la generazione RVC e il codificatore di funzionalità del tuo modello.</li>
@@ -401,7 +401,7 @@
 | **Deiteris w-okada Fork** | Windows, Linux, macOS | NVIDIA CUDA, DirectML (AMD/Intel), CPU | `.pth`, `.onnx` | No | **Fork attivo** | Media (ZIP / Build) |
 | **RVC WebUI (Mainline)** | Windows, Linux | NVIDIA CUDA, CPU / DirectML | `.pth`, `.index` | No | **Upstream / Lento** (MIT) | Media (ZIP / Git) |
 | **RVC Blue** | Windows | NVIDIA CUDA (`12.8` / `11.8`) | `.pth`, `.index` | No | **Attivo** | Facile (ZIP portatile) |
-| **Redpanda-vc** | Windows x64 · Linux (source) | NVIDIA CUDA / CPU | RVC, Casual Voice Changer | No | **Fork attivo** | Media |
+| **Redpanda-vc** | Windows x64 · Linux (source) | NVIDIA CUDA / CPU | RVC, Causal Voice Changer | No | **Fork attivo** | Media |
 | **RVC GUI** | Windows | NVIDIA CUDA (legacy) | `.pth`, `.index` | No | **Archiviato** | Facile (ZIP legacy) |
 | **Replay** | Windows, macOS | NVIDIA / MPS / CPU (legacy) | `.pth` / Weights | No | **Dismesso** (Weights.gg chiuso) | Non funzionante / Solo legacy |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -494,7 +494,7 @@
 <td><strong>Redpanda-vc</strong></td>
 <td>Windows x64 · Linux (source)</td>
 <td>NVIDIA CUDA / CPU</td>
-<td>RVC, Casual Voice Changer</td>
+<td>RVC, Causal Voice Changer</td>
 <td>No</td>
 <td><strong>Fork attivo</strong></td>
 <td>Media</td>
@@ -555,7 +555,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T21:55:46.000Z">23/11/2026 · 22:55</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T22:07:24.000Z">23/11/2026 · 23:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
