@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848787115133">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848789949588">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848787115133" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848789949588" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848787115133" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848789949588" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848787115133" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848789949588" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -197,10 +197,93 @@
 <span id="3-prepaid-credits--full-api-optional" class="docs-anchor"></span><h2 id="3-crediti-prepagati-e-api-complete-opzionale">3. Crediti prepagati e API complete (Opzionale)</h2>
 <p>Se elabori file molto lunghi (fino a 100 minuti / 1 GB), vuoi file <strong>WAV 32-bit float / FLAC 24-bit</strong> o vuoi evitare attese nelle ore di punta:</p>
 <ul>
-<li>I <strong>pacchetti di crediti</strong> non hanno scadenza (es. $3 per 60 crediti, $5 per 200 crediti, $10 per 600 crediti).</li>
 <li>I modelli standard consumano <strong>1 credito al minuto</strong> di audio; gli ensemble pesanti usano moltiplicatori (<code translate="no" v-pre>2×</code>–<code translate="no" v-pre>6×</code>).</li>
 <li><strong>Accesso API</strong>: gli utenti registrati possono generare un token API dal proprio profilo per automatizzare batch da script Python tramite <code translate="no" v-pre>https://mvsep.com/api</code>.</li>
 </ul>
+<span id="credit-pack-prices" class="docs-anchor"></span><h2 id="prezzi-dei-pacchetti">Prezzi dei pacchetti</h2>
+<p>MVSEP offre fino a 50 separazioni gratuite al giorno senza carta. Premium usa crediti prepagati.</p>
+<retype-table copy-text="| Prezzo (USD) | Crediti | Brani stimati (4 min) | USD al minuto |
+| ---: | ---: | ---: | ---: |
+| 3 | 60 | ≈ 15 | 0,05 |
+| 5 | 200 | ≈ 50 | 0,025 |
+| 10 | 600 | ≈ 150 | 0,0167 |
+| 30 | 2.000 | ≈ 500 | 0,015 |
+| 50 | 4.000 | ≈ 1.000 | 0,0125 |
+| 100 | 8.500 | ≈ 2.125 | 0,0118 |
+| 200 | 18.000 | ≈ 4.500 | 0,0111 |
+| 500 | 50.000 | ≈ 12.500 | 0,01 |
+| 1.000 | 110.000 | ≈ 27.500 | 0,0091 |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: right;">Prezzo (USD)</th>
+<th style="text-align: right;">Crediti</th>
+<th style="text-align: right;">Brani stimati (4 min)</th>
+<th style="text-align: right;">USD al minuto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">≈ 15</td>
+<td style="text-align: right;">0,05</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">≈ 50</td>
+<td style="text-align: right;">0,025</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">≈ 150</td>
+<td style="text-align: right;">0,0167</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2.000</td>
+<td style="text-align: right;">≈ 500</td>
+<td style="text-align: right;">0,015</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">4.000</td>
+<td style="text-align: right;">≈ 1.000</td>
+<td style="text-align: right;">0,0125</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">8.500</td>
+<td style="text-align: right;">≈ 2.125</td>
+<td style="text-align: right;">0,0118</td>
+</tr>
+<tr>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">18.000</td>
+<td style="text-align: right;">≈ 4.500</td>
+<td style="text-align: right;">0,0111</td>
+</tr>
+<tr>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">50.000</td>
+<td style="text-align: right;">≈ 12.500</td>
+<td style="text-align: right;">0,01</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">110.000</td>
+<td style="text-align: right;">≈ 27.500</td>
+<td style="text-align: right;">0,0091</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Le stime considerano una separazione per brano con un modello standard da 1 credito al minuto. Un brano di 4 minuti costa 4 crediti. Con un modello Ensemble a 2× lo stesso brano costa 8 crediti e un pacchetto da 60 copre circa 7 brani interi anziché 15. Opzioni aggiuntive e passaggi ripetuti possono aumentare il consumo.</p>
+<p><a href="https://sg.mvsep.com/en/plans">Piani MVSEP</a> · <a href="https://mvsep.com/en/credits">Come si calcolano i crediti</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -235,7 +318,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-23T22:58:33.000Z">23/11/2026 · 23:58</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
