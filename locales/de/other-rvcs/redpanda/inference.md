@@ -8,7 +8,7 @@ description: "Unter Inference kannst du eine Aufnahme oder einen ganzen Ordner k
 
 # Datei-Inferenz
 
-[Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Unter Inference kannst du eine Aufnahme oder einen ganzen Ordner konvertieren. Eine RVC-Stimme verwendet ein .pth-Inferenzmodell, eine Casual-Voice-Changer-Stimme eine .cvc-Datei.
 

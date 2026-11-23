@@ -8,7 +8,7 @@ description: "Ouvrez Realtime dans l’application de bureau ou la WebUI. Testez
 
 # Conversion vocale en temps réel
 
-[Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Ouvrez Realtime dans l’application de bureau ou la WebUI. Testez une voix au casque avant de l’envoyer vers Discord, OBS, un jeu ou une autre application.
 

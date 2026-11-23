@@ -8,7 +8,7 @@ description: "Use Inference to convert a recording or an entire folder. An RVC v
 
 # File inference
 
-[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Use Inference to convert a recording or an entire folder. An RVC voice uses a compact .pth model; a Causal Voice Changer voice uses .cvc.
 

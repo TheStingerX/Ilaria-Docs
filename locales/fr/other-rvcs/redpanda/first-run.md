@@ -8,7 +8,7 @@ description: "Commencez par la version précompilée pour Windows x64. L’appli
 
 # Installer Redpanda VC
 
-[Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Commencez par la version précompilée pour Windows x64. L’application de bureau utilise Tauri et exécute les moteurs vocaux Python localement. Le code source inclut aussi une WebUI avec la même interface.
 

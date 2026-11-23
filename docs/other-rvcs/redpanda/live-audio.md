@@ -8,7 +8,7 @@ description: "Open Realtime in the desktop app or browser WebUI. Test a single v
 
 # Realtime voice conversion
 
-[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Open Realtime in the desktop app or browser WebUI. Test a single voice directly through headphones before sending the sound to Discord, OBS, a game or another app.
 

@@ -8,7 +8,7 @@ description: "Start with the Windows x64 precompiled release. The desktop app us
 
 # Set up Redpanda VC
 
-[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
+[Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
 Start with the Windows x64 precompiled release. The desktop app uses Tauri and runs its Python voice engines locally. The source checkout also includes a browser WebUI with the same interface.
 
