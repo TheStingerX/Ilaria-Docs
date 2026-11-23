@@ -22,7 +22,7 @@ Parti dalla release precompilata per Windows x64. L’app desktop usa Tauri ed e
 
 Da un checkout del sorgente, esegui `run-install.bat` su Windows o `run-install.sh` su Linux/macOS. Avvia la WebUI con `run-web.bat`, `run-web.sh` o `python core.py web --host 127.0.0.1 --port 7860` nell’ambiente Python preparato. Per compilare l’app desktop servono Rust e gli strumenti WebView della piattaforma. I miglioramenti al runtime portabile e il tema Dark Frutiger Aero sono successivi al tag della release.
 
-[Inferenza da file](inference.md) · [Conversione vocale in tempo reale](live-audio.md) · [Training con Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Inferenza da file](inference.md) · [Conversione vocale in tempo reale](live-audio.md) · [Training con Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Sorgente e release
 

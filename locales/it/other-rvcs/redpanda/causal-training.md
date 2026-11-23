@@ -1,20 +1,20 @@
 ---
-label: "Training con Casual Voice Changer"
+label: "Training con Causal Voice Changer"
 icon: ":studio_microphone:"
 order: 95
 permalink: /ilaria-rvc/redpanda/causal-training/
-description: "L’opzione Casual Voice Changer di Redpanda integra Causal Voice Changer v0.4.0. Il fine-tuning produce una voce .cvc per il motore CVC."
+description: "L’opzione Causal Voice Changer di Redpanda integra Causal Voice Changer v0.4.0. Il fine-tuning produce una voce .cvc per il motore CVC."
 ---
 
-# Training con Casual Voice Changer
+# Training con Causal Voice Changer
 
 [Release precompilata per Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-L’opzione Casual Voice Changer di Redpanda integra Causal Voice Changer v0.4.0. Il fine-tuning produce una voce .cvc per il motore CVC.
+L’opzione Causal Voice Changer di Redpanda integra Causal Voice Changer v0.4.0. Il fine-tuning produce una voce .cvc per il motore CVC.
 
 ## Addestrare e riprendere una voce
 
-Prepara registrazioni pulite di una sola persona e tieni da parte un campione per la prova. Apri **Training → Casual Voice Changer**, inserisci il nome della voce, scegli cartella e dispositivo, poi imposta **Training steps**. La base si scarica al primo utilizzo. La release salva ogni 1.000 step per impostazione predefinita. Per riprendere, usa lo stesso nome e la stessa cartella del run con un obiettivo di step più alto. Conserva i file di training e prova il `.cvc` esportato in Inference e Realtime.
+Prepara registrazioni pulite di una sola persona e tieni da parte un campione per la prova. Apri **Training → Causal Voice Changer**, inserisci il nome della voce, scegli cartella e dispositivo, poi imposta **Training steps**. La base si scarica al primo utilizzo. La release salva ogni 1.000 step per impostazione predefinita. Per riprendere, usa lo stesso nome e la stessa cartella del run con un obiettivo di step più alto. Conserva i file di training e prova il `.cvc` esportato in Inference e Realtime.
 
 ## Esportazioni e licenza
 

@@ -22,7 +22,7 @@ Commencez par la version précompilée pour Windows x64. L’application de bure
 
 Depuis le code source, lancez `run-install.bat` sous Windows ou `run-install.sh` sous Linux/macOS. Ouvrez la WebUI avec `run-web.bat`, `run-web.sh` ou `python core.py web --host 127.0.0.1 --port 7860` dans l’environnement Python préparé. La compilation nécessite Rust et les outils WebView de la plateforme. Les améliorations du runtime portable et le thème Dark Frutiger Aero datent d’après le tag de la version.
 
-[Inférence sur fichier](inference.md) · [Conversion vocale en temps réel](live-audio.md) · [Entraînement avec Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Inférence sur fichier](inference.md) · [Conversion vocale en temps réel](live-audio.md) · [Entraînement avec Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Code source et version
 

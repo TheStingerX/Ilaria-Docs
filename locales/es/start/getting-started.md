@@ -77,7 +77,7 @@ Utilice grabaciones y modelos de voz para los que tenga permiso. Para demostraci
 ## Redpanda-vc
 
 
-Redpanda VC ofrece entrenamiento, inferencia con archivos y conversión en tiempo real para RVC y Casual Voice Changer, en el escritorio y en la WebUI. Usa `.pth` con RVC y `.cvc` con CVC.
+Redpanda VC ofrece entrenamiento, inferencia con archivos y conversión en tiempo real para RVC y Causal Voice Changer, en el escritorio y en la WebUI. Usa `.pth` con RVC y `.cvc` con CVC.
 
 [Versión precompilada para Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Instalar Redpanda VC](../other-rvcs/redpanda/first-run.md) · [Inferencia con archivos](../other-rvcs/redpanda/inference.md)
 

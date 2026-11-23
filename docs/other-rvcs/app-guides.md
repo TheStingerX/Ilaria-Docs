@@ -42,7 +42,7 @@ With NVIDIA on Windows, install Vonovox and select the package for your GPU. Wit
 
 ## Use Applio or Redpanda-vc for other workflows
 
-Choose Applio for text-to-speech and model management. Redpanda VC provides RVC and Casual Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC.
+Choose Applio for text-to-speech and model management. Redpanda VC provides RVC and Causal Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC.
 
 [Install Applio](applio/installation.md) · [Applio TTS](applio/tts.md) · [Applio model library](applio/models.md) · [Set up Redpanda-vc](redpanda/first-run.md) · [Redpanda-vc live modes](redpanda/live-audio.md)
 

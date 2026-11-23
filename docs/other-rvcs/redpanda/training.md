@@ -186,7 +186,7 @@ In the current **Training → RVC** interface, set **Model name**, **Dataset fol
 
 The desktop and browser UI export an inference voice at each save interval. **Keep latest training checkpoint** controls retention of the resumable G/D pair. Start a new prepared workflow with **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-[Casual Voice Changer training](causal-training.md)
+[Causal Voice Changer training](causal-training.md)
 
 ## Resuming Training Safely
 

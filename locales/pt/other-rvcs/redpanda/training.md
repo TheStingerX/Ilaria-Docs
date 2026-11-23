@@ -186,7 +186,7 @@ Em **Training → RVC**, define **Model name**, **Dataset folder**, **Sample rat
 
 A interface de desktop e browser exporta uma voz de inferência a cada gravação. **Keep latest training checkpoint** controla a retenção do par G/D para retomar o treino. Inicia um novo fluxo com **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-[Treino com Casual Voice Changer](causal-training.md)
+[Treino com Causal Voice Changer](causal-training.md)
 
 ## Retomando o Treinamento com Segurança
 

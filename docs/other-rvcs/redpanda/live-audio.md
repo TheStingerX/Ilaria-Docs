@@ -20,7 +20,7 @@ Set **Microphone** to the physical mic and **Output** to headphones for the firs
 
 RVC uses a compatible inference `.pth` and optional matching `.index`. CVC uses a `.cvc` voice and a 48 kHz audio route. It loads the pitch, gain, gate and index settings saved with the voice. Legacy `.causalvc.json` and `.nextvc.json` voices require their accompanying weights. Optional RNNoise filters the microphone input. If audio breaks up, test a longer block and disable extra processing one setting at a time.
 
-[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Casual Voice Changer training](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
+[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Causal Voice Changer training](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
 ## Source and release
 

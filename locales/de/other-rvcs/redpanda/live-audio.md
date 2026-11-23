@@ -20,7 +20,7 @@ Wähle für den ersten Test das echte Mikrofon unter **Microphone** und Kopfhör
 
 RVC nutzt ein `.pth`-Inferenzmodell und optional den passenden `.index`. CVC nutzt eine `.cvc`-Stimme und einen 48-kHz-Audiopfad. Es übernimmt gespeicherte Einstellungen für Tonhöhe, Gain, Gate und Index. Alte `.causalvc.json`- und `.nextvc.json`-Stimmen benötigen ihre Gewichte. RNNoise kann den Eingang filtern. Teste bei Aussetzern längere Blöcke und schalte Effekte einzeln ab.
 
-[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Training mit Casual Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
+[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Training mit Causal Voice Changer](causal-training.md) · [RVC Training](training.md) · [VAC Lite / VB-CABLE](../../conversion/real-time.md)
 
 ## Quellcode und Release
 

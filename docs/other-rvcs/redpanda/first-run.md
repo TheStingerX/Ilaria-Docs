@@ -22,7 +22,7 @@ Start with the Windows x64 precompiled release. The desktop app uses Tauri and r
 
 In a source checkout, run `run-install.bat` on Windows or `run-install.sh` on Linux/macOS. Start the browser interface with `run-web.bat`, `run-web.sh` or `python core.py web --host 127.0.0.1 --port 7860`, using the prepared Python environment. Compiling the desktop app is a separate process that requires Rust and the platform WebView development tools. The Windows portable-runtime improvements and Dark Frutiger Aero theme landed after the release tag. Check the source revision before looking for them.
 
-[File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [Casual Voice Changer training](causal-training.md) · [RVC Training](training.md)
+[File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [Causal Voice Changer training](causal-training.md) · [RVC Training](training.md)
 
 ## Source and release
 

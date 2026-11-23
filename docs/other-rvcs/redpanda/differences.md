@@ -3,14 +3,14 @@ label: "Redpanda VC compared with other RVC apps"
 icon: ":clipboard:"
 order: 94
 permalink: /ilaria-rvc/redpanda/comparison/
-description: "Redpanda VC combines RVC and Casual Voice Changer in a shared desktop and browser interface. Older Redpanda builds used Gradio and included engines and tools removed from the current release."
+description: "Redpanda VC combines RVC and Causal Voice Changer in a shared desktop and browser interface. Older Redpanda builds used Gradio and included engines and tools removed from the current release."
 ---
 
 # Redpanda VC compared with other RVC apps
 
 [Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-Redpanda VC combines RVC and Casual Voice Changer in a shared desktop and browser interface. Older Redpanda builds used Gradio and included engines and tools removed from the current release.
+Redpanda VC combines RVC and Causal Voice Changer in a shared desktop and browser interface. Older Redpanda builds used Gradio and included engines and tools removed from the current release.
 
 ## Model formats and supported engines
 
@@ -23,7 +23,7 @@ The current release includes RVC and CVC workflows for training, file conversion
 | Applio | WebUI | RVC workflows including TTS |
 | Ilaria RVC | Browser interface | Windows NVIDIA package and cloud notebooks |
 
-[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [Casual Voice Changer training](causal-training.md) · [RVC Training](training.md)
+[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [Causal Voice Changer training](causal-training.md) · [RVC Training](training.md)
 
 ## Source and release
 

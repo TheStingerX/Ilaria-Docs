@@ -3,14 +3,14 @@ label: "Redpanda VC im Vergleich mit anderen RVC-Apps"
 icon: ":clipboard:"
 order: 94
 permalink: /ilaria-rvc/redpanda/comparison/
-description: "Redpanda VC vereint RVC und Casual Voice Changer in einer gemeinsamen Desktop- und Browseroberfläche. Ältere Builds nutzten Gradio und enthielten Engines und Werkzeuge, die in der aktuellen Version entfallen sind."
+description: "Redpanda VC vereint RVC und Causal Voice Changer in einer gemeinsamen Desktop- und Browseroberfläche. Ältere Builds nutzten Gradio und enthielten Engines und Werkzeuge, die in der aktuellen Version entfallen sind."
 ---
 
 # Redpanda VC im Vergleich mit anderen RVC-Apps
 
 [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Windows x64 ZIP](https://huggingface.co/lyery/redpanda-vc/resolve/main/Redpanda-VC-Windows-x64.zip?download=true) · [GitHub](https://github.com/redpanda343/Redpanda-vc)
 
-Redpanda VC vereint RVC und Casual Voice Changer in einer gemeinsamen Desktop- und Browseroberfläche. Ältere Builds nutzten Gradio und enthielten Engines und Werkzeuge, die in der aktuellen Version entfallen sind.
+Redpanda VC vereint RVC und Causal Voice Changer in einer gemeinsamen Desktop- und Browseroberfläche. Ältere Builds nutzten Gradio und enthielten Engines und Werkzeuge, die in der aktuellen Version entfallen sind.
 
 ## Modellformate und unterstützte Engines
 
@@ -23,7 +23,7 @@ Die aktuelle Version bietet Training, Datei-Inferenz und Echtzeit für RVC und C
 | Applio | WebUI | RVC-Abläufe und Sprachsynthese |
 | Ilaria RVC | Browseroberfläche | Windows-Paket für NVIDIA und Cloud-Notebooks |
 
-[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [Training mit Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Quellcode und Release
 

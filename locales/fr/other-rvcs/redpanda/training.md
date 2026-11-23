@@ -186,7 +186,7 @@ Dans **Training → RVC**, réglez **Model name**, **Dataset folder**, **Sample 
 
 L’interface de bureau et du navigateur exporte une voix d’inférence à chaque sauvegarde. **Keep latest training checkpoint** règle la conservation de la paire G/D pour la reprise. Lancez un nouveau flux avec **Run full workflow**. [Training jobs](https://github.com/redpanda343/Redpanda-vc/blob/bb83e60a7/shared/desktop/jobs.py)
 
-[Entraînement avec Casual Voice Changer](causal-training.md)
+[Entraînement avec Causal Voice Changer](causal-training.md)
 
 ## Reprendre l'Entraînement en Toute Sécurité
 

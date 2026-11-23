@@ -22,7 +22,7 @@ Começa pela versão pré-compilada para Windows x64. A aplicação de desktop u
 
 A partir do código-fonte, executa `run-install.bat` no Windows ou `run-install.sh` no Linux/macOS. Abre a WebUI com `run-web.bat`, `run-web.sh` ou `python core.py web --host 127.0.0.1 --port 7860` no ambiente Python preparado. A compilação requer Rust e as ferramentas WebView da plataforma. As melhorias do ambiente portátil e o tema Dark Frutiger Aero são posteriores à tag da versão.
 
-[Inferência por ficheiros](inference.md) · [Conversão de voz em tempo real](live-audio.md) · [Treino com Casual Voice Changer](causal-training.md) · [RVC Training](training.md)
+[Inferência por ficheiros](inference.md) · [Conversão de voz em tempo real](live-audio.md) · [Treino com Causal Voice Changer](causal-training.md) · [RVC Training](training.md)
 
 ## Código-fonte e versão
 
