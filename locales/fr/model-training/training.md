@@ -130,4 +130,4 @@ Ces trois profils sont des **points de départ indicatifs**, pas des règles uni
 1. **Underfitting (trop tôt) :** La sortie ressemble encore surtout au locuteur d'entrée, manque le timbre cible sur les voyelles tenues ou perd en caractère dans les aigus/graves. *Solution :* Poursuivez l'entraînement depuis le dernier checkpoint `G_*.pth`/`D_*.pth`.
 2. **Overfitting (trop tard) :** La voix sonne robotique/métallique sur des mots nouveaux, reproduit le bruit de pièce ou les artefacts de respiration du dataset, ou ne sonne bien *que* sur des phrases proches du jeu d'entraînement. *Solution :* Revenez à un checkpoint antérieur (`50-100` époques plus tôt) et inspectez le dataset dans [Audio Analyzer](../ilaria-rvc/manage/audio-analyzer.md).
 
-> Si vous entraînez avec **Redpanda-vc** (qui ajoute Generator EMA et sauvegarde de checkpoints par pas), consultez [Entraîner des modèles RVC dans Redpanda-vc](../other-rvcs/redpanda/training.md).
+> Si vous entraînez avec **Redpanda-vc** (qui ajoute Generator EMA et sauvegarde de checkpoints par pas), consultez [Entraîner des modèles RVC dans Redpanda-vc](../other-rvcs/training/redpanda/training.md).

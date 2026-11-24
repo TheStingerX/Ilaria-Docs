@@ -119,4 +119,4 @@ Start with the app defaults and change one setting at a time. If a game or anoth
 
 ## RVC Blue
 
-Windows desktop voice conversion. [Installation and setup](../other-rvcs/rvc-blue/installation.md).
+Windows desktop voice conversion. [Installation and setup](../other-rvcs/voice-changers/rvc-blue/installation.md).

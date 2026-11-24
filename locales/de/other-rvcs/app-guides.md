@@ -38,13 +38,13 @@ Importiere eine `.pth`-Datei für die Inferenz und bei Bedarf den passenden `.in
 
 Wähle unter NVIDIA das passende Vonovox-Paket. Für kompatible AMD- oder Intel-GPUs bietet sich der DirectML-Build von TGR an. Teste die konvertierte Stimme per Kopfhörer, leite sie an ein virtuelles Audiokabel und wähle dessen Aufnahmeseite in Discord, OBS oder einem Spiel als Mikrofon. Erhöhe bei Aussetzern den Puffer.
 
-[Vonovox installieren](vonovox/installation.md) · [Vonovox einrichten](vonovox/live-audio.md) · [Okada TG Developed Fork installieren](tgr/installation.md) · [TGR einrichten](tgr/live-audio.md)
+[Vonovox installieren](voice-changers/vonovox/installation.md) · [Vonovox einrichten](voice-changers/vonovox/live-audio.md) · [Okada TG Developed Fork installieren](voice-changers/tgr/installation.md) · [TGR einrichten](voice-changers/tgr/live-audio.md)
 
 ## Weitere Aufgaben mit Applio oder Redpanda-vc
 
 Wähle Applio für Sprachsynthese und Modellverwaltung. Redpanda VC unterstützt Training, Datei-Inferenz und Echtzeit für RVC und Causal Voice Changer in der Desktop-App und WebUI. Verwende `.pth` für RVC und `.cvc` für CVC.
 
-[Applio installieren](applio/installation.md) · [Sprachsynthese in Applio](applio/tts.md) · [Modelle in Applio](applio/models.md) · [Redpanda-vc einrichten](redpanda/first-run.md) · [Livebetrieb in Redpanda-vc](redpanda/live-audio.md)
+[Applio installieren](training/applio/installation.md) · [Sprachsynthese in Applio](training/applio/tts.md) · [Modelle in Applio](training/applio/models.md) · [Redpanda-vc einrichten](training/redpanda/first-run.md) · [Livebetrieb in Redpanda-vc](training/redpanda/live-audio.md)
 
 ## Eine Testaufnahme als Referenz sichern
 
@@ -54,7 +54,7 @@ Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Live
 
 {{ include "../reference/tools.md#app-comparison" }}
 
-- [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
+- [RVC WebUI (Mainline - Original RVC)](training/mainline/installation.md) · [w-okada VCClient](voice-changers/okada/installation.md) · [RVC GUI](voice-changers/rvc-gui/file-conversion.md) · [RVC Blue](voice-changers/rvc-blue/installation.md)
 - [Alle Apps vergleichen](../reference/tools.md)
 
 ## Weitere RVC-Werkzeuge
@@ -63,6 +63,7 @@ Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Live
 Diese Projekte sind veraltet und werden offenbar nicht mehr aktiv gepflegt. rvc-cli ist archiviert, und die Hauptbranches von RVC Studio und Mangio RVC Fork sind seit Jahren inaktiv. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation eine aktiv gepflegte Anwendung.
 !!!
 
-- [rvc-cli](rvc-cli/installation.md)
-- [RVC Studio](rvc-studio/installation.md)
-- [Mangio RVC Fork](mangio/installation.md)
+- [rvc-cli](training/rvc-cli/installation.md)
+- [RVC Studio](training/rvc-studio/installation.md)
+- [Mangio RVC Fork](training/mangio/installation.md)
+- [Replay](training/replay/installation.md)

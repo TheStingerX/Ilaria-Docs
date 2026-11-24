@@ -42,6 +42,57 @@ const pagesByLanguage = new Map(Object.keys(languages).map(lang => {
 }));
 const groups = ['start', 'conversion', 'model-training', 'reference'];
 
+const appGroupLabels = {
+  en: ['Model training', 'Voice changers'],
+  it: ['Addestramento modelli', 'Cambia voce'],
+  es: ['Entrenamiento de modelos', 'Cambiadores de voz'],
+  fr: ['Entraînement de modèles', 'Changeurs de voix'],
+  de: ['Modelltraining', 'Stimmwandler'],
+  pt: ['Treino de modelos', 'Alteradores de voz'],
+};
+const gpuLabels = {
+  en: ['GPU compatibility', 'GPU support unconfirmed', 'Legacy', 'Build and model dependent'],
+  it: ['Compatibilità GPU', 'Supporto GPU non confermato', 'Storico', 'Dipende da build e modello'],
+  es: ['Compatibilidad con GPU', 'Compatibilidad sin confirmar', 'Histórico', 'Depende de la versión y del modelo'],
+  fr: ['Compatibilité GPU', 'Compatibilité non confirmée', 'Historique', 'Selon la version et le modèle'],
+  de: ['GPU-Kompatibilität', 'GPU-Unterstützung unbestätigt', 'Historisch', 'Abhängig von Build und Modell'],
+  pt: ['Compatibilidade com GPU', 'Compatibilidade por confirmar', 'Histórico', 'Depende da versão e do modelo'],
+};
+const gpuSupport = {
+  ilaria: ['CUDA'],
+  applio: ['CUDA', 'ROCm'],
+  mainline: ['CUDA', 'DirectML*', 'DirectML*'],
+  redpanda: ['CUDA'],
+  'rvc-cli': ['CUDA†'],
+  'rvc-studio': ['CUDA†'],
+  mangio: ['CUDA†'],
+  replay: ['CUDA†'],
+  vonovox: ['CUDA'],
+  okada: ['CUDA', 'DirectML*', 'DirectML*'],
+  tgr: ['CUDA', 'DirectML*', 'DirectML*'],
+  deiteris: ['CUDA', 'DirectML*', 'DirectML*'],
+  'rvc-gui': ['CUDA†'],
+  'rvc-blue': ['CUDA'],
+};
+const gpuVendors = [['NVIDIA', '#a8cf68'], ['AMD', '#ff8793'], ['Intel', '#8ccaff']];
+
+function addGpuCompatibility(html, lang, route) {
+  const source = pageSources.get(lang).get(route)?.split(sep).join('/');
+  const app = source?.match(/^other-rvcs\/(?:training|voice-changers)\/([^/]+)\//)?.[1]
+    ?? (['/ilaria-rvc/overview/', '/ilaria-rvc/installation/'].includes(route) ? 'ilaria' : null);
+  const support = gpuSupport[app];
+  if (!support) return html;
+  const [heading, unknown, legacy, conditional] = gpuLabels[lang];
+  const badges = gpuVendors.map(([vendor, color], index) => {
+    const backend = support[index];
+    const note = backend?.endsWith('†') ? ' · ' + legacy : backend?.endsWith('*') ? ' · ' + conditional : '';
+    const label = backend ? backend.replace(/[†*]$/, '') + note : unknown;
+    return `<div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid ${backend ? color : '#a999a680'};border-radius:.5rem"><strong><span aria-hidden="true">${backend ? '●' : '◌'}</span> ${vendor}</strong><br><small>${label}</small></div>`;
+  }).join('');
+  const markup = `<aside class="docs-gpu-compatibility" aria-label="${heading}" style="margin:1rem 0 1.4rem"><strong>${heading}</strong><div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.4rem">${badges}</div></aside>`;
+  return html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/, '$1\n' + markup);
+}
+
 const staging = mkdtempSync(join(root, '.localized-build-'));
 const title = "<title>Ilaria&apos;s Docs &#x1F496;</title>";
 const headings = html => [...html.matchAll(/<h([1-6]) id="([^"]+)"/g)];
@@ -112,7 +163,7 @@ function decorate(directory, lang) {
       `<a href="${localizedPath(code, route)}" lang="${code}" hreflang="${code}"${code === lang ? ' aria-current="true"' : ''}>${flagIcon(code)} ${languages[code][1]}</a>`).join('');
     const selector = `<details class="docs-language"><summary aria-label="${current[2]}: ${current[1]}">${flagIcon(lang)}<span class="docs-language-name">${current[1]}</span></summary><div>${choices}</div></details>`;
     const defaultAlternate = available.includes('en') ? `\n    <link rel="alternate" hreflang="x-default" href="${origin}${route}">` : '';
-    let html = originalHtml
+    let html = addGpuCompatibility(originalHtml, lang, route)
       .replace(/(<html lang=")[^"]+"/, `$1${lang}"`)
       .replace(/<title>[^<]*<\/title>/, title)
       .replace(/<meta property="og:site_name"[^\r\n]*/, '<meta property="og:site_name" content="Ilaria Docs &#x1F496;">')
@@ -150,6 +201,12 @@ try {
       for (const [index, group] of groups.entries()) {
         const file = join(input, group, 'index.yml');
         writeFileSync(file, readFileSync(file, 'utf8').replace(/^label:.*/m, `label: ${JSON.stringify(names[index + 4])}`));
+      }
+    }
+    if (lang !== 'en') {
+      for (const [index, group] of ['training', 'voice-changers'].entries()) {
+        const file = join(input, 'other-rvcs', group, 'index.yml');
+        writeFileSync(file, readFileSync(file, 'utf8').replace(/^label:.*/m, `label: ${JSON.stringify(appGroupLabels[lang][index])}`));
       }
     }
     const config = join(staging, `${lang}.yml`);

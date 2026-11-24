@@ -79,8 +79,8 @@ Utilisez les enregistrements et les modèles vocaux que vous êtes autorisé à 
 
 Redpanda VC propose entraînement, inférence sur fichier et conversion en temps réel pour RVC et Causal Voice Changer, sur le bureau et dans la WebUI. Utilisez `.pth` avec RVC et `.cvc` avec CVC.
 
-[Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Installer Redpanda VC](../other-rvcs/redpanda/first-run.md) · [Inférence sur fichier](../other-rvcs/redpanda/inference.md)
+[Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Installer Redpanda VC](../other-rvcs/training/redpanda/first-run.md) · [Inférence sur fichier](../other-rvcs/training/redpanda/inference.md)
 
 ## RVC Blue
 
-Conversion de voix en temps réel sous Windows. [Installation et configuration](../other-rvcs/rvc-blue/installation.md).
+Conversion de voix en temps réel sous Windows. [Installation et configuration](../other-rvcs/voice-changers/rvc-blue/installation.md).

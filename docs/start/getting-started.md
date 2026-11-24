@@ -80,8 +80,8 @@ Use recordings and voice models you have permission to use. For model demos and 
 
 Redpanda VC provides RVC and Causal Voice Changer training, file conversion and realtime in a desktop app and browser WebUI. Use `.pth` with the RVC engine and `.cvc` with CVC.
 
-[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Set up Redpanda VC](../other-rvcs/redpanda/first-run.md) · [File inference](../other-rvcs/redpanda/inference.md)
+[Windows x64 precompiled release](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) · [Set up Redpanda VC](../other-rvcs/training/redpanda/first-run.md) · [File inference](../other-rvcs/training/redpanda/inference.md)
 
 ## RVC Blue
 
-Windows desktop voice conversion. [Installation and setup](../other-rvcs/rvc-blue/installation.md).
+Windows desktop voice conversion. [Installation and setup](../other-rvcs/voice-changers/rvc-blue/installation.md).

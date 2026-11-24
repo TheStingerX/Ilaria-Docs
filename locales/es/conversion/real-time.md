@@ -118,4 +118,4 @@ Empieza con los valores predeterminados de la app y cambia un ajuste cada vez. S
 
 ## RVC Blue
 
-Conversión de voz de escritorio en Windows. [Instalación y configuración](../other-rvcs/rvc-blue/installation.md).
+Conversión de voz de escritorio en Windows. [Instalación y configuración](../other-rvcs/voice-changers/rvc-blue/installation.md).

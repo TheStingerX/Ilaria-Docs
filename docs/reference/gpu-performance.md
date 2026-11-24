@@ -34,4 +34,4 @@ Voice conversion and RVC training rely heavily on GPU compute, memory bandwidth,
 
 ## 4. Optional advanced optimization (NVIDIA)
 
-On supported NVIDIA GPUs, locking graphics clocks with `nvidia-smi` is an **optional** advanced test that may reduce clock-ramping jitter in live voice changers like Vonovox. See [Vonovox Advanced Performance Optimization](../other-rvcs/vonovox/advanced-performance-optimization.md) for the full, reversible procedure and BAT helpers.
+On supported NVIDIA GPUs, locking graphics clocks with `nvidia-smi` is an **optional** advanced test that may reduce clock-ramping jitter in live voice changers like Vonovox. See [Vonovox Advanced Performance Optimization](../other-rvcs/voice-changers/vonovox/advanced-performance-optimization.md) for the full, reversible procedure and BAT helpers.

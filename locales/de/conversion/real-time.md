@@ -118,4 +118,4 @@ Starte mit den App-Standardwerten und ändere immer nur eine Einstellung auf ein
 
 ## RVC Blue
 
-Desktop-Stimmenkonvertierung unter Windows. [Installation und Einrichtung](../other-rvcs/rvc-blue/installation.md).
+Desktop-Stimmenkonvertierung unter Windows. [Installation und Einrichtung](../other-rvcs/voice-changers/rvc-blue/installation.md).
