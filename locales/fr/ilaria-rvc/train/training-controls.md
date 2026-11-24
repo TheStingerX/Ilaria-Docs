@@ -3,9 +3,11 @@ label: "Contrôles et flux de travail de formation"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "La version 2.4.7 propose des réglages 32, 40 et 48 kHz avec des combinaisons disponibles déterminées par le vocodeur. HiFi-GAN et RefineGAN ont des contraintes différentes."
+description: "Ilaria RVC 2.5.0. RefineGAN prend en charge l’entraînement et l’inférence à 32, 40 et 44,1 kHz avec RVC v2 et Pitch Guidance."
 ---
 # Contrôles de formation et flux de travail
+
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN prend en charge l’entraînement et l’inférence à 32, 40 et 44,1 kHz avec RVC v2 et Pitch Guidance. L’application génère automatiquement l’audio silencieux à 44,1 kHz. Choisissez **None** pour entraîner à partir de zéro si les poids utilisent une autre architecture, comme pour les paires testées KLM 5 (40 kHz) et VCTK (44,1 kHz).
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -28,7 +30,7 @@ description: "La version 2.4.7 propose des réglages 32, 40 et 48 kHz avec des c
 
 ## Architecture et performances
 
-La version 2.4.7 propose des réglages 32, 40 et 48 kHz avec des combinaisons disponibles déterminées par le vocodeur. HiFi-GAN et RefineGAN ont des contraintes différentes. Vérifiez la paire compatible avant le prétraitement. Le guidage de pas contrôle si les fonctionnalités F0 conditionnent le modèle. Configurez les threads du processeur pour la machine et sélectionnez un GPU NVIDIA pris en charge pour la formation. FP32 est la valeur par défaut dans l'interface utilisateur cochée. FP16 peut réduire la pression de la mémoire sur le matériel pris en charge. La taille du lot contrôle le nombre d’échantillons traités ensemble. Si la VRAM est épuisée, réduisez le lot et désactivez la mise en cache facultative.
+Vérifiez la paire compatible avant le prétraitement. Le guidage de pas contrôle si les fonctionnalités F0 conditionnent le modèle. Configurez les threads du processeur pour la machine et sélectionnez un GPU NVIDIA pris en charge pour la formation. FP32 est la valeur par défaut dans l'interface utilisateur cochée. FP16 peut réduire la pression de la mémoire sur le matériel pris en charge. La taille du lot contrôle le nombre d’échantillons traités ensemble. Si la VRAM est épuisée, réduisez le lot et désactivez la mise en cache facultative.
 
 **Fichiers de formation silencieux** contrôle le nombre d'exemples silencieux inclus dans l'application. Comparez les mêmes pauses lors de l’évaluation d’un changement.
 

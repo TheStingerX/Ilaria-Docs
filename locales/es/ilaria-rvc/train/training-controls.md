@@ -3,9 +3,11 @@ label: "Controles de entrenamiento y flujo de trabajo"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "La versión 2.4.7 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes."
+description: "Ilaria RVC 2.5.0. RefineGAN admite entrenamiento e inferencia a 32, 40 y 44,1 kHz con RVC v2 y Pitch Guidance."
 ---
 # Controles de entrenamiento y flujo de trabajo
+
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN admite entrenamiento e inferencia a 32, 40 y 44,1 kHz con RVC v2 y Pitch Guidance. La aplicación genera automáticamente el audio silencioso de 44,1 kHz. Selecciona **None** para entrenar desde cero si los pesos usan otra arquitectura, como en los pares probados KLM 5 (40 kHz) y VCTK (44,1 kHz).
 
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -28,7 +30,7 @@ description: "La versión 2.4.7 ofrece configuraciones de 32, 40 y 48 kHz con co
 
 ## Arquitectura y performance
 
-La versión 2.4.7 ofrece configuraciones de 32, 40 y 48 kHz con combinaciones disponibles determinadas por el vocoder. HiFi-GAN y RefineGAN tienen restricciones diferentes. Verifique el par compatible antes del preprocesamiento. La guía de tono controla si las características F0 condicionan el modelo. Configure subprocesos de CPU para la máquina y seleccione una GPU NVIDIA compatible para el entrenamiento. FP32 es el valor predeterminado en la interfaz de usuario marcada. FP16 puede reducir la presión de la memoria en el hardware compatible. El tamaño del lote controla cuántas muestras se procesan juntas. Si se agota la VRAM, reduzca el lote y desactive el almacenamiento en caché opcional.
+Verifique el par compatible antes del preprocesamiento. La guía de tono controla si las características F0 condicionan el modelo. Configure subprocesos de CPU para la máquina y seleccione una GPU NVIDIA compatible para el entrenamiento. FP32 es el valor predeterminado en la interfaz de usuario marcada. FP16 puede reducir la presión de la memoria en el hardware compatible. El tamaño del lote controla cuántas muestras se procesan juntas. Si se agota la VRAM, reduzca el lote y desactive el almacenamiento en caché opcional.
 
 **Archivos de entrenamiento silenciosos** controla cuántos ejemplos silenciosos incluye la aplicación. Compare las mismas pausas prolongadas al evaluar un cambio.
 

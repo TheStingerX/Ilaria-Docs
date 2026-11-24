@@ -90,4 +90,4 @@ If any of these settings do not match the pretrained pair, training will either 
 - **Ilaria RVC 2.4.8** adds Legacy Core V1.5 at 32 and 40 kHz to the downloader. All four Legacy Core options use `HiFi-GAN` + `ContentVec`. [Release notes](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8)
 !!!
 
-> **Compatibility note**: In Ilaria RVC, RefineGAN training is supported specifically at `32 kHz` with RVC v2 and pitch guidance. Choosing a `40 kHz` or `44.1 kHz` RefineGAN pretrain while setting training to `32 kHz` will fail or produce broken output.
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance. The app automatically generates the 44.1 kHz mute waveform. Choose **None** to train from scratch if a pretrained pair uses a different architecture, including the tested KLM 5 (40 kHz) and VCTK (44.1 kHz) pairs.

@@ -32,6 +32,8 @@ Si tienes algún problema, sugerencia o actualización, escríbeme por Discord.
 
 Si tu ordenador no tiene una GPU NVIDIA adecuada, puedes usar Ilaria RVC en Kaggle. En la configuración del cuaderno, activa el acceso a Internet y selecciona un acelerador de GPU. Elige GPU T4 ×2 si está disponible. La GPU NVIDIA de Kaggle se encarga de la conversión de voz y del entrenamiento de modelos. La [guía de Ilaria RVC en Kaggle](ilaria-rvc/cloud/kaggle.md) explica cómo configurar el cuaderno y guardar los resultados antes de que termine la sesión.
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · El paquete completo de Windows es la versión 2.4.7. El ZIP de actualización 2.5.0 excluye el entorno de ejecución y los pesos. De la 2.4.2 a la 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Explorar demostraciones de voz](https://ilariarvc.shop/en/demos/) · [Leer el registro de cambios](ilaria-rvc/install/version-history.md)
 
 </div>

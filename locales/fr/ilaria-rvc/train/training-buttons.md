@@ -23,7 +23,7 @@ L'entraînement crée un nouveau modèle vocal à partir des enregistrements. Po
 | `Sample Rate` | Choisit le taux d'entraînement du modèle, 32, 40 ou 48 kHz si compatible. Faites correspondre l'architecture et la paire G/D. L'augmentation du taux ne peut pas restaurer les détails absents de vos enregistrements. |
 | `Pitch Guidance` | Donne au générateur une piste de pitch estimée pendant l'entraînement. Utilisez la valeur par défaut pour un modèle typique et faites correspondre la paire pré-entraînée. Le désactiver modifie ce que le modèle attend. |
 | `CPU Threads` | Contrôle la quantité de parallélisme CPU utilisée par l’étape de préparation ou d’extraction. Réduisez-le si le prétraitement épuise la RAM du système ou rend le PC inutilisable. |
-| `Vocoder` | Sélectionne le générateur de forme d'onde. Commencez par HiFi-GAN, sauf si vous avez une raison compatible de choisir RefineGAN. Dans cette version, la formation RefineGAN nécessite RVC V2 à 32 kHz avec guidage de pitch. |
+| `Vocoder` | RefineGAN prend en charge l’entraînement et l’inférence à 32, 40 et 44,1 kHz avec RVC v2 et Pitch Guidance. |
 | `Embedder Model` | Choisit les fonctionnalités de contenu utilisées par le formateur. La formation expose ContentVec et Spin-v2. Le modifier nécessite de nouvelles fonctionnalités extraites et une expérience compatible. Utilisez l'encodeur correspondant lors de l'inférence. |
 | `Silent training files` | Définit le nombre d'exemples silencieux inclus dans l'expérience. Comparez les mêmes pauses naturelles si vous les modifiez. |
 | `Index Algorithm` | Choisissez de conserver tous les vecteurs de caractéristiques ou de les regrouper avant de créer l'index de récupération. Voir [Auto, Faiss et KMeans](training-controls.md). |

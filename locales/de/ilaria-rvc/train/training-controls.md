@@ -3,9 +3,11 @@ label: "Trainingskontrollen und Arbeitsablauf"
 icon: ":gear:"
 order: 87
 permalink: /ilaria-rvc/training-controls/
-description: "Version 2.4.7 bietet 32-, 40- und 48-kHz-Einstellungen mit verfügbaren Kombinationen, die vom Vocoder bestimmt werden."
+description: "Ilaria RVC 2.5.0. RefineGAN unterstützt Training und Inferenz mit 32, 40 und 44,1 kHz in RVC v2 mit Pitch Guidance."
 ---
 # Trainingskontrollen und Arbeitsablauf
+
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN unterstützt Training und Inferenz mit 32, 40 und 44,1 kHz in RVC v2 mit Pitch Guidance. Die App erzeugt die stille Audiodatei für 44,1 kHz automatisch. Wähle **None** für Training von Grund auf, falls die vortrainierten Gewichte eine andere Architektur nutzen. Getestete Beispiele sind KLM 5 (40 kHz) und VCTK (44,1 kHz).
 
 [Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -28,7 +30,7 @@ description: "Version 2.4.7 bietet 32-, 40- und 48-kHz-Einstellungen mit verfüg
 
 ## Architektur und Leistung
 
-Version 2.4.7 bietet 32-, 40- und 48-kHz-Einstellungen mit verfügbaren Kombinationen, die vom Vocoder bestimmt werden. Für HiFi-GAN und RefineGAN gelten unterschiedliche Einschränkungen. Überprüfen Sie vor der Vorverarbeitung das kompatible Paar. Die Pitch-Führung steuert, ob F0-Features das Modell beeinflussen. Konfigurieren Sie CPU-Threads für die Maschine und wählen Sie eine unterstützte NVIDIA-GPU für das Training aus. FP32 ist die Standardeinstellung in der überprüften Benutzeroberfläche. FP16 kann den Speicherdruck auf unterstützter Hardware reduzieren. Die Chargengröße steuert, wie viele Proben zusammen verarbeitet werden. Wenn der VRAM knapp wird, reduzieren Sie den Stapel und deaktivieren Sie das optionale Caching.
+Überprüfen Sie vor der Vorverarbeitung das kompatible Paar. Die Pitch-Führung steuert, ob F0-Features das Modell beeinflussen. Konfigurieren Sie CPU-Threads für die Maschine und wählen Sie eine unterstützte NVIDIA-GPU für das Training aus. FP32 ist die Standardeinstellung in der überprüften Benutzeroberfläche. FP16 kann den Speicherdruck auf unterstützter Hardware reduzieren. Die Chargengröße steuert, wie viele Proben zusammen verarbeitet werden. Wenn der VRAM knapp wird, reduzieren Sie den Stapel und deaktivieren Sie das optionale Caching.
 
 **Stille Trainingsdateien** steuern, wie viele stille Beispiele die App enthält. Vergleichen Sie dieselben ausgehaltenen Pausen bei der Bewertung einer Änderung.
 

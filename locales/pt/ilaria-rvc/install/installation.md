@@ -7,6 +7,8 @@ description: "Baixe a versão NVIDIA suportada em Hugging Face. Extraia todo o a
 ---
 # Instalação e atualizações
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · O pacote completo para Windows é a versão 2.4.7. O ZIP de atualização 2.5.0 exclui o ambiente de execução e os pesos dos modelos. Da versão 2.4.2 à 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
 [Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
@@ -56,6 +58,6 @@ Mantém a instalação anterior como cópia de segurança. Copia modelos para mo
 
 [GPU compatíveis](gpu-compatibility.md)
 
-### Atualizar a partir de 2.4.2 - 2.4.6
+### Atualizar a partir de 2.4.2 - 2.4.8
 
-Se já usares uma versão entre **2.4.2** e **2.4.6**, abre **Other → Update Ilaria RVC → Check for updates** e escolhe **Download and restart**. A partir da **2.4.0** ou **2.4.1**, atualiza primeiro para **2.4.2** ou extrai o ZIP completo da **2.4.7**.
+Se já usares uma versão entre **2.4.2** e **2.4.8**, abre **Other → Update Ilaria RVC → Check for updates** e escolhe **Download and restart**. A partir da **2.4.0** ou **2.4.1**, atualiza primeiro para **2.4.2** ou extrai o ZIP completo da **2.4.7**.

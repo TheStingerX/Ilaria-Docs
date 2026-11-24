@@ -3,7 +3,7 @@ label: "Cronologia delle versioni e differenze di rilascio"
 icon: ":clock3:"
 order: 81
 permalink: /ilaria-rvc/version-history/
-description: "L'ultima versione per Windows è 2.4.8. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
+description: "L'ultima versione per Windows è 2.5.0. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline."
 ---
 # Cronologia delle versioni e differenze di rilascio
 
@@ -11,12 +11,13 @@ description: "L'ultima versione per Windows è 2.4.8. Controlla la versione inst
 
 ## Quale versione descrive questa documentazione?
 
-L’ultima versione per Windows è **2.4.8**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
+L’ultima versione per Windows è **2.5.0**. Controlla la versione installata in **Altro → Aggiorna Ilaria RVC**. Utilizza **Tutte le modifiche finora** per sfogliare le note di rilascio per rilascio anche offline.
 
 ## Tutte le versioni
 
  | Versione | In evidenza |
 | --- | --- |
+| [2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0) | RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance. L’app genera in automatico la traccia silenziosa a 44,1 kHz. Se i pesi preaddestrati usano un’architettura diversa, seleziona **None** per addestrare da zero. Tra le coppie provate ci sono KLM 5 (40 kHz) e VCTK (44,1 kHz). Dalla 2.4.2 alla 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. Il pacchetto completo per Windows è la 2.4.7. Lo ZIP di aggiornamento 2.5.0 esclude il runtime e i pesi dei modelli. |
 | [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 aggiunge al downloader Legacy Core V1.5 a 32 e 40 kHz. Tutte e quattro le opzioni Legacy Core usano `HiFi-GAN` + `ContentVec`. Dalla 2.4.2 alla 2.4.7, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. Lo ZIP di aggiornamento esclude il runtime Windows e i pesi dei modelli. |
 | [2.4.7](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.7) | Nuovo pacchetto base completo per Windows (`ILARIA_RVC-2.4.7.zip`). Ripristina i download autorizzati dei pretrained **Legacy Core 1.5 V2** e **1.6** a `32 kHz`, e migliora il ripristino in caso di aggiornamento interrotto (conservando i file di supporto modificati in un backup separato mentre viene ripristinata la versione precedente). Dalla **2.4.2 alla 2.4.6**, usa **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |
 | [2.4.6](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.6) | Aggiunge **KLM Vocal ContentVec** (`klm-vocal-contentvec`) come download opzionale per Inferenza e Training RVC v2, e aggiunge **43 coppie G/D KLM verificate** ai **Modelli pretrained consigliati** con relativi sample rate (la compatibilità in training varia per coppia). Dalla **2.4.5**, apri **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |

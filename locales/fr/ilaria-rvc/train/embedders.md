@@ -27,7 +27,7 @@ Les encodeurs d'inférence disponibles incluent ContentVec, Spin, Spin-v2 et la 
 
 ## Compatibilité des formations
 
-La formation expose ContentVec et Spin-v2. Changer l'encodeur nécessite de nouvelles fonctionnalités et un nom d'expérience distinct. Faites correspondre votre paire de générateur et de discriminateur au vocodeur, à la fréquence d'échantillonnage d'entraînement, à la génération RVC et à la configuration du pitch, et suivez les exigences de l'encodeur de l'éditeur de la paire. Ilaria RVC 2.1.0 prend en charge la formation RefineGAN spécifiquement à 32 kHz avec RVC V2 et le guidage de pitch. Le téléchargeur peut répertorier d’autres tarifs à utiliser ailleurs.
+La formation expose ContentVec et Spin-v2. Changer l'encodeur nécessite de nouvelles fonctionnalités et un nom d'expérience distinct. Faites correspondre votre paire de générateur et de discriminateur au vocodeur, à la fréquence d'échantillonnage d'entraînement, à la génération RVC et à la configuration du pitch, et suivez les exigences de l'encodeur de l'éditeur de la paire. RefineGAN prend en charge l’entraînement et l’inférence à 32, 40 et 44,1 kHz avec RVC v2 et Pitch Guidance.
 
 ## Obtenez une paire G/D
 

@@ -7,6 +7,8 @@ description: "Ilaria RVC fonctionne localement sur votre PC avec PyTorch 2.10.0 
 ---
 # Configuration requise pour Ilaria RVC
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · Le paquet Windows complet est la version 2.4.7. Le ZIP de mise à jour 2.5.0 exclut le runtime et les poids des modèles. De la version 2.4.2 à la 2.4.8, utilisez **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPU compatibles](../install/gpu-compatibility.md) · [Options Cloud](../cloud/cloud.md)
 
 Ilaria RVC fonctionne localement sur votre PC avec **PyTorch 2.10.0** et **NVIDIA CUDA**. La conversion vocale (inférence) et l'entraînement de modèles ayant des besoins très différents, consultez les deux tableaux ci-dessous avant l'installation.
