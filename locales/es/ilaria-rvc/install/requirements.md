@@ -9,7 +9,7 @@ description: "Ilaria RVC se ejecuta localmente en tu PC usando PyTorch 2.10.0 y 
 
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · El paquete completo de Windows es la versión 2.4.7. El ZIP de actualización 2.5.0 excluye el entorno de ejecución y los pesos. De la 2.4.2 a la 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
 
-[Descargar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPUs compatibles](../install/gpu-compatibility.md) · [Opciones en la nube](../cloud/cloud.md)
+[Descargar Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPUs compatibles](gpu-compatibility.md) · [Opciones en la nube](../cloud/cloud.md)
 
 Ilaria RVC se ejecuta localmente en tu PC usando **PyTorch 2.10.0** y **NVIDIA CUDA**. Como la conversión de voz (inferencia) y el entrenamiento de modelos tienen exigencias muy distintas, revisa ambas tablas antes de instalar.
 
@@ -35,7 +35,7 @@ Ilaria RVC para Windows está diseñado para **GPUs NVIDIA**. Gráficos integrad
 
 - **GeForce GTX 16 y RTX 20, 30, 40, 50**: usa directamente el runtime **PyTorch 2.10.0 + CUDA 12.8** incluido tras extraer el ZIP. Mantén actualizado el driver NVIDIA (especialmente en serie RTX 50).
 - **Maxwell, Pascal y Volta** (ej. series GTX 750/900/1000, TITAN X/V, Tesla P4/P40/P100/V100): en el primer inicio, `RUN_ILARIA_RVC.bat` descarga y verifica automáticamente **PyTorch 2.10.0 + CUDA 12.6** en `runtime-cu126` y lo reutiliza después.
-- **Nota de validación**: el cómputo, la retropropagación y la carga de ContentVec se verificaron directamente en una **RTX 4070**. El resto de tarjetas de la [lista de GPUs compatibles](../install/gpu-compatibility.md) se esperan compatibles según su arquitectura y soporte CUDA.
+- **Nota de validación**: el cómputo, la retropropagación y la carga de ContentVec se verificaron directamente en una **RTX 4070**. El resto de tarjetas de la [lista de GPUs compatibles](gpu-compatibility.md) se esperan compatibles según su arquitectura y soporte CUDA.
 
 ### Por capacidad de VRAM (qué puedes ejecutar)
 

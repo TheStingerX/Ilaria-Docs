@@ -20,7 +20,7 @@ Prepara grabaciones limpias de una sola persona y reserva una muestra para la pr
 
 El proyecto original indica uso no comercial para la base CVC predeterminada y sus ajustes finos. Usa grabaciones con permiso para entrenar. Busca la exportación en `logs/causalvc/` en la versión portátil o en `runs/models/voice-<name>/voices/` con el código fuente.
 
-[Instalar Redpanda VC](first-run.md) · [Inferencia con archivos](inference.md) · [Conversión de voz en tiempo real](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/causal-voice-changer/overview.md)
+[Instalar Redpanda VC](first-run.md) · [Inferencia con archivos](inference.md) · [Conversión de voz en tiempo real](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/voice-changers/causal-voice-changer/overview.md)
 
 ## Código fuente y versión
 

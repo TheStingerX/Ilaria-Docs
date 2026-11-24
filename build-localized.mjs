@@ -43,7 +43,7 @@ const pagesByLanguage = new Map(Object.keys(languages).map(lang => {
 const groups = ['start', 'conversion', 'model-training', 'reference'];
 
 const appGroupLabels = {
-  en: ['Model Training and Inference', 'Voice changers'],
+  en: ['Model Training and Inference', 'Voice Changers'],
   it: ['Addestramento e inferenza', 'Cambia voce'],
   es: ['Entrenamiento e inferencia', 'Cambiadores de voz'],
   fr: ['Entraînement et inférence', 'Changeurs de voix'],

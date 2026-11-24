@@ -9,7 +9,7 @@ description: "Ilaria RVC läuft lokal auf deinem PC mit PyTorch 2.10.0 und NVIDI
 
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · Das vollständige Windows-Paket ist Version 2.4.7. Die Update-ZIP für 2.5.0 enthält weder Laufzeit noch Modellgewichte. Von 2.4.2 bis 2.4.8 nutze **Other → Update Ilaria RVC → Check for updates → Download and restart**.
 
-[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Kompatible GPUs](../install/gpu-compatibility.md) · [Cloud-Optionen](../cloud/cloud.md)
+[Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Kompatible GPUs](gpu-compatibility.md) · [Cloud-Optionen](../cloud/cloud.md)
 
 Ilaria RVC läuft lokal auf deinem PC mit **PyTorch 2.10.0** und **NVIDIA CUDA**. Da Stimmkonvertierung (Inferenz) und Modelltraining sehr unterschiedliche Hardware-Ansprüche haben, prüfe vor der Installation beide Tabellen unten.
 
@@ -35,7 +35,7 @@ Das Windows-Paket von Ilaria RVC ist für **NVIDIA-GPUs** gebaut. Integrierte In
 
 - **GeForce GTX 16 und RTX 20, 30, 40, 50**: nutzt direkt die enthaltene **PyTorch 2.10.0 + CUDA 12.8**-Runtime. Achte auf aktuelle NVIDIA-Treiber (besonders bei der RTX-50-Serie).
 - **Maxwell, Pascal und Volta** (z. B. GTX 750/900/1000-Serie, TITAN X/V, Tesla P4/P40/P100/V100): beim ersten Start lädt und prüft `RUN_ILARIA_RVC.bat` automatisch **PyTorch 2.10.0 + CUDA 12.6** nach `runtime-cu126` herunter und nutzt es danach weiter.
-- **Validierungshinweis**: Compute, Backpropagation und ContentVec-Laden wurden direkt auf einer **RTX 4070** getestet. Weitere Karten in der [GPU-Kompatibilitätsliste](../install/gpu-compatibility.md) sind aufgrund von Architektur und CUDA-Unterstützung zu erwarten.
+- **Validierungshinweis**: Compute, Backpropagation und ContentVec-Laden wurden direkt auf einer **RTX 4070** getestet. Weitere Karten in der [GPU-Kompatibilitätsliste](gpu-compatibility.md) sind aufgrund von Architektur und CUDA-Unterstützung zu erwarten.
 
 ### Nach VRAM-Kapazität (was du ausführen kannst)
 

@@ -31,7 +31,7 @@ Antes de mexer nos controles avançados, faça uma passada limpa no **Ilaria RVC
 
 ## A. Conseguindo uma conversão limpa
 
-- **Áudio fonte e vocais isolados:** O RVC espera uma voz única, seca e limpa. Ferramentas como [UVR5](../non-rvc/uvr5/overview.md) ou [MVSep](../non-rvc/mvsep/overview.md) ajudam a separar vocais de bases instrumentais, e modelos especializados tratam remoção de ruído, reverberação, sibilância ou restauração conforme o modelo usado (nenhuma ferramenta remove todo tipo de ruído ou eco).
+- **Áudio fonte e vocais isolados:** O RVC espera uma voz única, seca e limpa. Ferramentas como [UVR5](../non-rvc/audio-separation-tools/uvr5/overview.md) ou [MVSep](../non-rvc/audio-separation-tools/mvsep/overview.md) ajudam a separar vocais de bases instrumentais, e modelos especializados tratam remoção de ruído, reverberação, sibilância ou restauração conforme o modelo usado (nenhuma ferramenta remove todo tipo de ruído ou eco).
 - **Fala vs. canto:** A fala costuma tolerar pequenos ajustes de **Pitch**, enquanto o canto sobre uma faixa instrumental normalmente mantém **Pitch** em `0` para permanecer no tom do acompanhamento (uma transposição diferente de oitava pode ser apropriada se o tom do acompanhamento também mudar).
 - **Compatibilidade de modelo e embedder:** Deixe **Embedder Model** em `Auto (model default)`, a menos que tenha treinado ou baixado um modelo que exija um codificador específico (`contentvec`, `spin-v2`, `klm-vocal-contentvec`, etc.). Usar um embedder incompatível pode gerar erro ou degradar a conversão e quebrar a correspondência do índice.
 - **Modelos sem guia de pitch (`if_f0 == 0`) vs. modelos guiados por pitch (`if_f0 == 1`):**

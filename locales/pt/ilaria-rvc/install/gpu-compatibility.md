@@ -30,10 +30,11 @@ Os testes de cálculo, retropropagação e carregamento do ContentVec foram real
 | **RTX 50** | Blackwell | 12.0 | CUDA 12.8 (2.10.0) | Inferência e Treino | FP32, FP16, BF16 | **Expected** (requer driver compatível) |
 | **RTX 30** | Ampere | 8.6 | CUDA 12.8 (2.10.0) | Inferência e Treino | FP32, FP16, BF16 | **Expected** |
 | **RTX 20 / GTX 16** | Turing | 7.5 | CUDA 12.8 (2.10.0) | Inferência e Treino | FP32 (FP16 em RTX 20) | **Expected** |
-| **Maxwell / Pascal / Volta** (GTX 900/10) | 5.x/6.x/7.0 | 5.0–7.0 | Auto untime-cu126 (CUDA 12.6) | Inferência e Treino | FP32 | **Expected** |
+| **Maxwell / Pascal / Volta** (GTX 900/10) | 5.x/6.x/7.0 | 5.0–7.0 | Auto 
+untime-cu126 (CUDA 12.6) | Inferência e Treino | FP32 | **Expected** |
 | **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferência e Treino | FP32, FP16 (BF16 Ampere+) | **Expected** |
 | **Multi-GPU** | Várias NVIDIA | Variável | Runtime ativo | Treino | Consoante GPU ativas | **Expected**; a VRAM **não** soma |
-| **AMD / Intel / Integrada** | RDNA / Arc / iGPU | N/A | Nenhum no Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../../ilaria-rvc/cloud/cloud.md) ou DirectML |
+| **AMD / Intel / Integrada** | RDNA / Arc / iGPU | N/A | Nenhum no Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../cloud/cloud.md) ou DirectML |
 
 ### Verificar GPU no Windows e diagnosticar erros
 
