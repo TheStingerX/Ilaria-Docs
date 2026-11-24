@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/rvc-cli/installation/
 
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Versão consultada](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
+!!!warning Software antigo · Desaconselhado
+Estes projetos estão desatualizados e já não parecem ter manutenção ativa. O rvc-cli está arquivado e os ramos principais do RVC Studio e do Mangio RVC Fork estão inativos há vários anos. Os guias continuam disponíveis para projetos existentes. Para uma nova instalação, escolhe uma aplicação com manutenção ativa. [Guias por aplicação](../app-guides.md)
+!!!
+
 ## Versão e âmbito
 
 Este guia cobre **blaisewf/rvc-cli 1.2.4**. O repositório indica que deixou de ser mantido e remete para o Applio para a CLI mantida. Usa uma pasta e um ambiente Python separados. A ferramenta oferece inferência por ficheiro, conversão em lote e treino.

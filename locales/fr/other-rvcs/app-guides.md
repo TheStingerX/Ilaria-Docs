@@ -59,6 +59,10 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 
 ## Autres outils RVC
 
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue.
+!!!
+
 - [rvc-cli](rvc-cli/installation.md)
 - [RVC Studio](rvc-studio/installation.md)
 - [Mangio RVC Fork](mangio/installation.md)

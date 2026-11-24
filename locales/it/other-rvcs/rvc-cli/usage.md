@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/rvc-cli/usage/
 
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Versione consultata](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
+!!!warning Software datato · Sconsigliato
+Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta. [Guide per app](../app-guides.md)
+!!!
+
 ## File singolo e cartelle
 
 Parti da un WAV breve, un `.pth` esportato per inferenza e il suo indice. Nella 1.2.4 il parser richiede `--index_path`; imposta `--index_rate 0` per disattivare il retrieval. Per una cartella usa `batch_infer` con `--input_folder` e `--output_folder`. Usa una destinazione separata e prova pochi file. Il comando presuppone l’ambiente corretto attivo. Su Windows puoi sostituire `python` con `.\env\python.exe`.

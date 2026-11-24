@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 
 [GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
+!!!warning Software antiguo · No recomendado
+Estos proyectos están desactualizados y no muestran mantenimiento activo. rvc-cli está archivado y las ramas principales de RVC Studio y Mangio RVC Fork llevan años inactivas. Las guías se conservan para proyectos existentes. Para una instalación nueva, elige una aplicación con mantenimiento activo. [Guías por aplicación](../app-guides.md)
+!!!
+
 ## Primera versión
 
 Inicia el backend en **RVC Server**. En **Inference**, pulsa **Refresh Data** tras añadir los archivos. Elige un WAV, FLAC, OGG o MP3 corto en `songs/`. Guarda el checkpoint RVC v2 en `models/RVC/` y el índice, si existe, en `models/RVC/.index/`. Elige una voz y un modelo de extracción vocal. El preprocesado adicional es opcional. Pulsa **Save Options** y **1-Click VC**. Si la voz no aparece, revisa la carpeta y actualiza la lista.

@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/mangio/installation/
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Version consultée](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
+
 ## Version historique et environnement
 
 Mangio RVC Fork est un fork expérimental de la WebUI originale. Le guide vise le tag historique **v23.7.0**. Gardez son environnement et ses ressources à part. Sous Windows, le lanceur intégré exige un paquet officiel contenant `runtime/python.exe`. Le code seul nécessite les dépendances et modèles de base. Le README du tag recommande Python 3.9.8 pour l’installation manuelle.

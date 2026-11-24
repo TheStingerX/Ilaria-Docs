@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/rvc-studio/installation/
 
 [GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
+
 RVC Studio de SayanoAI est une interface Streamlit pour entraîner des voix et créer des reprises à partir d’enregistrements. Les étapes suivent la révision liée. La branche principale est décrite comme expérimentale.
 
 ## Configuration

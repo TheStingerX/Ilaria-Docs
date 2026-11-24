@@ -59,6 +59,10 @@ Compara ficheiros com a mesma fonte e o mesmo volume. No modo em tempo real, gra
 
 ## Outras ferramentas RVC
 
+!!!warning Software antigo · Desaconselhado
+Estes projetos estão desatualizados e já não parecem ter manutenção ativa. O rvc-cli está arquivado e os ramos principais do RVC Studio e do Mangio RVC Fork estão inativos há vários anos. Os guias continuam disponíveis para projetos existentes. Para uma nova instalação, escolhe uma aplicação com manutenção ativa.
+!!!
+
 - [rvc-cli](rvc-cli/installation.md)
 - [RVC Studio](rvc-studio/installation.md)
 - [Mangio RVC Fork](mangio/installation.md)

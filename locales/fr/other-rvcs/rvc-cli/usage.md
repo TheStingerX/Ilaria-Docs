@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/rvc-cli/usage/
 
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Version consultée](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
+
 ## Fichier unique et dossiers
 
 Commencez par un WAV court, un `.pth` exporté pour l’inférence et son index. Dans la 1.2.4, le parseur exige `--index_path`; utilisez `--index_rate 0` pour désactiver le retrieval. Pour un dossier, utilisez `batch_infer` avec `--input_folder` et `--output_folder`. Testez quelques fichiers vers une sortie distincte. Activez le bon environnement. Sous Windows, vous pouvez remplacer `python` par `.\env\python.exe`.

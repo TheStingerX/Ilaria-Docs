@@ -59,6 +59,10 @@ Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Live
 
 ## Weitere RVC-Werkzeuge
 
+!!!warning Veraltete Software · Nicht empfohlen
+Diese Projekte sind veraltet und werden offenbar nicht mehr aktiv gepflegt. rvc-cli ist archiviert, und die Hauptbranches von RVC Studio und Mangio RVC Fork sind seit Jahren inaktiv. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation eine aktiv gepflegte Anwendung.
+!!!
+
 - [rvc-cli](rvc-cli/installation.md)
 - [RVC Studio](rvc-studio/installation.md)
 - [Mangio RVC Fork](mangio/installation.md)

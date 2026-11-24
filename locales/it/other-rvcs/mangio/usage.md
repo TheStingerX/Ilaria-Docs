@@ -9,6 +9,10 @@ permalink: /ilaria-rvc/mangio/usage/
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Versione consultata](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Software datato · Sconsigliato
+Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta. [Guide per app](../app-guides.md)
+!!!
+
 ## Prima conversione
 
 Metti il checkpoint esportato per l’inferenza nella cartella `weights`, poi aggiorna l’elenco dei modelli nella WebUI. Selezionalo in Model Inference e indica il percorso di un breve audio con la sola voce. Parti da una trasposizione di 0. Se hai l’indice abbinato, prova un tasso di recupero basso dopo una prima conversione a 0. Usa sempre lo stesso audio e checkpoint per il confronto.

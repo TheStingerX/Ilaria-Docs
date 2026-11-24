@@ -59,6 +59,10 @@ For file conversion, compare the same input clip at the same output volume. For 
 
 ## Additional RVC tools
 
+!!!warning Legacy software · Not recommended
+These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app.
+!!!
+
 - [rvc-cli](rvc-cli/installation.md)
 - [RVC Studio](rvc-studio/installation.md)
 - [Mangio RVC Fork](mangio/installation.md)
