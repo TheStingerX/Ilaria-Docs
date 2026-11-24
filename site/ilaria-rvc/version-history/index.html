@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848868262360">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869059725">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848868262360" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869059725" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848868262360" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848868262360" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -182,40 +182,40 @@
 <retype-table copy-text="| Release | Highlights |
 | --- | --- |
 | [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 adds Legacy Core V1.5 at 32 and 40 kHz to the downloader. All four Legacy Core options use `HiFi-GAN` + `ContentVec`. From 2.4.2–2.4.7, use **Other → Update Ilaria RVC → Check for updates → Download and restart**. The update ZIP excludes the Windows runtime and model weights. |
-| 2.4.7 | New full Windows base package (`ILARIA_RVC-2.4.7.zip`). Restores authorized **Legacy Core 1.5 V2** and **1.6** pretrained downloads at `32 kHz`, and improves interrupted update recovery (preserving changed support files in a separate backup while restoring the previous version). From **2.4.2 through 2.4.6**, use **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
-| 2.4.6 | Adds **KLM Vocal ContentVec** (`klm-vocal-contentvec`) as an optional download for Inference and RVC v2 Training, and adds **43 verified KLM G/D pairs** to **Recommended pretrained models** with sample rates listed (training compatibility varies by pair). From **2.4.5**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
-| 2.4.5 | Adds `.pth` ↔ `.safetensors` model weight conversion in **Other → Convert model weights**, preserving RVC metadata and adding a **Move .pth to models** button. Improves the Inference message for files missing voice configuration, and auto-installs `safetensors` on first use if needed. From **2.4.4**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
-| 2.4.4 | Removes the six Legacy Core pretrained download options from Lyery after the source files were taken down (previously downloaded weights remain available for training). Requires **2.4.2** or later. |
-| 2.4.3 | Adds native **BF16** mixed-precision training, automatically selected on NVIDIA RTX 30, 40 and 50 series GPUs when all selected GPUs support it (Kaggle T4 defaults to FP16). Remembers manual `FP16` and `FP32` selections, preserves existing experiment precision unless changed explicitly, updates the Training Queue and PC training advisor, and keeps feature extraction in `FP32` and the standard RVC model export format. Requires **2.4.2** first via **Other → Update Ilaria RVC**. |
-| 2.4.2 | Adds **RMVPE cuDNN recovery** to recover cleanly from cuDNN pitch-extraction errors during inference and preprocessing. Install **2.4.1** first, then update via **Other → Update Ilaria RVC**. |
-| 2.4.1 | Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install **2.4.1** when it appears. |
-| 2.4.0 | The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32. |
-| 2.3.0 | RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model. |
-| 2.2.2.1 | Updater bridge that prepares the refreshed 2.2.2 installation for 2.3.0. |
-| 2.2.2 | Uses PyTorch’s restricted checkpoint loader for voice models, model tools, ONNX export and training weights. The refreshed Windows ZIP includes Python 3.10 and PyTorch 2.10.0 with CUDA 12.8. Older NVIDIA GPUs use the downloadable CUDA 12.6 runtime. This update also fixes PyAV decoding and WAV export and reports preprocessing progress while writing segments. The 2.2.2 Kaggle notebook installs PyTorch and TorchAudio 2.10.0 with CUDA 12.8. |
-| 2.2.1 | The shared waveform player has a playback volume slider for inputs, results and previews. Use it to listen more quietly or compare clips at similar levels. It adjusts playback only. To change the level of the converted file, adjust Gain in Post-Process and convert again. |
-| 2.2.0 | Adds Windows inference and training support for NVIDIA GeForce RTX 50 series (Blackwell) with PyTorch 2.7.1 and CUDA 12.8. The launcher detects Blackwell, prepares the runtime on first launch (internet and free disk space required), and checks CUDA forward and backward execution. Other GPUs retain their runtime. Also updates ContentVec loading, checkpoint resume and STFT handling. |
-| 2.1.2 | Standardized the three header labels as **Ilaria’s Ko-Fi Shop**, **Ilaria’s RVC Website**, and **Ilaria’s Docs**. |
-| 2.1.1 | Added a heart-styled button for Ilaria Docs next to the website link. |
-| 2.1.0 | Added the website button, live dashboard metrics for the active run, and better startup and refresh behavior in embedded TensorBoard. |
-| 2.0.0 | Introduced the Training Dashboard, embedded TensorBoard, diagnostic reports and 12-second Dataset Checker previews. Optional embedders became individual downloads. |
-| 1.9.3 | Introduced advanced audio processing, five inference export formats, configurable embedders and custom HuBERT installation. |
-| 1.9.2 | Added public Google Drive and MEGA links to the voice model downloader. |
-| 1.9.1 | Added sample-rate checks when reusing an experiment name, avoiding a training crash on incompatible configurations. |
-| 1.9.0 | Added FCPE, streamed model imports with cancellation, a reorganized Other tab and expandable offline release notes. |
-| 1.8.1 | Updated completion and test sounds while retaining the Windows error sound. |
-| 1.8.0 | Introduced the hidden-console launcher, UI restart control, Audio Analyzer and a shared folder layout for models and their indexes. |
-| 1.7.2 | Fixed conversion without an index and named Single and Batch output files after the selected voice. |
-| 1.7.1 | Suppressed a specific Windows connection-close traceback while preserving other error messages. |
-| 1.7.0 | Added Edge and offline Windows TTS, waveform players and background preparation for pitch extraction and supported default models. |
-| 1.6.0 | Added the persistent training queue, exact step targets, RefineGAN and Spin-v2 options, paired pretrained downloads, more pitch extractors and ZIP export. |
-| 1.5.2 | Improved duplicate-launch diagnostics and checked dataset availability before each training stage. |
-| 1.5.1 | Blocked preprocessing while a dataset import was active or the dataset path was unusable. Added the offline change history panel. |
-| 1.5.0 | Introduced drag-and-drop dataset import and management, the PC training advisor and optional completion and error alerts. |
-| 1.4.0 | Added training previews, resumable Stop and save, and the Dataset Checker. |
-| 1.3.0 | Validated the update path from 1.2, showed the installed version in the console and prepared a smaller Windows package. |
-| 1.2.0 | Added the built-in updater with verification and recovery, FP32/FP16 training selection, and Model information. |
-| 1.1 Beta | Introduced the themed interface, numbered training workflow, drag-and-drop conversion, automatic index matching, model imports and merging, and the app glossary. |">
+| [2.4.7](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.7) | New full Windows base package (`ILARIA_RVC-2.4.7.zip`). Restores authorized **Legacy Core 1.5 V2** and **1.6** pretrained downloads at `32 kHz`, and improves interrupted update recovery (preserving changed support files in a separate backup while restoring the previous version). From **2.4.2 through 2.4.6**, use **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
+| [2.4.6](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.6) | Adds **KLM Vocal ContentVec** (`klm-vocal-contentvec`) as an optional download for Inference and RVC v2 Training, and adds **43 verified KLM G/D pairs** to **Recommended pretrained models** with sample rates listed (training compatibility varies by pair). From **2.4.5**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
+| [2.4.5](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.5) | Adds `.pth` ↔ `.safetensors` model weight conversion in **Other → Convert model weights**, preserving RVC metadata and adding a **Move .pth to models** button. Improves the Inference message for files missing voice configuration, and auto-installs `safetensors` on first use if needed. From **2.4.4**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
+| [2.4.4](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.4) | Removes the six Legacy Core pretrained download options from Lyery after the source files were taken down (previously downloaded weights remain available for training). Requires **2.4.2** or later. |
+| [2.4.3](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.3) | Adds native **BF16** mixed-precision training, automatically selected on NVIDIA RTX 30, 40 and 50 series GPUs when all selected GPUs support it (Kaggle T4 defaults to FP16). Remembers manual `FP16` and `FP32` selections, preserves existing experiment precision unless changed explicitly, updates the Training Queue and PC training advisor, and keeps feature extraction in `FP32` and the standard RVC model export format. Requires **2.4.2** first via **Other → Update Ilaria RVC**. |
+| [2.4.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.2) | Adds **RMVPE cuDNN recovery** to recover cleanly from cuDNN pitch-extraction errors during inference and preprocessing. Install **2.4.1** first, then update via **Other → Update Ilaria RVC**. |
+| [2.4.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.1) | Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open **Other → Update Ilaria RVC** and install **2.4.1** when it appears. |
+| [2.4.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.0) | The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32. |
+| [2.3.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.3.0) | RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model. |
+| [2.2.2.1](https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#222) | Updater bridge that prepares the refreshed 2.2.2 installation for 2.3.0. |
+| [2.2.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.2.2) | Uses PyTorch’s restricted checkpoint loader for voice models, model tools, ONNX export and training weights. The refreshed Windows ZIP includes Python 3.10 and PyTorch 2.10.0 with CUDA 12.8. Older NVIDIA GPUs use the downloadable CUDA 12.6 runtime. This update also fixes PyAV decoding and WAV export and reports preprocessing progress while writing segments. The 2.2.2 Kaggle notebook installs PyTorch and TorchAudio 2.10.0 with CUDA 12.8. |
+| [2.2.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.2.1) | The shared waveform player has a playback volume slider for inputs, results and previews. Use it to listen more quietly or compare clips at similar levels. It adjusts playback only. To change the level of the converted file, adjust Gain in Post-Process and convert again. |
+| [2.2.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.2.0) | Adds Windows inference and training support for NVIDIA GeForce RTX 50 series (Blackwell) with PyTorch 2.7.1 and CUDA 12.8. The launcher detects Blackwell, prepares the runtime on first launch (internet and free disk space required), and checks CUDA forward and backward execution. Other GPUs retain their runtime. Also updates ContentVec loading, checkpoint resume and STFT handling. |
+| [2.1.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.2) | Standardized the three header labels as **Ilaria’s Ko-Fi Shop**, **Ilaria’s RVC Website**, and **Ilaria’s Docs**. |
+| [2.1.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.1) | Added a heart-styled button for Ilaria Docs next to the website link. |
+| [2.1.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.0) | Added the website button, live dashboard metrics for the active run, and better startup and refresh behavior in embedded TensorBoard. |
+| [2.0.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.0.0) | Introduced the Training Dashboard, embedded TensorBoard, diagnostic reports and 12-second Dataset Checker previews. Optional embedders became individual downloads. |
+| [1.9.3](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.3) | Introduced advanced audio processing, five inference export formats, configurable embedders and custom HuBERT installation. |
+| [1.9.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.2) | Added public Google Drive and MEGA links to the voice model downloader. |
+| [1.9.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.1) | Added sample-rate checks when reusing an experiment name, avoiding a training crash on incompatible configurations. |
+| [1.9.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v1.9.0) | Added FCPE, streamed model imports with cancellation, a reorganized Other tab and expandable offline release notes. |
+| [1.8.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.8.1) | Updated completion and test sounds while retaining the Windows error sound. |
+| [1.8.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.8.0) | Introduced the hidden-console launcher, UI restart control, Audio Analyzer and a shared folder layout for models and their indexes. |
+| [1.7.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.2) | Fixed conversion without an index and named Single and Batch output files after the selected voice. |
+| [1.7.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.1) | Suppressed a specific Windows connection-close traceback while preserving other error messages. |
+| [1.7.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.0) | Added Edge and offline Windows TTS, waveform players and background preparation for pitch extraction and supported default models. |
+| [1.6.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.6.0) | Added the persistent training queue, exact step targets, RefineGAN and Spin-v2 options, paired pretrained downloads, more pitch extractors and ZIP export. |
+| [1.5.2](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.2) | Improved duplicate-launch diagnostics and checked dataset availability before each training stage. |
+| [1.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.1) | Blocked preprocessing while a dataset import was active or the dataset path was unusable. Added the offline change history panel. |
+| [1.5.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.0) | Introduced drag-and-drop dataset import and management, the PC training advisor and optional completion and error alerts. |
+| [1.4.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.4.0) | Added training previews, resumable Stop and save, and the Dataset Checker. |
+| [1.3.0](https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#130) | Validated the update path from 1.2, showed the installed version in the console and prepared a smaller Windows package. |
+| [1.2.0](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.2.0) | Added the built-in updater with verification and recovery, FP32/FP16 training selection, and Model information. |
+| [1.1 Beta](https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#11-beta) | Introduced the themed interface, numbered training workflow, drag-and-drop conversion, automatic index matching, model imports and merging, and the app glossary. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -230,139 +230,139 @@
 <td>Ilaria RVC 2.4.8 adds Legacy Core V1.5 at 32 and 40 kHz to the downloader. All four Legacy Core options use <code translate="no" v-pre>HiFi-GAN</code> + <code translate="no" v-pre>ContentVec</code>. From 2.4.2–2.4.7, use <strong>Other → Update Ilaria RVC → Check for updates → Download and restart</strong>. The update ZIP excludes the Windows runtime and model weights.</td>
 </tr>
 <tr>
-<td>2.4.7</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.7">2.4.7</a></td>
 <td>New full Windows base package (<code translate="no" v-pre>ILARIA_RVC-2.4.7.zip</code>). Restores authorized <strong>Legacy Core 1.5 V2</strong> and <strong>1.6</strong> pretrained downloads at <code translate="no" v-pre>32 kHz</code>, and improves interrupted update recovery (preserving changed support files in a separate backup while restoring the previous version). From <strong>2.4.2 through 2.4.6</strong>, use <strong>Other → Update Ilaria RVC → Check for updates</strong> and choose <strong>Download and restart</strong>.</td>
 </tr>
 <tr>
-<td>2.4.6</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.6">2.4.6</a></td>
 <td>Adds <strong>KLM Vocal ContentVec</strong> (<code translate="no" v-pre>klm-vocal-contentvec</code>) as an optional download for Inference and RVC v2 Training, and adds <strong>43 verified KLM G/D pairs</strong> to <strong>Recommended pretrained models</strong> with sample rates listed (training compatibility varies by pair). From <strong>2.4.5</strong>, open <strong>Other → Update Ilaria RVC → Check for updates</strong> and choose <strong>Download and restart</strong>.</td>
 </tr>
 <tr>
-<td>2.4.5</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.5">2.4.5</a></td>
 <td>Adds <code translate="no" v-pre>.pth</code> ↔ <code translate="no" v-pre>.safetensors</code> model weight conversion in <strong>Other → Convert model weights</strong>, preserving RVC metadata and adding a <strong>Move .pth to models</strong> button. Improves the Inference message for files missing voice configuration, and auto-installs <code translate="no" v-pre>safetensors</code> on first use if needed. From <strong>2.4.4</strong>, open <strong>Other → Update Ilaria RVC → Check for updates</strong> and choose <strong>Download and restart</strong>.</td>
 </tr>
 <tr>
-<td>2.4.4</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.4">2.4.4</a></td>
 <td>Removes the six Legacy Core pretrained download options from Lyery after the source files were taken down (previously downloaded weights remain available for training). Requires <strong>2.4.2</strong> or later.</td>
 </tr>
 <tr>
-<td>2.4.3</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.3">2.4.3</a></td>
 <td>Adds native <strong>BF16</strong> mixed-precision training, automatically selected on NVIDIA RTX 30, 40 and 50 series GPUs when all selected GPUs support it (Kaggle T4 defaults to FP16). Remembers manual <code translate="no" v-pre>FP16</code> and <code translate="no" v-pre>FP32</code> selections, preserves existing experiment precision unless changed explicitly, updates the Training Queue and PC training advisor, and keeps feature extraction in <code translate="no" v-pre>FP32</code> and the standard RVC model export format. Requires <strong>2.4.2</strong> first via <strong>Other → Update Ilaria RVC</strong>.</td>
 </tr>
 <tr>
-<td>2.4.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.2">2.4.2</a></td>
 <td>Adds <strong>RMVPE cuDNN recovery</strong> to recover cleanly from cuDNN pitch-extraction errors during inference and preprocessing. Install <strong>2.4.1</strong> first, then update via <strong>Other → Update Ilaria RVC</strong>.</td>
 </tr>
 <tr>
-<td>2.4.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.1">2.4.1</a></td>
 <td>Adds optional local Kokoro v1.0 TTS with 54 voices, including Sara and Nicola in Italian. Clarifies the requirements for each TTS engine, fixes the default RMVPE weights path and hides verbose HuBERT INFO messages while keeping warnings and errors. Install and launch 2.4.0 first. Open <strong>Other → Update Ilaria RVC</strong> and install <strong>2.4.1</strong> when it appears.</td>
 </tr>
 <tr>
-<td>2.4.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.0">2.4.0</a></td>
 <td>The Windows package moves the app and runtime into app/ and voice models to the root models/ folder. Adds Colab and Lightning AI Studio notebooks, optional embedder download guidance in Training, and Lyery’s Legacy Core V1.5v2 (32 kHz, HiFi-GAN, ContentVec). The bundled runtime repairs pip and includes pywin32.</td>
 </tr>
 <tr>
-<td>2.3.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.3.0">2.3.0</a></td>
 <td>RMVPE High Register adds pitch modes, detection limits and an F0 comparison plot for high singing notes. ElevenLabs joins the TTS engines. Enter your ElevenLabs API key and select a voice. Start with a short line before converting the generated speech. MRF HiFi-GAN is available for training and inference. The pretrained catalog adds 15 generator/discriminator pairs, including KLM 4.4 X1 and X2 at 40 kHz. Match the pair to your vocoder and sample rate. Portuguese HuBERT Base is an optional inference embedder. In RVC v2 Training you can upload and save a custom HuBERT embedder. The app selects it and carries its configuration into the exported model.</td>
 </tr>
 <tr>
-<td>2.2.2.1</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#222">2.2.2.1</a></td>
 <td>Updater bridge that prepares the refreshed 2.2.2 installation for 2.3.0.</td>
 </tr>
 <tr>
-<td>2.2.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.2.2">2.2.2</a></td>
 <td>Uses PyTorch’s restricted checkpoint loader for voice models, model tools, ONNX export and training weights. The refreshed Windows ZIP includes Python 3.10 and PyTorch 2.10.0 with CUDA 12.8. Older NVIDIA GPUs use the downloadable CUDA 12.6 runtime. This update also fixes PyAV decoding and WAV export and reports preprocessing progress while writing segments. The 2.2.2 Kaggle notebook installs PyTorch and TorchAudio 2.10.0 with CUDA 12.8.</td>
 </tr>
 <tr>
-<td>2.2.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.2.1">2.2.1</a></td>
 <td>The shared waveform player has a playback volume slider for inputs, results and previews. Use it to listen more quietly or compare clips at similar levels. It adjusts playback only. To change the level of the converted file, adjust Gain in Post-Process and convert again.</td>
 </tr>
 <tr>
-<td>2.2.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.2.0">2.2.0</a></td>
 <td>Adds Windows inference and training support for NVIDIA GeForce RTX 50 series (Blackwell) with PyTorch 2.7.1 and CUDA 12.8. The launcher detects Blackwell, prepares the runtime on first launch (internet and free disk space required), and checks CUDA forward and backward execution. Other GPUs retain their runtime. Also updates ContentVec loading, checkpoint resume and STFT handling.</td>
 </tr>
 <tr>
-<td>2.1.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.2">2.1.2</a></td>
 <td>Standardized the three header labels as <strong>Ilaria’s Ko-Fi Shop</strong>, <strong>Ilaria’s RVC Website</strong>, and <strong>Ilaria’s Docs</strong>.</td>
 </tr>
 <tr>
-<td>2.1.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.1">2.1.1</a></td>
 <td>Added a heart-styled button for Ilaria Docs next to the website link.</td>
 </tr>
 <tr>
-<td>2.1.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.1.0">2.1.0</a></td>
 <td>Added the website button, live dashboard metrics for the active run, and better startup and refresh behavior in embedded TensorBoard.</td>
 </tr>
 <tr>
-<td>2.0.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.0.0">2.0.0</a></td>
 <td>Introduced the Training Dashboard, embedded TensorBoard, diagnostic reports and 12-second Dataset Checker previews. Optional embedders became individual downloads.</td>
 </tr>
 <tr>
-<td>1.9.3</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.3">1.9.3</a></td>
 <td>Introduced advanced audio processing, five inference export formats, configurable embedders and custom HuBERT installation.</td>
 </tr>
 <tr>
-<td>1.9.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.2">1.9.2</a></td>
 <td>Added public Google Drive and MEGA links to the voice model downloader.</td>
 </tr>
 <tr>
-<td>1.9.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.9.1">1.9.1</a></td>
 <td>Added sample-rate checks when reusing an experiment name, avoiding a training crash on incompatible configurations.</td>
 </tr>
 <tr>
-<td>1.9.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v1.9.0">1.9.0</a></td>
 <td>Added FCPE, streamed model imports with cancellation, a reorganized Other tab and expandable offline release notes.</td>
 </tr>
 <tr>
-<td>1.8.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.8.1">1.8.1</a></td>
 <td>Updated completion and test sounds while retaining the Windows error sound.</td>
 </tr>
 <tr>
-<td>1.8.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.8.0">1.8.0</a></td>
 <td>Introduced the hidden-console launcher, UI restart control, Audio Analyzer and a shared folder layout for models and their indexes.</td>
 </tr>
 <tr>
-<td>1.7.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.2">1.7.2</a></td>
 <td>Fixed conversion without an index and named Single and Batch output files after the selected voice.</td>
 </tr>
 <tr>
-<td>1.7.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.1">1.7.1</a></td>
 <td>Suppressed a specific Windows connection-close traceback while preserving other error messages.</td>
 </tr>
 <tr>
-<td>1.7.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.7.0">1.7.0</a></td>
 <td>Added Edge and offline Windows TTS, waveform players and background preparation for pitch extraction and supported default models.</td>
 </tr>
 <tr>
-<td>1.6.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.6.0">1.6.0</a></td>
 <td>Added the persistent training queue, exact step targets, RefineGAN and Spin-v2 options, paired pretrained downloads, more pitch extractors and ZIP export.</td>
 </tr>
 <tr>
-<td>1.5.2</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.2">1.5.2</a></td>
 <td>Improved duplicate-launch diagnostics and checked dataset availability before each training stage.</td>
 </tr>
 <tr>
-<td>1.5.1</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.1">1.5.1</a></td>
 <td>Blocked preprocessing while a dataset import was active or the dataset path was unusable. Added the offline change history panel.</td>
 </tr>
 <tr>
-<td>1.5.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.5.0">1.5.0</a></td>
 <td>Introduced drag-and-drop dataset import and management, the PC training advisor and optional completion and error alerts.</td>
 </tr>
 <tr>
-<td>1.4.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.4.0">1.4.0</a></td>
 <td>Added training previews, resumable Stop and save, and the Dataset Checker.</td>
 </tr>
 <tr>
-<td>1.3.0</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#130">1.3.0</a></td>
 <td>Validated the update path from 1.2, showed the installed version in the console and prepared a smaller Windows package.</td>
 </tr>
 <tr>
-<td>1.2.0</td>
+<td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/1.2.0">1.2.0</a></td>
 <td>Added the built-in updater with verification and recovery, FP32/FP16 training selection, and Model information.</td>
 </tr>
 <tr>
-<td>1.1 Beta</td>
+<td><a href="https://github.com/TheStingerX/Ilaria-RVC/blob/main/docs/CHANGELOG.md#11-beta">1.1 Beta</a></td>
 <td>Introduced the themed interface, numbered training workflow, drag-and-drop conversion, automatic index matching, model imports and merging, and the app glossary.</td>
 </tr>
 </tbody>
@@ -404,7 +404,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T20:43:49.000Z">24/11/2026 · 21:43</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T20:57:00.000Z">24/11/2026 · 21:57</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
