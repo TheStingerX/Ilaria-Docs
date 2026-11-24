@@ -36,9 +36,9 @@ Si tiene más de una GPU, lea el registro del iniciador para ver qué tiempo de 
 
 ### Por qué no debes actualizar PyTorch manualmente
 
-Ilaria RVC incluye una combinación probada de **PyTorch (2.10.0)**, **CUDA (12.8 o 12.6)**, 	orchaudio, 	orchvision, aiss y dependencias de audio. **No** ejecutes pip install --upgrade torch manualmente:
+Ilaria RVC incluye una combinación probada de **PyTorch (2.10.0)**, **CUDA (12.8 o 12.6)**, `torchaudio`, `torchvision`, `faiss` y dependencias de audio. **No** ejecutes `pip install --upgrade torch` manualmente:
 
-- Actualizar PyTorch por tu cuenta puede romper 	orchaudio, airseq, onnxruntime o extensiones compiladas.
+- Actualizar PyTorch por tu cuenta puede romper `torchaudio`, `fairseq`, `onnxruntime` o extensiones compiladas.
 - Versiones más nuevas pueden eliminar soporte para GPUs antiguas (Maxwell, Pascal, Volta) o causar UnpicklingError.
 - Espera siempre una actualización oficial de Ilaria RVC en lugar de modificar el runtime portátil.
 
