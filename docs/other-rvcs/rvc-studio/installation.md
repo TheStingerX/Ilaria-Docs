@@ -7,25 +7,23 @@ permalink: /ilaria-rvc/rvc-studio/installation/
 
 # RVC Studio · Installation
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Reviewed version](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Windows
+RVC Studio by SayanoAI is a Streamlit WebUI for training voice models and making covers from recordings. These steps refer to the GitHub revision linked above. The project describes its main branch as experimental.
 
-RVC Studio is a local Avalonia desktop app for realtime RVC. Install the .NET 10 SDK, Python 3.10–3.12 and Git. Check that Python and curl.exe are available in PowerShell. The app uses PortAudio. NVIDIA acceleration needs compatible NVIDIA drivers and CUDA/cuDNN libraries. From the checkout root, run setup and launch the project.
+## Setup
 
-~~~powershell
-.\setup.ps1
-dotnet run --project RVCStudio/RVCStudio.csproj
-~~~
-
-## Linux and shared assets
-
-On Linux install .NET 10 SDK, Python with venv, PortAudio, curl and sha256sum. Setup builds the platform-specific converter, downloads about 707 MiB of shared ContentVec/RMVPE models and verifies hashes. Run setup on the target OS and architecture. The ONNX backend falls back to CPU when CUDA cannot initialize.
+On Windows, extract the source into its own folder and run `conda-installer.bat`. If Miniconda is already installed, start with `conda-start.bat`. The launcher creates a Python 3.10 environment if needed, installs the dependencies and opens Streamlit. Open the local URL printed by Streamlit. For manual setup, activate a separate environment and run the commands below from the folder containing `Home.py`.
 
 ~~~bash
-chmod +x setup.sh
-./setup.sh
-dotnet run --project RVCStudio/RVCStudio.csproj
+python -m pip install -r requirements.txt
+streamlit run Home.py
 ~~~
 
-[Usage and troubleshooting](usage.md)
+## Base assets
+
+Use the app’s downloads or the upstream Hugging Face dataset for base assets. Keep these separate from the voice checkpoint you want to use. If FFmpeg or eSpeak fails, check the upstream bundled-tools instructions. The repository also includes a Colab notebook and a Docker Compose file configured to request NVIDIA GPU 0. Start with the local setup for audio devices connected to your computer.
+
+[Colab](https://colab.research.google.com/github/SayanoAI/RVC-Studio/blob/main/RVC_Studio.ipynb) · [FFmpeg / eSpeak](https://github.com/SayanoAI/RVC-Studio/blob/main/dist/README.md)
+
+[→ First cover](usage.md)

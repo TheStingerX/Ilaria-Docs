@@ -7,14 +7,18 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 
 # RVC Studio · Uso e risoluzione dei problemi
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Versione consultata](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Importare la voce
+## Prima cover
 
-Importa uno ZIP che contenga un generatore RVC ONNX compatibile o un `.pth` esportato per inferenza, più il relativo `.index` FAISS se disponibile. Se sono presenti entrambi i formati, l’app preferisce ONNX. Il convertitore incluso esporta i `.pth` in ONNX e prepara le feature di retrieval quando trova l’indice. Il risultato va in `Models/<voice>/model.onnx` con l’eventuale `features.rvci`. Un ONNX generico o un checkpoint di training non è un generatore utilizzabile.
+Avvia il backend da **RVC Server**. Dopo aver aggiunto i file, apri **Inference** e premi **Refresh Data**. Scegli un breve WAV, FLAC, OGG o MP3 da `songs/`. Metti il checkpoint RVC v2 per l’inferenza in `models/RVC/` e l’eventuale indice abbinato in `models/RVC/.index/`. Seleziona la voce e un modello per estrarre il cantato. Il modello di pre-elaborazione aggiuntivo è facoltativo. Premi **Save Options** e poi **1-Click VC**. Se la voce non compare, controlla la cartella e aggiorna l’elenco prima di riavviare.
 
-## Microfono e latenza
+## Addestrare una voce
 
-Seleziona voce, microfono fisico e cuffie, poi premi **Start voice conversion**. Parti con pitch a zero e prova il retrieval separatamente. PortAudio apre uno stream duplex mono a 48 kHz. ContentVec usa audio a 16 kHz, RMVPE calcola F0 quando serve e l’uscita viene ricampionata a 48 kHz. Se senti interruzioni, controlla livelli, tempo d’inferenza e underrun. Verifica che CUDA si sia inizializzata. Per Discord o OBS usa un cavo virtuale dopo la prova in cuffia.
+In **Train**, scegli la cartella del dataset e un nome per l’esperimento. Pre-elabora le registrazioni, estrai le feature e avvia il training. Prima di partire verifica che i pretrain del generatore e del discriminatore corrispondano alle impostazioni dell’esperimento. Genera l’indice a parte, se ti serve. Se un passaggio è disattivato, verifica che il precedente abbia generato i file nello stesso esperimento. Ascolta i checkpoint esportati sullo stesso audio di prova prima di sceglierne uno.
 
-[Installazione](installation.md)
+## TTS e conversione in tempo reale
+
+In **Text to Speech**, scegli un motore di sintesi e una voce RVC. Genera e ascolta una frase breve, poi premi **Convert Speech** e salva il risultato. Il sorgente esaminato include anche **Realtime Conversion**. Seleziona ingresso e uscita sul computer che esegue l’app e prova con le cuffie per evitare il ritorno audio. Verifica che funzioni sulla tua configurazione prima di usarla dal vivo.
+
+[← Configurazione](installation.md)

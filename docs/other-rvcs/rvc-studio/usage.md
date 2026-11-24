@@ -7,14 +7,18 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 
 # RVC Studio · Usage and troubleshooting
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Reviewed version](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Import the voice
+## First cover
 
-Import a ZIP containing a compatible RVC ONNX generator or an exported inference `.pth`, plus its matching FAISS `.index` if available. The app prefers ONNX when both formats are present. For `.pth`, the bundled converter exports ONNX. It also prepares retrieval features from the index when present. The app stores the result in `Models/<voice>/model.onnx` and optional `features.rvci`. A random ONNX graph or a training checkpoint is not a usable RVC generator.
+Start the backend in **RVC Server**, then open **Inference** and click **Refresh Data** after adding files. Pick a short WAV, FLAC, OGG or MP3 from `songs/`. Put the RVC v2 inference checkpoint in `models/RVC/` and its matching index, if available, in `models/RVC/.index/`. Select the voice and a vocal extraction model. The extra preprocessing model is optional. Click **Save Options**, then **1-Click VC**. If the model does not appear, check the folder and refresh before restarting the app.
 
-## Microphone and latency
+## Train a voice
 
-Select the imported voice, physical mic and headphones, then click **Start voice conversion**. Start at zero pitch shift and test retrieval separately. PortAudio runs a mono 48 kHz duplex stream. Inside the pipeline ContentVec uses 16 kHz audio, RMVPE supplies F0 when needed and the output is resampled to the stream rate. If you hear gaps, check input/output levels, inference time and underruns. Confirm CUDA actually initialized before diagnosing GPU performance. For Discord or OBS, route to a virtual cable only after the headphones test works.
+Open **Train**, choose a dataset folder and an experiment name. Preprocess the recordings, extract features, then train the model. Check that the generator and discriminator pretrains match the experiment settings before starting. Build the retrieval index separately if you want to use it. If a later step is disabled, check that the previous stage completed and wrote its files under the same experiment. Listen to exported checkpoints on the same test clip before choosing one.
 
-[Installation](installation.md)
+## TTS and live conversion
+
+In **Text to Speech**, choose a synthesis engine and RVC voice. Generate and listen to a short sentence first, then run **Convert Speech** and save the converted result. The reviewed source also has a **Realtime Conversion** page. Choose the input and output devices on the host and try headphones first to avoid feedback. Verify operation on your own setup before depending on it for a live session.
+
+[← Setup](installation.md)

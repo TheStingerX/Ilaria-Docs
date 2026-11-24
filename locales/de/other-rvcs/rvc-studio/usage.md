@@ -7,14 +7,18 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 
 # RVC Studio · Nutzung und Fehlerbehebung
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Geprüfte Version](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Stimme importieren
+## Erstes Cover
 
-Importiere eine ZIP mit passendem RVC-ONNX-Generator oder exportiertem Inferenz-`.pth` und optional passendem FAISS-`.index`. Die App bevorzugt ONNX, wenn beides vorhanden ist. Der Konverter exportiert `.pth` als ONNX und bereitet vorhandene Indexmerkmale auf. Ergebnis sind `Models/<voice>/model.onnx` und optional `features.rvci`. Ein beliebiger ONNX-Graph oder Trainingscheckpoint eignet sich nicht.
+Starte das Backend unter **RVC Server**. Öffne **Inference** und klicke nach dem Hinzufügen der Dateien auf **Refresh Data**. Wähle einen kurzen WAV-, FLAC-, OGG- oder MP3-Ausschnitt aus `songs/`. Lege den RVC-v2-Checkpoint in `models/RVC/` und den passenden Index, falls vorhanden, in `models/RVC/.index/` ab. Wähle Stimme und Gesangstrennung. Die zusätzliche Vorverarbeitung ist freiwillig. Klicke auf **Save Options** und **1-Click VC**. Fehlt die Stimme, prüfe den Ordner und aktualisiere die Liste.
 
-## Mikrofon und Latenz
+## Eine Stimme trainieren
 
-Wähle Stimme, physisches Mikrofon und Kopfhörer und starte **Start voice conversion**. Beginne ohne Tonhöhenverschiebung und teste den Index separat. PortAudio arbeitet mono und vollduplex mit 48 kHz. ContentVec nutzt 16 kHz, RMVPE liefert bei Bedarf F0 und das Ergebnis wird auf 48 kHz resampelt. Prüfe bei Aussetzern Pegel, Inferenzzeit und Underruns sowie den CUDA-Status. Teste Kopfhörer vor dem virtuellen Kabel.
+Wähle unter **Train** den Datenordner und einen Experimentnamen. Bereite die Daten vor, extrahiere Merkmale und starte das Training. Prüfe die Pretrains für Generator und Diskriminator. Erstelle den Index bei Bedarf separat. Ist ein Schritt deaktiviert, prüfe die Ausgaben des vorherigen Schritts. Vergleiche Checkpoints mit derselben Aufnahme.
 
-[Installation](installation.md)
+## TTS und Live-Konvertierung
+
+Wähle unter **Text to Speech** Synthese und RVC-Stimme. Höre zuerst einen kurzen Satz an, klicke auf **Convert Speech** und speichere das Ergebnis. Im Quellcode gibt es auch **Realtime Conversion**. Wähle Ein- und Ausgabegerät auf dem Rechner, auf dem die App läuft. Teste mit Kopfhörern, bevor du die Anwendung live einsetzt.
+
+[← Einrichtung](installation.md)

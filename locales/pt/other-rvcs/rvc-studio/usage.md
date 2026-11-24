@@ -7,14 +7,18 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 
 # RVC Studio · Utilização e resolução de problemas
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Versão consultada](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Importar a voz
+## Primeira versão
 
-Importa um ZIP com um gerador RVC ONNX compatível ou um `.pth` de inferência, mais o `.index` FAISS correspondente, se existir. A aplicação prefere ONNX se houver ambos. O conversor exporta `.pth` para ONNX e prepara o índice quando disponível. Os resultados ficam em `Models/<voice>/model.onnx` e opcionalmente `features.rvci`. Um ONNX genérico ou checkpoint de treino não serve como gerador.
+Inicia o backend em **RVC Server**. Em **Inference**, carrega em **Refresh Data** depois de adicionares os ficheiros. Escolhe um WAV, FLAC, OGG ou MP3 curto em `songs/`. Coloca o checkpoint RVC v2 em `models/RVC/` e o índice correspondente, se houver, em `models/RVC/.index/`. Escolhe uma voz e um modelo de extração vocal. O pré-processamento adicional é opcional. Carrega em **Save Options** e **1-Click VC**. Se a voz não aparecer, confirma a pasta e atualiza a lista.
 
-## Microfone e latência
+## Treinar uma voz
 
-Escolhe voz, microfone físico e auscultadores e carrega em **Start voice conversion**. Começa com o tom a zero e testa o índice separadamente. O PortAudio usa um fluxo duplex mono a 48 kHz. O ContentVec recebe áudio a 16 kHz, o RMVPE estima F0 quando necessário e a saída volta a 48 kHz. Se houver cortes, verifica níveis, tempo de inferência e underruns. Confirma o CUDA antes de avaliar a GPU. Testa os auscultadores antes do cabo virtual.
+Em **Train**, escolhe a pasta do dataset e o nome da experiência. Pré-processa, extrai as características e treina o modelo. Confirma que os pretrains do gerador e discriminador são compatíveis. Cria o índice separadamente se precisares dele. Se um passo estiver desativado, verifica o resultado do anterior. Compara checkpoints com o mesmo áudio de teste.
 
-[Instalação](installation.md)
+## TTS e conversão em direto
+
+Em **Text to Speech**, escolhe o motor e a voz RVC. Ouve uma frase curta, carrega em **Convert Speech** e guarda o resultado. O código inclui **Realtime Conversion**. Escolhe a entrada e a saída no computador onde a aplicação corre. Testa com auscultadores antes de usar a conversão em direto.
+
+[← Configuração](installation.md)

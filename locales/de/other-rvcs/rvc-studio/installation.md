@@ -7,25 +7,23 @@ permalink: /ilaria-rvc/rvc-studio/installation/
 
 # RVC Studio · Installation
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Geprüfte Version](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Windows
+RVC Studio von SayanoAI ist eine Streamlit-Oberfläche für Stimmtraining und Covers aus vorhandenen Aufnahmen. Diese Schritte beziehen sich auf die verlinkte Revision. Der Hauptbranch gilt laut Projekt als experimentell.
 
-RVC Studio ist eine lokale Avalonia-Desktop-App für Echtzeit-RVC. Installiere .NET 10 SDK, Python 3.10–3.12 und Git. Prüfe Python und curl.exe in PowerShell. Die App verwendet PortAudio. Für NVIDIA-Beschleunigung brauchst du passende Treiber und CUDA/cuDNN. Starte Setup und Projekt im Repository-Stammordner.
+## Einrichtung
 
-~~~powershell
-.\setup.ps1
-dotnet run --project RVCStudio/RVCStudio.csproj
-~~~
-
-## Linux und gemeinsame Ressourcen
-
-Installiere unter Linux .NET 10 SDK, Python mit venv, PortAudio, curl und sha256sum. Das Setup baut den plattformspezifischen Konverter, lädt rund 707 MiB ContentVec/RMVPE-Modelle und prüft deren Hashes. Nutze das Zielsystem und die Zielarchitektur. ONNX weicht auf CPU aus, wenn CUDA nicht startet.
+Entpacke unter Windows den Quellcode und starte `conda-installer.bat`. Ist Miniconda bereits installiert, verwende `conda-start.bat`. Der Launcher erstellt bei Bedarf eine Python-3.10-Umgebung, installiert die Abhängigkeiten und startet Streamlit. Öffne die lokale Adresse. Für die manuelle Installation aktiviere eine eigene Umgebung und führe die Befehle im Ordner mit `Home.py` aus.
 
 ~~~bash
-chmod +x setup.sh
-./setup.sh
-dotnet run --project RVCStudio/RVCStudio.csproj
+python -m pip install -r requirements.txt
+streamlit run Home.py
 ~~~
 
-[Nutzung und Fehlerbehebung](usage.md)
+## Basisressourcen
+
+Lade die Basisressourcen über die Anwendung oder Hugging Face. Füge den Stimmcheckpoint separat hinzu. Bei FFmpeg- oder eSpeak-Fehlern helfen die Anweisungen im Repository. Es gibt auch ein Colab-Notebook und eine Docker-Compose-Datei, die NVIDIA-GPU 0 anfordert. Für angeschlossene Audiogeräte beginne mit einer lokalen Installation.
+
+[Colab](https://colab.research.google.com/github/SayanoAI/RVC-Studio/blob/main/RVC_Studio.ipynb) · [FFmpeg / eSpeak](https://github.com/SayanoAI/RVC-Studio/blob/main/dist/README.md)
+
+[→ Erstes Cover](usage.md)
