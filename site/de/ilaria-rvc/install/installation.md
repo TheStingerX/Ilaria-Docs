@@ -12,9 +12,9 @@ Laden Sie den unterstützten NVIDIA-Build von [Hugging Face](https://huggingface
 
 ### Warum du PyTorch nicht manuell aktualisieren solltest
 
-Ilaria RVC enthält eine getestete Kombination aus **PyTorch (2.10.0)**, **CUDA (12.8 oder 12.6)**, 	orchaudio, 	orchvision, aiss und Audio-Paketen. Führe **kein** manuelles pip install --upgrade torch aus:
+Ilaria RVC enthält eine getestete Kombination aus **PyTorch (2.10.0)**, **CUDA (12.8 oder 12.6)**, `torchaudio`, `torchvision`, `faiss` und Audio-Paketen. Führe **kein** manuelles `pip install --upgrade torch` aus:
 
-- Ein manuelles PyTorch-Upgrade kann 	orchaudio, airseq, onnxruntime oder C++/CUDA-Erweiterungen beschädigen.
+- Ein manuelles PyTorch-Upgrade kann `torchaudio`, `fairseq`, `onnxruntime` oder C++/CUDA-Erweiterungen beschädigen.
 - Neuere Builds können ältere GPUs (Maxwell, Pascal, Volta) ausschließen oder UnpicklingError auslösen.
 - Warte immer auf ein offizielles Ilaria-RVC-Update statt die portable Laufzeit manuell zu ändern.
 
