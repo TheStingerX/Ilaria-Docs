@@ -73,3 +73,9 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Comparer les applications](../reference/tools.md)
+
+## Autres outils RVC
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)

@@ -73,3 +73,9 @@ For file conversion, compare the same input clip at the same output volume. For 
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Compare all apps](../reference/tools.md)
+
+## Additional RVC tools
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)
