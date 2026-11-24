@@ -4,12 +4,13 @@
 
 ## Quelle version cette documentation décrit-elle ?
 
-La dernière version Windows est la **2.4.7**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
+La dernière version Windows est la **2.4.8**. Vérifiez votre version installée sous **Autre → Mettre à jour Ilaria RVC**. Utilisez **Toutes les modifications jusqu'à présent** pour parcourir les notes version par version, même hors ligne.
 
 ## Toutes les versions
 
  | Version | Points forts |
 | --- | --- |
+| [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 ajoute Legacy Core V1.5 à 32 et 40 kHz au téléchargeur. Les quatre options Legacy Core utilisent `HiFi-GAN` + `ContentVec`. De la version 2.4.2 à la 2.4.7, utilisez **Other → Update Ilaria RVC → Check for updates → Download and restart**. Le ZIP de mise à jour exclut le runtime Windows et les poids des modèles. |
 | 2.4.7 | Nouveau paquet Windows complet (`ILARIA_RVC-2.4.7.zip`). Restaure les téléchargements autorisés des pretrained **Legacy Core 1.5 V2** et **1.6** à `32 kHz`, et améliore la récupération après mise à jour interrompue (les fichiers modifiés sont conservés dans une sauvegarde séparée pendant la restauration). De **2.4.2 à 2.4.6**, ouvrez **Other → Update Ilaria RVC → Check for updates** puis **Download and restart**. |
 | 2.4.6 | Ajoute **KLM Vocal ContentVec** (`klm-vocal-contentvec`) en téléchargement optionnel pour l'Inférence et l'Entraînement RVC v2, et ajoute **43 paires G/D KLM vérifiées** dans **Recommended pretrained models** avec leurs sample rates (la compatibilité varie selon la paire). Depuis **2.4.5**, ouvrez **Other → Update Ilaria RVC → Check for updates** puis **Download and restart**. |
 | 2.4.5 | Ajoute la conversion `.pth` ↔ `.safetensors` dans **Other → Convert model weights**, en conservant les métadonnées RVC avec un bouton **Move .pth to models**. Améliore le message d'Inférence pour les fichiers sans configuration vocale et installe automatiquement `safetensors` au premier usage. Depuis **2.4.4**, ouvrez **Other → Update Ilaria RVC → Check for updates** puis **Download and restart**. |

@@ -81,6 +81,7 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 
 !!!note
 **Nota sobre os Legacy Core (`V1.5`, `V1.5v2` e `V1.6`):**
-- **Legacy Core V1.5** (`32 kHz`, `40 kHz`): [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main). Disponível através da cópia indicada. A fonte original `lyery/mode4` foi removida do descarregador do Ilaria RVC na versão 2.4.4.
+- **Legacy Core V1.5** (`32 kHz`, `40 kHz`): [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main).
 - **Legacy Core V1.5v2** e **Legacy Core V1.6** (`32 kHz`) voltaram a estar disponíveis com o consentimento do autor original em [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) e foram restaurados no Ilaria RVC `2.4.7`.
+- **Ilaria RVC 2.4.8** adiciona Legacy Core V1.5 a 32 e 40 kHz ao descarregador. As quatro opções Legacy Core usam `HiFi-GAN` + `ContentVec`. [Notas de lançamento](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8)
 !!!

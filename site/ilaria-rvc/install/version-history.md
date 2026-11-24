@@ -4,12 +4,13 @@
 
 ## Which version does this documentation describe?
 
-The latest Windows release is **2.4.7**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
+The latest Windows release is **2.4.8**. Check your installed version under **Other → Update Ilaria RVC**. Use **All changes so far** there to browse the release-by-release notes even offline.
 
 ## All releases
 
 | Release | Highlights |
 | --- | --- |
+| [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 adds Legacy Core V1.5 at 32 and 40 kHz to the downloader. All four Legacy Core options use `HiFi-GAN` + `ContentVec`. From 2.4.2–2.4.7, use **Other → Update Ilaria RVC → Check for updates → Download and restart**. The update ZIP excludes the Windows runtime and model weights. |
 | 2.4.7 | New full Windows base package (`ILARIA_RVC-2.4.7.zip`). Restores authorized **Legacy Core 1.5 V2** and **1.6** pretrained downloads at `32 kHz`, and improves interrupted update recovery (preserving changed support files in a separate backup while restoring the previous version). From **2.4.2 through 2.4.6**, use **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
 | 2.4.6 | Adds **KLM Vocal ContentVec** (`klm-vocal-contentvec`) as an optional download for Inference and RVC v2 Training, and adds **43 verified KLM G/D pairs** to **Recommended pretrained models** with sample rates listed (training compatibility varies by pair). From **2.4.5**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
 | 2.4.5 | Adds `.pth` ↔ `.safetensors` model weight conversion in **Other → Convert model weights**, preserving RVC metadata and adding a **Move .pth to models** button. Improves the Inference message for files missing voice configuration, and auto-installs `safetensors` on first use if needed. From **2.4.4**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. |
