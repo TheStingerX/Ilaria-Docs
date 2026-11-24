@@ -43,12 +43,12 @@ const pagesByLanguage = new Map(Object.keys(languages).map(lang => {
 const groups = ['start', 'conversion', 'model-training', 'reference'];
 
 const appGroupLabels = {
-  en: ['Model training', 'Voice changers'],
-  it: ['Addestramento modelli', 'Cambia voce'],
-  es: ['Entrenamiento de modelos', 'Cambiadores de voz'],
-  fr: ['Entraînement de modèles', 'Changeurs de voix'],
-  de: ['Modelltraining', 'Stimmwandler'],
-  pt: ['Treino de modelos', 'Alteradores de voz'],
+  en: ['Model Training and Inference', 'Voice changers'],
+  it: ['Addestramento e inferenza', 'Cambia voce'],
+  es: ['Entrenamiento e inferencia', 'Cambiadores de voz'],
+  fr: ['Entraînement et inférence', 'Changeurs de voix'],
+  de: ['Modelltraining und Inferenz', 'Stimmwandler'],
+  pt: ['Treino e inferência', 'Alteradores de voz'],
 };
 const gpuLabels = {
   en: ['GPU compatibility', 'GPU support unconfirmed', 'Legacy', 'Build and model dependent'],
