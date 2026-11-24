@@ -87,7 +87,6 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 **Hinweis zu Legacy Core (`V1.5`, `V1.5v2` und `V1.6`):**
 - **Legacy Core V1.5** (`32 kHz`, `40 kHz`): [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main). Über den verlinkten Reupload verfügbar. Die ursprüngliche Quelle `lyery/mode4` wurde in Version 2.4.4 aus dem Ilaria-RVC-Downloader entfernt.
 - **Legacy Core V1.5v2** und **Legacy Core V1.6** (`32 kHz`) sind mit Zustimmung des Originalautors wieder über [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) verfügbar und wurden in Ilaria RVC `2.4.7` wiederhergestellt.
-- **Wichtig für Legacy Core V1.6**: Im Reupload-Repository sind die Dateinamen **G** und **D** **vertauscht** (`D_LegacyCoreOld.pth` ist **G** und `G_LegacyCoreOld.pth` ist **D**). Achte darauf, jede Datei in das richtige Feld zu laden.
 !!!
 
 > **Kompatibilitätshinweis**: In Ilaria RVC wird RefineGAN-Training speziell bei `32 kHz` mit RVC v2 und Pitch-Guidance unterstützt. Ein `40 kHz`- oder `44.1 kHz`-RefineGAN-Pretrain bei auf `32 kHz` eingestelltem Training schlägt fehl oder liefert kaputte Ergebnisse.
