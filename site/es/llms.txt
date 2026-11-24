@@ -171,3 +171,11 @@
 - [MVSep](https://docs.ilariarvc.shop/es/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) es una plataforma web gratuita en la nube para separación y restauración de audio con IA.
 - [Usar MVSep: acceso, cuenta y configuración](https://docs.ilariarvc.shop/es/non-rvc/mvsep/access-and-setup.md): Al ejecutarse en la nube, MVSep no requiere ninguna instalación. Aun así, configurar bien tu cuenta y el formato de salida marca una gran diferencia en calidad.
 - [Guía de MVSep: modelos y presets recomendados](https://docs.ilariarvc.shop/es/non-rvc/mvsep/usage-and-models.md): Estos son los mejores presets de MVSep para conseguir pistas vocales ultra limpias (para entrenamiento RVC, covers o conversión de voz), con enlaces directos que ya seleccionan el algoritmo y las opciones exactas.
+
+### Ilaria Audio Upscaler
+
+- [Ilaria Audio Upscaler](https://docs.ilariarvc.shop/es/non-rvc/ilaria-audio-upscaler/overview.md): GitHub · v1
+- [Instalación y modelos](https://docs.ilariarvc.shop/es/non-rvc/ilaria-audio-upscaler/installation.md): GitHub · v1
+- [Restaurar voz con Sidon](https://docs.ilariarvc.shop/es/non-rvc/ilaria-audio-upscaler/sidon.md): Elige Sidon, descarga Sidon INT8, añade un fragmento con ruido o reverberación, selecciona WAV (PCM) y pulsa Enhance audio. Escucha si las pausas quedan más limpias y las palabras más claras.
+- [Ampliar la banda de voz con AP-BWE](https://docs.ilariarvc.shop/es/non-rvc/ilaria-audio-upscaler/ap-bwe.md): Elige AP-BWE y ajusta el primer número del perfil al ancho de banda útil de la voz. Una señal a 8 kHz contiene frecuencias de hasta unos 4 kHz. Una llamada guardada en WAV a 48 kHz puede seguir teniendo esa banda estrecha.
+- [Preescucha, exportación y resolución de problemas](https://docs.ilariarvc.shop/es/non-rvc/ilaria-audio-upscaler/export.md): Añade uno o más archivos, elige el formato y pulsa Enhance audio. Compara el original y el resultado a 1×. Speed solo cambia la reproducción. Selecciona el resultado y pulsa Save result para conservarlo.

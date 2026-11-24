@@ -171,3 +171,11 @@
 - [MVSep](https://docs.ilariarvc.shop/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) is a free, cloud-based AI audio separation and restoration web platform.
 - [Using MVSep: Access, Account & Setup](https://docs.ilariarvc.shop/non-rvc/mvsep/access-and-setup.md): Because MVSep runs in the cloud, there is nothing to install. However, configuring your account and output settings properly makes a big difference in quality and convenience.
 - [MVSep Guide: Recommended Models & Presets](https://docs.ilariarvc.shop/non-rvc/mvsep/usage-and-models.md): Below are the best MVSep presets for preparing ultra-clean vocal tracks (for RVC training, covers, or voice conversion), complete with direct links that pre-select the exact separation algorithm and options for you.
+
+### Ilaria Audio Upscaler
+
+- [Ilaria Audio Upscaler](https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/overview.md): GitHub · v1
+- [Installation and models](https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/installation.md): GitHub · v1
+- [Restore speech with Sidon](https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/sidon.md): Choose Sidon, download Sidon INT8, add a short noisy or reverberant clip, select WAV (PCM) and run Enhance audio. Listen for quieter pauses and clearer words.
+- [Extend speech bandwidth with AP-BWE](https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/ap-bwe.md): Choose AP-BWE and match the first number in the profile to the usable bandwidth of the speech. An 8 kHz signal carries frequencies up to about 4 kHz. A call saved as a 48 kHz WAV can still have that narrow bandwidth.
+- [Preview, export and troubleshooting](https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/export.md): Add one or more files, choose a format and run Enhance audio. Compare the original and enhanced audio in the player at 1×. Speed changes playback only. Select the enhanced result and click Save result to store it permanently.

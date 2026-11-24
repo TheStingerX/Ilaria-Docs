@@ -171,3 +171,11 @@
 - [MVSep](https://docs.ilariarvc.shop/it/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) è una piattaforma web gratuita basata sul cloud per la separazione e il restauro audio tramite IA.
 - [Usare MVSep: accesso, account e impostazioni](https://docs.ilariarvc.shop/it/non-rvc/mvsep/access-and-setup.md): Poiché MVSep funziona interamente nel cloud, non c'è nulla da scaricare o installare. Tuttavia, impostare correttamente account e formato di output fa una grande differenza.
 - [Guida MVSep: modelli e preset consigliati](https://docs.ilariarvc.shop/it/non-rvc/mvsep/usage-and-models.md): Qui trovi i migliori preset di MVSep per ottenere tracce vocali pulitissime (per training RVC, cover o conversione vocale), con link diretti che preselezionano automaticamente l'algoritmo e le opzioni esatte.
+
+### Ilaria Audio Upscaler
+
+- [Ilaria Audio Upscaler](https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/overview.md): GitHub · v1
+- [Installazione e modelli](https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/installation.md): GitHub · v1
+- [Restaurare il parlato con Sidon](https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/sidon.md): Seleziona Sidon, scarica Sidon INT8, aggiungi un estratto breve con rumore o riverbero, scegli WAV (PCM) e premi Enhance audio. Ascolta se le pause sono più pulite e le parole più chiare.
+- [Estendere la banda vocale con AP-BWE](https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/ap-bwe.md): Scegli AP-BWE e abbina il primo numero del profilo alla banda effettiva del parlato. Un segnale campionato a 8 kHz può contenere frequenze fino a circa 4 kHz.
+- [Anteprima, esportazione e risoluzione dei problemi](https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/export.md): Aggiungi uno o più file, scegli il formato e premi Enhance audio. Confronta originale e risultato nel player a velocità 1×. Speed cambia solo l’ascolto. Seleziona il risultato ed esportalo con Save result: le anteprime non salvate sono temporanee.
