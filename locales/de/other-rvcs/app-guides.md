@@ -56,3 +56,9 @@ Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Live
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Alle Apps vergleichen](../reference/tools.md)
+
+## Weitere RVC-Werkzeuge
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)

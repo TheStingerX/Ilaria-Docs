@@ -56,3 +56,9 @@ Per i file, confronta lo stesso campione allo stesso volume. Per il tempo reale,
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Confronta tutte le app](../reference/tools.md)
+
+## Altri strumenti RVC
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)

@@ -56,3 +56,9 @@ Compara ficheiros com a mesma fonte e o mesmo volume. No modo em tempo real, gra
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Comparar todas as aplicações](../reference/tools.md)
+
+## Outras ferramentas RVC
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)

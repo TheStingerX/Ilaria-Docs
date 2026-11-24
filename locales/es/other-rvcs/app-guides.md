@@ -56,3 +56,9 @@ Compara archivos con la misma fuente y el mismo volumen. Para el directo, graba 
 
 - [RVC WebUI (Mainline - Original RVC)](mainline/installation.md) · [w-okada VCClient](okada/installation.md) · [RVC GUI](rvc-gui/file-conversion.md) · [RVC Blue](rvc-blue/installation.md)
 - [Compara todas las aplicaciones](../reference/tools.md)
+
+## Otras herramientas RVC
+
+- [rvc-cli](rvc-cli/installation.md)
+- [RVC Studio](rvc-studio/installation.md)
+- [Mangio RVC Fork](mangio/installation.md)
