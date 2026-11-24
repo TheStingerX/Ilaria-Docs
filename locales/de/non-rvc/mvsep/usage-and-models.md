@@ -11,22 +11,13 @@ Hier findest du die besten MVSep-Presets für extrem saubere Vocal-Spuren (für 
 
 ## 1. Vocals und SFX trennen (Vocals & SFX Removal)
 
-Nutze diese zuerst, um Hintergrundmusik, Soundeffekte und Umgebungsgeräusche zu entfernen.
+Beginne mit [MelBand Roformer · becruily deux](https://mvsep.com/home?sep_type=48&add_opt1=11), um Gesang und Instrumental zu trennen. Vergleiche mit **BS Polarformer**. Für Dialoge mit Soundeffekten eignet sich **MVSep DnR v3**.
 
-- **BS Polarformer** - [Preset auf MVSep öffnen](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0)
-  - Hochpräzise Band-Split-Roformer-Variante mit **Polar Positional Embeddings (PoPE)** für langen Audiokontext.
-  - **Wann nutzen**: erste Wahl für saubere Vocals mit minimalem Instrumental-Bleed.
-- **MVSep DnR v3** - [Preset auf MVSep öffnen](https://mvsep.com/home?sep_type=123&add_opt1=163)
-  - Filmisches Multi-Stem-Modell (*Divide and Remaster*), das Audio in **Sprache, Musik und SFX** aufteilt.
-  - **Wann nutzen**: Spieldialoge, Filme, Videos oder Clips mit vielen Soundeffekten.
-
-> **Empfehlung**: **BS Polarformer** ist allein meist besser, aber die Kombination **beider** beseitigt nahezu jede Restchance auf Hintergrundgeräusche oder SFX.
+[BS Polarformer](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0) · [MVSep DnR v3](https://mvsep.com/home?sep_type=123&add_opt1=163)
 
 ## 2. Lead- und Backing-Vocals trennen (Lead & Back Vocals)
 
-- **MVSep Karaoke** - [Preset auf MVSep öffnen](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0)
-  - Trennt **Lead-Vocals** von **Backing-Vocals / Harmonien**.
-  - **Hinweis**: Dieses Modell kann je nach Mix etwas eigenwillig sein und gelegentlich Lead- und Backing-Vocals verwechseln - höre dir immer beide Stems an, es bleibt aber trotzdem sehr nützlich.
+Nutze [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0) für den **Leadgesang** und [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0). For **backing vocals (BGV)**, start with [BS Roformer · frazer & becruily](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0) für den **Hintergrundgesang (BGV)**. Vergleiche die Ergebnisse am selben Refrain.
 
 ## 3. Hall entfernen (Reverb Removal)
 
@@ -53,7 +44,7 @@ Wende diese auf deine isolierte Vocal-Spur an, um trockene Aufnahmen ohne Raumha
 
 ## Empfohlener Schritt-für-Schritt-Workflow
 
-1. **Vocals / Sprache extrahieren**: **BS Polarformer** anwenden (und bei verbleibenden SFX zusätzlich **MVSep DnR v3**).
-2. **Lead-Vocal isolieren** *(nur bei Songs mit Harmonien)*: **MVSep Karaoke** anwenden.
+1. **Vocals / Sprache extrahieren**: Vergleiche Deux und BS Polarformer bei Songs. Nutze DnR v3 für Dialoge mit Soundeffekten.
+2. **Lead-Vocal isolieren** *(nur bei Songs mit Harmonien)*: Nutze anvuew für den Leadgesang und frazer & becruily für den Hintergrundgesang.
 3. **Hall entfernen**: **DeReverb Stereo** und **DeReverb Room** ausführen (plus **DeEffect** nur bei starken Stimmeffekten/Hall).
 4. **Endbereinigung**: Mit **DeNoise by aufr33 and gabox** abschließen und als **WAV** herunterladen.

@@ -11,22 +11,13 @@ Estos son los mejores presets de MVSep para conseguir pistas vocales ultra limpi
 
 ## 1. Eliminación de música y efectos (Vocals & SFX Removal)
 
-Úsalos primero para quitar música de fondo, efectos de sonido y ruido ambiental de tu audio original.
+Empieza con [MelBand Roformer · becruily deux](https://mvsep.com/home?sep_type=48&add_opt1=11) para separar las voces del instrumental. Compara con **BS Polarformer** si quedan instrumentos o faltan sílabas. Para diálogos con efectos sonoros, prueba **MVSep DnR v3**.
 
-- **BS Polarformer** - [Abrir preset en MVSep](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0)
-  - Variante de Band-Split Roformer de alta precisión con **Polar Positional Embeddings (PoPE)** para un contexto largo y limpio.
-  - **Cuándo usarlo**: primera opción principal para voces limpias con mínima filtración instrumental.
-- **MVSep DnR v3** - [Abrir preset en MVSep](https://mvsep.com/home?sep_type=123&add_opt1=163)
-  - Modelo cinematográfico multi-stem (*Divide and Remaster*) que separa el audio en **voz hablada, música y efectos de sonido (SFX)**.
-  - **Cuándo usarlo**: diálogos de juegos, películas, vídeos o clips con muchos efectos sonoros.
-
-> **Recomendación**: **BS Polarformer** suele ser mejor por sí solo, pero usar **ambos** elimina prácticamente cualquier posibilidad de ruido de fondo o SFX residuales.
+[BS Polarformer](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0) · [MVSep DnR v3](https://mvsep.com/home?sep_type=123&add_opt1=163)
 
 ## 2. Separar voz principal y coros (Lead & Back Vocals)
 
-- **MVSep Karaoke** - [Abrir preset en MVSep](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0)
-  - Separa la **voz principal (lead)** de los **coros / segundas voces (backing vocals)**.
-  - **Nota**: puede ser algo caprichoso y confundir coros y voz principal según la mezcla del audio; escucha ambas pistas antes de descartar nada, aunque sigue siendo muy útil.
+Para la **voz principal**, prueba [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0). Para los **coros (BGV)**, empieza con [BS Roformer · frazer & becruily](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0) y conserva su pista de coros. Prueba ambos en el mismo estribillo y comprueba si queda voz principal en los coros o faltan palabras en la pista principal.
 
 ## 3. Eliminación de reverberación (Reverb Removal)
 
@@ -53,7 +44,7 @@ Pásalos sobre tu pista vocal ya aislada para volver secas las grabaciones con e
 
 ## Flujo paso a paso recomendado
 
-1. **Extraer voz / diálogo**: pasa el audio por **BS Polarformer** (y opcionalmente **MVSep DnR v3** si quedan SFX).
-2. **Aislar voz principal** *(solo canciones con coros)*: usa **MVSep Karaoke**.
+1. **Extraer voz / diálogo**: Compara Deux y BS Polarformer para canciones. Usa DnR v3 para diálogos con efectos sonoros.
+2. **Aislar voz principal** *(solo canciones con coros)*: Usa anvuew para la voz principal y frazer & becruily para los coros.
 3. **Eliminar reverberación**: ejecuta **DeReverb Stereo** y **DeReverb Room** (más **DeEffect** solo si persisten efectos vocales o reverb fuerte).
 4. **Limpieza final**: termina con **DeNoise by aufr33 and gabox** y descarga el resultado en **WAV**.
