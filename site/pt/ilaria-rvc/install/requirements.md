@@ -2,7 +2,7 @@
 
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · O pacote completo para Windows é a versão 2.4.7. O ZIP de atualização 2.5.0 exclui o ambiente de execução e os pesos dos modelos. Da versão 2.4.2 à 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
 
-[Transferir Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPUs compatíveis](../install/gpu-compatibility.md) · [Opções na nuvem](../cloud/cloud.md)
+[Transferir Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPUs compatíveis](gpu-compatibility.md) · [Opções na nuvem](../cloud/cloud.md)
 
 O Ilaria RVC corre localmente no teu PC usando **PyTorch 2.10.0** e **NVIDIA CUDA**. Como a conversão de voz (inferência) e o treino de modelos têm exigências de hardware muito diferentes, consulta ambas as tabelas abaixo antes de instalar.
 
@@ -28,7 +28,7 @@ O pacote Windows do Ilaria RVC foi feito para **GPUs NVIDIA**. Gráficos integra
 
 - **GeForce GTX 16 e RTX 20, 30, 40, 50**: usa diretamente o runtime **PyTorch 2.10.0 + CUDA 12.8** incluído após a extração. Mantém o driver NVIDIA atualizado (especialmente na série RTX 50).
 - **Maxwell, Pascal e Volta** (ex. séries GTX 750/900/1000, TITAN X/V, Tesla P4/P40/P100/V100): no primeiro arranque, `RUN_ILARIA_RVC.bat` transfere e verifica automaticamente **PyTorch 2.10.0 + CUDA 12.6** para `runtime-cu126` e reutiliza-o depois.
-- **Nota de validação**: computação, backpropagation e carregamento do ContentVec foram verificados diretamente numa **RTX 4070**. As restantes placas na [lista de GPUs compatíveis](../install/gpu-compatibility.md) devem funcionar com base na arquitetura e suporte CUDA.
+- **Nota de validação**: computação, backpropagation e carregamento do ContentVec foram verificados diretamente numa **RTX 4070**. As restantes placas na [lista de GPUs compatíveis](gpu-compatibility.md) devem funcionar com base na arquitetura e suporte CUDA.
 
 ### Por capacidade de VRAM (o que podes correr)
 

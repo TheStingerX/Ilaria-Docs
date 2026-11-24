@@ -24,7 +24,7 @@ Votre dataset est le facteur le plus déterminant pour le naturel, la propreté 
 
 ## 2. Préparer et nettoyer votre audio
 
-1. **Séparez la voix de la musique/SFX :** Si la source vient de chansons, vidéos ou jeux, isolez d'abord la voix sèche avec [UVR5](../../non-rvc/uvr5/overview.md) ou [MVSep](../../non-rvc/mvsep/overview.md).
+1. **Séparez la voix de la musique/SFX :** Si la source vient de chansons, vidéos ou jeux, isolez d'abord la voix sèche avec [UVR5](../../non-rvc/audio-separation-tools/uvr5/overview.md) ou [MVSep](../../non-rvc/audio-separation-tools/mvsep/overview.md).
 2. **Prudence avec le débruitage ou dereverb intensif :** N'appliquez ces filtres que si nécessaire. Un traitement trop fort coupe les aigus et crée des artefacts liquides ou métalliques. Comparez toujours l'original et le clip traité.
 3. **Coupez les longs silences et bruits parasites :** Supprimez les longues pauses vides, chocs sur le micro, toux, clics et saturations extrêmes. Gardez de courtes pauses naturelles entre les mots.
 4. **Gardez des durées raisonnables :** Découpez les longs enregistrements en segments propres (environ **3 à 15 secondes**), ou laissez le découpage automatique d'Ilaria RVC s'en charger au prétraitement.

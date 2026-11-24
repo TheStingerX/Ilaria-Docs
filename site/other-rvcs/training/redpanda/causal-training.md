@@ -12,7 +12,7 @@ Prepare clean recordings of one speaker and reserve a short sample for testing. 
 
 The upstream project marks the default CVC base and its fine-tunes for noncommercial use. Use recordings you have permission to train on. In portable installs, start looking in `logs/causalvc/`; in a source checkout, check `runs/models/voice-<name>/voices/`.
 
-[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/causal-voice-changer/overview.md)
+[Set up Redpanda VC](first-run.md) · [File inference](inference.md) · [Realtime voice conversion](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/voice-changers/causal-voice-changer/overview.md)
 
 ## Source and release
 

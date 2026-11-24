@@ -24,7 +24,7 @@ Your dataset is the single biggest factor deciding how natural, clean, and expre
 
 ## 2. Preparing & cleaning your audio
 
-1. **Separate vocals from music/SFX:** If your source comes from songs, videos, or games, extract dry vocals first using [UVR5](../../non-rvc/uvr5/overview.md) or [MVSep](../../non-rvc/mvsep/overview.md).
+1. **Separate vocals from music/SFX:** If your source comes from songs, videos, or games, extract dry vocals first using [UVR5](../../non-rvc/audio-separation-tools/uvr5/overview.md) or [MVSep](../../non-rvc/audio-separation-tools/mvsep/overview.md).
 2. **Be careful with heavy denoising or dereverb:** Only apply noise or reverb removal when truly needed. Aggressive filters can strip crisp high frequencies and create watery, metallic artifacts. Always A/B listen to the original vs processed clip.
 3. **Trim dead air and bad noises:** Cut long silent pauses, loud mic bumps, coughs, clicks, and extreme clipping. Keep short, natural pauses between words so phrasing stays human.
 4. **Keep clip lengths reasonable:** Split very long recordings into clean segments (roughly **3 to 15 seconds** each), or let Ilaria RVC's preprocessing slicer segment them cleanly.

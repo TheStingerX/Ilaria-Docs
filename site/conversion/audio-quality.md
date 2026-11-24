@@ -25,7 +25,7 @@ Before changing advanced sliders, run one diagnostic conversion in **Ilaria RVC*
 
 ## A. Getting a Clean Conversion
 
-- **Source audio & isolated vocals:** RVC expects a single, dry, clean vocal. Tools such as [UVR5](../non-rvc/uvr5/overview.md) or [MVSep](../non-rvc/mvsep/overview.md) can help separate vocals from backing tracks, and specialized models target tasks like denoising, dereverberation, de-essing, or audio restoration depending on the model used (no single tool removes every type of noise or reverb).
+- **Source audio & isolated vocals:** RVC expects a single, dry, clean vocal. Tools such as [UVR5](../non-rvc/audio-separation-tools/uvr5/overview.md) or [MVSep](../non-rvc/audio-separation-tools/mvsep/overview.md) can help separate vocals from backing tracks, and specialized models target tasks like denoising, dereverberation, de-essing, or audio restoration depending on the model used (no single tool removes every type of noise or reverb).
 - **Speech vs. singing:** Speech often tolerates small **Pitch** adjustments, whereas singing over an instrumental track usually keeps **Pitch** at `0` to stay in key with the backing track (a non-octave transposition may be appropriate if the accompaniment's key is also changed).
 - **Model & embedder compatibility:** Leave **Embedder Model** on `Auto (model default)` unless you intentionally trained or downloaded a model requiring a specific encoder (`contentvec`, `spin-v2`, `klm-vocal-contentvec`, etc.). Using an incompatible embedder can cause an error or degrade conversion quality and break index matching.
 - **Non-pitch-guided (`if_f0 == 0`) vs. pitch-guided (`if_f0 == 1`) models:**

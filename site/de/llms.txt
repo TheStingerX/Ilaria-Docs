@@ -162,46 +162,55 @@
 
 - [RVC Model Merger](https://docs.ilariarvc.shop/de/other-rvcs/rvc-model-merger/usage.md): So installierst und nutzt du RVC Model Merger von Ardha27, um zwei kompatible RVC-v2-Stimmenmodelle mit einstellbarem Mischverhältnis zu kombinieren.
 
-## Non-RVC
+## Non-RVC & Audio Tools
 
 
-### YuneVoix
+### Voice Changers
 
-- [YuneVoix (YUNE)](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/overview.md): YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.
-- [YuneVoix installieren und aktualisieren](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/installation.md): YuneVoix ist eine portable Windows-Anwendung: Es wird nichts in Windows installiert, und alle Einstellungen, Stimmen, Logs und Lizenzen liegen direkt neben YuneVoix.exe.
-- [Voice Bank und Live-Nutzung](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/usage.md): Vollständige Einsteiger-Anleitung zum Erstellen von Voice Bank .yvoice-Profilen, Audio-Routing zu Discord, OBS, Spielen oder VRChat, integriertem Monitoring und Wahl zwischen Classic, Learned 4 steps und FlowEdit 3+1.
-- [YuneVoix-Einstellungen Erklärt - Vollständiger Audioqualitäts-Leitfaden](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/settings.md): Vollständige einsteigerfreundliche Übersicht über jede YuneVoix v0.7.1-Einstellung in General, Voice & Timbre, Pitch & Autotune, EQ & Filters und Effects.
-- [YuneVoix Song Cover & Karaoke - Vollständige Einsteiger-Anleitung](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/song-cover-karaoke.md): Vollständige Einsteiger-Anleitung für die Offline-Funktionen Song Cover und Karaoke von YuneVoix PREMIUM, inklusive FlowEdit-Unterschieden, Steuerung, Tastenkürzeln und Fehlerbehebung.
-- [Premium, Lizenz und Fehlerbehebung](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/premium-and-troubleshooting.md): YuneVoix PREMIUM-Lizenzierung (Song Cover & Karaoke), Offline-Aktivierung, Hardware-Regeln, erweiterte NVIDIA- & AMD-Fehlerbehebung und Diagnose.
-- [YuneVoix Changelog](https://docs.ilariarvc.shop/de/non-rvc/yunevoix/changelog.md): Vollständige YuneVoix-Versionshistorie und Changelog von v0.6.0 bis v0.7.1, einschließlich DirectML-, AMD-GPU-, WavLM+- und FlowEdit-3+1-Updates.
 
-### Causal Voice Changer
+#### YuneVoix
 
-- [Causal Voice Changer (CVC)](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/overview.md): Causal Voice Changer (CVC) ist ein 48-kHz-Echtzeit-KI-Stimmenverzerrer, der die Lücke zwischen extrem latenzarmen Systemen (wie Beatrice) und langsameren, klanglich sehr hochwertigen Systemen (wie RVC) schließt.
-- [Causal Voice Changer installieren](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/installation.md): Diese Anleitung führt dich Schritt für Schritt durch die Installation auf Windows oder Linux, auch wenn du noch nie Python oder Git benutzt hast.
-- [Eine Stimme in CVC trainieren](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/training.md): Beim Erstellen einer Stimme in Causal Voice Changer wird der Basis-Decoder auf dein Ziel-Audio feinabgestimmt.
-- [CausalVC Realtime verwenden](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/realtime.md): Sobald du run-training mindestens einmal ausgeführt hast und eine .cvc-Stimme bereitliegt, startest du den Live-Stimmenverzerrer mit:
-- [Leistung, Klangbereinigung & weitere Tools](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/performance-and-tools.md): Nimm Sitzungen direkt in CausalVC Realtime auf (zuerst Konvertierung starten):
-- [Causal Voice Changer Changelog](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/changelog.md): Vollständiger Versionsverlauf und Changelog von Causal Voice Changer (CVC) von v0.1.0 bis v0.3.3.1 mit Support für ältere NVIDIA-GPUs, 100-Hz-v4-Basis und Echtzeit-Fixes.
-- [Kompatible GPUs für Causal Voice Changer](https://docs.ilariarvc.shop/de/non-rvc/causal-voice-changer/gpu-compatibility.md): Vollständige Liste kompatibler NVIDIA-, AMD-Radeon-Grafikkarten und CPU-Setups für Causal Voice Changer (CVC), inklusive v0.3.3.1-Support für GTX 900/10.
+- [YuneVoix (YUNE)](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/overview.md): YuneVoix ist eine Echtzeit-KI-Stimmenkonvertierungs-App für Windows, angetrieben von der YUNE-Engine.
+- [YuneVoix installieren und aktualisieren](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/installation.md): YuneVoix ist eine portable Windows-Anwendung: Es wird nichts in Windows installiert, und alle Einstellungen, Stimmen, Logs und Lizenzen liegen direkt neben YuneVoix.exe.
+- [Voice Bank und Live-Nutzung](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/usage.md): Vollständige Einsteiger-Anleitung zum Erstellen von Voice Bank .yvoice-Profilen, Audio-Routing zu Discord, OBS, Spielen oder VRChat, integriertem Monitoring und Wahl zwischen Classic, Learned 4 steps und FlowEdit 3+1.
+- [YuneVoix-Einstellungen Erklärt - Vollständiger Audioqualitäts-Leitfaden](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/settings.md): Vollständige einsteigerfreundliche Übersicht über jede YuneVoix v0.7.1-Einstellung in General, Voice & Timbre, Pitch & Autotune, EQ & Filters und Effects.
+- [YuneVoix Song Cover & Karaoke - Vollständige Einsteiger-Anleitung](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/song-cover-karaoke.md): Vollständige Einsteiger-Anleitung für die Offline-Funktionen Song Cover und Karaoke von YuneVoix PREMIUM, inklusive FlowEdit-Unterschieden, Steuerung, Tastenkürzeln und Fehlerbehebung.
+- [Premium, Lizenz und Fehlerbehebung](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/premium-and-troubleshooting.md): YuneVoix PREMIUM-Lizenzierung (Song Cover & Karaoke), Offline-Aktivierung, Hardware-Regeln, erweiterte NVIDIA- & AMD-Fehlerbehebung und Diagnose.
+- [YuneVoix Changelog](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/yunevoix/changelog.md): Vollständige YuneVoix-Versionshistorie und Changelog von v0.6.0 bis v0.7.1, einschließlich DirectML-, AMD-GPU-, WavLM+- und FlowEdit-3+1-Updates.
 
-### UVR5
+#### Causal Voice Changer
 
-- [Ultimate Vocal Remover (UVR5)](https://docs.ilariarvc.shop/de/non-rvc/uvr5/overview.md): UVR5 (Ultimate Vocal Remover v5 GUI) ist eine kostenlose Open-Source-Desktop-App zur KI-gestützten Audiotrennung.
-- [UVR5 herunterladen und installieren](https://docs.ilariarvc.shop/de/non-rvc/uvr5/installation.md): Die offiziellen Windows- und macOS-Pakete bringen eine isolierte Python- und PyTorch-Umgebung mit, sodass du Python nicht separat installieren musst.
-- [UVR5-Anleitung & empfohlene Modelle](https://docs.ilariarvc.shop/de/non-rvc/uvr5/usage-and-models.md): Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum Trennen von Vocals, Entfernen von Harmonien/Backing Vocals, Hall/Echo und Rauschen zu wählen (inklusive der empfohlenen Setup-Modelle).
-- [Ultimate Vocal Remover 6 (UVR6): Vorbereitungsguide](https://docs.ilariarvc.shop/de/non-rvc/uvr5/uvr6-preparation.md): Vorbereitender Überblick zu Ultimate Vocal Remover 6 (UVR6), offiziell für Windows am 11. Dezember 2026 angekündigt.
+- [Causal Voice Changer (CVC)](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/overview.md): Causal Voice Changer (CVC) ist ein 48-kHz-Echtzeit-KI-Stimmenverzerrer, der die Lücke zwischen extrem latenzarmen Systemen (wie Beatrice) und langsameren, klanglich sehr hochwertigen Systemen (wie RVC) schließt.
+- [Causal Voice Changer installieren](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/installation.md): Diese Anleitung führt dich Schritt für Schritt durch die Installation auf Windows oder Linux, auch wenn du noch nie Python oder Git benutzt hast.
+- [Eine Stimme in CVC trainieren](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/training.md): Beim Erstellen einer Stimme in Causal Voice Changer wird der Basis-Decoder auf dein Ziel-Audio feinabgestimmt.
+- [CausalVC Realtime verwenden](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/realtime.md): Sobald du run-training mindestens einmal ausgeführt hast und eine .cvc-Stimme bereitliegt, startest du den Live-Stimmenverzerrer mit:
+- [Leistung, Klangbereinigung & weitere Tools](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/performance-and-tools.md): Nimm Sitzungen direkt in CausalVC Realtime auf (zuerst Konvertierung starten):
+- [Causal Voice Changer Changelog](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/changelog.md): Vollständiger Versionsverlauf und Changelog von Causal Voice Changer (CVC) von v0.1.0 bis v0.3.3.1 mit Support für ältere NVIDIA-GPUs, 100-Hz-v4-Basis und Echtzeit-Fixes.
+- [Kompatible GPUs für Causal Voice Changer](https://docs.ilariarvc.shop/de/non-rvc/voice-changers/causal-voice-changer/gpu-compatibility.md): Vollständige Liste kompatibler NVIDIA-, AMD-Radeon-Grafikkarten und CPU-Setups für Causal Voice Changer (CVC), inklusive v0.3.3.1-Support für GTX 900/10.
 
-### MVSep
+### Audio Separation Tools
 
-- [MVSep](https://docs.ilariarvc.shop/de/non-rvc/mvsep/overview.md): MVSep (Music & Voice Separation) ist eine kostenlose, cloudbasierte Webplattform für KI-Audiotrennung und -Restauration.
-- [MVSep nutzen: Zugang, Konto & Einrichtung](https://docs.ilariarvc.shop/de/non-rvc/mvsep/access-and-setup.md): Da MVSep in der Cloud läuft, muss nichts installiert werden. Die richtige Einrichtung von Konto und Ausgabeformat macht jedoch einen großen Unterschied.
-- [MVSep-Anleitung: empfohlene Modelle & Presets](https://docs.ilariarvc.shop/de/non-rvc/mvsep/usage-and-models.md): Hier findest du die besten MVSep-Presets für extrem saubere Vocal-Spuren (für RVC-Training, Cover oder Stimmkonvertierung) - mit Direktlinks, die Algorithmus und Optionen passend vorauswählen.
 
-### Ilaria Audio Upscaler
+#### UVR5
 
-- [Ilaria Audio Upscaler](https://docs.ilariarvc.shop/de/non-rvc/ilaria-audio-upscaler/overview.md): GitHub · v1
-- [Installation und Modelle](https://docs.ilariarvc.shop/de/non-rvc/ilaria-audio-upscaler/installation.md): GitHub · v1
-- [Sprache mit Sidon restaurieren](https://docs.ilariarvc.shop/de/non-rvc/ilaria-audio-upscaler/sidon.md): Wähle Sidon, lade Sidon INT8 herunter, füge einen kurzen verrauschten oder halligen Ausschnitt hinzu, wähle WAV (PCM) und starte Enhance audio. Prüfe, ob Pausen sauberer und Wörter klarer sind.
-- [Sprachbandbreite mit AP-BWE erweitern](https://docs.ilariarvc.shop/de/non-rvc/ilaria-audio-upscaler/ap-bwe.md): Wähle AP-BWE und passe die erste Profilzahl an die nutzbare Sprachbandbreite an. Ein 8-kHz-Signal enthält Frequenzen bis etwa 4 kHz. Ein Telefonat kann auch in einer 48-kHz-WAV so schmalbandig bleiben.
-- [Vorschau, Export und Fehlerbehebung](https://docs.ilariarvc.shop/de/non-rvc/ilaria-audio-upscaler/export.md): Füge Dateien hinzu, wähle ein Format und starte Enhance audio. Vergleiche Original und Ergebnis bei 1×. Speed ändert nur die Wiedergabe. Wähle das Ergebnis und speichere es mit Save result.
+- [Ultimate Vocal Remover (UVR5)](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/uvr5/overview.md): UVR5 (Ultimate Vocal Remover v5 GUI) ist eine kostenlose Open-Source-Desktop-App zur KI-gestützten Audiotrennung.
+- [UVR5 herunterladen und installieren](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/uvr5/installation.md): Die offiziellen Windows- und macOS-Pakete bringen eine isolierte Python- und PyTorch-Umgebung mit, sodass du Python nicht separat installieren musst.
+- [UVR5-Anleitung & empfohlene Modelle](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/uvr5/usage-and-models.md): Nutze diese Anleitung, um UVR5 richtig einzustellen und die besten Modelle zum Trennen von Vocals, Entfernen von Harmonien/Backing Vocals, Hall/Echo und Rauschen zu wählen (inklusive der empfohlenen Setup-Modelle).
+- [Ultimate Vocal Remover 6 (UVR6): Vorbereitungsguide](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/uvr5/uvr6-preparation.md): Vorbereitender Überblick zu Ultimate Vocal Remover 6 (UVR6), offiziell für Windows am 11. Dezember 2026 angekündigt.
+
+#### MVSep
+
+- [MVSep](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/mvsep/overview.md): MVSep (Music & Voice Separation) ist eine kostenlose, cloudbasierte Webplattform für KI-Audiotrennung und -Restauration.
+- [MVSep nutzen: Zugang, Konto & Einrichtung](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/mvsep/access-and-setup.md): Da MVSep in der Cloud läuft, muss nichts installiert werden. Die richtige Einrichtung von Konto und Ausgabeformat macht jedoch einen großen Unterschied.
+- [MVSep-Anleitung: empfohlene Modelle & Presets](https://docs.ilariarvc.shop/de/non-rvc/audio-separation-tools/mvsep/usage-and-models.md): Hier findest du die besten MVSep-Presets für extrem saubere Vocal-Spuren (für RVC-Training, Cover oder Stimmkonvertierung) - mit Direktlinks, die Algorithmus und Optionen passend vorauswählen.
+
+### Other Audio Stuff
+
+
+#### Ilaria Audio Upscaler
+
+- [Ilaria Audio Upscaler](https://docs.ilariarvc.shop/de/non-rvc/other-audio-stuff/ilaria-audio-upscaler/overview.md): GitHub · v1
+- [Installation und Modelle](https://docs.ilariarvc.shop/de/non-rvc/other-audio-stuff/ilaria-audio-upscaler/installation.md): GitHub · v1
+- [Sprache mit Sidon restaurieren](https://docs.ilariarvc.shop/de/non-rvc/other-audio-stuff/ilaria-audio-upscaler/sidon.md): Wähle Sidon, lade Sidon INT8 herunter, füge einen kurzen verrauschten oder halligen Ausschnitt hinzu, wähle WAV (PCM) und starte Enhance audio. Prüfe, ob Pausen sauberer und Wörter klarer sind.
+- [Sprachbandbreite mit AP-BWE erweitern](https://docs.ilariarvc.shop/de/non-rvc/other-audio-stuff/ilaria-audio-upscaler/ap-bwe.md): Wähle AP-BWE und passe die erste Profilzahl an die nutzbare Sprachbandbreite an. Ein 8-kHz-Signal enthält Frequenzen bis etwa 4 kHz. Ein Telefonat kann auch in einer 48-kHz-WAV so schmalbandig bleiben.
+- [Vorschau, Export und Fehlerbehebung](https://docs.ilariarvc.shop/de/non-rvc/other-audio-stuff/ilaria-audio-upscaler/export.md): Füge Dateien hinzu, wähle ein Format und starte Enhance audio. Vergleiche Original und Ergebnis bei 1×. Speed ändert nur die Wiedergabe. Wähle das Ergebnis und speichere es mit Save result.

@@ -12,7 +12,7 @@ Prepara registrazioni pulite di una sola persona e tieni da parte un campione pe
 
 L’upstream indica un uso non commerciale per la base CVC predefinita e i fine-tune derivati. Usa registrazioni per cui hai il permesso di addestrare un modello. Cerca l’export in `logs/causalvc/` nella versione portabile o in `runs/models/voice-<name>/voices/` nel checkout.
 
-[Installare Redpanda VC](first-run.md) · [Inferenza da file](inference.md) · [Conversione vocale in tempo reale](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/causal-voice-changer/overview.md)
+[Installare Redpanda VC](first-run.md) · [Inferenza da file](inference.md) · [Conversione vocale in tempo reale](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/voice-changers/causal-voice-changer/overview.md)
 
 ## Sorgente e release
 

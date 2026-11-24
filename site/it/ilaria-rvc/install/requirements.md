@@ -2,7 +2,7 @@
 
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · Il pacchetto completo per Windows è la 2.4.7. Lo ZIP di aggiornamento 2.5.0 esclude il runtime e i pesi dei modelli. Dalla 2.4.2 alla 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
 
-[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPU compatibili](../install/gpu-compatibility.md) · [Opzioni Cloud](../cloud/cloud.md)
+[Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPU compatibili](gpu-compatibility.md) · [Opzioni Cloud](../cloud/cloud.md)
 
 Ilaria RVC gira in locale sul tuo PC usando **PyTorch 2.10.0** e **NVIDIA CUDA**. Poiché la conversione vocale (inferenza) e l'addestramento dei modelli (training) hanno esigenze hardware molto diverse, controlla entrambe le tabelle qui sotto prima di installare.
 
@@ -28,7 +28,7 @@ Ilaria RVC per Windows è sviluppato per **GPU NVIDIA**. Schede grafiche integra
 
 - **GeForce GTX 16 e RTX 20, 30, 40, 50**: usa direttamente il runtime **PyTorch 2.10.0 + CUDA 12.8** incluso nello ZIP. Assicurati di avere driver NVIDIA aggiornati (soprattutto su serie RTX 50).
 - **Maxwell, Pascal e Volta** (es. serie GTX 750/900/1000, TITAN X/V, Tesla P4/P40/P100/V100): al primo avvio, `RUN_ILARIA_RVC.bat` scarica e verifica automaticamente **PyTorch 2.10.0 + CUDA 12.6** in `runtime-cu126` e lo riutilizza agli avvii successivi.
-- **Nota sulla validazione**: calcolo, backpropagation e caricamento di ContentVec sono stati verificati direttamente su una **RTX 4070**. Le altre schede nella [lista GPU compatibili](../install/gpu-compatibility.md) dovrebbero funzionare in base ad architettura e supporto CUDA.
+- **Nota sulla validazione**: calcolo, backpropagation e caricamento di ContentVec sono stati verificati direttamente su una **RTX 4070**. Le altre schede nella [lista GPU compatibili](gpu-compatibility.md) dovrebbero funzionare in base ad architettura e supporto CUDA.
 
 ### Per quantità di VRAM (cosa puoi eseguire)
 

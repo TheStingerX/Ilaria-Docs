@@ -25,7 +25,7 @@ Bevor du erweiterte Regler veränderst, führe einen sauberen Durchlauf in **Ila
 
 ## A. Saubere Konvertierung erreichen
 
-- **Quell-Audio & isolierte Vocals:** RVC erwartet eine einzelne, trockene, saubere Stimme. Werkzeuge wie [UVR5](../non-rvc/uvr5/overview.md) oder [MVSep](../non-rvc/mvsep/overview.md) helfen beim Trennen von Vocals und Begleitmusik, und spezialisierte Modelle übernehmen je nach Modell Entrauschen, Enthallen, De-Essing oder Audiorestauration (kein einzelnes Tool entfernt jede Art von Rauschen oder Hall).
+- **Quell-Audio & isolierte Vocals:** RVC erwartet eine einzelne, trockene, saubere Stimme. Werkzeuge wie [UVR5](../non-rvc/audio-separation-tools/uvr5/overview.md) oder [MVSep](../non-rvc/audio-separation-tools/mvsep/overview.md) helfen beim Trennen von Vocals und Begleitmusik, und spezialisierte Modelle übernehmen je nach Modell Entrauschen, Enthallen, De-Essing oder Audiorestauration (kein einzelnes Tool entfernt jede Art von Rauschen oder Hall).
 - **Sprache vs. Gesang:** Sprache verträgt oft kleine **Pitch**-Anpassungen, während Gesang über ein Instrumental meist **Pitch = 0** beibehält, um in der Tonart des Playbacks zu bleiben (eine Transposition abweichend von der Oktave kann sinnvoll sein, wenn sich auch die Tonart der Begleitung ändert).
 - **Modell- & Embedder-Kompatibilität:** Belasse **Embedder Model** auf `Auto (model default)`, außer du hast gezielt ein Modell trainiert oder geladen, das einen bestimmten Encoder verlangt (`contentvec`, `spin-v2`, `klm-vocal-contentvec` usw.). Ein inkompatibler Embedder kann einen Fehler auslösen oder die Konvertierung verschlechtern und den Index-Abgleich stören.
 - **Modelle ohne Pitch-Führung (`if_f0 == 0`) vs. F0-geführte Modelle (`if_f0 == 1`):**

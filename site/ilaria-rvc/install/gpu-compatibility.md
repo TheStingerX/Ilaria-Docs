@@ -24,7 +24,7 @@ Compute, backpropagation and ContentVec loading were tested on an **RTX 4070**. 
 | **Maxwell / Pascal / Volta** (GTX 900/10, Titan V) | `5.x` / `6.x` / `7.0` | `5.0`–`7.0` | Auto `runtime-cu126` (CUDA 12.6) | Inference & Training | `FP32` | **Expected**; first launch downloads `runtime-cu126`; GTX 10-series often fail with `FP16` |
 | **Workstation / Datacenter** (Quadro RTX, RTX A-series, T4, L4) | Turing / Ampere / Ada | `7.5`–`8.9` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16` (`BF16` on Ampere+) | **Expected**; T4 in Kaggle defaults to `FP16` |
 | **Multi-GPU systems** | Mixed or matched NVIDIA | Varies | Matched to lowest/active set | Training (DDP in Kaggle/supported setups) | Matches active GPUs | **Expected**; two GPUs do **not** combine into one larger VRAM pool |
-| **AMD / Intel / Integrated** | RDNA / Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../../ilaria-rvc/cloud/cloud.md) or DirectML apps |
+| **AMD / Intel / Integrated** | RDNA / Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../cloud/cloud.md) or DirectML apps |
 
 ### Check Your GPU Model & Diagnose Errors on Windows
 

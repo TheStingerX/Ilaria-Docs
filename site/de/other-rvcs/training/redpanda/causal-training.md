@@ -12,7 +12,7 @@ Bereite saubere Aufnahmen einer Person vor und lege eine kurze Testprobe beiseit
 
 Das Upstream-Projekt kennzeichnet das standardmäßige CVC-Basismodell und seine Fine-Tunes für nichtkommerzielle Nutzung. Verwende Aufnahmen, die du zum Training nutzen darfst. Suche Exporte in `logs/causalvc/` bei der portablen Version oder in `runs/models/voice-<name>/voices/` im Quellcode-Checkout.
 
-[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/causal-voice-changer/overview.md)
+[Redpanda VC einrichten](first-run.md) · [Datei-Inferenz](inference.md) · [Stimmkonvertierung in Echtzeit](live-audio.md) · [RVC Training](training.md) · [Causal Voice Changer](../../../non-rvc/voice-changers/causal-voice-changer/overview.md)
 
 ## Quellcode und Release
 

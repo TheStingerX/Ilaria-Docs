@@ -24,7 +24,7 @@ Dein Dataset ist der wichtigste Faktor dafür, wie natürlich, sauber und ausdru
 
 ## 2. Audio vorbereiten & bereinigen
 
-1. **Stimme von Musik/SFX trennen:** Falls deine Quelle aus Songs, Videos oder Spielen stammt, isoliere zuerst trockene Vocals mit [UVR5](../../non-rvc/uvr5/overview.md) oder [MVSep](../../non-rvc/mvsep/overview.md).
+1. **Stimme von Musik/SFX trennen:** Falls deine Quelle aus Songs, Videos oder Spielen stammt, isoliere zuerst trockene Vocals mit [UVR5](../../non-rvc/audio-separation-tools/uvr5/overview.md) oder [MVSep](../../non-rvc/audio-separation-tools/mvsep/overview.md).
 2. **Vorsicht bei starkem Denoise/Dereverb:** Nutze Rausch- oder Hallentfernung nur bei echtem Bedarf. Aggressive Filter beschneiden Höhen und erzeugen wässrige oder metallische Artefakte. Vergleiche immer Original und bearbeiteten Clip.
 3. **Lange Stille und Störgeräusche schneiden:** Entferne lange leere Pausen, Mikrofonstöße, Husten, Klicks und starkes Clipping. Behalte kurze, natürliche Wortpausen bei.
 4. **Sinnvolle Cliplängen:** Teile sehr lange Aufnahmen in saubere Stücke (etwa **3 bis 15 Sekunden**) oder überlasse das Schneiden dem Preprocessing von Ilaria RVC.
