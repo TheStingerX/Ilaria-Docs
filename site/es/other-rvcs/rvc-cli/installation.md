@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Versión consultada](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
+!!!warning Software antiguo · No recomendado
+Estos proyectos están desactualizados y no muestran mantenimiento activo. rvc-cli está archivado y las ramas principales de RVC Studio y Mangio RVC Fork llevan años inactivas. Las guías se conservan para proyectos existentes. Para una instalación nueva, elige una aplicación con mantenimiento activo. [Guías por aplicación](../app-guides.md)
+!!!
+
 ## Versión y alcance
 
 Esta guía cubre **blaisewf/rvc-cli 1.2.4**. El repositorio indica que ya no se mantiene y remite a Applio para la CLI mantenida. Separa la carpeta y el entorno Python de los proyectos antiguos. Permite inferencia con archivos, procesamiento por lotes y entrenamiento.

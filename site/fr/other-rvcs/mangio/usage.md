@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Version consultée](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
+
 ## Première conversion
 
 Placez le checkpoint d’inférence dans `weights` et actualisez la liste. Sélectionnez-le dans Model Inference et saisissez le chemin d’un court enregistrement de voix seule. Commencez avec une transposition de 0. Si vous avez l’index assorti, comparez un taux de récupération faible à un essai à 0. Gardez le même fichier et checkpoint.

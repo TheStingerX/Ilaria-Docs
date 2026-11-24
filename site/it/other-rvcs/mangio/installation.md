@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Versione consultata](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Software datato · Sconsigliato
+Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta. [Guide per app](../app-guides.md)
+!!!
+
 ## Versione storica e ambiente
 
 Mangio RVC Fork è un fork sperimentale di RVC WebUI originale. La guida si riferisce al tag storico **v23.7.0**. Tieni runtime e asset separati dalle installazioni moderne. Su Windows, per usare il launcher incluso serve un pacchetto ufficiale che contenga `runtime/python.exe`. Il solo sorgente richiede le dipendenze e i modelli di base descritti dall’upstream. Il README del tag indica Python 3.9.8 per l’installazione manuale.

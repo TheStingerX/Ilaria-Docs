@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Reviewed version](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
+!!!warning Legacy software · Not recommended
+These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app. [Guides by app](../app-guides.md)
+!!!
+
 ## Single file and folders
 
 Start with a short clean WAV, an exported inference `.pth` and its matching index. In 1.2.4 the parser requires `--index_path`; set `--index_rate 0` to disable retrieval. For a batch, switch to `batch_infer` and use `--input_folder` and `--output_folder`. Use an output folder separate from the input and test a couple of files first. The command below assumes the correct environment is active. On Windows you can replace `python` with `.\env\python.exe`.

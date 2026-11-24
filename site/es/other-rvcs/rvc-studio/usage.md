@@ -1,13 +1,21 @@
 # RVC Studio · Uso y resolución de problemas
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Versión consultada](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Importar la voz
+!!!warning Software antiguo · No recomendado
+Estos proyectos están desactualizados y no muestran mantenimiento activo. rvc-cli está archivado y las ramas principales de RVC Studio y Mangio RVC Fork llevan años inactivas. Las guías se conservan para proyectos existentes. Para una instalación nueva, elige una aplicación con mantenimiento activo. [Guías por aplicación](../app-guides.md)
+!!!
 
-Importa un ZIP con un generador RVC ONNX compatible o un `.pth` de inferencia, y el `.index` FAISS correspondiente si existe. Si hay ambos formatos, se prefiere ONNX. El conversor exporta `.pth` a ONNX y prepara las características del índice cuando está presente. Se guarda en `Models/<voice>/model.onnx` y el `features.rvci` opcional. Un ONNX genérico o un checkpoint de entrenamiento no sirve como generador.
+## Primera versión
 
-## Micrófono y latencia
+Inicia el backend en **RVC Server**. En **Inference**, pulsa **Refresh Data** tras añadir los archivos. Elige un WAV, FLAC, OGG o MP3 corto en `songs/`. Guarda el checkpoint RVC v2 en `models/RVC/` y el índice, si existe, en `models/RVC/.index/`. Elige una voz y un modelo de extracción vocal. El preprocesado adicional es opcional. Pulsa **Save Options** y **1-Click VC**. Si la voz no aparece, revisa la carpeta y actualiza la lista.
 
-Selecciona voz, micrófono físico y auriculares y pulsa **Start voice conversion**. Empieza con tono cero y prueba el índice por separado. PortAudio usa un flujo dúplex mono a 48 kHz. ContentVec recibe audio a 16 kHz y RMVPE aporta F0 cuando hace falta. La salida vuelve a 48 kHz. Si hay cortes, revisa niveles, tiempo de inferencia e interrupciones de búfer. Comprueba CUDA antes de evaluar GPU. Prueba auriculares antes del cable virtual.
+## Entrenar una voz
 
-[Instalación](installation.md)
+En **Train**, elige una carpeta de datos y un nombre de experimento. Preprocesa, extrae las características y entrena. Comprueba la compatibilidad de los preentrenamientos del generador y discriminador. Genera el índice por separado si lo necesitas. Si un paso está desactivado, comprueba los archivos producidos por el anterior. Compara checkpoints con el mismo audio de prueba.
+
+## TTS y conversión en directo
+
+En **Text to Speech**, elige el motor y la voz RVC. Escucha una frase corta, pulsa **Convert Speech** y guarda el resultado. El código incluye **Realtime Conversion**. Elige la entrada y salida de audio del equipo que ejecuta la aplicación. Haz una prueba con auriculares antes de utilizarlo en directo.
+
+[← Configuración](installation.md)

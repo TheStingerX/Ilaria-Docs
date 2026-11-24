@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Geprüfte Version](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Veraltete Software · Nicht empfohlen
+Diese Projekte sind veraltet und werden offenbar nicht mehr aktiv gepflegt. rvc-cli ist archiviert, und die Hauptbranches von RVC Studio und Mangio RVC Fork sind seit Jahren inaktiv. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation eine aktiv gepflegte Anwendung. [Anleitungen nach Anwendung](../app-guides.md)
+!!!
+
 ## Historische Version und Umgebung
 
 Mangio RVC Fork ist ein experimenteller Fork der ursprünglichen WebUI. Diese Anleitung bezieht sich auf **v23.7.0**. Halte Laufzeit und Ressourcen getrennt von modernen Installationen. Unter Windows braucht der mitgelieferte Launcher ein offizielles Paket mit `runtime/python.exe`. Der reine Quellcode benötigt Abhängigkeiten und Basismodelle. Das Tag-README empfiehlt Python 3.9.8 für die manuelle Einrichtung.

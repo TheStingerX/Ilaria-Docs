@@ -2,6 +2,10 @@
 
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Reviewed version](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
+!!!warning Legacy software · Not recommended
+These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app. [Guides by app](../app-guides.md)
+!!!
+
 ## First conversion
 
 Put the exported inference checkpoint in the `weights` folder, then refresh the model list in the WebUI. Select it in Model Inference and enter the path of a short voice-only recording. Start at a transpose of 0. If you have a matching index, compare it at a low retrieval rate after establishing a baseline with the rate at 0. Keep the input and checkpoint identical while comparing output.

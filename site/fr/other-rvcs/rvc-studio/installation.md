@@ -1,24 +1,26 @@
 # RVC Studio · Installation
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Version consultée](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Windows
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
 
-RVC Studio est une application locale Avalonia pour RVC en temps réel. Installez le SDK .NET 10, Python 3.10–3.12 et Git. Vérifiez Python et curl.exe dans PowerShell. L’application utilise PortAudio. L’accélération NVIDIA exige des pilotes et bibliothèques CUDA/cuDNN compatibles. Depuis la racine, exécutez le script puis lancez le projet.
+RVC Studio de SayanoAI est une interface Streamlit pour entraîner des voix et créer des reprises à partir d’enregistrements. Les étapes suivent la révision liée. La branche principale est décrite comme expérimentale.
 
-~~~powershell
-.\setup.ps1
-dotnet run --project RVCStudio/RVCStudio.csproj
-~~~
+## Configuration
 
-## Linux et ressources communes
-
-Sous Linux, installez le SDK .NET 10, Python avec venv, PortAudio, curl et sha256sum. Le script compile le convertisseur pour la plateforme, télécharge environ 707 Mio de modèles ContentVec/RMVPE et vérifie leurs empreintes. Exécutez-le sur le système et l’architecture cibles. ONNX revient au CPU si CUDA échoue.
+Sous Windows, extrayez le code et lancez `conda-installer.bat`. Si Miniconda est déjà installé, utilisez `conda-start.bat`. Le lanceur crée si nécessaire un environnement Python 3.10, installe les dépendances et démarre Streamlit. Ouvrez l’adresse locale. Pour une installation manuelle, activez un environnement séparé et lancez les commandes dans le dossier de `Home.py`.
 
 ~~~bash
-chmod +x setup.sh
-./setup.sh
-dotnet run --project RVCStudio/RVCStudio.csproj
+python -m pip install -r requirements.txt
+streamlit run Home.py
 ~~~
 
-[Utilisation et dépannage](usage.md)
+## Ressources de base
+
+Téléchargez les ressources de base via l’application ou Hugging Face. Ajoutez séparément le checkpoint de voix. Consultez les instructions officielles en cas de problème avec FFmpeg ou eSpeak. Le dépôt propose aussi un notebook Colab et un fichier Docker Compose qui demande le GPU NVIDIA 0. Pour les périphériques audio de votre ordinateur, commencez en local.
+
+[Colab](https://colab.research.google.com/github/SayanoAI/RVC-Studio/blob/main/RVC_Studio.ipynb) · [FFmpeg / eSpeak](https://github.com/SayanoAI/RVC-Studio/blob/main/dist/README.md)
+
+[→ Première reprise](usage.md)

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848874673964">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848875241412">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="RVC Studio · Uso y resolución de problemas">
-    <meta name="description" content="GitHub · Versión consultada">
+    <meta name="description" content="GitHub · Hugging Face · 91c4011">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/ilaria-rvc/rvc-studio/usage/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848874673964" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848875241412" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848874673964" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848875241412" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848874673964" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848875241412" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="GitHub · Versión consultada">
+    <meta property="og:description" content="GitHub · Hugging Face · 91c4011">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="GitHub · Versión consultada">
+    <meta name="twitter:description" content="GitHub · Hugging Face · 91c4011">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/rvc-studio/usage/">
@@ -175,12 +175,31 @@
 
                 <!-- Page content  -->
 <span id="rvc-studio--usage-and-troubleshooting" class="docs-anchor"></span><h1 id="rvc-studio--uso-y-resolución-de-problemas">RVC Studio · Uso y resolución de problemas</h1>
-<p><a href="https://github.com/xenophidiadae/RVCStudio">GitHub</a> · <a href="https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e">Versión consultada</a></p>
-<span id="import-the-voice" class="docs-anchor"></span><h2 id="importar-la-voz">Importar la voz</h2>
-<p>Importa un ZIP con un generador RVC ONNX compatible o un <code translate="no" v-pre>.pth</code> de inferencia, y el <code translate="no" v-pre>.index</code> FAISS correspondiente si existe. Si hay ambos formatos, se prefiere ONNX. El conversor exporta <code translate="no" v-pre>.pth</code> a ONNX y prepara las características del índice cuando está presente. Se guarda en <code translate="no" v-pre>Models/&lt;voice&gt;/model.onnx</code> y el <code translate="no" v-pre>features.rvci</code> opcional. Un ONNX genérico o un checkpoint de entrenamiento no sirve como generador.</p>
-<span id="microphone-and-latency" class="docs-anchor"></span><h2 id="micrófono-y-latencia">Micrófono y latencia</h2>
-<p>Selecciona voz, micrófono físico y auriculares y pulsa <strong>Start voice conversion</strong>. Empieza con tono cero y prueba el índice por separado. PortAudio usa un flujo dúplex mono a 48 kHz. ContentVec recibe audio a 16 kHz y RMVPE aporta F0 cuando hace falta. La salida vuelve a 48 kHz. Si hay cortes, revisa niveles, tiempo de inferencia e interrupciones de búfer. Comprueba CUDA antes de evaluar GPU. Prueba auriculares antes del cable virtual.</p>
-<p><a href="../installation/">Instalación</a></p>
+<p><a href="https://github.com/SayanoAI/RVC-Studio">GitHub</a> · <a href="https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main">Hugging Face</a> · <a href="https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127"><code translate="no" v-pre>91c4011</code></a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Software antiguo · No recomendado</h5>
+<p>Estos proyectos están desactualizados y no muestran mantenimiento activo. rvc-cli está archivado y las ramas principales de RVC Studio y Mangio RVC Fork llevan años inactivas. Las guías se conservan para proyectos existentes. Para una instalación nueva, elige una aplicación con mantenimiento activo. <a href="../../app-guides/">Guías por aplicación</a></p>
+        </div>
+    </div>
+</div>
+<span id="first-cover" class="docs-anchor"></span><h2 id="primera-versión">Primera versión</h2>
+<p>Inicia el backend en <strong>RVC Server</strong>. En <strong>Inference</strong>, pulsa <strong>Refresh Data</strong> tras añadir los archivos. Elige un WAV, FLAC, OGG o MP3 corto en <code translate="no" v-pre>songs/</code>. Guarda el checkpoint RVC v2 en <code translate="no" v-pre>models/RVC/</code> y el índice, si existe, en <code translate="no" v-pre>models/RVC/.index/</code>. Elige una voz y un modelo de extracción vocal. El preprocesado adicional es opcional. Pulsa <strong>Save Options</strong> y <strong>1-Click VC</strong>. Si la voz no aparece, revisa la carpeta y actualiza la lista.</p>
+<span id="train-a-voice" class="docs-anchor"></span><h2 id="entrenar-una-voz">Entrenar una voz</h2>
+<p>En <strong>Train</strong>, elige una carpeta de datos y un nombre de experimento. Preprocesa, extrae las características y entrena. Comprueba la compatibilidad de los preentrenamientos del generador y discriminador. Genera el índice por separado si lo necesitas. Si un paso está desactivado, comprueba los archivos producidos por el anterior. Compara checkpoints con el mismo audio de prueba.</p>
+<span id="tts-and-live-conversion" class="docs-anchor"></span><h2 id="tts-y-conversión-en-directo">TTS y conversión en directo</h2>
+<p>En <strong>Text to Speech</strong>, elige el motor y la voz RVC. Escucha una frase corta, pulsa <strong>Convert Speech</strong> y guarda el resultado. El código incluye <strong>Realtime Conversion</strong>. Elige la entrada y salida de audio del equipo que ejecuta la aplicación. Haz una prueba con auriculares antes de utilizarlo en directo.</p>
+<p><a href="../installation/">← Configuración</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -215,7 +234,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-24T22:30:14.000Z">24/11/2026 · 23:30</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-24T22:38:54.000Z">24/11/2026 · 23:38</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

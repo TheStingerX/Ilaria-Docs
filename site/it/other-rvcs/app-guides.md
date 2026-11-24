@@ -76,6 +76,10 @@ Per i file, confronta lo stesso campione allo stesso volume. Per il tempo reale,
 
 ## Altri strumenti RVC
 
+!!!warning Software datato · Sconsigliato
+Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta.
+!!!
+
 - [rvc-cli](rvc-cli/installation.md)
 - [RVC Studio](rvc-studio/installation.md)
 - [Mangio RVC Fork](mangio/installation.md)

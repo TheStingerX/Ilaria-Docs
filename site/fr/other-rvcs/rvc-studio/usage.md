@@ -1,13 +1,21 @@
 # RVC Studio · Utilisation et dépannage
 
-[GitHub](https://github.com/xenophidiadae/RVCStudio) · [Version consultée](https://github.com/xenophidiadae/RVCStudio/tree/6cccb75833ef7937bfb6da9ce8f21211f0ab526e)
+[GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
-## Importer la voix
+!!!warning Logiciels anciens · Déconseillés
+Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+!!!
 
-Importez un ZIP contenant un générateur RVC ONNX compatible ou un `.pth` d’inférence, avec l’`.index` FAISS associé s’il existe. L’application préfère ONNX si les deux sont présents. Le convertisseur exporte le `.pth` en ONNX et prépare les données de l’index. Les fichiers sont `Models/<voice>/model.onnx` et éventuellement `features.rvci`. Un ONNX générique ou un checkpoint d’entraînement ne convient pas.
+## Première reprise
 
-## Microphone et latence
+Démarrez le backend sous **RVC Server**. Dans **Inference**, cliquez sur **Refresh Data** après l’ajout des fichiers. Choisissez un extrait WAV, FLAC, OGG ou MP3 dans `songs/`. Placez le checkpoint RVC v2 dans `models/RVC/` et son index éventuel dans `models/RVC/.index/`. Choisissez la voix et un modèle de séparation vocale. Le prétraitement supplémentaire est facultatif. Cliquez sur **Save Options**, puis **1-Click VC**. Si la voix manque, vérifiez le dossier et actualisez la liste.
 
-Sélectionnez la voix, le micro physique et le casque, puis lancez **Start voice conversion**. Commencez à zéro demi-ton et testez le retrieval séparément. PortAudio utilise un flux duplex mono à 48 kHz. ContentVec reçoit du 16 kHz, RMVPE estime F0 au besoin et le résultat revient à 48 kHz. En cas de coupures, vérifiez les niveaux, le temps d’inférence et les underruns. Vérifiez CUDA avant d’évaluer le GPU. Testez le casque avant le câble virtuel.
+## Entraîner une voix
 
-[Installation](installation.md)
+Dans **Train**, sélectionnez un dossier de données et nommez l’expérience. Prétraitez les fichiers, extrayez les caractéristiques et lancez l’entraînement. Vérifiez les préentraînements du générateur et du discriminateur. Générez l’index séparément au besoin. Si une étape est désactivée, vérifiez les fichiers produits par l’étape précédente. Comparez les checkpoints avec le même extrait.
+
+## TTS et conversion en direct
+
+Dans **Text to Speech**, choisissez le moteur et la voix RVC. Écoutez une phrase courte, cliquez sur **Convert Speech** et enregistrez le résultat. Le code inclut aussi **Realtime Conversion**. Choisissez les périphériques d’entrée et de sortie de l’ordinateur qui exécute l’application. Testez avec un casque avant une session en direct.
+
+[← Configuration](installation.md)
