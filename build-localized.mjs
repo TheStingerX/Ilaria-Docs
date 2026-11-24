@@ -78,9 +78,12 @@ const gpuVendors = [['NVIDIA', '#a8cf68'], ['AMD', '#ff8793'], ['Intel', '#8ccaf
 
 function addGpuCompatibility(html, lang, route) {
   const source = pageSources.get(lang).get(route)?.split(sep).join('/');
-  const app = source?.match(/^other-rvcs\/(?:training|voice-changers)\/([^/]+)\//)?.[1]
-    ?? (['/ilaria-rvc/overview/', '/ilaria-rvc/installation/'].includes(route) ? 'ilaria' : null);
-  const support = gpuSupport[app];
+  const [app, page] = source?.match(/^other-rvcs\/(?:training|voice-changers)\/([^/]+)\/([^/]+)\.md$/)?.slice(1) ?? [];
+  const isInstallation = page === 'installation'
+    || (app === 'redpanda' && page === 'first-run')
+    || (app === 'rvc-gui' && page === 'file-conversion');
+  const gpuApp = route === '/ilaria-rvc/installation/' ? 'ilaria' : isInstallation ? app : null;
+  const support = gpuSupport[gpuApp];
   if (!support) return html;
   const [heading, unknown, legacy, conditional] = gpuLabels[lang];
   const badges = gpuVendors.map(([vendor, color], index) => {
