@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848866688768">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848866968826">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848866688768" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848866968826" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848866688768" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848866968826" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848866688768" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848866968826" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -230,8 +230,8 @@
 | **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
 | **KLM-X** | `32 kHz` | HiFi-GAN | Not specified | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Not specified | Not specified | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
-| **Legacy Core V1.5** | `40 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5** | `32 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
+| **Legacy Core V1.5** | `40 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Legacy Core V1.6** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
@@ -388,14 +388,14 @@
 </tr>
 <tr>
 <td><strong>Legacy Core V1.5</strong></td>
-<td><code translate="no" v-pre>40 kHz</code></td>
+<td><code translate="no" v-pre>32 kHz</code></td>
 <td>HiFi-GAN</td>
 <td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/sxndypz/legacy-core-1.5/tree/main">sxndypz/legacy-core-1.5</a></td>
 </tr>
 <tr>
 <td><strong>Legacy Core V1.5</strong></td>
-<td><code translate="no" v-pre>32 kHz</code></td>
+<td><code translate="no" v-pre>40 kHz</code></td>
 <td>HiFi-GAN</td>
 <td><code translate="no" v-pre>contentvec</code></td>
 <td><a href="https://huggingface.co/sxndypz/legacy-core-1.5/tree/main">sxndypz/legacy-core-1.5</a></td>
@@ -581,7 +581,7 @@
             <h5>note</h5>
 <p><strong>Note on Legacy Core (<code translate="no" v-pre>V1.5</code>, <code translate="no" v-pre>V1.5v2</code>, and <code translate="no" v-pre>V1.6</code>):</strong></p>
 <ul>
-<li><strong>Legacy Core V1.5</strong> (<code translate="no" v-pre>40 kHz</code>, <code translate="no" v-pre>32 kHz</code>): <a href="https://huggingface.co/sxndypz/legacy-core-1.5/tree/main">sxndypz/legacy-core-1.5</a>. Available through the linked reupload. The original <code translate="no" v-pre>lyery/mode4</code> source was removed from the Ilaria RVC downloader in 2.4.4.</li>
+<li><strong>Legacy Core V1.5</strong> (<code translate="no" v-pre>32 kHz</code>, <code translate="no" v-pre>40 kHz</code>): <a href="https://huggingface.co/sxndypz/legacy-core-1.5/tree/main">sxndypz/legacy-core-1.5</a>. Available through the linked reupload. The original <code translate="no" v-pre>lyery/mode4</code> source was removed from the Ilaria RVC downloader in 2.4.4.</li>
 <li><strong>Legacy Core V1.5v2</strong> and <strong>Legacy Core V1.6</strong> (<code translate="no" v-pre>32 kHz</code>) are available again with the original author&#x27;s consent via <a href="https://huggingface.co/notiscBalbalEko/PretrainReupload">notiscBalbalEko/PretrainReupload</a> and were restored in Ilaria RVC <code translate="no" v-pre>2.4.7</code>.</li>
 <li><strong>Important for Legacy Core V1.6</strong>: in the reupload repository, the <strong>G</strong> and <strong>D</strong> filenames are <strong>swapped</strong> (<code translate="no" v-pre>D_LegacyCoreOld.pth</code> is <strong>G</strong>, and <code translate="no" v-pre>G_LegacyCoreOld.pth</code> is <strong>D</strong>). Make sure you load each file in the right slot.</li>
 </ul>
@@ -625,7 +625,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T20:17:30.000Z">24/11/2026 · 21:17</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T20:22:08.000Z">24/11/2026 · 21:22</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

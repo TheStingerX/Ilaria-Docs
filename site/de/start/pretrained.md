@@ -46,8 +46,8 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 | **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
 | **KLM-X** | `32 kHz` | HiFi-GAN | Nicht angegeben | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
-| **Legacy Core V1.5** | `40 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5** | `32 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
+| **Legacy Core V1.5** | `40 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Legacy Core V1.6** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
@@ -74,7 +74,7 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 
 !!!note
 **Hinweis zu Legacy Core (`V1.5`, `V1.5v2` und `V1.6`):**
-- **Legacy Core V1.5** (`40 kHz`, `32 kHz`): [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main). Über den verlinkten Reupload verfügbar. Die ursprüngliche Quelle `lyery/mode4` wurde in Version 2.4.4 aus dem Ilaria-RVC-Downloader entfernt.
+- **Legacy Core V1.5** (`32 kHz`, `40 kHz`): [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main). Über den verlinkten Reupload verfügbar. Die ursprüngliche Quelle `lyery/mode4` wurde in Version 2.4.4 aus dem Ilaria-RVC-Downloader entfernt.
 - **Legacy Core V1.5v2** und **Legacy Core V1.6** (`32 kHz`) sind mit Zustimmung des Originalautors wieder über [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) verfügbar und wurden in Ilaria RVC `2.4.7` wiederhergestellt.
 - **Wichtig für Legacy Core V1.6**: Im Reupload-Repository sind die Dateinamen **G** und **D** **vertauscht** (`D_LegacyCoreOld.pth` ist **G** und `G_LegacyCoreOld.pth` ist **D**). Achte darauf, jede Datei in das richtige Feld zu laden.
 !!!
