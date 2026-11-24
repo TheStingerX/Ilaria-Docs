@@ -15,6 +15,9 @@ Começa com [MelBand Roformer · becruily deux](https://mvsep.com/home?sep_type=
 
 [BS Polarformer](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0) · [MVSep DnR v3](https://mvsep.com/home?sep_type=123&add_opt1=163)
 
+[BS Roformer 124 bands](https://mvsep.com/en/home?sep_type=40&add_opt1=171). Segundo um relato da comunidade, este modelo permite **5 separações gratuitas por dia**. Confirma a quota apresentada pelo MVSEP antes de iniciar o processamento.
+
+
 ## 2. Separar voz principal e coros (Lead & Back Vocals)
 
 Experimenta [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0) para a **voz principal** e [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0). For **backing vocals (BGV)**, start with [BS Roformer · frazer & becruily](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0) para as **vozes de apoio (BGV)**. Compara os resultados no mesmo refrão.
