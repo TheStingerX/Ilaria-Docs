@@ -3,7 +3,7 @@
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Version consultée](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
 !!!warning Logiciels anciens · Déconseillés
-Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue. [Guides par application](../app-guides.md)
+La branche principale de **Mangio RVC Fork** est inactive depuis des années. Ce logiciel est ancien et déconseillé pour une nouvelle installation. [Guides par application](../app-guides.md)
 !!!
 
 ## Version historique et environnement

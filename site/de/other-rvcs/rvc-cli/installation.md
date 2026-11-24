@@ -3,7 +3,7 @@
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Geprüfte Version](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
 !!!warning Veraltete Software · Nicht empfohlen
-Diese Projekte sind veraltet und werden offenbar nicht mehr aktiv gepflegt. rvc-cli ist archiviert, und die Hauptbranches von RVC Studio und Mangio RVC Fork sind seit Jahren inaktiv. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation eine aktiv gepflegte Anwendung. [Anleitungen nach Anwendung](../app-guides.md)
+**rvc-cli** ist auf GitHub archiviert und wird nicht mehr gepflegt. Die Software ist veraltet und für Neuinstallationen nicht empfohlen. [Anleitungen nach Anwendung](../app-guides.md)
 !!!
 
 ## Version und Umfang

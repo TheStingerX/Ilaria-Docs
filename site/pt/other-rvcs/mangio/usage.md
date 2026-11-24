@@ -3,7 +3,7 @@
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Versão consultada](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
 !!!warning Software antigo · Desaconselhado
-Estes projetos estão desatualizados e já não parecem ter manutenção ativa. O rvc-cli está arquivado e os ramos principais do RVC Studio e do Mangio RVC Fork estão inativos há vários anos. Os guias continuam disponíveis para projetos existentes. Para uma nova instalação, escolhe uma aplicação com manutenção ativa. [Guias por aplicação](../app-guides.md)
+O ramo principal de **Mangio RVC Fork** está inativo há vários anos. O programa está desatualizado e é desaconselhado para novas instalações. [Guias por aplicação](../app-guides.md)
 !!!
 
 ## Primeira conversão

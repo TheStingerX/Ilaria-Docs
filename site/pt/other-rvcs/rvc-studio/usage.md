@@ -3,7 +3,7 @@
 [GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
 !!!warning Software antigo · Desaconselhado
-Estes projetos estão desatualizados e já não parecem ter manutenção ativa. O rvc-cli está arquivado e os ramos principais do RVC Studio e do Mangio RVC Fork estão inativos há vários anos. Os guias continuam disponíveis para projetos existentes. Para uma nova instalação, escolhe uma aplicação com manutenção ativa. [Guias por aplicação](../app-guides.md)
+O ramo principal de **RVC Studio** está inativo há vários anos. O programa está desatualizado e é desaconselhado para novas instalações. [Guias por aplicação](../app-guides.md)
 !!!
 
 ## Primeira versão
