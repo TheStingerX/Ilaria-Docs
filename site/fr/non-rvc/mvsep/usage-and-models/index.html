@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848789962450">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848802289744">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848789962450" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848802289744" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848789962450" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848802289744" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848789962450" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848802289744" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=5">
 
@@ -178,33 +178,10 @@
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Voici les meilleurs presets MVSep pour obtenir des pistes vocales ultra-propres (pour entraînement RVC, covers ou conversion vocale), avec des liens directs pré-sélectionnant l'algorithme et les options exactes.</div>
 <p>Voici les meilleurs presets MVSep pour obtenir des pistes vocales ultra-propres (pour entraînement RVC, covers ou conversion vocale), avec des <strong>liens directs</strong> pré-sélectionnant l&#x27;algorithme et les options exactes.</p>
 <span id="1-vocals-and-sfx-removal" class="docs-anchor"></span><h2 id="1-suppression-de-musique-et-deffets-vocals--sfx-removal">1. Suppression de musique et d&#x27;effets (Vocals &amp; SFX Removal)</h2>
-<p>Utilisez ces modèles en premier pour retirer musique de fond, bruitages et sons ambiants.</p>
-<ul>
-<li><strong>BS Polarformer</strong> - <a href="https://mvsep.com/home?sep_type=56&amp;add_opt1=2&amp;add_opt2=1&amp;add_opt3=0">Ouvrir le preset sur MVSep</a>
-<ul>
-<li>Variante haute précision de Band-Split Roformer utilisant les <strong>Polar Positional Embeddings (PoPE)</strong> pour un contexte long et propre.</li>
-<li><strong>Quand l&#x27;utiliser</strong> : votre premier choix principal pour des voix nettes avec un minimum de résidus instrumentaux.</li>
-</ul>
-</li>
-<li><strong>MVSep DnR v3</strong> - <a href="https://mvsep.com/home?sep_type=123&amp;add_opt1=163">Ouvrir le preset sur MVSep</a>
-<ul>
-<li>Modèle cinématique multi-stems (<em>Divide and Remaster</em>) qui sépare l&#x27;audio en <strong>parole, musique et effets sonores (SFX)</strong>.</li>
-<li><strong>Quand l&#x27;utiliser</strong> : dialogues de jeux vidéo, films, vidéos ou extraits chargés en bruitages.</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><strong>Recommandation</strong> : <strong>BS Polarformer</strong> est généralement meilleur seul, mais passer par <strong>les deux</strong> élimine pratiquement tout risque de bruit de fond ou de SFX restants.</p>
-</blockquote>
+<p>Commencez par <a href="https://mvsep.com/home?sep_type=48&amp;add_opt1=11">MelBand Roformer · becruily deux</a> pour séparer les voix de l’instrumental. Comparez avec <strong>BS Polarformer</strong>. Pour les dialogues avec bruitages, essayez <strong>MVSep DnR v3</strong>.</p>
+<p><a href="https://mvsep.com/home?sep_type=56&amp;add_opt1=2&amp;add_opt2=1&amp;add_opt3=0">BS Polarformer</a> · <a href="https://mvsep.com/home?sep_type=123&amp;add_opt1=163">MVSep DnR v3</a></p>
 <span id="2-separating-lead-and-back-vocals" class="docs-anchor"></span><h2 id="2-séparer-voix-principale-et-chœurs-lead--back-vocals">2. Séparer voix principale et chœurs (Lead &amp; Back Vocals)</h2>
-<ul>
-<li><strong>MVSep Karaoke</strong> - <a href="https://mvsep.com/home?sep_type=49&amp;add_opt1=5&amp;add_opt2=0">Ouvrir le preset sur MVSep</a>
-<ul>
-<li>Isole la <strong>voix principale (lead)</strong> des <strong>chœurs / secondes voix (backing vocals)</strong>.</li>
-<li><strong>Note</strong> : ce modèle peut être un peu capricieux et parfois confondre chœurs et voix principale selon le mixage ; écoutez toujours les deux pistes obtenues avant de supprimer quoi que ce soit - il reste néanmoins très utile.</li>
-</ul>
-</li>
-</ul>
+<p>Essayez <a href="https://mvsep.com/home?sep_type=49&amp;add_opt1=7&amp;add_opt2=0">BS Roformer · anvuew</a> pour la <strong>voix principale</strong> et <a href="https://mvsep.com/home?sep_type=49&amp;add_opt1=7&amp;add_opt2=0">BS Roformer · anvuew</a>. For <strong>backing vocals (BGV)</strong>, start with <a href="https://mvsep.com/home?sep_type=49&amp;add_opt1=5&amp;add_opt2=0">BS Roformer · frazer &amp; becruily</a> pour les <strong>chœurs (BGV)</strong>. Comparez les résultats sur le même refrain.</p>
 <span id="3-reverb-removal" class="docs-anchor"></span><h2 id="3-suppression-de-la-réverbération-reverb-removal">3. Suppression de la réverbération (Reverb Removal)</h2>
 <p>Appliquez ces presets sur votre piste vocale isolée pour rendre secs les enregistrements avec écho ou réverbération.</p>
 <ul>
@@ -242,8 +219,8 @@
 </ul>
 <span id="suggested-step-by-step-workflow" class="docs-anchor"></span><h2 id="enchaînement-étape-par-étape-conseillé">Enchaînement étape par étape conseillé</h2>
 <ol>
-<li><strong>Extraire la voix / parole</strong> : passez par <strong>BS Polarformer</strong> (puis <strong>MVSep DnR v3</strong> si des SFX persistent).</li>
-<li><strong>Isoler la voix principale</strong> <em>(uniquement chansons avec chœurs)</em> : utilisez <strong>MVSep Karaoke</strong>.</li>
+<li><strong>Extraire la voix / parole</strong>: Comparez Deux et BS Polarformer sur les chansons. Utilisez DnR v3 pour les dialogues avec bruitages.</li>
+<li><strong>Isoler la voix principale</strong> <em>(uniquement chansons avec chœurs)</em>: Utilisez anvuew pour la voix principale et frazer &amp; becruily pour les chœurs.</li>
 <li><strong>Retirer la réverbération</strong> : passez <strong>DeReverb Stereo</strong> et <strong>DeReverb Room</strong> (plus <strong>DeEffect</strong> seulement si des effets vocaux ou de la réverbe lourde restent).</li>
 <li><strong>Nettoyage final</strong> : terminez avec <strong>DeNoise by aufr33 and gabox</strong> et téléchargez le résultat en <strong>WAV</strong>.</li>
 </ol>
@@ -281,7 +258,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-20T21:07:37.000Z">20/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-24T02:23:33.000Z">24/11/2026 · 03:23</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
