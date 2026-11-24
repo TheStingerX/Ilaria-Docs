@@ -8,6 +8,8 @@ Beginne mit [MelBand Roformer · becruily deux](https://mvsep.com/home?sep_type=
 
 [BS Polarformer](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0) · [MVSep DnR v3](https://mvsep.com/home?sep_type=123&add_opt1=163)
 
+[BS Roformer 124 bands](https://mvsep.com/en/home?sep_type=40&add_opt1=171). Laut einem Bericht aus der Community sind für dieses Modell **5 kostenlose Trennungen pro Tag** möglich. Prüfe vor der Verarbeitung das in MVSEP angezeigte Kontingent.
+
 ## 2. Lead- und Backing-Vocals trennen (Lead & Back Vocals)
 
 Nutze [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0) für den **Leadgesang** und [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0). For **backing vocals (BGV)**, start with [BS Roformer · frazer & becruily](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0) für den **Hintergrundgesang (BGV)**. Vergleiche die Ergebnisse am selben Refrain.

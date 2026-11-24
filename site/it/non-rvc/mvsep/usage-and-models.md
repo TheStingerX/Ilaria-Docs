@@ -8,6 +8,8 @@ Parti da [MelBand Roformer · becruily deux](https://mvsep.com/home?sep_type=48&
 
 [BS Polarformer](https://mvsep.com/home?sep_type=56&add_opt1=2&add_opt2=1&add_opt3=0) · [MVSep DnR v3](https://mvsep.com/home?sep_type=123&add_opt1=163)
 
+[BS Roformer 124 bands](https://mvsep.com/en/home?sep_type=40&add_opt1=171). Secondo una segnalazione della community, questo modello consente **5 separazioni gratuite al giorno**. Prima di avviare un’elaborazione, controlla la quota mostrata da MVSEP.
+
 ## 2. Separazione Voce Principale e Cori (Lead & Back Vocals)
 
 Per la **voce principale**, prova [BS Roformer · anvuew](https://mvsep.com/home?sep_type=49&add_opt1=7&add_opt2=0). Per i **cori (BGV)**, parti da [BS Roformer · frazer & becruily](https://mvsep.com/home?sep_type=49&add_opt1=5&add_opt2=0) e tieni la traccia dei cori che restituisce. Prova entrambi sullo stesso ritornello e controlla se nei cori si sente la voce principale o se nella traccia solista mancano parole.
