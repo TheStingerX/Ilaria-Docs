@@ -84,4 +84,4 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 - **Ilaria RVC 2.4.8** ergänzt Legacy Core V1.5 mit 32 und 40 kHz im Downloader. Alle vier Legacy-Core-Optionen verwenden `HiFi-GAN` + `ContentVec`. [Versionshinweise](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8)
 !!!
 
-> **Kompatibilitätshinweis**: In Ilaria RVC wird RefineGAN-Training speziell bei `32 kHz` mit RVC v2 und Pitch-Guidance unterstützt. Ein `40 kHz`- oder `44.1 kHz`-RefineGAN-Pretrain bei auf `32 kHz` eingestelltem Training schlägt fehl oder liefert kaputte Ergebnisse.
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN unterstützt Training und Inferenz mit 32, 40 und 44,1 kHz in RVC v2 mit Pitch Guidance. Die App erzeugt die stille Audiodatei für 44,1 kHz automatisch. Wähle **None** für Training von Grund auf, falls die vortrainierten Gewichte eine andere Architektur nutzen. Getestete Beispiele sind KLM 5 (40 kHz) und VCTK (44,1 kHz).

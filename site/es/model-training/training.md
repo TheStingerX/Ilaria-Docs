@@ -21,7 +21,7 @@ Anota la versión de la aplicación, revisión del dataset, formato y frecuencia
 | Batch size | Controla cuántos datos se procesan por actualización. Empieza con un valor que quepa en tu GPU y bájalo si el entrenamiento se queda sin memoria. |
 | Objetivo e intervalo de checkpoints | Una época es aproximadamente una pasada completa por el dataset preparado. Los pasos son actualizaciones individuales de entrenamiento. Guarda periódicamente para comparar exportaciones y recuperarte tras una interrupción. |
 
-Usa las opciones de preentrenamiento mostradas como compatibles por tu compilación instalada. En Ilaria RVC 2.1.0, por ejemplo, el proyecto documenta entrenamiento RefineGAN a 32 kHz con RVC V2 y guía de tono. La misma versión también documenta un descargador para pares preentrenados compatibles.
+RefineGAN admite entrenamiento e inferencia a 32, 40 y 44,1 kHz con RVC v2 y Pitch Guidance.
 
 ### Consejos prácticos de entrenamiento
 
@@ -104,7 +104,7 @@ Estos tres preajustes son **puntos de partida indicativos**, no reglas universal
 ### Entrenamiento Principiantes (Base Segura)
 
 - **Ideal para:** Primer modelo de voz, 5-15 minutos de audio limpio de un solo hablante, GPUs de 6-8 GB VRAM.
-- **Ajustes:** RVC **v2** · **40 kHz** (o `32 kHz` para RefineGAN) · Pitch Guidance **ON** (`rmvpe`) · Embedder `contentvec` · Preentrenado HiFi-GAN estándar/verificado · **Batch Size `4-8`** · **Epochs `200`** (guardar cada `25-50` épocas) · Precisión **FP32** (o **BF16** en RTX 30/40/50) · GPU Caching **OFF** · Workers `2` · Fused AdamW **OFF**.
+- **Ajustes:** RVC **v2** · **40 kHz** · Pitch Guidance **ON** (`rmvpe`) · Embedder `contentvec` · Preentrenado HiFi-GAN estándar/verificado · **Batch Size `4-8`** · **Epochs `200`** (guardar cada `25-50` épocas) · Precisión **FP32** (o **BF16** en RTX 30/40/50) · GPU Caching **OFF** · Workers `2` · Fused AdamW **OFF**.
 - **Por qué:** Prioriza la estabilidad y evita errores de falta de memoria o sobreajuste temprano, generando varios checkpoints para comparar.
 
 ### Entrenamiento Intermedio (Equilibrio Calidad y Velocidad)
@@ -116,7 +116,7 @@ Estos tres preajustes son **puntos de partida indicativos**, no reglas universal
 ### Entrenamiento Avanzado y Optimización
 
 - **Ideal para:** Datasets grandes o curados multi-emoción/canto, 12-24 GB+ VRAM, preentrenados personalizados.
-- **Ajustes:** RVC **v2** · Sample rate emparejado (`32/40/48 kHz`) y vocoder (`HiFi-GAN`, `MRF HiFi-GAN` o `RefineGAN` a `32 kHz` en Ilaria RVC) · Preentrenado G/D y embedder personalizados/emparejados · **Batch Size `12-16+`** · Objetivo **Total Steps** (para actualizaciones de gradiente consistentes sin importar el tamaño del dataset) · **GPU Caching ON** (solo si el dataset cabe holgadamente en VRAM; mide antes el tiempo por época) · **Fused AdamW ON** (probar en una ejecución nueva) · **Training Queue** para pruebas A/B nocturnas · Monitorización **TensorBoard** + comparación con **Audio Analyzer**.
+- **Ajustes:** RVC **v2** · Sample rate emparejado (`32/40/44.1/48 kHz`) y vocoder (`HiFi-GAN`, `MRF HiFi-GAN` o `RefineGAN` a `32/40/44.1 kHz` en Ilaria RVC) · Preentrenado G/D y embedder personalizados/emparejados · **Batch Size `12-16+`** · Objetivo **Total Steps** (para actualizaciones de gradiente consistentes sin importar el tamaño del dataset) · **GPU Caching ON** (solo si el dataset cabe holgadamente en VRAM; mide antes el tiempo por época) · **Fused AdamW ON** (probar en una ejecución nueva) · **Training Queue** para pruebas A/B nocturnas · Monitorización **TensorBoard** + comparación con **Audio Analyzer**.
 - **Learning rate:** La mayoría de WebUIs RVC (incluida Ilaria RVC) usan la programación estándar del optimizador RVC v2 (`1e-4` base); cambia la tasa de aprendizaje en frontends que la expongan solo si entiendes cómo escala con el batch size.
 
 ## Detectar Underfitting vs. Overfitting de oído

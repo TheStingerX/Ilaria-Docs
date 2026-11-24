@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869059725">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869692686">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848869059725" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848869692686" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -226,7 +226,7 @@
 </table>
 </div>
 </retype-table>
-<p>Use the pretraining choices shown as compatible by your installed build. In Ilaria RVC 2.1.0, for example, the project documents RefineGAN training at 32 kHz with RVC V2 and pitch guidance. The same release also documents a downloader for compatible pretrained pairs.</p>
+<p>RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance.</p>
 <h3 id="practical-training-tips">Practical training tips</h3>
 <ul>
 <li><strong>Epochs:</strong> Try a first comparison run with a target around 200 epochs and listen to several earlier saves. This is a starting point for auditioning, since the strongest checkpoint can come earlier or later. A 1,000-epoch run offers no quality guarantee.</li>
@@ -361,7 +361,7 @@
 <h3 id="beginner-training-safe-baseline">Beginner Training (Safe Baseline)</h3>
 <ul>
 <li><strong>Best for:</strong> First voice model, 5–15 minutes of clean single-speaker audio, 6–8 GB VRAM GPUs.</li>
-<li><strong>Settings:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> (or <code translate="no" v-pre>32 kHz</code> for RefineGAN) · Pitch Guidance <strong>ON</strong> (<code translate="no" v-pre>rmvpe</code>) · Embedder <code translate="no" v-pre>contentvec</code> · Stock/verified HiFi-GAN pretrain · <strong>Batch Size <code translate="no" v-pre>4–8</code></strong> · <strong>Epochs <code translate="no" v-pre>200</code></strong> (save every <code translate="no" v-pre>25–50</code> epochs) · Precision <strong>FP32</strong> (or <strong>BF16</strong> on RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers <code translate="no" v-pre>2</code> · Fused AdamW <strong>OFF</strong>.</li>
+<li><strong>Settings:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> · Pitch Guidance <strong>ON</strong> (<code translate="no" v-pre>rmvpe</code>) · Embedder <code translate="no" v-pre>contentvec</code> · Stock/verified HiFi-GAN pretrain · <strong>Batch Size <code translate="no" v-pre>4–8</code></strong> · <strong>Epochs <code translate="no" v-pre>200</code></strong> (save every <code translate="no" v-pre>25–50</code> epochs) · Precision <strong>FP32</strong> (or <strong>BF16</strong> on RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers <code translate="no" v-pre>2</code> · Fused AdamW <strong>OFF</strong>.</li>
 <li><strong>Why:</strong> Prioritizes stability and avoids out-of-memory errors or early overfitting while producing multiple checkpoints to compare.</li>
 </ul>
 <h3 id="intermediate-training-balanced-quality--speed">Intermediate Training (Balanced Quality &amp; Speed)</h3>
@@ -373,7 +373,7 @@
 <h3 id="advanced-training--optimization">Advanced Training &amp; Optimization</h3>
 <ul>
 <li><strong>Best for:</strong> Large or curated multi-emotion/singing datasets, 12–24 GB+ VRAM, custom pretrains.</li>
-<li><strong>Settings:</strong> RVC <strong>v2</strong> · Matched rate (<code translate="no" v-pre>32/40/48 kHz</code>) &amp; vocoder (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code>, or <code translate="no" v-pre>RefineGAN</code> at <code translate="no" v-pre>32 kHz</code> in Ilaria RVC) · Custom/matched G/D pretrain &amp; embedder · <strong>Batch Size <code translate="no" v-pre>12–16+</code></strong> · <strong>Total Steps</strong> target (for consistent gradient updates regardless of dataset size) · <strong>GPU Caching ON</strong> (only if VRAM comfortably fits the dataset; benchmark epoch time first) · <strong>Fused AdamW ON</strong> (test in a fresh run) · <strong>Training Queue</strong> for overnight A/B runs · <strong>TensorBoard</strong> monitoring + <strong>Audio Analyzer</strong> comparison.</li>
+<li><strong>Settings:</strong> RVC <strong>v2</strong> · Matched rate (<code translate="no" v-pre>32/40/44.1/48 kHz</code>) &amp; vocoder (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code>, or <code translate="no" v-pre>RefineGAN</code> at <code translate="no" v-pre>32/40/44.1 kHz</code> in Ilaria RVC) · Custom/matched G/D pretrain &amp; embedder · <strong>Batch Size <code translate="no" v-pre>12–16+</code></strong> · <strong>Total Steps</strong> target (for consistent gradient updates regardless of dataset size) · <strong>GPU Caching ON</strong> (only if VRAM comfortably fits the dataset; benchmark epoch time first) · <strong>Fused AdamW ON</strong> (test in a fresh run) · <strong>Training Queue</strong> for overnight A/B runs · <strong>TensorBoard</strong> monitoring + <strong>Audio Analyzer</strong> comparison.</li>
 <li><strong>Learning rate:</strong> Most RVC WebUIs (including Ilaria RVC) use the standard RVC v2 optimizer schedule (<code translate="no" v-pre>1e-4</code> base); only change learning rate in frontends that expose it if you understand how it scales with batch size.</li>
 </ul>
 <h2 id="how-to-spot-underfitting-vs-overfitting-by-ear">How to Spot Underfitting vs. Overfitting by Ear</h2>
@@ -411,7 +411,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-22T19:52:55.000Z">22/11/2026 · 20:52</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

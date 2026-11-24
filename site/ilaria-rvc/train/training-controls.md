@@ -1,5 +1,7 @@
 # Training controls and workflow
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance. The app automatically generates the 44.1 kHz mute waveform. Choose **None** to train from scratch if a pretrained pair uses a different architecture, including the tested KLM 5 (40 kHz) and VCTK (44.1 kHz) pairs.
+
 [Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Training controls](training-buttons.md)
@@ -21,7 +23,7 @@
 
 ## Architecture and performance
 
-Ilaria RVC **2.4.7** offers `32 kHz`, `40 kHz`, and `48 kHz` settings with available combinations determined by the vocoder. HiFi-GAN and RefineGAN have different constraints (RefineGAN training in Ilaria RVC is supported specifically at `32 kHz` with RVC v2 and pitch guidance). Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. **FP32**, **FP16**, and **BF16** (on supported RTX 30/40/50 GPUs) let you balance speed and memory pressure. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.
+Check the compatible pair before preprocessing. Pitch guidance controls whether F0 features condition the model. Configure CPU threads for the machine, and select a supported NVIDIA GPU for training. **FP32**, **FP16**, and **BF16** (on supported RTX 30/40/50 GPUs) let you balance speed and memory pressure. Batch size controls how many samples are processed together. If VRAM runs out, reduce the batch and disable optional caching.
 
 **Silent training files** controls how many silent examples the app includes. Compare the same held-out pauses when evaluating a change.
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869071748">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869702682">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869071748" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869702682" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -196,7 +196,7 @@
 <p>I checkpoint HuBERT generici sono sconsigliati come encoder predefinito per la conversione vocale. Sono addestrati per rappresentare il parlato e possono conservare informazioni sul timbro di chi parla, che possono riaffiorare nell’audio convertito. In RVC usa l’encoder previsto dal modello, per esempio ContentVec se la voce è stata addestrata con quello.</p>
 </blockquote>
 <span id="training-compatibility" class="docs-anchor"></span><h2 id="compatibilità-formativa">Compatibilità formativa</h2>
-<p>La formazione espone ContentVec e Spin-v2. La modifica del codificatore richiede nuove funzionalità e un nome dell&#x27;esperimento separato. Abbina la coppia generatore e discriminatore al vocoder, alla frequenza di campionamento dell&#x27;addestramento, alla generazione RVC e alla configurazione dell&#x27;intonazione e segui i requisiti del codificatore dell&#x27;editore della coppia. Ilaria RVC 2.1.0 supporta l&#x27;allenamento RefineGAN specificamente a 32 kHz con RVC V2 e guida del tono. Il downloader potrebbe elencare altre tariffe da utilizzare altrove.</p>
+<p>La formazione espone ContentVec e Spin-v2. La modifica del codificatore richiede nuove funzionalità e un nome dell&#x27;esperimento separato. Abbina la coppia generatore e discriminatore al vocoder, alla frequenza di campionamento dell&#x27;addestramento, alla generazione RVC e alla configurazione dell&#x27;intonazione e segui i requisiti del codificatore dell&#x27;editore della coppia. RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance.</p>
 <span id="get-a-gd-pair" class="docs-anchor"></span><h2 id="scarica-una-coppia-gd">Scarica una coppia G/D</h2>
 <p>In <strong>Altro → Scarica modelli preaddestrati</strong>, utilizza un repository o un archivio preaddestrato oppure inserisci un collegamento al checkpoint G e al checkpoint D corrispondente se la scoperta ha bisogno di aiuto. Il selettore <strong>Preaddestrati consigliati</strong> mostra le varianti del catalogo disponibili e le relative frequenze di campionamento. Controlla la variante scelta prima di installare entrambi i file. Torna a Formazione, aggiorna l&#x27;elenco e seleziona la coppia installata. Se si utilizza intenzionalmente l&#x27;inizializzazione casuale, scegliere Nessuna. Mantieni separati i modelli di inferenza e i pre-training di addestramento.</p>
 <p>Se l&#x27;addestramento termina immediatamente dopo aver selezionato una coppia, verificare entrambi i file e la configurazione dell&#x27;esperimento salvata prima di modificare la dimensione del batch o avviare una nuova esecuzione.</p>
@@ -234,7 +234,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

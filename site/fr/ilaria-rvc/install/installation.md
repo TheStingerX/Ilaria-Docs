@@ -1,5 +1,7 @@
 # Installation et mises à jour
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · Le paquet Windows complet est la version 2.4.7. Le ZIP de mise à jour 2.5.0 exclut le runtime et les poids des modèles. De la version 2.4.2 à la 2.4.8, utilisez **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
@@ -48,6 +50,6 @@ Gardez l’ancienne installation comme sauvegarde. Copiez les modèles dans mode
 
 [GPU compatibles](gpu-compatibility.md)
 
-### Mettre à jour depuis 2.4.2 - 2.4.6
+### Mettre à jour depuis 2.4.2 - 2.4.8
 
-Si vous utilisez déjà une version de **2.4.2** à **2.4.6**, ouvrez **Other → Update Ilaria RVC → Check for updates** et choisissez **Download and restart**. Depuis **2.4.0** ou **2.4.1**, mettez d'abord à jour vers **2.4.2** ou extrayez le ZIP complet de **2.4.7**.
+Si vous utilisez déjà une version de **2.4.2** à **2.4.8**, ouvrez **Other → Update Ilaria RVC → Check for updates** et choisissez **Download and restart**. Depuis **2.4.0** ou **2.4.1**, mettez d'abord à jour vers **2.4.2** ou extrayez le ZIP complet de **2.4.7**.

@@ -1,5 +1,7 @@
 # Installation and updates
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · The full Windows installer is 2.4.7. The 2.5.0 update ZIP excludes the runtime and model weights. From 2.4.2 through 2.4.8, use **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
 [Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
@@ -48,6 +50,6 @@ Keep the old installation as a backup. Copy voice models to the new models/ fold
 
 [Compatible GPUs](gpu-compatibility.md)
 
-### Update from 2.4.2 - 2.4.6
+### Update from 2.4.2 - 2.4.8
 
-If you already run **2.4.2** through **2.4.6**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. From **2.4.0** or **2.4.1**, update to **2.4.2** first or extract the full **2.4.7** ZIP.
+If you already run **2.4.2** through **2.4.8**, open **Other → Update Ilaria RVC → Check for updates** and choose **Download and restart**. From **2.4.0** or **2.4.1**, update to **2.4.2** first or extract the full **2.4.7** ZIP.

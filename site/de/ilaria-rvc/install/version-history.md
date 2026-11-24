@@ -4,12 +4,13 @@
 
 ## Welche Version wird in dieser Dokumentation beschrieben?
 
-Die neueste Windows-Version ist **2.4.8**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
+Die neueste Windows-Version ist **2.5.0**. Überprüfen Sie Ihre installierte Version unter **Andere → Ilaria RVC aktualisieren**. Verwenden Sie dort **Alle bisherigen Änderungen**, um die Release-für-Release-Hinweise auch offline zu durchsuchen.
 
 ## Alle Veröffentlichungen
 
  | Veröffentlichung | Highlights |
 | --- | --- |
+| [2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0) | RefineGAN unterstützt Training und Inferenz mit 32, 40 und 44,1 kHz in RVC v2 mit Pitch Guidance. Die App erzeugt die stille Audiodatei für 44,1 kHz automatisch. Wähle **None** für Training von Grund auf, falls die vortrainierten Gewichte eine andere Architektur nutzen. Getestete Beispiele sind KLM 5 (40 kHz) und VCTK (44,1 kHz). Von 2.4.2 bis 2.4.8 nutze **Other → Update Ilaria RVC → Check for updates → Download and restart**. Das vollständige Windows-Paket ist Version 2.4.7. Die Update-ZIP für 2.5.0 enthält weder Laufzeit noch Modellgewichte. |
 | [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 ergänzt Legacy Core V1.5 mit 32 und 40 kHz im Downloader. Alle vier Legacy-Core-Optionen verwenden `HiFi-GAN` + `ContentVec`. Von 2.4.2 bis 2.4.7 nutze **Other → Update Ilaria RVC → Check for updates → Download and restart**. Die Update-ZIP enthält weder die Windows-Laufzeit noch Modellgewichte. |
 | [2.4.7](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.7) | Neues vollständiges Windows-Basispaket (`ILARIA_RVC-2.4.7.zip`). Stellt die autorisierten **Legacy Core 1.5 V2**- und **1.6**-Pretrained-Downloads bei `32 kHz` wieder her und verbessert die Wiederherstellung nach unterbrochenen Updates (geänderte Dateien bleiben in einem separaten Backup erhalten). Von **2.4.2 bis 2.4.6** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |
 | [2.4.6](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.6) | Fügt **KLM Vocal ContentVec** (`klm-vocal-contentvec`) als optionalen Download für Inferenz und RVC-v2-Training hinzu und ergänzt **43 geprüfte KLM-G/D-Paare** bei **Recommended pretrained models** mit Sample-Rates (Trainings-Kompatibilität variiert je Paar). Ab **2.4.5** öffne **Other → Update Ilaria RVC → Check for updates** und wähle **Download and restart**. |

@@ -15,7 +15,7 @@ Training creates a new voice model from recordings. For a first experiment, use 
 | `Sample Rate` | Chooses the model's training rate, 32, 40 or 48 kHz where compatible. Match the architecture and G/D pair. Raising the rate cannot restore detail absent from your recordings. |
 | `Pitch Guidance` | Gives the generator an estimated pitch track during training. Use the default for a typical model and match the pretrained pair. Turning it off changes what the model expects. |
 | `CPU Threads` | Controls how much CPU parallelism the preparation or extraction stage uses. Reduce it if preprocessing exhausts system RAM or makes the PC unusable. |
-| `Vocoder` | Selects the waveform generator. Start with HiFi-GAN unless you have a compatible reason to choose RefineGAN. In this build RefineGAN training needs RVC V2 at 32 kHz with pitch guidance. |
+| `Vocoder` | RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance. |
 | `Embedder Model` | Chooses the content features used by the trainer. Training exposes ContentVec and Spin-v2. Changing it requires fresh extracted features and a compatible experiment. Use the matching encoder at inference. |
 | `Silent training files` | Sets how many silent examples the experiment includes. Compare the same natural pauses if changing it. |
 | `Index Algorithm` | Chooses whether to keep all feature vectors or cluster them before building the retrieval index. See [Auto, Faiss and KMeans](training-controls.md). |

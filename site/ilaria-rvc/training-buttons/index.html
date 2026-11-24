@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869059725">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869692686">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869059725" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869692686" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -187,7 +187,7 @@
 | `Sample Rate` | Chooses the model's training rate, 32, 40 or 48 kHz where compatible. Match the architecture and G/D pair. Raising the rate cannot restore detail absent from your recordings. |
 | `Pitch Guidance` | Gives the generator an estimated pitch track during training. Use the default for a typical model and match the pretrained pair. Turning it off changes what the model expects. |
 | `CPU Threads` | Controls how much CPU parallelism the preparation or extraction stage uses. Reduce it if preprocessing exhausts system RAM or makes the PC unusable. |
-| `Vocoder` | Selects the waveform generator. Start with HiFi-GAN unless you have a compatible reason to choose RefineGAN. In this build RefineGAN training needs RVC V2 at 32 kHz with pitch guidance. |
+| `Vocoder` | RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance. |
 | `Embedder Model` | Chooses the content features used by the trainer. Training exposes ContentVec and Spin-v2. Changing it requires fresh extracted features and a compatible experiment. Use the matching encoder at inference. |
 | `Silent training files` | Sets how many silent examples the experiment includes. Compare the same natural pauses if changing it. |
 | `Index Algorithm` | Chooses whether to keep all feature vectors or cluster them before building the retrieval index. See [Auto, Faiss and KMeans](training-controls.md). |
@@ -232,7 +232,7 @@
 </tr>
 <tr>
 <td><code translate="no" v-pre>Vocoder</code></td>
-<td>Selects the waveform generator. Start with HiFi-GAN unless you have a compatible reason to choose RefineGAN. In this build RefineGAN training needs RVC V2 at 32 kHz with pitch guidance.</td>
+<td>RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>Embedder Model</code></td>
@@ -367,7 +367,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

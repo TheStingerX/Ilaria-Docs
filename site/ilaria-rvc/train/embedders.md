@@ -20,7 +20,7 @@ Available inference encoders include ContentVec, Spin, Spin-v2 and Chinese, Japa
 
 ## Training compatibility
 
-Training exposes ContentVec and Spin-v2. Changing the encoder requires fresh features and a separate experiment name. Match your generator and discriminator pair to the vocoder, training sample rate, RVC generation and pitch configuration, and follow the pair publisher's encoder requirements. Ilaria RVC 2.1.0 supports RefineGAN training specifically at 32 kHz with RVC V2 and pitch guidance. The downloader may list other rates for use elsewhere.
+Training exposes ContentVec and Spin-v2. Changing the encoder requires fresh features and a separate experiment name. Match your generator and discriminator pair to the vocoder, training sample rate, RVC generation and pitch configuration, and follow the pair publisher's encoder requirements. RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance.
 
 ## Get a G/D pair
 

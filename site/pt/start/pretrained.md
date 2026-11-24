@@ -77,7 +77,7 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 | **UKR** | `32 kHz` | `HiFi-GAN` | Não especificado | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **VocalCore** e **VocalCore Try3b** | `48 kHz` | `HiFi-GAN` | Não especificado | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 
-> **Nota de compatibilidade**: no Ilaria RVC o treino com RefineGAN é suportado especificamente a `32 kHz` com RVC v2 e guia de pitch. Escolher um pretrain RefineGAN de `40 kHz` ou `44.1 kHz` mantendo o treino em `32 kHz` irá falhar ou produzir resultados corrompidos.
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance. A aplicação gera automaticamente o áudio silencioso a 44,1 kHz. Seleciona **None** para treinar do zero quando os pesos usam outra arquitetura, como nos pares testados KLM 5 (40 kHz) e VCTK (44,1 kHz).
 
 !!!note
 **Nota sobre os Legacy Core (`V1.5`, `V1.5v2` e `V1.6`):**

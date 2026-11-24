@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869059725">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869692686">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869059725" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869692686" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869059725" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869692686" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -195,7 +195,7 @@
 <p>Generic HuBERT checkpoints are not recommended as the default encoder for voice conversion. Their speech prediction training does not explicitly remove speaker identity, so the features can carry source timbre into the output. For RVC, use the encoder expected by the model, such as ContentVec when the voice was trained with it.</p>
 </blockquote>
 <h2 id="training-compatibility">Training compatibility</h2>
-<p>Training exposes ContentVec and Spin-v2. Changing the encoder requires fresh features and a separate experiment name. Match your generator and discriminator pair to the vocoder, training sample rate, RVC generation and pitch configuration, and follow the pair publisher&#x27;s encoder requirements. Ilaria RVC 2.1.0 supports RefineGAN training specifically at 32 kHz with RVC V2 and pitch guidance. The downloader may list other rates for use elsewhere.</p>
+<p>Training exposes ContentVec and Spin-v2. Changing the encoder requires fresh features and a separate experiment name. Match your generator and discriminator pair to the vocoder, training sample rate, RVC generation and pitch configuration, and follow the pair publisher&#x27;s encoder requirements. RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance.</p>
 <h2 id="get-a-gd-pair">Get a G/D pair</h2>
 <p>Under <strong>Other → Download pretrained models</strong>, use a repository or pretrained archive, or enter a link to the G checkpoint and its matched D checkpoint if discovery needs help. The <strong>Recommended pretraineds</strong> picker shows available catalog variants and their sample rates. Check the chosen variant before installing both files. Return to Training, refresh the list, and select the installed pair. If using random initialization intentionally, choose None. Keep inference models and training pretrains separate.</p>
 <p>If training exits immediately after selecting a pair, verify both files and the saved experiment configuration before changing batch size or starting a new run.</p>
@@ -233,7 +233,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

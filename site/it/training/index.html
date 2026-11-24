@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869071748">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869702682">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848869071748" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848869702682" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -227,7 +227,7 @@
 </table>
 </div>
 </retype-table>
-<p>Usa le scelte di pretraining indicate come compatibili dalla tua build installata. In Ilaria RVC 2.1.0, ad esempio, il progetto documenta l&#x27;addestramento RefineGAN a 32 kHz con RVC V2 e guida pitch. La stessa release documenta anche un downloader per coppie pre-addestrate compatibili.</p>
+<p>RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance.</p>
 <span id="practical-training-tips" class="docs-anchor"></span><h3 id="consigli-pratici-per-laddestramento">Consigli pratici per l&#x27;addestramento</h3>
 <ul>
 <li><strong>Epoche:</strong> Prova una prima esecuzione di confronto con obiettivo intorno a 200 epoche e ascolta diversi salvataggi precedenti. È un punto di partenza per i test d&#x27;ascolto, poiché il checkpoint migliore può arrivare prima o dopo. Un&#x27;esecuzione da 1.000 epoche non offre alcuna garanzia di qualità.</li>
@@ -362,7 +362,7 @@
 <span id="beginner-training-safe-baseline" class="docs-anchor"></span><h3 id="training-principianti-base-sicura">Training Principianti (Base Sicura)</h3>
 <ul>
 <li><strong>Ideale per:</strong> Primo modello vocale, 5-15 minuti di audio pulito a singolo parlante, GPU con 6-8 GB VRAM.</li>
-<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> (oppure <code translate="no" v-pre>32 kHz</code> per RefineGAN) · Pitch Guidance <strong>ON</strong> (<code translate="no" v-pre>rmvpe</code>) · Embedder <code translate="no" v-pre>contentvec</code> · Pretrain HiFi-GAN standard/verificato · <strong>Batch Size <code translate="no" v-pre>4-8</code></strong> · <strong>Epochs <code translate="no" v-pre>200</code></strong> (salva ogni <code translate="no" v-pre>25-50</code> epoche) · Precisione <strong>FP32</strong> (oppure <strong>BF16</strong> su RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers <code translate="no" v-pre>2</code> · Fused AdamW <strong>OFF</strong>.</li>
+<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · <strong>40 kHz</strong> · Pitch Guidance <strong>ON</strong> (<code translate="no" v-pre>rmvpe</code>) · Embedder <code translate="no" v-pre>contentvec</code> · Pretrain HiFi-GAN standard/verificato · <strong>Batch Size <code translate="no" v-pre>4-8</code></strong> · <strong>Epochs <code translate="no" v-pre>200</code></strong> (salva ogni <code translate="no" v-pre>25-50</code> epoche) · Precisione <strong>FP32</strong> (oppure <strong>BF16</strong> su RTX 30/40/50) · GPU Caching <strong>OFF</strong> · Workers <code translate="no" v-pre>2</code> · Fused AdamW <strong>OFF</strong>.</li>
 <li><strong>Perché:</strong> Privilegia la stabilità ed evita errori di memoria esaurita o overfitting precoce producendo più checkpoint da confrontare.</li>
 </ul>
 <span id="intermediate-training-balanced-quality--speed" class="docs-anchor"></span><h3 id="training-intermedio-equilibrio-qualità-e-velocità">Training Intermedio (Equilibrio Qualità e Velocità)</h3>
@@ -374,7 +374,7 @@
 <span id="advanced-training--optimization" class="docs-anchor"></span><h3 id="training-avanzato-e-ottimizzazione">Training Avanzato e Ottimizzazione</h3>
 <ul>
 <li><strong>Ideale per:</strong> Dataset grandi o curati multi-emozione/canto, 12-24 GB+ VRAM, pretrain personalizzati.</li>
-<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · Sample rate abbinato (<code translate="no" v-pre>32/40/48 kHz</code>) e vocoder (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> oppure <code translate="no" v-pre>RefineGAN</code> a <code translate="no" v-pre>32 kHz</code> in Ilaria RVC) · Pretrain G/D ed embedder personalizzati/abbinati · <strong>Batch Size <code translate="no" v-pre>12-16+</code></strong> · Obiettivo <strong>Total Steps</strong> (per aggiornamenti di gradiente coerenti indipendentemente dalla dimensione del dataset) · <strong>GPU Caching ON</strong> (solo se la VRAM contiene comodamente il dataset; misura prima il tempo per epoca) · <strong>Fused AdamW ON</strong> (testa in un&#x27;esecuzione pulita) · <strong>Training Queue</strong> per esecuzioni A/B notturne · Monitoraggio <strong>TensorBoard</strong> + confronto con <strong>Audio Analyzer</strong>.</li>
+<li><strong>Impostazioni:</strong> RVC <strong>v2</strong> · Sample rate abbinato (<code translate="no" v-pre>32/40/44.1/48 kHz</code>) e vocoder (<code translate="no" v-pre>HiFi-GAN</code>, <code translate="no" v-pre>MRF HiFi-GAN</code> oppure <code translate="no" v-pre>RefineGAN</code> a <code translate="no" v-pre>32/40/44.1 kHz</code> in Ilaria RVC) · Pretrain G/D ed embedder personalizzati/abbinati · <strong>Batch Size <code translate="no" v-pre>12-16+</code></strong> · Obiettivo <strong>Total Steps</strong> (per aggiornamenti di gradiente coerenti indipendentemente dalla dimensione del dataset) · <strong>GPU Caching ON</strong> (solo se la VRAM contiene comodamente il dataset; misura prima il tempo per epoca) · <strong>Fused AdamW ON</strong> (testa in un&#x27;esecuzione pulita) · <strong>Training Queue</strong> per esecuzioni A/B notturne · Monitoraggio <strong>TensorBoard</strong> + confronto con <strong>Audio Analyzer</strong>.</li>
 <li><strong>Learning rate:</strong> La maggior parte delle WebUI RVC (inclusa Ilaria RVC) usa lo schedule standard dell&#x27;ottimizzatore RVC v2 (<code translate="no" v-pre>1e-4</code> base); modifica il learning rate nei frontend che lo espongono solo se comprendi come scala con il batch size.</li>
 </ul>
 <span id="how-to-spot-underfitting-vs-overfitting-by-ear" class="docs-anchor"></span><h2 id="riconoscere-underfitting-vs-overfitting-allascolto">Riconoscere Underfitting vs. Overfitting all&#x27;ascolto</h2>
@@ -412,7 +412,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-22T19:52:55.000Z">22/11/2026 · 20:52</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -38,7 +38,7 @@
 - [File, configurazione e manutenzione della sorgente](https://docs.ilariarvc.shop/it/ilaria-rvc/install/source-layout.md): Per la conversione è possibile utilizzare un'esportazione di inferenza.
 - [Requisiti di sistema di Ilaria RVC](https://docs.ilariarvc.shop/it/ilaria-rvc/install/requirements.md): Ilaria RVC gira in locale sul tuo PC usando PyTorch 2.10.0 e NVIDIA CUDA.
 - [GPU compatibili](https://docs.ilariarvc.shop/it/ilaria-rvc/install/gpu-compatibility.md): Lo ZIP Windows pesa circa 5,00 GB. Estrailo in una nuova cartella e avvia RUN_ILARIA_RVC.bat. Per i log usa RUN_ILARIA_RVC_LOGS.bat. ContentVec e RMVPE sono inclusi.
-- [Cronologia delle versioni e differenze di rilascio](https://docs.ilariarvc.shop/it/ilaria-rvc/install/version-history.md): L'ultima versione per Windows è 2.4.8. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline.
+- [Cronologia delle versioni e differenze di rilascio](https://docs.ilariarvc.shop/it/ilaria-rvc/install/version-history.md): L'ultima versione per Windows è 2.5.0. Controlla la versione installata in Altro → Aggiorna Ilaria RVC e sfoglia le note di rilascio anche offline.
 
 ### Cloud
 
@@ -59,7 +59,7 @@
 - [Dataset, Dataset Checker e Audio Analyzer](https://docs.ilariarvc.shop/it/ilaria-rvc/train/datasets.md): Il dataset è il fattore più importante per determinare quanto sarà naturale, pulita ed espressiva la voce del tuo modello RVC.
 - [Addestramento e checkpoint](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-workflow.md): Selezionare un set di dati e scegliere l'architettura RVC compatibile, la frequenza di campionamento, la guida dell'intonazione, l’embedder e i pretraining del generatore/discriminatore.
 - [Embedder e pretraining](https://docs.ilariarvc.shop/it/ilaria-rvc/train/embedders.md): Apri Impostazioni incorporamento sotto Elaborazione audio.
-- [Controlli e flusso di lavoro dell'addestramento](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-controls.md): La versione 2.4.7 offre impostazioni a 32, 40 e 48 kHz con combinazioni disponibili determinate dal vocoder. HiFi-GAN e RefineGAN hanno vincoli diversi.
+- [Controlli e flusso di lavoro dell'addestramento](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-controls.md): Ilaria RVC 2.5.0. RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance.
 - [Coda, dashboard e avvisi](https://docs.ilariarvc.shop/it/ilaria-rvc/train/queue-and-dashboard.md): Configura l'esperimento in Training, conferma il set di dati e il nome del modello e aggiungilo alla Coda di training. Utilizzare nomi distinti per configurazioni distinte.
 - [Spiegazione di tutti i controlli di allenamento](https://docs.ilariarvc.shop/it/ilaria-rvc/train/training-buttons.md): L'allenamento crea un nuovo modello vocale dalle registrazioni.
 

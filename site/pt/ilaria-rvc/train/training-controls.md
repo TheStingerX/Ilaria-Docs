@@ -1,5 +1,7 @@
 # Controles e fluxo de trabalho de treinamento
 
+> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance. A aplicação gera automaticamente o áudio silencioso a 44,1 kHz. Seleciona **None** para treinar do zero quando os pesos usam outra arquitetura, como nos pares testados KLM 5 (40 kHz) e VCTK (44,1 kHz).
+
 [Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 [Controlos de treino](training-buttons.md)
@@ -21,7 +23,7 @@
 
 ## Arquitetura e performance
 
-A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes. Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.
+Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.
 
 **Arquivos de treinamento silenciosos** controla quantos exemplos silenciosos o aplicativo inclui. Compare as mesmas pausas prolongadas ao avaliar uma mudança.
 

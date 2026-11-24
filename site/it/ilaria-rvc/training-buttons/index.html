@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869071748">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869702682">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869071748" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869702682" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869071748" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869702682" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=5">
 
@@ -188,7 +188,7 @@
 | `Sample Rate` | Sceglie la frequenza di allenamento del modello, 32, 40 o 48 kHz dove compatibile. Abbina l'architettura e la coppia G/D. Aumentando la velocità non è possibile ripristinare i dettagli assenti dalle registrazioni. |
 | `Pitch Guidance` | Fornisce al generatore una stima del percorso del passo durante l'allenamento. Utilizzare l'impostazione predefinita per un modello tipico e abbinare la coppia preaddestrata. Disattivandolo si modifica ciò che il modello si aspetta. |
 | `CPU Threads` | Controlla la quantità di parallelismo della CPU utilizzata dalla fase di preparazione o estrazione. Ridurlo se la preelaborazione esaurisce la RAM di sistema o rende il PC inutilizzabile. |
-| `Vocoder` | Seleziona il generatore di forme d'onda. Inizia con HiFi-GAN a meno che tu non abbia un motivo compatibile per scegliere RefineGAN. In questa build l'allenamento RefineGAN necessita di RVC V2 a 32 kHz con guida del tono. |
+| `Vocoder` | RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance. |
 | `Embedder Model` | Sceglie le funzionalità dei contenuti utilizzate dal formatore. La addestramento espone ContentVec e Spin-v2. La modifica richiede nuove funzionalità estratte e un esperimento compatibile. Utilizzare il codificatore corrispondente durante l'inferenza. |
 | `Silent training files` | Imposta il numero di esempi silenziosi inclusi nell'esperimento. Confronta le stesse pause naturali se lo cambi. |
 | `Index Algorithm` | Scegli se mantenere tutti i vettori delle caratteristiche o raggrupparli prima di costruire l'indice di recupero. Vedi [Auto, Faiss e KMeans](training-controls.md). |
@@ -233,7 +233,7 @@
 </tr>
 <tr>
 <td><code translate="no" v-pre>Vocoder</code></td>
-<td>Seleziona il generatore di forme d&#x27;onda. Inizia con HiFi-GAN a meno che tu non abbia un motivo compatibile per scegliere RefineGAN. In questa build l&#x27;allenamento RefineGAN necessita di RVC V2 a 32 kHz con guida del tono.</td>
+<td>RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>Embedder Model</code></td>
@@ -368,7 +368,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

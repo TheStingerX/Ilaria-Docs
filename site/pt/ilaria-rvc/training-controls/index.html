@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869117351">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869744493">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Controles e fluxo de trabalho de treinamento">
-    <meta name="description" content="A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes.">
+    <meta name="description" content="Ilaria RVC 2.5.0. O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/pt/ilaria-rvc/training-controls/">
@@ -36,23 +36,23 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869117351" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869744493" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869117351" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869744493" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869117351" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869744493" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=5">
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="pt_PT">
-    <meta property="og:description" content="A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes.">
+    <meta property="og:description" content="Ilaria RVC 2.5.0. O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
-    <meta name="twitter:description" content="A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes.">
+    <meta name="twitter:description" content="Ilaria RVC 2.5.0. O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/training-controls/">
@@ -175,7 +175,10 @@
 
                 <!-- Page content  -->
 <span id="training-controls-and-workflow" class="docs-anchor"></span><h1 id="controles-e-fluxo-de-trabalho-de-treinamento">Controles e fluxo de trabalho de treinamento</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Ilaria RVC 2.5.0. O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance.</div>
+<blockquote>
+<p><strong><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0">Ilaria RVC 2.5.0</a></strong> · O RefineGAN suporta treino e inferência a 32, 40 e 44,1 kHz com RVC v2 e Pitch Guidance. A aplicação gera automaticamente o áudio silencioso a 44,1 kHz. Seleciona <strong>None</strong> para treinar do zero quando os pesos usam outra arquitetura, como nos pares testados KLM 5 (40 kHz) e VCTK (44,1 kHz).</p>
+</blockquote>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)</a></p>
 <p><a href="../training-buttons/">Controlos de treino</a></p>
 <blockquote>
@@ -229,7 +232,7 @@
 </div>
 </retype-table>
 <span id="architecture-and-performance" class="docs-anchor"></span><h2 id="arquitetura-e-performance">Arquitetura e performance</h2>
-<p>A versão 2.4.7 oferece configurações de 32, 40 e 48 kHz com combinações disponíveis determinadas pelo vocoder. HiFi-GAN e RefineGAN têm restrições diferentes. Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.</p>
+<p>Verifique o par compatível antes do pré-processamento. A orientação de pitch controla se os recursos F0 condicionam o modelo. Configure threads de CPU para a máquina e selecione uma GPU NVIDIA compatível para treinamento. FP32 é o padrão na UI verificada. O FP16 pode reduzir a pressão da memória no hardware compatível. O tamanho do lote controla quantas amostras são processadas juntas. Se a VRAM acabar, reduza o lote e desative o cache opcional.</p>
 <p><strong>Arquivos de treinamento silenciosos</strong> controla quantos exemplos silenciosos o aplicativo inclui. Compare as mesmas pausas prolongadas ao avaliar uma mudança.</p>
 <span id="how-index-algorithm-works" class="docs-anchor"></span><h2 id="como-funciona-o-algoritmo-de-índice">Como funciona o algoritmo de índice</h2>
 <p>Cada opção produz um <strong>índice de recuperação FAISS</strong>. As alterações do seletor cujos vetores de recursos extraídos vão para o índice, independentemente do treinamento do modelo de voz. Um vetor de recursos representa um quadro de áudio curto. Os limites abaixo contam vetores, não clipes, épocas ou minutos.</p>
@@ -313,7 +316,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-22T19:52:55.000Z">22/11/2026 · 20:52</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

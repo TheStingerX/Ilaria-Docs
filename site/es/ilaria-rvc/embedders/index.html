@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869083064">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848869712953">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848869083064" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848869712953" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869083064" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848869712953" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869083064" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848869712953" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=5">
 
@@ -196,7 +196,7 @@
 <p>Los checkpoints HuBERT genéricos no se recomiendan como codificador predeterminado para conversión de voz. Se entrenan para representar el habla y pueden conservar el timbre de origen en el audio convertido. Usa el codificador previsto por el modelo RVC, como ContentVec si se entrenó con él.</p>
 </blockquote>
 <span id="training-compatibility" class="docs-anchor"></span><h2 id="compatibilidad-de-entrenamiento">Compatibilidad de entrenamiento</h2>
-<p>La capacitación expone ContentVec y Spin-v2. Cambiar el codificador requiere funciones nuevas y un nombre de experimento independiente. Haga coincidir su par de generador y discriminador con el vocoder, la frecuencia de muestreo de entrenamiento, la generación de RVC y la configuración de tono, y siga los requisitos del codificador del par. Ilaria RVC 2.1.0 admite el entrenamiento RefineGAN específicamente a 32 kHz con RVC V2 y guía de tono. El programa de descarga puede enumerar otras tarifas para usar en otros lugares.</p>
+<p>La capacitación expone ContentVec y Spin-v2. Cambiar el codificador requiere funciones nuevas y un nombre de experimento independiente. Haga coincidir su par de generador y discriminador con el vocoder, la frecuencia de muestreo de entrenamiento, la generación de RVC y la configuración de tono, y siga los requisitos del codificador del par. RefineGAN admite entrenamiento e inferencia a 32, 40 y 44,1 kHz con RVC v2 y Pitch Guidance.</p>
 <span id="get-a-gd-pair" class="docs-anchor"></span><h2 id="consigue-un-par-gd">Consigue un par G/D</h2>
 <p>En <strong>Otro → Descargar modelos previamente entrenados</strong>, use un repositorio o archivo previamente entrenado, o ingrese un enlace al punto de control G y su punto de control D coincidente si el descubrimiento necesita ayuda. El selector <strong>Preentrenamiento recomendado</strong> muestra las variantes de catálogo disponibles y sus tasas de muestra. Verifique la variante elegida antes de instalar ambos archivos. Regrese a Entrenamiento, actualice la lista y seleccione el par instalado. Si utiliza la inicialización aleatoria intencionalmente, elija Ninguno. Mantenga separados los modelos de inferencia y los preentrenamientos de entrenamiento.</p>
 <p>Si el entrenamiento finaliza inmediatamente después de seleccionar un par, verifique ambos archivos y la configuración del experimento guardado antes de cambiar el tamaño del lote o comenzar una nueva ejecución.</p>
@@ -234,7 +234,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
