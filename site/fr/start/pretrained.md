@@ -46,8 +46,8 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
 | **KLM-X** | `32 kHz` | HiFi-GAN | Non spécifié | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
-| **Legacy Core V1.5** (Lyery) | `40 kHz` | — | — | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
-| **Legacy Core V1.5** (Lyery) | `32 kHz` | — | — | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
+| **Legacy Core V1.5** | `40 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
+| **Legacy Core V1.5** | `32 kHz` | HiFi-GAN | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5v2** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Legacy Core V1.6** | `32 kHz` | HiFi-GAN | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Mandagues V2** | `40 kHz` | HiFi-GAN | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
