@@ -27,4 +27,4 @@ A conversão de voz e o treino RVC dependem do poder de cálculo da GPU, largura
 
 ## 4. Otimização avançada opcional (NVIDIA)
 
-Em GPUs NVIDIA compatíveis, bloquear clocks gráficos com `nvidia-smi` é um teste **opcional**; consulta [Otimização avançada do Vonovox](../other-rvcs/vonovox/advanced-performance-optimization.md).
+Em GPUs NVIDIA compatíveis, bloquear clocks gráficos com `nvidia-smi` é um teste **opcional**; consulta [Otimização avançada do Vonovox](../other-rvcs/voice-changers/vonovox/advanced-performance-optimization.md).

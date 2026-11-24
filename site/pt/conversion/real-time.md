@@ -112,4 +112,4 @@ Comece pelos padrões do aplicativo e mude uma configuração por vez. Se um jog
 
 ## RVC Blue
 
-Conversão de voz desktop no Windows. [Instalação e configuração](../other-rvcs/rvc-blue/installation.md).
+Conversão de voz desktop no Windows. [Instalação e configuração](../other-rvcs/voice-changers/rvc-blue/installation.md).

@@ -124,4 +124,4 @@ Diese drei Voreinstellungen sind **orientierende Startpunkte**, keine festen Reg
 1. **Underfitting (zu früh):** Die Ausgabe klingt noch überwiegend wie der Eingabesprecher, verfehlt das Ziel-Timbre bei gehaltenen Vokalen oder verliert Charakter auf hohen/tiefen Tönen. *Behebung:* Training vom letzten `G_*.pth`/`D_*.pth`-Checkpoint fortsetzen.
 2. **Overfitting (zu spät):** Die Stimme klingt bei unbekannten Wörtern robotisch/metallisch, gibt Raumrauschen oder Atemartefakte des Datasets wieder oder klingt *nur* bei sätzen ähnlich dem Trainingsset gut. *Behebung:* Auf einen früheren Checkpoint zurückgehen (`50-100` Epochen früher) und das Dataset im [Audio-Analyzer](../ilaria-rvc/manage/audio-analyzer.md) prüfen.
 
-> Wenn du mit **Redpanda-vc** trainierst (das Generator EMA und schrittbasiertes Speichern ergänzt), lies [RVC-Modelle in Redpanda-vc trainieren](../other-rvcs/redpanda/training.md).
+> Wenn du mit **Redpanda-vc** trainierst (das Generator EMA und schrittbasiertes Speichern ergänzt), lies [RVC-Modelle in Redpanda-vc trainieren](../other-rvcs/training/redpanda/training.md).

@@ -75,81 +75,92 @@
 
 - [Guias passo a passo por aplicativo](https://docs.ilariarvc.shop/pt/other-rvcs/app-guides.md): Usa Ilaria RVC para treinar modelos e converter gravações.
 
-### Vonovox
+### Treino de modelos
 
-- [Instale Vonovox](https://docs.ilariarvc.shop/pt/other-rvcs/vonovox/installation.md): Vonovox é um conversor de voz ao vivo do Windows para GPUs NVIDIA compatíveis.
-- [Rotear e sintonizar Vonovox](https://docs.ilariarvc.shop/pt/other-rvcs/vonovox/live-audio.md): Use três pontos de extremidade: seu microfone físico para entrada, um cabo virtual para o sinal convertido e fones de ouvido para monitoramento.
-- [Otimização Avançada de Desempenho: NVIDIA GPU Clock Locking](https://docs.ilariarvc.shop/pt/other-rvcs/vonovox/advanced-performance-optimization.md): Guia opcional de bloqueio de clock de GPU NVIDIA (GPU Clock Locking) para testar se fixar frequências gráficas suportadas melhora a estabilidade de latência do Vonovox no Windows.
 
-### Applio
+#### Applio
 
-- [Instale o Applio e verifique o mecanismo](https://docs.ilariarvc.shop/pt/other-rvcs/applio/installation.md): O Applio possui duas opções de download que executam exatamente o mesmo mecanismo - mudam apenas a interface e o método de instalação:
-- [Instale uma voz no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/applio/models.md): Coloque os downloads do modelo em uma pasta conhecida e extraia qualquer ZIP lá. Mantenha as notas do editor ao lado dos arquivos. Use modelos de fontes em que você confia.
-- [Converta uma gravação no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/applio/inference.md): Comece com uma gravação curta que você possa reconhecer instantaneamente.
-- [Treine, avalie e exporte uma voz no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/applio/training.md): Uma primeira execução prova que suas gravações, configuração e hardware podem produzir uma exportação com a qual você pode converter.
-- [Use o Applio com um microfone](https://docs.ilariarvc.shop/pt/other-rvcs/applio/realtime.md): Prove que seu modelo funciona com um clipe gravado antes de configurar o áudio ao vivo.
-- [Transforme um script curto em fala convertida](https://docs.ilariarvc.shop/pt/other-rvcs/applio/tts.md): Applio usa uma voz Edge TTS online para ler seu texto e um modelo RVC para alterar a voz gerada. A voz de origem determina a pronúncia, o ritmo e o idioma que ela lê.
-- [Applio Realtime na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/applio/cloud.md): Executa o Applio e o separador Realtime na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver GPU compatível.
+- [Instale o Applio e verifique o mecanismo](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/installation.md): O Applio possui duas opções de download que executam exatamente o mesmo mecanismo - mudam apenas a interface e o método de instalação:
+- [Instale uma voz no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/models.md): Coloque os downloads do modelo em uma pasta conhecida e extraia qualquer ZIP lá. Mantenha as notas do editor ao lado dos arquivos. Use modelos de fontes em que você confia.
+- [Converta uma gravação no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/inference.md): Comece com uma gravação curta que você possa reconhecer instantaneamente.
+- [Treine, avalie e exporte uma voz no Applio](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/training.md): Uma primeira execução prova que suas gravações, configuração e hardware podem produzir uma exportação com a qual você pode converter.
+- [Use o Applio com um microfone](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/realtime.md): Prove que seu modelo funciona com um clipe gravado antes de configurar o áudio ao vivo.
+- [Transforme um script curto em fala convertida](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/tts.md): Applio usa uma voz Edge TTS online para ler seu texto e um modelo RVC para alterar a voz gerada. A voz de origem determina a pronúncia, o ritmo e o idioma que ela lê.
+- [Applio Realtime na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/training/applio/cloud.md): Executa o Applio e o separador Realtime na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver GPU compatível.
 
-### RVC WebUI (Mainline - Original RVC)
+#### RVC WebUI (Mainline - Original RVC)
 
-- [Instalar RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/mainline/installation.md): RVC WebUI (Mainline - Original RVC) é a WebUI de conversão de voz baseada em recuperação upstream. Use a interface do navegador para conversão de arquivos e treinamento.
-- [Converter gravações no RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/mainline/inference.md): Comece com uma gravação curta que você possa ouvir claramente em um reprodutor de mídia normal, além de um modelo RVC exportado que você tem permissão para usar.
-- [Treine e exporte um modelo RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/mainline/training.md): Comece com um único alto-falante e um novo nome de experimento. O treinamento produz um modelo que você pode testar em novos desempenhos na interface de inferência.
-- [Use o trocador de voz em tempo real do RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/mainline/realtime.md): Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do RVC WebUI (Mainline - Original RVC).
+- [Instalar RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/training/mainline/installation.md): RVC WebUI (Mainline - Original RVC) é a WebUI de conversão de voz baseada em recuperação upstream. Use a interface do navegador para conversão de arquivos e treinamento.
+- [Converter gravações no RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/training/mainline/inference.md): Comece com uma gravação curta que você possa ouvir claramente em um reprodutor de mídia normal, além de um modelo RVC exportado que você tem permissão para usar.
+- [Treine e exporte um modelo RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/training/mainline/training.md): Comece com um único alto-falante e um novo nome de experimento. O treinamento produz um modelo que você pode testar em novos desempenhos na interface de inferência.
+- [Use o trocador de voz em tempo real do RVC WebUI (Mainline - Original RVC)](https://docs.ilariarvc.shop/pt/other-rvcs/training/mainline/realtime.md): Este guia se aplica à GUI separada em tempo real incluída nas compilações suportadas do RVC WebUI (Mainline - Original RVC).
 
-### w-okada VCClient
+#### Redpanda-vc
 
-- [Instale o w-okada VCClient](https://docs.ilariarvc.shop/pt/other-rvcs/okada/installation.md): O VCClient converte o áudio do microfone ao vivo. A interface é o cliente e o processo de conversão é o servidor. Para seu primeiro teste, execute ambos no mesmo computador.
-- [Converta seu microfone em w-okada VCClient](https://docs.ilariarvc.shop/pt/other-rvcs/okada/live-audio.md): Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz limpa e convertida nos fones de ouvido, conecte-a a uma chamada ou gravador.
+- [Instalar o Redpanda VC](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/first-run.md): Começa pela versão pré-compilada para Windows x64. A aplicação de desktop usa Tauri e executa os motores vocais Python localmente. O código-fonte também inclui uma WebUI com a mesma interface.
+- [Inferência por ficheiros](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/inference.md): Usa Inference para converter uma gravação ou uma pasta inteira. Uma voz RVC usa um modelo .pth de inferência; uma voz Causal Voice Changer usa .cvc.
+- [Conversão de voz em tempo real](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/live-audio.md): Abre Realtime na aplicação de desktop ou na WebUI. Testa uma voz nos auscultadores antes de enviares o som para Discord, OBS, um jogo ou outra aplicação.
+- [Treinar Modelos RVC no Redpanda-vc - EMA e Salvamento por Passos](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/training.md): Guia completo para iniciantes, verificado no código, sobre treinamento de modelos RVC no Redpanda-vc: Generator EMA, salvamento de checkpoints por passos, retomada, exportação e solução de problemas.
+- [Treino com Causal Voice Changer](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/causal-training.md): A opção Causal Voice Changer do Redpanda integra Causal Voice Changer v0.4.0. O ajuste fino cria uma voz .cvc para o motor CVC.
+- [Redpanda VC e outras aplicações RVC](https://docs.ilariarvc.shop/pt/other-rvcs/training/redpanda/differences.md): O Redpanda VC reúne RVC e Causal Voice Changer numa interface comum ao desktop e ao browser. As versões antigas usavam Gradio e incluíam motores e ferramentas removidos da versão atual.
 
-### Okada TG Developed Fork
+#### rvc-cli
 
-- [Instale o Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/installation.md): O TG Developed Fork (TGR) vem do ramo Deiteris da família w-okada. O editor documenta esta bifurcação como somente RVC.
-- [Configure o áudio ao vivo no Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/live-audio.md): Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido.
-- [Okada TG Developed Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/tgr/cloud.md): Executa o Okada TG Developed Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
+- [rvc-cli · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/training/rvc-cli/installation.md): GitHub · Versão consultada
+- [rvc-cli · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/training/rvc-cli/usage.md): GitHub · Versão consultada
 
-### Deiteris w-okada Fork
+#### RVC Studio
 
-- [Instalar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/installation.md): Deiteris w-okada Fork é um fork popular mantido pela comunidade de w-okada/voice-changer (VCClient), focado em menor latência, áudio mais limpo, correções de estabilidade e backends atualizados para NVIDIA (CUDA), AMD/Intel (DirectML) e Apple Silicon.
-- [Encaminhar e afinar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/live-audio.md): Usa sempre auscultadores durante a conversão ao vivo. Com colunas, a voz convertida volta a entrar no microfone e gera eco e microfonia.
-- [Deiteris w-okada Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/deiteris/cloud.md): Executa o Deiteris w-okada Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
+- [RVC Studio · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/training/rvc-studio/installation.md): GitHub · Hugging Face · 91c4011
+- [RVC Studio · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/training/rvc-studio/usage.md): GitHub · Hugging Face · 91c4011
 
-### RVC GUI
+#### Mangio RVC Fork
 
-- [Instalar e converter com RVC GUI](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-gui/file-conversion.md): Este guia cobre o aplicativo de desktop arquivado do Tiger14n para conversão de arquivos de áudio.
+- [Mangio RVC Fork · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/training/mangio/installation.md): GitHub · Versão consultada
+- [Mangio RVC Fork · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/training/mangio/usage.md): GitHub · Versão consultada
 
-### Redpanda-vc
+#### Replay
 
-- [Instalar o Redpanda VC](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/first-run.md): Começa pela versão pré-compilada para Windows x64. A aplicação de desktop usa Tauri e executa os motores vocais Python localmente. O código-fonte também inclui uma WebUI com a mesma interface.
-- [Inferência por ficheiros](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/inference.md): Usa Inference para converter uma gravação ou uma pasta inteira. Uma voz RVC usa um modelo .pth de inferência; uma voz Causal Voice Changer usa .cvc.
-- [Conversão de voz em tempo real](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/live-audio.md): Abre Realtime na aplicação de desktop ou na WebUI. Testa uma voz nos auscultadores antes de enviares o som para Discord, OBS, um jogo ou outra aplicação.
-- [Treinar Modelos RVC no Redpanda-vc - EMA e Salvamento por Passos](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/training.md): Guia completo para iniciantes, verificado no código, sobre treinamento de modelos RVC no Redpanda-vc: Generator EMA, salvamento de checkpoints por passos, retomada, exportação e solução de problemas.
-- [Treino com Causal Voice Changer](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/causal-training.md): A opção Causal Voice Changer do Redpanda integra Causal Voice Changer v0.4.0. O ajuste fino cria uma voz .cvc para o motor CVC.
-- [Redpanda VC e outras aplicações RVC](https://docs.ilariarvc.shop/pt/other-rvcs/redpanda/differences.md): O Redpanda VC reúne RVC e Causal Voice Changer numa interface comum ao desktop e ao browser. As versões antigas usavam Gradio e incluíam motores e ferramentas removidos da versão atual.
+- [Replay · Instalação e disponibilidade](https://docs.ilariarvc.shop/pt/other-rvcs/training/replay/installation.md): O Replay foi descontinuado após o encerramento do Weights.gg. O arquivo conserva os instaladores da versão 8.7.0. A instalação pode falhar ao descarregar dependências que estavam alojadas no Weights.
+- [Replay · Projetos existentes e treino](https://docs.ilariarvc.shop/pt/other-rvcs/training/replay/usage.md): Se já tens uma cópia funcional, guarda-a e faz uma cópia de segurança das gravações, conversões e modelos. O Replay permitia converter ficheiros e treinar modelos.
 
-### RVC Blue
+### Alteradores de voz
 
-- [RVC Blue (RVC-Realtime-GUI)](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-blue/installation.md): O RVC Blue é um alterador de voz para desktop Windows baseado na interface em tempo real do RVC WebUI (Mainline - Original RVC).
+
+#### Vonovox
+
+- [Instale Vonovox](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/vonovox/installation.md): Vonovox é um conversor de voz ao vivo do Windows para GPUs NVIDIA compatíveis.
+- [Rotear e sintonizar Vonovox](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/vonovox/live-audio.md): Use três pontos de extremidade: seu microfone físico para entrada, um cabo virtual para o sinal convertido e fones de ouvido para monitoramento.
+- [Otimização Avançada de Desempenho: NVIDIA GPU Clock Locking](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/vonovox/advanced-performance-optimization.md): Guia opcional de bloqueio de clock de GPU NVIDIA (GPU Clock Locking) para testar se fixar frequências gráficas suportadas melhora a estabilidade de latência do Vonovox no Windows.
+
+#### w-okada VCClient
+
+- [Instale o w-okada VCClient](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/okada/installation.md): O VCClient converte o áudio do microfone ao vivo. A interface é o cliente e o processo de conversão é o servidor. Para seu primeiro teste, execute ambos no mesmo computador.
+- [Converta seu microfone em w-okada VCClient](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/okada/live-audio.md): Comece com fones de ouvido e um único caminho de áudio local. Ao ouvir uma voz limpa e convertida nos fones de ouvido, conecte-a a uma chamada ou gravador.
+
+#### Okada TG Developed Fork
+
+- [Instale o Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/tgr/installation.md): O TG Developed Fork (TGR) vem do ramo Deiteris da família w-okada. O editor documenta esta bifurcação como somente RVC.
+- [Configure o áudio ao vivo no Okada TG Developed Fork](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/tgr/live-audio.md): Use um ponto de verificação de inferência RVC compatível e um microfone funcional. Primeiro prove que o sinal convertido chega aos seus fones de ouvido.
+- [Okada TG Developed Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/tgr/cloud.md): Executa o Okada TG Developed Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
+
+#### Deiteris w-okada Fork
+
+- [Instalar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/deiteris/installation.md): Deiteris w-okada Fork é um fork popular mantido pela comunidade de w-okada/voice-changer (VCClient), focado em menor latência, áudio mais limpo, correções de estabilidade e backends atualizados para NVIDIA (CUDA), AMD/Intel (DirectML) e Apple Silicon.
+- [Encaminhar e afinar Deiteris w-okada Fork](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/deiteris/live-audio.md): Usa sempre auscultadores durante a conversão ao vivo. Com colunas, a voz convertida volta a entrar no microfone e gera eco e microfonia.
+- [Deiteris w-okada Fork na Nuvem](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/deiteris/cloud.md): Executa o Deiteris w-okada Fork na nuvem com Google Colab, Kaggle ou Lightning.AI quando o teu PC não tiver uma GPU local compatível.
+
+#### RVC GUI
+
+- [Instalar e converter com RVC GUI](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/rvc-gui/file-conversion.md): Este guia cobre o aplicativo de desktop arquivado do Tiger14n para conversão de arquivos de áudio.
+
+#### RVC Blue
+
+- [RVC Blue (RVC-Realtime-GUI)](https://docs.ilariarvc.shop/pt/other-rvcs/voice-changers/rvc-blue/installation.md): O RVC Blue é um alterador de voz para desktop Windows baseado na interface em tempo real do RVC WebUI (Mainline - Original RVC).
 
 ### RVC Model Merger
 
 - [RVC Model Merger](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-model-merger/usage.md): Como instalar e usar o RVC Model Merger de Ardha27 para mesclar dois modelos de voz RVC v2 compatíveis com proporções ajustáveis.
-
-### rvc-cli
-
-- [rvc-cli · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-cli/installation.md): GitHub · Versão consultada
-- [rvc-cli · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-cli/usage.md): GitHub · Versão consultada
-
-### RVC Studio
-
-- [RVC Studio · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-studio/installation.md): GitHub · Hugging Face · 91c4011
-- [RVC Studio · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/rvc-studio/usage.md): GitHub · Hugging Face · 91c4011
-
-### Mangio RVC Fork
-
-- [Mangio RVC Fork · Instalação](https://docs.ilariarvc.shop/pt/other-rvcs/mangio/installation.md): GitHub · Versão consultada
-- [Mangio RVC Fork · Utilização e resolução de problemas](https://docs.ilariarvc.shop/pt/other-rvcs/mangio/usage.md): GitHub · Versão consultada
 
 ## Non-RVC
 

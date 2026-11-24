@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848875523961">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848876479182">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -30,16 +30,16 @@
     <meta name="twitter:title" content="Install and convert with RVC GUI">
 
     <!-- Alternate Markdown -->
-    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/other-rvcs/rvc-gui/file-conversion.md">
+    <link rel="alternate" type="text/markdown" href="https://docs.ilariarvc.shop/other-rvcs/voice-changers/rvc-gui/file-conversion.md">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848875523961" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848876479182" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848875523961" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848876479182" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848875523961" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848876479182" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=5">
 
@@ -174,6 +174,7 @@
 
                 <!-- Page content  -->
 <h1 id="install-and-convert-with-rvc-gui">Install and convert with RVC GUI</h1>
+<aside class="docs-gpu-compatibility" aria-label="GPU compatibility" style="margin:1rem 0 1.4rem"><strong>GPU compatibility</strong><div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.4rem"><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a8cf68;border-radius:.5rem"><strong><span aria-hidden="true">●</span> NVIDIA</strong><br><small>CUDA · Legacy</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a999a680;border-radius:.5rem"><strong><span aria-hidden="true">◌</span> AMD</strong><br><small>GPU support unconfirmed</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a999a680;border-radius:.5rem"><strong><span aria-hidden="true">◌</span> Intel</strong><br><small>GPU support unconfirmed</small></div></div></aside>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">This guide covers Tiger14n's archived desktop app for converting audio files. Prepare a voice checkpoint and a short, dry WAV recording before you start.</div>
 <p><a href="https://github.com/Tiger14n/RVC-GUI">GitHub</a></p>
 <p>This guide covers Tiger14n&#x27;s archived desktop app for converting audio files. Prepare a voice checkpoint and a short, dry WAV recording before you start.</p>
@@ -210,7 +211,7 @@
 | No model appears | Check the extracted folder layout and ensure you opened the app from the same installation. |
 | Wrong voice or metallic output | Check the selected checkpoint, compatible encoder, optional index and the source recording. Use an unprocessed clip with retrieval off. |
 | File conversion appears to stop | Test a short local WAV and inspect the console. Check the first error before retrying a long render. |
-| Performance is poor | Check which device the installed PyTorch build uses. For older platforms or newer model features, see the [RVC tools comparison](../../reference/tools.md). |">
+| Performance is poor | Check which device the installed PyTorch build uses. For older platforms or newer model features, see the [RVC tools comparison](../../../reference/tools.md). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -263,10 +264,10 @@
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/redpanda/first-run/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../ilaria-rvc/rvc-blue/installation/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Set up Redpanda VC</span>
+                                <span class="block mt-1">Install and use RVC Blue</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -278,7 +279,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-20T18:03:57.000Z">20/11/2026 · 19:03</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T23:00:37.000Z">25/11/2026 · 00:00</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -311,6 +312,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "Install and convert with RVC GUI", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/rvc-gui/file-conversion.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Install and convert with RVC GUI", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/other-rvcs/voice-changers/rvc-gui/file-conversion.md" }</script>
 </body>
 </html>

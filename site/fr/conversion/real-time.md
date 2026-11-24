@@ -112,4 +112,4 @@ Partez des réglages par défaut de l'application et ne modifiez qu'un paramètr
 
 ## RVC Blue
 
-Conversion vocale de bureau sous Windows. [Installation et configuration](../other-rvcs/rvc-blue/installation.md).
+Conversion vocale de bureau sous Windows. [Installation et configuration](../other-rvcs/voice-changers/rvc-blue/installation.md).

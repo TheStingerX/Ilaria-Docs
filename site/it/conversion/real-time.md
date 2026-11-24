@@ -112,4 +112,4 @@ Parti dai valori predefiniti dell'app e modifica un'impostazione alla volta. Se 
 
 ## RVC Blue
 
-Conversione vocale desktop su Windows. [Installazione e configurazione](../other-rvcs/rvc-blue/installation.md).
+Conversione vocale desktop su Windows. [Installazione e configurazione](../other-rvcs/voice-changers/rvc-blue/installation.md).
