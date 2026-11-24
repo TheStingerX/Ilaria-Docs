@@ -37,16 +37,21 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 | --- | --- | --- | --- | --- |
 | **Stock RVC v2 (Standard)** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | `contentvec` | **Empfohlen (Stock RVC)** |
 | **AnimePretrain** | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
-| **BlackTone** *(Standard / Large)* | `32 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
+| **BlackTone Standard** | `32 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) |
+| **BlackTone Large** | `32 kHz` | Nicht angegeben | `SPIN` | [SeoulStreamingStation/BlackTone_RVC_Pretrained](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained) · [README](https://huggingface.co/SeoulStreamingStation/BlackTone_RVC_Pretrained/blob/main/ReadMe.md) |
 | **DMR v2** | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [ourbz/DMR-V2-ReUpload](https://huggingface.co/ourbz/DMR-V2-ReUpload) |
 | **GuideVocalPretrain** | `48 kHz` | `HiFi-GAN` | Nicht angegeben | [Essid/GuideVocalPretrain](https://huggingface.co/Essid/GuideVocalPretrain) |
 | **IMA** | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [Loren85/IMA-TEST-V1](https://huggingface.co/Loren85/IMA-TEST-V1) |
 | **Itaila** | `32 kHz` | `HiFi-GAN` | `contentvec` | [TheStinger/itaila](https://huggingface.co/TheStinger/itaila) |
-| **KLM - BeatzForge** *(V1 / V2)* | `32 kHz`, `48 kHz` | `HiFi-GAN` / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
+| **KLM - BeatzForge V2** | `32 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
+| **KLM - BeatzForge V1** | `48 kHz` | `HiFi-GAN` | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
 | **KLM BeatMaster V1** | `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
-| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG), [KLM4](https://huggingface.co/SeoulStreamingStation/KLM4), [KLM4.1](https://huggingface.co/SeoulStreamingStation/KLM4.1), [KLM4.2](https://huggingface.co/SeoulStreamingStation/KLM4.2), [KLM43](https://huggingface.co/SeoulStreamingStation/KLM43) |
-| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz`, `40 kHz` | `MRF HiFi-GAN` / Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(Kompatibilität variiert)* |
+| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | Nicht angegeben | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
+| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [KLM4](https://huggingface.co/SeoulStreamingStation/KLM4), [KLM4.1](https://huggingface.co/SeoulStreamingStation/KLM4.1), [KLM4.2](https://huggingface.co/SeoulStreamingStation/KLM4.2), [KLM43](https://huggingface.co/SeoulStreamingStation/KLM43) |
+| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(Kompatibilität variiert)* |
+| **KLM 4.4 (X1 / X2)** | `40 kHz` | `MRF HiFi-GAN` | Nicht angegeben | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(Kompatibilität variiert)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | `RefineGAN` | Nicht angegeben | [SeoulStreamingStation/KLM5](https://huggingface.co/SeoulStreamingStation/KLM5) |
+| **KLM 6 Experimental V3 (Exp3 L6)** | `32 kHz` | `HiFi-GAN` | `SPIN (7–12)` | [SeoulStreamingStation/KLM6_Experimental](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
 | **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM6_Experimental](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
 | **KLM 9 HFG** | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel) |
 | **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | Nicht angegeben | Nicht angegeben | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
@@ -57,7 +62,7 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 | **Legacy Core V1.5v2** | `32 kHz` | `HiFi-GAN` | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Legacy Core V1.6** | `32 kHz` | `HiFi-GAN` | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
 | **Mandagues V2** | `40 kHz` | `HiFi-GAN` | `contentvec` | [juaow/mandaguesv2](https://huggingface.co/juaow/mandaguesv2) |
-| **Nanashi Anime** *(Normal)* | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
+| **Nanashi Anime v1** | `32 kHz` | `HiFi-GAN` | `Japanese HuBERT` | [v1_anime](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1_anime) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
 | **Nanashi v1** *(v1.7)* | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nanashi v2 Beta** *(Base / Fine-tuned)* | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [shiromiya/nanashi-pretrain](https://huggingface.co/shiromiya/nanashi-pretrain) |
 | **Nezox** | `32 kHz` | `HiFi-GAN` | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
@@ -66,7 +71,7 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 | **RefGanVCTKV2** | `32 kHz`, `40 kHz` | `RefineGAN` | `contentvec` | [SimplCup/RefGanVCTKV2](https://huggingface.co/SimplCup/RefGanVCTKV2) |
 | **RefineGAN Base Pretrains (Exp v3)** | `32 kHz` | `RefineGAN` | `contentvec` / `spin-v2` | [Aznamir/RefineGAN](https://huggingface.co/Aznamir/RefineGAN) |
 | **RefineGanVCTKV1** | `44.1 kHz` | `RefineGAN` | `contentvec` | [SimplCup/RefineGanVCTKV1](https://huggingface.co/SimplCup/RefineGanVCTKV1) |
-| **Rigel** *(Base / Fine-tuned)* | `32 kHz` | Nicht angegeben | Nicht angegeben | [MUSTAR/Rigel-rvc-base-pretrained-model](https://huggingface.co/MUSTAR/Rigel-rvc-base-pretrained-model) |
+| **Rigel** *(Base / Fine-tuned)* | `32 kHz`, `40 kHz` | `HiFi-GAN` | Nicht angegeben | [MUSTAR/Rigel-rvc-base-pretrained-model](https://huggingface.co/MUSTAR/Rigel-rvc-base-pretrained-model) · [Politrees](https://huggingface.co/Politrees/RVC_resources) |
 | **RIN_E3** | `40 kHz` | `HiFi-GAN` | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
 | **SingerPreTrain** *(Updated)* | `32 kHz` | `HiFi-GAN` | `contentvec` | [Sztef/SingerPreTrained](https://huggingface.co/Sztef/SingerPreTrained) |
 | **Snowie** | `40 kHz` | `HiFi-GAN` | Nicht angegeben | [Politrees/RVC_resources](https://huggingface.co/Politrees/RVC_resources) |
