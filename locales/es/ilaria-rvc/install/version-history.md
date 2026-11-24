@@ -3,7 +3,7 @@ label: "Historial de versiones y diferencias de versiones"
 icon: ":clock3:"
 order: 81
 permalink: /ilaria-rvc/version-history/
-description: "La última versión para Windows es la 2.4.7. Verifica tu versión instalada en Otro → Actualizar Ilaria RVC y consulta las notas de cada lanzamiento."
+description: "La última versión para Windows es la 2.4.8. Verifica tu versión instalada en Otro → Actualizar Ilaria RVC y consulta las notas de cada lanzamiento."
 ---
 # Historial de versiones y diferencias de versiones
 
@@ -11,12 +11,13 @@ description: "La última versión para Windows es la 2.4.7. Verifica tu versión
 
 ## ¿Qué versión describe esta documentación?
 
-La última versión para Windows es la **2.4.7**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
+La última versión para Windows es la **2.4.8**. Verifique su versión instalada en **Otro → Actualizar Ilaria RVC**. Utilice **Todos los cambios hasta ahora** allí para explorar las notas de cada versión, incluso sin conexión.
 
 ## Todas las versiones
 
  | Versión | Aspectos destacados |
 | --- | --- |
+| [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 añade Legacy Core V1.5 a 32 y 40 kHz al gestor de descargas. Las cuatro opciones Legacy Core usan `HiFi-GAN` + `ContentVec`. Desde la 2.4.2 hasta la 2.4.7, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. El ZIP de actualización excluye el entorno de Windows y los pesos de los modelos. |
 | 2.4.7 | Nuevo paquete base completo para Windows (`ILARIA_RVC-2.4.7.zip`). Restaura las descargas autorizadas de los pretrained **Legacy Core 1.5 V2** y **1.6** a `32 kHz`, y mejora la recuperación ante actualizaciones interrumpidas (conservando los archivos modificados en una copia de seguridad aparte mientras se restaura la versión anterior). Desde **2.4.2 hasta 2.4.6**, usa **Other → Update Ilaria RVC → Check for updates** y elige **Download and restart**. |
 | 2.4.6 | Añade **KLM Vocal ContentVec** (`klm-vocal-contentvec`) como descarga opcional para Inferencia y Entrenamiento RVC v2, y añade **43 pares G/D KLM verificados** en **Recommended pretrained models** con sus sample rates (la compatibilidad de entrenamiento varía por par). Desde **2.4.5**, abre **Other → Update Ilaria RVC → Check for updates** y elige **Download and restart**. |
 | 2.4.5 | Añade la conversión de modelos `.pth` ↔ `.safetensors` en **Other → Convert model weights**, conservando los metadatos RVC e incluyendo el botón **Move .pth to models**. Mejora el mensaje en Inferencia para archivos sin configuración de voz e instala `safetensors` automáticamente en el primer uso. Desde **2.4.4**, abre **Other → Update Ilaria RVC → Check for updates** y elige **Download and restart**. |
