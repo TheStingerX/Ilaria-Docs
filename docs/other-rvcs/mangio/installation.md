@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/mangio/installation/
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Reviewed version](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
 !!!warning Legacy software · Not recommended
-These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app. [Guides by app](../app-guides.md)
+The main branch of **Mangio RVC Fork** has been inactive for years. This outdated app is not recommended for new installations. [Guides by app](../app-guides.md)
 !!!
 
 ## Legacy version and environment

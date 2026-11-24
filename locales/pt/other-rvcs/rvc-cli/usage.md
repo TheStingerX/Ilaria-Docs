@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/rvc-cli/usage/
 [GitHub](https://github.com/blaisewf/rvc-cli) · [Versão consultada](https://github.com/blaisewf/rvc-cli/releases/tag/1.2.4)
 
 !!!warning Software antigo · Desaconselhado
-Estes projetos estão desatualizados e já não parecem ter manutenção ativa. O rvc-cli está arquivado e os ramos principais do RVC Studio e do Mangio RVC Fork estão inativos há vários anos. Os guias continuam disponíveis para projetos existentes. Para uma nova instalação, escolhe uma aplicação com manutenção ativa. [Guias por aplicação](../app-guides.md)
+**rvc-cli** está arquivado no GitHub e deixou de ser mantido. O programa está desatualizado e é desaconselhado para novas instalações. [Guias por aplicação](../app-guides.md)
 !!!
 
 ## Ficheiro individual e pastas

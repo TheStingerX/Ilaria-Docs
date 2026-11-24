@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/mangio/installation/
 [GitHub](https://github.com/Mangio621/Mangio-RVC-Fork) · [Versione consultata](https://github.com/Mangio621/Mangio-RVC-Fork/tree/v23.7.0)
 
 !!!warning Software datato · Sconsigliato
-Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta. [Guide per app](../app-guides.md)
+Il ramo principale di **Mangio RVC Fork** è fermo da anni. Il programma è datato e sconsigliato per nuove installazioni. [Guide per app](../app-guides.md)
 !!!
 
 ## Versione storica e ambiente

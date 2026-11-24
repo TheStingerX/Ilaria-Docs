@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/rvc-studio/usage/
 [GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
 !!!warning Software datato · Sconsigliato
-Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli è archiviato e i rami principali di RVC Studio e Mangio RVC Fork sono fermi da anni. Le guide restano disponibili per chi lavora su progetti esistenti. Per una nuova installazione, scegli un’app ancora mantenuta. [Guide per app](../app-guides.md)
+Il ramo principale di **RVC Studio** è fermo da anni. Il programma è datato e sconsigliato per nuove installazioni. [Guide per app](../app-guides.md)
 !!!
 
 ## Prima cover

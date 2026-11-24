@@ -10,7 +10,7 @@ permalink: /ilaria-rvc/rvc-studio/installation/
 [GitHub](https://github.com/SayanoAI/RVC-Studio) · [Hugging Face](https://huggingface.co/datasets/SayanoAI/RVC-Studio/tree/main) · [`91c4011`](https://github.com/SayanoAI/RVC-Studio/tree/91c40119b9ff209eba23debdb0871931b9fd8127)
 
 !!!warning Legacy software · Not recommended
-These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app. [Guides by app](../app-guides.md)
+The main branch of **RVC Studio** has been inactive for years. This outdated app is not recommended for new installations. [Guides by app](../app-guides.md)
 !!!
 
 RVC Studio by SayanoAI is a Streamlit WebUI for training voice models and making covers from recordings. These steps refer to the GitHub revision linked above. The project describes its main branch as experimental.
