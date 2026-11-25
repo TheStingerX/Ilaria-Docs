@@ -67,6 +67,7 @@ const gpuSupport = {
   'rvc-studio': ['CUDA†'],
   mangio: ['CUDA†'],
   replay: ['CUDA†'],
+  'aicovergen': ['CUDA†'],
   vonovox: ['CUDA'],
   okada: ['CUDA', 'DirectML*', 'DirectML*'],
   tgr: ['CUDA', 'DirectML*', 'DirectML*'],

@@ -67,3 +67,4 @@ Estes projetos estão desatualizados e já não parecem ter manutenção ativa. 
 - [RVC Studio](training/rvc-studio/installation.md)
 - [Mangio RVC Fork](training/mangio/installation.md)
 - [Replay](training/replay/installation.md)
+- [AICoverGen](training/aicovergen/installation.md)
