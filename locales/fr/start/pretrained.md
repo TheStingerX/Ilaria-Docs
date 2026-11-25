@@ -6,6 +6,8 @@ description: "Un modèle de base pretrained (ou pretrain) est une paire de point
 ---
 # Modèles de base Pretrained RVC
 
+> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Ajoute l’export ONNX pour les modèles RVC HiFi-GAN avec guidage de hauteur, la restauration exacte en `.pth` des ONNX créés par Ilaria RVC, un sélecteur de modèles installés et 49 entrées de préentraînement. Certaines sont proposées uniquement au téléchargement et assorties de notes de compatibilité.
+
 Un **modèle de base pretrained** (ou **pretrain**) est une paire de points de contrôle de départ : un **Générateur (`G_*.pth`)** et un **Discriminateur (`D_*.pth`)**, déjà entraînés sur des centaines d'heures d'audio multi-locuteurs. Lorsque vous entraînez une nouvelle voix RVC, l'entraînement ne part pas de zéro, mais effectue un **fine-tuning** de cette paire sur le dataset de votre voix cible.
 
 ## Ce que font les pretrained et pourquoi ils existent

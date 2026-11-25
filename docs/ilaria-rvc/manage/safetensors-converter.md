@@ -13,6 +13,10 @@ Starting in **Ilaria RVC 2.4.5**, the **Other** tab includes **Convert model wei
 
 ---
 
+## ONNX export and restoration (2.5.1)
+
+In **Other → Convert model weights**, select an installed model or provide a file. Export a pitch-guided RVC HiFi-GAN model to ONNX for use in a compatible external client. Exact restoration to `.pth` is available for ONNX files exported by Ilaria RVC. Keep the original `.pth` for ONNX files from other exporters. [Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)
+
 ## 1. What are `.pth` and `.safetensors`? (In simple words)
 
 When you download AI voice models, you usually see `.pth` files, and sometimes `.safetensors` files:

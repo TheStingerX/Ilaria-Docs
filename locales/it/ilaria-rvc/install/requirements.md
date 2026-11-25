@@ -7,7 +7,7 @@ description: "Ilaria RVC gira in locale sul tuo PC usando PyTorch 2.10.0 e NVIDI
 ---
 # Requisiti di sistema di Ilaria RVC
 
-> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · Il pacchetto completo per Windows è la 2.4.7. Lo ZIP di aggiornamento 2.5.0 esclude il runtime e i pesi dei modelli. Dalla 2.4.2 alla 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia**. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. [ZIP di aggiornamento Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
 [Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPU compatibili](gpu-compatibility.md) · [Opzioni Cloud](../cloud/cloud.md)
 

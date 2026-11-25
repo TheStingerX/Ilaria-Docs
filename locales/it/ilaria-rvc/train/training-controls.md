@@ -7,6 +7,8 @@ description: "Ilaria RVC 2.5.0. RefineGAN supporta training e inferenza a 32, 40
 ---
 # Controlli e flusso di lavoro dell'addestramento
 
+> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Aggiunge l’esportazione ONNX per i modelli RVC HiFi-GAN con guida del pitch, il ripristino esatto a `.pth` dagli ONNX creati da Ilaria RVC, la selezione dei modelli installati e 49 voci di pretrain. Alcune voci sono disponibili solo per il download e riportano note di compatibilità.
+
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance. L’app genera in automatico la traccia silenziosa a 44,1 kHz. Se i pesi preaddestrati usano un’architettura diversa, seleziona **None** per addestrare da zero. Tra le coppie provate ci sono KLM 5 (40 kHz) e VCTK (44,1 kHz).
 
 [Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)

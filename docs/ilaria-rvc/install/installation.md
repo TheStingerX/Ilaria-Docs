@@ -7,7 +7,7 @@ description: "Download the supported NVIDIA build from Hugging Face. Extract the
 ---
 # Installation and updates
 
-> **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · The full Windows installer is 2.4.7. The 2.5.0 update ZIP excludes the runtime and model weights. From 2.4.2 through 2.4.8, use **Other → Update Ilaria RVC → Check for updates → Download and restart**.
+> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · The full Windows package is 2.4.7. To update from 2.4.2–2.5.0, use **Other → Update Ilaria RVC → Check for updates → Download and restart**. The update ZIP excludes the runtime and model weights. [Windows update ZIP](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 

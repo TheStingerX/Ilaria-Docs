@@ -13,6 +13,10 @@ A partir do **Ilaria RVC 2.4.5**, a aba **Other** traz **Convert model weights**
 
 ---
 
+## Exportação e restauro ONNX (2.5.1)
+
+Em **Other → Convert model weights**, escolhe um modelo instalado ou fornece um ficheiro. Exporta um modelo RVC HiFi-GAN com orientação de tom para ONNX para o usar num cliente externo compatível. O restauro exato para `.pth` está disponível para ONNX exportados pelo Ilaria RVC. Guarda o `.pth` original se usares outro exportador. [Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)
+
 ## 1. O que são `.pth` e `.safetensors`? (Em palavras simples)
 
 Ao baixar modelos de voz por IA, você geralmente encontra arquivos `.pth` e às vezes `.safetensors`:
