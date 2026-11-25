@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848887973539">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888165839">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848887973539" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848888165839" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848887973539" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888165839" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848887973539" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888165839" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=7">
     <script defer src="/fr/static/toc-active.js?v=1"></script>
@@ -180,8 +180,7 @@
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)</a></p>
 <p>Depuis <strong>Ilaria RVC 2.4.5</strong>, l&#x27;onglet <strong>Other</strong> inclut <strong>Convert model weights</strong>, un convertisseur intégré transformant les modèles vocaux <code translate="no" v-pre>.pth</code> en <code translate="no" v-pre>.safetensors</code> et inversement.</p>
 <hr>
-<span id="onnx-export-and-restoration-251" class="docs-anchor"></span><h2 id="export-et-restauration-onnx-251">Export et restauration ONNX (2.5.1)</h2>
-<p>Dans <strong>Other → Convert model weights</strong>, choisissez un modèle installé ou fournissez un fichier. Exportez un modèle RVC HiFi-GAN avec guidage de hauteur en ONNX pour un client externe compatible. La restauration exacte en <code translate="no" v-pre>.pth</code> est disponible pour les ONNX exportés par Ilaria RVC. Gardez le <code translate="no" v-pre>.pth</code> original si vous utilisez un autre exportateur. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></p>
+<p><a href="../onnx-converter/">Guide du convertisseur ONNX</a></p>
 <span id="1-what-are-pth-and-safetensors-in-simple-words" class="docs-anchor"></span><h2 id="1-que-sont-pth-et-safetensors--en-mots-simples">1. Que sont <code translate="no" v-pre>.pth</code> et <code translate="no" v-pre>.safetensors</code> ? (En mots simples)</h2>
 <p>Lorsque vous téléchargez des modèles vocaux IA, vous voyez surtout des fichiers <code translate="no" v-pre>.pth</code> et parfois <code translate="no" v-pre>.safetensors</code> :</p>
 <ul>
@@ -295,10 +294,10 @@ Non. Si un <code translate="no" v-pre>.pth</code> portant le même nom existe d�
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/audio-analyzer/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/onnx-converter/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Analyseur Audio</span>
+                                <span class="block mt-1">Convertisseur ONNX ↔ PTH</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -310,7 +309,7 @@ Non. Si un <code translate="no" v-pre>.pth</code> portant le même nom existe d�
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-25T02:15:17.000Z">25/11/2026 · 03:15</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848887950871">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888152689">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848887950871" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848888152689" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848887950871" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888152689" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848887950871" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888152689" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
@@ -183,7 +183,7 @@
 <span id="all-releases" class="docs-anchor"></span><h2 id="tutte-le-versioni">Tutte le versioni</h2>
 <retype-table copy-text="| Versione | In evidenza |
 | --- | --- |
-| [2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md) | Aggiunge l’esportazione ONNX per i modelli RVC HiFi-GAN con guida del pitch, il ripristino esatto a `.pth` dagli ONNX creati da Ilaria RVC, la selezione dei modelli installati e 49 voci di pretrain. Alcune voci sono disponibili solo per il download e riportano note di compatibilità. Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia**. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. [ZIP di aggiornamento Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true) |
+| [2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md) | Aggiunge l’esportazione ONNX per i modelli RVC HiFi-GAN con guida del pitch, il ripristino esatto a `.pth` dagli ONNX creati da Ilaria RVC, la selezione dei modelli installati e 49 voci di pretrain. Alcune voci sono disponibili solo per il download e riportano note di compatibilità. Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia**. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. [ZIP di aggiornamento Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true) [Guida al convertitore ONNX](../manage/onnx-converter.md) |
 | [2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0) | RefineGAN supporta training e inferenza a 32, 40 e 44,1 kHz con RVC v2 e Pitch Guidance. L’app genera in automatico la traccia silenziosa a 44,1 kHz. Se i pesi preaddestrati usano un’architettura diversa, seleziona **None** per addestrare da zero. Tra le coppie provate ci sono KLM 5 (40 kHz) e VCTK (44,1 kHz). Dalla 2.4.2 alla 2.4.8, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. Il pacchetto completo per Windows è la 2.4.7. Lo ZIP di aggiornamento 2.5.0 esclude il runtime e i pesi dei modelli. |
 | [2.4.8](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8) | Ilaria RVC 2.4.8 aggiunge al downloader Legacy Core V1.5 a 32 e 40 kHz. Tutte e quattro le opzioni Legacy Core usano `HiFi-GAN` + `ContentVec`. Dalla 2.4.2 alla 2.4.7, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. Lo ZIP di aggiornamento esclude il runtime Windows e i pesi dei modelli. |
 | [2.4.7](https://huggingface.co/TheStinger/Ilaria_RVC/tree/main/releases/2.4.7) | Nuovo pacchetto base completo per Windows (`ILARIA_RVC-2.4.7.zip`). Ripristina i download autorizzati dei pretrained **Legacy Core 1.5 V2** e **1.6** a `32 kHz`, e migliora il ripristino in caso di aggiornamento interrotto (conservando i file di supporto modificati in un backup separato mentre viene ripristinata la versione precedente). Dalla **2.4.2 alla 2.4.6**, usa **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti** e scegli **Scarica e riavvia**. |
@@ -231,7 +231,7 @@
 <tbody>
 <tr>
 <td><a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">2.5.1</a></td>
-<td>Aggiunge l’esportazione ONNX per i modelli RVC HiFi-GAN con guida del pitch, il ripristino esatto a <code translate="no" v-pre>.pth</code> dagli ONNX creati da Ilaria RVC, la selezione dei modelli installati e 49 voci di pretrain. Alcune voci sono disponibili solo per il download e riportano note di compatibilità. Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su <strong>Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia</strong>. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true">ZIP di aggiornamento Windows</a></td>
+<td>Aggiunge l’esportazione ONNX per i modelli RVC HiFi-GAN con guida del pitch, il ripristino esatto a <code translate="no" v-pre>.pth</code> dagli ONNX creati da Ilaria RVC, la selezione dei modelli installati e 49 voci di pretrain. Alcune voci sono disponibili solo per il download e riportano note di compatibilità. Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su <strong>Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia</strong>. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true">ZIP di aggiornamento Windows</a> <a href="../onnx-converter/">Guida al convertitore ONNX</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0">2.5.0</a></td>
@@ -416,7 +416,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T02:15:17.000Z">25/11/2026 · 03:15</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

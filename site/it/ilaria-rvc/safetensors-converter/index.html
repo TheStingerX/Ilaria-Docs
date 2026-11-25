@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848887950871">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888152689">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848887950871" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848888152689" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848887950871" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888152689" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848887950871" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888152689" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
@@ -180,8 +180,7 @@
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Scarica Ilaria RVC 2.4.7 per Windows (ZIP)</a></p>
 <p>Dalla versione <strong>Ilaria RVC 2.4.5</strong>, nella scheda <strong>Altro (Other)</strong> è presente <strong>Convert model weights</strong>, un convertitore integrato che trasforma i modelli vocali <code translate="no" v-pre>.pth</code> in file <code translate="no" v-pre>.safetensors</code> e i file <code translate="no" v-pre>.safetensors</code> di nuovo in <code translate="no" v-pre>.pth</code>.</p>
 <hr>
-<span id="onnx-export-and-restoration-251" class="docs-anchor"></span><h2 id="esportazione-e-ripristino-onnx-251">Esportazione e ripristino ONNX (2.5.1)</h2>
-<p>In <strong>Altro → Converti i pesi dei modelli</strong>, scegli un modello installato o indica un file. Puoi esportare un modello RVC HiFi-GAN con guida del pitch in ONNX per usarlo in un client esterno compatibile. Il ripristino esatto a <code translate="no" v-pre>.pth</code> è disponibile per i file ONNX esportati da Ilaria RVC. Conserva il <code translate="no" v-pre>.pth</code> originale se usi un altro programma per esportare. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></p>
+<p><a href="../onnx-converter/">Guida al convertitore ONNX</a></p>
 <span id="1-what-are-pth-and-safetensors-in-simple-words" class="docs-anchor"></span><h2 id="1-cosa-sono-pth-e-safetensors-in-parole-semplici">1. Cosa sono <code translate="no" v-pre>.pth</code> e <code translate="no" v-pre>.safetensors</code>? (In parole semplici)</h2>
 <p>Quando scarichi modelli vocali IA, trovi quasi sempre file <code translate="no" v-pre>.pth</code> e talvolta file <code translate="no" v-pre>.safetensors</code>:</p>
 <ul>
@@ -295,10 +294,10 @@ No. Se in <code translate="no" v-pre>models/</code> esiste già un <code transla
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/audio-analyzer/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/onnx-converter/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Analizzatore Audio</span>
+                                <span class="block mt-1">Convertitore ONNX ↔ PTH</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -310,7 +309,7 @@ No. Se in <code translate="no" v-pre>models/</code> esiste già un <code transla
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T02:15:17.000Z">25/11/2026 · 03:15</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

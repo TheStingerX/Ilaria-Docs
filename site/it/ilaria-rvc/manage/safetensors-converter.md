@@ -6,9 +6,7 @@ Dalla versione **Ilaria RVC 2.4.5**, nella scheda **Altro (Other)** è presente 
 
 ---
 
-## Esportazione e ripristino ONNX (2.5.1)
-
-In **Altro → Converti i pesi dei modelli**, scegli un modello installato o indica un file. Puoi esportare un modello RVC HiFi-GAN con guida del pitch in ONNX per usarlo in un client esterno compatibile. Il ripristino esatto a `.pth` è disponibile per i file ONNX esportati da Ilaria RVC. Conserva il `.pth` originale se usi un altro programma per esportare. [Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)
+[Guida al convertitore ONNX](onnx-converter.md)
 
 ## 1. Cosa sono `.pth` e `.safetensors`? (In parole semplici)
 
