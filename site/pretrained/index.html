@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848885805196">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848887939669">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/ilaria-rvc-icon.png" />
-    <link href="../resources/css/retype.css?v=4.6.0.848885805196" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.848887939669" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848885805196" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.848887939669" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848885805196" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.848887939669" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -176,6 +176,9 @@
                 <!-- Page content  -->
 <h1 id="rvc-pretrained-base-models">RVC Pretrained Base Models</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">A pretrained base model (also called a pretrain) is a pair of starting checkpoint files: a Generator (G_.pth) and a Discriminator (D_.pth), already trained on hundreds of hours of multi-speaker audio.</div>
+<blockquote>
+<p><strong><a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></strong> · Adds ONNX export for pitch-guided RVC HiFi-GAN models, exact restoration to <code translate="no" v-pre>.pth</code> from ONNX files made by Ilaria RVC, an installed-model selector and 49 pretrained entries. Some entries are download-only and include compatibility notes.</p>
+</blockquote>
 <p>A <strong>pretrained base model</strong> (also called a <strong>pretrain</strong>) is a pair of starting checkpoint files: a <strong>Generator (<code translate="no" v-pre>G_*.pth</code>)</strong> and a <strong>Discriminator (<code translate="no" v-pre>D_*.pth</code>)</strong>, already trained on hundreds of hours of multi-speaker audio. When you train a new RVC voice, training does not start from scratch; instead, it <strong>fine-tunes</strong> this pretrained pair on your target speaker&#x27;s dataset.</p>
 <h2 id="what-pretrained-models-do-and-why-they-exist">What pretrained models do and why they exist</h2>
 <p>Starting from a pretrained pair allows RVC to learn a new voice in minutes or hours instead of weeks:</p>
@@ -1071,7 +1074,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T01:36:05.000Z">25/11/2026 · 02:36</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

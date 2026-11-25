@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848885851804">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848887996180">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848885851804" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848887996180" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848885851804" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848887996180" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848885851804" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848887996180" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=7">
     <script defer src="/pt/static/toc-active.js?v=1"></script>
@@ -180,6 +180,8 @@
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)</a></p>
 <p>A partir do <strong>Ilaria RVC 2.4.5</strong>, a aba <strong>Other</strong> traz <strong>Convert model weights</strong>, um conversor integrado para transformar modelos de voz <code translate="no" v-pre>.pth</code> em <code translate="no" v-pre>.safetensors</code> e arquivos <code translate="no" v-pre>.safetensors</code> de volta em <code translate="no" v-pre>.pth</code>.</p>
 <hr>
+<span id="onnx-export-and-restoration-251" class="docs-anchor"></span><h2 id="exportação-e-restauro-onnx-251">Exportação e restauro ONNX (2.5.1)</h2>
+<p>Em <strong>Other → Convert model weights</strong>, escolhe um modelo instalado ou fornece um ficheiro. Exporta um modelo RVC HiFi-GAN com orientação de tom para ONNX para o usar num cliente externo compatível. O restauro exato para <code translate="no" v-pre>.pth</code> está disponível para ONNX exportados pelo Ilaria RVC. Guarda o <code translate="no" v-pre>.pth</code> original se usares outro exportador. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></p>
 <span id="1-what-are-pth-and-safetensors-in-simple-words" class="docs-anchor"></span><h2 id="1-o-que-são-pth-e-safetensors-em-palavras-simples">1. O que são <code translate="no" v-pre>.pth</code> e <code translate="no" v-pre>.safetensors</code>? (Em palavras simples)</h2>
 <p>Ao baixar modelos de voz por IA, você geralmente encontra arquivos <code translate="no" v-pre>.pth</code> e às vezes <code translate="no" v-pre>.safetensors</code>:</p>
 <ul>
@@ -308,7 +310,7 @@ Não. Se já existir um <code translate="no" v-pre>.pth</code> com o mesmo nome 
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-21T20:00:29.000Z">21/11/2026 · 21:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

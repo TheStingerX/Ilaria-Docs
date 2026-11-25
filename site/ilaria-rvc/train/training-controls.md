@@ -1,5 +1,7 @@
 # Training controls and workflow
 
+> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Adds ONNX export for pitch-guided RVC HiFi-GAN models, exact restoration to `.pth` from ONNX files made by Ilaria RVC, an installed-model selector and 49 pretrained entries. Some entries are download-only and include compatibility notes.
+
 > **[Ilaria RVC 2.5.0](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.5.0)** · RefineGAN training and inference support 32, 40 and 44.1 kHz with RVC v2 and Pitch Guidance. The app automatically generates the 44.1 kHz mute waveform. Choose **None** to train from scratch if a pretrained pair uses a different architecture, including the tested KLM 5 (40 kHz) and VCTK (44.1 kHz) pairs.
 
 [Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
