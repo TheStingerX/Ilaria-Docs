@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888185569">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888517009">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848888185569" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848888517009" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888185569" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888517009" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888185569" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888517009" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=7">
     <script defer src="/pt/static/toc-active.js?v=1"></script>
@@ -177,10 +177,23 @@
                 <!-- Page content  -->
 <span id="onnx--pth-converter" class="docs-anchor"></span><h1 id="conversor-onnx--pth">Conversor ONNX ↔ PTH</h1>
 <p>Em <strong>Other → Convert model weights</strong>, escolhe um modelo instalado ou fornece um ficheiro. Exporta um modelo RVC HiFi-GAN com orientação de tom para ONNX para o usar num cliente externo compatível. O restauro exato para <code translate="no" v-pre>.pth</code> está disponível para ONNX exportados pelo Ilaria RVC. Guarda o <code translate="no" v-pre>.pth</code> original se usares outro exportador. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></p>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true">ZIP de atualização para Windows</a></p>
+<span id="what-each-file-does" class="docs-anchor"></span><h2 id="o-que-contém-cada-ficheiro">O que contém cada ficheiro</h2>
+<p>O <code translate="no" v-pre>.pth</code> é o checkpoint de inferência para o Ilaria RVC. O <code translate="no" v-pre>.onnx</code> contém um grafo e pesos para um cliente compatível. Guarda o <code translate="no" v-pre>.index</code> à parte e usa-o apenas se o cliente suportar recuperação de características.</p>
+<span id="before-you-export" class="docs-anchor"></span><h2 id="antes-de-exportar">Antes de exportar</h2>
+<p>Usa <strong>Ilaria RVC 2.5.1 ou posterior</strong> e <strong>PyTorch 2.6 ou posterior</strong>. Precisas de um modelo de inferência <strong>HiFi-GAN</strong> com orientação de tom e um <code translate="no" v-pre>.pth</code> de até <strong>512 MiB</strong>. Se só tens checkpoints de treino, exporta primeiro a voz. A exportação usa a CPU.</p>
 <span id="export-a-model-to-onnx" class="docs-anchor"></span><h2 id="exportar-um-modelo-para-onnx">Exportar um modelo para ONNX</h2>
 <p>Escolhe um modelo de inferência instalado ou indica o ficheiro <code translate="no" v-pre>.pth</code> exportado. Seleciona a conversão para ONNX e guarda o resultado. Carrega-o no cliente externo e testa-o com uma gravação curta.</p>
+<p>Escolhe <strong>ONNX</strong> como formato de saída. Com um <code translate="no" v-pre>.pth</code>, a opção <strong>Auto</strong> seleciona Safetensors. Inicia a conversão, espera pela conclusão e descarrega o ficheiro.</p>
+<span id="how-exact-restoration-works" class="docs-anchor"></span><h2 id="como-funciona-o-restauro-exato">Como funciona o restauro exato</h2>
+<p>O exportador inclui no ONNX os bytes do <code translate="no" v-pre>.pth</code> original. Ao restaurar, o conversor verifica a configuração RVC e os pesos. Otimizar ou voltar a exportar o ONNX pode remover o checkpoint incorporado.</p>
 <span id="restore-the-original-pth" class="docs-anchor"></span><h2 id="restaurar-o-pth-original">Restaurar o PTH original</h2>
 <p>Indica o ficheiro <code translate="no" v-pre>.onnx</code> exportado pelo Ilaria RVC. Seleciona a conversão para <code translate="no" v-pre>.pth</code>, guarda o modelo restaurado e testa-o em <strong>Inference</strong>.</p>
+<p>Com um ONNX, escolhe <strong>Auto</strong> ou <strong>PTH</strong>. Inicia a conversão e descarrega o ficheiro. Se tiveres o original, compara as somas SHA-256.</p>
+<span id="test-the-result" class="docs-anchor"></span><h2 id="testar-o-resultado">Testar o resultado</h2>
+<p>Testa o ONNX no cliente de destino com uma gravação curta. Testa o PTH restaurado no Ilaria RVC com o mesmo áudio e as definições originais.</p>
+<span id="troubleshooting" class="docs-anchor"></span><h2 id="resolução-de-problemas">Resolução de problemas</h2>
+<p>Se a exportação falhar, verifica vocoder, orientação de tom, tamanho e versão do PyTorch. Se faltar o checkpoint incorporado, usa a exportação intacta ou recupera o PTH de uma cópia de segurança. Se o cliente rejeitar o ONNX, confirma os formatos RVC que aceita.</p>
 <p><a href="../safetensors-converter/">Safetensors ↔ PTH</a></p>
 
                 
@@ -216,7 +229,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-25T02:15:17.000Z">25/11/2026 · 03:15</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-25T02:20:17.000Z">25/11/2026 · 03:20</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

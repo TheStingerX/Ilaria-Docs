@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888145941">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848888458759">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848888145941" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848888458759" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888145941" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848888458759" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888145941" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848888458759" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -176,10 +176,23 @@
                 <!-- Page content  -->
 <h1 id="onnx--pth-converter">ONNX ↔ PTH Converter</h1>
 <p>In <strong>Other → Convert model weights</strong>, select an installed model or provide a file. Export a pitch-guided RVC HiFi-GAN model to ONNX for use in a compatible external client. Exact restoration to <code translate="no" v-pre>.pth</code> is available for ONNX files exported by Ilaria RVC. Keep the original <code translate="no" v-pre>.pth</code> for ONNX files from other exporters. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></p>
+<p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true">Windows update ZIP</a></p>
+<h2 id="what-each-file-does">What each file does</h2>
+<p>A <code translate="no" v-pre>.pth</code> is the inference checkpoint you use in Ilaria RVC. An <code translate="no" v-pre>.onnx</code> contains a graph and weights for a compatible ONNX client. The conversion changes the format. The target client still needs to handle the model’s inputs, RVC version and feature encoder. Keep any matching <code translate="no" v-pre>.index</code> separately and use it only if the client supports retrieval.</p>
+<h2 id="before-you-export">Before you export</h2>
+<p>Use Ilaria RVC <strong>2.5.1 or later</strong> and <strong>PyTorch 2.6 or later</strong>. For export, use an inference-ready <strong>HiFi-GAN</strong> model with <strong>Pitch Guidance</strong> enabled and a <code translate="no" v-pre>.pth</code> no larger than <strong>512 MiB</strong>. Raw training checkpoints are for resuming training. Export the voice from the training experiment first. Export runs on CPU. The external client determines which device runs the resulting model.</p>
 <h2 id="export-a-model-to-onnx">Export a model to ONNX</h2>
 <p>Choose an installed inference model or provide the exported <code translate="no" v-pre>.pth</code>. Select the conversion to ONNX, then save the result. Load it in your external client and test it with a short recording.</p>
+<p>Set <strong>Output format</strong> to <strong>ONNX</strong> explicitly. For a <code translate="no" v-pre>.pth</code> input, <strong>Auto</strong> selects Safetensors. Run <strong>Convert weights</strong>, wait for the conversion log to finish and save the downloadable result. Keep the original checkpoint and give the ONNX its own filename.</p>
+<h2 id="how-exact-restoration-works">How exact restoration works</h2>
+<p>Ilaria RVC embeds the original <code translate="no" v-pre>.pth</code> bytes in its ONNX export. During restoration it extracts those bytes and checks that the recovered file contains the RVC configuration and weights. Re-exporting or optimizing the ONNX elsewhere can remove the embedded checkpoint. Keep an untouched export if you want to restore it later.</p>
 <h2 id="restore-the-original-pth">Restore the original PTH</h2>
 <p>Provide the <code translate="no" v-pre>.onnx</code> exported by Ilaria RVC and select the conversion to <code translate="no" v-pre>.pth</code>. Save the restored model and test it in <strong>Inference</strong>.</p>
+<p>Use <strong>Auto</strong> or select <strong>PTH</strong> explicitly for an ONNX input. Run <strong>Convert weights</strong>, download the result and import it as an inference voice. If you still have the original, compare their SHA-256 hashes. Identical hashes confirm that the files match byte for byte.</p>
+<h2 id="test-the-result">Test the result</h2>
+<p>For ONNX, load the model into the target client and convert a short clean recording. For the restored PTH, use the same recording in Ilaria RVC with the original pitch and embedder settings. Test the index separately if you use one. Client settings and preprocessing can change how an ONNX conversion sounds.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Check the vocoder, Pitch Guidance, input size and PyTorch version if export fails. If the log says the ONNX has no original checkpoint, use the untouched export made by this converter or recover the original PTH from your backup. If the ONNX exports but the client rejects it, check which RVC ONNX formats the client accepts.</p>
 <p><a href="../safetensors-converter/">Safetensors ↔ PTH</a></p>
 
                 
@@ -215,7 +228,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T02:15:17.000Z">25/11/2026 · 03:15</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T02:20:17.000Z">25/11/2026 · 03:20</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
