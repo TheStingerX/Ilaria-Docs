@@ -50,21 +50,48 @@ Choose Applio for text-to-speech and model management. Redpanda VC provides RVC 
 
 For file conversion, compare the same input clip at the same output volume. For live conversion, record a short test in the receiving app and check for doubled audio, dropouts and delay. If the voice sounds wrong in both tests, verify the model, engine and pitch. If only the receiving app sounds wrong, check the virtual cable, selected microphone and monitoring first.
 
-## Other apps and compatibility
+## Training & Inference
 
-{{ include "../reference/tools.md#app-comparison" }}
+| App | Capabilities | Hardware / notes | Guides |
+| --- | --- | --- | --- |
+| **Ilaria RVC** | Training, single/batch inference, TTS, audio analyzer | NVIDIA CUDA (Windows) / Kaggle | [Installation](../ilaria-rvc/install/installation.md) · [Inference](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Training, file inference, TTS, model library, realtime | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installation](training/applio/installation.md) · [Inference](training/applio/inference.md) · [Training](training/applio/training.md) |
+| **RVC WebUI (Mainline - Original RVC)** | Upstream training & file inference (+ separate realtime launcher) | NVIDIA CUDA, CPU / DirectML | [Installation](training/mainline/installation.md) · [Inference](training/mainline/inference.md) · [Training](training/mainline/training.md) |
+| **Redpanda-vc** | RVC + Causal Voice Changer training, file inference & realtime | NVIDIA CUDA / CPU (Desktop & WebUI) | [First run](training/redpanda/first-run.md) · [Inference](training/redpanda/inference.md) · [Training](training/redpanda/training.md) |
+| **RVC Model Merger** | Model merging utility for RVC `.pth` files | Offline utility | [Usage](rvc-model-merger/usage.md) |
 
-- [RVC WebUI (Mainline - Original RVC)](training/mainline/installation.md) · [w-okada VCClient](voice-changers/okada/installation.md) · [RVC GUI](voice-changers/rvc-gui/file-conversion.md) · [RVC Blue](voice-changers/rvc-blue/installation.md)
-- [Compare all apps](../reference/tools.md)
-
-## Additional RVC tools
+### Legacy / Not recommended
 
 !!!warning Legacy software · Not recommended
-These projects are outdated and show no active maintenance. rvc-cli is archived, and the main branches of RVC Studio and Mangio RVC Fork have been inactive for years. The guides are kept for existing projects. For a new setup, choose a maintained app.
+These projects are outdated, archived, or no longer actively maintained. The guides are kept for existing projects. For a new setup, choose a maintained app above.
 !!!
 
-- [rvc-cli](training/rvc-cli/installation.md)
-- [RVC Studio](training/rvc-studio/installation.md)
-- [Mangio RVC Fork](training/mangio/installation.md)
-- [Replay](training/replay/installation.md)
-- [AICoverGen](training/aicovergen/installation.md)
+| App | Capabilities | Status / notes | Guides |
+| --- | --- | --- | --- |
+| **rvc-cli** | File/batch inference & training (CLI) | Archived | [Installation](training/rvc-cli/installation.md) · [Usage](training/rvc-cli/usage.md) |
+| **RVC Studio** | Training & file inference (WebUI) | Inactive | [Installation](training/rvc-studio/installation.md) · [Usage](training/rvc-studio/usage.md) |
+| **Mangio RVC Fork** | Training & file inference | Inactive | [Installation](training/mangio/installation.md) · [Usage](training/mangio/usage.md) |
+| **Replay** | Training & file conversion | Discontinued (Weights.gg closed) | [Installation](training/replay/installation.md) · [Usage](training/replay/usage.md) |
+| **AICoverGen** | RVC v2 song-cover pipeline (inference only, WebUI / CLI / Colab) | Unmaintained | [Installation](training/aicovergen/installation.md) · [Usage](training/aicovergen/usage.md) |
+| **RVC GUI** | Desktop file conversion only | Archived | [File conversion](voice-changers/rvc-gui/file-conversion.md) |
+
+## Voice Changers (Realtime)
+
+| App | Engine / focus | Hardware / notes | Guides |
+| --- | --- | --- | --- |
+| **Vonovox** | Realtime RVC v2 (recommended on NVIDIA Windows) | NVIDIA CUDA | [Installation](voice-changers/vonovox/installation.md) · [Live audio](voice-changers/vonovox/live-audio.md) · [Performance](voice-changers/vonovox/advanced-performance-optimization.md) |
+| **w-okada VCClient** | Cross-platform realtime RVC (client/server) | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/okada/installation.md) · [Live audio](voice-changers/okada/live-audio.md) |
+| **Okada TG Developed Fork (TGR)** | Active community realtime RVC fork | NVIDIA CUDA, DirectML (AMD/Intel), CPU, Linux, exp. macOS | [Installation](voice-changers/tgr/installation.md) · [Live audio](voice-changers/tgr/live-audio.md) · [Cloud](voice-changers/tgr/cloud.md) |
+| **Deiteris w-okada Fork** | Realtime w-okada fork | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/deiteris/installation.md) · [Live audio](voice-changers/deiteris/live-audio.md) · [Cloud](voice-changers/deiteris/cloud.md) |
+| **RVC Blue** | Windows desktop realtime & real-time file input | NVIDIA CUDA 12.8 / 11.8 | [Installation](voice-changers/rvc-blue/installation.md) |
+
+Multi-mode RVC apps with built-in realtime modes: **Applio** ([Realtime](training/applio/realtime.md)), **Redpanda-vc** ([Live audio](training/redpanda/live-audio.md)), and **RVC WebUI (Mainline)** ([Realtime](training/mainline/realtime.md)).
+
+### Non-RVC Realtime Voice Changers
+
+| App | Capabilities | Guides |
+| --- | --- | --- |
+| **Causal Voice Changer** | Low-latency non-RVC realtime voice changer (`.cvc` models) | [Overview](../non-rvc/voice-changers/causal-voice-changer/overview.md) · [Installation](../non-rvc/voice-changers/causal-voice-changer/installation.md) · [Realtime](../non-rvc/voice-changers/causal-voice-changer/realtime.md) |
+| **YuneVoix** | Non-RVC realtime voice changer & song cover / karaoke | [Overview](../non-rvc/voice-changers/yunevoix/overview.md) · [Installation](../non-rvc/voice-changers/yunevoix/installation.md) · [Usage](../non-rvc/voice-changers/yunevoix/usage.md) |
+
+[Compare all apps](../reference/tools.md)
