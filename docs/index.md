@@ -32,7 +32,7 @@ For any problems, suggestions or updates, contact me on Discord.
 
 If your computer doesn’t have a suitable NVIDIA GPU, you can run Ilaria RVC on Kaggle. In the notebook settings, turn on Internet access and select a GPU accelerator. Choose GPU T4 ×2 if it’s available. Kaggle’s remote NVIDIA GPU handles the voice conversion and model training. Follow the [Ilaria RVC on Kaggle guide](ilaria-rvc/cloud/kaggle.md) to set up the notebook and save your results before the session ends.
 
-> **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · The full Windows package is 2.4.7. To update from 2.4.2–2.5.0, use **Other → Update Ilaria RVC → Check for updates → Download and restart**. The update ZIP excludes the runtime and model weights. [Windows update ZIP](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
+> **Latest version** · **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · The full Windows package is 2.4.7. To update from 2.4.2–2.5.0, use **Other → Update Ilaria RVC → Check for updates → Download and restart**. The update ZIP excludes the runtime and model weights. [Windows update ZIP](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
 [Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Browse voice demos](https://ilariarvc.shop/en/demos/) · [Read the changelog](ilaria-rvc/install/version-history.md)
 

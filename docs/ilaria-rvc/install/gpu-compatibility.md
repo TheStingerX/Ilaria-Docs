@@ -3,7 +3,7 @@ label: "Compatible GPUs"
 icon: ":desktop_computer:"
 order: 82
 permalink: /ilaria-rvc/gpu-compatibility/
-description: "The Windows ZIP is about 5.00 GB. Extract it to a new folder and run RUN_ILARIA_RVC.bat, or RUN_ILARIA_RVC_LOGS.bat for logs. ContentVec and RMVPE are included."
+description: "NVIDIA GPU compatibility for Ilaria RVC, including CUDA runtimes, tested hardware and expected support by architecture."
 ---
 # Compatible GPUs
 
