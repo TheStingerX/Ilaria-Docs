@@ -127,3 +127,16 @@
   align-self: flex-start;
   margin-block-start: .25rem;
 }
+
+/* Highlight only the first active section in the right-hand CONTENTS sidebar. */
+li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active {
+  color: var(--toc-text);
+}
+
+li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active:hover {
+  color: var(--toc-text-hover);
+}
+
+li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active .bg-toc-border-active {
+  background-color: transparent;
+}
