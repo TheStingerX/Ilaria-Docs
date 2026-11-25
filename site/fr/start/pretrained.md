@@ -37,12 +37,6 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **GuideVocalPretrain** | `48 kHz` | `HiFi-GAN` | Non spécifié | [Essid/GuideVocalPretrain](https://huggingface.co/Essid/GuideVocalPretrain) |
 | **IMA** | `32 kHz` | `HiFi-GAN` | Non spécifié | [Loren85/IMA-TEST-V1](https://huggingface.co/Loren85/IMA-TEST-V1) |
 | **Itaila** | `32 kHz` | `HiFi-GAN` | `contentvec` | [TheStinger/itaila](https://huggingface.co/TheStinger/itaila) |
-| **KLM - BeatzForge V2** | `32 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
-| **KLM - BeatzForge V1** | `48 kHz` | `HiFi-GAN` | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
-| **KLM BeatMaster V1** | `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
-| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | Non spécifié | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
-| **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | `RefineGAN` | Non spécifié | [SeoulStreamingStation/KLM5](https://huggingface.co/SeoulStreamingStation/KLM5) |
-| **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 | **Legacy Core V1.5** | `32 kHz` | `HiFi-GAN` | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5** | `40 kHz` | `HiFi-GAN` | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5v2** | `32 kHz` | `HiFi-GAN` | `contentvec` | [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) |
@@ -123,6 +117,12 @@ Si un seul de ces réglages ne correspond pas, l'entraînement plantera immédia
 | **KLM RVC PT / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | Non confirmé | Non confirmé | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
 | **KLM 9 HFG** | `32 kHz` | `HiFi-GAN` | Non confirmé | [Hugging Face](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel) |
 | **KLM X 10.0** | `32 kHz` | `HiFi-GAN` | Non confirmé | [Hugging Face](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
+| **KLM - BeatzForge V2** | `32 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
+| **KLM - BeatzForge V1** | `48 kHz` | `HiFi-GAN` | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
+| **KLM BeatMaster V1** | `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
+| **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | Non spécifié | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
+| **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | `RefineGAN` | Non spécifié | [SeoulStreamingStation/KLM5](https://huggingface.co/SeoulStreamingStation/KLM5) |
+| **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | Non spécifié | Non spécifié | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 
 ## Paires Convbased Studio
 
