@@ -79,12 +79,12 @@ Utilizzare la navigazione per trovare guide di configurazione, conversione, form
 
 ## La documentazione in numeri
 
-- **Pagine totali:** **118** pagine (`117` guide + Home)
-- **Totale pagine in tutte e 6 le lingue (`en`, `it`, `es`, `fr`, `de`, `pt`):** **708** pagine (`118 x 6`)
+- **Pagine totali:** **126** pagine (`125` guide + Home)
+- **Totale pagine in tutte e 6 le lingue (`en`, `it`, `es`, `fr`, `de`, `pt`):** **740** pagine (`en: 126`, `it: 126`, `es: 122`, `fr: 122`, `de: 122`, `pt: 122`)
 
 ## Qualche curiosità sul sito e su Ilaria
 
 - **Nato dall'esperienza diretta:** Ilaria (`TheStingerX` / `thestingerx` su Discord) ha scritto e ampliato queste guide direttamente mentre sviluppava **Ilaria RVC**, allenava modelli vocali (come *Itaila*) e testava configurazioni reali su Windows, Kaggle, Google Colab e Lightning AI.
-- **Dalla `1.1 Beta` alla `2.4.7`:** Ilaria RVC è partita come interfaccia Windows personalizzata ed è arrivata a supportare **NVIDIA RTX serie 50 (Blackwell)** con CUDA 12.8, **training nativo in BF16**, **Kokoro v1.0 TTS**, conversione **Safetensors ↔ PTH** e cataloghi integrati di modelli e pretrain.
-- **Non solo Ilaria RVC:** Nel tempo **Ilaria Docs** è diventato un punto di riferimento completo che copre **11 app e fork RVC** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI e RVC Model Merger) più strumenti **Non-RVC** come **YuneVoix**, **Causal Voice Changer**, **UVR5** e **MVSep**.
-- **Sincronizzato in 6 lingue:** Ogni singola pagina del sito è mantenuta in parità 1:1 tra inglese, italiano, spagnolo, francese, tedesco e portoghese.
+- **Dalla `1.1 Beta` alla `2.5.1`:** Ilaria RVC è partita come interfaccia Windows personalizzata ed è arrivata a supportare **NVIDIA RTX serie 50 (Blackwell)** con CUDA 12.8, **training nativo in BF16**, **Kokoro v1.0 TTS**, conversione **Safetensors ↔ PTH**, **ONNX ↔ PTH** e cataloghi integrati di modelli e pretrain.
+- **Più di un’app:** Ilaria Docs copre **16 app e fork RVC**, tra cui AICoverMaker, AICoverGen e Replay, oltre a RVC Model Merger e a strumenti non RVC come So-VITS-SVC, GPT-SoVITS, UVR5 e MVSEP.
+- **Disponibile in 6 lingue:** Inglese e italiano hanno il catalogo completo. La maggior parte delle guide è disponibile anche in spagnolo, francese, tedesco e portoghese. Il selettore mostra le lingue disponibili per la pagina che stai leggendo.
