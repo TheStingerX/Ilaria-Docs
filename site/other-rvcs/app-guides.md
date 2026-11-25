@@ -65,6 +65,7 @@ These projects are outdated, archived, or no longer actively maintained. The gui
 | **RVC Studio** | Training & file inference (WebUI) | Inactive | [Installation](training/rvc-studio/installation.md) · [Usage](training/rvc-studio/usage.md) |
 | **Mangio RVC Fork** | Training & file inference | Inactive | [Installation](training/mangio/installation.md) · [Usage](training/mangio/usage.md) |
 | **Replay** | Training & file conversion | Discontinued (Weights.gg closed) | [Installation](training/replay/installation.md) · [Usage](training/replay/usage.md) |
+| **AICoverMaker** | Applio fork for RVC covers, vocal separation and conversion | — | [Installation](training/aicovermaker/installation.md) · [First cover](training/aicovermaker/usage.md) |
 | **AICoverGen** | RVC v2 song-cover pipeline (inference only, WebUI / CLI / Colab) | Unmaintained | [Installation](training/aicovergen/installation.md) · [Usage](training/aicovergen/usage.md) |
 | **RVC GUI** | Desktop file conversion only | Archived | [File conversion](voice-changers/rvc-gui/file-conversion.md) |
 

@@ -120,6 +120,11 @@
 - [Mangio RVC Fork · Installazione](https://docs.ilariarvc.shop/it/other-rvcs/training/mangio/installation.md): GitHub · Versione consultata
 - [Mangio RVC Fork · Uso e risoluzione dei problemi](https://docs.ilariarvc.shop/it/other-rvcs/training/mangio/usage.md): GitHub · Versione consultata
 
+#### AICoverMaker
+
+- [AICoverMaker · Installazione](https://docs.ilariarvc.shop/it/other-rvcs/training/aicovermaker/installation.md): AICoverMaker è il fork di Applio di Eddycrack864 dedicato alle cover con conversione vocale. La guida fa riferimento alla versione 1.0.5. Parti da una registrazione e da un modello vocale che hai il permesso di usare.
+- [AICoverMaker · Prima cover](https://docs.ilariarvc.shop/it/other-rvcs/training/aicovermaker/usage.md): Il flusso parte da una registrazione. Il separatore estrae la traccia vocale, RVC cambia la voce e il risultato viene rimescolato con la base. Usa un brano per cui hai i permessi necessari.
+
 #### Replay
 
 - [Replay · Installazione e disponibilità](https://docs.ilariarvc.shop/it/other-rvcs/training/replay/installation.md): Replay è stato dismesso dopo la chiusura di Weights.gg. L’archivio conserva gli installer della versione 8.7.0. L’installazione può interrompersi quando tenta di scaricare le dipendenze che erano ospitate da Weights.
@@ -220,3 +225,9 @@
 - [Restaurare il parlato con Sidon](https://docs.ilariarvc.shop/it/non-rvc/other-audio-stuff/ilaria-audio-upscaler/sidon.md): Seleziona Sidon, scarica Sidon INT8, aggiungi un estratto breve con rumore o riverbero, scegli WAV (PCM) e premi Enhance audio. Ascolta se le pause sono più pulite e le parole più chiare.
 - [Estendere la banda vocale con AP-BWE](https://docs.ilariarvc.shop/it/non-rvc/other-audio-stuff/ilaria-audio-upscaler/ap-bwe.md): Scegli AP-BWE e abbina il primo numero del profilo alla banda effettiva del parlato. Un segnale campionato a 8 kHz può contenere frequenze fino a circa 4 kHz.
 - [Anteprima, esportazione e risoluzione dei problemi](https://docs.ilariarvc.shop/it/non-rvc/other-audio-stuff/ilaria-audio-upscaler/export.md): Aggiungi uno o più file, scegli il formato e premi Enhance audio. Confronta originale e risultato nel player a velocità 1×. Speed cambia solo l’ascolto. Seleziona il risultato ed esportalo con Save result: le anteprime non salvate sono temporanee.
+
+### TTS
+
+- [Microsoft Edge TTS](https://docs.ilariarvc.shop/it/non-rvc/tts/edge.md): Apri la pagina in Microsoft Edge e scegli Leggi ad alta voce dal menu del browser, dove disponibile. Nelle opzioni della voce puoi scegliere lingua, voce e velocità.
+- [Kokoro TTS](https://docs.ilariarvc.shop/it/non-rvc/tts/kokoro.md): Questa guida usa il programma autonomo di nazdridoy. Genera parlato da testo con voci preimpostate. Installalo in un ambiente Python separato oppure usa uv tool install kokoro-tts.
+- [GPT-SoVITS](https://docs.ilariarvc.shop/it/non-rvc/tts/gpt-sovits.md): GPT-SoVITS genera parlato a partire da un testo e usa una registrazione come riferimento vocale. La sintesi zero-shot usa il riferimento con un modello esistente.

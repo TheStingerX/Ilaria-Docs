@@ -120,6 +120,11 @@
 - [Mangio RVC Fork · Installation](https://docs.ilariarvc.shop/other-rvcs/training/mangio/installation.md): GitHub · Reviewed version
 - [Mangio RVC Fork · Usage and troubleshooting](https://docs.ilariarvc.shop/other-rvcs/training/mangio/usage.md): GitHub · Reviewed version
 
+#### AICoverMaker
+
+- [AICoverMaker · Installation](https://docs.ilariarvc.shop/other-rvcs/training/aicovermaker/installation.md): AICoverMaker is Eddycrack864’s Applio fork for producing voice-converted covers. This guide follows the v1.0.5 release. Start with a recording and a voice model you have permission to use.
+- [AICoverMaker · First cover](https://docs.ilariarvc.shop/other-rvcs/training/aicovermaker/usage.md): A cover on this workflow starts from recorded audio. The separator extracts a vocal stem, RVC changes the voice, and the result is mixed with the backing track.
+
 #### Replay
 
 - [Replay · Installation and availability](https://docs.ilariarvc.shop/other-rvcs/training/replay/installation.md): Replay is discontinued following the closure of Weights.gg. The archive preserves version 8.7.0 installers. Setup may fail when it tries to download dependencies that were hosted by Weights.
@@ -220,3 +225,9 @@
 - [Restore speech with Sidon](https://docs.ilariarvc.shop/non-rvc/other-audio-stuff/ilaria-audio-upscaler/sidon.md): Choose Sidon, download Sidon INT8, add a short noisy or reverberant clip, select WAV (PCM) and run Enhance audio. Listen for quieter pauses and clearer words.
 - [Extend speech bandwidth with AP-BWE](https://docs.ilariarvc.shop/non-rvc/other-audio-stuff/ilaria-audio-upscaler/ap-bwe.md): Choose AP-BWE and match the first number in the profile to the usable bandwidth of the speech. An 8 kHz signal carries frequencies up to about 4 kHz. A call saved as a 48 kHz WAV can still have that narrow bandwidth.
 - [Preview, export and troubleshooting](https://docs.ilariarvc.shop/non-rvc/other-audio-stuff/ilaria-audio-upscaler/export.md): Add one or more files, choose a format and run Enhance audio. Compare the original and enhanced audio in the player at 1×. Speed changes playback only. Select the enhanced result and click Save result to store it permanently.
+
+### TTS
+
+- [Microsoft Edge TTS](https://docs.ilariarvc.shop/non-rvc/tts/edge.md): Open a page in Microsoft Edge and choose Read aloud from the browser menu where available. Use Voice options to select a language, voice and reading speed. Immersive Reader can make supported pages easier to read and listen to.
+- [Kokoro TTS](https://docs.ilariarvc.shop/non-rvc/tts/kokoro.md): This guide uses the standalone CLI by nazdridoy. It generates speech from text with preset voices. Install it in an isolated Python environment or with uv tool install kokoro-tts.
+- [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model.
