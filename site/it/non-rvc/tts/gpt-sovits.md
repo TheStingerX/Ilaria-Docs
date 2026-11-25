@@ -10,7 +10,7 @@ Il componente GPT predice una rappresentazione del parlato a partire dal testo. 
 
 ### Windows con il pacchetto integrato
 
-1. Apri il [repository ufficiale](https://github.com/bilibili/GPT-SoVITS) e cerca il pacchetto Windows integrato nella sezione **Installation**. Controlla che sia adatto al tuo sistema e alla versione del modello che vuoi usare.
+1. Apri il [repository ufficiale](https://github.com/RVC-Boss/GPT-SoVITS) e cerca il pacchetto Windows integrato nella sezione **Installation**. Controlla che sia adatto al tuo sistema e alla versione del modello che vuoi usare.
 2. Estrai l’intero archivio in una cartella scrivibile, ad esempio `C:\AI\GPT-SoVITS`. Apri la cartella estratta e lascia insieme il runtime e le cartelle dei modelli.
 3. Avvia `go-webui.bat` se è presente. Alcune release hanno launcher diversi per ciascuna versione. Usa quello indicato per il tuo pacchetto.
 4. Aspetta che il terminale stampi l’indirizzo locale e aprilo nel browser. Lascia aperto il terminale. Se la pagina non si apre, verifica che il processo sia ancora in esecuzione e che la porta coincida con quella mostrata dall’avvio corrente.
@@ -94,4 +94,4 @@ Aggiorna l’elenco dei modelli in inferenza e seleziona il checkpoint GPT, di s
 | La voce ripete o salta parole | Trascrizione del riferimento e segmentazione | Prova una frase breve, controlla le due lingue e dividi il testo lungo. |
 | La GPU esaurisce la memoria | Fase in errore e dimensione del batch | Chiudi altri carichi GPU, riduci il batch ed esegui le fasi in sequenza. |
 
-[Repository e release di GPT-SoVITS](https://github.com/bilibili/GPT-SoVITS)
+[Repository e release di GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)
