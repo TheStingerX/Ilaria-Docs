@@ -84,3 +84,4 @@ Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est a
 - [RVC Studio](training/rvc-studio/installation.md)
 - [Mangio RVC Fork](training/mangio/installation.md)
 - [Replay](training/replay/installation.md)
+- [AICoverGen](training/aicovergen/installation.md)

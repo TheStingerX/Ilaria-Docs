@@ -84,3 +84,4 @@ Questi progetti sono datati e non risultano più mantenuti attivamente. rvc-cli 
 - [RVC Studio](training/rvc-studio/installation.md)
 - [Mangio RVC Fork](training/mangio/installation.md)
 - [Replay](training/replay/installation.md)
+- [AICoverGen](training/aicovergen/installation.md)

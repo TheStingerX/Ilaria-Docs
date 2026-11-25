@@ -84,3 +84,4 @@ These projects are outdated and show no active maintenance. rvc-cli is archived,
 - [RVC Studio](training/rvc-studio/installation.md)
 - [Mangio RVC Fork](training/mangio/installation.md)
 - [Replay](training/replay/installation.md)
+- [AICoverGen](training/aicovergen/installation.md)
