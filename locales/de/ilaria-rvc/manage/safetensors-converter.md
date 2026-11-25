@@ -13,9 +13,7 @@ Ab **Ilaria RVC 2.4.5** bietet der Tab **Other** den Bereich **Convert model wei
 
 ---
 
-## ONNX-Export und Wiederherstellung (2.5.1)
-
-Wähle unter **Other → Convert model weights** ein installiertes Modell oder eine Datei. Exportiere ein RVC-HiFi-GAN-Modell mit Pitch-Führung als ONNX für einen kompatiblen externen Client. Die exakte Wiederherstellung als `.pth` ist bei ONNX-Dateien verfügbar, die Ilaria RVC exportiert hat. Bewahre bei anderen Exportern die ursprüngliche `.pth`-Datei auf. [Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)
+[Anleitung zum ONNX-Konverter](onnx-converter.md)
 
 ## 1. Was sind `.pth` und `.safetensors`? (Einfach erklärt)
 
