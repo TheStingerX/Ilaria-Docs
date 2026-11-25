@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/fr">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848884186428">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848884742599">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848884186428" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848884742599" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848884186428" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848884742599" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848884186428" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848884742599" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/fr/static/ilaria-pink.css?v=7">
     <script defer src="/fr/static/toc-active.js?v=1"></script>
@@ -202,186 +202,60 @@
 <p><a href="../applio/installation/">Installer Applio</a> · <a href="../applio/tts/">Synthèse vocale Applio</a> · <a href="../applio/models/">Modèles Applio</a> · <a href="../redpanda/first-run/">Configurer Redpanda-vc</a> · <a href="../redpanda/live-audio/">Direct dans Redpanda-vc</a></p>
 <span id="keep-a-baseline-and-fix-one-issue-at-a-time" class="docs-anchor"></span><h2 id="établir-un-résultat-de-référence">Établir un résultat de référence</h2>
 <p>Comparez les fichiers avec la même source et au même volume. Pour le direct, enregistrez un essai dans l’application de destination. Si le problème apparaît seulement dans cette application, vérifiez le câble virtuel, le micro sélectionné et l’écoute.</p>
-<span id="other-apps-and-compatibility" class="docs-anchor"></span><h2 id="autres-applications-et-compatibilité">Autres applications et compatibilité</h2>
-<retype-table copy-text="| Application | Training | Inférence (fichiers) | Realtime | Liens du projet |
-| --- | --- | --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Oui | Oui | Non | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
-| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/training/mainline/installation.md) | Oui | Oui | Oui · Lanceur séparé | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
-| [Applio](../other-rvcs/training/applio/installation.md) | Oui | Oui | Oui | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
-| [Redpanda-vc](../other-rvcs/training/redpanda/first-run.md) | Oui | Oui | Oui | [GitHub](https://github.com/redpanda343/Redpanda-vc) · [Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
-| [RVC GUI](../other-rvcs/voice-changers/rvc-gui/file-conversion.md) | Non | Oui | Non | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
-| [Vonovox](../other-rvcs/voice-changers/vonovox/installation.md) | Non | Non | Oui | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
-| [w-okada VCClient](../other-rvcs/voice-changers/okada/installation.md) | Non | Non | Oui | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
-| [Okada TG Developed Fork](../other-rvcs/voice-changers/tgr/installation.md) | Non | Non | Oui | [GitHub](https://github.com/tg-develop/voice-changer) |
-| [RVC Blue](../other-rvcs/voice-changers/rvc-blue/installation.md) | Non | Fichiers en temps réel | Oui | [GitHub](https://github.com/niel-blue/RVC-Realtime-GUI) · [Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI) |
-| [Replay](../other-rvcs/training/replay/installation.md) | Oui | Oui · ancienne version | Non | [Site officiel](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers) |">
+<span id="training--inference" class="docs-anchor"></span><h2 id="entraînement-et-inférence">Entraînement et inférence</h2>
+<retype-table copy-text="| Application | Fonctionnalités | Matériel / notes | Guides |
+| --- | --- | --- | --- |
+| **Ilaria RVC** | Entraînement, inférence simple/par lots, synthèse vocale, analyseur audio | NVIDIA CUDA (Windows) / Kaggle | [Installation](../ilaria-rvc/install/installation.md) · [Inférence](../ilaria-rvc/convert/inference.md) · [Entraînement](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Entraînement, inférence de fichiers, TTS, bibliothèque de modèles, temps réel | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installation](training/applio/installation.md) · [Inférence](training/applio/inference.md) · [Entraînement](training/applio/training.md) |
+| **RVC WebUI (Mainline - Original RVC)** | Entraînement et inférence de fichiers d’origine (+ lanceur temps réel séparé) | NVIDIA CUDA, CPU / DirectML | [Installation](training/mainline/installation.md) · [Inférence](training/mainline/inference.md) · [Entraînement](training/mainline/training.md) |
+| **Redpanda-vc** | Entraînement, inférence sur fichiers et temps réel pour RVC + Causal Voice Changer | NVIDIA CUDA / CPU (Desktop et WebUI) | [Premier lancement](training/redpanda/first-run.md) · [Inférence](training/redpanda/inference.md) · [Entraînement](training/redpanda/training.md) |
+| **RVC Model Merger** | Utilitaire de fusion pour modèles RVC `.pth` | Utilitaire hors ligne | [Utilisation](rvc-model-merger/usage.md) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
 <th>Application</th>
-<th>Training</th>
-<th>Inférence (fichiers)</th>
-<th>Realtime</th>
-<th>Liens du projet</th>
+<th>Fonctionnalités</th>
+<th>Matériel / notes</th>
+<th>Guides</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../installation/">Ilaria RVC</a></td>
-<td>Oui</td>
-<td>Oui</td>
-<td>Non</td>
-<td><a href="https://github.com/TheStingerX/Ilaria-RVC">GitHub</a> · <a href="https://huggingface.co/TheStinger/Ilaria_RVC">Hugging Face</a></td>
+<td><strong>Ilaria RVC</strong></td>
+<td>Entraînement, inférence simple/par lots, synthèse vocale, analyseur audio</td>
+<td>NVIDIA CUDA (Windows) / Kaggle</td>
+<td><a href="../installation/">Installation</a> · <a href="../inference/">Inférence</a> · <a href="../training-workflow/">Entraînement</a></td>
 </tr>
 <tr>
-<td><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a></td>
-<td>Oui</td>
-<td>Oui</td>
-<td>Oui · Lanceur séparé</td>
-<td><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">GitHub</a> · <a href="https://huggingface.co/lj1995/VoiceConversionWebUI">Hugging Face</a></td>
+<td><strong>Applio</strong></td>
+<td>Entraînement, inférence de fichiers, TTS, bibliothèque de modèles, temps réel</td>
+<td>NVIDIA CUDA, AMD ROCm, Apple MPS</td>
+<td><a href="../applio/installation/">Installation</a> · <a href="../applio/inference/">Inférence</a> · <a href="../applio/training/">Entraînement</a></td>
 </tr>
 <tr>
-<td><a href="../applio/installation/">Applio</a></td>
-<td>Oui</td>
-<td>Oui</td>
-<td>Oui</td>
-<td><a href="https://github.com/IAHispano/Applio">GitHub</a> · <a href="https://huggingface.co/IAHispano/Applio">Hugging Face</a></td>
+<td><strong>RVC WebUI (Mainline - Original RVC)</strong></td>
+<td>Entraînement et inférence de fichiers d’origine (+ lanceur temps réel séparé)</td>
+<td>NVIDIA CUDA, CPU / DirectML</td>
+<td><a href="../mainline/installation/">Installation</a> · <a href="../mainline/inference/">Inférence</a> · <a href="../mainline/training/">Entraînement</a></td>
 </tr>
 <tr>
-<td><a href="../redpanda/first-run/">Redpanda-vc</a></td>
-<td>Oui</td>
-<td>Oui</td>
-<td>Oui</td>
-<td><a href="https://github.com/redpanda343/Redpanda-vc">GitHub</a> · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Version précompilée pour Windows x64</a></td>
+<td><strong>Redpanda-vc</strong></td>
+<td>Entraînement, inférence sur fichiers et temps réel pour RVC + Causal Voice Changer</td>
+<td>NVIDIA CUDA / CPU (Desktop et WebUI)</td>
+<td><a href="../redpanda/first-run/">Premier lancement</a> · <a href="../redpanda/inference/">Inférence</a> · <a href="../redpanda/training/">Entraînement</a></td>
 </tr>
 <tr>
-<td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
-<td>Non</td>
-<td>Oui</td>
-<td>Non</td>
-<td><a href="https://github.com/Tiger14n/RVC-GUI">GitHub</a></td>
-</tr>
-<tr>
-<td><a href="../vonovox/installation/">Vonovox</a></td>
-<td>Non</td>
-<td>Non</td>
-<td>Oui</td>
-<td><a href="https://github.com/dr87/Vonovox">GitHub</a> · <a href="https://huggingface.co/dr87/vonovox">Hugging Face</a></td>
-</tr>
-<tr>
-<td><a href="../okada/installation/">w-okada VCClient</a></td>
-<td>Non</td>
-<td>Non</td>
-<td>Oui</td>
-<td><a href="https://github.com/w-okada/voice-changer">GitHub</a> · <a href="https://huggingface.co/wok000/vcclient000">Hugging Face</a></td>
-</tr>
-<tr>
-<td><a href="../tgr/installation/">Okada TG Developed Fork</a></td>
-<td>Non</td>
-<td>Non</td>
-<td>Oui</td>
-<td><a href="https://github.com/tg-develop/voice-changer">GitHub</a></td>
-</tr>
-<tr>
-<td><a href="../rvc-blue/installation/">RVC Blue</a></td>
-<td>Non</td>
-<td>Fichiers en temps réel</td>
-<td>Oui</td>
-<td><a href="https://github.com/niel-blue/RVC-Realtime-GUI">GitHub</a> · <a href="https://huggingface.co/niel-blue/RVC-Realtime-GUI">Hugging Face</a></td>
-</tr>
-<tr>
-<td><a href="../replay/installation/">Replay</a></td>
-<td>Oui</td>
-<td>Oui · ancienne version</td>
-<td>Non</td>
-<td><a href="https://www.weights.com/replay">Site officiel</a> · <a href="https://archive.org/details/replay-8.7.0-installers">Internet Archive</a></td>
+<td><strong>RVC Model Merger</strong></td>
+<td>Utilitaire de fusion pour modèles RVC <code translate="no" v-pre>.pth</code></td>
+<td>Utilitaire hors ligne</td>
+<td><a href="../rvc-model-merger/">Utilisation</a></td>
 </tr>
 </tbody>
 </table>
 </div>
 </retype-table>
-<retype-table copy-text="| Application | Quand l'utiliser | Matériel et notes de construction |
-| --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Conversion de fichiers, TTS, formation et analyse audio | La distribution Windows actuelle est NVIDIA uniquement. |
-| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/training/mainline/installation.md) | Formation et inférence en amont, avec un lanceur en temps réel séparé | NVIDIA CUDA sur Windows et Ubuntu. La configuration du processeur en amont couvre les systèmes AMD et Intel, avec une utilisation possible de DirectML sous Windows. |
-| [Applio](../other-rvcs/training/applio/installation.md) | Conversion de fichiers, formation et temps réel dans une seule application | La documentation du bureau répertorie NVIDIA CUDA, les configurations AMD prises en charge et Apple MPS. La disponibilité dépend de l'édition et du moteur. |
-| [Redpanda-vc](../other-rvcs/training/redpanda/first-run.md) | RVC + Causal Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Version précompilée pour Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
-| [RVC GUI](../other-rvcs/voice-changers/rvc-gui/file-conversion.md) | Conversion simple de fichiers locaux dans l'interface de bureau existante | Archivé. Le projet documente Windows NVIDIA CUDA et une solution de contournement historique d'Apple Silicon. |
-| [Vonovox](../other-rvcs/voice-changers/vonovox/installation.md) | Recommandé pour live RVC v2 sur Windows avec NVIDIA | NVIDIA CUDA uniquement. Faites correspondre le package Hugging Face à votre génération de GPU. |
-| [w-okada VCClient](../other-rvcs/voice-changers/okada/installation.md) | Conversion en direct sur plusieurs systèmes d'exploitation | Windows CUDA et packages standard, y compris DirectML ou CPU, lorsqu'ils sont pris en charge. Chemins d’installation distincts d’Apple Silicon et de Linux. |
-| [Okada TG Developed Fork](../other-rvcs/voice-changers/tgr/installation.md) | Live RVC avec des options documentées pour les utilisateurs d'AMD, Intel et CPU | Windows CUDA ou DirectML. Les versions Linux et expérimentales de macOS ont des instructions distinctes. |
-| [RVC Blue](../other-rvcs/voice-changers/rvc-blue/installation.md) | Conversion de voix en temps réel sous Windows | NVIDIA CUDA 12.8 / 11.8 (Windows) |
-| [Replay](../other-rvcs/training/replay/installation.md) | Entraînement de modèles et conversion de fichiers · déconseillé | [Installateurs archivés](https://archive.org/details/replay-8.7.0-installers) |">
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Application</th>
-<th>Quand l&#x27;utiliser</th>
-<th>Matériel et notes de construction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../installation/">Ilaria RVC</a></td>
-<td>Conversion de fichiers, TTS, formation et analyse audio</td>
-<td>La distribution Windows actuelle est NVIDIA uniquement.</td>
-</tr>
-<tr>
-<td><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a></td>
-<td>Formation et inférence en amont, avec un lanceur en temps réel séparé</td>
-<td>NVIDIA CUDA sur Windows et Ubuntu. La configuration du processeur en amont couvre les systèmes AMD et Intel, avec une utilisation possible de DirectML sous Windows.</td>
-</tr>
-<tr>
-<td><a href="../applio/installation/">Applio</a></td>
-<td>Conversion de fichiers, formation et temps réel dans une seule application</td>
-<td>La documentation du bureau répertorie NVIDIA CUDA, les configurations AMD prises en charge et Apple MPS. La disponibilité dépend de l&#x27;édition et du moteur.</td>
-</tr>
-<tr>
-<td><a href="../redpanda/first-run/">Redpanda-vc</a></td>
-<td>RVC + Causal Voice Changer · Tauri / WebUI</td>
-<td>NVIDIA CUDA / CPU · <a href="https://github.com/redpanda343/Redpanda-vc/releases/tag/release">Version précompilée pour Windows x64</a></td>
-</tr>
-<tr>
-<td><a href="../rvc-gui/file-conversion/">RVC GUI</a></td>
-<td>Conversion simple de fichiers locaux dans l&#x27;interface de bureau existante</td>
-<td>Archivé. Le projet documente Windows NVIDIA CUDA et une solution de contournement historique d&#x27;Apple Silicon.</td>
-</tr>
-<tr>
-<td><a href="../vonovox/installation/">Vonovox</a></td>
-<td>Recommandé pour live RVC v2 sur Windows avec NVIDIA</td>
-<td>NVIDIA CUDA uniquement. Faites correspondre le package Hugging Face à votre génération de GPU.</td>
-</tr>
-<tr>
-<td><a href="../okada/installation/">w-okada VCClient</a></td>
-<td>Conversion en direct sur plusieurs systèmes d&#x27;exploitation</td>
-<td>Windows CUDA et packages standard, y compris DirectML ou CPU, lorsqu&#x27;ils sont pris en charge. Chemins d’installation distincts d’Apple Silicon et de Linux.</td>
-</tr>
-<tr>
-<td><a href="../tgr/installation/">Okada TG Developed Fork</a></td>
-<td>Live RVC avec des options documentées pour les utilisateurs d&#x27;AMD, Intel et CPU</td>
-<td>Windows CUDA ou DirectML. Les versions Linux et expérimentales de macOS ont des instructions distinctes.</td>
-</tr>
-<tr>
-<td><a href="../rvc-blue/installation/">RVC Blue</a></td>
-<td>Conversion de voix en temps réel sous Windows</td>
-<td>NVIDIA CUDA 12.8 / 11.8 (Windows)</td>
-</tr>
-<tr>
-<td><a href="../replay/installation/">Replay</a></td>
-<td>Entraînement de modèles et conversion de fichiers · déconseillé</td>
-<td><a href="https://archive.org/details/replay-8.7.0-installers">Installateurs archivés</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</retype-table>
-<ul>
-<li><a href="../mainline/installation/">RVC WebUI (Mainline - Original RVC)</a> · <a href="../okada/installation/">w-okada VCClient</a> · <a href="../rvc-gui/file-conversion/">RVC GUI</a> · <a href="../rvc-blue/installation/">RVC Blue</a></li>
-<li><a href="../../tools/">Comparer les applications</a></li>
-</ul>
-<span id="additional-rvc-tools" class="docs-anchor"></span><h2 id="autres-outils-rvc">Autres outils RVC</h2>
+<span id="legacy--not-recommended" class="docs-anchor"></span><h3 id="anciennes-applications--déconseillées">Anciennes applications / Déconseillées</h3>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -395,17 +269,153 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Logiciels anciens · Déconseillés</h5>
-<p>Ces projets sont anciens et ne semblent plus activement maintenus. rvc-cli est archivé et les branches principales de RVC Studio et Mangio RVC Fork sont inactives depuis des années. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue.</p>
+<p>Ces projets sont anciens, archivés ou ne sont plus maintenus activement. Les guides restent disponibles pour les projets existants. Pour une nouvelle installation, choisissez une application maintenue ci-dessus.</p>
         </div>
     </div>
 </div>
-<ul>
-<li><a href="../rvc-cli/installation/">rvc-cli</a></li>
-<li><a href="../rvc-studio/installation/">RVC Studio</a></li>
-<li><a href="../mangio/installation/">Mangio RVC Fork</a></li>
-<li><a href="../replay/installation/">Replay</a></li>
-<li><a href="../aicovergen/installation/">AICoverGen</a></li>
-</ul>
+<retype-table copy-text="| Application | Fonctionnalités | Statut / notes | Guides |
+| --- | --- | --- | --- |
+| **rvc-cli** | Inférence sur fichier/lots et entraînement (CLI) | Archivé | [Installation](training/rvc-cli/installation.md) · [Utilisation](training/rvc-cli/usage.md) |
+| **RVC Studio** | Entraînement et inférence de fichiers (WebUI) | Inactif | [Installation](training/rvc-studio/installation.md) · [Utilisation](training/rvc-studio/usage.md) |
+| **Mangio RVC Fork** | Entraînement et inférence de fichiers | Inactif | [Installation](training/mangio/installation.md) · [Utilisation](training/mangio/usage.md) |
+| **Replay** | Entraînement et conversion de fichiers | Arrêté (Weights.gg fermé) | [Installation](training/replay/installation.md) · [Utilisation](training/replay/usage.md) |
+| **AICoverGen** | Pipeline RVC v2 pour reprises musicales (inférence uniquement, WebUI / CLI / Colab) | Non maintenu | [Installation](training/aicovergen/installation.md) · [Utilisation](training/aicovergen/usage.md) |
+| **RVC GUI** | Conversion de fichiers sur bureau uniquement | Archivé | [Conversion de fichiers](voice-changers/rvc-gui/file-conversion.md) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Application</th>
+<th>Fonctionnalités</th>
+<th>Statut / notes</th>
+<th>Guides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rvc-cli</strong></td>
+<td>Inférence sur fichier/lots et entraînement (CLI)</td>
+<td>Archivé</td>
+<td><a href="../rvc-cli/installation/">Installation</a> · <a href="../rvc-cli/usage/">Utilisation</a></td>
+</tr>
+<tr>
+<td><strong>RVC Studio</strong></td>
+<td>Entraînement et inférence de fichiers (WebUI)</td>
+<td>Inactif</td>
+<td><a href="../rvc-studio/installation/">Installation</a> · <a href="../rvc-studio/usage/">Utilisation</a></td>
+</tr>
+<tr>
+<td><strong>Mangio RVC Fork</strong></td>
+<td>Entraînement et inférence de fichiers</td>
+<td>Inactif</td>
+<td><a href="../mangio/installation/">Installation</a> · <a href="../mangio/usage/">Utilisation</a></td>
+</tr>
+<tr>
+<td><strong>Replay</strong></td>
+<td>Entraînement et conversion de fichiers</td>
+<td>Arrêté (Weights.gg fermé)</td>
+<td><a href="../replay/installation/">Installation</a> · <a href="../replay/usage/">Utilisation</a></td>
+</tr>
+<tr>
+<td><strong>AICoverGen</strong></td>
+<td>Pipeline RVC v2 pour reprises musicales (inférence uniquement, WebUI / CLI / Colab)</td>
+<td>Non maintenu</td>
+<td><a href="../aicovergen/installation/">Installation</a> · <a href="../aicovergen/usage/">Utilisation</a></td>
+</tr>
+<tr>
+<td><strong>RVC GUI</strong></td>
+<td>Conversion de fichiers sur bureau uniquement</td>
+<td>Archivé</td>
+<td><a href="../rvc-gui/file-conversion/">Conversion de fichiers</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<span id="voice-changers-realtime" class="docs-anchor"></span><h2 id="changeurs-de-voix-temps-réel">Changeurs de voix (temps réel)</h2>
+<retype-table copy-text="| Application | Moteur / usage | Matériel / notes | Guides |
+| --- | --- | --- | --- |
+| **Vonovox** | RVC v2 temps réel (recommandé sur Windows NVIDIA) | NVIDIA CUDA | [Installation](voice-changers/vonovox/installation.md) · [Audio en direct](voice-changers/vonovox/live-audio.md) · [Performances](voice-changers/vonovox/advanced-performance-optimization.md) |
+| **w-okada VCClient** | RVC temps réel multiplateforme (client/serveur) | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/okada/installation.md) · [Audio en direct](voice-changers/okada/live-audio.md) |
+| **Okada TG Developed Fork (TGR)** | Fork communautaire actif pour RVC en temps réel | NVIDIA CUDA, DirectML (AMD/Intel), CPU, Linux, macOS exp. | [Installation](voice-changers/tgr/installation.md) · [Audio en direct](voice-changers/tgr/live-audio.md) · [Cloud](voice-changers/tgr/cloud.md) |
+| **Deiteris w-okada Fork** | Fork w-okada en temps réel | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/deiteris/installation.md) · [Audio en direct](voice-changers/deiteris/live-audio.md) · [Cloud](voice-changers/deiteris/cloud.md) |
+| **RVC Blue** | Application desktop Windows temps réel et fichiers en temps réel | NVIDIA CUDA 12.8 / 11.8 | [Installation](voice-changers/rvc-blue/installation.md) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Application</th>
+<th>Moteur / usage</th>
+<th>Matériel / notes</th>
+<th>Guides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vonovox</strong></td>
+<td>RVC v2 temps réel (recommandé sur Windows NVIDIA)</td>
+<td>NVIDIA CUDA</td>
+<td><a href="../vonovox/installation/">Installation</a> · <a href="../vonovox/live-audio/">Audio en direct</a> · <a href="../vonovox/advanced-performance-optimization/">Performances</a></td>
+</tr>
+<tr>
+<td><strong>w-okada VCClient</strong></td>
+<td>RVC temps réel multiplateforme (client/serveur)</td>
+<td>NVIDIA CUDA, DirectML, Apple MPS, CPU</td>
+<td><a href="../okada/installation/">Installation</a> · <a href="../okada/live-audio/">Audio en direct</a></td>
+</tr>
+<tr>
+<td><strong>Okada TG Developed Fork (TGR)</strong></td>
+<td>Fork communautaire actif pour RVC en temps réel</td>
+<td>NVIDIA CUDA, DirectML (AMD/Intel), CPU, Linux, macOS exp.</td>
+<td><a href="../tgr/installation/">Installation</a> · <a href="../tgr/live-audio/">Audio en direct</a> · <a href="../tgr/cloud/">Cloud</a></td>
+</tr>
+<tr>
+<td><strong>Deiteris w-okada Fork</strong></td>
+<td>Fork w-okada en temps réel</td>
+<td>NVIDIA CUDA, DirectML, Apple MPS, CPU</td>
+<td><a href="../deiteris/installation/">Installation</a> · <a href="../deiteris/live-audio/">Audio en direct</a> · <a href="../deiteris/cloud/">Cloud</a></td>
+</tr>
+<tr>
+<td><strong>RVC Blue</strong></td>
+<td>Application desktop Windows temps réel et fichiers en temps réel</td>
+<td>NVIDIA CUDA 12.8 / 11.8</td>
+<td><a href="../rvc-blue/installation/">Installation</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Applications RVC multimodes avec modes en direct intégrés : <strong>Applio</strong> (<a href="../applio/realtime/">Temps réel</a>), <strong>Redpanda-vc</strong> (<a href="../redpanda/live-audio/">Modes en direct</a>) et <strong>RVC WebUI (Mainline)</strong> (<a href="../mainline/realtime/">Temps réel</a>).</p>
+<span id="non-rvc-realtime-voice-changers" class="docs-anchor"></span><h3 id="changeurs-de-voix-non-rvc-en-temps-réel">Changeurs de voix Non-RVC en temps réel</h3>
+<retype-table copy-text="| Application | Fonctionnalités | Guides |
+| --- | --- | --- |
+| **Causal Voice Changer** | Changeur de voix Non-RVC temps réel à faible latence (modèles `.cvc`) | [Présentation](../non-rvc/voice-changers/causal-voice-changer/overview.md) · [Installation](../non-rvc/voice-changers/causal-voice-changer/installation.md) · [Temps réel](../non-rvc/voice-changers/causal-voice-changer/realtime.md) |
+| **YuneVoix** | Changeur de voix Non-RVC temps réel, reprises et karaoké | [Présentation](../non-rvc/voice-changers/yunevoix/overview.md) · [Installation](../non-rvc/voice-changers/yunevoix/installation.md) · [Utilisation](../non-rvc/voice-changers/yunevoix/usage.md) |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Application</th>
+<th>Fonctionnalités</th>
+<th>Guides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Causal Voice Changer</strong></td>
+<td>Changeur de voix Non-RVC temps réel à faible latence (modèles <code translate="no" v-pre>.cvc</code>)</td>
+<td><a href="../../non-rvc/causal-voice-changer/overview/">Présentation</a> · <a href="../../non-rvc/causal-voice-changer/installation/">Installation</a> · <a href="../../non-rvc/causal-voice-changer/realtime/">Temps réel</a></td>
+</tr>
+<tr>
+<td><strong>YuneVoix</strong></td>
+<td>Changeur de voix Non-RVC temps réel, reprises et karaoké</td>
+<td><a href="../../non-rvc/yunevoix/overview/">Présentation</a> · <a href="../../non-rvc/yunevoix/installation/">Installation</a> · <a href="../../non-rvc/yunevoix/usage/">Utilisation</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><a href="../../tools/">Comparer les applications</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -440,7 +450,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-25T01:08:13.000Z">25/11/2026 · 02:08</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Dernière modification <time datetime="2026-11-25T01:17:15.000Z">25/11/2026 · 02:17</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

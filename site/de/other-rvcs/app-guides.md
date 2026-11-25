@@ -43,45 +43,48 @@ Wähle Applio für Sprachsynthese und Modellverwaltung. Redpanda VC unterstützt
 
 Vergleiche Dateiausgaben mit derselben Quelle und Lautstärke. Zeichne für Livebetrieb einen Test in der Ziel-App auf. Tritt der Fehler nur dort auf, prüfe das virtuelle Kabel, das ausgewählte Mikrofon und das Monitoring.
 
-## Weitere Apps und Kompatibilität
+## Training und Inferenz
 
-| App | Training | Inferenz (Dateien) | Realtime | Projektlinks |
-| --- | --- | --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Ja | Ja | Nein | [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC) |
-| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/training/mainline/installation.md) | Ja | Ja | Ja · Separater Launcher | [GitHub](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) · [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI) |
-| [Applio](../other-rvcs/training/applio/installation.md) | Ja | Ja | Ja | [GitHub](https://github.com/IAHispano/Applio) · [Hugging Face](https://huggingface.co/IAHispano/Applio) |
-| [Redpanda-vc](../other-rvcs/training/redpanda/first-run.md) | Ja | Ja | Ja | [GitHub](https://github.com/redpanda343/Redpanda-vc) · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
-| [RVC GUI](../other-rvcs/voice-changers/rvc-gui/file-conversion.md) | Nein | Ja | Nein | [GitHub](https://github.com/Tiger14n/RVC-GUI) |
-| [Vonovox](../other-rvcs/voice-changers/vonovox/installation.md) | Nein | Nein | Ja | [GitHub](https://github.com/dr87/Vonovox) · [Hugging Face](https://huggingface.co/dr87/vonovox) |
-| [w-okada VCClient](../other-rvcs/voice-changers/okada/installation.md) | Nein | Nein | Ja | [GitHub](https://github.com/w-okada/voice-changer) · [Hugging Face](https://huggingface.co/wok000/vcclient000) |
-| [Okada TG Developed Fork](../other-rvcs/voice-changers/tgr/installation.md) | Nein | Nein | Ja | [GitHub](https://github.com/tg-develop/voice-changer) |
-| [RVC Blue](../other-rvcs/voice-changers/rvc-blue/installation.md) | Nein | Dateieingabe in Echtzeit | Ja | [GitHub](https://github.com/niel-blue/RVC-Realtime-GUI) · [Hugging Face](https://huggingface.co/niel-blue/RVC-Realtime-GUI) |
-| [Replay](../other-rvcs/training/replay/installation.md) | Ja | Ja · ältere Version | Nein | [Offizielle Website](https://www.weights.com/replay) · [Internet Archive](https://archive.org/details/replay-8.7.0-installers) |
+| Anwendung | Funktionen | Hardware / Hinweise | Anleitungen |
+| --- | --- | --- | --- |
+| **Ilaria RVC** | Training, Einzel-/Stapelinferenz, TTS, Audio-Analyzer | NVIDIA CUDA (Windows) / Kaggle | [Installation](../ilaria-rvc/install/installation.md) · [Inferenz](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Training, Datei-Inferenz, TTS, Modellbibliothek, Echtzeit | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installation](training/applio/installation.md) · [Inferenz](training/applio/inference.md) · [Training](training/applio/training.md) |
+| **RVC WebUI (Mainline - Original RVC)** | Offizielles Training & Datei-Inferenz (+ separater Live-Starter) | NVIDIA CUDA, CPU / DirectML | [Installation](training/mainline/installation.md) · [Inferenz](training/mainline/inference.md) · [Training](training/mainline/training.md) |
+| **Redpanda-vc** | RVC + Causal Voice Changer Training, Datei-Inferenz & Echtzeit | NVIDIA CUDA / CPU (Desktop & WebUI) | [Erster Start](training/redpanda/first-run.md) · [Inferenz](training/redpanda/inference.md) · [Training](training/redpanda/training.md) |
+| **RVC Model Merger** | Werkzeug zum Zusammenführen von `.pth`-Modellen | Offline-Werkzeug | [Nutzung](rvc-model-merger/usage.md) |
 
- | App | Verwendungszweck | Hardware- und Build-Hinweise |
-| --- | --- | --- |
-| [Ilaria RVC](../ilaria-rvc/install/installation.md) | Dateikonvertierung, TTS, Training und Audioanalyse | Die aktuelle Windows-Distribution ist nur NVIDIA. |
-| [RVC WebUI (Mainline - Original RVC)](../other-rvcs/training/mainline/installation.md) | Upstream-Training und Inferenz mit einem separaten Echtzeit-Launcher | NVIDIA CUDA unter Windows und Ubuntu. Das Upstream-CPU-Setup deckt AMD- und Intel-Systeme ab, mit möglicher DirectML-Nutzung unter Windows. |
-| [Applio](../other-rvcs/training/applio/installation.md) | Dateikonvertierung, Schulung und Echtzeit in einer App | Desktop-Dokumentation listet NVIDIA CUDA, unterstützte AMD-Setups und Apple MPS auf. Die Verfügbarkeit hängt von der Edition und der Engine ab. |
-| [Redpanda-vc](../other-rvcs/training/redpanda/first-run.md) | RVC + Causal Voice Changer · Tauri / WebUI | NVIDIA CUDA / CPU · [Vorkompilierte Version für Windows x64](https://github.com/redpanda343/Redpanda-vc/releases/tag/release) |
-| [RVC GUI](../other-rvcs/voice-changers/rvc-gui/file-conversion.md) | Einfache lokale Dateikonvertierung in der Legacy-Desktop-Oberfläche | Archiviert. Das Projekt dokumentiert Windows NVIDIA CUDA und einen historischen Workaround von Apple Silicon. |
-| [Vonovox](../other-rvcs/voice-changers/vonovox/installation.md) | Empfohlen für Live-RVC v2 unter Windows mit NVIDIA | Nur NVIDIA CUDA. Passen Sie das Hugging Face-Paket an Ihre GPU-Generation an. |
-| [w-okada VCClient](../other-rvcs/voice-changers/okada/installation.md) | Live-Konvertierung über mehrere Betriebssysteme hinweg | Windows CUDA und Standardpakete, einschließlich DirectML oder CPU, sofern unterstützt. Separate Setup-Pfade für Apple Silicon und Linux. |
-| [Okada TG Developed Fork](../other-rvcs/voice-changers/tgr/installation.md) | Live RVC mit dokumentierten Optionen für AMD-, Intel- und CPU-Benutzer | Windows CUDA oder DirectML. Für Linux- und experimentelle macOS-Builds gibt es separate Anweisungen. |
-| [RVC Blue](../other-rvcs/voice-changers/rvc-blue/installation.md) | Echtzeit-Stimmkonvertierung unter Windows | NVIDIA CUDA 12.8 / 11.8 (Windows) |
-| [Replay](../other-rvcs/training/replay/installation.md) | Modelltraining und Dateikonvertierung · nicht empfohlen | [Archivierte Installationsdateien](https://archive.org/details/replay-8.7.0-installers) |
-
-- [RVC WebUI (Mainline - Original RVC)](training/mainline/installation.md) · [w-okada VCClient](voice-changers/okada/installation.md) · [RVC GUI](voice-changers/rvc-gui/file-conversion.md) · [RVC Blue](voice-changers/rvc-blue/installation.md)
-- [Alle Apps vergleichen](../reference/tools.md)
-
-## Weitere RVC-Werkzeuge
+### Veraltet / Nicht empfohlen
 
 !!!warning Veraltete Software · Nicht empfohlen
-Diese Projekte sind veraltet und werden offenbar nicht mehr aktiv gepflegt. rvc-cli ist archiviert, und die Hauptbranches von RVC Studio und Mangio RVC Fork sind seit Jahren inaktiv. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation eine aktiv gepflegte Anwendung.
+Diese Projekte sind veraltet, archiviert oder werden nicht mehr aktiv gepflegt. Die Anleitungen bleiben für bestehende Projekte verfügbar. Wähle für eine Neuinstallation oben eine aktiv gepflegte Anwendung.
 !!!
 
-- [rvc-cli](training/rvc-cli/installation.md)
-- [RVC Studio](training/rvc-studio/installation.md)
-- [Mangio RVC Fork](training/mangio/installation.md)
-- [Replay](training/replay/installation.md)
-- [AICoverGen](training/aicovergen/installation.md)
+| Anwendung | Funktionen | Status / Hinweise | Anleitungen |
+| --- | --- | --- | --- |
+| **rvc-cli** | Datei-/Stapelinferenz & Training (CLI) | Archiviert | [Installation](training/rvc-cli/installation.md) · [Nutzung](training/rvc-cli/usage.md) |
+| **RVC Studio** | Training & Datei-Inferenz (WebUI) | Inaktiv | [Installation](training/rvc-studio/installation.md) · [Nutzung](training/rvc-studio/usage.md) |
+| **Mangio RVC Fork** | Training & Datei-Inferenz | Inaktiv | [Installation](training/mangio/installation.md) · [Nutzung](training/mangio/usage.md) |
+| **Replay** | Training & Dateikonvertierung | Eingestellt (Weights.gg geschlossen) | [Installation](training/replay/installation.md) · [Nutzung](training/replay/usage.md) |
+| **AICoverGen** | RVC-v2-Pipeline für Song-Cover (nur Inferenz, WebUI / CLI / Colab) | Nicht mehr gepflegt | [Installation](training/aicovergen/installation.md) · [Nutzung](training/aicovergen/usage.md) |
+| **RVC GUI** | Nur Desktop-Dateikonvertierung | Archiviert | [Dateikonvertierung](voice-changers/rvc-gui/file-conversion.md) |
+
+## Stimmwandler (Echtzeit)
+
+| Anwendung | Engine / Schwerpunkt | Hardware / Hinweise | Anleitungen |
+| --- | --- | --- | --- |
+| **Vonovox** | Echtzeit-RVC v2 (empfohlen unter Windows mit NVIDIA) | NVIDIA CUDA | [Installation](voice-changers/vonovox/installation.md) · [Live-Audio](voice-changers/vonovox/live-audio.md) · [Leistung](voice-changers/vonovox/advanced-performance-optimization.md) |
+| **w-okada VCClient** | Plattformübergreifender Echtzeit-RVC-Client/Server | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/okada/installation.md) · [Live-Audio](voice-changers/okada/live-audio.md) |
+| **Okada TG Developed Fork (TGR)** | Aktiver Community-Fork für Echtzeit-RVC | NVIDIA CUDA, DirectML (AMD/Intel), CPU, Linux, exp. macOS | [Installation](voice-changers/tgr/installation.md) · [Live-Audio](voice-changers/tgr/live-audio.md) · [Cloud](voice-changers/tgr/cloud.md) |
+| **Deiteris w-okada Fork** | Echtzeit-Fork von w-okada | NVIDIA CUDA, DirectML, Apple MPS, CPU | [Installation](voice-changers/deiteris/installation.md) · [Live-Audio](voice-changers/deiteris/live-audio.md) · [Cloud](voice-changers/deiteris/cloud.md) |
+| **RVC Blue** | Windows-Desktop-Echtzeit & Echtzeit-Dateieingabe | NVIDIA CUDA 12.8 / 11.8 | [Installation](voice-changers/rvc-blue/installation.md) |
+
+RVC-Anwendungen mit integriertem Echtzeitmodus: **Applio** ([Echtzeit](training/applio/realtime.md)), **Redpanda-vc** ([Live-Modi](training/redpanda/live-audio.md)) und **RVC WebUI (Mainline)** ([Echtzeit](training/mainline/realtime.md)).
+
+### Non-RVC Echtzeit-Stimmwandler
+
+| Anwendung | Funktionen | Anleitungen |
+| --- | --- | --- |
+| **Causal Voice Changer** | Non-RVC-Echtzeit-Stimmwandler mit niedriger Latenz (`.cvc`-Modelle) | [Überblick](../non-rvc/voice-changers/causal-voice-changer/overview.md) · [Installation](../non-rvc/voice-changers/causal-voice-changer/installation.md) · [Echtzeit](../non-rvc/voice-changers/causal-voice-changer/realtime.md) |
+| **YuneVoix** | Non-RVC-Echtzeit-Stimmwandler, Song-Cover & Karaoke | [Überblick](../non-rvc/voice-changers/yunevoix/overview.md) · [Installation](../non-rvc/voice-changers/yunevoix/installation.md) · [Nutzung](../non-rvc/voice-changers/yunevoix/usage.md) |
+
+[Alle Apps vergleichen](../reference/tools.md)
