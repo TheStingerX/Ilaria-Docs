@@ -74,12 +74,12 @@ Use a navegação para encontrar guias de configuração, conversão, treinament
 
 ## A documentação em números
 
-- **Páginas no total:** **118** páginas (`117` guias + Início)
-- **Total de páginas em todos os 6 idiomas (`en`, `it`, `es`, `fr`, `de`, `pt`):** **708** páginas (`118 x 6`)
+- **Páginas no total:** **122** páginas (`121` guias + Início)
+- **Total de páginas em todos os 6 idiomas (`en`, `it`, `es`, `fr`, `de`, `pt`):** **740** páginas (`en: 126`, `it: 126`, `es: 122`, `fr: 122`, `de: 122`, `pt: 122`)
 
 ## Algumas curiosidades sobre o site e a Ilaria
 
 - **Nascido da prática real:** A Ilaria (`TheStingerX` / `thestingerx` no Discord) escreveu e expandiu estes guias diretamente enquanto desenvolvia o **Ilaria RVC**, treinava modelos de voz (como *Itaila*) e testava configurações reais no Windows, Kaggle, Google Colab e Lightning AI.
-- **Da `1.1 Beta` à `2.4.7`:** O Ilaria RVC começou como uma interface personalizada para Windows e evoluiu para suportar **NVIDIA RTX série 50 (Blackwell)** com CUDA 12.8, **treino nativo em BF16**, **Kokoro v1.0 TTS**, conversão **Safetensors ↔ PTH** e catálogos integrados.
-- **Mais do que um único app:** Com o tempo, o **Ilaria Docs** cresceu para cobrir **11 apps e forks RVC** (Ilaria RVC, Applio, Mainline, Okada, TGR, Deiteris, Vonovox, RedPanda, RVC Blue, RVC-GUI e RVC Model Merger), além de ferramentas **Non-RVC** como **YuneVoix**, **Causal Voice Changer**, **UVR5** e **MVSep**.
-- **Sincronizado em 6 idiomas:** Cada página do site é mantida 1:1 em inglês, italiano, espanhol, francês, alemão e português.
+- **Da `1.1 Beta` à `2.5.1`:** O Ilaria RVC começou como uma interface personalizada para Windows e evoluiu para suportar **NVIDIA RTX série 50 (Blackwell)** com CUDA 12.8, **treino nativo em BF16**, **Kokoro v1.0 TTS**, conversão **Safetensors ↔ PTH**, **ONNX ↔ PTH** e catálogos integrados.
+- **Mais do que uma aplicação:** O Ilaria Docs abrange **16 aplicações e forks de RVC**, incluindo AICoverMaker, AICoverGen e Replay, além do RVC Model Merger e de ferramentas como So-VITS-SVC, GPT-SoVITS, UVR5 e MVSEP.
+- **Disponível em 6 idiomas:** Inglês e italiano têm o catálogo completo. A maioria dos guias também está disponível em espanhol, francês, alemão e português. O seletor mostra os idiomas disponíveis para cada página.
