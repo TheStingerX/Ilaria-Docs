@@ -194,11 +194,6 @@
 - [Changelog do Causal Voice Changer](https://docs.ilariarvc.shop/pt/non-rvc/voice-changers/causal-voice-changer/changelog.md): Histórico completo de versões e changelog do Causal Voice Changer (CVC) da v0.1.0 à v0.3.3.1, com suporte a GPUs NVIDIA antigas, base 100 Hz v4 e melhorias em tempo real.
 - [GPUs compatíveis com o Causal Voice Changer](https://docs.ilariarvc.shop/pt/non-rvc/voice-changers/causal-voice-changer/gpu-compatibility.md): Lista completa de placas de vídeo NVIDIA, AMD Radeon e configurações CPU compatíveis com o Causal Voice Changer (CVC), incluindo suporte v0.3.3.1 para GTX 900/10.
 
-#### So-VITS-SVC
-
-- [So-VITS-SVC · Instalação](https://docs.ilariarvc.shop/pt/non-rvc/voice-changers/so-vits-svc/installation.md): O So‑VITS‑SVC 4.1 Stable converte vozes cantadas. O repositório está arquivado desde novembro de 2023. Esta versão serve para modelos existentes e projetos antigos.
-- [So-VITS-SVC · Utilização e treino](https://docs.ilariarvc.shop/pt/non-rvc/voice-changers/so-vits-svc/usage.md): Instalação · GitHub · 4.1 Stable
-
 ### Audio Separation Tools
 
 
@@ -229,3 +224,8 @@
 - [Restaurar fala com Sidon](https://docs.ilariarvc.shop/pt/non-rvc/other-audio-stuff/ilaria-audio-upscaler/sidon.md): Escolhe Sidon, descarrega Sidon INT8, adiciona um excerto com ruído ou reverberação, seleciona WAV (PCM) e carrega em Enhance audio. Escuta se as pausas ficam mais limpas e as palavras mais claras.
 - [Expandir a banda da fala com AP-BWE](https://docs.ilariarvc.shop/pt/non-rvc/other-audio-stuff/ilaria-audio-upscaler/ap-bwe.md): Escolhe AP-BWE e ajusta o primeiro número do perfil à banda útil da fala. Um sinal a 8 kHz contém frequências até cerca de 4 kHz. Uma chamada guardada num WAV a 48 kHz pode manter essa banda estreita.
 - [Pré-escuta, exportação e resolução de problemas](https://docs.ilariarvc.shop/pt/non-rvc/other-audio-stuff/ilaria-audio-upscaler/export.md): Adiciona um ou mais ficheiros, escolhe o formato e carrega em Enhance audio. Compara o original e o resultado a 1×. Speed só altera a reprodução. Seleciona o resultado e carrega em Save result.
+
+#### So-VITS-SVC
+
+- [So-VITS-SVC · Instalação](https://docs.ilariarvc.shop/pt/non-rvc/other-audio-stuff/so-vits-svc/installation.md): O So‑VITS‑SVC 4.1 Stable converte vozes cantadas. O repositório está arquivado desde novembro de 2023. Esta versão serve para modelos existentes e projetos antigos.
+- [So-VITS-SVC · Utilização e treino](https://docs.ilariarvc.shop/pt/non-rvc/other-audio-stuff/so-vits-svc/usage.md): Instalação · GitHub · 4.1 Stable
