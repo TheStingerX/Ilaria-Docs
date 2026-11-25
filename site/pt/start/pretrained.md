@@ -140,10 +140,9 @@ Se qualquer uma destas definições não coincidir, o treino falha imediatamente
 
 | Modelo | Frequências de amostragem | Vocoder | Embedder | Fonte |
 | --- | --- | --- | --- | --- |
-| **7subpretrain** | `40 kHz` | Por confirmar | Por confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
-| **Genshin EN Pretrain** | `32 kHz` | Por confirmar | Por confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) |
-| **Genshin EN Pretrain** | `40 kHz` | Por confirmar | Por confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
-| **SingingPretrain** | Por confirmar | Por confirmar | Por confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
+| **7subpretrain** | `40 kHz` | Por confirmar | Por confirmar | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
+| **Genshin EN Pretrain** | `32 kHz`, `40 kHz` | Por confirmar | Por confirmar | [Hugging Face · 32 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) · [Hugging Face · 40 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
+| **SingingPretrain** | Por confirmar | Por confirmar | Por confirmar | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
 | **DeepFake Audio Rangers Pretrain** | Por confirmar | Por confirmar | Por confirmar | [Hugging Face](https://huggingface.co/DeepFake-Audio-Rangers/rvc_pretrain) |
 | **RVC v2 Pretrain Voice** | Por confirmar | Por confirmar | Por confirmar | [Hugging Face](https://huggingface.co/Coolwowsocoolwow/RVC_V2_Pretrain_Voice) |
 | **RingFormer v2 · failed** | `40 kHz` | `RingFormer v2` | `SPIN v2` | [Hugging Face](https://huggingface.co/its5Q/rvc-ringformer-v2-pretrain/tree/main/failed) |

@@ -140,10 +140,9 @@ Se anche uno solo di questi parametri non coincide, il training si bloccherà su
 
 | Modello | Frequenze di campionamento | Vocoder | Embedder | Fonte |
 | --- | --- | --- | --- | --- |
-| **7subpretrain** | `40 kHz` | Non confermato | Non confermato | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
-| **Genshin EN Pretrain** | `32 kHz` | Non confermato | Non confermato | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) |
-| **Genshin EN Pretrain** | `40 kHz` | Non confermato | Non confermato | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
-| **SingingPretrain** | Non confermato | Non confermato | Non confermato | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
+| **7subpretrain** | `40 kHz` | Non confermato | Non confermato | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
+| **Genshin EN Pretrain** | `32 kHz`, `40 kHz` | Non confermato | Non confermato | [Hugging Face · 32 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) · [Hugging Face · 40 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
+| **SingingPretrain** | Non confermato | Non confermato | Non confermato | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
 | **DeepFake Audio Rangers Pretrain** | Non confermato | Non confermato | Non confermato | [Hugging Face](https://huggingface.co/DeepFake-Audio-Rangers/rvc_pretrain) |
 | **RVC v2 Pretrain Voice** | Non confermato | Non confermato | Non confermato | [Hugging Face](https://huggingface.co/Coolwowsocoolwow/RVC_V2_Pretrain_Voice) |
 | **RingFormer v2 · failed** | `40 kHz` | `RingFormer v2` | `SPIN v2` | [Hugging Face](https://huggingface.co/its5Q/rvc-ringformer-v2-pretrain/tree/main/failed) |

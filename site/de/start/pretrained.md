@@ -140,10 +140,9 @@ Stimmt auch nur eine dieser Einstellungen nicht überein, bricht das Training so
 
 | Modell | Abtastraten | Vocoder | Embedder | Quelle |
 | --- | --- | --- | --- | --- |
-| **7subpretrain** | `40 kHz` | Nicht bestätigt | Nicht bestätigt | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
-| **Genshin EN Pretrain** | `32 kHz` | Nicht bestätigt | Nicht bestätigt | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) |
-| **Genshin EN Pretrain** | `40 kHz` | Nicht bestätigt | Nicht bestätigt | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
-| **SingingPretrain** | Nicht bestätigt | Nicht bestätigt | Nicht bestätigt | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
+| **7subpretrain** | `40 kHz` | Nicht bestätigt | Nicht bestätigt | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
+| **Genshin EN Pretrain** | `32 kHz`, `40 kHz` | Nicht bestätigt | Nicht bestätigt | [Hugging Face · 32 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) · [Hugging Face · 40 kHz ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
+| **SingingPretrain** | Nicht bestätigt | Nicht bestätigt | Nicht bestätigt | [Hugging Face · ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
 | **DeepFake Audio Rangers Pretrain** | Nicht bestätigt | Nicht bestätigt | Nicht bestätigt | [Hugging Face](https://huggingface.co/DeepFake-Audio-Rangers/rvc_pretrain) |
 | **RVC v2 Pretrain Voice** | Nicht bestätigt | Nicht bestätigt | Nicht bestätigt | [Hugging Face](https://huggingface.co/Coolwowsocoolwow/RVC_V2_Pretrain_Voice) |
 | **RingFormer v2 · failed** | `40 kHz` | `RingFormer v2` | `SPIN v2` | [Hugging Face](https://huggingface.co/its5Q/rvc-ringformer-v2-pretrain/tree/main/failed) |
