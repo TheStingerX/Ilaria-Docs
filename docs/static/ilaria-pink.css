@@ -128,15 +128,23 @@
   margin-block-start: .25rem;
 }
 
-/* Highlight only the first active section in the right-hand CONTENTS sidebar. */
-li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active {
+/* Single-active CONTENTS highlight controlled by /static/toc-active.js */
+html.docs-toc-managed .toc-link.text-toc-text-active:not(.docs-toc-current) {
   color: var(--toc-text);
 }
 
-li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active:hover {
+html.docs-toc-managed .toc-link.text-toc-text-active:not(.docs-toc-current):hover {
   color: var(--toc-text-hover);
 }
 
-li:has(> .toc-link.text-toc-text-active) ~ li > .toc-link.text-toc-text-active .bg-toc-border-active {
+html.docs-toc-managed .toc-link.text-toc-text-active:not(.docs-toc-current) .bg-toc-border-active {
   background-color: transparent;
+}
+
+html.docs-toc-managed .toc-link.docs-toc-current {
+  color: var(--toc-text-active);
+}
+
+html.docs-toc-managed .toc-link.docs-toc-current > div {
+  background-color: var(--toc-border-active);
 }
