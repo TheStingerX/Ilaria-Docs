@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848941557673">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848942780893">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="GPT-SoVITS">
-    <meta name="description" content="GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model.">
+    <meta name="description" content="GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits/">
@@ -35,24 +35,25 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848941557673" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848942780893" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848941557673" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848942780893" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848941557673" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848942780893" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848942780893" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model.">
+    <meta property="og:description" content="GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
-    <meta name="twitter:description" content="GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model.">
+    <meta name="twitter:description" content="GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits/">
@@ -171,26 +172,129 @@
 
                 <!-- Page content  -->
 <h1 id="gpt-sovits">GPT-SoVITS</h1>
-<h2 id="choose-a-workflow">Choose a workflow</h2>
-<p>GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model. Use a voice you have permission to reproduce.</p>
-<h2 id="install-and-launch">Install and launch</h2>
+<h2 id="1-choose-a-workflow">1. Choose a workflow</h2>
+<p>GPT-SoVITS turns written text into speech using a voice reference. Start with <strong>zero-shot inference</strong>: provide a reference recording, its transcript and the words to synthesize. Once this works, try <strong>fine-tuning</strong> if you need a more consistent voice across scripts. Fine-tuning uses many labelled clips and produces GPT and SoVITS weights. Use recordings and voices you have permission to use.</p>
+<p>The GPT component predicts a speech representation from text. SoVITS produces the waveform. Both components must suit the chosen model family. The WebUI may offer several families such as v2, v3, v4, v2Pro and newer builds. Use the base files intended for the family you selected.</p>
+<h2 id="2-install-and-launch-the-webui">2. Install and launch the WebUI</h2>
+<h3 id="windows-integrated-package">Windows integrated package</h3>
 <ol>
-<li>Open the upstream repository and choose a release or its documented integrated Windows build. Extract the complete package into a writable folder and launch <code translate="no" v-pre>go-webui.bat</code>.</li>
-<li>For a source installation, use a separate environment and follow the project&#x27;s installer for your OS and device. The upstream Windows source installer offers CUDA or CPU options. Linux additionally documents ROCm and macOS has separate paths. Check the selected version and runtime together.</li>
-<li>Launch the WebUI, open the local address shown in the console and keep the backend running. If launch fails, inspect the first error for missing runtime, FFmpeg or base model files.</li>
+<li>Open the <a href="https://github.com/bilibili/GPT-SoVITS">official repository</a> and find the integrated Windows package linked in <strong>Installation</strong>. Match the package to your system and the model family you plan to use.</li>
+<li>Extract the entire archive to a writable folder such as <code translate="no" v-pre>C:\AI\GPT-SoVITS</code>. Start from the extracted folder. Keep the bundled runtime and model directories together.</li>
+<li>Start <code translate="no" v-pre>go-webui.bat</code> if supplied. Some packages provide a version-specific launcher. Follow the README for your package and use the script actually present in the extracted folder.</li>
+<li>Wait for a local address in the terminal and open it in the browser. Keep the terminal running with the WebUI. If the page fails to open, check whether the process is still running and whether the address matches this launch.</li>
 </ol>
-<h2 id="run-a-first-reference-based-inference">Run a first reference-based inference</h2>
+<h3 id="installation-from-source">Installation from source</h3>
+<p>Use an isolated environment. The upstream installer instructions use Conda with Python 3.10. On Windows the PowerShell installer documents CUDA or CPU choices. The Linux installer also documents ROCm, while macOS has separate MPS and CPU paths. Choose a backend supported by your OS, driver and build. CPU inference can take longer, so test a short line before committing to a long job.</p>
+<p>In a source checkout, once the dependencies and base assets have been installed, launch with <code translate="no" v-pre>python webui.py</code> from the project root. Check the upstream release instructions for FFmpeg and model assets. Manual installations place the base weights under <code translate="no" v-pre>GPT_SoVITS/pretrained_models</code>, preserving family subdirectories. Add ASR, separation or Chinese text processing assets only when required for the workflow and release you use.</p>
+<h4 id="example-source-setup-on-linux-with-cuda-128">Example source setup on Linux with CUDA 12.8</h4>
+<p>Run the following in the directory of the chosen source release. This example is for a compatible NVIDIA driver and the upstream installer that offers <code translate="no" v-pre>CU128</code>. For AMD or CPU, choose the backend documented for your build instead.</p>
+<div id="example-source-setup-on-linux-with-cuda-128-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">conda create -n GPTSoVits python=3.10
+conda activate GPTSoVits
+bash install.sh --device CU128 --source HF
+python webui.py</code></pre>
+</doc-codeblock></div>
+<h2 id="3-generate-your-first-sentence">3. Generate your first sentence</h2>
 <ol>
-<li>Choose one short, clean speech clip with one speaker and no music. Begin with a few seconds of steady speech, using the duration accepted by your selected model version.</li>
-<li>In inference, select the matching GPT and SoVITS weights for that version. Supply the reference audio, the exact reference transcript and its language.</li>
-<li>Type one short sentence and set the target text language. Use a language supported by the selected build. Examples in the project documentation include Chinese, Cantonese, English, Japanese and Korean.</li>
-<li>Generate and listen for missing words and unnatural pauses. Keep the same reference and weights while modifying punctuation or segmentation. Export the audio once a short test works.</li>
+<li>Open <strong>1C-inference</strong> in the main WebUI and launch the TTS inference interface. If you already trained custom weights, refresh the model list before opening the inference interface.</li>
+<li>Start with the base GPT and SoVITS weights for the same family. For a first test, avoid mixing weights from different releases or voices.</li>
+<li>Select a clean recording with one speaker, a complete phrase and no background music. The older interface described by AI Hub expects <strong>3–10 seconds</strong>. Use the duration shown by your installed interface if it differs.</li>
+<li>Enter the exact words spoken in the reference and choose their language. The reference transcript and the text you want to synthesize are separate fields.</li>
+<li>Enter a short target sentence, choose its language, and keep the remaining settings at their defaults. Check that the selected model supports that language. The upstream README lists Chinese, Cantonese, English, Japanese and Korean in its general feature overview.</li>
+<li>Start inference, listen and save the audio. Check the first and last words, pauses and pronunciation. If it sounds wrong, verify the transcript and language before adjusting advanced controls.</li>
 </ol>
-<h2 id="fine-tune-on-a-dataset">Fine-tune on a dataset</h2>
-<p>Prepare clean clips with accurate transcripts and label each sample&#x27;s language. The upstream annotation format is <code translate="no" v-pre>vocal_path|speaker_name|language|text</code>. Review transcripts produced by automatic recognition before training. In the training interface, prepare the dataset, train the SoVITS and GPT components using the chosen version, then select the resulting pair in inference. Compare it with the base configuration using held-out lines. Save the matching weights and record the app version and settings.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If the voice sounds unstable, first try a cleaner reference and verify its transcript and language. If a checkpoint cannot load, check the GPT and SoVITS pair and release compatibility. If long text drops words, test a shorter sentence and adjust where you split it. If GPU memory runs out during training, begin with a smaller batch using the controls available in your version.</p>
-<p><a href="https://github.com/RVC-Boss/GPT-SoVITS">Official repository and installers</a></p>
+<h3 id="keep-long-text-from-skipping-or-repeating">Keep long text from skipping or repeating</h3>
+<p>Divide the script at natural sentence or paragraph boundaries. Test one paragraph before generating the whole script. Keep the same reference, checkpoint pair and settings across sections. If the delivery is too flat or rushed, try a reference with the delivery you want and compare the same target sentence. When available, change controls such as speed or sampling one at a time.</p>
+<h2 id="4-prepare-a-dataset-for-fine-tuning">4. Prepare a dataset for fine-tuning</h2>
+<h3 id="select-and-slice-the-recordings">Select and slice the recordings</h3>
+<ol>
+<li>Start with clean speech from one speaker. Remove long silences, clipped sections, music, overlapping speakers and unusable takes. Keep a few separate sentences for testing.</li>
+<li>Create separate folders for originals, sliced clips and transcripts. Keep the originals so you can repeat the preparation.</li>
+<li>In the audio slicing tool, choose the source path and a different output directory. Slice a small sample first. Listen for words cut off at the beginning or end before processing the whole set.</li>
+<li>Keep phrases that can be transcribed accurately. Consistent recordings are a better starting point than a larger collection with background noise or mixed speakers.</li>
+</ol>
+<h3 id="transcribe-and-proofread">Transcribe and proofread</h3>
+<ol>
+<li>Open batch ASR and select the sliced audio folder as input. Choose a recognizer for the spoken language. Upstream documents Faster-Whisper for English or Japanese and a separate Chinese ASR path.</li>
+<li>Run recognition and locate the generated <code translate="no" v-pre>.list</code> file in the configured output directory. Check that each row points to an accessible clip.</li>
+<li>Open the labelling interface with that <code translate="no" v-pre>.list</code>. Play clips and correct the words, language and punctuation. Save the edits and reopen a sample to verify they persisted.</li>
+<li>If you create the list manually, use one line per clip with four fields separated by pipes. Use paths that exist on the machine running the WebUI.</li>
+</ol>
+<div id="transcribe-and-proofread-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">audio/clip01.wav|speaker01|en|This is the first recording.</code></pre>
+</doc-codeblock></div>
+<h2 id="5-format-the-dataset-and-train">5. Format the dataset and train</h2>
+<h3 id="format-the-dataset">Format the dataset</h3>
+<p>In <strong>1A-Dataset formatting</strong>, give the experiment a unique name and enter the corrected <code translate="no" v-pre>.list</code> path. Supply the sliced audio directory if the interface requests it. Select the model family before formatting. Run the formatting stages, or the one-click action if available. Check the log for failed clips and make sure the experiment directory contains output before starting training.</p>
+<h3 id="train-sovits-then-gpt">Train SoVITS, then GPT</h3>
+<ol>
+<li>Open <strong>1B-Fine-tuned training</strong> and confirm the experiment name, model family and base weights. Start SoVITS with the defaults for your build as a baseline.</li>
+<li>On one GPU, run the stages sequentially. Check that SoVITS saved a checkpoint before starting GPT. Use the same formatted experiment for both.</li>
+<li>Start GPT training and save intermediate checkpoints where the UI allows. The batch size governs how many examples are processed together and affects memory. The number of epochs governs how many passes the trainer makes through the data. If you run out of memory, try a smaller batch before changing several settings.</li>
+<li>Leave optional DPO disabled for the first run. Compare checkpoints on held-out sentences using the same reference and text. Listen for missing words, repeats, speaker consistency and natural pauses. Choose the pair that sounds best on those tests.</li>
+</ol>
+<h3 id="load-and-back-up-the-finished-voice">Load and back up the finished voice</h3>
+<p>Refresh model paths in inference and select your GPT checkpoint (usually <code translate="no" v-pre>.ckpt</code>) and its corresponding SoVITS weights (usually <code translate="no" v-pre>.pth</code>). Save both, along with the release name, experiment settings, corrected <code translate="no" v-pre>.list</code> and a short reference you can reuse. If you move training folders to another machine, update paths in the annotation list before formatting again.</p>
+<h2 id="6-troubleshooting">6. Troubleshooting</h2>
+<retype-table copy-text="| Symptom | First check | What to do |
+| --- | --- | --- |
+| Browser cannot connect | Backend process and console URL | Restart the supplied launcher and open the address printed by the current run. |
+| FFmpeg or base assets missing | First terminal error and chosen model family | Install the dependency documented for this release and keep the original folder structure. |
+| ASR output is empty | Slicer output and ASR language | Try one playable clip, then check that the batch path points to the sliced files. |
+| Formatting skips files | Paths and four fields in the `.list` | Correct missing paths and malformed annotations, then rerun formatting. |
+| Fine-tuned weights are absent | Checkpoint files and model dropdowns | Verify training saved both outputs, then refresh model paths. |
+| Words are missing or repeated | Reference transcript and target segmentation | Use a short target sentence, verify both languages and split long text. |
+| Training runs out of VRAM | Which stage failed and its batch size | Close competing GPU workloads, lower the batch and run the stages sequentially. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Symptom</th>
+<th>First check</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser cannot connect</td>
+<td>Backend process and console URL</td>
+<td>Restart the supplied launcher and open the address printed by the current run.</td>
+</tr>
+<tr>
+<td>FFmpeg or base assets missing</td>
+<td>First terminal error and chosen model family</td>
+<td>Install the dependency documented for this release and keep the original folder structure.</td>
+</tr>
+<tr>
+<td>ASR output is empty</td>
+<td>Slicer output and ASR language</td>
+<td>Try one playable clip, then check that the batch path points to the sliced files.</td>
+</tr>
+<tr>
+<td>Formatting skips files</td>
+<td>Paths and four fields in the <code translate="no" v-pre>.list</code></td>
+<td>Correct missing paths and malformed annotations, then rerun formatting.</td>
+</tr>
+<tr>
+<td>Fine-tuned weights are absent</td>
+<td>Checkpoint files and model dropdowns</td>
+<td>Verify training saved both outputs, then refresh model paths.</td>
+</tr>
+<tr>
+<td>Words are missing or repeated</td>
+<td>Reference transcript and target segmentation</td>
+<td>Use a short target sentence, verify both languages and split long text.</td>
+</tr>
+<tr>
+<td>Training runs out of VRAM</td>
+<td>Which stage failed and its batch size</td>
+<td>Close competing GPU workloads, lower the batch and run the stages sequentially.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><a href="https://github.com/bilibili/GPT-SoVITS">GPT-SoVITS repository and releases</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -225,7 +329,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T17:00:29.000Z">25/11/2026 · 18:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-25T17:18:40.000Z">25/11/2026 · 18:18</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -258,6 +362,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "GPT-SoVITS", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/tts/gpt-sovits.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "GPT-SoVITS", level: 3, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/tts/gpt-sovits.md" }</script>
 </body>
 </html>

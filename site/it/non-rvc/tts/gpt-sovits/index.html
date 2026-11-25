@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848941569467">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848942792456">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="GPT-SoVITS">
-    <meta name="description" content="GPT-SoVITS genera parlato a partire da un testo e usa una registrazione come riferimento vocale. La sintesi zero-shot usa il riferimento con un modello esistente.">
+    <meta name="description" content="GPT-SoVITS legge un testo usando una registrazione come riferimento vocale. Inizia dalla sintesi zero-shot. Ti bastano un breve audio di riferimento, la sua trascrizione e il testo che vuoi far leggere.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/non-rvc/tts/gpt-sovits/">
@@ -36,24 +36,25 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.848941569467" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848942792456" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848941569467" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848942792456" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848941569467" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848942792456" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.848942792456" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="GPT-SoVITS genera parlato a partire da un testo e usa una registrazione come riferimento vocale. La sintesi zero-shot usa il riferimento con un modello esistente.">
+    <meta property="og:description" content="GPT-SoVITS legge un testo usando una registrazione come riferimento vocale. Inizia dalla sintesi zero-shot. Ti bastano un breve audio di riferimento, la sua trascrizione e il testo che vuoi far leggere.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="GPT-SoVITS genera parlato a partire da un testo e usa una registrazione come riferimento vocale. La sintesi zero-shot usa il riferimento con un modello esistente.">
+    <meta name="twitter:description" content="GPT-SoVITS legge un testo usando una registrazione come riferimento vocale. Inizia dalla sintesi zero-shot. Ti bastano un breve audio di riferimento, la sua trascrizione e il testo che vuoi far leggere.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits/">
@@ -172,26 +173,129 @@
 
                 <!-- Page content  -->
 <h1 id="gpt-sovits">GPT-SoVITS</h1>
-<span id="choose-a-workflow" class="docs-anchor"></span><h2 id="scegli-il-flusso-di-lavoro">Scegli il flusso di lavoro</h2>
-<p>GPT-SoVITS genera parlato a partire da un testo e usa una registrazione come riferimento vocale. La sintesi <strong>zero-shot</strong> usa il riferimento con un modello esistente. Il <strong>fine-tuning</strong> adatta il modello con una raccolta di clip e trascrizioni. Usa una voce che hai il permesso di riprodurre.</p>
-<span id="install-and-launch" class="docs-anchor"></span><h2 id="installa-e-apri-la-webui">Installa e apri la WebUI</h2>
+<span id="1-choose-a-workflow" class="docs-anchor"></span><h2 id="1-scegli-da-dove-partire">1. Scegli da dove partire</h2>
+<p>GPT-SoVITS legge un testo usando una registrazione come riferimento vocale. Inizia dalla <strong>sintesi zero-shot</strong>. Ti bastano un breve audio di riferimento, la sua trascrizione e il testo che vuoi far leggere. Quando questa prova funziona, passa al <strong>fine-tuning</strong> se ti serve una voce più coerente fra testi diversi. Il fine-tuning parte da una raccolta di clip trascritte e produce due serie di pesi, GPT e SoVITS. Usa registrazioni e voci per cui hai il permesso.</p>
+<p>Il componente GPT predice una rappresentazione del parlato a partire dal testo. SoVITS la usa per produrre l’audio. Entrambi devono essere compatibili con la famiglia selezionata. A seconda della release, la WebUI può offrire v2, v3, v4, v2Pro o versioni più recenti. Usa i file di base richiesti dalla famiglia che scegli.</p>
+<span id="2-install-and-launch-the-webui" class="docs-anchor"></span><h2 id="2-installa-e-avvia-la-webui">2. Installa e avvia la WebUI</h2>
+<span id="windows-integrated-package" class="docs-anchor"></span><h3 id="windows-con-il-pacchetto-integrato">Windows con il pacchetto integrato</h3>
 <ol>
-<li>Dal repository ufficiale scegli la release o il pacchetto Windows integrato indicato dal progetto. Estrai tutto in una cartella scrivibile e avvia <code translate="no" v-pre>go-webui.bat</code>.</li>
-<li>Per il sorgente, usa un ambiente separato e il programma di installazione indicato per il tuo sistema. Il sorgente Windows prevede opzioni CUDA o CPU. Su Linux è documentato anche ROCm. macOS ha istruzioni proprie. Controlla sempre che dipendenze e pesi corrispondano alla versione scelta.</li>
-<li>Apri l’indirizzo locale mostrato nel terminale e lascia aperto il processo. Se non compare, il primo errore del terminale può indicare un runtime mancante, un problema con FFmpeg o l’assenza dei modelli di base.</li>
+<li>Apri il <a href="https://github.com/bilibili/GPT-SoVITS">repository ufficiale</a> e cerca il pacchetto Windows integrato nella sezione <strong>Installation</strong>. Controlla che sia adatto al tuo sistema e alla versione del modello che vuoi usare.</li>
+<li>Estrai l’intero archivio in una cartella scrivibile, ad esempio <code translate="no" v-pre>C:\AI\GPT-SoVITS</code>. Apri la cartella estratta e lascia insieme il runtime e le cartelle dei modelli.</li>
+<li>Avvia <code translate="no" v-pre>go-webui.bat</code> se è presente. Alcune release hanno launcher diversi per ciascuna versione. Usa quello indicato per il tuo pacchetto.</li>
+<li>Aspetta che il terminale stampi l’indirizzo locale e aprilo nel browser. Lascia aperto il terminale. Se la pagina non si apre, verifica che il processo sia ancora in esecuzione e che la porta coincida con quella mostrata dall’avvio corrente.</li>
 </ol>
-<span id="run-a-first-reference-based-inference" class="docs-anchor"></span><h2 id="genera-la-prima-frase-con-una-voce-di-riferimento">Genera la prima frase con una voce di riferimento</h2>
+<span id="installation-from-source" class="docs-anchor"></span><h3 id="installazione-dal-sorgente">Installazione dal sorgente</h3>
+<p>Usa un ambiente separato. Le istruzioni ufficiali partono da Conda con Python 3.10. Il programma di installazione PowerShell per Windows prevede scelte CUDA o CPU. Quello per Linux documenta anche ROCm. Per macOS ci sono percorsi MPS e CPU separati. Scegli in base al sistema operativo, al driver e alla release. Se usi la CPU, prova una frase breve prima di avviare un lavoro lungo.</p>
+<p>Dopo aver installato dipendenze e asset, dalla cartella principale del sorgente avvia <code translate="no" v-pre>python webui.py</code>. Segui le indicazioni della release per FFmpeg e per i modelli di base. Nell’installazione manuale i pesi vanno in <code translate="no" v-pre>GPT_SoVITS/pretrained_models</code>, mantenendo le sottocartelle della famiglia. Aggiungi i modelli di trascrizione, separazione o trattamento del testo cinese secondo le necessità della tua versione.</p>
+<span id="example-source-setup-on-linux-with-cuda-128" class="docs-anchor"></span><h4 id="esempio-dal-sorgente-su-linux-con-cuda-128">Esempio dal sorgente su Linux con CUDA 12.8</h4>
+<p>Esegui i comandi nella cartella del sorgente della release scelta. L’esempio presuppone un driver NVIDIA compatibile e un installer che prevede <code translate="no" v-pre>CU128</code>. Per AMD o CPU, usa il backend previsto dalla tua versione.</p>
+<div id="esempio-dal-sorgente-su-linux-con-cuda-128-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">conda create -n GPTSoVits python=3.10
+conda activate GPTSoVits
+bash install.sh --device CU128 --source HF
+python webui.py</code></pre>
+</doc-codeblock></div>
+<span id="3-generate-your-first-sentence" class="docs-anchor"></span><h2 id="3-genera-la-prima-frase">3. Genera la prima frase</h2>
 <ol>
-<li>Scegli pochi secondi di parlato pulito, con un’unica voce e senza musica. La durata accettata dipende dalla versione del modello.</li>
-<li>Apri l’inferenza e seleziona una coppia di pesi GPT e SoVITS compatibile. Inserisci la registrazione di riferimento, la sua trascrizione esatta e la lingua.</li>
-<li>Scrivi una sola frase e imposta la lingua del testo da leggere. Controlla le lingue disponibili nella versione selezionata. Il progetto documenta, tra le altre, cinese, cantonese, inglese, giapponese e coreano.</li>
-<li>Genera e ascolta. Controlla che tutte le parole siano presenti e che le pause suonino naturali. Prova prima a cambiare punteggiatura o segmentazione, tenendo fissi riferimento e pesi.</li>
+<li>Nella WebUI principale apri <strong>1C-inference</strong> e avvia l’interfaccia TTS. Se hai già addestrato modelli, aggiorna l’elenco dei pesi prima di aprire l’inferenza.</li>
+<li>Per cominciare, scegli i pesi GPT e SoVITS di base della stessa famiglia. Cambiare un peso con quello di un’altra release o voce rende più difficile capire perché una prova fallisce.</li>
+<li>Scegli una registrazione con una sola persona, una frase completa e senza musica. La vecchia interfaccia descritta da AI Hub richiede <strong>3–10 secondi</strong>. Se la tua versione indica un intervallo diverso, segui quello mostrato sullo schermo.</li>
+<li>Nel campo del testo di riferimento, scrivi esattamente quello che viene detto nella registrazione e selezionane la lingua. Il testo di riferimento e quello da generare si inseriscono in due campi distinti.</li>
+<li>Scrivi una frase breve nel campo di inferenza e seleziona la lingua del testo da leggere. Mantieni le altre impostazioni predefinite. Controlla che il modello supporti la lingua. Il README ufficiale cita cinese, cantonese, inglese, giapponese e coreano nella panoramica generale.</li>
+<li>Avvia l’inferenza, ascolta il risultato e salvalo. Verifica prima e ultima parola, pause e pronuncia. Se la frase suona male, ricontrolla trascrizione e lingue prima di regolare i controlli avanzati.</li>
 </ol>
-<span id="fine-tune-on-a-dataset" class="docs-anchor"></span><h2 id="fai-il-fine-tuning-con-un-dataset">Fai il fine-tuning con un dataset</h2>
-<p>Prepara clip pulite con trascrizioni accurate e indica la lingua di ciascun esempio. Il formato documentato è <code translate="no" v-pre>vocal_path|speaker_name|language|text</code>. Rivedi le trascrizioni automatiche prima di avviare l’addestramento. Nell’interfaccia, prepara il dataset, addestra i componenti SoVITS e GPT con la versione selezionata e carica la coppia ottenuta nell’inferenza. Confrontala con il modello di base usando frasi che non erano nel dataset. Conserva insieme i pesi corrispondenti e annota versione e impostazioni.</p>
-<span id="troubleshooting" class="docs-anchor"></span><h2 id="risolvi-gli-errori-più-comuni">Risolvi gli errori più comuni</h2>
-<p>Se la voce è instabile, prova un riferimento più pulito e verifica trascrizione e lingua. Se un checkpoint non si apre, controlla che i pesi GPT e SoVITS siano compatibili tra loro e con la release. Se mancano parole nei testi lunghi, prova frasi più brevi e modifica la segmentazione. Se finisce la memoria GPU durante il training, prova un batch più piccolo con i controlli della tua versione.</p>
-<p><a href="https://github.com/RVC-Boss/GPT-SoVITS">Repository e installazione ufficiali</a></p>
+<span id="keep-long-text-from-skipping-or-repeating" class="docs-anchor"></span><h3 id="evita-parole-saltate-o-ripetute-nei-testi-lunghi">Evita parole saltate o ripetute nei testi lunghi</h3>
+<p>Dividi il testo in corrispondenza di frasi o paragrafi. Prova un solo paragrafo prima di generare tutto. Mantieni gli stessi pesi, riferimento e impostazioni fra i segmenti. Se il tono è piatto o troppo veloce, prova un riferimento con l’intonazione che cerchi e confronta la stessa frase. Se la tua versione offre velocità o controlli di campionamento, modifica un parametro per volta.</p>
+<span id="4-prepare-a-dataset-for-fine-tuning" class="docs-anchor"></span><h2 id="4-prepara-il-dataset-per-il-fine-tuning">4. Prepara il dataset per il fine-tuning</h2>
+<span id="select-and-slice-the-recordings" class="docs-anchor"></span><h3 id="seleziona-e-taglia-le-registrazioni">Seleziona e taglia le registrazioni</h3>
+<ol>
+<li>Parti da parlato pulito di una sola persona. Elimina musica, voci sovrapposte, distorsione, silenzi lunghi e registrazioni inutilizzabili. Metti da parte alcune frasi per il test finale.</li>
+<li>Crea cartelle separate per gli originali, le clip tagliate e le trascrizioni. Conserva gli originali per ripetere il lavoro se serve.</li>
+<li>Apri <strong>Audio Slicer</strong>, indica il percorso sorgente e scegli una cartella di destinazione diversa. Fai prima una prova su pochi file. Controlla che inizio e fine delle parole siano intatti prima di tagliare l’intero dataset.</li>
+<li>Tieni le frasi che puoi trascrivere con precisione. Un set più piccolo e uniforme è un punto di partenza migliore di un archivio pieno di rumore o cambi di voce.</li>
+</ol>
+<span id="transcribe-and-proofread" class="docs-anchor"></span><h3 id="trascrivi-e-correggi-le-clip">Trascrivi e correggi le clip</h3>
+<ol>
+<li>Apri la trascrizione in batch (<strong>ASR</strong>) e inserisci la cartella delle clip tagliate. Seleziona un riconoscitore per la lingua del parlato. Il progetto documenta Faster-Whisper per inglese e giapponese e un percorso ASR separato per il cinese.</li>
+<li>Avvia la trascrizione e cerca il file <code translate="no" v-pre>.list</code> nella cartella di output impostata. Controlla che ogni riga punti a una clip accessibile.</li>
+<li>Carica il <code translate="no" v-pre>.list</code> nella WebUI di annotazione. Ascolta le clip e correggi parole, lingua e punteggiatura. Salva le modifiche e riapri qualche riga per verificare che siano rimaste.</li>
+<li>Se prepari il file a mano, scrivi una riga per clip con quattro campi separati da <code translate="no" v-pre>|</code>. Usa percorsi esistenti sul computer che esegue GPT-SoVITS.</li>
+</ol>
+<div id="trascrivi-e-correggi-le-clip-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">audio/clip01.wav|speaker01|en|This is the first recording.</code></pre>
+</doc-codeblock></div>
+<span id="5-format-the-dataset-and-train" class="docs-anchor"></span><h2 id="5-formatta-il-dataset-e-addestra-i-modelli">5. Formatta il dataset e addestra i modelli</h2>
+<span id="format-the-dataset" class="docs-anchor"></span><h3 id="formatta-il-dataset">Formatta il dataset</h3>
+<p>In <strong>1A-Dataset formatting</strong>, assegna all’esperimento un nome univoco e inserisci il percorso del <code translate="no" v-pre>.list</code> corretto. Se la WebUI la richiede, indica anche la cartella delle clip tagliate. Scegli la famiglia prima di formattare. Avvia i passaggi uno alla volta o usa il comando di formattazione in un clic, se disponibile. Leggi il log per individuare eventuali clip saltate e controlla che nell’esperimento siano stati creati i file di output.</p>
+<span id="train-sovits-then-gpt" class="docs-anchor"></span><h3 id="addestra-sovits-e-poi-gpt">Addestra SoVITS e poi GPT</h3>
+<ol>
+<li>In <strong>1B-Fine-tuned training</strong>, verifica nome dell’esperimento, famiglia e pesi iniziali. Per la prima prova, avvia SoVITS con i valori predefiniti della tua versione.</li>
+<li>Se hai una sola GPU, esegui i due addestramenti in sequenza. Controlla che SoVITS abbia salvato un checkpoint, poi avvia GPT sullo stesso esperimento formattato.</li>
+<li>Salva anche checkpoint intermedi se l’interfaccia lo consente. Il <strong>batch</strong> indica quanti esempi vengono elaborati insieme e influisce sulla memoria. Le <strong>epoche</strong> indicano quanti passaggi vengono effettuati sul dataset. Se la GPU esaurisce la memoria, prova un batch più piccolo prima di cambiare gli altri parametri.</li>
+<li>Lascia disattivato il DPO nella prima prova. Confronta i checkpoint con frasi tenute fuori dal dataset, usando sempre lo stesso audio di riferimento. Ascolta parole mancanti, ripetizioni, coerenza del timbro e pause. Scegli la coppia che funziona meglio su quelle prove.</li>
+</ol>
+<span id="load-and-back-up-the-finished-voice" class="docs-anchor"></span><h3 id="carica-e-conserva-la-voce-ottenuta">Carica e conserva la voce ottenuta</h3>
+<p>Aggiorna l’elenco dei modelli in inferenza e seleziona il checkpoint GPT, di solito <code translate="no" v-pre>.ckpt</code>, e i pesi SoVITS corrispondenti, di solito <code translate="no" v-pre>.pth</code>. Conserva entrambi insieme alla versione del programma, alle impostazioni, al <code translate="no" v-pre>.list</code> corretto e a un riferimento breve da riutilizzare. Se sposti l’esperimento su un altro computer, aggiorna i percorsi delle clip nel <code translate="no" v-pre>.list</code> prima di formattare di nuovo.</p>
+<span id="6-troubleshooting" class="docs-anchor"></span><h2 id="6-risolvi-gli-errori-più-comuni">6. Risolvi gli errori più comuni</h2>
+<retype-table copy-text="| Sintomo | Cosa controllare | Come procedere |
+| --- | --- | --- |
+| Il browser non si collega | Processo e indirizzo in console | Riavvia il launcher e apri l’indirizzo mostrato dall’avvio corrente. |
+| Mancano FFmpeg o i modelli di base | Primo errore e famiglia selezionata | Installa la dipendenza prevista dalla release e mantieni la struttura delle cartelle. |
+| La trascrizione è vuota | Cartella delle clip e lingua ASR | Prova un file riproducibile, poi verifica che l’input punti alle clip tagliate. |
+| La formattazione salta dei file | Percorsi e quattro campi del `.list` | Correggi le righe o i percorsi non validi e ripeti la formattazione. |
+| I checkpoint non compaiono | Salvataggio e menu dei modelli | Controlla che esistano entrambi i file e aggiorna l’elenco in inferenza. |
+| La voce ripete o salta parole | Trascrizione del riferimento e segmentazione | Prova una frase breve, controlla le due lingue e dividi il testo lungo. |
+| La GPU esaurisce la memoria | Fase in errore e dimensione del batch | Chiudi altri carichi GPU, riduci il batch ed esegui le fasi in sequenza. |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Sintomo</th>
+<th>Cosa controllare</th>
+<th>Come procedere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Il browser non si collega</td>
+<td>Processo e indirizzo in console</td>
+<td>Riavvia il launcher e apri l’indirizzo mostrato dall’avvio corrente.</td>
+</tr>
+<tr>
+<td>Mancano FFmpeg o i modelli di base</td>
+<td>Primo errore e famiglia selezionata</td>
+<td>Installa la dipendenza prevista dalla release e mantieni la struttura delle cartelle.</td>
+</tr>
+<tr>
+<td>La trascrizione è vuota</td>
+<td>Cartella delle clip e lingua ASR</td>
+<td>Prova un file riproducibile, poi verifica che l’input punti alle clip tagliate.</td>
+</tr>
+<tr>
+<td>La formattazione salta dei file</td>
+<td>Percorsi e quattro campi del <code translate="no" v-pre>.list</code></td>
+<td>Correggi le righe o i percorsi non validi e ripeti la formattazione.</td>
+</tr>
+<tr>
+<td>I checkpoint non compaiono</td>
+<td>Salvataggio e menu dei modelli</td>
+<td>Controlla che esistano entrambi i file e aggiorna l’elenco in inferenza.</td>
+</tr>
+<tr>
+<td>La voce ripete o salta parole</td>
+<td>Trascrizione del riferimento e segmentazione</td>
+<td>Prova una frase breve, controlla le due lingue e dividi il testo lungo.</td>
+</tr>
+<tr>
+<td>La GPU esaurisce la memoria</td>
+<td>Fase in errore e dimensione del batch</td>
+<td>Chiudi altri carichi GPU, riduci il batch ed esegui le fasi in sequenza.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p><a href="https://github.com/bilibili/GPT-SoVITS">Repository e release di GPT-SoVITS</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -226,7 +330,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T17:00:29.000Z">25/11/2026 · 18:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T17:18:40.000Z">25/11/2026 · 18:18</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
@@ -259,6 +363,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "GPT-SoVITS", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/tts/gpt-sovits.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "GPT-SoVITS", level: 3, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/non-rvc/tts/gpt-sovits.md" }</script>
 </body>
 </html>

@@ -219,7 +219,7 @@
 
 - [Microsoft Edge TTS](https://docs.ilariarvc.shop/non-rvc/tts/edge.md): Open a page in Microsoft Edge and choose Read aloud from the browser menu where available. Use Voice options to select a language, voice and reading speed. Immersive Reader can make supported pages easier to read and listen to.
 - [Kokoro TTS](https://docs.ilariarvc.shop/non-rvc/tts/kokoro.md): This guide uses the standalone CLI by nazdridoy. It generates speech from text with preset voices. Install it in an isolated Python environment or with uv tool install kokoro-tts.
-- [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS generates speech from written text using a sample as a voice reference. Zero-shot inference uses a reference with an existing base model. Fine-tuning uses a prepared collection of clips and transcripts to adapt the model.
+- [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.
 
 ### Other Audio Stuff
 
