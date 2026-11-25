@@ -17,7 +17,7 @@ The GPT component predicts a speech representation from text. SoVITS produces th
 
 ### Windows integrated package
 
-1. Open the [official repository](https://github.com/bilibili/GPT-SoVITS) and find the integrated Windows package linked in **Installation**. Match the package to your system and the model family you plan to use.
+1. Open the [official repository](https://github.com/RVC-Boss/GPT-SoVITS) and find the integrated Windows package linked in **Installation**. Match the package to your system and the model family you plan to use.
 2. Extract the entire archive to a writable folder such as `C:\AI\GPT-SoVITS`. Start from the extracted folder. Keep the bundled runtime and model directories together.
 3. Start `go-webui.bat` if supplied. Some packages provide a version-specific launcher. Follow the README for your package and use the script actually present in the extracted folder.
 4. Wait for a local address in the terminal and open it in the browser. Keep the terminal running with the WebUI. If the page fails to open, check whether the process is still running and whether the address matches this launch.
@@ -101,4 +101,4 @@ Refresh model paths in inference and select your GPT checkpoint (usually `.ckpt`
 | Words are missing or repeated | Reference transcript and target segmentation | Use a short target sentence, verify both languages and split long text. |
 | Training runs out of VRAM | Which stage failed and its batch size | Close competing GPU workloads, lower the batch and run the stages sequentially. |
 
-[GPT-SoVITS repository and releases](https://github.com/bilibili/GPT-SoVITS)
+[GPT-SoVITS repository and releases](https://github.com/RVC-Boss/GPT-SoVITS)
