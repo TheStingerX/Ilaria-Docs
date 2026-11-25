@@ -47,15 +47,7 @@ Si cualquiera de estos ajustes no coincide, el entrenamiento fallará al instant
 | **KLM - BeatzForge V1** | `48 kHz` | `HiFi-GAN` | No especificado | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
 | **KLM BeatMaster V1** | `48 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM_BEATMASTER](https://huggingface.co/SeoulStreamingStation/KLM_BEATMASTER) |
 | **KLM 4 HiFi-GAN** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | No especificado | [SeoulStreamingStation/KLM49_HFG](https://huggingface.co/SeoulStreamingStation/KLM49_HFG) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
-| **KLM 4 / 4.1 / 4.2 / 4.3** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | [KLM4](https://huggingface.co/SeoulStreamingStation/KLM4), [KLM4.1](https://huggingface.co/SeoulStreamingStation/KLM4.1), [KLM4.2](https://huggingface.co/SeoulStreamingStation/KLM4.2), [KLM43](https://huggingface.co/SeoulStreamingStation/KLM43) |
-| **KLM 4.4 (X1 / X2 / X2B)** | `32 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(compatibilidad variable)* |
-| **KLM 4.4 (X1 / X2)** | `40 kHz` | `MRF HiFi-GAN` | No especificado | [SeoulStreamingStation/KLM4.4](https://huggingface.co/SeoulStreamingStation/KLM4.4) *(compatibilidad variable)* |
 | **KLM 5 RefineGAN** | `32 kHz`, `40 kHz` | `RefineGAN` | No especificado | [SeoulStreamingStation/KLM5](https://huggingface.co/SeoulStreamingStation/KLM5) |
-| **KLM 6 Experimental V3 (Exp3 L6)** | `32 kHz` | `HiFi-GAN` | `SPIN (7–12)` | [SeoulStreamingStation/KLM6_Experimental](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) · [AI Hub](https://discord.com/channels/1159260121998827560/1235952130855010365) |
-| **KLM 6 Experimental (6.1 / 6.2 / Exp / Dev)** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM6_Experimental](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
-| **KLM 9 HFG** | `32 kHz` | `HiFi-GAN` | No especificado | [SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel) |
-| **KLM-HF Trainer** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
-| **KLM-X** | `32 kHz` | `HiFi-GAN` | No especificado | [SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
 | **KLM KpopUniverse (I / II)** | `32 kHz`, `40 kHz`, `48 kHz` | No especificado | No especificado | [SeoulStreamingStation/KLM_KpopUniverse](https://huggingface.co/SeoulStreamingStation/KLM_KpopUniverse) |
 | **Legacy Core V1.5** | `32 kHz` | `HiFi-GAN` | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
 | **Legacy Core V1.5** | `40 kHz` | `HiFi-GAN` | `contentvec` | [sxndypz/legacy-core-1.5](https://huggingface.co/sxndypz/legacy-core-1.5/tree/main) |
@@ -92,3 +84,75 @@ Si cualquiera de estos ajustes no coincide, el entrenamiento fallará al instant
 - **Legacy Core V1.5v2** y **Legacy Core V1.6** (`32 kHz`) vuelven a estar disponibles con el consentimiento del autor original en [notiscBalbalEko/PretrainReupload](https://huggingface.co/notiscBalbalEko/PretrainReupload) y se restauraron en Ilaria RVC `2.4.7`.
 - **Ilaria RVC 2.4.8** añade Legacy Core V1.5 a 32 y 40 kHz al gestor de descargas. Las cuatro opciones Legacy Core usan `HiFi-GAN` + `ContentVec`. [Notas de la versión](https://github.com/TheStingerX/Ilaria-RVC/releases/tag/v2.4.8)
 !!!
+
+## Pares adicionales
+
+| Modelo | Frecuencias de muestreo | Vocoder | Embedder | Fuente |
+| --- | --- | --- | --- | --- |
+| **Stock RVC v1 · F0** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN NSF` | `HuBERT Base · 256` | [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/pretrained) |
+| **Stock RVC v1 · No F0** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | `HuBERT Base · 256` | [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/pretrained) |
+| **Stock RVC v2 · No F0** | `32 kHz`, `40 kHz`, `48 kHz` | `HiFi-GAN` | `HuBERT Base · 768` | [Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/pretrained_v2) |
+| **Aurora v2** | `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/48k/Aurora) |
+| **Sench Pretrain** | `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/Shashashasha/Sench_Pretrain_48k_RVC) |
+| **RingFormer v1** | `40 kHz` | `RingFormer` | `SPIN v2` | [Hugging Face](https://huggingface.co/its5Q/rvc-ringformer-pretrain) |
+| **Applio RefineGAN (DMS)** | `24 kHz`, `32 kHz` | `RefineGAN` | Sin confirmar | [Hugging Face](https://huggingface.co/DanielMarius/dms-applio-refinegan-pretrained) |
+| **DMR v0.5 / v0.8 / v1** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/DMR) |
+| **Nanashi v1** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1) |
+| **Nanashi v1.5** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1.5) |
+| **Nanashi v1.5 Rigel** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1.5_Rigel_Version) |
+| **Nanashi Anime Normal** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1_anime/normal) |
+| **Nanashi Anime Resized** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/shiromiya/nanashi-pretrain/tree/main/v1_anime/resized) |
+| **SingerPreTrain v1** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/Singer) |
+| **Snowie v3.1 · Japanese HuBERT** | Sin confirmar | Sin confirmar | `Japanese HuBERT` | [Hugging Face](https://huggingface.co/MUSTAR/Snowie_V3.1_pretrain_on_JPhubert) |
+| **Snowie RuPretrain · No F0** | `40 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/MUSTAR/Snowie_RuPretrain_noP_40k) |
+| **Snowie v3 × RIN E3** | `40 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/MUSTAR/SnowieV3-X-RINE3-40K) |
+| **Ov2Super · F0** | `40 kHz` | `HiFi-GAN` | Sin confirmar | [Hugging Face](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/40k/Ov2) |
+
+## Variantes KLM
+
+| Modelo | Frecuencias de muestreo | Vocoder | Embedder | Fuente |
+| --- | --- | --- | --- | --- |
+| **KLM 4.0** | `32 kHz`, `40 kHz`, `48 kHz` | Sin confirmar | Sin confirmar | [32 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/KLM) · [40 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/40k/KLM) · [48 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/48k/KLM) |
+| **KLM 4.1** | `32 kHz`, `48 kHz` | Sin confirmar | Sin confirmar | [32 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/KLM) · [48 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/48k/KLM) |
+| **KLM 4.1 T2** | `32 kHz` | Sin confirmar | Sin confirmar | [32 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/KLM) |
+| **KLM 4.2 T1** | `32 kHz`, `40 kHz` | Sin confirmar | Sin confirmar | [32 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/KLM) · [40 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/40k/KLM) |
+| **KLM 4.2 T2 / T3 / T4** | `40 kHz` | Sin confirmar | Sin confirmar | [40 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/40k/KLM) |
+| **KLM 4.2 X10** | `32 kHz` | Sin confirmar | Sin confirmar | [32 kHz](https://huggingface.co/Politrees/RVC_resources/tree/main/pretrained/v2/32k/KLM) |
+| **KLM 4.3 X1 / X2** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM43) |
+| **KLM 4.3 X3 / X4** | `32 kHz`, `40 kHz`, `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM43) |
+| **KLM 4.4 X1 / X2 / X2B** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM4.4) |
+| **KLM 4.4 X1 MRF / X2 MRF** | `40 kHz` | `MRF HiFi-GAN` | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM4.4) |
+| **KLM 6 Experimental 1** | `32 kHz`, `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
+| **KLM 6 Experimental 2** | `32 kHz`, `40 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
+| **KLM 6 Experimental 3 L6** | `32 kHz` | `HiFi-GAN` | `SPIN (7–12)` | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
+| **KLM 6.1 Dev / Dev Ranger25** | `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM6_Experimental) |
+| **KLM-X1 / KLM-HF Mini T** | `32 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
+| **KLM RVC PT / RVC OG** | `32 kHz`, `40 kHz`, `48 kHz` | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/KLM_RVC_KLM-HF_Trainer) |
+| **KLM 9 HFG** | `32 kHz` | `HiFi-GAN` | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/RVC_KLM9_HFG_PretrainModel) |
+| **KLM X 10.0** | `32 kHz` | `HiFi-GAN` | Sin confirmar | [Hugging Face](https://huggingface.co/SeoulStreamingStation/RVC_KLM-X-10_Pretrained-Model) |
+
+## Pares de Convbased Studio
+
+| Modelo | Frecuencias de muestreo | Vocoder | Embedder | Fuente |
+| --- | --- | --- | --- | --- |
+| **Convbased HiFi-GAN NSF · ContentVec** | `48 kHz` | `HiFi-GAN NSF` | `ContentVec` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/contentvec/HiFiGAN/476sid) |
+| **Convbased SiFi-GAN · ContentVec** | `48 kHz` | `SiFi-GAN` | `ContentVec` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/contentvec/SiFiGAN) |
+| **Convbased BigVGAN · ContentVec** | `40 kHz` | `BigVGAN` | `ContentVec` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/contentvec/BigVGAN) |
+| **Convbased HiFi-GAN NSF · SPIN** | `48 kHz` | `HiFi-GAN NSF` | `SPIN` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/spin/HiFiGAN) |
+| **Convbased SiFi-GAN · SPIN** | `48 kHz` | `SiFi-GAN` | `SPIN` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/spin/SiFiGAN) |
+| **Convbased BigVGAN · SPIN v2** | `40 kHz` | `BigVGAN` | `SPIN v2` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/spin-v2/BigVGAN) |
+| **Convbased HiFi-GAN NSF · Chinese HuBERT Base** | `48 kHz` | `HiFi-GAN NSF` | `Chinese HuBERT Base` | [Hugging Face](https://huggingface.co/PluginsKers/Convbased-Studio/tree/main/chinese-hubert-base/HiFiGAN) |
+
+## Archivos experimentales e históricos
+
+| Modelo | Frecuencias de muestreo | Vocoder | Embedder | Fuente |
+| --- | --- | --- | --- | --- |
+| **7subpretrain** | `40 kHz` | Sin confirmar | Sin confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/7subpretrain40k.zip) |
+| **Genshin EN Pretrain** | `32 kHz` | Sin confirmar | Sin confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain32K.zip) |
+| **Genshin EN Pretrain** | `40 kHz` | Sin confirmar | Sin confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/GenshinENPretrain40K.zip) |
+| **SingingPretrain** | Sin confirmar | Sin confirmar | Sin confirmar | [ZIP](https://huggingface.co/makiligon/rvc-sub-pretrain-moment/blob/main/SingingPretrain.zip) |
+| **DeepFake Audio Rangers Pretrain** | Sin confirmar | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/DeepFake-Audio-Rangers/rvc_pretrain) |
+| **RVC v2 Pretrain Voice** | Sin confirmar | Sin confirmar | Sin confirmar | [Hugging Face](https://huggingface.co/Coolwowsocoolwow/RVC_V2_Pretrain_Voice) |
+| **RingFormer v2 · failed** | `40 kHz` | `RingFormer v2` | `SPIN v2` | [Hugging Face](https://huggingface.co/its5Q/rvc-ringformer-v2-pretrain/tree/main/failed) |
+
+El listado confirma la disponibilidad. Respeta la arquitectura, el modo de tono y el encoder de cada par. La procedencia y la licencia del RefineGAN de DMS siguen sin verificar. KLM X 10.0 requiere KLM Trainer 0.5.0 y declara CC BY-NC 2.0. El contenido de los ZIP y los permisos de los datos siguen sin verificar. RingFormer v2 figura en la carpeta de checkpoints fallidos.
