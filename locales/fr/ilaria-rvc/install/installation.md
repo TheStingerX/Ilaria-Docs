@@ -9,6 +9,8 @@ description: "Téléchargez la version NVIDIA prise en charge à partir de Huggi
 
 > **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Le paquet Windows complet est la version 2.4.7. Pour passer de 2.4.2–2.5.0 à la dernière version, utilisez **Other → Update Ilaria RVC → Check for updates → Download and restart**. Le ZIP de mise à jour exclut l’environnement d’exécution et les poids des modèles. [ZIP de mise à jour Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · AMD Preview est un paquet 2.5.1 distinct pour Radeon compatibles, sous Windows 11 via WSL2 ou Ubuntu 22.04 natif. Il utilise Python 3.10, PyTorch 2.6.0 et ROCm 6.4.2. Le paquet et le lanceur ont été vérifiés. L’entraînement, la reprise et la conversion complète sur Radeon restent à valider.
+
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)

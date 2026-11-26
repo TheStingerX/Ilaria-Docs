@@ -9,6 +9,8 @@ description: "También puedes usar Ilaria RVC en Kaggle con su GPU remota, inclu
 
 > **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · El paquete completo para Windows es la versión 2.4.7. Para actualizar desde 2.4.2–2.5.0, usa **Other → Update Ilaria RVC → Check for updates → Download and restart**. El ZIP de actualización excluye el entorno de ejecución y los pesos. [ZIP de actualización para Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
+> [Ilaria RVC 2.5.1 AMD Preview](install/amd-preview.md) · AMD Preview es una versión separada de la 2.5.1 para Radeon compatibles en Windows 11 con WSL2 o Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 y ROCm 6.4.2. Se han comprobado el paquete y el iniciador. El entrenamiento, la reanudación y la conversión completa en Radeon siguen pendientes.
+
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 También puedes usar Ilaria RVC en Kaggle con su GPU remota, incluso si tu ordenador no tiene una GPU NVIDIA. [Ilaria RVC on Kaggle](cloud/kaggle.md)

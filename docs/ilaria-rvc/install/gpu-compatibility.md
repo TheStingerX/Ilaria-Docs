@@ -3,9 +3,11 @@ label: "Compatible GPUs"
 icon: ":desktop_computer:"
 order: 82
 permalink: /ilaria-rvc/gpu-compatibility/
-description: "NVIDIA GPU compatibility for Ilaria RVC, including CUDA runtimes, tested hardware and expected support by architecture."
+description: "The AMD Preview is a separate 2.5.1 build for compatible Radeon GPUs. It runs on Windows 11 through WSL2 with Ubuntu 22.04 or on native Ubuntu 22.04. It uses Python 3.10, PyTorch 2.6.0 and ROCm 6.4.2."
 ---
 # Compatible GPUs
+
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · The AMD Preview is a separate 2.5.1 build for compatible Radeon GPUs. It runs on Windows 11 through WSL2 with Ubuntu 22.04 or on native Ubuntu 22.04. It uses Python 3.10, PyTorch 2.6.0 and ROCm 6.4.2. The package and launcher have been checked. Full training, checkpoint resume and end-to-end voice conversion still need validation on Radeon hardware.
 
 [Download Ilaria RVC 2.4.7 for Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -31,7 +33,8 @@ Compute, backpropagation and ContentVec loading were tested on an **RTX 4070**. 
 | **Maxwell / Pascal / Volta** (GTX 900/10, Titan V) | `5.x` / `6.x` / `7.0` | `5.0`–`7.0` | Auto `runtime-cu126` (CUDA 12.6) | Inference & Training | `FP32` | **Expected**; first launch downloads `runtime-cu126`; GTX 10-series often fail with `FP16` |
 | **Workstation / Datacenter** (Quadro RTX, RTX A-series, T4, L4) | Turing / Ampere / Ada | `7.5`–`8.9` | CUDA 12.8 (`2.10.0`) | Inference & Training | `FP32`, `FP16` (`BF16` on Ampere+) | **Expected**; T4 in Kaggle defaults to `FP16` |
 | **Multi-GPU systems** | Mixed or matched NVIDIA | Varies | Matched to lowest/active set | Training (DDP in Kaggle/supported setups) | Matches active GPUs | **Expected**; two GPUs do **not** combine into one larger VRAM pool |
-| **AMD / Intel / Integrated** | RDNA / Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../cloud/cloud.md) or DirectML apps |
+| **AMD Radeon** | RDNA | — | ROCm 6.4.2 · WSL2 / Ubuntu 22.04 | Training and conversion pending validation | `FP32` | [AMD Preview](amd-preview.md) |
+| **Intel / Integrated** | Arc / iGPU | N/A (No CUDA) | None in local Windows build | **Unsupported** locally | N/A | **Unsupported** locally in Ilaria RVC Windows; use [Cloud](../cloud/cloud.md) or DirectML apps |
 
 ### Check Your GPU Model & Diagnose Errors on Windows
 

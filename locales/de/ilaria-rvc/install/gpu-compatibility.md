@@ -3,9 +3,11 @@ label: "Kompatible GPUs"
 icon: ":desktop_computer:"
 order: 82
 permalink: /ilaria-rvc/gpu-compatibility/
-description: "NVIDIA-GPU-Kompatibilität für Ilaria RVC mit CUDA-Laufzeiten, getesteter Hardware und erwarteter Unterstützung nach Architektur."
+description: "Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2."
 ---
 # Kompatible GPUs
+
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2. Paket und Launcher wurden geprüft. Vollständiges Training, Wiederaufnahme und Sprachkonvertierung auf Radeon müssen noch validiert werden.
 
 [Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -34,7 +36,8 @@ Die Tests für Berechnung, Rückpropagation und das Laden von ContentVec wurden 
 untime-cu126 (CUDA 12.6) | Inferenz & Training | FP32 | **Expected** |
 | **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferenz & Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
 | **Multi-GPU** | Mehrere NVIDIA | Variiert | Aktive Runtime | Training | Je nach aktiver GPU | **Expected**; VRAM addiert sich **nicht** |
-| **AMD / Intel / iGPU** | RDNA / Arc / iGPU | N/A | Keine lokal unter Windows | **Unsupported** lokal | N/A | **Unsupported**; nutze [Cloud](../cloud/cloud.md) oder DirectML |
+| **AMD Radeon** | RDNA | — | ROCm 6.4.2 · WSL2 / Ubuntu 22.04 | Training und Konvertierung noch zu validieren | `FP32` | [AMD Preview](amd-preview.md) |
+| **Intel / iGPU** | Arc / iGPU | N/A | Keine lokal unter Windows | **Unsupported** lokal | N/A | **Unsupported**; nutze [Cloud](../cloud/cloud.md) oder DirectML |
 
 ### GPU unter Windows prüfen & Fehler erkennen
 

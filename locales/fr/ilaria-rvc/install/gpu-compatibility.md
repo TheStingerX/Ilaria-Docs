@@ -3,9 +3,11 @@ label: "GPU compatibles"
 icon: ":desktop_computer:"
 order: 82
 permalink: /ilaria-rvc/gpu-compatibility/
-description: "Compatibilité des GPU NVIDIA avec Ilaria RVC, avec les versions de CUDA, le matériel testé et la prise en charge prévue par architecture."
+description: "AMD Preview est un paquet 2.5.1 distinct pour Radeon compatibles, sous Windows 11 via WSL2 ou Ubuntu 22.04 natif. Il utilise Python 3.10, PyTorch 2.6.0 et ROCm 6.4.2."
 ---
 # GPU compatibles
+
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · AMD Preview est un paquet 2.5.1 distinct pour Radeon compatibles, sous Windows 11 via WSL2 ou Ubuntu 22.04 natif. Il utilise Python 3.10, PyTorch 2.6.0 et ROCm 6.4.2. Le paquet et le lanceur ont été vérifiés. L’entraînement, la reprise et la conversion complète sur Radeon restent à valider.
 
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
@@ -34,7 +36,8 @@ Les tests de calcul, de rétropropagation et de chargement de ContentVec ont ét
 untime-cu126 (CUDA 12.6) | Inférence & Entraînement | FP32 | **Expected** |
 | **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inférence & Entraînement | FP32, FP16 (BF16 Ampere+) | **Expected** |
 | **Multi-GPU** | Plusieurs NVIDIA | Variable | Runtime actif | Entraînement | Selon GPU actifs | **Expected** ; les VRAM ne s'additionnent **pas** |
-| **AMD / Intel / Intégré** | RDNA / Arc / iGPU | N/A | Aucun en local Windows | **Unsupported** en local | N/A | **Unsupported** ; utilisez [Cloud](../cloud/cloud.md) ou DirectML |
+| **AMD Radeon** | RDNA | — | ROCm 6.4.2 · WSL2 / Ubuntu 22.04 | Entraînement et conversion à valider | `FP32` | [AMD Preview](amd-preview.md) |
+| **Intel / Intégré** | Arc / iGPU | N/A | Aucun en local Windows | **Unsupported** en local | N/A | **Unsupported** ; utilisez [Cloud](../cloud/cloud.md) ou DirectML |
 
 ### Vérifier son GPU sous Windows et diagnostiquer
 

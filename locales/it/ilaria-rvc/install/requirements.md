@@ -9,6 +9,8 @@ description: "Ilaria RVC gira in locale sul tuo PC usando PyTorch 2.10.0 e NVIDI
 
 > **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Il pacchetto completo per Windows è la versione 2.4.7. Per aggiornare dalla 2.4.2–2.5.0, vai su **Altro → Aggiorna Ilaria RVC → Controlla aggiornamenti → Scarica e riavvia**. Lo ZIP di aggiornamento esclude il runtime e i pesi dei modelli. [ZIP di aggiornamento Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · AMD Preview è un pacchetto separato della 2.5.1 per le Radeon compatibili. Funziona su Windows 11 tramite WSL2 con Ubuntu 22.04 oppure su Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 e ROCm 6.4.2. Il pacchetto e il launcher sono stati controllati. Training completo, ripresa dai checkpoint e conversione vocale dall’inizio alla fine sono ancora da verificare su hardware Radeon.
+
 [Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [GPU compatibili](gpu-compatibility.md) · [Opzioni Cloud](../cloud/cloud.md)
 
 Ilaria RVC gira in locale sul tuo PC usando **PyTorch 2.10.0** e **NVIDIA CUDA**. Poiché la conversione vocale (inferenza) e l'addestramento dei modelli (training) hanno esigenze hardware molto diverse, controlla entrambe le tabelle qui sotto prima di installare.

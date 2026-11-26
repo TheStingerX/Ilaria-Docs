@@ -59,7 +59,8 @@ const gpuLabels = {
   pt: ['Compatibilidade com GPU', 'Compatibilidade por confirmar', 'Histórico', 'Depende da versão e do modelo'],
 };
 const gpuSupport = {
-  ilaria: ['CUDA'],
+  ilaria: ['CUDA', 'ROCm 6.4.2 · Preview'],
+  'ilaria-amd': [undefined, 'ROCm 6.4.2 · Preview'],
   applio: ['CUDA', 'ROCm'],
   mainline: ['CUDA', 'DirectML*', 'DirectML*'],
   redpanda: ['CUDA'],
@@ -83,7 +84,9 @@ function addGpuCompatibility(html, lang, route) {
   const isInstallation = page === 'installation'
     || (app === 'redpanda' && page === 'first-run')
     || (app === 'rvc-gui' && page === 'file-conversion');
-  const gpuApp = route === '/ilaria-rvc/installation/' ? 'ilaria' : isInstallation ? app : null;
+  const gpuApp = route === '/ilaria-rvc/installation/' ? 'ilaria'
+    : route === '/ilaria-rvc/amd-preview/' ? 'ilaria-amd'
+      : isInstallation ? app : null;
   const support = gpuSupport[gpuApp];
   if (!support) return html;
   const [heading, unknown, legacy, conditional] = gpuLabels[lang];

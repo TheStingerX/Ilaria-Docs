@@ -8,6 +8,8 @@ description: "Confronta app compatibili per la conversione vocale dal vivo, la c
 
 # Scegli un'app RVC
 
+> [Ilaria RVC 2.5.1 AMD Preview](../ilaria-rvc/install/amd-preview.md) · AMD Preview è un pacchetto separato della 2.5.1 per le Radeon compatibili. Funziona su Windows 11 tramite WSL2 con Ubuntu 22.04 oppure su Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 e ROCm 6.4.2. Il pacchetto e il launcher sono stati controllati. Training completo, ripresa dai checkpoint e conversione vocale dall’inizio alla fine sono ancora da verificare su hardware Radeon.
+
 [Scarica Ilaria RVC 2.4.7 per Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 Puoi usare Ilaria RVC anche su Kaggle con la GPU remota, anche se il tuo computer ha una GPU AMD, Intel, integrata o poco potente. [Ilaria RVC on Kaggle](../ilaria-rvc/cloud/kaggle.md)
