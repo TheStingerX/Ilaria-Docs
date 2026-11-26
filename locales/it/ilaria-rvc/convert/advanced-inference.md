@@ -36,6 +36,12 @@ Apri **Impostazioni inferenza** per Singolo o Batch. Scegli il modello e selezio
 
 La sezione di inferenza **Post-processo** applica effetti all'audio convertito. I **Dati di processo** della formazione hanno la propria regolazione del livello per sezione.
 
+## Formant Shift
+
+I formanti sono risonanze prodotte dal tratto vocale. Aiutano a distinguere le vocali e contribuiscono a far sembrare una voce più chiara o più scura. Il pitch indica quanto è alta o bassa la nota. In Ilaria RVC, **Formant Shifting** agisce sull’audio di partenza prima della conversione e cerca di conservarne altezza e durata. **Post-Process → Pitch Shift** cambia l’altezza dell’audio già convertito.
+
+In **Impostazioni di inferenza → Elaborazione audio**, attiva **Formant Shifting**. **Formant Ratio** va da `0.7` a `1.4`, con `1.0` neutro. Converti la stessa frase a `0.9`, `1.0` e `1.1`, con **Pitch** a `0` e lo stesso modello e le stesse impostazioni. Ascolta i risultati a volume simile. Sotto `1.0` le vocali tendono a suonare più scure, sopra `1.0` più chiare. Se suonano innaturali, torna verso `1.0`.
+
 ## Estrazione del tono e dei contenuti
 
 RMVPE è lo stimatore del tono di base. FCPE, Swift, Beatrice e Parselmouth sono disponibili laddove l'operazione selezionata li supporta. Confronta i metodi di presentazione su un test A/B ristretto. Il metodo pitch stima F0, mentre [embedder](../train/embedders.md) estrae le caratteristiche che devono adattarsi al modello.

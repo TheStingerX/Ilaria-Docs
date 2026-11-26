@@ -34,6 +34,12 @@ Ouvrir les **Paramètres d'inférence** pour un seul ou par lots. Choisissez le 
  | Clean Audio | Applique la réduction du bruit après la conversion. | Écoutez les queues aqueuses ou les consonnes perdues. |
  | Post-traitement | Applique les effets sélectionnés à la sortie convertie. Gain, Pitch Shift et Limiter exposent les commandes. | Comparez le niveau correspondant avec les effets désactivés. Conservez une exportation sèche pour une édition ultérieure. |
 
+## Formant Shift
+
+Les formants sont des résonances du conduit vocal qui influencent les voyelles et le timbre. Formant Shifting agit avant la conversion et vise à préserver la hauteur et la durée.
+
+Testez la même phrase avec le même modèle et Pitch à zéro. Comparez 0.9, 1.0 et 1.1. À 1.0 le réglage est neutre. Les valeurs inférieures donnent généralement un timbre plus sombre, les valeurs supérieures un timbre plus brillant.
+
 La section d'inférence **Post-Process** applique des effets à l'audio converti. Les **Données de processus** de Training ont leur propre ajustement de niveau par tranche.
 
 ## Extraction de pitch et de contenu

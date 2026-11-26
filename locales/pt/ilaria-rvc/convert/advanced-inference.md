@@ -34,6 +34,12 @@ Abra **Configurações de inferência** para Único ou Lote. Escolha o modelo e 
  | Áudio Limpo | Aplica redução de ruído após a conversão. | Ouça caudas aquosas ou consoantes perdidas. |
  | Pós-processamento | Aplica efeitos selecionados à saída convertida. Controles de exposição Gain, Pitch Shift e Limiter. | Compare o nível correspondente com os efeitos desativados. Mantenha uma exportação seca para edição posterior. |
 
+## Formant Shift
+
+Os formantes são ressonâncias do trato vocal que influenciam as vogais e o timbre. Formant Shifting atua antes da conversão e procura preservar a altura e a duração.
+
+Testa a mesma frase com o mesmo modelo e Pitch a zero. Compara 0.9, 1.0 e 1.1. O valor 1.0 é neutro. Valores menores tendem a escurecer as vogais e valores maiores a clareá-las.
+
 A seção de inferência **Pós-processamento** aplica efeitos ao áudio convertido. Os **Dados de Processo** do treinamento têm seu próprio ajuste de nível por fatia.
 
 ## Argumento e extração de conteúdo

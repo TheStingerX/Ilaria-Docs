@@ -36,6 +36,12 @@ Open **Inference Settings** for Single or Batch. Choose the model and check **Sp
 
 The inference **Post-Process** section applies effects to converted audio. Training's **Process Data** has its own per-slice level adjustment.
 
+## Formant Shift
+
+Formants are resonances shaped by the vocal tract. They help distinguish vowels and influence how bright or dark a voice sounds. Pitch describes how high or low the note is. In Ilaria RVC, **Formant Shifting** acts on the source before conversion and aims to preserve pitch and duration. **Post-Process → Pitch Shift** changes the pitch of the converted output.
+
+In **Inference Settings → Audio Processing**, enable **Formant Shifting**. **Formant Ratio** ranges from `0.7` to `1.4`, with `1.0` neutral. Try the same short phrase at `0.9`, `1.0` and `1.1`, keeping **Pitch** at `0` and the model and other settings fixed. Listen at matched volume. Below `1.0` the vowels tend to sound darker. Above `1.0` they tend to sound brighter. If vowels sound unnatural, move closer to `1.0`.
+
 ## Pitch and content extraction
 
 RMVPE is the baseline pitch estimator. FCPE, Swift, Beatrice and Parselmouth are available where the selected operation supports them. Compare pitch methods on a narrow A/B test. The pitch method estimates F0, while the [embedder](../train/embedders.md) extracts features that must fit the model.

@@ -54,6 +54,7 @@ Ces entrées sont adaptées du glossaire intégré à Ilaria RVC. Les commandes 
  | Informations sur le modèle | Affiche les propriétés des points de contrôle stockées telles que la vitesse, le guidage en tangage et la précision, le cas échéant. |
  | Fusionner les modèles | Mélange les poids d'inférence compatibles. Commencez à tester la voix fusionnée avec la récupération désactivée. |
  | FP16 et FP32 | Formats de précision numérique. La précision du poids dans une exportation décrit le fichier stocké. |
+| [Formant Shift](../ilaria-rvc/convert/advanced-inference.md#formant-shift) | Déplace les résonances vocales pour modifier le timbre. |
 
 > Les checkpoints HuBERT génériques sont déconseillés comme encodeur par défaut pour la conversion vocale. Entraînés pour représenter la parole, ils peuvent conserver des informations sur le timbre de la voix source dans le résultat. Utilisez l’encodeur attendu par le modèle RVC, par exemple ContentVec si le modèle a été entraîné avec lui.
 

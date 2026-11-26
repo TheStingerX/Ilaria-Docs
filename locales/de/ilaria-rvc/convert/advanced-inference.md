@@ -34,6 +34,12 @@ Wähle in **Inference Settings** `rmvpe`, öffne **RMVPE High Register** und akt
  | Clean Audio | Wendet die Rauschunterdrückung nach der Konvertierung an. | Achten Sie auf wässrige Ausläufer oder verlorene Konsonanten. |
  | Nachbearbeitung | Wendet ausgewählte Effekte auf die konvertierte Ausgabe an. Gain, Pitch Shift und Limiter stellen Steuerelemente zur Verfügung. | Vergleiche Level-Matching mit ausgeschalteten Effekten. Bewahren Sie einen trockenen Export zur späteren Bearbeitung auf. |
 
+## Formant Shift
+
+Formanten sind Resonanzen des Vokaltrakts, die Vokale und Klangfarbe beeinflussen. Formant Shifting wirkt vor der Konvertierung und soll Tonhöhe und Dauer erhalten.
+
+Teste denselben Satz mit demselben Modell und Pitch auf null. Vergleiche 0.9, 1.0 und 1.1. Neutral ist 1.0. Niedrigere Werte lassen Vokale eher dunkler und höhere eher heller klingen.
+
 Der Inferenzabschnitt **Nachbearbeitung** wendet Effekte auf konvertiertes Audio an. Die **Prozessdaten** von Training verfügen über eine eigene Ebenenanpassung pro Segment.
 
 ## Pitch und Inhaltsextraktion
