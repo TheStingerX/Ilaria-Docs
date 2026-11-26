@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848950833945">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849029215295">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848950833945" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849029215295" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848950833945" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849029215295" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848950833945" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849029215295" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -242,6 +242,9 @@
 </div>
 </retype-table>
 <p>The inference <strong>Post-Process</strong> section applies effects to converted audio. Training&#x27;s <strong>Process Data</strong> has its own per-slice level adjustment.</p>
+<h2 id="formant-shift">Formant Shift</h2>
+<p>Formants are resonances shaped by the vocal tract. They help distinguish vowels and influence how bright or dark a voice sounds. Pitch describes how high or low the note is. In Ilaria RVC, <strong>Formant Shifting</strong> acts on the source before conversion and aims to preserve pitch and duration. <strong>Post-Process → Pitch Shift</strong> changes the pitch of the converted output.</p>
+<p>In <strong>Inference Settings → Audio Processing</strong>, enable <strong>Formant Shifting</strong>. <strong>Formant Ratio</strong> ranges from <code translate="no" v-pre>0.7</code> to <code translate="no" v-pre>1.4</code>, with <code translate="no" v-pre>1.0</code> neutral. Try the same short phrase at <code translate="no" v-pre>0.9</code>, <code translate="no" v-pre>1.0</code> and <code translate="no" v-pre>1.1</code>, keeping <strong>Pitch</strong> at <code translate="no" v-pre>0</code> and the model and other settings fixed. Listen at matched volume. Below <code translate="no" v-pre>1.0</code> the vowels tend to sound darker. Above <code translate="no" v-pre>1.0</code> they tend to sound brighter. If vowels sound unnatural, move closer to <code translate="no" v-pre>1.0</code>.</p>
 <h2 id="pitch-and-content-extraction">Pitch and content extraction</h2>
 <p>RMVPE is the baseline pitch estimator. FCPE, Swift, Beatrice and Parselmouth are available where the selected operation supports them. Compare pitch methods on a narrow A/B test. The pitch method estimates F0, while the <a href="../embedders/">embedder</a> extracts features that must fit the model.</p>
 <h2 id="export-and-compare">Export and compare</h2>
@@ -284,7 +287,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-26T17:26:13.000Z">26/11/2026 · 18:26</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

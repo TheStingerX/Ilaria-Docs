@@ -47,6 +47,7 @@ Diese Einträge sind aus dem in Ilaria RVC integrierten Glossar übernommen. Die
  | Modellinformationen | Zeigt gespeicherte Prüfpunkteigenschaften wie Geschwindigkeit, Neigungsführung und Präzision an, sofern verfügbar. |
  | Modelle zusammenführen | Mischt kompatible Inferenzgewichte. Beginnen Sie mit dem Testen der zusammengeführten Stimme bei deaktiviertem Abruf. |
  | FP16 und FP32 | Numerische Präzisionsformate. Die Gewichtsgenauigkeit bei einem Export beschreibt die gespeicherte Datei. |
+| [Formant Shift](../ilaria-rvc/convert/advanced-inference.md#formant-shift) | Verschiebt Stimmresonanzen, um die Klangfarbe zu ändern. |
 
 > Generische HuBERT-Checkpoints sind als Standardencoder für Stimmkonvertierung nicht empfohlen. Sie wurden für Sprachrepräsentationen trainiert und können Merkmale der Klangfarbe der Ausgangsstimme in die Ausgabe übertragen. Verwende den Encoder, den das RVC-Modell erwartet, etwa ContentVec, wenn das Modell damit trainiert wurde.
 

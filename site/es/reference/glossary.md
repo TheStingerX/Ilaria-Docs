@@ -47,6 +47,7 @@ Estas entradas están adaptadas del glosario integrado en Ilaria RVC. Los contro
  | Información del modelo | Muestra las propiedades de los puntos de control almacenados, como velocidad, guía de paso y precisión, cuando estén disponibles. |
  | Fusionar modelos | Combina pesos de inferencia compatibles. Comience a probar la voz fusionada con la recuperación deshabilitada. |
  | FP16 y FP32 | Formatos de precisión numérica. La precisión del peso en una exportación describe el archivo almacenado. |
+| [Formant Shift](../ilaria-rvc/convert/advanced-inference.md#formant-shift) | Desplaza las resonancias de la voz para ajustar el timbre. |
 
 > Los checkpoints HuBERT genéricos no se recomiendan como codificador predeterminado para conversión de voz. Se entrenan para representar el habla y pueden conservar el timbre de origen en el audio convertido. Usa el codificador previsto por el modelo RVC, como ContentVec si se entrenó con él.
 

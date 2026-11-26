@@ -27,6 +27,12 @@ Abra **Configuración de inferencia** para individual o por lotes. Elija el mode
  | Audio limpio | Aplica reducción de ruido después de la conversión. | Escuche colas acuosas o consonantes perdidas. |
  | Postproceso | Aplica los efectos seleccionados a la salida convertida. Los controles de ganancia, cambio de tono y limitador exponen. | Comparar niveles coincidentes con efectos desactivados. Mantenga una exportación seca para editarla más adelante. |
 
+## Formant Shift
+
+Los formantes son resonancias del tracto vocal que influyen en las vocales y el timbre. Formant Shifting modifica estas resonancias antes de la conversión y procura conservar la altura y la duración.
+
+Prueba la misma frase con el mismo modelo y Pitch a cero. Usa 0.9, 1.0 y 1.1. El valor 1.0 es neutro. Los valores inferiores tienden a oscurecer las vocales y los superiores a darles brillo.
+
 La sección de inferencia **Postproceso** aplica efectos al audio convertido. Los **Datos de proceso** de Training tienen su propio ajuste de nivel por segmento.
 
 ## Extracción de tono y contenido

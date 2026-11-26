@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848950853474">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849029234416">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848950853474" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849029234416" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848950853474" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849029234416" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848950853474" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849029234416" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=7">
     <script defer src="/es/static/toc-active.js?v=1"></script>
@@ -242,6 +242,9 @@
 </table>
 </div>
 </retype-table>
+<h2 id="formant-shift">Formant Shift</h2>
+<p>Los formantes son resonancias del tracto vocal que influyen en las vocales y el timbre. Formant Shifting modifica estas resonancias antes de la conversión y procura conservar la altura y la duración.</p>
+<p>Prueba la misma frase con el mismo modelo y Pitch a cero. Usa 0.9, 1.0 y 1.1. El valor 1.0 es neutro. Los valores inferiores tienden a oscurecer las vocales y los superiores a darles brillo.</p>
 <p>La sección de inferencia <strong>Postproceso</strong> aplica efectos al audio convertido. Los <strong>Datos de proceso</strong> de Training tienen su propio ajuste de nivel por segmento.</p>
 <span id="pitch-and-content-extraction" class="docs-anchor"></span><h2 id="extracción-de-tono-y-contenido">Extracción de tono y contenido</h2>
 <p>RMVPE es el estimador del tono de referencia. FCPE, Swift, Beatrice y Parselmouth están disponibles cuando la operación seleccionada los admita. Compare los métodos de tono en una prueba A/B estrecha. El método de tono estima F0, mientras que <a href="../embedders/">embedder</a> extrae características que deben ajustarse al modelo.</p>
@@ -285,7 +288,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-24T21:07:36.000Z">24/11/2026 · 22:07</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-26T17:26:13.000Z">26/11/2026 · 18:26</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

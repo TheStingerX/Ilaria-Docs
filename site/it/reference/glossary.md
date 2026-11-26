@@ -47,6 +47,7 @@ Queste voci sono adattate dal glossario integrato in Ilaria RVC. I controlli dis
  | Informazioni sul modello | Visualizza le proprietà del checkpoint memorizzate come velocità, guida del passo e precisione, ove disponibili. |
  | Unisci modelli | Unisce pesi di inferenza compatibili. Inizia a testare la voce unita con il recupero disabilitato. |
  | FP16 e FP32 | Formati di precisione numerica. La precisione del peso in un'esportazione descrive il file archiviato. |
+| [Formant Shift](../ilaria-rvc/convert/advanced-inference.md#formant-shift) | Sposta le risonanze vocali per cambiare il timbro cercando di conservare l’altezza. |
 
 > I checkpoint HuBERT generici sono sconsigliati come encoder predefinito per la conversione vocale. Sono addestrati per rappresentare il parlato e possono conservare informazioni sul timbro di chi parla, che possono riaffiorare nell’audio convertito. In RVC usa l’encoder previsto dal modello, per esempio ContentVec se la voce è stata addestrata con quello.
 

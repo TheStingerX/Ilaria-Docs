@@ -35,6 +35,7 @@ These entries are adapted from the glossary built into Ilaria RVC. Available con
 | RMVPE and FCPE | Pitch extractors that estimate F0 over time. |
 | ContentVec / HuBERT | ContentVec is a HuBERT-style content encoder used in standard RVC workflows. Match the encoder used in training. |
 | Volume envelope mix | Sets how closely output dynamics follow the source. |
+| [Formant Shift](../ilaria-rvc/convert/advanced-inference.md#formant-shift) | Moves vocal resonances to change timbre while aiming to preserve pitch. |
 | Protect | Reduces retrieval's influence on unvoiced consonants and breaths. A lower value gives stronger protection. A value of 0.5 disables it. |
 | Resampling | Adjusts the output rate. A value of 0 keeps the model's output rate. |
 | Process Data | Prepares, resamples and slices recordings. Ilaria RVC adjusts the level of each slice during this stage. |
