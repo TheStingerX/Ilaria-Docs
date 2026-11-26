@@ -2,7 +2,7 @@
 
 NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Changelog](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Instalación
 
@@ -15,5 +15,7 @@ node --version
 npm install
 npm run dev
 ~~~
+
+El repositorio ofrece un notebook Kaggle listo para importar y un flujo Streamlit.
 
 [Uso](usage.md) · [Cloud](cloud.md)

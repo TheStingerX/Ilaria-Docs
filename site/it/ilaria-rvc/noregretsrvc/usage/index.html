@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031467600">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031956444">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849031467600" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849031956444" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031467600" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031956444" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031467600" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031956444" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
@@ -177,10 +177,18 @@
                 <!-- Page content  -->
 <span id="noregretsrvc--usage" class="docs-anchor"></span><h1 id="noregretsrvc--uso">NoRegretsRVC · Uso</h1>
 <p>NoRegretsRVC Beta 0.0 è uno studio web indipendente per configurare flussi di lavoro basati su Applio. Il repository contiene l’interfaccia e il generatore di notebook. L’installazione locale avvia lo studio nel browser.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md">Changelog</a></p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <span id="usage" class="docs-anchor"></span><h2 id="uso">Uso</h2>
 <p>In <strong>Training</strong>, crea o seleziona un progetto e imposta frequenza di campionamento, vocoder, estrattore di pitch ed embedder. Se usi un pretrain, scegli impostazioni compatibili con la coppia di pesi. Parti da un batch contenuto, poi regola epoche e precisione per il runtime di destinazione. La stima VRAM è indicativa. Prima di esportare controlla le impostazioni del notebook, del tunnel e dei backup. I progetti salvati nel browser dipendono dal profilo e dall’indirizzo con cui apri lo studio.</p>
 <p><strong>Samples</strong> prepara le impostazioni di conversione. <strong>Models</strong> e gli strumenti di lavoro configurano download, fusione delle voci o TTS. <strong>TensorBoard</strong> mostra dati di training elaborati dall’interfaccia. Per eseguire davvero una conversione o un addestramento, usa un runtime Applio compatibile e controlla lì i file prodotti.</p>
+<span id="guided-training" class="docs-anchor"></span><h2 id="training-guidato">Training guidato</h2>
+<p>In <strong>Model Settings</strong>, dai un nome all’esperimento e scegli frequenza (32, 40 o 48 kHz), vocoder e GPU. In <strong>Prepare Dataset</strong>, seleziona la cartella audio e avvia il pre-processing. In <strong>Extract Features</strong>, scegli estrattore del pitch ed embedder compatibili con il pretrain. In <strong>Train Model</strong>, controlla batch, epoche, frequenza di salvataggio e algoritmo dell’indice. Su Kaggle trovi anche <strong>Export Model</strong>, da cui scaricare il <code translate="no" v-pre>.pth</code> per l’inferenza e l’eventuale <code translate="no" v-pre>.index</code>. Per riprendere un training, usa checkpoint che corrispondono alla configurazione dell’esperimento.</p>
+<span id="samples-and-audio-cleanup" class="docs-anchor"></span><h2 id="samples-e-pulizia-audio">Samples e pulizia audio</h2>
+<p>Metti in coda clip WAV, MP3, FLAC, OGG o M4A. Ogni clip può seguire le impostazioni comuni dello Step 3 oppure avere valori propri. Parti da zero semitoni. Il controllo permette di andare da −32 a +32 e offre scorciatoie per −12, −5, 0, +5 e +12. Per una prova veloce puoi usare uno dei sei campioni di parlato asciutti a 32 kHz, con trascrizione. La pulizia nel browser può applicare un filtro passa-alto da 65 a 95 Hz e un espansore soft-knee fra 1 e 30 dB, con esportazione WAV PCM a 16 bit. Ascolta il file prima e dopo la pulizia. L’anteprima CLI mostra il comando <code translate="no" v-pre>core.py</code>.</p>
+<span id="models-voice-blender-and-tts" class="docs-anchor"></span><h2 id="models-voice-blender-e-tts">Models, Voice Blender e TTS</h2>
+<p>In <strong>Models</strong> puoi accodare pretrain personalizzati nel Boot Manifest. Il gestore riconosce URL Hugging Face e Pixeldrain, può estrarre ZIP supportati e tentare di trovare il file del discriminatore abbinato. Verifica la coppia prima di attivare <strong>Custom Pretrains</strong>. È disponibile Legacy Core 1.5 V2 a 32 kHz. I pretrain originali di Applio restano selezionati finché non attivi quelli personalizzati. <strong>Voice Blender</strong> guida nella scelta dei modelli, nelle impostazioni di fusione e nell’esportazione. <strong>TTS</strong> usa le voci online di Microsoft Edge, poi converte il parlato con RVC e offre controlli per pitch, velocità, indice e protezione delle consonanti.</p>
+<span id="diagnostics-and-settings" class="docs-anchor"></span><h2 id="diagnostica-e-impostazioni">Diagnostica e impostazioni</h2>
+<p><strong>Diagnostics</strong> può leggere le metriche live di Kaggle o importare <code translate="no" v-pre>.ipynb</code>, <code translate="no" v-pre>.log</code> e <code translate="no" v-pre>.txt</code>. Mostra l’andamento della Mel loss e analizza divergenza KL, feature matching, equilibrio del discriminatore, stabilità dei gradienti e variazioni verso fine training. Le percentuali di rischio e i checkpoint suggeriti sono stime. Ascolta la stessa clip con checkpoint diversi prima di scegliere. Nelle impostazioni trovi FP32 come valore iniziale, le modalità RMVPE High Register <code translate="no" v-pre>true_pitch</code> e <code translate="no" v-pre>fold</code> con limite F0 da 1000 a 2000 Hz e dieci lingue per l’interfaccia, tra cui l’arabo con layout da destra a sinistra.</p>
 <p><a href="../installation/">Installazione</a> · <a href="../cloud/">Cloud</a></p>
 
                 
@@ -216,7 +224,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-26T17:42:02.000Z">26/11/2026 · 18:42</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

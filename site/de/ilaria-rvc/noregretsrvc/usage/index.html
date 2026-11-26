@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031511685">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031985554">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849031511685" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849031985554" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031985554" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031985554" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=7">
     <script defer src="/de/static/toc-active.js?v=1"></script>
@@ -177,10 +177,12 @@
                 <!-- Page content  -->
 <span id="noregretsrvc--usage" class="docs-anchor"></span><h1 id="noregretsrvc--nutzung">NoRegretsRVC · Nutzung</h1>
 <p>NoRegretsRVC Beta 0.0 bereitet Applio-Workflows in einer Weboberfläche vor und erzeugt Notebooks.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md">Changelog</a></p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <span id="usage" class="docs-anchor"></span><h2 id="nutzung">Nutzung</h2>
 <p>Lege ein Projekt an. Wähle Abtastrate, Vocoder, Pitch-Extraktor, Encoder, Batchgröße und Epochen. Gleiche die Einstellungen mit den Basisgewichten ab. Der VRAM-Wert ist eine Schätzung.</p>
 <p>Bereite die Einstellungen in der Oberfläche vor. Führe Training und Konvertierung in einer kompatiblen Applio-Umgebung aus.</p>
+<span id="guided-training" class="docs-anchor"></span><h2 id="trainingsablauf-und-werkzeuge">Trainingsablauf und Werkzeuge</h2>
+<p>Training umfasst Konfiguration, Datenvorbereitung, Merkmalsextraktion und Training. Kaggle bietet den Export von <code translate="no" v-pre>.pth</code> und <code translate="no" v-pre>.index</code>. Samples unterstützt Warteschlangen, Einstellungen pro Clip, Transposition, Audiobereinigung im Browser und sechs 32-kHz-Beispiele. Models verwaltet Pretrains, Voice Blender mischt Modelle und TTS nutzt Edge. Empfehlungen aus Diagnostics solltest du anhand von Hörproben prüfen.</p>
 <p><a href="../installation/">Installation</a> · <a href="../cloud/">Cloud</a></p>
 
                 
@@ -216,7 +218,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-26T17:42:02.000Z">26/11/2026 · 18:42</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

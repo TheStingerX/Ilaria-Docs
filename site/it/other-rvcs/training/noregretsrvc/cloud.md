@@ -2,7 +2,7 @@
 
 NoRegretsRVC Beta 0.0 è uno studio web indipendente per configurare flussi di lavoro basati su Applio. Il repository contiene l’interfaccia e il generatore di notebook. L’installazione locale avvia lo studio nel browser.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Changelog](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Kaggle
 
@@ -11,5 +11,17 @@ Esporta il file `.ipynb` generato e importalo in un nuovo notebook privato su Ka
 Se il notebook apre un tunnel, tieni privati indirizzo e token e chiudilo quando hai finito. Usa la funzione per i segreti di Kaggle quando il notebook la supporta. Prima che termini la sessione, salva il modello e gli eventuali checkpoint per riprendere il lavoro, poi scaricane una copia. Se una cella fallisce, leggi il primo errore, controlla percorsi e quote e ripeti quel passaggio. Il generatore è documentato per Kaggle.
 
 [Kaggle](https://www.kaggle.com/code)
+
+## Dataset, Dual T4 e risorse
+
+La WebUI di Kaggle cerca i dataset in `/kaggle/input` all’apertura o quando aggiorni l’elenco. Se ne hai collegati diversi, scegli quello giusto e controlla il percorso. L’opzione di parità Dual T4, attiva per impostazione predefinita, è pensata per distribuire batch da 4 in su mantenendo, sotto le 300 epoche, il numero di passi dell’ottimizzatore previsto da Applio su una GPU. Lo stimatore usa 16 GB di VRAM, 20 GB di disco e 12 ore come riferimenti. Controlla anche le risorse e i limiti effettivi della tua sessione.
+
+## Turbo, controlli preliminari e recupero
+
+**Lossless Turbo Training** è facoltativo e attivo di default. Il progetto descrive ottimizzazioni di AdamW, cuDNN, caricamento dei dati, DDP, cache, log e salvataggio dei checkpoint. La velocità effettiva dipende dalla sessione. Prima del training, il preflight controlla WAV tagliati, `.npy` generati e `filelist.txt`. Se a fine addestramento mancano i pesi per l’inferenza, il runtime tenta un recupero con `extract_model`. Verifica che il file esportato si apra e salva a parte i checkpoint per riprendere il training.
+
+## Stima di fine e aggiornamenti
+
+La stima usa tempi delle epoche mediati e mostra l’orario secondo il browser. La percentuale di accuratezza è indicativa. Salva i file prima di applicare l’aggiornamento della WebUI e riavviare. L’ambiente Kaggle usa `NR_BUILD_REV` per evitare il ritorno a revisioni precedenti.
 
 [Installazione](installation.md) · [Uso](usage.md)

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031456880">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031945477">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849031456880" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849031945477" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031456880" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849031945477" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031456880" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849031945477" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -176,11 +176,17 @@
                 <!-- Page content  -->
 <h1 id="noregretsrvc--cloud">NoRegretsRVC · Cloud</h1>
 <p>NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md">Changelog</a></p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <h2 id="kaggle">Kaggle</h2>
 <p>Export the generated <code translate="no" v-pre>.ipynb</code> and import it into a new private Kaggle notebook. Review the cells and the Applio version they install before running them. Enable a GPU accelerator and internet access when dependency or model downloads require it. Run setup first, then the workflow cells in order. Check that the runtime can see the GPU and your dataset before starting training.</p>
 <p>If the notebook creates a tunnel, keep the URL and token private and stop the tunnel when finished. Store credentials using the provider’s secret feature where supported. Save your model and any resume checkpoints before the session ends, then download a copy. If a cell fails, inspect its first error, check file paths and quotas, and retry that stage. The generator is documented for Kaggle.</p>
 <p><a href="https://www.kaggle.com/code">Kaggle</a></p>
+<h2 id="dataset-dual-t4-and-resource-budget">Dataset, Dual T4 and resource budget</h2>
+<p>The Kaggle WebUI scans <code translate="no" v-pre>/kaggle/input</code> when it starts or refreshes. If several datasets are mounted, choose the right one and check its path. The default Dual-T4 batch parity option is designed to split batches of 4 or more while preserving the baseline single-GPU Applio optimizer steps for runs below 300 epochs. The resource advisor compares estimates against 16 GB VRAM, 20 GB disk and 12 hours as configured planning targets. Actual Kaggle resources, quotas and session duration can vary. Check the live runtime as well.</p>
+<h2 id="turbo-preflight-and-checkpoint-recovery">Turbo, preflight and checkpoint recovery</h2>
+<p>Optional <strong>Lossless Turbo Training</strong> is enabled by default. The project describes changes to AdamW batching, cuDNN, data loading, DDP, caching, logging and checkpoint writes. Treat unchanged quality and speed gains as project goals rather than benchmarks for your run. Preflight checks look for sliced WAVs, extracted <code translate="no" v-pre>.npy</code> files and <code translate="no" v-pre>filelist.txt</code>. If the final inference weights are missing, the runtime attempts a rescue export through <code translate="no" v-pre>extract_model</code>. Verify the file opens and keep resume checkpoints separately.</p>
+<h2 id="progress-and-updates">Progress and updates</h2>
+<p>The ETA uses smoothed epoch timings and the browser’s local clock. The accuracy indicator is an estimate. Check version and export your files before applying a WebUI update and restart. The Kaggle implementation uses <code translate="no" v-pre>NR_BUILD_REV</code> to guard against downgrades.</p>
 <p><a href="../installation/">Installation</a> · <a href="../usage/">Usage</a></p>
 
                 
@@ -216,7 +222,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-26T17:42:02.000Z">26/11/2026 · 18:42</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
