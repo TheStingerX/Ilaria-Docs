@@ -74,8 +74,8 @@ Utilice la navegación para encontrar guías de configuración, conversión, cap
 
 ## La documentación en cifras
 
-- **Páginas totales:** **122** páginas (`121` guías + Inicio)
-- **Total de páginas en los 6 idiomas (`en`, `it`, `es`, `fr`, `de`, `pt`):** **740** páginas (`en: 126`, `it: 126`, `es: 122`, `fr: 122`, `de: 122`, `pt: 122`)
+- **Páginas totales:** **125** páginas (`124` guías + Inicio)
+- **Total de páginas en los 6 idiomas (`en`, `it`, `es`, `fr`, `de`, `pt`):** **758** páginas (`en: 129`, `it: 129`, `es: 125`, `fr: 125`, `de: 125`, `pt: 125`)
 
 ## Algunas curiosidades sobre el sitio e Ilaria
 
