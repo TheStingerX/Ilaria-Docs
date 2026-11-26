@@ -2,6 +2,8 @@
 
 > **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · O pacote completo para Windows é a versão 2.4.7. Para atualizar a partir da 2.4.2–2.5.0, abre **Other → Update Ilaria RVC → Check for updates → Download and restart**. O ZIP de atualização exclui o ambiente de execução e os pesos dos modelos. [ZIP de atualização para Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · A AMD Preview é um pacote separado da versão 2.5.1 para Radeon compatíveis no Windows 11 com WSL2 ou Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 e ROCm 6.4.2. O pacote e o launcher foram verificados. O treino completo, a retoma e a conversão de voz em Radeon continuam por validar.
+
 [GitHub](https://github.com/TheStingerX/Ilaria-RVC) · [Hugging Face](https://huggingface.co/TheStinger/Ilaria_RVC)
 
 [Descarregar o Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)

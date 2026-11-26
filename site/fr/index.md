@@ -30,6 +30,8 @@ Si votre ordinateur ne dispose pas d’une carte NVIDIA adaptée, vous pouvez ut
 
 > **Version actuelle** · **[Ilaria RVC 2.5.1](https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md)** · Le paquet Windows complet est la version 2.4.7. Pour passer de 2.4.2–2.5.0 à la dernière version, utilisez **Other → Update Ilaria RVC → Check for updates → Download and restart**. Le ZIP de mise à jour exclut l’environnement d’exécution et les poids des modèles. [ZIP de mise à jour Windows](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true)
 
+> [Ilaria RVC 2.5.1 AMD Preview](ilaria-rvc/install/amd-preview.md) · AMD Preview est un paquet 2.5.1 distinct pour Radeon compatibles, sous Windows 11 via WSL2 ou Ubuntu 22.04 natif. Il utilise Python 3.10, PyTorch 2.6.0 et ROCm 6.4.2. Le paquet et le lanceur ont été vérifiés. L’entraînement, la reprise et la conversion complète sur Radeon restent à valider.
+
 [Télécharger Ilaria RVC 2.4.7 pour Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true) · [Parcourir les démos vocales](https://ilariarvc.shop/en/demos/) · [Lire le journal des modifications](ilaria-rvc/install/version-history.md)
 
 </div>
@@ -74,8 +76,8 @@ Utilisez la navigation pour trouver des guides de configuration, de conversion, 
 
 ## La documentation en chiffres
 
-- **Pages au total :** **125** pages (`124` guides + Accueil)
-- **Total de pages dans les 6 langues (`en`, `it`, `es`, `fr`, `de`, `pt`) :** **758** pages (`en: 129`, `it: 129`, `es: 125`, `fr: 125`, `de: 125`, `pt: 125`)
+- **Pages au total :** **126** pages (`125` guides + Accueil)
+- **Total de pages dans les 6 langues (`en`, `it`, `es`, `fr`, `de`, `pt`) :** **764** pages (`en: 130`, `it: 130`, `es: 126`, `fr: 126`, `de: 126`, `pt: 126`)
 
 ## Quelques anecdotes sur le site et sur Ilaria
 

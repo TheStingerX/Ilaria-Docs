@@ -1,5 +1,7 @@
 # Elige una aplicación RVC
 
+> [Ilaria RVC 2.5.1 AMD Preview](../ilaria-rvc/install/amd-preview.md) · AMD Preview es una versión separada de la 2.5.1 para Radeon compatibles en Windows 11 con WSL2 o Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 y ROCm 6.4.2. Se han comprobado el paquete y el iniciador. El entrenamiento, la reanudación y la conversión completa en Radeon siguen pendientes.
+
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 También puedes usar Ilaria RVC en Kaggle con su GPU remota, incluso si tu ordenador no tiene una GPU NVIDIA. [Ilaria RVC on Kaggle](../ilaria-rvc/cloud/kaggle.md)

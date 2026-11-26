@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849030208721">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031511685">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Kompatible GPUs">
-    <meta name="description" content="NVIDIA-GPU-Kompatibilität für Ilaria RVC mit CUDA-Laufzeiten, getesteter Hardware und erwarteter Unterstützung nach Architektur.">
+    <meta name="description" content="Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/de/ilaria-rvc/gpu-compatibility/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.849030208721" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849031511685" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849030208721" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849030208721" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=7">
     <script defer src="/de/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:description" content="NVIDIA-GPU-Kompatibilität für Ilaria RVC mit CUDA-Laufzeiten, getesteter Hardware und erwarteter Unterstützung nach Architektur.">
+    <meta property="og:description" content="Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
-    <meta name="twitter:description" content="NVIDIA-GPU-Kompatibilität für Ilaria RVC mit CUDA-Laufzeiten, getesteter Hardware und erwarteter Unterstützung nach Architektur.">
+    <meta name="twitter:description" content="Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria und Mario spielen auf Handheld-Konsolen vor einem dunkelvioletten Hintergrund">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/gpu-compatibility/">
@@ -176,7 +176,10 @@
 
                 <!-- Page content  -->
 <span id="compatible-gpus" class="docs-anchor"></span><h1 id="kompatible-gpus">Kompatible GPUs</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">NVIDIA-GPU-Kompatibilität für Ilaria RVC mit CUDA-Laufzeiten, getesteter Hardware und erwarteter Unterstützung nach Architektur.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2.</div>
+<blockquote>
+<p><a href="../amd-preview/">Ilaria RVC 2.5.1 AMD Preview</a> · Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2. Paket und Launcher wurden geprüft. Vollständiges Training, Wiederaufnahme und Sprachkonvertierung auf Radeon müssen noch validiert werden.</p>
+</blockquote>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)</a></p>
 <h2 id="windows">Windows</h2>
 <p>Die Windows-ZIP ist rund 5,00 GB groß. Entpacke sie und starte <code translate="no" v-pre>RUN_ILARIA_RVC.bat</code>, für Protokolle <code translate="no" v-pre>RUN_ILARIA_RVC_LOGS.bat</code>. ContentVec und RMVPE sind enthalten.</p>
@@ -195,7 +198,8 @@
 untime-cu126 (CUDA 12.6) | Inferenz &amp; Training | FP32 | **Expected** |
 | **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferenz &amp; Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
 | **Multi-GPU** | Mehrere NVIDIA | Variiert | Aktive Runtime | Training | Je nach aktiver GPU | **Expected**; VRAM addiert sich **nicht** |
-| **AMD / Intel / iGPU** | RDNA / Arc / iGPU | N/A | Keine lokal unter Windows | **Unsupported** lokal | N/A | **Unsupported**; nutze [Cloud](../cloud/cloud.md) oder DirectML |">
+| **AMD Radeon** | RDNA | — | ROCm 6.4.2 · WSL2 / Ubuntu 22.04 | Training und Konvertierung noch zu validieren | `FP32` | [AMD Preview](amd-preview.md) |
+| **Intel / iGPU** | Arc / iGPU | N/A | Keine lokal unter Windows | **Unsupported** lokal | N/A | **Unsupported**; nutze [Cloud](../cloud/cloud.md) oder DirectML |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -283,8 +287,17 @@ untime-cu126 (CUDA 12.6) | Inferenz &amp; Training | FP32 | **Expected** |
 <td><strong>Expected</strong>; VRAM addiert sich <strong>nicht</strong></td>
 </tr>
 <tr>
-<td><strong>AMD / Intel / iGPU</strong></td>
-<td>RDNA / Arc / iGPU</td>
+<td><strong>AMD Radeon</strong></td>
+<td>RDNA</td>
+<td>—</td>
+<td>ROCm 6.4.2 · WSL2 / Ubuntu 22.04</td>
+<td>Training und Konvertierung noch zu validieren</td>
+<td><code translate="no" v-pre>FP32</code></td>
+<td><a href="../amd-preview/">AMD Preview</a></td>
+</tr>
+<tr>
+<td><strong>Intel / iGPU</strong></td>
+<td>Arc / iGPU</td>
 <td>N/A</td>
 <td>Keine lokal unter Windows</td>
 <td><strong>Unsupported</strong> lokal</td>
@@ -1042,7 +1055,7 @@ o kernel image is available**: CUDA-Build passt nicht zur GPU-Architektur.</p>
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-25T19:35:25.000Z">25/11/2026 · 20:35</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-26T18:03:36.000Z">26/11/2026 · 19:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

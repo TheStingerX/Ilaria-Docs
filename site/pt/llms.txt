@@ -34,10 +34,11 @@
 ### Installation
 
 - [Instalação e atualizações](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/installation.md): Baixe a versão NVIDIA suportada em Hugging Face. Extraia todo o arquivo em uma pasta local gravável e execute RUN_ILARIA_RVC.bat lá.
+- [Ilaria RVC 2.5.1 AMD Preview](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/amd-preview.md): A AMD Preview é um pacote separado da versão 2.5.1 para Radeon compatíveis no Windows 11 com WSL2 ou Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 e ROCm 6.4.2.
 - [Logs e recuperação](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/troubleshooting.md): Comece com Pitch 0, um WAV curto e seco e um modelo em bom estado. Altere uma configuração por teste. Consulte Controles de inferência para efeitos e opções de exportação.
 - [Arquivos, configuração e manutenção da fonte](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/source-layout.md): Uma exportação de inferência pode ser usada para conversão.
 - [Requisitos do sistema para o Ilaria RVC](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/requirements.md): O Ilaria RVC corre localmente no teu PC usando PyTorch 2.10.0 e NVIDIA CUDA.
-- [GPU compatíveis](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/gpu-compatibility.md): Compatibilidade de GPUs NVIDIA com o Ilaria RVC, com versões de CUDA, hardware testado e suporte previsto por arquitetura.
+- [GPU compatíveis](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/gpu-compatibility.md): A AMD Preview é um pacote separado da versão 2.5.1 para Radeon compatíveis no Windows 11 com WSL2 ou Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 e ROCm 6.4.2.
 - [Histórico de versões e diferenças de lançamento](https://docs.ilariarvc.shop/pt/ilaria-rvc/install/version-history.md): A versão mais recente para Windows é a 2.5.1. Verifique sua versão instalada em Outros → Atualizar Ilaria RVC.
 
 ### Cloud

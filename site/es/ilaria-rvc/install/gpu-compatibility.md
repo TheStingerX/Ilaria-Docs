@@ -1,5 +1,7 @@
 # GPU compatibles
 
+> [Ilaria RVC 2.5.1 AMD Preview](amd-preview.md) · AMD Preview es una versión separada de la 2.5.1 para Radeon compatibles en Windows 11 con WSL2 o Ubuntu 22.04 nativo. Usa Python 3.10, PyTorch 2.6.0 y ROCm 6.4.2. Se han comprobado el paquete y el iniciador. El entrenamiento, la reanudación y la conversión completa en Radeon siguen pendientes.
+
 [Descarga Ilaria RVC 2.4.7 para Windows (ZIP)](https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true)
 
 ## Windows
@@ -26,7 +28,8 @@ Las pruebas de cálculo, retropropagación y carga de ContentVec se realizaron e
 untime-cu126 (CUDA 12.6) | Inferencia y Training | FP32 | **Expected** |
 | **Workstation / Datacenter** (T4, L4, RTX A) | Turing / Ampere / Ada | 7.5–8.9 | CUDA 12.8 (2.10.0) | Inferencia y Training | FP32, FP16 (BF16 Ampere+) | **Expected** |
 | **Multi-GPU** | Varias NVIDIA | Variable | Runtime activo | Training | Según GPU activa | **Expected**; la VRAM **no** se suma |
-| **AMD / Intel / Integrada** | RDNA / Arc / iGPU | N/A | Ninguno en Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../cloud/cloud.md) o DirectML |
+| **AMD Radeon** | RDNA | — | ROCm 6.4.2 · WSL2 / Ubuntu 22.04 | Entrenamiento y conversión pendientes de validar | `FP32` | [AMD Preview](amd-preview.md) |
+| **Intel / Integrada** | Arc / iGPU | N/A | Ninguno en Windows local | **Unsupported** local | N/A | **Unsupported**; usa [Cloud](../cloud/cloud.md) o DirectML |
 
 ### Comprobar GPU en Windows y diagnosticar errores
 

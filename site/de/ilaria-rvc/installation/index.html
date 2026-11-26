@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/de">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849030208721">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849031511685">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.849030208721" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849031511685" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849030208721" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849030208721" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849031511685" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/de/static/ilaria-pink.css?v=7">
     <script defer src="/de/static/toc-active.js?v=1"></script>
@@ -176,10 +176,13 @@
 
                 <!-- Page content  -->
 <span id="installation-and-updates" class="docs-anchor"></span><h1 id="installation-und-updates">Installation und Updates</h1>
-<aside class="docs-gpu-compatibility" aria-label="GPU-Kompatibilität" style="margin:1rem 0 1.4rem"><strong>GPU-Kompatibilität</strong><div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.4rem"><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a8cf68;border-radius:.5rem"><strong><span aria-hidden="true">●</span> NVIDIA</strong><br><small>CUDA</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a999a680;border-radius:.5rem"><strong><span aria-hidden="true">◌</span> AMD</strong><br><small>GPU-Unterstützung unbestätigt</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a999a680;border-radius:.5rem"><strong><span aria-hidden="true">◌</span> Intel</strong><br><small>GPU-Unterstützung unbestätigt</small></div></div></aside>
+<aside class="docs-gpu-compatibility" aria-label="GPU-Kompatibilität" style="margin:1rem 0 1.4rem"><strong>GPU-Kompatibilität</strong><div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.4rem"><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a8cf68;border-radius:.5rem"><strong><span aria-hidden="true">●</span> NVIDIA</strong><br><small>CUDA</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #ff8793;border-radius:.5rem"><strong><span aria-hidden="true">●</span> AMD</strong><br><small>ROCm 6.4.2 · Preview</small></div><div style="flex:1 1 9rem;min-width:0;padding:.45rem .65rem;border:1px solid #a999a680;border-radius:.5rem"><strong><span aria-hidden="true">◌</span> Intel</strong><br><small>GPU-Unterstützung unbestätigt</small></div></div></aside>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Laden Sie den unterstützten NVIDIA-Build von Hugging Face] herunter.</div>
 <blockquote>
 <p><strong><a href="https://huggingface.co/TheStinger/Ilaria_RVC/blob/main/releases/2.5.1/RELEASE-NOTES.md">Ilaria RVC 2.5.1</a></strong> · Das vollständige Windows-Paket ist Version 2.4.7. Aktualisiere von 2.4.2–2.5.0 über <strong>Other → Update Ilaria RVC → Check for updates → Download and restart</strong>. Das Update-ZIP enthält weder die Laufzeit noch die Modellgewichte. <a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.5.1/ILARIA_RVC-update-2.5.1.zip?download=true">Windows-Update als ZIP</a></p>
+</blockquote>
+<blockquote>
+<p><a href="../amd-preview/">Ilaria RVC 2.5.1 AMD Preview</a> · Die AMD Preview ist ein separates Paket der Version 2.5.1 für kompatible Radeon-GPUs unter Windows 11 mit WSL2 oder nativem Ubuntu 22.04. Sie verwendet Python 3.10, PyTorch 2.6.0 und ROCm 6.4.2. Paket und Launcher wurden geprüft. Vollständiges Training, Wiederaufnahme und Sprachkonvertierung auf Radeon müssen noch validiert werden.</p>
 </blockquote>
 <p><a href="https://github.com/TheStingerX/Ilaria-RVC">GitHub</a> · <a href="https://huggingface.co/TheStinger/Ilaria_RVC">Hugging Face</a></p>
 <p><a href="https://huggingface.co/TheStinger/Ilaria_RVC/resolve/main/releases/2.4.7/ILARIA_RVC-2.4.7.zip?download=true">Ilaria RVC 2.4.7 für Windows herunterladen (ZIP)</a></p>
@@ -263,10 +266,10 @@
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/troubleshooting/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ilaria-rvc/amd-preview/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Protokolle und Wiederherstellung</span>
+                                <span class="block mt-1">AMD Preview</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -278,7 +281,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-25T02:11:41.000Z">25/11/2026 · 03:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Zuletzt geändert <time datetime="2026-11-26T18:03:36.000Z">26/11/2026 · 19:03</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
