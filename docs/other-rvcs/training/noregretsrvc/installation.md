@@ -9,7 +9,7 @@ permalink: /ilaria-rvc/noregretsrvc/installation/
 
 NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Changelog](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Installation
 
@@ -22,5 +22,7 @@ node --version
 npm install
 npm run dev
 ~~~
+
+The public repository also ships a ready-to-import Kaggle notebook and the associated Streamlit workflow. For training on Kaggle, follow the Cloud guide.
 
 [Usage](usage.md) · [Cloud](cloud.md)

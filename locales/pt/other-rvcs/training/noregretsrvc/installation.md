@@ -9,7 +9,7 @@ permalink: /ilaria-rvc/noregretsrvc/installation/
 
 O NoRegretsRVC Beta 0.0 prepara fluxos Applio numa interface web e gera notebooks.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Changelog](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/CHANGELOG.md)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Instalação
 
@@ -22,5 +22,7 @@ node --version
 npm install
 npm run dev
 ~~~
+
+O repositório inclui um notebook Kaggle pronto a importar e um fluxo Streamlit.
 
 [Utilização](usage.md) · [Cloud](cloud.md)
