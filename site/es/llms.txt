@@ -89,6 +89,7 @@
 - [Use Applio con un micrófono](https://docs.ilariarvc.shop/es/other-rvcs/training/applio/realtime.md): Demuestre que su modelo funciona con un clip grabado antes de configurar el audio en vivo.
 - [Convierte un guión corto en voz convertida](https://docs.ilariarvc.shop/es/other-rvcs/training/applio/tts.md): Applio utiliza una voz Edge TTS en línea para leer tu texto y un modelo RVC para cambiar la voz generada.
 - [Applio Realtime en la nube](https://docs.ilariarvc.shop/es/other-rvcs/training/applio/cloud.md): Ejecuta Applio y su pestaña Realtime en la nube con Google Colab, Kaggle o Lightning.AI cuando tu PC no tenga una GPU compatible.
+- [Applio en Android con Termux](https://docs.ilariarvc.shop/es/other-rvcs/training/applio/android.md): Applio 3.6.2 mediante Ubuntu ARM64 en proot. Convierte archivos por CPU. Para tiempo real o entrenamiento usa otro entorno.
 
 #### RVC WebUI (Mainline - Original RVC)
 
@@ -220,6 +221,8 @@
 ### TTS
 
 - [GPT-SoVITS](https://docs.ilariarvc.shop/es/non-rvc/tts/gpt-sovits.md): Empieza con síntesis zero-shot usando una grabación, su transcripción y una frase nueva. El ajuste fino requiere clips etiquetados y produce dos archivos de pesos, GPT y SoVITS.
+- [Piper](https://docs.ilariarvc.shop/es/non-rvc/tts/piper.md): Piper sintetiza voz localmente y funciona sin conexión tras descargar la voz.
+- [Qwen3-TTS](https://docs.ilariarvc.shop/es/non-rvc/tts/qwen3-tts.md): CustomVoice usa voces predefinidas, VoiceDesign recibe una descripción y Base usa una grabación autorizada.
 
 ### Other Audio Stuff
 

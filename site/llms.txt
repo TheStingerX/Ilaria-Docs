@@ -89,6 +89,7 @@
 - [Use Applio with a microphone](https://docs.ilariarvc.shop/other-rvcs/training/applio/realtime.md): Prove that your model works with one recorded clip before setting up live audio. Use headphones for monitoring so the microphone cannot re-capture the speakers.
 - [Turn a short script into converted speech](https://docs.ilariarvc.shop/other-rvcs/training/applio/tts.md): Applio uses an online Edge TTS voice to read your text and an RVC model to change the generated voice.
 - [Applio Realtime on Cloud](https://docs.ilariarvc.shop/other-rvcs/training/applio/cloud.md): Run Applio and its Realtime tab in the cloud using Google Colab, Kaggle, or Lightning.AI when your PC lacks a supported GPU.
+- [Applio on Android with Termux](https://docs.ilariarvc.shop/other-rvcs/training/applio/android.md): This community workflow runs the Applio 3.6.2 Gradio interface on an ARM64 Android phone inside Ubuntu via proot. It uses CPU inference. Start with a short clip.
 
 #### RVC WebUI (Mainline - Original RVC)
 
@@ -227,6 +228,8 @@
 - [Microsoft Edge TTS](https://docs.ilariarvc.shop/non-rvc/tts/edge.md): Open a page in Microsoft Edge and choose Read aloud from the browser menu where available. Use Voice options to select a language, voice and reading speed. Immersive Reader can make supported pages easier to read and listen to.
 - [Kokoro TTS](https://docs.ilariarvc.shop/non-rvc/tts/kokoro.md): This guide uses the standalone CLI by nazdridoy. It generates speech from text with preset voices. Install it in an isolated Python environment or with uv tool install kokoro-tts.
 - [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.
+- [Piper](https://docs.ilariarvc.shop/non-rvc/tts/piper.md): Piper is a neural TTS engine that runs locally. The installation and first voice download need internet. Once both voice files are present, synthesis works offline.
+- [Qwen3-TTS](https://docs.ilariarvc.shop/non-rvc/tts/qwen3-tts.md): Qwen3-TTS has three model families. CustomVoice uses named preset speakers. VoiceDesign builds a voice from a natural-language description. Base uses a reference recording from a speaker who granted permission.
 
 ### Other Audio Stuff
 

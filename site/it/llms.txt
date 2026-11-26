@@ -89,6 +89,7 @@
 - [Usa Applio con un microfono](https://docs.ilariarvc.shop/it/other-rvcs/training/applio/realtime.md): Verifica che il modello funzioni con una clip registrata prima di configurare l'audio dal vivo.
 - [Genera il parlato e convertilo con Applio](https://docs.ilariarvc.shop/it/other-rvcs/training/applio/tts.md): Applio utilizza una voce Edge TTS online per leggere il tuo testo e un modello RVC per modificare la voce generata.
 - [Applio Realtime nel Cloud](https://docs.ilariarvc.shop/it/other-rvcs/training/applio/cloud.md): Esegui Applio e la scheda Realtime nel cloud con Google Colab, Kaggle o Lightning.AI quando il tuo PC non ha una GPU supportata.
+- [Applio su Android con Termux](https://docs.ilariarvc.shop/it/other-rvcs/training/applio/android.md): Questo percorso della community esegue l’interfaccia Gradio di Applio 3.6.2 su Android ARM64, dentro Ubuntu tramite proot. La conversione usa la CPU. Parti da una clip breve.
 
 #### RVC WebUI (Mainline - Original RVC)
 
@@ -227,6 +228,8 @@
 - [Microsoft Edge TTS](https://docs.ilariarvc.shop/it/non-rvc/tts/edge.md): Apri la pagina in Microsoft Edge e scegli Leggi ad alta voce dal menu del browser, dove disponibile. Nelle opzioni della voce puoi scegliere lingua, voce e velocità.
 - [Kokoro TTS](https://docs.ilariarvc.shop/it/non-rvc/tts/kokoro.md): Questa guida usa il programma autonomo di nazdridoy. Genera parlato da testo con voci preimpostate. Installalo in un ambiente Python separato oppure usa uv tool install kokoro-tts.
 - [GPT-SoVITS](https://docs.ilariarvc.shop/it/non-rvc/tts/gpt-sovits.md): GPT-SoVITS legge un testo usando una registrazione come riferimento vocale. Inizia dalla sintesi zero-shot. Ti bastano un breve audio di riferimento, la sua trascrizione e il testo che vuoi far leggere.
+- [Piper](https://docs.ilariarvc.shop/it/non-rvc/tts/piper.md): Piper è un motore TTS neurale che gira in locale. L’installazione e il primo download della voce richiedono internet. Una volta scaricati entrambi i file della voce, puoi generare audio offline.
+- [Qwen3-TTS](https://docs.ilariarvc.shop/it/non-rvc/tts/qwen3-tts.md): Qwen3-TTS ha tre famiglie. CustomVoice usa voci preimpostate. VoiceDesign costruisce una voce a partire da una descrizione. Base usa una registrazione di riferimento di una persona che ha dato il consenso.
 
 ### Other Audio Stuff
 
