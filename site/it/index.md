@@ -76,8 +76,8 @@ Utilizzare la navigazione per trovare guide di configurazione, conversione, form
 
 ## La documentazione in numeri
 
-- **Pagine totali:** **133** pagine (`132` guide + Home)
-- **Totale pagine in tutte e 6 le lingue (`en`, `it`, `es`, `fr`, `de`, `pt`):** **782** pagine (`en: 133`, `it: 133`, `es: 129`, `fr: 129`, `de: 129`, `pt: 129`)
+- **Pagine totali:** **141** pagine (`140` guide + Home)
+- **Totale pagine in tutte e 6 le lingue (`en`, `it`, `es`, `fr`, `de`, `pt`):** **830** pagine (`en: 141`, `it: 141`, `es: 137`, `fr: 137`, `de: 137`, `pt: 137`)
 
 ## Qualche curiosità sul sito e su Ilaria
 
