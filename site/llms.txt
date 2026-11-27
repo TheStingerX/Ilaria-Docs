@@ -225,11 +225,6 @@
 
 ### TTS
 
-- [Microsoft Edge TTS](https://docs.ilariarvc.shop/non-rvc/tts/edge.md): Open a page in Microsoft Edge and choose Read aloud from the browser menu where available. Use Voice options to select a language, voice and reading speed. Immersive Reader can make supported pages easier to read and listen to.
-- [Kokoro TTS](https://docs.ilariarvc.shop/non-rvc/tts/kokoro.md): This guide uses the standalone CLI by nazdridoy. It generates speech from text with preset voices. Install it in an isolated Python environment or with uv tool install kokoro-tts.
-- [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.
-- [Piper](https://docs.ilariarvc.shop/non-rvc/tts/piper.md): Piper is a neural TTS engine that runs locally. The installation and first voice download need internet. Once both voice files are present, synthesis works offline.
-- [Qwen3-TTS](https://docs.ilariarvc.shop/non-rvc/tts/qwen3-tts.md): Qwen3-TTS has three model families. CustomVoice uses named preset speakers. VoiceDesign builds a voice from a natural-language description. Base uses a reference recording from a speaker who granted permission.
 
 #### VoiceStudio
 
@@ -241,6 +236,11 @@
 - [VoiceStudio · Transcription and dictation](https://docs.ilariarvc.shop/non-rvc/tts/voicestudio/transcription.md): VoiceStudio v0.5.8 · Transcription and dictation
 - [VoiceStudio · Narration and long projects](https://docs.ilariarvc.shop/non-rvc/tts/voicestudio/long-projects.md): VoiceStudio v0.5.8 · Narration and long projects
 - [VoiceStudio · Troubleshooting](https://docs.ilariarvc.shop/non-rvc/tts/voicestudio/troubleshooting.md): VoiceStudio v0.5.8 · Troubleshooting
+- [Microsoft Edge TTS](https://docs.ilariarvc.shop/non-rvc/tts/edge.md): Open a page in Microsoft Edge and choose Read aloud from the browser menu where available. Use Voice options to select a language, voice and reading speed. Immersive Reader can make supported pages easier to read and listen to.
+- [Kokoro TTS](https://docs.ilariarvc.shop/non-rvc/tts/kokoro.md): This guide uses the standalone CLI by nazdridoy. It generates speech from text with preset voices. Install it in an isolated Python environment or with uv tool install kokoro-tts.
+- [GPT-SoVITS](https://docs.ilariarvc.shop/non-rvc/tts/gpt-sovits.md): GPT-SoVITS turns written text into speech using a voice reference. Start with zero-shot inference: provide a reference recording, its transcript and the words to synthesize.
+- [Piper](https://docs.ilariarvc.shop/non-rvc/tts/piper.md): Piper is a neural TTS engine that runs locally. The installation and first voice download need internet. Once both voice files are present, synthesis works offline.
+- [Qwen3-TTS](https://docs.ilariarvc.shop/non-rvc/tts/qwen3-tts.md): Qwen3-TTS has three model families. CustomVoice uses named preset speakers. VoiceDesign builds a voice from a natural-language description. Base uses a reference recording from a speaker who granted permission.
 
 ### Other Audio Stuff
 
