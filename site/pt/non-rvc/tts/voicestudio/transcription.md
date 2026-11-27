@@ -10,4 +10,10 @@ Em Transcriptions, carrega um excerto curto e confirma o motor ASR, idioma e op�
 
 Para ditar, autoriza o microfone, escolhe o modelo e testa num documento em branco. Se não colar no destino, consulta o histórico e a área de transferência.
 
+## Verificação passo a passo
+
+1. Transcreve um excerto com um nome e um número.
+2. Confirma ambos e verifica as etiquetas dos falantes.
+3. Experimenta o ditado num documento em branco e consulta a área de transferência se o texto não for inserido.
+
 [Primeira síntese](first-run.md) · [Resolução de problemas](troubleshooting.md)

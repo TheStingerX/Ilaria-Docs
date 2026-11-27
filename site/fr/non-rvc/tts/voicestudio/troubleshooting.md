@@ -10,4 +10,10 @@ Si l’application ne démarre pas, vérifiez le paquet et la première erreur. 
 
 Avant de signaler le problème, notez version, système, GPU, moteur et étapes. Retirez les données privées des journaux et sauvegardez les projets avant réinstallation.
 
+## Vérification pas à pas
+
+1. Vérifiez fenêtre, backend, téléchargement, génération puis export.
+2. Testez sur CPU et avec un fichier court.
+3. Notez version, moteur et première erreur.
+
 [Installation](installation.md) · [Modèles et accélération](engines.md)

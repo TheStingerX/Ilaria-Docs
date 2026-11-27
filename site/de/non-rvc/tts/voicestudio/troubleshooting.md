@@ -10,4 +10,10 @@ Prüfe bei Startfehlern Installationspaket, Architektur und erste Fehlermeldung.
 
 Notiere Version, Betriebssystem, GPU, Engine und genaue Schritte. Entferne private Daten aus Logs und sichere Projekte vor einer Neuinstallation.
 
+## Schrittweise Prüfung
+
+1. Prüfe Fenster, Backend, Download, Generierung und Export der Reihe nach.
+2. Teste CPU und einen kurzen Ausschnitt.
+3. Notiere Version, Engine und erste Fehlermeldung.
+
 [Installation](installation.md) · [Modelle und Beschleunigung](engines.md)

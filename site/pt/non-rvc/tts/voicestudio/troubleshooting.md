@@ -10,4 +10,10 @@ Se a aplicação não abrir, verifica pacote, arquitetura e primeiro erro. Se fa
 
 Regista versão, sistema, GPU, motor e passos exatos. Remove dados privados dos registos e cria cópias de segurança dos projetos antes de reinstalar.
 
+## Verificação passo a passo
+
+1. Verifica janela, backend, transferência dos pesos, geração e exportação.
+2. Testa na CPU e com áudio curto.
+3. Regista a versão, o motor e a primeira mensagem de erro.
+
 [Instalação](installation.md) · [Modelos e aceleração](engines.md)

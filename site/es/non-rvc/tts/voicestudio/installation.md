@@ -10,4 +10,10 @@ Elige el instalador de la versión 0.5.8 para tu sistema. Usa EXE x64 en Windows
 
 Tras abrir la aplicación, espera a que se prepare el backend. Descarga en el gestor el motor de tu primer proyecto. Comprueba espacio y conexión, y sintetiza una frase como prueba.
 
+## Comprobación paso a paso
+
+1. Instala el paquete que corresponda a la arquitectura.
+2. Abre la app, comprueba el backend, instala un solo motor y genera una frase.
+3. Si un acelerador falla, repite con CPU.
+
 [Primera síntesis](first-run.md) · [Modelos y aceleración](engines.md)

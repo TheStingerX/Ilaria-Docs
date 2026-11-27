@@ -10,4 +10,10 @@ Choisissez le paquet 0.5.8 adapté au système. Sous Windows x64, prenez l’EXE
 
 Attendez la préparation du backend. Dans le gestionnaire de modèles, installez le moteur de votre premier essai et vérifiez l’espace disponible. Générez une phrase courte.
 
+## Vérification pas à pas
+
+1. Installez le paquet correspondant à l’architecture.
+2. Ouvrez l’application, vérifiez le backend, installez un seul moteur et synthétisez une phrase.
+3. En cas d’échec GPU, refaites l’essai sur CPU.
+
 [Première synthèse](first-run.md) · [Modèles et accélération](engines.md)

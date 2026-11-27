@@ -10,4 +10,10 @@ Wähle eine installierte Engine, eine Stimme und eine unterstützte Sprache. Sch
 
 Halte Text und Stimme beim Einstellungsvergleich konstant. Schreibe Zahlen und Abkürzungen bei falscher Aussprache aus.
 
+## Schrittweise Prüfung
+
+1. Erzeuge zwei Sätze mit einer Pause.
+2. Prüfe Anfang, Ende und Namen.
+3. Korrigiere jeweils einen Punkt und öffne die WAV später in einem anderen Player.
+
 [Installation](installation.md) · [Referenzstimmen und Voice Design](voices.md) · [Transkription und Diktat](transcription.md)

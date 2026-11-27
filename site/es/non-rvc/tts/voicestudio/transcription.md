@@ -10,4 +10,10 @@ En Transcriptions, sube un clip corto y comprueba motor, idioma y disponibilidad
 
 Para dictar, concede acceso al micrófono y elige un modelo. Prueba en un documento vacío. Si el texto no llega a la ventana, revisa historial y portapapeles.
 
+## Comprobación paso a paso
+
+1. Transcribe una grabación que contenga un nombre y un número.
+2. Comprueba ambos y revisa etiquetas de hablante si las usas.
+3. Para el dictado, prueba en un documento vacío y revisa el portapapeles si no se inserta.
+
 [Primera síntesis](first-run.md) · [Solución de problemas](troubleshooting.md)

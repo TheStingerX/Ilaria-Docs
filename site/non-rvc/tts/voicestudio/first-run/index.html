@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068086103">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068507828">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.849068086103" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.849068507828" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -185,6 +185,17 @@
 </ol>
 <h2 id="run-a-controlled-comparison">Run a controlled comparison</h2>
 <p>Keep text, language and voice fixed while changing one setting. Spell out abbreviations or numbers that are read incorrectly. For a long project, test a paragraph before rendering the full script and retain the successful segments.</p>
+<h2 id="prepare-a-test-sentence">Prepare a test sentence</h2>
+<ol>
+<li>Open speech generation and identify the active engine.</li>
+<li>Choose an available voice and set the language of the script.</li>
+<li>Enter two simple sentences, such as “This is a test. Listen to the pause between sentences.”</li>
+<li>Note the engine, voice and language. Keep default values until you get playable audio.</li>
+</ol>
+<h2 id="listen-fix-and-export">Listen, fix and export</h2>
+<p>Check that playback starts. Listen for initial words, pauses, numbers and the last word. Spell out a misread number. If a word is missing, isolate it in a short sentence and regenerate with the same voice. Save the test under a distinct name and open it in another player.</p>
+<h2 id="when-a-voice-or-language-is-missing">When a voice or language is missing</h2>
+<p>Check that the model is installed and the selected engine offers that combination. Languages are engine-specific. To separate a text problem from an engine problem, repeat with a preset voice and a documented language.</p>
 <p><a href="../installation/">Installation</a> · <a href="../voices/">Reference voices and Voice Design</a> · <a href="../transcription/">Transcription and dictation</a></p>
 
                 
@@ -220,7 +231,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:12:57.000Z">27/11/2026 · 05:12</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:21:10.000Z">27/11/2026 · 05:21</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

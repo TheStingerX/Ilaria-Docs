@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068086103">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068507828">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.849068086103" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.849068507828" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -180,6 +180,16 @@
 <p>If the app does not start, check the package, architecture and first backend message. If a model is missing, check its name, free space, connectivity and download status. If input fails, try a short playable WAV. If only acceleration fails, try CPU and note the engine and backend.</p>
 <h2 id="prepare-a-reproducible-report">Prepare a reproducible report</h2>
 <p>Record app version, OS, GPU, model and first error. Reproduce with a short sentence or clip. Describe the exact step and expected result. Remove tokens, personal paths and private clips from anything you share. Back up projects before reinstalling or switching versions.</p>
+<h2 id="check-in-order">Check in order</h2>
+<ol>
+<li><strong>The window does not open.</strong> Check architecture and release package. Relaunch and capture the first error.</li>
+<li><strong>The window opens, the backend fails.</strong> Check backend status and try a supported CPU path.</li>
+<li><strong>The model is not ready.</strong> Check disk, connectivity and download status in the model manager.</li>
+<li><strong>Generation starts but fails.</strong> Use a short phrase or WAV with a known supported engine and language.</li>
+<li><strong>The exported file fails.</strong> Open it in a separate player, check that it is nonempty and try exporting a single segment.</li>
+</ol>
+<h2 id="record-useful-information">Record useful information</h2>
+<p>Record the exact version and package. List the steps to reproduce the issue, including whether CPU worked, whether the problem affects one model, and whether a shorter clip changes the outcome. Use shareable test audio or text.</p>
 <p><a href="../installation/">Installation</a> · <a href="../engines/">Models and acceleration</a></p>
 
                 
@@ -215,7 +225,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:06:15.000Z">27/11/2026 · 05:06</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:21:10.000Z">27/11/2026 · 05:21</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

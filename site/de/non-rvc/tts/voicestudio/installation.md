@@ -10,4 +10,11 @@ Wähle das Paket der Version 0.5.8 für dein System. Unter Windows x64 nutze die
 
 Warte beim ersten Start auf das Backend. Lade im Modellmanager nur die benötigte Engine herunter und prüfe den Speicherplatz. Erzeuge danach einen kurzen Testsatz.
 
+## Schrittweise Prüfung
+
+1. Installiere das Paket für deine Architektur.
+2. Starte die App, prüfe das Backend und installiere nur eine Engine.
+3. Erzeuge einen Testsatz.
+4. Bei einem GPU-Fehler teste erneut auf der CPU.
+
 [Erste Synthese](first-run.md) · [Modelle und Beschleunigung](engines.md)

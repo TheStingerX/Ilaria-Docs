@@ -12,4 +12,15 @@
 
 Grant microphone access and select a dictation model. Some models stream text while you speak, while others process after you stop. Test in a blank document. If the text does not paste into the target window, check history or the clipboard and the permissions required by your OS.
 
+## First controlled transcription
+
+1. Prepare a short clip containing a technical term and a known name.
+2. Select an ASR model for the language. If automatic detection is wrong, set the language explicitly where available.
+3. Transcribe and compare text with audio. Review names, numbers and negatives.
+4. If speaker labels matter, test an excerpt with two people. Check each speaker change against the audio.
+
+## Set up the microphone and test dictation
+
+In **Transcriptions**, install a model suited to accuracy or low latency. Open a blank document, start **Start dictation**, speak and stop recording. Check the target window. If insertion fails, try the clipboard and history before changing engines. If there is no text, check microphone permissions and system input levels.
+
 [First synthesis](first-run.md) · [Troubleshooting](troubleshooting.md)

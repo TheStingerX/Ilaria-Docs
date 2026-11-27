@@ -10,4 +10,10 @@ Jede Aufgabe benötigt eine Engine und passende Gewichte. Prüfe Sprache, Größ
 
 Die CPU dient als Referenz. CUDA ist für NVIDIA. Bei AMD hängt ROCm von Karte und Engine ab. Einige GGUF-Engines bieten Vulkan und Apple Silicon unterstützt Metal. Teste beim Wechsel denselben Satz.
 
+## Schrittweise Prüfung
+
+1. Entscheide zwischen TTS und ASR.
+2. Prüfe Sprache und Gerät der Engine vor dem Download.
+3. Vergleiche CPU und GPU nach einem Probelauf mit demselben Text.
+
 [Erste Synthese](first-run.md) · [Fehlerbehebung](troubleshooting.md)

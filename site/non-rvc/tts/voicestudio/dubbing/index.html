@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068086103">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068507828">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../../resources/css/retype.css?v=4.6.0.849068086103" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.849068507828" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068086103" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -185,6 +185,20 @@
 </ol>
 <h2 id="check-timing-and-export">Check timing and export</h2>
 <p>If a line runs long, shorten the translation while preserving meaning and regenerate the segment. Check overlapping speakers and subtitles. Importing an <code translate="no" v-pre>.srt</code> after source preparation replaces the current text and timings. Check background volume, voices and subtitle options before export. Open the exported file in a separate player.</p>
+<h2 id="from-source-to-segments">From source to segments</h2>
+<ol>
+<li>Use an excerpt with two lines and keep a copy of the original video.</li>
+<li>Set the spoken and target languages. Fix transcript errors before translating.</li>
+<li>Reassign lines attributed to the wrong speaker. Check the speaker voice and any per-line overrides.</li>
+<li>Render a short part. On the timeline, check silent gaps and whether voices cover important audio.</li>
+</ol>
+<h2 id="verify-the-export-step-by-step">Verify the export step by step</h2>
+<ol>
+<li>If a line exceeds its slot, try a more concise translation. Regenerate and listen with adjacent lines.</li>
+<li>Set background volume so speech remains intelligible. Replay overlapping speakers.</li>
+<li>Choose subtitles where needed. Burned-in captions become part of the picture, so review before export.</li>
+<li>Open the rendered file separately. Check the beginning, end and a speaker change in the middle.</li>
+</ol>
 <p><a href="../first-run/">First synthesis</a> · <a href="../troubleshooting/">Troubleshooting</a></p>
 
                 
@@ -220,7 +234,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:06:15.000Z">27/11/2026 · 05:06</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-27T04:21:10.000Z">27/11/2026 · 05:21</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

@@ -10,4 +10,11 @@ Utilisez un extrait propre d’une personne ayant autorisé l’usage de sa voix
 
 Dans Voice Design, décrivez le rythme, le registre et le ton. Comparez deux descriptions sur le même texte avant de sauvegarder.
 
+## Vérification pas à pas
+
+1. Préparez deux extraits autorisés de la même voix.
+2. Transcrivez si nécessaire.
+3. Comparez une nouvelle phrase avec les deux références.
+4. Dans Voice Design, modifiez un seul trait de la description à la fois.
+
 [Première synthèse](first-run.md) · [Dépannage](troubleshooting.md)
