@@ -20,4 +20,15 @@ An engine handles a task such as synthesis, transcription or another workflow st
 3. Before trying CUDA, ROCm, Metal or Vulkan, confirm support for the selected engine.
 4. Repeat the same sentence. If acceleration fails, return to the working backend and inspect the first error.
 
+## Choose by desired output
+
+1. Use a TTS engine to read text and an ASR engine to turn audio into text.
+2. For reference voices or voice design, check the engine supports that mode.
+3. Check languages for the selected mode before downloading. A language available for ASR may be absent from TTS.
+4. Review requirements, disk use and the model’s license. Wait until the installed model is ready.
+
+## Compare CPU and GPU
+
+Run identical text, voice and settings. Change only the backend if available. Run a warm-up before comparing times. If the GPU path fails, check CPU first. Verify engine and driver compatibility before downloading additional packs.
+
 [First synthesis](first-run.md) · [Troubleshooting](troubleshooting.md)

@@ -17,4 +17,11 @@ Nutze eine saubere Aufnahme einer Person, die der Verwendung zugestimmt hat. Imp
 
 Beschreibe in Voice Design Tempo, Stimmlage und Tonfall. Vergleiche zwei Beschreibungen mit gleichem Text, bevor du speicherst.
 
+## Schrittweise Prüfung
+
+1. Bereite zwei genehmigte Referenzen derselben Stimme vor.
+2. Ergänze bei Bedarf das Transkript.
+3. Teste denselben neuen Satz mit beiden Referenzen.
+4. Ändere beim Voice Design jeweils nur ein Merkmal.
+
 [Erste Synthese](first-run.md) · [Fehlerbehebung](troubleshooting.md)

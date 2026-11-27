@@ -17,4 +17,10 @@ Escolhe o pacote 0.5.8 para o teu sistema. No Windows x64 usa o EXE x64, no Appl
 
 Aguarda pela preparação do backend. No gestor de modelos, descarrega o motor necessário e verifica o espaço livre. Gera primeiro uma frase curta.
 
+## Verificação passo a passo
+
+1. Instala o pacote correspondente à arquitetura.
+2. Abre a aplicação, verifica o backend, instala um só motor e gera uma frase.
+3. Se a aceleração falhar, testa na CPU.
+
 [Primeira síntese](first-run.md) · [Modelos e aceleração](engines.md)

@@ -20,4 +20,19 @@ permalink: /non-rvc/tts/voicestudio/first-run/
 
 Keep text, language and voice fixed while changing one setting. Spell out abbreviations or numbers that are read incorrectly. For a long project, test a paragraph before rendering the full script and retain the successful segments.
 
+## Prepare a test sentence
+
+1. Open speech generation and identify the active engine.
+2. Choose an available voice and set the language of the script.
+3. Enter two simple sentences, such as “This is a test. Listen to the pause between sentences.”
+4. Note the engine, voice and language. Keep default values until you get playable audio.
+
+## Listen, fix and export
+
+Check that playback starts. Listen for initial words, pauses, numbers and the last word. Spell out a misread number. If a word is missing, isolate it in a short sentence and regenerate with the same voice. Save the test under a distinct name and open it in another player.
+
+## When a voice or language is missing
+
+Check that the model is installed and the selected engine offers that combination. Languages are engine-specific. To separate a text problem from an engine problem, repeat with a preset voice and a documented language.
+
 [Installation](installation.md) · [Reference voices and Voice Design](voices.md) · [Transcription and dictation](transcription.md)

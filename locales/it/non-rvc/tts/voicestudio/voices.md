@@ -17,4 +17,15 @@ Scegli un riferimento di una sola persona, con audio pulito e il permesso di riu
 
 In Voice Design, parti da una descrizione concreta di ritmo, registro e tono, ad esempio una lettura calma con pause nette. Usa lo stesso testo per confrontare due descrizioni. Salva la voce o l’output secondo le opzioni dell’engine. La descrizione modifica il carattere desiderato, quindi ascolta il risultato prima di usarlo su un progetto lungo.
 
+## Prepara due riferimenti
+
+1. Registra o scegli due clip della stessa voce autorizzata, una neutra e una con il tono desiderato.
+2. Riascoltale in cuffia. Scarta clip con musica, parlanti sovrapposti, riverbero forte o distorsione.
+3. Importa la clip neutra e inserisci la trascrizione quando il motore la chiede. Correggila prima di generare.
+4. Usa una frase diversa dal riferimento come testo di prova. Ripetila con la seconda clip senza cambiare motore o testo.
+
+## Ascolta prima di salvare una voce
+
+Confronta somiglianza, intelligibilità e naturalezza delle pause. Nei progetti lunghi prova anche una domanda, un numero e un nome proprio. In Voice Design modifica un solo aspetto della descrizione per volta, come il ritmo. Se la pronuncia peggiora, verifica prima la lingua e la chiarezza del testo.
+
 [Prima sintesi](first-run.md) · [Risoluzione dei problemi](troubleshooting.md)

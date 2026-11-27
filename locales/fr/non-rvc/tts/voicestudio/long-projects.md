@@ -17,4 +17,10 @@ Découpez le script en chapitres ou scènes. Testez un paragraphe, utilisez la m
 
 Pour un doublage par lots, essayez deux vidéos et vérifiez chaque sortie avant de lancer la file entière.
 
+## Vérification pas à pas
+
+1. Testez deux segments consécutifs et écoutez leur transition.
+2. Séparez texte, essais et livrables.
+3. Vérifiez le nombre de fichiers et régénérez uniquement les segments à corriger.
+
 [Première synthèse](first-run.md) · [Dépannage](troubleshooting.md)

@@ -17,4 +17,10 @@ Cada tarea usa su propio motor y pesos. Antes de descargar, comprueba idioma, ta
 
 CPU sirve como referencia. CUDA es para NVIDIA. ROCm depende de la tarjeta AMD y del motor. Algunos motores GGUF admiten Vulkan y Apple Silicon dispone de Metal. Compara la misma frase al cambiar de dispositivo.
 
+## Comprobación paso a paso
+
+1. Identifica si necesitas TTS o ASR.
+2. Comprueba idioma y dispositivo del motor antes de instalar.
+3. Compara CPU y GPU con el mismo texto, después de una prueba de calentamiento.
+
 [Primera síntesis](first-run.md) · [Solución de problemas](troubleshooting.md)

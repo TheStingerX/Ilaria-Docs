@@ -17,4 +17,11 @@ Importa un clip corto, prepara la fuente y elige idiomas. Corrige la transcripci
 
 Genera unas pocas líneas, escucha la sincronización y ajusta traducciones demasiado largas. Importar SRT puede reemplazar texto y tiempos. Comprueba volumen y subtítulos antes de exportar.
 
+## Comprobación paso a paso
+
+1. Prueba un vídeo con dos intervenciones.
+2. Corrige transcripción y traducción, luego verifica cada hablante.
+3. Ajusta líneas largas y revisa solapamientos y subtítulos.
+4. Comprueba el archivo exportado fuera de la aplicación.
+
 [Primera síntesis](first-run.md) · [Solución de problemas](troubleshooting.md)

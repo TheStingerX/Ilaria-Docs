@@ -17,4 +17,10 @@ Teile das Skript in Kapitel und Absätze. Teste einen Abschnitt und halte die St
 
 Teste beim Stapeldubbing zuerst zwei Videos, sofern die Funktion verfügbar ist. Prüfe beide Exporte, bevor du den gesamten Stapel erzeugst.
 
+## Schrittweise Prüfung
+
+1. Teste zwei aufeinanderfolgende Segmente und höre den Übergang.
+2. Trenne Skript, Tests und fertige Ausgaben.
+3. Prüfe die Dateianzahl und korrigiere nur fehlerhafte Teile.
+
 [Erste Synthese](first-run.md) · [Fehlerbehebung](troubleshooting.md)

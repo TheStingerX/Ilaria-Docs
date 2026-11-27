@@ -17,4 +17,11 @@ Usa um excerto limpo de alguém que autorizou o uso da sua voz. Importa-o e rev�
 
 No Voice Design, descreve ritmo, registo e tom. Compara duas descrições com o mesmo texto antes de guardares.
 
+## Verificação passo a passo
+
+1. Prepara duas referências autorizadas da mesma voz.
+2. Transcreve se necessário.
+3. Testa a mesma frase nova com ambas.
+4. Em Voice Design, muda um traço da descrição de cada vez.
+
 [Primeira síntese](first-run.md) · [Resolução de problemas](troubleshooting.md)

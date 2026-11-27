@@ -17,4 +17,10 @@ Divide o guião em capítulos ou cenas. Testa um parágrafo e mantém a voz entr
 
 Se houver dobragem em lote, testa com dois vídeos e confirma os resultados antes de processar a fila inteira.
 
+## Verificação passo a passo
+
+1. Testa dois segmentos consecutivos e ouve a transição.
+2. Separa guião, testes e ficheiros finais.
+3. Confirma a contagem e gera novamente apenas os segmentos com erros.
+
 [Primeira síntese](first-run.md) · [Resolução de problemas](troubleshooting.md)

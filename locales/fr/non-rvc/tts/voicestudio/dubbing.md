@@ -17,4 +17,11 @@ Importez un extrait court, préparez la source et choisissez les langues. Corrig
 
 Générez quelques répliques, écoutez sur la timeline et raccourcissez les lignes trop longues. Un SRT importé peut remplacer les segments. Vérifiez le volume et les sous-titres avant l’export.
 
+## Vérification pas à pas
+
+1. Testez un extrait à deux répliques.
+2. Corrigez transcription et traduction, puis vérifiez chaque intervenant.
+3. Ajustez les lignes longues et vérifiez chevauchements et sous-titres.
+4. Ouvrez l’export ailleurs.
+
 [Première synthèse](first-run.md) · [Dépannage](troubleshooting.md)

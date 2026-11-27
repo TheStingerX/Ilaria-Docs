@@ -17,4 +17,10 @@ Escolhe um motor instalado, uma voz e um idioma compatível. Escreve uma frase, 
 
 Mantém a voz e o texto iguais para comparar opções. Escreve por extenso números e abreviaturas se houver erros de pronúncia.
 
+## Verificação passo a passo
+
+1. Gera duas frases com uma pausa.
+2. Ouve o início, o fim e os nomes.
+3. Corrige um elemento de cada vez e abre o WAV noutro leitor.
+
 [Instalação](installation.md) · [Vozes de referência e Voice Design](voices.md) · [Transcrição e ditado](transcription.md)

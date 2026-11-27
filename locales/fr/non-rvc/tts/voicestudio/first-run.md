@@ -17,4 +17,10 @@ Choisissez un moteur installé, une voix et une langue compatible. Saisissez une
 
 Gardez la même voix et le même texte pour comparer les réglages. Écrivez les sigles et les nombres en toutes lettres si leur prononciation pose problème.
 
+## Vérification pas à pas
+
+1. Générez deux phrases séparées par une pause.
+2. Vérifiez l’attaque, la fin et les noms.
+3. Corrigez un élément à la fois, puis ouvrez le WAV dans un lecteur séparé.
+
 [Installation](installation.md) · [Voix de référence et création](voices.md) · [Transcription et dictée](transcription.md)
