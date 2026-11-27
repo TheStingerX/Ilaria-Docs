@@ -1,6 +1,6 @@
 ---
 label: "Primera síntesis"
-icon: ":play:"
+icon: ":sparkles:"
 order: 98
 permalink: /non-rvc/tts/voicestudio/first-run/
 ---
