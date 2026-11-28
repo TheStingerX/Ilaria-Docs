@@ -1,6 +1,8 @@
-# Ilaria YT-DLP
+# Ilaria YT-DLP · Visão geral
 
-[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [Windows ZIP · Hugging Face](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v1.zip?download=true)
+[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [v2](https://github.com/TheStingerX/Ilaria-YT-DLP/releases/tag/v2) · [Windows ZIP](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v2.zip?download=true)
+
+[Visão geral](overview.md) · [Formatos e áudio](formats.md) · [Listas e resolução de problemas](playlists.md)
 
 ## Instalar no Windows
 
