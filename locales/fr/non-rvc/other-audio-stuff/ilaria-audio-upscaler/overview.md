@@ -7,11 +7,17 @@ permalink: /non-rvc/ilaria-audio-upscaler/overview/
 
 # Ilaria Audio Upscaler
 
-[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [v1](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1)
+[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [V2](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2)
 
 ## Choisir le moteur
 
 Ilaria Audio Upscaler traite les enregistrements localement sous Windows. Choisissez **Sidon** pour une parole bruitée, réverbérée ou compressée. Choisissez **AP-BWE** pour une parole assez propre à bande limitée, par exemple un enregistrement téléphonique. Les deux moteurs ciblent la parole. Comparez le résultat à l’original avant de l’utiliser dans un jeu de données vocales.
+
+## Apollo
+
+**Apollo** restaure des morceaux dégradés par une compression avec perte, à **44,1 kHz** sur CPU ou NVIDIA CUDA. Choisissez un extrait court, sélectionnez **Apollo**, téléchargez le modèle si nécessaire, puis cliquez sur **Enhance audio**. Comparez l’original et le résultat à **1×** avant de cliquer sur **Save result**.
+
+[Apollo](https://github.com/JusperLee/Apollo)
 
 ## Premier essai
 
