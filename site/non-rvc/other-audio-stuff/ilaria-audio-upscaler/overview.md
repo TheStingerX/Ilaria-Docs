@@ -10,7 +10,7 @@ Ilaria Audio Upscaler processes recordings locally on Windows. Choose **Sidon** 
 
 **Apollo** restores music affected by lossy compression at **44.1 kHz**, on CPU or NVIDIA CUDA. Start with a short excerpt that contains cymbals or other bright sounds. Select **Apollo**, download its weights if prompted, then add the file and click **Enhance audio**. Compare the original and result at **1×** before using **Save result**. Keep the original to compare changes in tone and transients.
 
-[Apollo](https://github.com/JusperLee/Apollo)
+[Apollo](apollo.md)
 
 ## First test
 

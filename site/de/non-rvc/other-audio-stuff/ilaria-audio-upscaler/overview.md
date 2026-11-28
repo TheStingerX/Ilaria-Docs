@@ -10,7 +10,7 @@ Ilaria Audio Upscaler verarbeitet Aufnahmen lokal unter Windows. Wähle **Sidon*
 
 **Apollo** restauriert Musik, die durch verlustbehaftete Kompression beeinträchtigt wurde. Es arbeitet mit **44,1 kHz** auf der CPU oder mit NVIDIA CUDA. Wähle einen kurzen Ausschnitt und **Apollo**, lade bei Bedarf das Modell und klicke auf **Enhance audio**. Vergleiche Original und Ergebnis bei **1×** vor dem Speichern mit **Save result**.
 
-[Apollo](https://github.com/JusperLee/Apollo)
+[Apollo](apollo.md)
 
 ## Erster Test
 
