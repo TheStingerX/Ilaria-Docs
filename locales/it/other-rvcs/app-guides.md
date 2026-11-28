@@ -54,10 +54,12 @@ Per i file, confronta lo stesso campione allo stesso volume. Per il tempo reale,
 
 | App | Funzionalità | Hardware / note | Guide |
 | --- | --- | --- | --- |
-| **Ilaria RVC** | Training, inferenza singola e in serie, sintesi vocale, analizzatore audio | NVIDIA CUDA (Windows) / Kaggle | [Installazione](../ilaria-rvc/install/installation.md) · [Inferenza](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
-| **Applio** | Training, inferenza da file, sintesi vocale, libreria modelli, tempo reale | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installazione](training/applio/installation.md) · [Inferenza](training/applio/inference.md) · [Training](training/applio/training.md) |
+| **Ilaria RVC** | Training, inferenza singola e in serie, sintesi vocale, analizzatore audio | NVIDIA CUDA (Windows) · [AMD Preview](../ilaria-rvc/install/amd-preview.md) · Kaggle | [Installazione](../ilaria-rvc/install/installation.md) · [Inferenza](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Training, inferenza da file, sintesi vocale, libreria modelli, tempo reale | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installazione](training/applio/installation.md) · [Inferenza](training/applio/inference.md) · [Training](training/applio/training.md) · [Android / Termux](training/applio/android.md) |
 | **RVC WebUI (Mainline - Original RVC)** | Training e inferenza da file originali (+ launcher live separato) | NVIDIA CUDA, CPU / DirectML | [Installazione](training/mainline/installation.md) · [Inferenza](training/mainline/inference.md) · [Training](training/mainline/training.md) |
 | **Redpanda-vc** | Training, inferenza da file e tempo reale per RVC + Causal Voice Changer | NVIDIA CUDA / CPU (Desktop e WebUI) | [Primo avvio](training/redpanda/first-run.md) · [Inferenza](training/redpanda/inference.md) · [Training](training/redpanda/training.md) |
+| **AICoverMaker** | Fork di Applio per cover, separazione e conversione vocale | — | [Installazione](training/aicovermaker/installation.md) · [Prima cover](training/aicovermaker/usage.md) |
+| **NoRegretsRVC** | Configurazione di workflow Applio per training e inferenza da file | Beta 0.1.0 · Studio locale e runtime Applio su Kaggle | [Installazione](training/noregretsrvc/installation.md) · [Uso](training/noregretsrvc/usage.md) · [Cloud](training/noregretsrvc/cloud.md) · [Cronologia](training/noregretsrvc/version-history.md) |
 | **RVC Model Merger** | Utilità di unione per modelli RVC `.pth` | Utilità offline | [Uso](rvc-model-merger/usage.md) |
 
 ### Legacy / Sconsigliate
@@ -72,7 +74,6 @@ Questi progetti sono datati, archiviati o non più mantenuti attivamente. Le gui
 | **RVC Studio** | Training e inferenza da file (WebUI) | Inattivo | [Installazione](training/rvc-studio/installation.md) · [Uso](training/rvc-studio/usage.md) |
 | **Mangio RVC Fork** | Training e inferenza da file | Inattivo | [Installazione](training/mangio/installation.md) · [Uso](training/mangio/usage.md) |
 | **Replay** | Training e conversione file | Dismesso (Weights.gg chiuso) | [Installazione](training/replay/installation.md) · [Uso](training/replay/usage.md) |
-| **AICoverMaker** | Fork di Applio per cover RVC, separazione e conversione vocale | — | [Installazione](training/aicovermaker/installation.md) · [Prima cover](training/aicovermaker/usage.md) |
 | **AICoverGen** | Pipeline RVC v2 per cover musicali (solo inferenza, WebUI / CLI / Colab) | Non mantenuto | [Installazione](training/aicovergen/installation.md) · [Uso](training/aicovergen/usage.md) |
 | **RVC GUI** | Solo conversione file desktop | Archiviato | [Conversione file](voice-changers/rvc-gui/file-conversion.md) |
 
