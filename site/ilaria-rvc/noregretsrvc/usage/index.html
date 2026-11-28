@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068507828">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849144454707">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="NoRegretsRVC · Usage">
-    <meta name="description" content="NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
+    <meta name="description" content="NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/ilaria-rvc/noregretsrvc/usage/">
@@ -35,24 +35,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849068507828" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849144454707" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849144454707" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849068507828" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849144454707" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
+    <meta property="og:description" content="NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
-    <meta name="twitter:description" content="NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
+    <meta name="twitter:description" content="NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria and Mario playing handheld games against a dark violet background">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/noregretsrvc/usage/">
@@ -175,8 +175,8 @@
 
                 <!-- Page content  -->
 <h1 id="noregretsrvc--usage">NoRegretsRVC · Usage</h1>
-<p>NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
+<p>NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.</p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0">Beta 0.1.0</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <h2 id="usage">Usage</h2>
 <p>Choose or create a project in <strong>Training</strong> and enter the intended sample rate, vocoder, pitch extractor and embedder. Match these to any pretrained pair. Start with a conservative batch, then adjust epochs and precision for the target runtime. The VRAM estimate is advisory and does not measure memory on the remote GPU. Review notebook, tunnel and backup settings before exporting. Project settings saved in browser storage are tied to that browser and address.</p>
 <p><strong>Samples</strong> prepares conversion settings. <strong>Models</strong> and workbench views prepare options for downloading models, voice blending or TTS. <strong>TensorBoard</strong> displays parsed training information. Run the actual conversion or training in a compatible Applio runtime and verify the output there.</p>
@@ -188,6 +188,9 @@
 <p>The Models workspace can queue custom pretrains through the Boot Manifest. It recognizes Hugging Face and Pixeldrain URLs and can unpack supported ZIPs or infer a matching discriminator URL. Verify the pair before enabling <strong>Custom Pretrains</strong>. Legacy Core 1.5 V2 is offered at 32 kHz. Default Applio pretrains remain selected until you enable the custom option. Voice Blender walks through source models, blend settings and export. TTS uses online Microsoft Edge voices before applying the selected RVC model, with pitch, speed, index ratio and consonant protection controls.</p>
 <h2 id="diagnostics-and-settings">Diagnostics and settings</h2>
 <p>Diagnostics can read live Kaggle metrics or imported <code translate="no" v-pre>.ipynb</code>, <code translate="no" v-pre>.log</code> and <code translate="no" v-pre>.txt</code> files. It charts Mel loss and analyzes KL divergence, feature matching, discriminator balance, gradient stability and changes near the end of training. Risk meters and suggested checkpoints are heuristics. Listen to the same test audio across checkpoints before choosing one. Settings also provide FP32 by default, RMVPE high-register modes <code translate="no" v-pre>true_pitch</code> and <code translate="no" v-pre>fold</code> with a 1000–2000 Hz F0 ceiling, and ten UI languages including Arabic with right-to-left layout.</p>
+<h2 id="training-and-diagnostics-in-010">Training and diagnostics in 0.1.0</h2>
+<p>Dataset normalization targets −20 LUFS by default. The default sample rate remains 32 kHz. Generator EMA smooths weight averages, multi-scale Mel loss uses FFT windows of 512, 1024 and 2048, and gradient clipping limits large updates. The release also tunes FAISS <code translate="no" v-pre>nprobe</code> and tracks the new training metrics. Checkpoint suggestions still need listening tests.</p>
+<p>Settings now calls the restart action <strong>Restart NoRegretsRVC</strong>. Numeric inputs update paired sliders as you type, and model names are no longer suggested from previous runs.</p>
 <p><a href="../installation/">Installation</a> · <a href="../cloud/">Cloud</a></p>
 
                 
@@ -223,7 +226,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-28T01:26:57.000Z">28/11/2026 · 02:26</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

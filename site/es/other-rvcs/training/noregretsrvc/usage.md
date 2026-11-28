@@ -1,8 +1,8 @@
 # NoRegretsRVC · Uso
 
-NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.
+NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Beta 0.1.0](https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Uso
 
@@ -13,5 +13,11 @@ Usa el estudio para preparar ajustes. Ejecuta el entrenamiento o la conversión 
 ## Flujo de entrenamiento y herramientas
 
 Training organiza cuatro pasos: configuración, preparación de datos, extracción de características y entrenamiento. Kaggle añade la exportación de `.pth` e `.index`. Samples admite colas y ajustes por clip, transposición, limpieza en el navegador y seis ejemplos de 32 kHz. Models gestiona pretrains, Voice Blender fusiona voces y TTS convierte resultados de Edge. Diagnostics muestra métricas y sugerencias de checkpoints que conviene comprobar escuchando.
+
+## Entrenamiento y diagnóstico en 0.1.0
+
+La normalización predeterminada apunta a −20 LUFS y la frecuencia sigue en 32 kHz. Se añaden EMA, pérdida Mel con ventanas 512/1024/2048, recorte de gradientes y ajustes de FAISS `nprobe`. Comprueba los checkpoints escuchándolos.
+
+La acción de reinicio se llama **Restart NoRegretsRVC**. Los campos numéricos sincronizan los controles y se desactiva la sugerencia de nombres anteriores.
 
 [Instalación](installation.md) · [Cloud](cloud.md)

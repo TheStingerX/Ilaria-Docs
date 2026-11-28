@@ -1,8 +1,8 @@
 # NoRegretsRVC · Cloud
 
-NoRegretsRVC Beta 0.0 prépare des flux Applio via une interface web et génère des notebooks.
+NoRegretsRVC Beta 0.1.0 prépare des flux Applio via une interface web et génère des notebooks.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Beta 0.1.0](https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Kaggle
 
@@ -14,6 +14,12 @@ Protégez les identifiants et l’adresse du tunnel. Téléchargez le modèle et
 
 ## Ressources et récupération sur Kaggle
 
-La WebUI détecte les jeux de données dans `/kaggle/input`. La parité Dual T4 vise à préserver les étapes d’Applio pour des lots d’au moins 4 et moins de 300 époques. Turbo est facultatif. Le contrôle préliminaire vérifie WAV, `.npy` et `filelist.txt`. L’heure estimée utilise l’horloge du navigateur. Vérifiez le `.pth` récupéré et sauvegardez les checkpoints de reprise.
+La WebUI détecte les jeux de données dans `/kaggle/input`. Turbo est facultatif. Le contrôle préliminaire vérifie WAV, `.npy` et `filelist.txt`. L’heure estimée utilise l’horloge du navigateur. Vérifiez le `.pth` récupéré et sauvegardez les checkpoints de reprise.
+
+## Dual T4 et lot effectif
+
+La bêta 0.1.0 supprime la parité avec Applio sur un GPU. Sur deux GPU, des lots de 2 ou 4 par GPU donnent 4 ou 8 au total.
+
+Si aucun jeu de données n’est détecté, le chemin reste vide. L’ETA filtre l’échauffement et les sauvegardes. Le moniteur corrige le total d’époques et les marqueurs en double. Les fichiers `.nr_*` quittent `logs/`.
 
 [Installation](installation.md) · [Utilisation](usage.md)

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068527202">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849144469763">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="NoRegretsRVC · Cloud">
-    <meta name="description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta name="description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/ilaria-rvc/noregretsrvc/cloud/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849068527202" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849144469763" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849068527202" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849144469763" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849068527202" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849144469763" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=7">
     <script defer src="/es/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta property="og:description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta name="twitter:description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/noregretsrvc/cloud/">
@@ -176,14 +176,17 @@
 
                 <!-- Page content  -->
 <h1 id="noregretsrvc--cloud">NoRegretsRVC · Cloud</h1>
-<p>NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
+<p>NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.</p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0">Beta 0.1.0</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <h2 id="kaggle">Kaggle</h2>
 <p>Exporta el <code translate="no" v-pre>.ipynb</code> e impórtalo en un notebook privado de Kaggle. Revisa las celdas. Activa GPU e internet si hay descargas, ejecuta primero la instalación y confirma la ruta de los datos.</p>
 <p>Protege las credenciales y el enlace del túnel. Descarga el modelo y cualquier checkpoint antes de detener la sesión.</p>
 <p><a href="https://www.kaggle.com/code">Kaggle</a></p>
 <span id="dataset-dual-t4-and-resource-budget" class="docs-anchor"></span><h2 id="recursos-y-recuperación-en-kaggle">Recursos y recuperación en Kaggle</h2>
-<p>La WebUI detecta datasets en <code translate="no" v-pre>/kaggle/input</code>. La paridad Dual T4 intenta conservar los pasos de Applio con lotes de al menos 4 y menos de 300 épocas. Turbo es opcional. La comprobación previa busca WAV, <code translate="no" v-pre>.npy</code> y <code translate="no" v-pre>filelist.txt</code>. El tiempo estimado usa el reloj del navegador. Verifica el <code translate="no" v-pre>.pth</code> recuperado y guarda los checkpoints de reanudación.</p>
+<p>La WebUI detecta datasets en <code translate="no" v-pre>/kaggle/input</code>. Turbo es opcional. La comprobación previa busca WAV, <code translate="no" v-pre>.npy</code> y <code translate="no" v-pre>filelist.txt</code>. El tiempo estimado usa el reloj del navegador. Verifica el <code translate="no" v-pre>.pth</code> recuperado y guarda los checkpoints de reanudación.</p>
+<span id="turbo-preflight-and-checkpoint-recovery" class="docs-anchor"></span><h2 id="dual-t4-y-lote-efectivo">Dual T4 y lote efectivo</h2>
+<p>La beta 0.1.0 elimina la paridad con Applio en una GPU. Con dos GPU, los lotes de 2 y 4 por GPU equivalen a 4 y 8 efectivos.</p>
+<p>Si no se detecta un conjunto de datos, la ruta queda vacía. La ETA filtra calentamiento y guardado. El monitor corrige el total de épocas y las marcas duplicadas. Los archivos <code translate="no" v-pre>.nr_*</code> salen de <code translate="no" v-pre>logs/</code>.</p>
 <p><a href="../installation/">Instalación</a> · <a href="../usage/">Uso</a></p>
 
                 
@@ -219,7 +222,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-28T01:26:57.000Z">28/11/2026 · 02:26</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

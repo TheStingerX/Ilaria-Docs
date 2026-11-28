@@ -1,8 +1,8 @@
 # NoRegretsRVC · Cloud
 
-NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.
+NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Beta 0.1.0](https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Kaggle
 
@@ -14,7 +14,7 @@ If the notebook creates a tunnel, keep the URL and token private and stop the tu
 
 ## Dataset, Dual T4 and resource budget
 
-The Kaggle WebUI scans `/kaggle/input` when it starts or refreshes. If several datasets are mounted, choose the right one and check its path. The default Dual-T4 batch parity option is designed to split batches of 4 or more while preserving the baseline single-GPU Applio optimizer steps for runs below 300 epochs. The resource advisor compares estimates against 16 GB VRAM, 20 GB disk and 12 hours as configured planning targets. Actual Kaggle resources, quotas and session duration can vary. Check the live runtime as well.
+The Kaggle WebUI scans `/kaggle/input` when it starts or refreshes. If several datasets are mounted, choose the right one and check its path. The resource advisor compares estimates against 16 GB VRAM, 20 GB disk and 12 hours as configured planning targets. Actual Kaggle resources, quotas and session duration can vary. Check the live runtime as well.
 
 ## Turbo, preflight and checkpoint recovery
 
@@ -23,5 +23,11 @@ Optional **Lossless Turbo Training** is enabled by default. The project describe
 ## Progress and updates
 
 The ETA uses smoothed epoch timings and the browser’s local clock. The accuracy indicator is an estimate. Check version and export your files before applying a WebUI update and restart. The Kaggle implementation uses `NR_BUILD_REV` to guard against downgrades.
+
+## Dual T4 and effective batch
+
+Beta 0.1.0 removes the single-GPU Applio batch parity toggle. With two GPUs, a batch of 2 per GPU gives an effective batch of 4, and 4 gives 8. Check the effective batch before starting or comparing runs.
+
+If no dataset is detected, the path stays blank and the monitor shows a notice. Check the mounted dataset before preprocessing. ETA now filters warmup and checkpoint-save delays. The monitor fixes the epoch total and duplicate saved marker. Internal `.nr_*` files move out of `logs/`.
 
 [Installation](installation.md) · [Usage](usage.md)

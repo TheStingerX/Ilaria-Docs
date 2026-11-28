@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849068527202">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849144469763">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="NoRegretsRVC · Uso">
-    <meta name="description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta name="description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/es/ilaria-rvc/noregretsrvc/usage/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849068527202" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849144469763" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849068527202" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849144469763" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849068527202" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849144469763" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=7">
     <script defer src="/es/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta property="og:description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
-    <meta name="twitter:description" content="NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
+    <meta name="twitter:description" content="NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria y Mario juegan con consolas portátiles sobre un fondo violeta oscuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/ilaria-rvc/noregretsrvc/usage/">
@@ -176,13 +176,16 @@
 
                 <!-- Page content  -->
 <span id="noregretsrvc--usage" class="docs-anchor"></span><h1 id="noregretsrvc--uso">NoRegretsRVC · Uso</h1>
-<p>NoRegretsRVC Beta 0.0 prepara flujos de Applio desde una interfaz web y genera notebooks.</p>
-<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
+<p>NoRegretsRVC Beta 0.1.0 prepara flujos de Applio desde una interfaz web y genera notebooks.</p>
+<p><a href="https://github.com/HunterThatsMe/NoRegretsRVC">GitHub</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0">Beta 0.1.0</a> · <a href="https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb">Kaggle notebook</a></p>
 <span id="usage" class="docs-anchor"></span><h2 id="uso">Uso</h2>
 <p>Crea un proyecto y configura frecuencia, vocoder, extractor de tono, encoder, lote y épocas. Comprueba que coincidan con los pesos base. La estimación VRAM es orientativa.</p>
 <p>Usa el estudio para preparar ajustes. Ejecuta el entrenamiento o la conversión en un entorno compatible con Applio.</p>
 <span id="guided-training" class="docs-anchor"></span><h2 id="flujo-de-entrenamiento-y-herramientas">Flujo de entrenamiento y herramientas</h2>
 <p>Training organiza cuatro pasos: configuración, preparación de datos, extracción de características y entrenamiento. Kaggle añade la exportación de <code translate="no" v-pre>.pth</code> e <code translate="no" v-pre>.index</code>. Samples admite colas y ajustes por clip, transposición, limpieza en el navegador y seis ejemplos de 32 kHz. Models gestiona pretrains, Voice Blender fusiona voces y TTS convierte resultados de Edge. Diagnostics muestra métricas y sugerencias de checkpoints que conviene comprobar escuchando.</p>
+<span id="samples-and-audio-cleanup" class="docs-anchor"></span><h2 id="entrenamiento-y-diagnóstico-en-010">Entrenamiento y diagnóstico en 0.1.0</h2>
+<p>La normalización predeterminada apunta a −20 LUFS y la frecuencia sigue en 32 kHz. Se añaden EMA, pérdida Mel con ventanas 512/1024/2048, recorte de gradientes y ajustes de FAISS <code translate="no" v-pre>nprobe</code>. Comprueba los checkpoints escuchándolos.</p>
+<p>La acción de reinicio se llama <strong>Restart NoRegretsRVC</strong>. Los campos numéricos sincronizan los controles y se desactiva la sugerencia de nombres anteriores.</p>
 <p><a href="../installation/">Instalación</a> · <a href="../cloud/">Cloud</a></p>
 
                 
@@ -218,7 +221,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-26T18:11:48.000Z">26/11/2026 · 19:11</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-28T01:26:57.000Z">28/11/2026 · 02:26</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

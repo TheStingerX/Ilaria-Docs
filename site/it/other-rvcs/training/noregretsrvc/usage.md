@@ -1,8 +1,8 @@
 # NoRegretsRVC · Uso
 
-NoRegretsRVC Beta 0.0 è uno studio web indipendente per configurare flussi di lavoro basati su Applio. Il repository contiene l’interfaccia e il generatore di notebook. L’installazione locale avvia lo studio nel browser.
+NoRegretsRVC Beta 0.1.0 è uno studio web indipendente per configurare flussi di lavoro basati su Applio. Il repository contiene l’interfaccia e il generatore di notebook. L’installazione locale avvia lo studio nel browser.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Beta 0.1.0](https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Uso
 
@@ -25,5 +25,11 @@ In **Models** puoi accodare pretrain personalizzati nel Boot Manifest. Il gestor
 ## Diagnostica e impostazioni
 
 **Diagnostics** può leggere le metriche live di Kaggle o importare `.ipynb`, `.log` e `.txt`. Mostra l’andamento della Mel loss e analizza divergenza KL, feature matching, equilibrio del discriminatore, stabilità dei gradienti e variazioni verso fine training. Le percentuali di rischio e i checkpoint suggeriti sono stime. Ascolta la stessa clip con checkpoint diversi prima di scegliere. Nelle impostazioni trovi FP32 come valore iniziale, le modalità RMVPE High Register `true_pitch` e `fold` con limite F0 da 1000 a 2000 Hz e dieci lingue per l’interfaccia, tra cui l’arabo con layout da destra a sinistra.
+
+## Training e diagnostica nella 0.1.0
+
+La normalizzazione del dataset punta a −20 LUFS per impostazione predefinita. Il sample rate predefinito resta 32 kHz. La media mobile EMA stabilizza i pesi del generatore, la Mel loss multiscala usa finestre FFT di 512, 1024 e 2048 campioni e il clipping dei gradienti limita gli aggiornamenti troppo grandi. La release ritocca `nprobe` di FAISS e monitora le nuove metriche. Verifica all’ascolto i checkpoint suggeriti.
+
+In Settings il comando si chiama **Restart NoRegretsRVC**. I campi numerici aggiornano i cursori mentre scrivi. I nomi dei vecchi esperimenti non sono più suggeriti automaticamente.
 
 [Installazione](installation.md) · [Cloud](cloud.md)
