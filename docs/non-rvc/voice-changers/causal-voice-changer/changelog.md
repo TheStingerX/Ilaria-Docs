@@ -3,11 +3,43 @@ label: "Changelog"
 icon: ":memo:"
 order: 94
 permalink: /non-rvc/causal-voice-changer/changelog/
-description: "Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.3.3.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes."
+description: "Complete Causal Voice Changer (CVC) release history and changelog from v0.1.0 through v0.4.2.1, covering older NVIDIA GPU support, 100 Hz v4 base, and realtime fixes."
 ---
 # Causal Voice Changer Changelog
 
 [GitHub Releases](https://github.com/mojowozo/Causal-Voice-Changer/releases)
+
+## v0.4.2.1 (2026-11-24)
+
+Fixes brief audio degradation after switching voices live.
+
+[GitHub: v0.4.2.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1)
+
+---
+
+## v0.4.2 (2026-11-24)
+
+Prepares the new voice in the background and switches at the next block. The shared noise gate now runs after Hushwire or RNNoise. Input filtering and peak limiting were also revised.
+
+[GitHub: v0.4.2](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2)
+
+---
+
+## v0.4.1 (2026-11-22)
+
+Moves the noise gate to **Audio**, enables mono ASIO output, and fixes Markdown in the updater.
+
+[GitHub: v0.4.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.1)
+
+---
+
+## v0.4.0 (2026-11-22)
+
+Adds 10 ms blocks, an optional pitch floor, smoother noise gating, and a corrected latency readout. No retraining is needed.
+
+[GitHub: v0.4.0](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.0)
+
+---
 
 ## v0.3.3.1 (2026-11-21)
 

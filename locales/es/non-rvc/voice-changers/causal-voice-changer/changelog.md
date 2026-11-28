@@ -3,11 +3,43 @@ label: "Changelog"
 icon: ":memo:"
 order: 94
 permalink: /non-rvc/causal-voice-changer/changelog/
-description: "Historial completo de versiones y changelog de Causal Voice Changer (CVC) desde la v0.1.0 hasta la v0.3.3.1, con soporte para GPUs NVIDIA antiguas, base 100 Hz v4 y mejoras realtime."
+description: "Historial completo de versiones y changelog de Causal Voice Changer (CVC) desde la v0.1.0 hasta la v0.4.2.1, con soporte para GPUs NVIDIA antiguas, base 100 Hz v4 y mejoras realtime."
 ---
 # Changelog de Causal Voice Changer
 
 [Lanzamientos en GitHub](https://github.com/mojowozo/Causal-Voice-Changer/releases)
+
+## v0.4.2.1 (24/11/2026)
+
+Corrige la degradación breve del audio tras cambiar de voz en directo.
+
+[GitHub: v0.4.2.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1)
+
+---
+
+## v0.4.2 (24/11/2026)
+
+Prepara la nueva voz en segundo plano y cambia en el bloque siguiente. La puerta de ruido común se aplica después de Hushwire o RNNoise. También cambian los filtros de entrada y la gestión de picos.
+
+[GitHub: v0.4.2](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2)
+
+---
+
+## v0.4.1 (22/11/2026)
+
+Mueve la puerta de ruido a **Audio**, habilita la salida ASIO mono y corrige el Markdown del actualizador.
+
+[GitHub: v0.4.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.1)
+
+---
+
+## v0.4.0 (22/11/2026)
+
+Añade bloques de 10 ms, un umbral de tono opcional, una puerta de ruido más suave y una lectura de latencia corregida. No requiere volver a entrenar.
+
+[GitHub: v0.4.0](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.0)
+
+---
 
 ## v0.3.3.1 (21/11/2026)
 

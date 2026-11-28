@@ -7,6 +7,8 @@ description: "Este guia explica passo a passo como instalar o Causal Voice Chang
 ---
 # Instalar o Causal Voice Changer
 
+**Última versão estável** · [v0.4.2.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1) · [Windows x64 ZIP](https://github.com/mojowozo/Causal-Voice-Changer/releases/download/v0.4.2.1/Causal-Voice-Changer-v0.4.2.1-windows-x64.zip) · [Linux x86_64 TAR.GZ](https://github.com/mojowozo/Causal-Voice-Changer/releases/download/v0.4.2.1/Causal-Voice-Changer-v0.4.2.1-linux-x86_64.tar.gz)
+
 Este guia explica passo a passo como instalar o Causal Voice Changer no **Windows** ou **Linux**, mesmo que nunca tenhas usado Python ou Git.
 
 > **Regra essencial na primeira utilização**: executa sempre **primeiro** o iniciador de treino (`run-training.bat` no Windows ou `run-training.sh` no Linux), mesmo que só queiras usar o alterador de voz ao vivo. Ele instala o Python, o PyTorch para a tua GPU e os ~900 MB de pesos pré-treinados necessários a ambas as aplicações.
