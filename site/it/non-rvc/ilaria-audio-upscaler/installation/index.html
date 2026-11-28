@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849149930099">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849153054310">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Installazione e modelli">
-    <meta name="description" content="GitHub · v1">
+    <meta name="description" content="GitHub · V2 · ZIP">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/non-rvc/ilaria-audio-upscaler/installation/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849149930099" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849153054310" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849149930099" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849153054310" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849149930099" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849153054310" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="GitHub · v1">
+    <meta property="og:description" content="GitHub · V2 · ZIP">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="GitHub · v1">
+    <meta name="twitter:description" content="GitHub · V2 · ZIP">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/installation/">
@@ -176,14 +176,15 @@
 
                 <!-- Page content  -->
 <span id="installation-and-models" class="docs-anchor"></span><h1 id="installazione-e-modelli">Installazione e modelli</h1>
-<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1">v1</a></p>
+<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2">V2</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/archive/refs/tags/v2.zip">ZIP</a></p>
 <span id="windows-setup" class="docs-anchor"></span><h2 id="configurazione-su-windows">Configurazione su Windows</h2>
 <p><strong>1.</strong> Scarica il progetto da GitHub ed estrailo in una cartella locale scrivibile. Installa <strong>Python 3.10 a 64 bit</strong>. <strong>2.</strong> Avvia <code translate="no" v-pre>Setup.cmd</code> e attendi che installi dipendenze e FFmpeg, crei <code translate="no" v-pre>Ilaria Audio Upscaler.exe</code> e apra l’app. <strong>3.</strong> Dagli avvii successivi usa l’EXE direttamente e lascialo nella cartella dell’app. Il pacchetto sorgente non include l’eseguibile compilato, l’ambiente Python o i pesi.</p>
 <span id="device-and-checkpoints" class="docs-anchor"></span><h2 id="dispositivo-e-checkpoint">Dispositivo e checkpoint</h2>
 <p>Il setup prova CUDA con una GPU NVIDIA compatibile e può passare alla CPU. Parti da <strong>Auto</strong>. Scegli <strong>CPU</strong> per isolare un problema CUDA. Se il runtime la supporta, puoi scegliere <strong>CUDA</strong> e la GPU. Usa <strong>Download Sidon INT8</strong> per Sidon (circa 286 MiB) o <strong>Download checkpoint</strong> per il profilo AP-BWE selezionato. I pesi sono in <code translate="no" v-pre>App/checkpoints</code>. Setup e download richiedono Internet.</p>
+<p>Per Apollo, seleziona il motore e premi il pulsante di download del modello. I pesi occupano circa <strong>63,5 MiB</strong> e si trovano in <code translate="no" v-pre>App/checkpoints/Apollo</code>.</p>
 <p><a href="../overview/">Panoramica</a> · <a href="../sidon/">Restaurare il parlato con Sidon</a> · <a href="../ap-bwe/">Estendere la banda vocale con AP-BWE</a> · <a href="../export/">Anteprima, esportazione e risoluzione dei problemi</a></p>
 <span id="sources" class="docs-anchor"></span><h2 id="fonti">Fonti</h2>
-<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1">v1</a> · <a href="https://www.python.org/downloads/release/python-31011/">Python 3.10</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/Setup.cmd">Setup.cmd</a></p>
+<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2">V2</a> · <a href="https://www.python.org/downloads/release/python-31011/">Python 3.10</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/Setup.cmd">Setup.cmd</a></p>
 
                 
                 <!-- Required only on API pages -->
@@ -218,7 +219,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-24T23:37:14.000Z">25/11/2026 · 00:37</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-28T03:49:54.000Z">28/11/2026 · 04:49</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

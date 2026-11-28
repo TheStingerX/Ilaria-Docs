@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849149917538">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849153041660">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849149917538" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849153041660" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849149917538" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849153041660" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849149917538" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849153041660" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/ilaria-pink.css?v=7">
     <script defer src="/static/toc-active.js?v=1"></script>
@@ -176,10 +176,10 @@
                 <!-- Page content  -->
 <h1 id="preview-export-and-troubleshooting">Preview, export and troubleshooting</h1>
 <h2 id="preview-and-save">Preview and save</h2>
-<p>Add one or more files, choose a format and run <strong>Enhance audio</strong>. Compare the original and enhanced audio in the player at <strong>1×</strong>. <strong>Speed</strong> changes playback only. Select the enhanced result and click <strong>Save result</strong> to store it permanently. Unsaved previews are temporary. Start with WAV or FLAC for further editing. Both engines render an intermediate 16-bit PCM WAV, so exporting to another format cannot restore extra precision.</p>
+<p>Add one or more files, choose a format and run <strong>Enhance audio</strong>. Compare the original and enhanced audio in the player at <strong>1×</strong>. <strong>Speed</strong> changes playback only. Select the enhanced result and click <strong>Save result</strong> to store it permanently. Unsaved previews are temporary. Start with WAV or FLAC for further editing. WAV export defaults to <strong>24-bit PCM</strong>. Choose <strong>WAV (PCM 16-bit)</strong> when the receiving app requires it. Bit depth affects how the result is stored. It cannot restore information already lost in the source.</p>
 <h2 id="common-problems">Common problems</h2>
 <p><strong>Model missing:</strong> Download the checkpoint for the engine and profile currently selected. <strong>CUDA fails:</strong> Try <strong>CPU</strong> with a short WAV to separate a device issue from an input issue. <strong>Audio will not open or export:</strong> Test a known-good WAV and check FFmpeg, free space and write permissions. <strong>Slow processing:</strong> Test a shorter clip on Auto or a supported CUDA GPU. <strong>Output sounds worse:</strong> Compare with the unprocessed source and switch engine or profile based on the type of damage.</p>
-<p><strong>WAV (PCM)</strong> · <strong>FLAC</strong> · <strong>MP3</strong> · <strong>M4A (AAC)</strong> · <strong>M4A (ALAC)</strong> · <strong>AAC (ADTS)</strong> · <strong>OGG (Vorbis)</strong> · <strong>Opus</strong> · <strong>AIFF (PCM)</strong> · <strong>WavPack</strong> · <strong>WMA</strong></p>
+<p><strong>WAV (PCM 24-bit)</strong> · <strong>WAV (PCM 16-bit)</strong> · <strong>FLAC</strong> · <strong>MP3</strong> · <strong>M4A (AAC)</strong> · <strong>M4A (ALAC)</strong> · <strong>AAC (ADTS)</strong> · <strong>OGG (Vorbis)</strong> · <strong>Opus</strong> · <strong>AIFF (PCM)</strong> · <strong>WavPack</strong> · <strong>WMA</strong></p>
 <p><a href="../overview/">Overview</a> · <a href="../installation/">Installation and models</a> · <a href="../sidon/">Restore speech with Sidon</a> · <a href="../ap-bwe/">Extend speech bandwidth with AP-BWE</a></p>
 <h2 id="sources">Sources</h2>
 <p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/App/studio.py">studio.py</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/App/studio_formats.py">studio_formats.py</a></p>
@@ -217,7 +217,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-24T23:37:14.000Z">25/11/2026 · 00:37</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Last updated <time datetime="2026-11-28T03:49:54.000Z">28/11/2026 · 04:49</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

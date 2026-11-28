@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pt">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849149972723">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849153105689">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Ilaria Audio Upscaler">
-    <meta name="description" content="GitHub · v1">
+    <meta name="description" content="GitHub · V2">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/pt/non-rvc/ilaria-audio-upscaler/overview/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849149972723" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849153105689" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849149972723" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849153105689" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849149972723" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849153105689" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/pt/static/ilaria-pink.css?v=7">
     <script defer src="/pt/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="pt_PT">
-    <meta property="og:description" content="GitHub · v1">
+    <meta property="og:description" content="GitHub · V2">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
-    <meta name="twitter:description" content="GitHub · v1">
+    <meta name="twitter:description" content="GitHub · V2">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario jogam em consolas portáteis sobre um fundo violeta escuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/ilaria-audio-upscaler/overview/">
@@ -176,9 +176,12 @@
 
                 <!-- Page content  -->
 <h1 id="ilaria-audio-upscaler">Ilaria Audio Upscaler</h1>
-<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1">v1</a></p>
+<p><a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler">GitHub</a> · <a href="https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2">V2</a></p>
 <span id="choose-an-engine" class="docs-anchor"></span><h2 id="escolhe-o-motor">Escolhe o motor</h2>
 <p>O Ilaria Audio Upscaler processa gravações localmente no Windows. Escolhe <strong>Sidon</strong> para fala com ruído, reverberação ou compressão. Escolhe <strong>AP-BWE</strong> para fala relativamente limpa mas com largura de banda limitada, como uma gravação telefónica. Ambos se destinam à fala. Compara o resultado com o original antes de o usares num conjunto de dados.</p>
+<h2 id="apollo">Apollo</h2>
+<p>O <strong>Apollo</strong> restaura música degradada pela compressão com perdas a <strong>44,1 kHz</strong>, na CPU ou com NVIDIA CUDA. Escolhe um excerto curto, seleciona <strong>Apollo</strong>, descarrega o modelo se necessário e carrega em <strong>Enhance audio</strong>. Compara o original e o resultado a <strong>1×</strong> antes de carregar em <strong>Save result</strong>.</p>
+<p><a href="https://github.com/JusperLee/Apollo">Apollo</a></p>
 <span id="first-test" class="docs-anchor"></span><h2 id="primeiro-teste">Primeiro teste</h2>
 <p>Conserva o ficheiro original. Processa um excerto curto com um motor e exporta em WAV. Compara a volumes semelhantes e ouve consoantes, pausas e timbre. As frequências altas são sintetizadas a partir do sinal disponível. Uma saída a 48 kHz não recupera a forma de onda original exata.</p>
 <p><a href="../installation/">Instalação e modelos</a> · <a href="../sidon/">Restaurar fala com Sidon</a> · <a href="../ap-bwe/">Expandir a banda da fala com AP-BWE</a> · <a href="../export/">Pré-escuta, exportação e resolução de problemas</a></p>
@@ -218,7 +221,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-24T23:37:14.000Z">25/11/2026 · 00:37</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última atualização <time datetime="2026-11-28T03:49:54.000Z">28/11/2026 · 04:49</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

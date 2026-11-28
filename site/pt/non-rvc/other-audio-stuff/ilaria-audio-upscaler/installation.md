@@ -1,6 +1,6 @@
 # Instalação e modelos
 
-[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [v1](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1)
+[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [V2](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2) · [ZIP](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/archive/refs/tags/v2.zip)
 
 ## Configuração no Windows
 
@@ -10,8 +10,10 @@
 
 A instalação tenta ativar CUDA numa GPU NVIDIA compatível e pode usar a CPU. Começa com **Auto**. Seleciona **CPU** para despistar erros de CUDA ou **CUDA** e a GPU quando o ambiente a suportar. Usa **Download Sidon INT8** (cerca de 286 MiB) ou **Download checkpoint** para o perfil AP-BWE escolhido. Os pesos ficam em `App/checkpoints`. A instalação e os descarregamentos requerem Internet.
 
+Seleciona **Apollo** e usa o botão de download do modelo. Os pesos ocupam cerca de **63,5 MiB** e ficam em `App/checkpoints/Apollo`.
+
 [Visão geral](overview.md) · [Restaurar fala com Sidon](sidon.md) · [Expandir a banda da fala com AP-BWE](ap-bwe.md) · [Pré-escuta, exportação e resolução de problemas](export.md)
 
 ## Fontes
 
-[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [v1](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v1) · [Python 3.10](https://www.python.org/downloads/release/python-31011/) · [Setup.cmd](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/Setup.cmd)
+[GitHub](https://github.com/TheStingerX/Ilaria-Audio-Upscaler) · [V2](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/releases/tag/v2) · [Python 3.10](https://www.python.org/downloads/release/python-31011/) · [Setup.cmd](https://github.com/TheStingerX/Ilaria-Audio-Upscaler/blob/main/Setup.cmd)
