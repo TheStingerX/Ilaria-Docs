@@ -1,5 +1,5 @@
 ---
-label: "Apollo"
+label: "Restore music with Apollo"
 icon: ":musical_note:"
 order: 95
 permalink: /non-rvc/ilaria-audio-upscaler/apollo/
