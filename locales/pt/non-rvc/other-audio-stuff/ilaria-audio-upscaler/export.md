@@ -1,7 +1,7 @@
 ---
 label: "Pré-escuta, exportação e resolução de problemas"
 icon: ":headphones:"
-order: 95
+order: 94
 permalink: /non-rvc/ilaria-audio-upscaler/export/
 ---
 

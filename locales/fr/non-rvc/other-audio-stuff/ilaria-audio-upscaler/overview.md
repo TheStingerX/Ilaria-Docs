@@ -17,7 +17,7 @@ Ilaria Audio Upscaler traite les enregistrements localement sous Windows. Choisi
 
 **Apollo** restaure des morceaux dégradés par une compression avec perte, à **44,1 kHz** sur CPU ou NVIDIA CUDA. Choisissez un extrait court, sélectionnez **Apollo**, téléchargez le modèle si nécessaire, puis cliquez sur **Enhance audio**. Comparez l’original et le résultat à **1×** avant de cliquer sur **Save result**.
 
-[Apollo](https://github.com/JusperLee/Apollo)
+[Apollo](apollo.md)
 
 ## Premier essai
 

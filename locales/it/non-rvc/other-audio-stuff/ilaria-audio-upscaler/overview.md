@@ -17,7 +17,7 @@ Ilaria Audio Upscaler elabora registrazioni in locale su Windows. Scegli **Sidon
 
 **Apollo** è pensato per la musica degradata dalla compressione con perdita. Lavora a **44,1 kHz** su CPU o NVIDIA CUDA. Parti da un estratto breve con piatti o altri suoni ricchi di alte frequenze. Seleziona **Apollo**, scarica i pesi se richiesto, aggiungi il file e premi **Enhance audio**. Confronta originale e risultato a **1×**, poi usa **Save result** se vuoi conservarlo. Tieni l’originale per valutare le differenze di timbro e degli attacchi.
 
-[Apollo](https://github.com/JusperLee/Apollo)
+[Apollo](apollo.md)
 
 ## Prima prova
 
