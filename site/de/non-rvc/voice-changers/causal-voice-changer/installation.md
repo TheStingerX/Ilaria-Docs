@@ -1,5 +1,7 @@
 # Causal Voice Changer installieren
 
+**Neueste stabile Version** · [v0.4.2.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1) · [Windows x64 ZIP](https://github.com/mojowozo/Causal-Voice-Changer/releases/download/v0.4.2.1/Causal-Voice-Changer-v0.4.2.1-windows-x64.zip) · [Linux x86_64 TAR.GZ](https://github.com/mojowozo/Causal-Voice-Changer/releases/download/v0.4.2.1/Causal-Voice-Changer-v0.4.2.1-linux-x86_64.tar.gz)
+
 Diese Anleitung führt dich Schritt für Schritt durch die Installation auf **Windows** oder **Linux**, auch wenn du noch nie Python oder Git benutzt hast.
 
 > **Wichtige Regel beim ersten Start**: Starte immer **zuerst** den Training-Launcher (`run-training.bat` unter Windows oder `run-training.sh` unter Linux), selbst wenn du nur den Live-Stimmenverzerrer nutzen möchtest. Er installiert Python, PyTorch für deine GPU und die ~900 MB vortrainierten Gewichte für beide Programme.

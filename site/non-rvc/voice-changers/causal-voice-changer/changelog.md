@@ -2,6 +2,38 @@
 
 [GitHub Releases](https://github.com/mojowozo/Causal-Voice-Changer/releases)
 
+## v0.4.2.1 (2026-11-24)
+
+Fixes brief audio degradation after switching voices live.
+
+[GitHub: v0.4.2.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1)
+
+---
+
+## v0.4.2 (2026-11-24)
+
+Prepares the new voice in the background and switches at the next block. The shared noise gate now runs after Hushwire or RNNoise. Input filtering and peak limiting were also revised.
+
+[GitHub: v0.4.2](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2)
+
+---
+
+## v0.4.1 (2026-11-22)
+
+Moves the noise gate to **Audio**, enables mono ASIO output, and fixes Markdown in the updater.
+
+[GitHub: v0.4.1](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.1)
+
+---
+
+## v0.4.0 (2026-11-22)
+
+Adds 10 ms blocks, an optional pitch floor, smoother noise gating, and a corrected latency readout. No retraining is needed.
+
+[GitHub: v0.4.0](https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.0)
+
+---
+
 ## v0.3.3.1 (2026-11-21)
 
 - **Older NVIDIA GPU support:** Added support for older NVIDIA cards dropped by CUDA 13 (GeForce GTX 900/10 series, TITAN X/Xp/V, Quadro M/P) using the CUDA 12.6 PyTorch build (`cuda-pascal` / `run-realtime-gtx10.bat` / `run-training-gtx10.bat`).

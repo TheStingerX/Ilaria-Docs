@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849149468431">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849149930099">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Ilaria&apos;s Docs &#x1F496;</title>
     <meta name="title" content="Changelog di Causal Voice Changer">
-    <meta name="description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.3.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
+    <meta name="description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.4.2.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.ilariarvc.shop/it/non-rvc/causal-voice-changer/changelog/">
@@ -36,24 +36,24 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/ilaria-rvc-icon.png" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.849149468431" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.849149930099" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849149468431" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.849149930099" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849149468431" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.849149930099" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
 
     <meta name="theme-color" content="#FFC0CB">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.3.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
+    <meta property="og:description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.4.2.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
     <meta property="og:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
-    <meta name="twitter:description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.3.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
+    <meta name="twitter:description" content="Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.4.2.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.">
     <meta name="twitter:image" content="https://ilariarvc.shop/share-preview.jpg?v=2">
     <meta name="twitter:image:alt" content="Ilaria e Mario giocano con console portatili su uno sfondo viola scuro">
     <link rel="alternate" hreflang="en" href="https://docs.ilariarvc.shop/non-rvc/causal-voice-changer/changelog/">
@@ -176,8 +176,24 @@
 
                 <!-- Page content  -->
 <span id="causal-voice-changer-changelog" class="docs-anchor"></span><h1 id="changelog-di-causal-voice-changer">Changelog di Causal Voice Changer</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.3.3.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Cronologia completa delle versioni e changelog di Causal Voice Changer (CVC) dalla v0.1.0 alla v0.4.2.1, con supporto GPU NVIDIA datate, base 100 Hz v4 e fix realtime.</div>
 <p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases">Release su GitHub</a></p>
+<span id="v0421-2026-11-24" class="docs-anchor"></span><h2 id="v0421-24112026">v0.4.2.1 (24/11/2026)</h2>
+<p>Corregge il breve peggioramento dell’audio dopo un cambio di voce in diretta.</p>
+<p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2.1">GitHub: v0.4.2.1</a></p>
+<hr>
+<span id="v042-2026-11-24" class="docs-anchor"></span><h2 id="v042-24112026">v0.4.2 (24/11/2026)</h2>
+<p>Prepara la nuova voce in background e passa al nuovo modello al blocco successivo. Il noise gate è condiviso tra le voci e interviene dopo Hushwire o RNNoise. Cambiano anche i filtri d’ingresso e la gestione dei picchi.</p>
+<p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.2">GitHub: v0.4.2</a></p>
+<hr>
+<span id="v041-2026-11-22" class="docs-anchor"></span><h2 id="v041-22112026">v0.4.1 (22/11/2026)</h2>
+<p>Sposta il noise gate in <strong>Audio</strong>, abilita l’uscita ASIO mono e corregge il Markdown nell’aggiornamento integrato.</p>
+<p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.1">GitHub: v0.4.1</a></p>
+<hr>
+<span id="v040-2026-11-22" class="docs-anchor"></span><h2 id="v040-22112026">v0.4.0 (22/11/2026)</h2>
+<p>Aggiunge blocchi da 10 ms, un limite minimo opzionale per le voci gravi, un noise gate più graduale e una lettura della latenza corretta. Le voci esistenti non richiedono un nuovo addestramento.</p>
+<p><a href="https://github.com/mojowozo/Causal-Voice-Changer/releases/tag/v0.4.0">GitHub: v0.4.0</a></p>
+<hr>
 <span id="v0331-2026-11-21" class="docs-anchor"></span><h2 id="v0331-21112026">v0.3.3.1 (21/11/2026)</h2>
 <ul>
 <li><strong>Supporto GPU NVIDIA datate:</strong> Aggiunto il supporto per le schede NVIDIA precedenti escluse da CUDA 13 (serie GeForce GTX 900/10, TITAN X/Xp/V, Quadro M/P) tramite la build PyTorch CUDA 12.6 (<code translate="no" v-pre>cuda-pascal</code> / <code translate="no" v-pre>run-realtime-gtx10.bat</code> / <code translate="no" v-pre>run-training-gtx10.bat</code>).</li>
@@ -275,7 +291,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-24T23:37:14.000Z">25/11/2026 · 00:37</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-28T02:57:48.000Z">28/11/2026 · 03:57</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
