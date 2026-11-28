@@ -47,10 +47,12 @@ Comparez les fichiers avec la même source et au même volume. Pour le direct, e
 
 | Application | Fonctionnalités | Matériel / notes | Guides |
 | --- | --- | --- | --- |
-| **Ilaria RVC** | Entraînement, inférence simple/par lots, synthèse vocale, analyseur audio | NVIDIA CUDA (Windows) / Kaggle | [Installation](../ilaria-rvc/install/installation.md) · [Inférence](../ilaria-rvc/convert/inference.md) · [Entraînement](../ilaria-rvc/train/training-workflow.md) |
-| **Applio** | Entraînement, inférence de fichiers, TTS, bibliothèque de modèles, temps réel | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installation](training/applio/installation.md) · [Inférence](training/applio/inference.md) · [Entraînement](training/applio/training.md) |
+| **Ilaria RVC** | Entraînement, inférence simple/par lots, synthèse vocale, analyseur audio | NVIDIA CUDA (Windows) · [AMD Preview](../ilaria-rvc/install/amd-preview.md) · Kaggle | [Installation](../ilaria-rvc/install/installation.md) · [Inférence](../ilaria-rvc/convert/inference.md) · [Entraînement](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Entraînement, inférence de fichiers, TTS, bibliothèque de modèles, temps réel | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installation](training/applio/installation.md) · [Inférence](training/applio/inference.md) · [Entraînement](training/applio/training.md) · [Android / Termux](training/applio/android.md) |
 | **RVC WebUI (Mainline - Original RVC)** | Entraînement et inférence de fichiers d’origine (+ lanceur temps réel séparé) | NVIDIA CUDA, CPU / DirectML | [Installation](training/mainline/installation.md) · [Inférence](training/mainline/inference.md) · [Entraînement](training/mainline/training.md) |
 | **Redpanda-vc** | Entraînement, inférence sur fichiers et temps réel pour RVC + Causal Voice Changer | NVIDIA CUDA / CPU (Desktop et WebUI) | [Premier lancement](training/redpanda/first-run.md) · [Inférence](training/redpanda/inference.md) · [Entraînement](training/redpanda/training.md) |
+| **AICoverMaker** | Fork d’Applio pour les reprises, la séparation et la conversion | — | [Installation (EN)](https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/installation/) · [Première reprise (EN)](https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/usage/) |
+| **NoRegretsRVC** | Configuration des flux Applio pour l’entraînement et l’inférence | Beta 0.1.0 · Studio local et environnement Applio sur Kaggle | [Installation](training/noregretsrvc/installation.md) · [Utilisation](training/noregretsrvc/usage.md) · [Cloud](training/noregretsrvc/cloud.md) · [Historique](training/noregretsrvc/version-history.md) |
 | **RVC Model Merger** | Utilitaire de fusion pour modèles RVC `.pth` | Utilitaire hors ligne | [Utilisation](rvc-model-merger/usage.md) |
 
 ### Anciennes applications / Déconseillées

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/es">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849146067509">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849146392747">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.849146067509" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849146392747" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849146067509" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849146392747" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849146067509" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849146392747" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/es/static/ilaria-pink.css?v=7">
     <script defer src="/es/static/toc-active.js?v=1"></script>
@@ -205,10 +205,12 @@
 <span id="training--inference" class="docs-anchor"></span><h2 id="entrenamiento-e-inferencia">Entrenamiento e inferencia</h2>
 <retype-table copy-text="| Aplicación | Capacidades | Hardware / notas | Guías |
 | --- | --- | --- | --- |
-| **Ilaria RVC** | Entrenamiento, inferencia individual/por lotes, TTS, analizador de audio | NVIDIA CUDA (Windows) / Kaggle | [Instalación](../ilaria-rvc/install/installation.md) · [Inferencia](../ilaria-rvc/convert/inference.md) · [Entrenamiento](../ilaria-rvc/train/training-workflow.md) |
-| **Applio** | Entrenamiento, inferencia de archivos, TTS, biblioteca de modelos, tiempo real | NVIDIA CUDA, AMD ROCm, Apple MPS | [Instalación](training/applio/installation.md) · [Inferencia](training/applio/inference.md) · [Entrenamiento](training/applio/training.md) |
+| **Ilaria RVC** | Entrenamiento, inferencia individual/por lotes, TTS, analizador de audio | NVIDIA CUDA (Windows) · [AMD Preview](../ilaria-rvc/install/amd-preview.md) · Kaggle | [Instalación](../ilaria-rvc/install/installation.md) · [Inferencia](../ilaria-rvc/convert/inference.md) · [Entrenamiento](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Entrenamiento, inferencia de archivos, TTS, biblioteca de modelos, tiempo real | NVIDIA CUDA, AMD ROCm, Apple MPS | [Instalación](training/applio/installation.md) · [Inferencia](training/applio/inference.md) · [Entrenamiento](training/applio/training.md) · [Android / Termux](training/applio/android.md) |
 | **RVC WebUI (Mainline - Original RVC)** | Entrenamiento e inferencia de archivos oficial (+ lanzador en vivo separado) | NVIDIA CUDA, CPU / DirectML | [Instalación](training/mainline/installation.md) · [Inferencia](training/mainline/inference.md) · [Entrenamiento](training/mainline/training.md) |
 | **Redpanda-vc** | Entrenamiento, inferencia de archivos y tiempo real para RVC + Causal Voice Changer | NVIDIA CUDA / CPU (Desktop y WebUI) | [Primer inicio](training/redpanda/first-run.md) · [Inferencia](training/redpanda/inference.md) · [Entrenamiento](training/redpanda/training.md) |
+| **AICoverMaker** | Fork de Applio para versiones musicales, separación y conversión | — | [Instalación (EN)](https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/installation/) · [Primera conversión (EN)](https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/usage/) |
+| **NoRegretsRVC** | Configuración de flujos Applio para entrenamiento e inferencia | Beta 0.1.0 · Interfaz local y entorno Applio en Kaggle | [Instalación](training/noregretsrvc/installation.md) · [Uso](training/noregretsrvc/usage.md) · [Cloud](training/noregretsrvc/cloud.md) · [Historial de versiones](training/noregretsrvc/version-history.md) |
 | **RVC Model Merger** | Herramienta de fusión para modelos RVC `.pth` | Utilidad sin conexión | [Uso](rvc-model-merger/usage.md) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -224,14 +226,14 @@
 <tr>
 <td><strong>Ilaria RVC</strong></td>
 <td>Entrenamiento, inferencia individual/por lotes, TTS, analizador de audio</td>
-<td>NVIDIA CUDA (Windows) / Kaggle</td>
+<td>NVIDIA CUDA (Windows) · <a href="../amd-preview/">AMD Preview</a> · Kaggle</td>
 <td><a href="../installation/">Instalación</a> · <a href="../inference/">Inferencia</a> · <a href="../training-workflow/">Entrenamiento</a></td>
 </tr>
 <tr>
 <td><strong>Applio</strong></td>
 <td>Entrenamiento, inferencia de archivos, TTS, biblioteca de modelos, tiempo real</td>
 <td>NVIDIA CUDA, AMD ROCm, Apple MPS</td>
-<td><a href="../applio/installation/">Instalación</a> · <a href="../applio/inference/">Inferencia</a> · <a href="../applio/training/">Entrenamiento</a></td>
+<td><a href="../applio/installation/">Instalación</a> · <a href="../applio/inference/">Inferencia</a> · <a href="../applio/training/">Entrenamiento</a> · <a href="../applio/android/">Android / Termux</a></td>
 </tr>
 <tr>
 <td><strong>RVC WebUI (Mainline - Original RVC)</strong></td>
@@ -244,6 +246,18 @@
 <td>Entrenamiento, inferencia de archivos y tiempo real para RVC + Causal Voice Changer</td>
 <td>NVIDIA CUDA / CPU (Desktop y WebUI)</td>
 <td><a href="../redpanda/first-run/">Primer inicio</a> · <a href="../redpanda/inference/">Inferencia</a> · <a href="../redpanda/training/">Entrenamiento</a></td>
+</tr>
+<tr>
+<td><strong>AICoverMaker</strong></td>
+<td>Fork de Applio para versiones musicales, separación y conversión</td>
+<td>—</td>
+<td><a href="https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/installation/">Instalación (EN)</a> · <a href="https://docs.ilariarvc.shop/ilaria-rvc/aicovermaker/usage/">Primera conversión (EN)</a></td>
+</tr>
+<tr>
+<td><strong>NoRegretsRVC</strong></td>
+<td>Configuración de flujos Applio para entrenamiento e inferencia</td>
+<td>Beta 0.1.0 · Interfaz local y entorno Applio en Kaggle</td>
+<td><a href="../noregretsrvc/installation/">Instalación</a> · <a href="../noregretsrvc/usage/">Uso</a> · <a href="../noregretsrvc/cloud/">Cloud</a> · <a href="../noregretsrvc/version-history/">Historial de versiones</a></td>
 </tr>
 <tr>
 <td><strong>RVC Model Merger</strong></td>
@@ -450,7 +464,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-25T01:17:15.000Z">25/11/2026 · 02:17</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Última modificación <time datetime="2026-11-28T01:58:57.000Z">28/11/2026 · 02:58</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>

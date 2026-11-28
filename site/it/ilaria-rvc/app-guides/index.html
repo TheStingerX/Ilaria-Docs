@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/it">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849146055645">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.849146383026">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/ilaria-rvc-icon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.849146055645" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.849146383026" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849146055645" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.849146383026" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849146055645" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.849146383026" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/it/static/ilaria-pink.css?v=7">
     <script defer src="/it/static/toc-active.js?v=1"></script>
@@ -205,10 +205,12 @@
 <span id="training--inference" class="docs-anchor"></span><h2 id="training-e-inferenza">Training e inferenza</h2>
 <retype-table copy-text="| App | Funzionalità | Hardware / note | Guide |
 | --- | --- | --- | --- |
-| **Ilaria RVC** | Training, inferenza singola e in serie, sintesi vocale, analizzatore audio | NVIDIA CUDA (Windows) / Kaggle | [Installazione](../ilaria-rvc/install/installation.md) · [Inferenza](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
-| **Applio** | Training, inferenza da file, sintesi vocale, libreria modelli, tempo reale | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installazione](training/applio/installation.md) · [Inferenza](training/applio/inference.md) · [Training](training/applio/training.md) |
+| **Ilaria RVC** | Training, inferenza singola e in serie, sintesi vocale, analizzatore audio | NVIDIA CUDA (Windows) · [AMD Preview](../ilaria-rvc/install/amd-preview.md) · Kaggle | [Installazione](../ilaria-rvc/install/installation.md) · [Inferenza](../ilaria-rvc/convert/inference.md) · [Training](../ilaria-rvc/train/training-workflow.md) |
+| **Applio** | Training, inferenza da file, sintesi vocale, libreria modelli, tempo reale | NVIDIA CUDA, AMD ROCm, Apple MPS | [Installazione](training/applio/installation.md) · [Inferenza](training/applio/inference.md) · [Training](training/applio/training.md) · [Android / Termux](training/applio/android.md) |
 | **RVC WebUI (Mainline - Original RVC)** | Training e inferenza da file originali (+ launcher live separato) | NVIDIA CUDA, CPU / DirectML | [Installazione](training/mainline/installation.md) · [Inferenza](training/mainline/inference.md) · [Training](training/mainline/training.md) |
 | **Redpanda-vc** | Training, inferenza da file e tempo reale per RVC + Causal Voice Changer | NVIDIA CUDA / CPU (Desktop e WebUI) | [Primo avvio](training/redpanda/first-run.md) · [Inferenza](training/redpanda/inference.md) · [Training](training/redpanda/training.md) |
+| **AICoverMaker** | Fork di Applio per cover, separazione e conversione vocale | — | [Installazione](training/aicovermaker/installation.md) · [Prima cover](training/aicovermaker/usage.md) |
+| **NoRegretsRVC** | Configurazione di workflow Applio per training e inferenza da file | Beta 0.1.0 · Studio locale e runtime Applio su Kaggle | [Installazione](training/noregretsrvc/installation.md) · [Uso](training/noregretsrvc/usage.md) · [Cloud](training/noregretsrvc/cloud.md) · [Cronologia](training/noregretsrvc/version-history.md) |
 | **RVC Model Merger** | Utilità di unione per modelli RVC `.pth` | Utilità offline | [Uso](rvc-model-merger/usage.md) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -224,14 +226,14 @@
 <tr>
 <td><strong>Ilaria RVC</strong></td>
 <td>Training, inferenza singola e in serie, sintesi vocale, analizzatore audio</td>
-<td>NVIDIA CUDA (Windows) / Kaggle</td>
+<td>NVIDIA CUDA (Windows) · <a href="../amd-preview/">AMD Preview</a> · Kaggle</td>
 <td><a href="../installation/">Installazione</a> · <a href="../inference/">Inferenza</a> · <a href="../training-workflow/">Training</a></td>
 </tr>
 <tr>
 <td><strong>Applio</strong></td>
 <td>Training, inferenza da file, sintesi vocale, libreria modelli, tempo reale</td>
 <td>NVIDIA CUDA, AMD ROCm, Apple MPS</td>
-<td><a href="../applio/installation/">Installazione</a> · <a href="../applio/inference/">Inferenza</a> · <a href="../applio/training/">Training</a></td>
+<td><a href="../applio/installation/">Installazione</a> · <a href="../applio/inference/">Inferenza</a> · <a href="../applio/training/">Training</a> · <a href="../applio/android/">Android / Termux</a></td>
 </tr>
 <tr>
 <td><strong>RVC WebUI (Mainline - Original RVC)</strong></td>
@@ -244,6 +246,18 @@
 <td>Training, inferenza da file e tempo reale per RVC + Causal Voice Changer</td>
 <td>NVIDIA CUDA / CPU (Desktop e WebUI)</td>
 <td><a href="../redpanda/first-run/">Primo avvio</a> · <a href="../redpanda/inference/">Inferenza</a> · <a href="../redpanda/training/">Training</a></td>
+</tr>
+<tr>
+<td><strong>AICoverMaker</strong></td>
+<td>Fork di Applio per cover, separazione e conversione vocale</td>
+<td>—</td>
+<td><a href="../aicovermaker/installation/">Installazione</a> · <a href="../aicovermaker/usage/">Prima cover</a></td>
+</tr>
+<tr>
+<td><strong>NoRegretsRVC</strong></td>
+<td>Configurazione di workflow Applio per training e inferenza da file</td>
+<td>Beta 0.1.0 · Studio locale e runtime Applio su Kaggle</td>
+<td><a href="../noregretsrvc/installation/">Installazione</a> · <a href="../noregretsrvc/usage/">Uso</a> · <a href="../noregretsrvc/cloud/">Cloud</a> · <a href="../noregretsrvc/version-history/">Cronologia</a></td>
 </tr>
 <tr>
 <td><strong>RVC Model Merger</strong></td>
@@ -279,7 +293,6 @@
 | **RVC Studio** | Training e inferenza da file (WebUI) | Inattivo | [Installazione](training/rvc-studio/installation.md) · [Uso](training/rvc-studio/usage.md) |
 | **Mangio RVC Fork** | Training e inferenza da file | Inattivo | [Installazione](training/mangio/installation.md) · [Uso](training/mangio/usage.md) |
 | **Replay** | Training e conversione file | Dismesso (Weights.gg chiuso) | [Installazione](training/replay/installation.md) · [Uso](training/replay/usage.md) |
-| **AICoverMaker** | Fork di Applio per cover RVC, separazione e conversione vocale | — | [Installazione](training/aicovermaker/installation.md) · [Prima cover](training/aicovermaker/usage.md) |
 | **AICoverGen** | Pipeline RVC v2 per cover musicali (solo inferenza, WebUI / CLI / Colab) | Non mantenuto | [Installazione](training/aicovergen/installation.md) · [Uso](training/aicovergen/usage.md) |
 | **RVC GUI** | Solo conversione file desktop | Archiviato | [Conversione file](voice-changers/rvc-gui/file-conversion.md) |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -316,12 +329,6 @@
 <td>Training e conversione file</td>
 <td>Dismesso (Weights.gg chiuso)</td>
 <td><a href="../replay/installation/">Installazione</a> · <a href="../replay/usage/">Uso</a></td>
-</tr>
-<tr>
-<td><strong>AICoverMaker</strong></td>
-<td>Fork di Applio per cover RVC, separazione e conversione vocale</td>
-<td>—</td>
-<td><a href="../aicovermaker/installation/">Installazione</a> · <a href="../aicovermaker/usage/">Prima cover</a></td>
 </tr>
 <tr>
 <td><strong>AICoverGen</strong></td>
@@ -457,7 +464,7 @@
         <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
             <footer class="flex flex-wrap items-center justify-between print:justify-center">
                 <div id="retype-footer-links" class="print:hidden">
-                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-25T17:00:29.000Z">25/11/2026 · 18:00</time></p>
+                    <p class="docs-last-modified text-footer-text text-sm">Ultima modifica <time datetime="2026-11-28T01:58:57.000Z">28/11/2026 · 02:58</time></p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
