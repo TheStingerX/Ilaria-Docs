@@ -1,13 +1,15 @@
 ---
-label: "Ilaria YT-DLP"
-icon: ":arrow_down:"
-order: 90
+label: "Panoramica"
+icon: ":cd:"
+order: 99
 permalink: /non-rvc/ilaria-yt-dlp/
 ---
 
-# Guida a Ilaria YT-DLP
+# Ilaria YT-DLP · Panoramica
 
-[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [Windows ZIP · Hugging Face](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v1.zip?download=true)
+[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [v2](https://github.com/TheStingerX/Ilaria-YT-DLP/releases/tag/v2) · [Windows ZIP](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v2.zip?download=true)
+
+[Panoramica](overview.md) · [Formati e audio](formats.md) · [Playlist e risoluzione dei problemi](playlists.md)
 
 ## Scarica e avvia su Windows
 
@@ -38,7 +40,7 @@ Per installare dal sorgente, usa Python 3.10 o successivo, installa FFmpeg e, se
 
 ## Seleziona tracce, sottotitoli e capitoli
 
-Apri **Choose formats / subs / chapters…** dopo l’analisi. Una traccia video può essere priva di audio. Puoi selezionare video e audio separatamente per farli unire da FFmpeg, oppure scegliere un flusso combinato disponibile. Verifica risoluzione, FPS, codec e lingua prima di confermare.
+Apri **Formats / subs / chapters…** dopo l’analisi. Una traccia video può essere priva di audio. Puoi selezionare video e audio separatamente per farli unire da FFmpeg, oppure scegliere un flusso combinato disponibile. Verifica risoluzione, FPS, codec e lingua prima di confermare.
 
 Per i sottotitoli, distingui quelli manuali da quelli automatici e scegli se salvare un file separato o incorporare la traccia in un contenitore compatibile. Per ritagliare l’audio o il video usa **Playlist, Filters & Cuts** o i capitoli disponibili. Controlla l’inizio e la fine perché il taglio può dipendere dai fotogrammi chiave.
 

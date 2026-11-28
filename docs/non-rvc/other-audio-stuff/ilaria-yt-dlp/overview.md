@@ -1,13 +1,15 @@
 ---
-label: "Ilaria YT-DLP"
-icon: ":arrow_down:"
-order: 90
+label: "Start here"
+icon: ":cd:"
+order: 99
 permalink: /non-rvc/ilaria-yt-dlp/
 ---
 
-# Ilaria YT-DLP guide
+# Ilaria YT-DLP · Start here
 
-[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [Windows ZIP · Hugging Face](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v1.zip?download=true)
+[GitHub](https://github.com/TheStingerX/Ilaria-YT-DLP) · [v2](https://github.com/TheStingerX/Ilaria-YT-DLP/releases/tag/v2) · [Windows ZIP](https://huggingface.co/TheStinger/Ilaria-YT-DLP/resolve/main/Ilaria-YT-DLP%20v2.zip?download=true)
+
+[Start here](overview.md) · [Formats and audio](formats.md) · [Playlists and troubleshooting](playlists.md)
 
 ## Install and launch on Windows
 
@@ -35,7 +37,7 @@ Choose **Audio Only** in **General & Formats**. The app removes video controls a
 
 ## Select streams, subtitles and chapters
 
-Open **Choose formats / subs / chapters…** after the full probe. A video-only stream may have no audio. Select separate video and audio to merge or choose an available combined stream. Check resolution, FPS, codec and language. Manual subtitles and auto-captions are separate choices. Save a sidecar or embed a track if your container supports it. Use the fourth tab or the chapter picker for cuts, then listen at both boundaries. Start with SponsorBlock marking if you want to keep original timing. When removing segments, verify the resulting timing and subtitles.
+Open **Formats / subs / chapters…** after the full probe. A video-only stream may have no audio. Select separate video and audio to merge or choose an available combined stream. Check resolution, FPS, codec and language. Manual subtitles and auto-captions are separate choices. Save a sidecar or embed a track if your container supports it. Use the fourth tab or the chapter picker for cuts, then listen at both boundaries. Start with SponsorBlock marking if you want to keep original timing. When removing segments, verify the resulting timing and subtitles.
 
 ## Use a queue and presets
 
