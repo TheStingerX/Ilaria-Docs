@@ -81,8 +81,8 @@ Verwenden Sie die Navigation, um Anleitungen zur Einrichtung, Umrüstung, Schulu
 
 ## Die Dokumentation in Zahlen
 
-- **Seiten insgesamt:** **137** Seiten (`136` Anleitungen + Startseite)
-- **Gesamtzahl über alle 6 Sprachen (`en`, `it`, `es`, `fr`, `de`, `pt`):** **830** Seiten (`en: 141`, `it: 141`, `es: 137`, `fr: 137`, `de: 137`, `pt: 137`)
+- **Seiten insgesamt:** **138** Seiten (`137` Anleitungen + Startseite)
+- **Gesamtzahl über alle 6 Sprachen (`en`, `it`, `es`, `fr`, `de`, `pt`):** **836** Seiten (`en: 142`, `it: 142`, `es: 138`, `fr: 138`, `de: 138`, `pt: 138`)
 
 ## Kleine Fakten über die Website und Ilaria
 
