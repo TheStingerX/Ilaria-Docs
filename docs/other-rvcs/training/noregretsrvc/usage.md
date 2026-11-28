@@ -7,9 +7,9 @@ permalink: /ilaria-rvc/noregretsrvc/usage/
 
 # NoRegretsRVC · Usage
 
-NoRegretsRVC Beta 0.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.
+NoRegretsRVC Beta 0.1.0 is an independent web studio for configuring Applio workflows. This checkout provides the interface and notebook generator. The local setup runs the studio in your browser.
 
-[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
+[GitHub](https://github.com/HunterThatsMe/NoRegretsRVC) · [Beta 0.1.0](https://github.com/HunterThatsMe/NoRegretsRVC/releases/tag/v0.1.0) · [Kaggle notebook](https://github.com/HunterThatsMe/NoRegretsRVC/blob/main/NoRegretsRVC_Kaggle.ipynb)
 
 ## Usage
 
@@ -32,5 +32,11 @@ The Models workspace can queue custom pretrains through the Boot Manifest. It re
 ## Diagnostics and settings
 
 Diagnostics can read live Kaggle metrics or imported `.ipynb`, `.log` and `.txt` files. It charts Mel loss and analyzes KL divergence, feature matching, discriminator balance, gradient stability and changes near the end of training. Risk meters and suggested checkpoints are heuristics. Listen to the same test audio across checkpoints before choosing one. Settings also provide FP32 by default, RMVPE high-register modes `true_pitch` and `fold` with a 1000–2000 Hz F0 ceiling, and ten UI languages including Arabic with right-to-left layout.
+
+## Training and diagnostics in 0.1.0
+
+Dataset normalization targets −20 LUFS by default. The default sample rate remains 32 kHz. Generator EMA smooths weight averages, multi-scale Mel loss uses FFT windows of 512, 1024 and 2048, and gradient clipping limits large updates. The release also tunes FAISS `nprobe` and tracks the new training metrics. Checkpoint suggestions still need listening tests.
+
+Settings now calls the restart action **Restart NoRegretsRVC**. Numeric inputs update paired sliders as you type, and model names are no longer suggested from previous runs.
 
 [Installation](installation.md) · [Cloud](cloud.md)
